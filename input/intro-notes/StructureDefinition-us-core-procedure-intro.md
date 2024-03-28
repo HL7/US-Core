@@ -15,26 +15,27 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each Procedure Must Have:**
 
 1.  a status
-1.  a code that identifies the type of procedure performed on the patient
-1.  a patient
-2.  when the procedure was performed*
-
-\*This elements have the following constraints: **SHALL** be present if status is 'completed' or 'in-progress'.
+2.  a code that identifies the type of procedure performed on the patient*
+3.  a patient
+4.  when the procedure was performed*
 
 **Each Procedure Must Support:**
 
-1.  the encounter associated with the procedure
+1. the encounter associated with the procedure
 
 {% include additional-requirements-intro.md type="Procedure" %}
 
-1.  a reason or indication for referral or consultation*
+1. a reason or indication for referral or consultation*
 
-\*see guidance below
+*see guidance below
 
 **Profile Specific Implementation Guidance:**
 
-- Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT. LOINC.
-    - Only LOINC concepts that reflect actual procedures **SHOULD** be used
+- \*The `Procedure.code` is mandatory if `Procedure.status` is 'completed' or 'in-progress'.
+- <span class="bg-success" markdown="1">\*The `Procedure.code` has an *additional binding* of "current" and a base "preferred" binding.</span><!-- new-content -->
+   - <span class="bg-success" markdown="1">For the conformance rules on current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.</span><!-- new-content -->
+   - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.
+      - Only LOINC concepts that reflect actual procedures **SHOULD** be used
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
 

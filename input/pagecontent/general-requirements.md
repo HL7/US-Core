@@ -118,7 +118,7 @@ FHIR profiles use [slicing] when a coded element is a repeating element, and a p
 
 #### Extensible Binding for Coded Elements
 
-[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.  If no suitable code exists in the ValueSet, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and if only text is available, then just text may be used.
+[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.  If no suitable code exists in the ValueSet, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and if only text is available and <span class="bg-success" markdown="1">it has no conceptual overlap to the bound coded values</span><!-- new-content -->, then just text may be used.
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
@@ -130,9 +130,21 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 3: US Core AllergyIntolerance.code" %}
 
-Although the FHIR guidance for extensible bindings indicates that *all conceptual overlaps* including free text, be mapped to the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR guidance. This flexibility is sometimes necessary and expected for legacy and text-only data. However, for newly recorded, non-legacy data, a system **SHOULD** adhere to the extensible binding rules.
+<div class="bg-success" markdown="1">
 
-For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueSets contain several high-level abstract codes. For data not captured by the system transmitting the information, the coded data **SHOULD** be automatically converted to fine-grained codes from the specified ValueSet. If this is not possible, the system can provide the existing code or the free text, *and a high-level abstract code*, such as SNOMED CT 'Procedure', to remain conformant with the extensible binding.
+#### Current Binding for Coded Elements
+
+The FHIR rules for extensible bindings state that *all conceptual overlaps*, including free text, should be mapped to the coded values in the bindings. US Core adopts the [current] additional binding from FHIR R5 for more flexibility in exchanging legacy and text-only data. However, for newly recorded, non-legacy data, a system **SHALL** adhere to the extensible binding rules.
+
+For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueSets cover the entire domain. For data not captured by fine-grained code, it is possible to provide a high-level abstract code, such as SNOMED CT "Procedure". Therefore, instead of requiring systems to map all legacy and text data to standard codes, the valueset uses a "current" binding
+
+<span class="stu-note" markdown="1">
+
+The "current" binding corresponds to the UC Core's interpretation of extensible bindings US Core version 6.1.0 and earlier.</span><!-- stu-note -->
+
+  {% include img.html img="Must_Support_Condition_code.png" caption="Figure 4: US Core Condition.code" %}
+
+</div><!-- new-content -->
 
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
@@ -205,9 +217,9 @@ Some examples of modifiers that are not Must Support elements in US Core Profile
 - `Practitioner.identifier.use`
 - `Patient.active`
 
-Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in Figure 4 below.
+Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in the figure below.
 
- {% include img.html img="modifier-element-view.png" caption="Figure 4: Modifier Elements Listed in Key Element View" %}
+ {% include img.html img="modifier-element-view.png" caption="Figure 5: Modifier Elements Listed in Key Element View" %}
 
 ### Missing Data
 

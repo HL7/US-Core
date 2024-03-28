@@ -113,6 +113,7 @@
 [Examples]: examples.html
 [Extensible Binding]: {{site.data.fhir.path}}terminologies.html#extensible
 [extensible]: {{site.data.fhir.path}}terminologies.html#extensible
+[preferred]: {{site.data.fhir.path}}terminologies.html#preferred
 [FHIR Artifacts]: artifacts.html
 [FHIR Binary Resource]: http://hl7.org/fhir/binary.html
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/index.html
@@ -439,3 +440,4 @@
 [Enclosed Precondition Extension]: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/adi-enclosedPrecondition-extension
 [HTA-1 final rule]: https://www.federalregister.gov/documents/2023/04/18/2023-07229/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and#p-991+
 [example binding]: {{site.data.fhir.path}}terminologies.html#example
+[current]: https://hl7.org/fhir/R5/terminologies.html#binding

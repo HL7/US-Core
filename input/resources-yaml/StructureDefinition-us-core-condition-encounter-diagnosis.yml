@@ -87,7 +87,23 @@ differential:
     min: 1
     mustSupport: true
     binding:
-      strength: extensible
+
+# ====== New R5 additional Binding Element Here ====
+
+      extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+        extension:
+        - url: purpose
+          valueCode: current
+        - url: valueSet
+          valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
+        - url: documentation
+          valueMarkdown: US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data.
+
+
+# ====== New R5 additional Binding Element Here ====
+
+      strength: preferred
       description: Valueset to describe the actual problem experienced by the patient
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
     mapping:

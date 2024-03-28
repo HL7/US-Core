@@ -29,7 +29,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 3.  a result value for the average diastolic blood pressure
 4.  <span class="bg-success" markdown="1">a reason if the value is absent*</span><!-- new-content -->
   
-* see guidance below
+*see guidance below
 
 **Profile Specific Implementation Guidance:**
 

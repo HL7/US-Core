@@ -15,7 +15,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 <!-- 1.  a status of the condition* -->
 1.  a category code of "problem-list-item" or "health-concern"
-1.  a code that identifies the condition
+1.  a code that identifies the condition*
 1.  a patient
 
 **Each Condition Must Support:**
@@ -32,8 +32,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * For Encounter Diagnosis use the [US Core Condition Encounter Diagnosis Profile].
-* For USCDI, the applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.  For general guidance on extensible binding to coded data, review [this section](general-requirements.html#extensible-binding-for-coded-elements) in the General Requirements page.
-  - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
+* <span class="bg-success" markdown="1">\*The `Condition.code` has an *additional binding* of "current" and a base "preferred" binding.</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">For the conformance rules on current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.</span><!-- new-content -->
+  - USCDI's applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.
+    - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
 * If `Condition.category` contains a Problem List item category (`problem-list-item`), `Condition.clinicalStatus` **SHOULD** be present.
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.

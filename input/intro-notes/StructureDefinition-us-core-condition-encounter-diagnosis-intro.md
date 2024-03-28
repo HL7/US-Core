@@ -14,7 +14,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 <!-- 1.  a status of the condition* -->
 1.  a category code of ‘encounter-diagnosis'
-1.  a code that identifies the condition
+1.  a code that identifies the condition*
 1.  a patient
 
 **Each Condition Must Support:**
@@ -31,8 +31,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * For Problems and Health Concerns use the [US Core Condition Problems and Health Concerns Profile].
-* For USCDI the applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM.  For general guidance on extensible binding to coded data, review [this section](general-requirements.html#extensible-binding-for-coded-elements) in the General Requirements page.
-  - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
+* <span class="bg-success" markdown="1">\*The `Condition.code` has an *additional binding* of "current" and a base "preferred" binding.</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">For the conformance rules on current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.</span><!-- new-content -->
+  - USCDI's applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM.
+    - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
