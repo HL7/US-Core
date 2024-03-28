@@ -51,7 +51,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 29. **Applied:** (Clarification) Added guidance for using NDC codes[FHIR-43641](https://jira.hl7.org/browse/FHIR-43641) [See Changes Here](StructureDefinition-us-core-medicationdispense.html#mandatory-and-must-support-data-elements)
 30. **Applied:** (Enhancement) Add _lastUpdated search parameter guidance [FHIR-43659](https://jira.hl7.org/browse/FHIR-43659) [See Changes Here]([#.htm](general-guidance.html#searching-using-lastupdated)
 31. **Applied:** (Enhancement) Edit Medication Adherence codes and provide examples [FHIR-43757](https://jira.hl7.org/browse/FHIR-43757) [See Changes Here](StructureDefinition-us-core-medication-adherence.html)
-32. **Pre-Applied** (Enhancement) Update and clarify US Core Scopes requirements [FHIR-43761](https://jira.hl7.org/browse/FHIR-43761) [See Changes Here](scopes.html) and [Here](StructureDefinition-us-core-allergyintolerance.html#us-core-scopes)
+32. **Applied** (Enhancement) Update and clarify US Core Scopes requirements [FHIR-43761](https://jira.hl7.org/browse/FHIR-43761) [See Changes Here](scopes.html) and [Here](StructureDefinition-us-core-allergyintolerance.html#us-core-scopes)
 33. **Applied:** (Correction) Fix Rendering in granular scope tables[FHIR-43770](https://jira.hl7.org/browse/FHIR-43770) [See Changes Here](scopes.html#us-core-scopes)
 34. **Applied:** (Correction) Fix format error [FHIR-43773](https://jira.hl7.org/browse/FHIR-43773) [See Changes Here](general-requirements.html#missing-data)
 35. **Applied:** (Clarification) Restore the FHIR Core resource definitions and comments [FHIR-43800](https://jira.hl7.org/browse/FHIR-43800) For example [See Changes Here](StructureDefinition-us-core-allergyintolerance.html)

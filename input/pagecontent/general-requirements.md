@@ -4,7 +4,7 @@ This page documents requirements common to all US Core actors used in this guide
 <!-- This page defines how CapabilityStatements are used and the expectations for mandatory and Must Support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).  Note that the conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules]. -->
 
 
-### US Core Conformance Artifacts:
+### US Core Conformance Artifacts
 
 The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  US Core Profile [StructureDefinitions] defines the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present and constrains the way the elements are used when using the profile. Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile
 
