@@ -99,7 +99,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 74. **Applied:** (Clarification) Clarify Must Support requirements for Practitioner.address [FHIR-44693](https://jira.hl7.org/browse/FHIR-44693) [See Changes Here](StructureDefinition-us-core-practitioner.html) and [Here](future-of-US-core.html)
 75. **Applied:** (Clarification) Update Goal introduction to match profile [FHIR-44694](https://jira.hl7.org/browse/FHIR-44694) [See Changes Here](StructureDefinition-us-core-goal.html)
 76. **Applied:** (Enhancement) Sex Extension's value set is too restrictive [FHIR-44710](https://jira.hl7.org/browse/FHIR-44710) [See Changes Here](StructureDefinition-us-core-sex.html)
-77. **Applied:** () It doesn't make sense for Condition.code to be extensible [FHIR-44715](https://jira.hl7.org/browse/FHIR-44715) See Changes Here:
+77. **Applied:** (Enhancement) Update Condition.code and Procedure.code from extensible to current [FHIR-44715](https://jira.hl7.org/browse/FHIR-44715) See Changes Here:
   - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
   - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
   - [US Core Procedure Profile](StructureDefinition-us-core-procedure.html)
