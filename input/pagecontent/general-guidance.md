@@ -263,7 +263,7 @@ Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance i
     -   Resource-type: The name of a resource type (e.g., "Patient")
     -   id: The Logical Id of a resource(e.g., "24342")
 -   Content surrounded by {} is optional *for the client* to supply and will be replaced by the string literal identified.
-    -   parameters: URL parameters as defined for the particular interaction (e.g."?\_format=xml"}
+    -   parameters: URL parameters as defined for the particular interaction (e.g., "?\_format=xml"}
 
 For more information, see the [FHIR RESTful API]
 
