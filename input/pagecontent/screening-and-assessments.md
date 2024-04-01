@@ -93,7 +93,7 @@ Note that the panels can be nested to create additional groupings of responses. 
 
 ###### Searching for Screening and Assessment Data
 
-Unlike QuestionnaireResponse, When Observations are used to record set of Screening and Assessments responses, clients can query individual responses using the standard FHIR RESTful API search parameters. This simple example below is a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment:
+Unlike QuestionnaireResponse, When Observations are used to record set of Screening and Assessments responses, clients can query individual responses using the standard FHIR RESTful API search parameters. This sample example below is a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment:
 
 <div class="bg-success" markdown="1">
 {% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %}
