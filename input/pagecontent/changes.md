@@ -125,6 +125,8 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 79. **Applied:** (Enhancement) Relax Sex binding to "extensible" [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](StructureDefinition-us-core-sex.html)
 80. **Applied:** (Enhancement) Combine the tables of Must Support references andAdditional USCDI references [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](CapabilityStatement-us-core-server.html#ms-ref-table)
 81. **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
+82. **Pre-Applied:** (Clarification) Align category term with community understanding [FHIR-45002](https://jira.hl7.org/browse/FHIR-45002) [See Changes Here](CodeSystem-condition-category.html)
+83. **Pre-Applied:** (Enhancement) Add Guidance on meeting the definition of 'X' [FHIR-45177](https://jira.hl7.org/browse/FHIR-45177) [See Changes Here](StructureDefinition-us-core-sex.html)
 
 ### Version = 7.0.0 - ballot
 - url: <http://hl7.org/fhir/us/core/2024Jan/>
