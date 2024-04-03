@@ -414,8 +414,8 @@
 [Vital Signs with Qualifying Elements: Average Blood Pressure Profile]: https://hl7.org/fhir/us/vitals/STU1/StructureDefinition-average-blood-pressure.html
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Intervention Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9/expansion
-[FHIR Write Guidance for Vital Sign Observations]: fhir-write.html
-[HTI-1 proposed rule]: https://www.federalregister.gov/d/2023-07229/p-991+
+[Writing Vital Signs]: fhir-write.html
+[HTI-1 final rule]: https://www.federalregister.gov/documents/2023/04/18/2023-07229/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and
 [FHIRpath]: https://hl7.org/fhirpath/N1/
 [USCDI ONDEC process]: https://www.healthit.gov/isa/ONDEC
 [principle of least privilege]: https://en.wikipedia.org/wiki/Principle_of_least_privilege

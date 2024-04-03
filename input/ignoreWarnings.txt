@@ -1,26 +1,21 @@
 == Suppressed Messages ==
 
 # ================================================================================
-# ===  2 ERRORS Discussed on FMG IG review and variance granted  7.0.0 ===
+# ===  2 ERRORS Discussed on FMG IG review and variance granted 7.0.0 Ballot ===
 # ===========================================================-=====================
 
 # === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. A change request to relax the binding in the FHIR Vitals profile to has been made and approved in base FHIR ver 4.3.0 (“Release 4B”) which will correct this error when this guide is based a newer version of FHIR. ===
 
+ERROR: Observation/satO2-fiO2: Observation.component[0].value.ofType(Quantity): The code provided (http://unitsofmeasure.org#L/min) was not found in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a code from this value set is required: The provided code 'http://unitsofmeasure.org#L/min' was not found in the value set 'http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1'
 ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
-ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 
 # ==== This is a known issues with the terminology service - there is no timeline for their resolution ===
 
 ERROR: ValueSet.where(id = 'simple-language'): Error from http://tx.fhir.org/r4: Language valuesets cannot be expanded as they are based on a grammar
 
 # =========================================================================================
-# === Warnings and Hints Discussed on FMG IG review and variance granted 7.0.0  ====
+# === Warnings and Hints to be Discussed on FMG IG review  (granted for 7.0.0 ballot)====
 # =========================================================================================
-
-
-# === VSAC issues - The tooling infrastructure currently is unable to access these codes. They have been checked and the concepts are correct (5) ===
-
-The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
 
 # === RESOLVED VSAC issues - The tooling infrastructure currently is unable to access these codes because this valueset is more recent than the latest VSAC package. They have been checked and the concepts are correct (5) ===
 
@@ -51,22 +46,6 @@ No code provided, and a code should be provided from the value set 'US Core Goal
 
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile
 
-
-# === This is a yet to be resolved ICD10PCS issue with publishing/terminology server. see: https://terminology.hl7.org/CodeSystem-icd10PCS.html the code has been verified as a valid ICD10-PCS code (2) ===
-
-
-INFORMATION: Procedure/rehab: Procedure.code.coding[1]: The definition for the Code System with URI 'http://www.cms.gov/Medicare/Coding/ICD10' doesnt provide any codes so the code cannot be validated
-INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: The definition for the Code System with URI 'http://www.cms.gov/Medicare/Coding/ICD10' doesnt provide any codes so the code cannot be validated
-WARNING: Procedure/rehab: Procedure.code: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' could not be found so the code cannot be validated
-WARNING: ServiceRequest/rehab: ServiceRequest.code: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' could not be found so the code cannot be validated
-
-
-
-# === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) ===
-
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0-ballot1 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-
 # === These questionnaires are created using NLM tooling based on LOINC LFORMs.  They use standard FHIR Questionnaire Extensions that "extend" the base SDC profile ===
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|3.0.0
@@ -74,25 +53,6 @@ This element does not match any known slice defined in the profile http://hl7.or
 # === Code from extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset (1)===
 
 None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
-
-
-# === These Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles  Updated from 7.0.0-ballot===
-
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|7.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|7.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0
-
-# === This Examples conform to US Core Average Blood Pressure Profile. It defines additional slices (translations) to the FHIR BP profile for the code and component codes and will not match FHIR BP profile and vice versa ===
-
-INFORMATION: Observation/average-blood-pressure: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/average-blood-pressure: Observation.component[0].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/average-blood-pressure: Observation.component[1].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/average-blood-pressure: Observation.component[0].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/average-blood-pressure: Observation.component[1].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-# === These Examples conform to the US Core Pulse Oximetry Profile. It defines additional slices (translations) to the FHIR Oxygen Saturation profile for the code and component codes and will not match the FHIR Oxygen Saturation profile slices===
 
 
 # === Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example) (2)===
@@ -164,12 +124,6 @@ WARNING: Provenance/example-targeted-provenance: Provenance: Rule dom-6: 'A reso
 
 # === these CodeSystems and ValueSets are in FHIR Core/THO and not under the direct control of US Core editors (updated text from 7.0.0) ===
 
-# Reference to draft item http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
-# Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-participant-type|0.1.0
-# Reference to draft item http://hl7.org/fhir/narrative-status|4.0.1
-# Reference to draft item http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
-
-
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|0.1.0
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
@@ -178,27 +132,7 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization
 Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2023-04-26
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-class|0.1.0
 
-Reference to trial-use ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type|7.0.0
-Reference to trial-use ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-intent|7.0.0
-Reference to trial-use ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status|7.0.0
-
-# ====== These US Core Observation category codes are part of an extensibly bound US Core Observation Category Code ValueSet that includes the FHIR Observation Category Codes. ===
-
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#sdoh)
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#disability-status)
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#care-experience-preference)
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#cognitive-status)
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#functional-status)
-None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/us/core/CodeSystem/us-core-category#treatment-intervention-preference)
-
 # ==== The following code system are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked and the identifiers are correct (updated text from 7.0.0) ===========
-
-
-# The definition for the Code System with URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' doesnt provide any codes so the code cannot be validated
-# WARNING: Observation/observation-occupation: Observation.value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found so the code cannot be validated
-# WARNING: Observation/observation-occupation: Observation.component[0].value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found so the code cannot be validated
-# WARNING: Observation/observation-occupation-industry-unknown: Observation.value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found so the code cannot be validated
-# WARNING: Observation/observation-occupation-unknown: Observation.component[0].value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found so the code cannot be validated
 
 WARNING: Observation/observation-occupation: Observation.value.ofType(CodeableConcept): Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
 WARNING: Observation/observation-occupation: Observation.value.ofType(CodeableConcept): A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
@@ -216,15 +150,6 @@ WARNING: Observation/observation-occupation-unknown: Observation.component[0].va
 
 # === Code System not recognized due to IP issues (updated text from 7.0.0) ===
 
-# Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-# The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
-# Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
-
-# WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.nubc.org/patient-discharge
-# Code System URI 'http://www.nubc.org/patient-discharge' could not be found so the code cannot be validated
-# WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Code System URI 'http://www.nubc.org/patient-discharge' could not be found so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0
-# WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0
-
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0' because the code system http://www.nubc.org/patient-discharge was not found
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: A definition for CodeSystem 'http://www.nubc.org/patient-discharge' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0' because the code system http://www.nubc.org/patient-discharge was not found
 INFORMATION: Encounter/1036: Encounter.hospitalization.dischargeDisposition.coding[0].system: A definition for CodeSystem 'http://www.nubc.org/patient-discharge' could not be found, so the code cannot be validated
@@ -233,11 +158,7 @@ WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from http:/
 
 # ====FHIR R4 http://hl7.org/fhir/ValueSet/formatcodes is in error which is has been corrected in the FHIR R5. The guide is referencing the IHE format code package and the value set uses the corrected FHIR R5 codes.(updated text from 7.0.0) ===
 
-INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[2].resource/*Endpoint/71*/.payloadType[0].coding[0]: The code 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is valid but is deprecated
-# INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The code 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is valid but is deprecated
 INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format.code: The code is deprecated
-INFORMATION: DocumentReference/episode-summary: DocumentReference.content[0].format: The code 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is valid but is deprecated
-INFORMATION: Organization/saint-luke-w-endpoint: Organization.contained[0]/*Endpoint/75*/.payloadType[0].coding[0]: The code 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is valid but is deprecated
 INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1) was not found in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code 'http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1: 'For documents following C-CDA 2.1 constraints using a structured body.'' was not found in the value set 'http://hl7.org/fhir/ValueSet/formatcodes|4.0.1')
 
 

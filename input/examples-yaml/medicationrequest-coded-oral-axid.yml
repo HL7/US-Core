@@ -26,15 +26,15 @@ extension:
     -  url: informationSource
        valueCodeableConcept:
          coding:
-           - system: http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant
-             code: Patient
-             display: Patient
+           - system: http://snomed.info/sct
+             code: '116154003'
+             display: Patient (person)
     -  url: informationSource
        valueCodeableConcept:
          coding:
-           - system: http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant
-             code: OutsidePharmacy
-             display: Outside Pharmacy
+           - system: https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
+             code: 1179-1
+             display: Pharmacy
     url:  http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
 # === end  extension ===
 

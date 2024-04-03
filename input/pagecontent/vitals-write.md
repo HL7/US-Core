@@ -1,6 +1,3 @@
-<!-- # FHIR Write Guidance for Vital Sign Observations -->
-
-This page is new content for US Core Version 7.0.0
 
 ### Examples
 

@@ -670,18 +670,6 @@ definition:
     name: Medication Dispense Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense
   - reference:
-      reference: CodeSystem/MedicationAdheranceInformant
-    description: Temporary CodeSystem for Medication Adherance Informant to apply
-      FHIR-43466.  Will reference VSAC system in published version.
-    exampleBoolean: false
-    name: MedicationAdheranceInformant
-  - reference:
-      reference: ValueSet/MedicationAdheranceInformant
-    description: Temporary ValueSet for Medication Adherance Informant to apply FHIR-43466.  Will
-      reference VSAC system in published version.
-    exampleBoolean: false
-    name: MedicationAdheranceInformant
-  - reference:
       reference: MedicationRequest/medicationrequest-coded-oral-axid
     description: This is an prescribed oral solution example for the *US Core MedicationRequest
       Profile*.  It represents the medication and reason using codes.
