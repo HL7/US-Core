@@ -80,7 +80,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 58. **Applied:** (Correction) Clarify Medication Adherence Extension definitions [FHIR-44076](https://jira.hl7.org/browse/FHIR-44076) [See Changes Here](StructureDefinition-us-core-medication-adherence.html)
 59. **Applied:** (Correction) Remove redundant sentence from Server CapabilityStatement description [FHIR-44112](https://jira.hl7.org/browse/FHIR-44112) [See Changes Here](capability-statements.html)
 60. **Resolved - change required:** (Clarification) Clarify the use of UCUM for Quantity datatypes in Lab Observations [FHIR-44117](https://jira.hl7.org/browse/FHIR-44117) [See Changes Here](StructureDefinition-us-core-observation-lab.html) and [Here](general-guidance.html#using-ucum-codes-in-the-quantity-datatype)
-61. **Applied:** (Correction) Remove US Core from CapabilityStatement.instantiates [FHIR-44121](https://jira.hl7.org/browse/FHIR-44121) [See Changes Here](CapabilityStatement-us-core-server.html)
+61. **Applied:** (Correction) Remove US Core from CapabilityStatement.instantiates [FHIR-44121](https://jira.hl7.org/browse/FHIR-44121) [See Changes Here](CapabilityStatement-us-core-client.html)
 62. **Applied:** (Clarification) Include FHIR R6 Sex and Gender content in Patient Profile Introduction [FHIR-44123](https://jira.hl7.org/browse/FHIR-44123) [See Changes Here](StructureDefinition-us-core-patient.html)
 63. **Resolved - change required:** (Enhancement) Remove ASKU from value sets and use DAR concept instead [FHIR-44127](https://jira.hl7.org/browse/FHIR-44127) and [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) See Changes:
    - [Gender Identity Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.32/expansion)
