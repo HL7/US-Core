@@ -13,6 +13,7 @@ Each update to a new version of US Core changes the US Core Profiles and conform
   - [US Core DiagnosticReport Profile for Laboratory Results Reporting](StructureDefinition-us-core-diagnosticreport-lab.html)
   - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
   - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html)
+  - [Searching using lastUpdated](general-guidance.html#searching-using-lastupdated)
 - [US Core Medication Adherence Extension](StructureDefinition-us-core-medication-adherence.html): In the previous ballot version, we added support for Medication Adherence as an *Additional USCDI Requirement* using the new US Core Medication Adherence Extension. In this version, we simplified the adherence codes and change the information source from a FHIR Reference to actor codes.
 - [US Core Average Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-average-blood-pressure.html): In the previous ballot version, we added the US Core Average Blood Pressure Profile to support the USCDI Average Blood Pressure data element. In this version, it was rewritten, and the guidance updated. Notably, it is based upon the FHIR Observation and not the US Core Vital Signs Profile.
 - [US Core Smoking Status Observation Profile](StructureDefinition-us-core-smokingstatus.html). This Profile and its terminology were updated to accommodate more smoking-related observations.
@@ -125,8 +126,12 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 79. **Applied:** (Enhancement) Relax Sex binding to "extensible" [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](StructureDefinition-us-core-sex.html)
 80. **Applied:** (Enhancement) Combine the tables of Must Support references andAdditional USCDI references [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](CapabilityStatement-us-core-server.html#ms-ref-table)
 81. **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
-82. **Pre-Applied:** (Clarification) Align category term with community understanding [FHIR-45002](https://jira.hl7.org/browse/FHIR-45002) [See Changes Here](CodeSystem-condition-category.html)
-83. **Pre-Applied:** (Enhancement) Add Guidance on meeting the definition of 'X' [FHIR-45177](https://jira.hl7.org/browse/FHIR-45177) [See Changes Here](StructureDefinition-us-core-sex.html)
+82. **Applied:** (Clarification) Align category term with community understanding [FHIR-45002](https://jira.hl7.org/browse/FHIR-45002) [See Changes Here](CodeSystem-condition-category.html)
+83. **Applied:** (Enhancement) Add Guidance on meeting the definition of 'X' [FHIR-45177](https://jira.hl7.org/browse/FHIR-45177) [See Changes Here](StructureDefinition-us-core-sex.html)
+84. **Pre-Applied:** (Clarification) Clarify 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜 requirements for Reference datatype [FHIR-45204](https://jira.hl7.org/browse/FHIR-45204) See Changes Here:
+  - [US Core Procedure Profile](StructureDefinition-us-core-procedure.html#mandatory-and-must-support-data-elements)
+  - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
+  - [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
 
 ### Version = 7.0.0 - ballot
 - url: <http://hl7.org/fhir/us/core/2024Jan/>

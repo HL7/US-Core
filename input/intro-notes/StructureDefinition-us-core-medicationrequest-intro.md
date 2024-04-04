@@ -57,7 +57,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - \*The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
     - Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.
        - when using  `MedicationRequest.reasonReference`:
-         - Servers **SHALL** support *at least one* resource in `MedicationRequest.reasonReference`. Clients SHALL support all resources in `MedicationRequest.reasonReference`.
+         - Servers **SHALL** support *at least one* target resource in `MedicationRequest.reasonReference`. Clients SHALL support all target resources in `MedicationRequest.reasonReference`.
          - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
 
 </div><!-- new-content -->
