@@ -1,9 +1,0 @@
-- *The Reason or justification for a referral or consultation is communicated through:
-  1. <span class="bg-success" markdown="1">{% if include.type == "Procedure" %}`Procedure.basedOn` that links the Procedure to the US Core ServiceRequest Profile that includes either {% endif %}`ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`{% if include.type== "ServiceRequest" %} on the ServiceRequest according to the US Core ServiceRequest Profile that `Procedure.basedOn` references.{% endif %}</span><!-- new-content -->
-     - `ServiceRequest.reasonCode` and `ServiceRequest.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.
-     - As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `ServiceRequest.reasonReference`, the referenced resources **SHOULD** be a US Core Profile.
-  1. `Procedure.reasonCode` or `Procedure.reasonReference` when the Procedure does not have an associated ServiceRequest.
-     - Although both `Procedure.reasonCode` and `Procedure.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.
-     - As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `Procedure.reasonReference`, the referenced resources **SHOULD** be a US Core Profile.
-
-    <span class="bg-success" markdown="1">Servers and Clients **SHALL** support options 1 and 2 as Additional USCDI Requirements. Depending on the procedure being documented, a server will select option 1 or 2.</span><!-- new-content -->

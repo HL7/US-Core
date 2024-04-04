@@ -441,5 +441,5 @@
 [HTA-1 final rule]: https://www.federalregister.gov/documents/2023/04/18/2023-07229/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and#p-991+
 [example binding]: {{site.data.fhir.path}}terminologies.html#example
 [example]: {{site.data.fhir.path}}terminologies.html#example
-
 [current]: https://hl7.org/fhir/R5/terminologies.html#binding
+[searching using lastUpdated]: general-guidance.html#searching-using-lastupdated

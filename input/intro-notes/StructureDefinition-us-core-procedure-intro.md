@@ -39,7 +39,14 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
 
+<div class="bg-success" markdown="1">
 
-{% include reason-for-referral.md type="Procedure" %}
+- *Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements. Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`.  Depending on the procedure being documented, a server will select the appropriate Profile to use.
+  - Although both `Procedure.reasonCode` and `Procedure.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.
+     - when using  `Procedure.reasonReference`:
+       - Servers **SHALL** support *at least one* resource in `Procedure.reasonReference`. Clients SHALL support all resources in `Procedure.reasonReference`.
+       - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
+
+</div><!-- new-content -->
 
 {% include link-list.md %}

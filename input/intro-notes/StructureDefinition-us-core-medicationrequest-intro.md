@@ -52,9 +52,16 @@ The following data-elements must always be present ([Mandatory] definition) or m
    *  Although both are marked as Must Support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.
 
+<div class="bg-success" markdown="1">
+
 - \*The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
-  - As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `MedicationRequest.reasonReference`, the referenced Condition or Observation **SHOULD** be a US Core Profile.
-  
+    - Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.
+       - when using  `MedicationRequest.reasonReference`:
+         - Servers **SHALL** support *at least one* resource in `MedicationRequest.reasonReference`. Clients SHALL support all resources in `MedicationRequest.reasonReference`.
+         - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
+
+</div><!-- new-content -->
+
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 * Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 

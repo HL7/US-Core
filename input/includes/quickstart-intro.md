@@ -38,7 +38,7 @@ Below is an overview of the required Server RESTful FHIR interactions for this p
 {% if smart_scope -%}- See the [Scopes Format](scopes.html#scopes-format) section for a description of the SMART scopes syntax.{% endif %}
 - See the [Search Syntax](general-guidance.html#search-syntax) section for a description of the US Core search syntax.
 - See the [General Requirements] section for additional rules and expectations when a server requires status parameters.
-- See the [General Guidance] section for additional guidance on searching for multiple <patient|user|system>s.
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 
 
