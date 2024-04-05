@@ -15,7 +15,7 @@
 - [status](SearchParameter-us-core-careteam-status.html)
 
 ##### Condition
-- {:.new-content}[_lastUpdated](SearchParameter-us-core-condition-lastUpdated.html)
+- {:.new-content}[_lastUpdated](SearchParameter-us-core-condition-lastupdated.html)
 - [abatement-date](SearchParameter-us-core-condition-abatement-date.html)
 - [category](SearchParameter-us-core-condition-category.html)
 - [clinical-status](SearchParameter-us-core-condition-clinical-status.html)
@@ -34,7 +34,7 @@
 - [type](SearchParameter-us-core-device-type.html)
 
 ##### DiagnosticReport
-- {:.new-content}[_lastUpdated](SearchParameter-us-core-diagnosticreport-lastUpdated.html)
+- {:.new-content}[_lastUpdated](SearchParameter-us-core-diagnosticreport-lastupdated.html)
 - [category](SearchParameter-us-core-diagnosticreport-category.html)
 - [code](SearchParameter-us-core-diagnosticreport-code.html)
 - [date](SearchParameter-us-core-diagnosticreport-date.html)
@@ -52,7 +52,7 @@
 
 ##### Encounter
 - [_id](SearchParameter-us-core-encounter-id.html)
-- {:.new-content}[_lastUpdated](SearchParameter-us-core-encounter-lastUpdated.html)
+- {:.new-content}[_lastUpdated](SearchParameter-us-core-encounter-lastupdated.html)
 - [class](SearchParameter-us-core-encounter-class.html)
 - [date](SearchParameter-us-core-encounter-date.html)
 - [identifier](SearchParameter-us-core-encounter-identifier.html)
@@ -91,7 +91,7 @@
 - [status](SearchParameter-us-core-medicationrequest-status.html)
 
 ##### Observation
-- {:.new-content}[_lastUpdated](SearchParameter-us-core-observation-lastUpdated.html)
+- {:.new-content}[_lastUpdated](SearchParameter-us-core-observation-lastupdated.html)
 - [category](SearchParameter-us-core-observation-category.html)
 - [code](SearchParameter-us-core-observation-code.html)
 - [date](SearchParameter-us-core-observation-date.html)

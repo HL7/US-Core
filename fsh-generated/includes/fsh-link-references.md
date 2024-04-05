@@ -326,7 +326,7 @@
 [USCoreConditionClinicalStatus]: SearchParameter-us-core-condition-clinical-status.html
 [USCoreConditionCode]: SearchParameter-us-core-condition-code.html
 [USCoreConditionEncounter]: SearchParameter-us-core-condition-encounter.html
-[USCoreConditionLastupdated]: SearchParameter-us-core-condition-lastUpdated.html
+[USCoreConditionLastUpdated]: SearchParameter-us-core-condition-lastupdated.html
 [USCoreConditionOnsetDate]: SearchParameter-us-core-condition-onset-date.html
 [USCoreConditionPatient]: SearchParameter-us-core-condition-patient.html
 [USCoreConditionRecordedDate]: SearchParameter-us-core-condition-recorded-date.html
@@ -337,7 +337,7 @@
 [USCoreDiagnosticreportCategory]: SearchParameter-us-core-diagnosticreport-category.html
 [USCoreDiagnosticreportCode]: SearchParameter-us-core-diagnosticreport-code.html
 [USCoreDiagnosticreportDate]: SearchParameter-us-core-diagnosticreport-date.html
-[USCoreDiagnosticreportLastupdated]: SearchParameter-us-core-diagnosticreport-lastUpdated.html
+[USCoreDiagnosticreportLastUpdated]: SearchParameter-us-core-diagnosticreport-lastupdated.html
 [USCoreDiagnosticreportPatient]: SearchParameter-us-core-diagnosticreport-patient.html
 [USCoreDiagnosticreportStatus]: SearchParameter-us-core-diagnosticreport-status.html
 [USCoreDocumentreferenceCategory]: SearchParameter-us-core-documentreference-category.html
@@ -352,7 +352,7 @@
 [USCoreEncounterDischargeDisposition]: SearchParameter-us-core-encounter-discharge-disposition.html
 [USCoreEncounterId]: SearchParameter-us-core-encounter-id.html
 [USCoreEncounterIdentifier]: SearchParameter-us-core-encounter-identifier.html
-[USCoreEncounterLastupdated]: SearchParameter-us-core-encounter-lastUpdated.html
+[USCoreEncounterLastUpdated]: SearchParameter-us-core-encounter-lastupdated.html
 [USCoreEncounterLocation]: SearchParameter-us-core-encounter-location.html
 [USCoreEncounterPatient]: SearchParameter-us-core-encounter-patient.html
 [USCoreEncounterStatus]: SearchParameter-us-core-encounter-status.html
@@ -381,7 +381,7 @@
 [USCoreObservationCategory]: SearchParameter-us-core-observation-category.html
 [USCoreObservationCode]: SearchParameter-us-core-observation-code.html
 [USCoreObservationDate]: SearchParameter-us-core-observation-date.html
-[USCoreObservationLastupdated]: SearchParameter-us-core-observation-lastUpdated.html
+[USCoreObservationLastUpdated]: SearchParameter-us-core-observation-lastupdated.html
 [USCoreObservationPatient]: SearchParameter-us-core-observation-patient.html
 [USCoreObservationStatus]: SearchParameter-us-core-observation-status.html
 [USCoreOrganizationAddress]: SearchParameter-us-core-organization-address.html
