@@ -52,7 +52,12 @@
                 "condition": [
                     "us-core-14"
                 ],
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "strength": "preferred",
+                    "description": "The nature of the relationship between a patient and the related person.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+                }
             },
             {
                 "id": "RelatedPerson.name",

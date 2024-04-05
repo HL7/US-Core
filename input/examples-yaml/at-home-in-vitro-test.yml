@@ -9,6 +9,7 @@ meta:
       Lab Profile*, with a coded result value.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  lastUpdated: '2021-01-28T16:06:21-05:00'
 status: final
 category:
 - coding:
@@ -20,7 +21,8 @@ code:
   coding:
   - system: http://loinc.org
     code: 95209-3
-    display: SARS-CoV+SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory system specimen by Rapid immunoassay
+    display: SARS-CoV+SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory system specimen
+      by Rapid immunoassay
 subject:
   reference: Patient/example
 encounter:

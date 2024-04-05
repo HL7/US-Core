@@ -22,6 +22,17 @@
                 "mustSupport": false
             },
             {
+                "id": "Encounter.meta",
+                "path": "Encounter.meta",
+                "mustSupport": true
+            },
+            {
+                "id": "Encounter.meta.lastUpdated",
+                "path": "Encounter.meta.lastUpdated",
+                "short": "When the resource last changed",
+                "mustSupport": true
+            },
+            {
                 "id": "Encounter.identifier",
                 "path": "Encounter.identifier",
                 "mustSupport": true

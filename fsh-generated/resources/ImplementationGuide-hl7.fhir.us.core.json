@@ -2726,6 +2726,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-condition-lastUpdated"
+        },
+        "description": "**When the resource version last changed**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreConditionLastupdated"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-condition-onset-date"
         },
         "description": "**Date related onsets (dateTime and Period)**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -2803,6 +2811,14 @@
         "description": "**The clinically relevant time of the report**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreDiagnosticreportDate"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-diagnosticreport-lastUpdated"
+        },
+        "description": "**When the resource version last changed**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreDiagnosticreportLastupdated"
       },
       {
         "reference": {
@@ -2915,6 +2931,14 @@
         "description": "**Identifier(s) by which this encounter is known**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreEncounterIdentifier"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-encounter-lastUpdated"
+        },
+        "description": "**When the resource version last changed**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreEncounterLastupdated"
       },
       {
         "reference": {
@@ -3139,6 +3163,14 @@
         "description": "**Obtained date/time. If the obtained element is a period, a date that falls in the period**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreObservationDate"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-observation-lastUpdated"
+        },
+        "description": "**When the resource version last changed**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreObservationLastupdated"
       },
       {
         "reference": {
@@ -3680,7 +3712,7 @@
       },
       {
         "code": "show-inherited-invariants",
-        "value": "true"
+        "value": "false"
       },
       {
         "code": "usage-stats-opt-out",

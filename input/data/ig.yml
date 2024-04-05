@@ -2600,6 +2600,14 @@ definition:
     exampleBoolean: false
     name: USCoreConditionEncounter
   - reference:
+      reference: SearchParameter/us-core-condition-lastUpdated
+    description: "**When the resource version last changed**  \n**NOTE**: This US\
+      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
+      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    exampleBoolean: false
+    name: USCoreConditionLastupdated
+  - reference:
       reference: SearchParameter/us-core-condition-onset-date
     description: "**Date related onsets (dateTime and Period)**  \n**NOTE**: This\
       \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
@@ -2676,6 +2684,14 @@ definition:
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
     name: USCoreDiagnosticreportDate
+  - reference:
+      reference: SearchParameter/us-core-diagnosticreport-lastUpdated
+    description: "**When the resource version last changed**  \n**NOTE**: This US\
+      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
+      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    exampleBoolean: false
+    name: USCoreDiagnosticreportLastupdated
   - reference:
       reference: SearchParameter/us-core-diagnosticreport-patient
     description: "**The subject of the report if a patient**  \n**NOTE**: This US\
@@ -2782,6 +2798,14 @@ definition:
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
     name: USCoreEncounterIdentifier
+  - reference:
+      reference: SearchParameter/us-core-encounter-lastUpdated
+    description: "**When the resource version last changed**  \n**NOTE**: This US\
+      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
+      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    exampleBoolean: false
+    name: USCoreEncounterLastupdated
   - reference:
       reference: SearchParameter/us-core-encounter-location
     description: "**Location the encounter takes place**  \n**NOTE**: This US Core\
@@ -2996,6 +3020,14 @@ definition:
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
     name: USCoreObservationDate
+  - reference:
+      reference: SearchParameter/us-core-observation-lastUpdated
+    description: "**When the resource version last changed**  \n**NOTE**: This US\
+      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
+      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    exampleBoolean: false
+    name: USCoreObservationLastupdated
   - reference:
       reference: SearchParameter/us-core-observation-patient
     description: "**The subject that the observation is about (if patient)**  \n**NOTE**:\
@@ -3423,7 +3455,7 @@ definition:
   - code: apply-version
     value: 'true'
   - code: show-inherited-invariants
-    value: 'true'
+    value: 'false'
   - code: usage-stats-opt-out
     value: 'true'
   - code: suppressed-ids

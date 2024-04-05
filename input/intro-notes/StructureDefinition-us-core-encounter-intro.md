@@ -41,4 +41,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 {% include encounter-location.md %} 
 
+- <span class="bg-success" markdown="1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">New encounters/visits</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">Changes in the status of encounter including events that trigger the same status (e.g., in-progress → in-progress). These status changes correspond to events that can initiate [HL7 V2] ADT messages.</span><!-- new-content -->
+  
+{% include meta-updated-next-version.md %}
+
 {% include link-list.md %}

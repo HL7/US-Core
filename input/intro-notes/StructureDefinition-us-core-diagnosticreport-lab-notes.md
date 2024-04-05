@@ -76,6 +76,18 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s).  **SHOULD** support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`category`](SearchParameter-us-core-diagnosticreport-category.html)** and **[`_lastUpdated`](SearchParameter-us-core-diagnosticreport-lastupdated.html)** search parameters:
+    - including support for these `_lastUpdated` comparators: `gt,lt,ge,le`
+    - including optional support for *AND* search on `_lastUpdated` (e.g.`_lastUpdated=[date]&_lastUpdated=[date]]&...`)
+
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]&_lastUpdated={gt|lt|ge|le}[date]{&_lastUpdated={gt|lt|ge|le}[date]&...}`
+
+    Example:
+    
+      1. GET [base]/DiagnosticReport?patient=f201&amp;category=http://terminology.hl7.org/CodeSystem/v2-0074\|LAB&amp;_lastUpdated=ge2010-01-14T00:00:00Z
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and a category code = `LAB` and _lastUpdated. See the US Core General Guidance page for [Searching Using lastUpdated]. ([how to search by reference] and [how to search by token] and [how to search by date])
+
 
 
 {% include link-list.md %}

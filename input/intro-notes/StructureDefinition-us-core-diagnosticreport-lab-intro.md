@@ -34,5 +34,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
    -  providing both a local system codes and a LOINC code that it map to
    -  providing a more specific category codes to the “LAB” category code, such as “CH” (chemistry), in an additional coding element.
 * Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
+- <span class="bg-success" markdown="1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">New laboratory reports</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">Changes in the status of laboratory reports including events that trigger the same status (e.g., amended → amended).</span><!-- new-content -->
+
+{% include meta-updated-next-version.md %}
 
 {% include link-list.md %}

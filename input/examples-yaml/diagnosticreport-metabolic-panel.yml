@@ -10,7 +10,7 @@ code:
     system: http://loinc.org
 effectiveDateTime: '2005-07-04'
 id: metabolic-panel
-issued: '2005-07-06T11:45:33+11:00'
+issued: '2005-07-06T11:45:33Z'
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
@@ -20,6 +20,7 @@ meta:
       Lab Profile*.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
+  lastUpdated: '2005-07-06T15:29:58.597Z'
 performer:
 - display: Acme Laboratory, Inc
   reference: Organization/acme-lab

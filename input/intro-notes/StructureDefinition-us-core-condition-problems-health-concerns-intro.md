@@ -44,4 +44,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
     * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A server may support both, which means they support all 3 locations.
     * The client application **SHALL** support all three elements.
 
+- <span class="bg-success" markdown="1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">New problems and health concerns</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">Changes in the clinical status or verifications status of a problem or health concern</span><!-- new-content -->
+
+{% include meta-updated-next-version.md %}
+
 {% include link-list.md %}

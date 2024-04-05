@@ -57,6 +57,18 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category and status ([how to search by reference] and [how to search by token])
 
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`_lastUpdated`](SearchParameter-us-core-observation-lastupdated.html)** search parameters:
+    - including support for these `_lastUpdated` comparators: `gt,lt,ge,le`
+    - including optional support for *AND* search on `_lastUpdated` (e.g.`_lastUpdated=[date]&_lastUpdated=[date]]&...`)
+
+    `GET [base]/Observation?patient={Type/}[id]&category={system|}[code]&_lastUpdated={gt|lt|ge|le}[date]{&_lastUpdated={gt|lt|ge|le}[date]&...}`
+
+    Example:
+    
+      1. GET [base]/Observation?patient=1134281&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|vital-signs&amp;_lastUpdated=ge2024-01-01T00:00:00Z
+
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category and _lastUpdated. See the US Core General Guidance page for [Searching Using lastUpdated]. ([how to search by reference] and [how to search by token] and [how to search by date])
+
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** and **[`date`](SearchParameter-us-core-observation-date.html)** search parameters:
     - including optional support for *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - including support for these `date` comparators: `gt,lt,ge,le`

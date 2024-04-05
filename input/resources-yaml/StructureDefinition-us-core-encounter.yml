@@ -23,6 +23,19 @@ differential:
   - id: Encounter
     path: Encounter
     mustSupport: false
+
+# ==== added lastUpdated to the mustSupport list ====
+
+  - id: Encounter.meta
+    path: Encounter.meta
+    mustSupport: true
+  - id: Encounter.meta.lastUpdated
+    path: Encounter.meta.lastUpdated
+    short: When the resource last changed
+    mustSupport: true
+
+# ==== added lastUpdated to the mustSupport list ====
+
   - id: Encounter.identifier
     path: Encounter.identifier
     mustSupport: true

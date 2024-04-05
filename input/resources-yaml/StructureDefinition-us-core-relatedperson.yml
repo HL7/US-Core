@@ -42,6 +42,16 @@ differential:
     condition:
     - us-core-14
     mustSupport: true
+
+#============  pre-applied missing binding FHIR-34755============
+    binding:
+      strength: preferred
+      description: >-
+        The nature of the relationship between a patient and the related
+        person.
+      valueSet: 'http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype'
+#============  pre-applied missing binding ============
+
   - id: RelatedPerson.name
     path: RelatedPerson.name
     condition:

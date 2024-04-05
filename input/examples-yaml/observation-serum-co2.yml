@@ -18,10 +18,9 @@ meta:
     valueString: Serum CO2 Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a serum CO2 example for the *US Core Observation Lab Profile*.
-  lastUpdated: '2016-03-09T15:29:57.477+00:00'
+  lastUpdated: '2005-07-05T15:29:58.597Z'
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-  versionId: '962'
 referenceRange:
 - high:
     code: mmol/L
@@ -53,10 +52,8 @@ specimen:
   reference: Specimen/specimen-example-serum
   display: Serum specimen
 interpretation:
-  -
-    coding:
-    - code: N
-      display: Normal
-      system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-    text: Normal
-
+- coding:
+  - code: N
+    display: Normal
+    system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+  text: Normal

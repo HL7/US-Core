@@ -34,6 +34,19 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Condition
+
+# ==== added lastUpdated to the mustSupport list ====
+
+  - id: Condition.meta
+    path: Condition.meta
+    mustSupport: true
+  - id: Condition.meta.lastUpdated
+    path: Condition.meta.lastUpdated
+    short: When the resource last changed
+    mustSupport: true
+
+# ==== added lastUpdated to the mustSupport list ====
+
   - id: Condition.extension:assertedDate
     path: Condition.extension
     sliceName: assertedDate

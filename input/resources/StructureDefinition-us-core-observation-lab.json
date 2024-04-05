@@ -17,6 +17,17 @@
     "differential": {
         "element": [
             {
+                "id": "Observation.meta",
+                "path": "Observation.meta",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.lastUpdated",
+                "path": "Observation.meta.lastUpdated",
+                "short": "When the resource last changed",
+                "mustSupport": true
+            },
+            {
                 "id": "Observation.category:us-core",
                 "path": "Observation.category",
                 "sliceName": "us-core",

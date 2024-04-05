@@ -22,7 +22,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     
       1. GET [base]/DiagnosticReport?patient=f201&amp;category=http://loinc.org\|LP29684-5
 
-    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and  a category code specified in US Core DiagnosticReport Category Codes ([how to search by reference] and [how to search by token])
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and a category code specified in US Core DiagnosticReport Category Codes ([how to search by reference] and [how to search by token])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`code`](SearchParameter-us-core-diagnosticreport-code.html)** search parameters:
     - including optional support for *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
@@ -75,6 +75,18 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/DiagnosticReport?patient=f201&amp;code=http://loinc.org\|24323-8&amp;date=ge2019-01-14T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s). **SHOULD** support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
+
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`category`](SearchParameter-us-core-diagnosticreport-category.html)** and **[`_lastUpdated`](SearchParameter-us-core-diagnosticreport-lastupdated.html)** search parameters:
+    - including support for these `_lastUpdated` comparators: `gt,lt,ge,le`
+    - including optional support for *AND* search on `_lastUpdated` (e.g.`_lastUpdated=[date]&_lastUpdated=[date]]&...`)
+
+    `GET [base]/DiagnosticReport?patient={Type/}[id]&category={system|}[code]&_lastUpdated={gt|lt|ge|le}[date]{&_lastUpdated={gt|lt|ge|le}[date]&...}`
+
+    Example:
+    
+      1. GET [base]/DiagnosticReport?patient=f201&amp;category=http://loinc.org\|LP29684-5&amp;_lastUpdated=ge2010-01-14T00:00:00Z
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and a category code specified in US Core DiagnosticReport Category Codes and _lastUpdated. See the US Core General Guidance page for [Searching Using lastUpdated]. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
 

@@ -19,10 +19,9 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a serum total bilirubin example for the *US Core Observation
       Lab Profile*.
-  lastUpdated: '2016-03-09T15:29:59.089+00:00'
+  lastUpdated: '2005-07-07T15:29:58.597Z'
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-  versionId: '1364'
 referenceRange:
 - high:
     code: mg/dL
@@ -54,10 +53,8 @@ specimen:
   reference: Specimen/specimen-example-serum
   display: Serum specimen
 interpretation:
-  -
-    coding:
-    - code: H
-      display: High
-      system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-    text: High
-
+- coding:
+  - code: H
+    display: High
+    system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+  text: High

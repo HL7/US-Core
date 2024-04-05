@@ -91,6 +91,12 @@ Some US Core Profiles bind the <span class="bg-success" markdown="1">`Quantity.c
  }
 ```
 
+<div class="bg-success" markdown="1">
+
+### Representing Deleted Information
+
+A FHIR Server **SHOULD** not delete records. A FHIR server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive` (refer to the next section). If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.
+
 ### Representing Entered in Error Information
 
 Clinical information that has been entered in error in the patient's record needs to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
@@ -103,9 +109,7 @@ Clinical information that has been entered in error in the patient's record need
     -  For *patient facing* applications, A FHIR Server **SHOULD** remove the contents of resource leaving only an id and status.   Note this typically will not be conformant with the US Core or FHIR StructureDefinitions.
     - For *provider-facing* applications,  the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
 
-### Representing Deleted Information
-
-A FHIR Server **SHOULD** not delete records. If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.
+</div><!-- new-content -->
 
 ### Narrative
 
@@ -309,20 +313,57 @@ However, neither specification defines how a user-facing provider app is able to
 
 <div class="bg-success" markdown="1">
 
-### Searching using lastUpdated
+### Searching Using lastUpdated
 
-Servers that can accurately populate [`Meta.lastUpdated`] **SHOULD** support the [`_lastUpdated`] search parameter as defined in the core FHIR specifications. If `Meta.lastUpdated` is populated:
-- Any change in the resource implies a change in `Meta.lastUpdated`; conversely, an unchanged `Meta.lastUpdated` implies no change in the resource.
-- Note to clients that the most recent time does not necessarily reflect changes they can access. A record may change, but the client's view of the resource may not (for example, if the client is not authorized to see the changed data).
-- Servers cannot populate `Meta.lastUpdated` if they cannot update it per the rules in the FHIR core specification.
+Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles and **SHALL** document what they support in `CapabilityStatement.rest.resource.searchParam.documentation` (see example snippet below). In addition, Servers **SHOULD** populate [`Meta.lastUpdated`] for US Core Profiles as accurately as possible. 
+
+Example CapabilityStatement snippet for a server supporting the the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile 
+
+~~~
+{
+"resourceType": "CapabilityStatement",
+    ...
+    "rest": {
+      {
+        "mode": "server",
+        ...
+        "resource": [
+            {
+              "type": "Observation",
+              "supportedProfile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+                  ...
+                ],
+                 ...
+              "searchParam": [
+                  {
+                  "name": "_lastUpdated",
+                  "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+                  "type": "date",
+                  "documentation": "This parameter is supported for Observations with the category
+                  \"laboratory\" and allows searching for Observations that have been created or the 
+                  status updated since the specified date."
+                  },
+                  ...
+                ]
+            }
+        ]
+    }
+}
+~~~
+
+**Note to Clients:**
 - Supporting `Meta.lastUpdated` in a resource does not imply support for searches using the `_lastUpdated` search parameter.
-- Support for searches using the `_lastUpdated` search parameter does not require servers to support `Meta.lastUpdated`; servers can use an alternative method to reliably track changes to an instance.
-- Note to servers that updating the timestamp too frequently is better than missing updates.
+- Support for searches using the `_lastUpdated` search parameter does not require servers to support `Meta.lastUpdated`; servers can use an alternative method to track changes to an instance.
+- False negatives and false positives `_lastUpdated` search results are possible.
+- Updates to `Meta.lastUpdated` does not necessarily reflect changes a client can access. A record may change, but the client's view of the resource may not (for example, if the client is not authorized to see the changed data).
+
+**Note to Servers:**
+- Updating the timestamp too frequently is better than missing updates.
 
 <div class="stu-note" markdown="1">
-Many servers are unable to populate the `Meta.lastUpdated` element accurately. However, it is recommended servers expose a method for clients to know if there are new or modified resources since their last polling time and advertise that mechanism in their CapabilityStatement.  Work is in progress to:
-- Define an alternative FHIR search parameter that provides similar functionality. (see [FHIR-45012] - Extension for tracking changes in facade contexts).
-- Enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
+
+Many servers are unable to populate the `Meta.lastUpdated` element accurately. Work is in progress to enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
 </div><!-- stu-note -->
 
 </div><!-- new-content -->

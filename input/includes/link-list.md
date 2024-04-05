@@ -414,7 +414,7 @@
 [Vital Signs with Qualifying Elements: Average Blood Pressure Profile]: https://hl7.org/fhir/us/vitals/STU1/StructureDefinition-average-blood-pressure.html
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Intervention Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9/expansion
-[Writing Vital Signs]: fhir-write.html
+[Writing Vital Signs]: vitals-write.html
 [HTI-1 final rule]: https://www.federalregister.gov/documents/2023/04/18/2023-07229/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and
 [FHIRpath]: https://hl7.org/fhirpath/N1/
 [USCDI ONDEC process]: https://www.healthit.gov/isa/ONDEC
@@ -424,6 +424,7 @@
 [American Heart Association]: http://heart.org/
 [Physical Activity Alliance]: http://paamovewithus.org/
 [extension]: {{site.data.fhir.path}}extensibility.html
+[Extensions]: {{site.data.fhir.path}}extensibility.html
 [Multiple Chronic Condition (MCC) Care Plan Implementation Guide]: https://hl7.org/fhir/us/mcc/2023Sep/
 [FHIR R5 Patient Resource Gender and Sex Notes]: https://hl7.org/fhir/R5/patient.html#gender
 [`Meta.lastUpdated`]: {{site.data.fhir.path}}resource.html#Meta
@@ -442,4 +443,6 @@
 [example binding]: {{site.data.fhir.path}}terminologies.html#example
 [example]: {{site.data.fhir.path}}terminologies.html#example
 [current]: https://hl7.org/fhir/R5/terminologies.html#binding
-[searching using lastUpdated]: general-guidance.html#searching-using-lastupdated
+[Searching Using lastUpdated]: general-guidance.html#searching-using-lastupdated
+[registry of standard extensions]: {{site.data.fhir.path}}extensibility-registry.html
+[HL7 v2]: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185

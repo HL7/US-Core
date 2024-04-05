@@ -46,6 +46,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
   - <span class="bg-success" markdown="1">`Observation.note.text` (for example, "Average blood pressure is calculated from 12 measurements taken by the patient over 3 days.")</span><!-- new-content -->
   - <span class="bg-success" markdown="1">the standard FHIR extension <http://hl7.org/fhir/StructureDefinition/workflow-adheresTo></span><!-- new-content -->
 - <span class="bg-success" markdown="1">Information about the number of measurements used to determine the average **SHOULD** be supplied as an `Observation.component` using the SNOMED CT code "246432004 | Number of occurrences (qualifier value)". The example shows how this component can be used.</span><!-- new-content -->
-- The observation **MAY** use [extensions] defined by other profiles such as [Vital Signs with Qualifying Elements: Average Blood Pressure Profile].
+- The observation **MAY** use  an [extension] defined by other profiles such as [Vital Signs with Qualifying Elements: Average Blood Pressure Profile].
 
 {% include link-list.md %}

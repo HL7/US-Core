@@ -27,7 +27,23 @@ type: Observation
 baseDefinition: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
 derivation: constraint
 differential:
+
   element:
+
+
+# ==== added lastUpdated to the mustSupport list ====
+
+  - id: Observation.meta
+    path: Observation.meta
+    mustSupport: true
+  - id: Observation.meta.lastUpdated
+    path: Observation.meta.lastUpdated
+    short: When the resource last changed
+    mustSupport: true
+
+# ==== added lastUpdated to the mustSupport list ====
+
+
   - id: Observation.category:us-core
     path: Observation.category
     sliceName: us-core

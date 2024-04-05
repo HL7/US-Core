@@ -44,6 +44,20 @@ differential:
       expression: (status='partial' or status='preliminary' or status='final' or status='amended'
         or status='corrected' or status='appended' ) implies issued.exists()
     mustSupport: false
+
+# ==== added lastUpdated to the mustSupport list ====
+
+  - id: DiagnosticReport.meta
+    path: DiagnosticReport.meta
+    mustSupport: true
+  - id: DiagnosticReport.meta.lastUpdated
+    path: DiagnosticReport.meta.lastUpdated
+    short: When the resource last changed
+    mustSupport: true
+
+# ==== added lastUpdated to the mustSupport list ====
+
+
   - id: DiagnosticReport.status
     path: DiagnosticReport.status
     condition:

@@ -1,7 +1,7 @@
 resourceType: Encounter
 id: example-1
 meta:
-  lastUpdated: '2017-05-26T11:56:57.250-04:00'
+  lastUpdated: '2024-01-28T16:06:21-08:00'
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
   extension:
@@ -25,6 +25,6 @@ period:
   start: '2015-11-01T17:00:14-05:00'
   end: '2015-11-01T18:00:14-05:00'
 location:
-  - location:
-      reference: Location/hospital
-      display: Holy Family Hospital
+- location:
+    reference: Location/hospital
+    display: Holy Family Hospital
