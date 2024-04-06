@@ -6,19 +6,7 @@ title: US Core Treatment Intervention Preference Profile
 status: active
 experimental: false
 date: 2023-11-02
-description: This profile provides guidance on how to record a treatment intervention
-  preference expressed by the patient regarding their personal health goals,
-  preferences, and priorities for medical treatments or interventions in the
-  event of a future health scenario where a person is unable to make medical
-  decisions because of a serious illness or injury. This profile does not
-  represent an actual order, but it can guide caregivers and medical personnel
-  about what is important for the person. To promote interoperability and
-  adoption through common implementation, this profile sets minimum expectations
-  for the Observation resource to record, search, and fetch for a patient's
-  treatment intervention preferences. This profile identifies which core
-  elements, extensions, vocabularies, and value sets **SHALL** be present in the
-  resource and constrains the way the elements are used when using this profile.
-  It provides the floor for standards development for specific use cases.
+description: "The US Core Treatment Intervention Preference Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile provides guidance on how to record a treatment intervention preference expressed by the patient regarding their personal health goals,  preferences, and priorities for medical treatments or interventions in the event of a future health scenario where a person is unable to make medical decisions because of a severe illness or injury. This profile does not represent an actual order, but it can guide caregivers and medical personnel about what is important for the person. This profile sets minimum expectations for the Observation resource to record, search, and fetch for patient treatment intervention preferences. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption."
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
   License
 fhirVersion: 4.0.1

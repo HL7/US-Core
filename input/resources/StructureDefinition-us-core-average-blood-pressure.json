@@ -7,7 +7,7 @@
     "status": "active",
     "experimental": false,
     "date": "2024-03-25",
-    "description": "The US Core Average Blood Pressure Profile sets minimum expectations for recording, searching, and fetching average diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. This profile inherits its scope and usage definition from the FHIR [Observation](http://hl7.org/fhir/R4/StructureDefinition/Observation) resource, and to promote interoperability and adoption through common implementation, it identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
+    "description": "The US Core Average Blood Pressure Profile inherits from the [Observation](https://hl7.org/fobservation.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for recording, searching, and fetching average diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,

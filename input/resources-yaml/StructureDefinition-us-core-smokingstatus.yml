@@ -6,7 +6,7 @@ title: US Core Smoking Status Observation Profile
 status: active
 experimental: false
 date: '2024-03-22'
-description: "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and implements the U.S. Core Data for Interoperability (USCDI) Smoking status' requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases."
+description: The US Core Smoking Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Smoking Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false

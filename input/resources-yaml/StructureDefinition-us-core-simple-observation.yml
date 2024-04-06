@@ -5,18 +5,7 @@ name: USCoreSimpleObservationProfile
 title: US Core Simple Observation Profile
 status: active
 date: 2023-10-17
-description: "This US Core FHIR Profile is meant to capture any “simple” observations that
-  are not otherwise covered by other US Core Observation profiles. It represents
-  any type of observation that is not classified as vital signs, laboratory,
-  imaging, or other more specific observation types. This profile promotes
-  interoperability and adoption through common implementation by setting minimum
-  expectations for the Observation resource to record, search, and retrieve
-  observations such as a clinical observation or assertion about a patient's
-  health status or other general observations. This profile identifies which
-  core elements, extensions, vocabularies, and value sets **SHALL** be present
-  in the resource and constrains the way the elements are used when using this
-  profile. It provides the floor for standards development for specific use
-  cases."
+description: 'The US Core Simple Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This US Core FHIR Profile captures any "simple" observations not covered by other US Core Observation profiles. It represents any observation not classified as vital signs, laboratory,  imaging, or other specific observation types. This profile sets minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about patient health status or other general observations. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
