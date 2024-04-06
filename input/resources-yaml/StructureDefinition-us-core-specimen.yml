@@ -6,13 +6,7 @@ title: US Core Specimen Profile
 status: active
 experimental: false
 date: 2023-10-17
-description: This profile sets minimum expectations for the Specimen resource to record,
-  search, and fetch "substances being sampled or tested. (e.g., nasopharyngeal swab,
-  whole blood, serum, urine, wound swab)" associated with a patient to promote interoperability
-  and adoption through common implementation.  It identifies which core elements,
-  extensions, vocabularies, and value sets **SHALL** be present in the resource and
-  constrains the way the elements are used when using this profile.  It provides the
-  floor for standards development for specific use cases.
+description: 'The US Core Specimen Profile inherits from the FHIR [Specimen](https://hl7.org/fhir/R4/specimen.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Specimen resource to record, search, and fetch information about substances associated with a patient being sampled or tested (such as nasopharyngeal swab, whole blood,  or serum). It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
 fhirVersion: 4.0.1
 kind: resource
 abstract: false

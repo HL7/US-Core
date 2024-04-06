@@ -12,14 +12,7 @@ contact:
 - telecom:
   - system: url
     value: http://www.healthit.gov
-description: When referencing a medication, the MedicationRequest resource can either
-  use a code or refer to a Medication resource.  This profile sets minimum expectations
-  for the Medication resource to record, search, and fetch medications associated
-  with a patient to promote interoperability and adoption through common implementation.  It
-  identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-  be present in the resource and constrains the way the elements are used when using
-  this profile.  It provides the floor for standards development for specific use
-  cases
+description: 'The US Core Medication Profile inherits from the FHIR [Medication](https://hl7.org/fhir/R4/medication.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Medication resource to record, search, and fetch medications associated with a patient. When referencing a medication, the MedicationRequest resource can use a code or refer to this profile. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
 jurisdiction:
 - coding:
   - system: urn:iso:std:iso:3166

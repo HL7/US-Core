@@ -7,20 +7,12 @@ title: US Core MedicationRequest Profile
 status: active
 experimental: false
 date: 2023-10-17
+description: "The US Core MedicationRequest Profile inherits from the FHIR [MedicationRequest](https://hl7.org/fhir/R4/medicationrequest.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Medications* Data Class. This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication prescriptions or orders. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption."
 publisher: HL7 US Realm Steering Committee
 contact:
 - telecom:
   - system: url
     value: http://www.healthit.gov
-description: The US Core Medication Request Profile is based upon the core FHIR MedicationRequest
-  Resource and meets the U.S. Core Data for Interoperability (USCDI) *Medications*
-  requirements. The MedicationRequest resource can be used to record a patient's medication
-  prescription or order.  This profile sets minimum expectations for the MedicationRequest
-  resource to record, search, and fetch a patient's medication to promote interoperability
-  and adoption through common implementation.  It identifies which core elements,
-  extensions, vocabularies, and value sets **SHALL** be present in the resource and
-  constrains the way the elements are used when using this profile.  It provides the
-  floor for standards development for specific use cases.
 jurisdiction:
 - coding:
   - system: urn:iso:std:iso:3166

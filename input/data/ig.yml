@@ -1448,12 +1448,13 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
       reference: StructureDefinition/us-core-allergyintolerance
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for the AllergyIntolerance resource to
-      record, search, and fetch allergies/adverse reactions associated with a patient.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present and constrains the way the elements are used when using the profile.
-      It provides the floor for standards development for specific use cases.
+    description: The US Core AllergyIntolerance Profile inherits from the FHIR [AllergyIntolerance](https://hl7.org/fhir/R4/allergyintolerance.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the AllergyIntolerance resource to record, search, and fetch
+      allergies/adverse reactions associated with a patient. It specifies which core
+      elements, extensions, vocabularies, and value sets **SHALL** be present and
+      constrains how the elements are used. Providing the floor for standards development
+      for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core AllergyIntolerance Profile
   - reference:
@@ -1559,23 +1560,25 @@ definition:
     name: US Core CarePlan Category Extension Codes
   - reference:
       reference: StructureDefinition/us-core-careplan
-    description: This profile sets minimum expectations for the CarePlan resource
-      to record, search, and fetch assessment and plan of treatment data associated
-      with a patient to promote interoperability and adoption through common implementation.
-      It identifies which core elements, extensions, vocabularies, and value sets
-      **SHALL** be present and constrains the way the elements are used when using
-      the profile. It provides the floor for standards development for specific use
-      cases.
+    description: The US Core CarePlan Profile inherits from the FHIR [CarePlan](https://hl7.org/fhir/R4/careplan.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the CarePlan resource to record,  search, and fetch assessment
+      and plan of treatment data associated with a patient. It specifies which core
+      elements, extensions, vocabularies, and value sets **SHALL** be present and
+      constrains how the elements are used. Providing the floor for standards development
+      for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core CarePlan Profile
   - reference:
       reference: StructureDefinition/us-core-careteam
-    description: This profile sets minimum expectations for the CareTeam resource
-      for identifying the Care Team members associated with a patient to promote interoperability
-      and adoption through common implementation.  It identifies which core elements,
-      extensions, vocabularies, and value sets **SHALL** be present in the resource
-      and constrains the way the elements are used when using this profile. It provides
-      the floor for standards development for specific use cases.
+    description: The US Core CareTeam Profile inherits from the FHIR [CareTeam](https://hl7.org/fhir/R4/careteam.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the CareTeam resource for identifying the Care Team members
+      associated with a patient to promote interoperability and adoption through common
+      implementation. It specifies which core elements, extensions, vocabularies,
+      and value sets **SHALL** be present in the resource and how the elements are
+      used. Providing the floor for standards development for specific use cases promotes
+      interoperability and adoption.
     exampleBoolean: false
     name: US Core CareTeam Profile
   - reference:
@@ -1624,49 +1627,48 @@ definition:
     name: US Core Condition Codes
   - reference:
       reference: StructureDefinition/us-core-condition-encounter-diagnosis
-    description: The US Core Condition Encounter Diagnosis Profile is based upon the
-      core FHIR Condition Resource and meets the U.S. Core Data for Interoperability
-      (USCDI) *Encounter Diagnosis* requirements. In version 5.0.0, The US Core Condition
-      Profile has been split into the US Core Condition Encounter Diagnosis Profile
-      and US Core Condition Problems and Health Concerns Profile. To promote interoperability
-      and adoption through common implementation, this profile defines constraints
-      and extensions on the Condition resource for the minimal set of data to record,
-      search, and fetch information about an encounter diagnosis.  It identifies which
-      core elements, extensions, vocabularies, and value sets **SHALL** be present
-      in the resource and constrains the way the elements are used when using this
-      profile. It provides the floor for standards development for specific use cases.
+    description: The US Core Condition Encounter Diagnosis Profile inherits from the
+      FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to
+      it for scope and usage definitions. US Core version 5.0.0 split the US Core
+      Condition Profile into this profile and the US Core Condition Problems and Health
+      Concerns Profile. This profile meets the requirements of the U.S. Core Data
+      for Interoperability (USCDI)  *Encounter Diagnosis* Data Element. It sets minimum
+      expectations for the Condition resource to record, search, and fetch information
+      about an encounter diagnosis. It specifies which core elements, extensions,  vocabularies,
+      and value sets **SHALL** be present in the resource and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Condition Encounter Diagnosis Profile
   - reference:
       reference: StructureDefinition/us-core-condition-problems-health-concerns
-    description: The US Core Condition Problems and Health Concerns Profile is based
-      upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability
-      (USCDI) 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health
-      Concerns' requirements.  In version 5.0.0, The US Core Condition Profile has
-      been split into the US Core Condition Encounter Diagnosis Profile and US Core
-      Condition Problems and Health Concerns Profile.  To promote interoperability
-      and adoption through common implementation, this profile defines constraints
-      and extensions on the Condition resource for the minimal set of data to record,
-      search, and fetch information about a condition, diagnosis, or other event,
-      situation, issue, or clinical concept that is documented and categorized as
-      a problem or health concern including information about a Social Determinants
-      of Health-related condition. It identifies which core elements, extensions,
-      vocabularies, and value sets **SHALL** be present in the resource when and constrains
-      the way the elements are used using this profile. It provides the floor for
-      standards development for specific use cases.
+    description: The US Core Condition Encounter Diagnosis Profile inherits from the
+      FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to
+      it for scope and usage definitions. US Core version 5.0.0 split the US Core
+      Condition Profile into this profile and the US Core Condition Encounter Diagnosis
+      Profile. This profile meets the requirements of the U.S. Core Data for Interoperability
+      (USCDI)  *Problems*, *Health Concerns*, and *SDOH Problems/Health Concerns*
+      Data Elements. It sets minimum expectations for the Condition resource to record,
+      search, and fetch information about a condition, diagnosis, or another event,
+      situation, issue, or clinical concept documented and categorized as a problem
+      or health concern, including information about a Social Determinants of Health
+      related condition. It specifies which core elements, extensions,  vocabularies,
+      and value sets **SHALL** be present in the resource and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Condition Problems and Health Concerns Profile
   - reference:
       reference: StructureDefinition/us-core-coverage
-    description: The US Core Coverage Profile is based upon the core FHIR Coverage
-      Resource and implements the US Core Data for Interoperability (USCDI) Health
-      Insurance Information requirements. To promote interoperability and adoption
-      through common implementation, this profile sets minimum expectations for the
-      Coverage resource to record, search, and fetch the "data related to an individual's
-      insurance coverage for health care". It identifies which core elements, extensions,
-      vocabularies, and value sets **SHALL** be present in the resource and constrains
-      the way the elements are used when using this profile. It provides the floor
-      for standards development for specific use cases.
+    description: The US Core Coverage Profile inherits from the FHIR [Coverage](https://hl7.org/fhir/R4/coverage.html)
+      resource; refer to it for scope and usage definitions. This profile meets the
+      requirements of the US Core Data for Interoperability (USCDI) *Health Insurance
+      Information* Data Class. It sets minimum expectations for the Coverage resource
+      to record, search, and fetch data related to an individual's insurance coverage
+      for health care. It specifies which core elements, extensions,  vocabularies,
+      and value sets **SHALL** be present in the resource and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Coverage Profile
   - reference:
@@ -1677,31 +1679,32 @@ definition:
     name: US Core Diagnostic Report Category Codes
   - reference:
       reference: StructureDefinition/us-core-diagnosticreport-lab
-    description: Laboratory results are grouped and summarized using the DiagnosticReport
-      resource which typically reference Observation resource(s).  Each Observation
-      resource represents an individual laboratory test and result value or component
-      result values, or a nested panel (such as a microbial susceptibility panel)
-      which references other observations.  They can also be presented in report form
-      or as free text.  This profile sets minimum expectations for the DiagnosticReport
-      resource to record, search, and fetch laboratory results associated with a patient
-      to promote interoperability and adoption through common implementation.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present in the resource and constrains the way the elements are used when
-      using this profile. It provides the floor for standards development for specific
-      use cases.
+    description: The US Core DiagnosticReport Profile inherits from the FHIR [DiagnosticReport](https://hl7.org/fhir/R4/diagnosticreport.html)
+      resource; refer to it for scope and usage definitions. Laboratory results are
+      grouped and summarized using the DiagnosticReport resource, which typically
+      references Observation resource(s). Each Observation resource represents an
+      individual laboratory test and result value or component result values or a
+      nested panel (such as a microbial susceptibility panel) that references other
+      observations. Laboratory results can also be presented in report form or as
+      free text. This profile sets minimum expectations for the DiagnosticReport resource
+      to record, search,  and fetch laboratory results associated with a patient.
+      It specifies which core elements, extensions, vocabularies, and value sets **SHALL**
+      be present and constrains how the elements are used. Providing the floor for
+      standards development for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core DiagnosticReport Profile for Laboratory Results Reporting
   - reference:
       reference: StructureDefinition/us-core-diagnosticreport-note
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for searching and fetching Diagnostic
-      Reports and Notes using the DiagnosticReport resource. It identifies which core
-      elements, extensions, vocabularies, and value sets **SHALL** be present and
-      constrains the way the elements are used when using the profile. It provides
-      the floor for standards development for specific use cases. Prior to reviewing
-      this profile, implementers are encouraged to read the Clinical Notes Guidance
-      to understand the overlap of US Core DiagnosticReport Profile for Report and
-      Note exchange and US Core DocumentReference Profile.
+    description: The US Core DiagnosticReport Profile inherits from the FHIR [DiagnosticReport](https://hl7.org/fhir/R4/diagnosticreport.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for searching and fetching Diagnostic Reports and Notes using the
+      DiagnosticReport resource. It specifies which core elements, extensions,  vocabularies,
+      and value sets **SHALL** be present in the resource and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption. Before reviewing this profile, implementers
+      are encouraged to read the Clinical Notes Guidance to understand the overlap
+      of the US Core DiagnosticReport Profile for Report and Note exchange and the
+      US Core DocumentReference Profile.
     exampleBoolean: false
     name: US Core DiagnosticReport Profile for Report and Note Exchange
   - reference:
@@ -1725,15 +1728,16 @@ definition:
     name: US Core DocumentReference Category
   - reference:
       reference: StructureDefinition/us-core-documentreference
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for searching and fetching patient documents
-      including Clinical Notes using the DocumentReference resource. It identifies
-      which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      and constrains the way the elements are used when using the profile. It provides
-      the floor for standards development for specific use cases. Prior to reviewing
+    description: The US Core DocumentReference Profile inherits from the FHIR [DocumentReference](https://hl7.org/fhir/R4/documentreference.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for searching and fetching patient documents including Clinical
+      Notes using the DocumentReference resource.  It specifies which core elements,
+      extensions, vocabularies, and value sets **SHALL** be present and constrains
+      how the elements are used. Providing the floor for standards development for
+      specific use cases promotes interoperability and adoption. Before reviewing
       this profile, implementers are encouraged to read the Clinical Notes Guidance
-      to understand the overlap of US Core DocumentReference Profile and US Core DiagnosticReport
-      Profile for Report and Note exchange.
+      to understand the overlap of the US Core DiagnosticReport Profile for Report
+      and Note exchange and the US Core DocumentReference Profile.
     exampleBoolean: false
     name: US Core DocumentReference Profile
   - reference:
@@ -1751,13 +1755,13 @@ definition:
     name: US Core DocumentReferences Category Codes
   - reference:
       reference: StructureDefinition/us-core-encounter
-    description: This profile sets minimum expectations for the Encounter resource
-      to record, search, and fetch basic encounter information for an individual patient
-      to promote interoperability and adoption through common implementation.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present in the resource and constrains the way the elements are used when
-      using this profile.  It provides the floor for standards development for specific
-      use cases.
+    description: The US Core Encounter Profile inherits from the FHIR [Encounter](https://hl7.org/fhir/R4/encounter.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Encounter resource to record, search, and fetch basic encounter
+      information for an individual patient. It specifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Encounter Profile
   - reference:
@@ -1841,12 +1845,13 @@ definition:
     name: US Core Goal Codes
   - reference:
       reference: StructureDefinition/us-core-goal
-    description: This profile sets minimum expectations for the Goal resource to record,
-      search, and fetch Goal information associated with a patient to promote interoperability
-      and adoption through common implementation.  It identifies which core elements,
-      extensions, vocabularies, and value sets **SHALL** be present in the resource
-      and constrains the way the elements are used when using this profile.  It provides
-      the floor for standards development for specific use cases
+    description: The US Core Goal Profile inherits from the FHIR [Goal](https://hl7.org/fhir/R4/goal.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Goal resource to record,  search, and fetch Goal information
+      associated with a patient.   It specifies which core elements, extensions, vocabularies,
+      and value sets **SHALL** be present and constrains how the elements are used.
+      Providing the floor for standards development for specific use cases promotes
+      interoperability and adoption.
     exampleBoolean: false
     name: US Core Goal Profile
   - reference:
@@ -1874,26 +1879,26 @@ definition:
     name: US Core Heart Rate Profile
   - reference:
       reference: StructureDefinition/us-core-immunization
-    description: This profile sets minimum expectations for the Immunization resource
-      to record, search, and fetch immunization history associated with a patient
-      to promote interoperability and adoption through common implementation.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present in the resource and constrains the way the elements are used when
-      using this profile.  It provides the floor for standards development for specific
-      use cases.
+    description: The US Core Immunization Profile inherits from the FHIR [Immunization](https://hl7.org/fhir/R4/immunization.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Immunization resource to record, search, and fetch immunization
+      history associated with a patient. It specifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Immunization Profile
   - reference:
       reference: StructureDefinition/us-core-implantable-device
-    description: The US Core Implantable Device Profile is based upon the core FHIR
-      Device Resource and meets the U.S. Core Data for Interoperability (USCDI) *Unique
-      Device Identifier(s) for a Patient's Implantable Device(s)* requirements. To
-      promote interoperability and adoption through common implementation, this profile
-      sets minimum expectations for the Device resource to record, search, and fetch
-      UDI information associated with a patient's implantable device(s). It identifies
-      which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      in the resource and constrains the way the elements are used when using this
-      profile. It provides the floor for standards development for specific use cases.
+    description: The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R4/device.html)
+      resource; refer to it for scope and usage definitions. This profile meets the
+      requirements of the U.S. Core Data for Interoperability (USCDI) *Unique Device  Identifier
+      - Implantable* Data Element. It sets minimum expectations for the Device resource
+      to record, search, and fetch UDI information associated with a patient's implantable
+      device(s). It specifies which core elements, extensions,  vocabularies, and
+      value sets **SHALL** be present in the resource and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Implantable Device Profile
   - reference:
@@ -1935,12 +1940,13 @@ definition:
     name: US Core Laboratory Test Codes
   - reference:
       reference: StructureDefinition/us-core-location
-    description: This profile sets minimum expectations for the Location resource
-      for recording, searching, and fetching a "physical place of available services
-      or resources."  It identifies which core elements, extensions, vocabularies,
-      and value sets **SHALL** be present and constrains how the elements are used
-      when using the profile.  It provides the floor for standards development for
-      specific use cases to promote interoperability and adoption through common implementation.
+    description: The US Core Location Profile inherits from the FHIR [Location](https://hl7.org/fhir/R4/location.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Location resource for  recording, searching, and fetching
+      a "physical place of available services or resources."  It specifies which core
+      elements, extensions, vocabularies, and value sets **SHALL** be present and
+      constrains how the elements are used. Providing the floor for standards development
+      for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Location Profile
   - reference:
@@ -1952,40 +1958,39 @@ definition:
     name: US Core Medication Adherence Extension
   - reference:
       reference: StructureDefinition/us-core-medication
-    description: When referencing a medication, the MedicationRequest resource can
-      either use a code or refer to a Medication resource.  This profile sets minimum
+    description: ' The US Core Medication Profile inherits from the FHIR [Medication](https://hl7.org/fhir/R4/medication.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
       expectations for the Medication resource to record, search, and fetch medications
-      associated with a patient to promote interoperability and adoption through common
-      implementation.  It identifies which core elements, extensions, vocabularies,
-      and value sets **SHALL** be present in the resource and constrains the way the
-      elements are used when using this profile.  It provides the floor for standards
-      development for specific use cases
+      associated with a patient. When referencing a medication, the MedicationRequest
+      resource can use a code or refer to this profile. It specifies which core elements,
+      extensions, vocabularies, and value sets **SHALL** be present and constrains
+      how the elements are used. Providing the floor for standards development for
+      specific use cases promotes interoperability and adoption.'
     exampleBoolean: false
     name: US Core Medication Profile
   - reference:
       reference: StructureDefinition/us-core-medicationdispense
-    description: This profile sets minimum expectations for the MedicationDispense
-      resource to record, search, and fetch the "state of a medication with regards
-      to dispensing or other activity. (e.g., dispensed, partially dispensed, not
-      dispensed)" associated with a patient to promote interoperability and adoption
-      through common implementation. It identifies which core elements, extensions,
-      vocabularies, and value sets **SHALL** be present in the resource and constrains
-      the way the elements are used when using this profile. It provides the floor
-      for standards development for specific use cases.
+    description: The US Core MedicationDispense Profile inherits from the FHIR [MedicationDispense](https://hl7.org/fhir/R4/medicationdispense.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the MedicationDispense resource to record, search, and fetch
+      the state of a patients medication with regards to dispensing or other activity.
+      (e.g., dispensed, partially dispensed, not dispensed)  It specifies which core
+      elements, extensions, vocabularies, and value sets **SHALL** be present and
+      constrains how the elements are used. Providing the floor for standards development
+      for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core MedicationDispense Profile
   - reference:
       reference: StructureDefinition/us-core-medicationrequest
-    description: The US Core Medication Request Profile is based upon the core FHIR
-      MedicationRequest Resource and meets the U.S. Core Data for Interoperability
-      (USCDI) *Medications* requirements. The MedicationRequest resource can be used
-      to record a patient's medication prescription or order.  This profile sets minimum
-      expectations for the MedicationRequest resource to record, search, and fetch
-      a patient's medication to promote interoperability and adoption through common
-      implementation.  It identifies which core elements, extensions, vocabularies,
-      and value sets **SHALL** be present in the resource and constrains the way the
-      elements are used when using this profile.  It provides the floor for standards
-      development for specific use cases.
+    description: The US Core MedicationRequest Profile inherits from the FHIR [MedicationRequest](https://hl7.org/fhir/R4/medicationrequest.html)
+      resource; refer to it for scope and usage definitions. This profile meets the
+      requirements of the U.S. Core Data for Interoperability (USCDI)  *Medications*
+      Data Class. This profile sets minimum expectations for the MedicationRequest
+      resource to record, search, and fetch a patient's medication prescriptions or
+      orders. It specifies which core elements, extensions, vocabularies, and value
+      sets **SHALL** be present in the resource and constrains how the elements are
+      used. Providing the floor for standards development for specific use cases promotes
+      interoperability and adoption.
     exampleBoolean: false
     name: US Core MedicationRequest Profile
   - reference:
@@ -2102,27 +2107,26 @@ definition:
     name: US Core Observation Value Codes (SNOMED-CT)
   - reference:
       reference: StructureDefinition/us-core-organization
-    description: This profile sets minimum expectations for the Organization resource
-      to searching for and fetching an Organization associated with a patient or provider
-      to promote interoperability and adoption through common implementation.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present and constrains the way the elements are used and constrains the way
-      the elements are used when using the profile.  It provides the floor for standards
-      development for specific use cases.
+    description: The US Core Organization Profile inherits from the FHIR [Organization](https://hl7.org/fhir/R4/organization.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Organization resource to record, search, and fetch Organization
+      information associated with a patient or provider. It specifies which core elements,
+      extensions, vocabularies, and value sets **SHALL** be present and constrains
+      how the elements are used. Providing the floor for standards development for
+      specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Organization Profile
   - reference:
       reference: StructureDefinition/us-core-patient
-    description: The US Core Patient Profile meets the U.S. Core Data for Interoperability
-      (USCDI) 'Patient Demographics' requirements. This profile sets minimum expectations
-      for the Patient resource to record, search, and fetch basic demographics and
-      other administrative information about an individual patient. It identifies
-      which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      in the resource when using this profile to promote interoperability and adoption
-      through common implementation.  It identifies which core elements, extensions,
-      vocabularies, and value sets **SHALL** be present in the resource and constrains
-      the way the elements are used when using this profile.  It provides the floor
-      for standards development for specific use cases.
+    description: The US Core Patient Profile inherits from the FHIR [Patient](https://hl7.org/fhir/R4/patient.html)
+      resource; refer to it for scope and usage definitions. This profile meets the
+      requirements of the U.S. Core Data for Interoperability (USCDI)  *Patient Demographics/Information*
+      Data Class. It sets minimum expectations for the Patient resource to record,
+      search, and fetch basic demographics and other administrative information about
+      an individual patient. It specifies which core elements, extensions, vocabularies,
+      and value sets **SHALL** be present and constrains how the elements are used.
+      Providing the floor for standards development for specific use cases promotes
+      interoperability and adoption.
     exampleBoolean: false
     name: US Core Patient Profile
   - reference:
@@ -2164,27 +2168,27 @@ definition:
     name: US Core Pediatric Weight for Height Observation Profile
   - reference:
       reference: StructureDefinition/us-core-practitioner
-    description: This profile sets minimum expectations for the Practitioner resource
-      to record, search, and fetch basic demographics and other administrative information
-      about an individual practitioner to promote interoperability and adoption through
-      common implementation.  It identifies which core elements, extensions, vocabularies,
-      and value sets **SHALL** be present and constrains the way the elements are
-      used and constrains the way the elements are used when using the profile.  It
-      provides the floor for standards development for specific use cases.
+    description: The US Core Practitioner Profile inherits from the FHIR [Practitioner](https://hl7.org/fhir/R4/practitioner.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Practitioner resource to record, search, and fetch basic
+      demographics and administrative information about an individual practitioner.
+      It specifies which core elements, extensions, vocabularies, and value sets **SHALL**
+      be present and constrains how the elements are used. Providing the floor for
+      standards development for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Practitioner Profile
   - reference:
       reference: StructureDefinition/us-core-practitionerrole
-    description: This profile sets minimum expectations for the PractitionerRole Resource
-      to record, search, and fetch the practitioner role for a practitioner to promote
-      interoperability and adoption through common implementation.  It identifies
-      which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      and constrains the way the elements are used and constrains the way the elements
-      are used when using the profile.  It provides the floor for standards development
-      for specific use cases.  The requirements for the US Core Practitioner were
-      drawn from the [Argonaut Provider Directory](http://www.fhir.org/guides/argonaut/pd//release1/index.html),
-      [IHE Healthcare Provider Directory](http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf)
-      and the [ONC Provider Directory Workshop](https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents).
+    description: The US Core PractionerRole Profile inherits from the FHIR [PractionerRole](https://hl7.org/fhir/R4/practionerrole.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the PractitionerRole Resource to record, search, and fetch
+      the practitioner role information. It specifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption. The requirements for the US Core Practitioner
+      were drawn from the [Argonaut Provider Directory](http://www.fhir.org/guides/argonaut/pd//release1/index.html),  [IHE
+      Healthcare Provider Directory](http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf)  and
+      the [ONC Provider Directory Workshop](https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents).
     exampleBoolean: false
     name: US Core PractitionerRole Profile
   - reference:
@@ -2215,14 +2219,14 @@ definition:
     name: US Core Procedure Codes
   - reference:
       reference: StructureDefinition/us-core-procedure
-    description: The US Core Procedure Profile is based upon the core FHIR Procedure
-      Resource and meets the U.S. Core Data for Interoperability (USCDI) 'Procedures'
-      requirements. This profile sets minimum expectations for the Procedure resource
-      to record, search, and fetch procedures associated with a patient to promote
-      interoperability and adoption through common implementation.  It identifies
+    description: The US Core Procedure Profile inherits from the FHIR [Procedure](https://hl7.org/fhir/R4/procedure.html)
+      resource; refer to it for scope and usage definitions. This profile meets the
+      requirements of the U.S. Core Data for Interoperability (USCDI)  *Procedures*
+      Data Class. It sets minimum expectations for the Procedure resource to record,
+      search, and fetch procedure information associated with a patient. It specifies
       which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      in the resource and constrains the way the elements are used when using this
-      profile.  It provides the floor for standards development for specific use cases.
+      and constrains how the elements are used. Providing the floor for standards
+      development for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Procedure Profile
   - reference:
@@ -2238,17 +2242,15 @@ definition:
     name: US Core Provenance Participant Type Extension Codes
   - reference:
       reference: StructureDefinition/us-core-provenance
-    description: This profile sets minimum expectations for the Provenance resource
-      to record, search, and fetch Provenance information associated with a record
-      to promote interoperability and adoption through common implementation.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present in the resource and constrains the way the elements are used when
-      using this profile.  This FHIR Provenance profile here covers the minimal (basic)
-      information to support lineage of information.  It provides the floor for standards
-      development for specific use cases.  Prior to reviewing this profile, implementers
-      are encouraged to read the Basic Provenance guidance page which documents several
-      key use cases, specifically, what organization was responsible for the most
-      recent action on the resource.
+    description: The US Core Provenance Profile inherits from the FHIR [Provenance](https://hl7.org/fhir/R4/provenance.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Provenance resource to record, search, and fetch provenance
+      information associated with a record. It covers the minimal (basic) information
+      to support lineage of information. It specifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present and constrains how the elements
+      are used.   Before reviewing this profile, implementers are encouraged to read
+      the Basic Provenance guidance page, which documents several key use cases, specifically,
+      the organization responsible for the most recent action on the resource.
     exampleBoolean: false
     name: US Core Provenance Profile
   - reference:
@@ -2265,16 +2267,17 @@ definition:
     name: US Core Pulse Oximetry Profile
   - reference:
       reference: StructureDefinition/us-core-questionnaireresponse
-    description: "To promote interoperability and adoption through common implementation,\
-      \ this profile sets minimum expectations for the QuestionnaireResponse resource\
-      \ to record, search, and fetch retrieve captures the responses to form/survey\
-      \ and assessment tools such as the *Protocol for Responding to and Assessing\
-      \ Patients\u2019 Assets, Risks, and Experiences (PRAPARE) Survey*.   This profile\
-      \ is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html)\
-      \ and identifies the *additional* core elements, extensions, vocabularies and\
-      \ value sets **SHALL** be present in the resource and constrains the way the\
-      \ elements are used when using this profile. It provides the floor for standards\
-      \ development for specific uses cases."
+    description: The US Core QuestionaireResponse Profile inherits from the [Structured  Data
+      Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html).   This
+      profile sets minimum expectations for the QuestionnaireResponse resource to
+      record, search, and fetch retrieve captures the responses to form/survey and
+      assessment tools such as the *Protocol for Responding to and Assessing Patients\u2019
+      Assets, Risks, and Experiences (PRAPARE) Survey*.  It specifies which core *additional*
+      elements, extensions, vocabularies, and value sets **SHALL** be present and
+      constrains how the elements are used.  Before reviewing this profile, implementers
+      are encouraged to read the Screening and Assessments guidance page, which documents
+      the process of recording responses and capturing assertions/determinations resulting
+      from surveys and questionnaires.
     exampleBoolean: false
     name: US Core QuestionnaireResponse Profile
   - reference:
@@ -2292,12 +2295,14 @@ definition:
     name: US Core Race Extension
   - reference:
       reference: StructureDefinition/us-core-relatedperson
-    description: This profile sets minimum expectations for the RelatedPerson resource
-      to record, search, and fetch basic administrative information about persons
-      with a legal or familial relationship to a patient. It identifies which core
-      elements, extensions, vocabularies, and value sets **SHALL** be present in the
-      resource and constrains the way the elements are used when using this profile.  It
-      provides the floor for standards development for specific use cases.
+    description: The US Core RelatedPerson Profile inherits from the FHIR [RelatedPerson](https://hl7.org/fhir/R4/relatedperson.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the RelatedPerson resource to record, search, and fetch basic
+      administrative information about persons with a legal or familial relationship
+      to a patient. It specifies which core elements, extensions, vocabularies, and
+      value sets **SHALL** be present and constrains how the elements are used. Providing
+      the floor for standards development for specific use cases promotes interoperability
+      and adoption.
     exampleBoolean: false
     name: US Core RelatedPerson Profile
   - reference:
@@ -2344,12 +2349,12 @@ definition:
     name: US Core ServiceRequest Category Codes
   - reference:
       reference: StructureDefinition/us-core-servicerequest
-    description: This profile sets minimum expectations for recording, searching,
-      and fetching the ServiceRequest resource to promote interoperability and adoption
-      through common implementation.  It identifies which core elements, extensions,
-      vocabularies, and value sets **SHALL** be present in the resource and constrains
-      the way the elements are used when using this profile.  It provides the floor
-      for standards development for specific use cases.
+    description: The US Core ServiceRequest Profile inherits from the FHIR [ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for recording, searching, and fetching the ServiceRequest information.
+      It specifies which core elements, extensions, vocabularies, and value sets **SHALL**
+      be present and constrains how the elements are used. Providing the floor for
+      standards development for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core ServiceRequest Profile
   - reference:
@@ -2416,13 +2421,14 @@ definition:
     name: US Core Smoking Status Observation Profile
   - reference:
       reference: StructureDefinition/us-core-specimen
-    description: This profile sets minimum expectations for the Specimen resource
-      to record, search, and fetch "substances being sampled or tested. (e.g., nasopharyngeal
-      swab, whole blood, serum, urine, wound swab)" associated with a patient to promote
-      interoperability and adoption through common implementation.  It identifies
-      which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      in the resource and constrains the way the elements are used when using this
-      profile.  It provides the floor for standards development for specific use cases.
+    description: The US Core Specimen Profile inherits from the FHIR [Specimen](https://hl7.org/fhir/R4/specimen.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the Specimen resource to record, search, and fetch information
+      about substances associated with a patient being sampled or tested (such as
+      nasopharyngeal swab, whole blood,  or serum). It specifies which core elements,
+      extensions, vocabularies, and value sets **SHALL** be present and constrains
+      how the elements are used. Providing the floor for standards development for
+      specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Specimen Profile
   - reference:
