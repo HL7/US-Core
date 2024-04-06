@@ -1,79 +1,69 @@
 {
-    "resourceType": "QuestionnaireResponse",
-    "id": "hunger-vital-sign-example",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "QuestionnaireResponse Hunger Vital Sign [HVS] Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "An example of a US Core QuestionnaireResponse that represents questions and selected answers from the Hunger Vital Sign Example questionnaire defined in LOINC (code 88122-7). This example is generated using the LHC-Forms SDC Questionnaire App."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-        ]
-    },
-    "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/hunger-vital-sign-example",
-    "_questionnaire": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri",
-                "valueUri": "https://example.org/forms/hsv"
-            }
-        ]
-    },
-    "status": "completed",
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy V. Shaw"
-    },
-    "authored": "2020-09-10T21:56:54.671Z",
-    "author": {
-        "reference": "Practitioner/practitioner-1",
-        "display": "Ronald Bone"
-    },
-    "item": [
-        {
-            "linkId": "/88122-7",
-            "text": "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA28397-0",
-                        "display": "Often true"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/88123-5",
-            "text": "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA28397-0",
-                        "display": "Often true"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/88124-3",
-            "text": "Food insecurity risk",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA19952-3",
-                        "display": "At risk"
-                    }
-                }
-            ]
-        }
+  "resourceType": "QuestionnaireResponse",
+  "id": "hunger-vital-sign-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0"
     ]
+  },
+  "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/hunger-vital-sign-example",
+  "_questionnaire": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri",
+        "valueUri": "https://example.org/forms/hsv"
+      }
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  },
+  "authored": "2020-09-10T21:56:54.671Z",
+  "author": {
+    "reference": "Practitioner/practitioner-1",
+    "display": "Ronald Bone"
+  },
+  "item": [
+    {
+      "linkId": "/88122-7",
+      "text": "(I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA28397-0",
+            "display": "Often true"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/88123-5",
+      "text": "The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA28397-0",
+            "display": "Often true"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/88124-3",
+      "text": "Food insecurity risk",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA19952-3",
+            "display": "At risk"
+          }
+        }
+      ]
+    }
+  ]
 }

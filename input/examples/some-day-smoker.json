@@ -1,59 +1,49 @@
 {
-    "status": "final",
-    "category": [
+  "status": "final",
+  "category": [
+    {
+      "text": "Social History",
+      "coding": [
         {
-            "text": "Social History",
-            "coding": [
-                {
-                    "code": "social-history",
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "display": "Social History"
-                }
-            ]
+          "code": "social-history",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Social History"
         }
-    ],
-    "code": {
-        "text": "Tobacco smoking status",
-        "coding": [
-            {
-                "code": "72166-2",
-                "system": "http://loinc.org",
-                "display": "Tobacco smoking status"
-            }
-        ]
-    },
-    "resourceType": "Observation",
-    "effectivePeriod": {
-        "start": "2016-03-18T05:27:04Z"
-    },
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Some Day Smoker Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This example for the *US Core Smokingstatus Profile* shows a coded result."
-            }
-        ]
-    },
-    "valueCodeableConcept": {
-        "text": "Current some day smoker",
-        "coding": [
-            {
-                "code": "428041000124106",
-                "system": "http://snomed.info/sct",
-                "version": "http://snomed.info/sct/731000124108"
-            }
-        ]
-    },
-    "id": "some-day-smoker",
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
+      ]
     }
+  ],
+  "code": {
+    "text": "Tobacco smoking status",
+    "coding": [
+      {
+        "code": "72166-2",
+        "system": "http://loinc.org",
+        "display": "Tobacco smoking status"
+      }
+    ]
+  },
+  "resourceType": "Observation",
+  "effectivePeriod": {
+    "start": "2016-03-18T05:27:04Z"
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|7.0.0"
+    ]
+  },
+  "valueCodeableConcept": {
+    "text": "Current some day smoker",
+    "coding": [
+      {
+        "code": "428041000124106",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/731000124108"
+      }
+    ]
+  },
+  "id": "some-day-smoker",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  }
 }
