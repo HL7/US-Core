@@ -1,51 +1,61 @@
 {
-  "status": "final",
-  "category": [
-    {
-      "text": "Vital Signs",
-      "coding": [
+    "status": "final",
+    "category": [
         {
-          "code": "vital-signs",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "display": "Vital Signs"
+            "text": "Vital Signs",
+            "coding": [
+                {
+                    "code": "vital-signs",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "display": "Vital Signs"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "code": {
-    "text": "BMI",
-    "coding": [
-      {
-        "code": "59576-9",
-        "system": "http://loinc.org",
-        "display": "Body mass index (BMI) [Percentile] Per age and sex"
-      }
+    ],
+    "code": {
+        "text": "BMI",
+        "coding": [
+            {
+                "code": "59576-9",
+                "system": "http://loinc.org",
+                "display": "Body mass index (BMI) [Percentile] Per age and sex"
+            }
+        ]
+    },
+    "resourceType": "Observation",
+    "valueQuantity": {
+        "code": "%",
+        "unit": "%",
+        "value": 65,
+        "system": "http://unitsofmeasure.org"
+    },
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Pediatric BMI Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a pediatric BMI example for the *Pediatric BMI For Age Profile*."
+            }
+        ]
+    },
+    "encounter": {
+        "display": "GP Visit"
+    },
+    "effectiveDateTime": "2019-05-04T12:12:29-07:00",
+    "id": "pediatric-bmi-example",
+    "subject": {
+        "display": "Child Example",
+        "reference": "Patient/child-example"
+    },
+    "note": [
+        {
+            "text": "CDC Males, 2-20 years Chart"
+        }
     ]
-  },
-  "resourceType": "Observation",
-  "valueQuantity": {
-    "code": "%",
-    "unit": "%",
-    "value": 65,
-    "system": "http://unitsofmeasure.org"
-  },
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age|7.0.0"
-    ]
-  },
-  "encounter": {
-    "display": "GP Visit"
-  },
-  "effectiveDateTime": "2019-05-04T12:12:29-07:00",
-  "id": "pediatric-bmi-example",
-  "subject": {
-    "display": "Child Example",
-    "reference": "Patient/child-example"
-  },
-  "note": [
-    {
-      "text": "CDC Males, 2-20 years Chart"
-    }
-  ]
 }
