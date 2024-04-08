@@ -25,7 +25,7 @@ Each update to a new version of US Core changes the US Core Profiles and conform
    [US Core Smoking Status Observation Codes](https://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-smoking-status-observation-codes.html)|[Smoking status type](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion)
    [Smoking Status](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion)|[Smoking status comprehensive](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion)
    [UsCoreVitalSigns](https://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-vital-signs.html)|[VitalSignResultType](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion)
-   [Birth Sex](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.24/expansion)|[BirthSex](https://hl7.org/fhir/us/core/STU6.1/ValueSet-birthsex.html)
+   [BirthSex](https://hl7.org/fhir/us/core/STU6.1/ValueSet-birthsex.html)|[Birth Sex](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.24/expansion)
    {: #vsac-7-0-0 .grid}
 
 #### Changes:
