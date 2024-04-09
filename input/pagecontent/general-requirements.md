@@ -134,10 +134,10 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
 
 #### Current Binding for Coded Elements
 
-The FHIR rules for extensible bindings state that *all conceptual overlaps*, including free text, should be mapped to the coded values in the bindings. US Core adopts the [current] additional binding from FHIR R5 for more flexibility in exchanging legacy and text-only data. However, for newly recorded, non-legacy data, a system **SHALL** adhere to the extensible binding rules.
+The FHIR rules for extensible bindings state that *all conceptual overlaps*, including free text, should be mapped to the coded values in the bindings. US Core adopts the [current] additional binding from FHIR R5 for more flexibility in exchanging legacy and text-only data. The current binding requires newly recorded, non-legacy data, to be drawn from the value set.
 
-For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueSets cover the entire domain. For data not captured by fine-grained code, it is possible to provide a high-level abstract code, such as SNOMED CT "Procedure". Therefore, instead of requiring systems to map all legacy and text data to standard codes, the valueset uses a "current" binding
-
+For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueSets cover the entire domain. For data not captured by fine-grained code, it is possible to provide a high-level abstract code, such as SNOMED CT "Procedure". Therefore, instead of requiring systems to map all legacy and text data to standard codes, the value set uses a "current" binding
+ 
 <span class="stu-note" markdown="1">
 
 The "current" binding corresponds to the UC Core's interpretation of extensible bindings US Core version 6.1.0 and earlier.</span><!-- stu-note -->
