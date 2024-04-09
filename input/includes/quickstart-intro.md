@@ -7,12 +7,12 @@ Servers providing access to {{ scope.data_element }} data **SHALL** support thes
   -  [resource level scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs`
 {% for i in (1..6) %}{% assign category =  'category_' | append: i %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
 {%- if scope[category] and scope[category_conformance] == "SHALL" %}
-  -  [granular scope]\: `<patient|user|system>.{{ scope.resource_type }}.rs?category={{ scope[category] }}`
+  -  [granular scopes]\: `<patient|user|system>.{{ scope.resource_type }}.rs?category={{ scope[category] }}`
 {% endif -%}
 {%- endfor -%}
 {%- for i in (1..6) %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
 {%- if scope[category_conformance] == "SHOULD" %}
-Servers providing access to {{ scope.data_element }} data **SHOULD** support these [US Core SMART Scope]:
+Servers providing access to {{ scope.data_element }} data **SHOULD** support these [US Core SMART Scopes]:
 {% for i in (1..6) %}{% assign category =  'category_' | append: i %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
 {%- if scope[category] and scope[category_conformance] == "SHOULD" %}
   -  [granular scopes]\: `<patient|user|system>.{{ scope.resource_type }}.rs?category={{ scope[category] }}`

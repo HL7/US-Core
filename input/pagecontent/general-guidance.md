@@ -317,7 +317,7 @@ However, neither specification defines how a user-facing provider app is able to
 
 Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles and **SHOULD** populate [`Meta.lastUpdated`] for US Core Profiles as accurately as possible. Servers **SHALL** document in `CapabilityStatement.rest.resource.searchParam.documentation` the types of changes that can be detected using the `_lastUpdated` search parameter (see example snippet below).
 
-Example CapabilityStatement snippet for a server supporting the the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile 
+Example CapabilityStatement snippet for a server supporting the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile 
 
 ~~~
 {

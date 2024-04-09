@@ -11,7 +11,7 @@ Provider-facing
 
 
 ### Configuration
-Servers SHALL document support for writing Observation resources in their Capability Statements by including a `CapabilityStatement.rest.resource[type=Observation].interaction` with a `code` of `create`. Servers that support the ability to update Observation resources SHALL also also include an `interaction` with a `code` of `update`.
+Servers SHALL document support for writing Observation resources in their Capability Statements by including a `CapabilityStatement.rest.resource[type=Observation].interaction` with a `code` of `create`. Servers that support the ability to update Observation resources SHALL also include an `interaction` with a `code` of `update`.
 
 
 ### SMART Scopes
@@ -74,7 +74,7 @@ We are seeking feedback from the community on whether this more compact approach
 - Server - When this value is populated with a reference to a Device resource on the server, servers SHALL return this reference in subsequent reads operations of the resource that was created. When this value is populated with a reference to a valid contained Device resource, servers MAY ignore the contained Device, return the contained Device as part of subsquent read operations or create a Device resource in the system and return a reference to it in subsequent read operations. Servers SHALL not return an error due to the presence of a valid contained Device resource. Servers SHOULD document their behavior with regard to contained Device resources.
 
 `performer` 
-- Client - Apps SHOULD populate the `performer` element with a reference to a resource in the server when the resource exists or the app has the ability to create it. For patient-facing apps, if the app knows that a patient collected this data, the app SHALL set the `performer` to a reference to the patient based on the the SMART launch context (this should also match the `Observation.subject`). If the relevant resource does not exist and the app is unable to create it, the app SHOULD populate `performer.display`.
+- Client - Apps SHOULD populate the `performer` element with a reference to a resource in the server when the resource exists or the app has the ability to create it. For patient-facing apps, if the app knows that a patient collected this data, the app SHALL set the `performer` to a reference to the patient based on the SMART launch context (this should also match the `Observation.subject`). If the relevant resource does not exist and the app is unable to create it, the app SHOULD populate `performer.display`.
 - Server - When this value is populated in a successful create operation, systems SHALL return it in subsequent reads operations of the resource that was created. Note that `performer` is not currently required in the US Core vital signs profile.
 
 
