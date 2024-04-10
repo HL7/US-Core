@@ -21,6 +21,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Encounter Must Support:**
 
+1. <span class="bg-success" markdown="1">A timestamp when the resource last changed*</span><!-- new-content -->
 1. An encounter identifier
 1. Providers involved in the encounter
 1. When the encounter occurred
@@ -43,7 +44,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 - <span class="bg-success" markdown="1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
   - <span class="bg-success" markdown="1">New encounters/visits</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">Changes in the status of encounter including events that trigger the same status (e.g., in-progress → in-progress). These status changes correspond to events that can initiate [HL7 V2] ADT messages.</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">Changes in the status of encounters including events that trigger the same status (e.g., in-progress → in-progress). These status changes correspond to events that can initiate [HL7 V2] ADT messages.</span><!-- new-content -->
   
 {% include meta-updated-next-version.md %}
 

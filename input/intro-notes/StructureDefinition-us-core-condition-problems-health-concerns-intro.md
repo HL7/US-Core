@@ -13,13 +13,13 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Condition Must Have:**
 
-<!-- 1.  a status of the condition* -->
 1.  a category code of "problem-list-item" or "health-concern"
-1.  a code that identifies the condition*
-1.  a patient
+2.  a code that identifies the condition*
+3.  a patient
 
 **Each Condition Must Support:**
 
+1. <span class="bg-success" markdown="1">a timestamp when the resource last changed*</span><!-- new-content -->
 1.  a clinical status of the condition (e.g., active or resolved)
 1.  a verification status
 2.  additional health status/assessment categories
@@ -46,7 +46,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 - <span class="bg-success" markdown="1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
   - <span class="bg-success" markdown="1">New problems and health concerns</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">Changes in the clinical status or verifications status of a problem or health concern</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">Changes in the clinical status or verifications status of problems or health concerns</span><!-- new-content -->
 
 {% include meta-updated-next-version.md %}
 

@@ -5,7 +5,7 @@
 
 The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It is not scoped to a specific use case nor limits the number of Provenance records associated with a Resource. The primary guidance here, and in the [US Core Provenance Profile], focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here does not preclude more advanced use cases or additional elements.
 
-Full Provenance of a Resource requires details from the original resource creator and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches and end-user display.  They agreed the most important information is the last organization making a meaningful clinical update to the data and the prior system providing the data - the 'last hop'.  Participants didn't dispute the potential need to recreate the entire chain but didn't see this as relevant to the immediate end-user.
+Full Provenance of a Resource requires details from the original resource creator and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches and end-user display.  They agreed the most important information is the last organization making a meaningful clinical update to the data and the prior system providing it - the 'last hop'.  Participants didn't dispute the potential need to recreate the entire chain but didn't see this as relevant to the immediate end-user.
 
 #### Key Provenance Elements
 
@@ -29,7 +29,7 @@ The HL7 Basic Provenance Informative implementation guide outlines four use case
 
 #### Clinical Information Reconciliation and Incorporation
 
-Clinical Information Reconciliation and Incorporation (CIRI) is a process in which a user reviews and updates or accepts information into their system. The data could come from a Health Information Exchange (HIE), a 3rd-party FHIR server, or a patient providing information. Figure 1 represents information supplied from two different sources, Good Health and Sunshine Health Organization. Dr. Reconciled reviews the data in Figure 1, updates the reaction to hives, and stores it in the Future Health Organization system. When a mobile app requests the information, they receive Dr. Reconciled as the Author and Future Health as the organization. This type of authorship change is only relevant for data suitable for reconciliation, such as medications, allergies, and problems. If Dr. Accepted had saved other clinical content into his EHR that is not reconciled but stored, such as clinical notes, that content must retain its original author.
+[Clinical Information Reconciliation and Incorporation (CIRI)] is when a user reviews and updates or accepts information into their system. The data could come from a Health Information Exchange (HIE), a 3rd-party FHIR server, or a patient providing information. Figure 1 represents information from Good Health and Sunshine Health Organization. Dr. Reconciled reviews the data in Figure 1, updates the reaction to hives, and stores it in the Future Health Organization system. When a mobile app requests the information, it receives Dr. Reconciled as the Author and Future Health as the organization. This type of authorship change is only relevant for data suitable for reconciliation, such as medications, allergies, and problems. If Dr. Accepted had saved other clinical content into his EHR that is not reconciled but stored, such as clinical notes, that content must retain its original author.
 
 The Figure below represents information from two different organizations to a clinician for reconciliation:
 
@@ -58,7 +58,7 @@ Dr. Accepted is the latest author after verifying the problem on 5/2018 and acce
 
 #### HIE Redistribution
 
-A Health Information Exchange (HIE) is an organization and a technology to facilitate exchange from one to many partners. In specific HIE scenarios, they only redistribute information, while in others, they store, transform, and redistribute information. The HIE must keep the clinical content fidelity (original author, author organization, and timestamp). In addition, the HIE must keep track of who sent them the information for auditing; however, they are not required to include the original transmitter when redistributing content.
+A Health Information Exchange (HIE) is an organization and technology that facilitates information exchange between one and many partners. In specific HIE scenarios, they only redistribute information, while in others, they store, transform, and redistribute information. The HIE must maintain the clinical content fidelity (original author, author organization, and timestamp). In addition, the HIE must keep track of who sent them the information for auditing; however, they are not required to include the original transmitter when redistributing content.
 
 {% include img.html img="Provenance_HIE_Single_Org_Device.svg" caption="Figure 3: HIE Redistribution - No clinical content transformation" %}
 
@@ -69,12 +69,12 @@ Since no clinical content is changed in the HIE redistribution, the best scenari
 - `Provenance.agent.type` = transmitter
   - `Provenance.agent.who` set to the HIE organization
 
- The timestamp and pointer (i.e., target) to the appropriate Resource are required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always had the Author and Author Organizations available. Participants in the development of this guide reported Author information provided to HIEs needs to be more consistent and reliable.  
+ The timestamp and pointer (i.e., target) to the appropriate Resource are required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always had the Author and Author Organizations available. Participants in the development of this guide reported that the Author information provided to HIEs needs to be more consistent and reliable.  
 
 
 #### HIE Transformation
 
-Unlike Use Case 3 - HIE Redistribution, Use Case 4 includes data transformation. Information is received (e.g., v2 lab, other CDs), transformed by a HIE, stored, and then passed in a new format (e.g., CCD or FHIR).
+Unlike Use Case 3 - HIE Redistribution, Use Case 4 includes data transformation. Information is received (e.g., v2 lab, other CDs), transformed by a HIE, stored, and passed in a new format (e.g., CCD or FHIR).
 
 {% include img.html img="Provenance_HIE_Multi_Org_Device.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
 
