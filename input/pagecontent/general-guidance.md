@@ -1,30 +1,30 @@
 
 ### Referencing US Core Profiles
 
-The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
+The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore, a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
 
 <div class="bg-success" markdown="1">
-FHIR resource elements of the [Reference] datatype reference other FHIR resources. For all references, US Core Responders **SHOULD** return resources that conform to a US Core profile if a US Core profile exists for the resource type. In some cases, US Core profiles explicitly constrain these references to point to the relevant US Core profile because the element is typically a *Must Support* or *Additional USCDI Requirements* element. For example, `CareTeam.subject` in [US Core CareTeam Profile] references the [US Core Patient Profile]. In other cases, referencing elements point to the base FHIR resource, because they are not a *Must Support* or *Additional USCDI Requirements* element and, therefore, unconstrained by US Core. (This is an editorial decision to simplify and improve the readability of the Profile rendering in this guide.) For example, although US Core does not constrain `Condition.asserter`, its reference to Patient or Practitioner **SHOULD** be a valid [US Core Patient Profile] or [US Core Practitioner Profile].
+FHIR resource elements of the [Reference] datatype reference other FHIR resources. For all references, US Core Responders **SHOULD** return resources that conform to a US Core profile if a US Core profile exists for the resource type. In some cases, US Core profiles explicitly constrain these references to point to the relevant US Core profile because the element is typically a *Must Support* or *Additional USCDI Requirements* element. For example, `CareTeam.subject` in [US Core CareTeam Profile] references the [US Core Patient Profile]. In other cases, referencing elements point to the base FHIR resource because they are not a *Must Support* or *Additional USCDI Requirements* element and, therefore, are unconstrained by US Core. (This is an editorial decision to simplify and improve the readability of the Profile rendering in this guide.) For example, although US Core does not constrain `Condition.asserter`, its reference to Patient or Practitioner **SHOULD** be a valid [US Core Patient Profile] or [US Core Practitioner Profile].
 </div><!-- new-content -->
 
 ### Contained Resources
 
-When responding to a query, servers **SHOULD** not use inline [contained] resources to represent the returned data. The only time a contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used for representing the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
+When responding to a query, servers **SHOULD** not use inline [contained] resources to represent the returned data. A contained resource can only be used when the source data exists within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used to represent the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
 
 
 ###  Suppressed Data
 
-In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know. However, masking data **SHOULD** be handled based on implemented policies. For elements with a minimum cardinality = 0 (including elements labeled **Must Support**), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code "unknown" following the guidance on [Missing Data] in the Conformance Sections.
+In situations where the specific piece of data is hidden for security or privacy reasons, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know. However, masking data **SHOULD** be handled based on implemented policies. For elements with a minimum cardinality = 0 (including elements labeled **Must Support**), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code "unknown" following the guidance on [Missing Data] in the Conformance Sections.
 
 
 
 ### SNOMED CT United States Edition
 
-[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI which refers to an unspecified edition/version as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe the edition as shown in option two.
+[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI, which refers to an unspecified edition/version, as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe the edition as shown in option two.
 
 #### SNOMED CT Edition and Version Options
 
-1. Using only the system `http://snomed.info/sct` which refers to an unspecified edition/version. For example:
+1. Using only the system `http://snomed.info/sct` refers to an unspecified edition/version. For example:
    
     ~~~
     "code": {
@@ -60,7 +60,7 @@ In situations where the specific piece of data is hidden due to a security or pr
 
 ###  Using UCUM codes in the [Quantity] datatype
 
-Some US Core Profiles bind the <span class="bg-success" markdown="1">`Quantity.code` element in the Quantity datatype to the [UCUM] code system. For example, in the [US Core Laboratory Result Observation Profile], `Observation.valueQuantity`, `Observation.referenceRange.low` and `Observation.referenceRange.high` are bound to UCUM. Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements).</span><!-- new-content --> A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
+Some US Core Profiles bind the <span class="bg-success" markdown="1">`Quantity.code` element in the Quantity datatype to the [UCUM] code system. For example, in the [US Core Laboratory Result Observation Profile], `Observation.valueQuantity`, `Observation.referenceRange.low`, and `Observation.referenceRange.high` are bound to UCUM. Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements).</span><!-- new-content --> A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or when the units are missing, which will likely occur in the real world.  
 
 **UCUM code provided**
 
@@ -74,7 +74,7 @@ Some US Core Profiles bind the <span class="bg-success" markdown="1">`Quantity.c
 ```
 
 **free text units only**:
-- If UCUM units are not available then represent units in the `unit` element.
+- If UCUM units are unavailable, represent units in the `unit` element.
 
 ```
  "valueQuantity": {
@@ -99,14 +99,14 @@ A FHIR Server **SHOULD** not delete records. A FHIR server **SHOULD** update the
 
 ### Representing Entered in Error Information
 
-Clinical information that has been entered in error in the patient's record needs to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
+Clinical information entered in error in the patient's record needs to be represented by the FHIR Server so that Clients can expose the corrected information to their end users.
 
 **Server Recommendations:**
 - A FHIR Server **SHOULD** not delete resources.
 - A FHIR server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive`.
 - A FHIR Server **SHOULD** allow these resources to be searchable by client applications.
 - If the FHIR server has updated the resource status to `entered-in-error`:
-    -  For *patient facing* applications, A FHIR Server **SHOULD** remove the contents of resource leaving only an id and status.   Note this typically will not be conformant with the US Core or FHIR StructureDefinitions.
+    -  For *patient facing* applications, A FHIR Server **SHOULD** remove the resource's contents, leaving only an id and status.   Note that this typically will not conform to the US Core or FHIR StructureDefinitions.
     - For *provider-facing* applications,  the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
 
 </div><!-- new-content -->
@@ -117,7 +117,7 @@ The [US Core CarePlan Profile] requires a narrative summary of the patient asses
 
 ### Language Support
 
-There is a basic need to access records in your language, and the data provider **SHOULD** do their best to translate (safely) to the requested language. Understanding that this will be variably complete depending on the nature of the record. For example, translating the following elements is relatively straightforward:
+There is a basic need to access records in your language, and the data provider **SHOULD** do their best to translate (safely) to the requested language. Understand that this will be variably complete depending on the nature of the record. For example, translating the following elements is relatively straightforward:
 
 - `Coding.display`
 - Generated narrative
@@ -127,8 +127,8 @@ The following guidelines outline requesting and returning a resource in the requ
 
 * Clients MAY request language/locale using the http [`Accept-Language`] header.
 * Servers **SHOULD** make reasonable efforts to translate what can be safely translated.
-* Servers **SHOULD** populate the Resource's `language` element with a code that is based on the underlying language of record, *not* the requested language.
-    * Using the [Human Language] Extension when the language of a display, etc, is known to be different from the stated (or inferred) language.
+* Servers **SHOULD** populate the Resource's `language` element with a code based on the underlying language of record, *not* the requested language.
+    * Using the [Human Language] Extension when the language of a display, etc, is known to differ from the stated (or inferred) language.
 
       Example
       ~~~
@@ -139,7 +139,7 @@ The following guidelines outline requesting and returning a resource in the requ
               [...snip...]
               </meta>
               <language value=" es"/>
-              <!--0..1 Language of the resource content in this case Spanish-->
+              <!--0..1 Language of the resource content, in this case, Spanish-->
               <text>
               [...snip...]
               </text>
@@ -160,7 +160,7 @@ The following guidelines outline requesting and returning a resource in the requ
               [...snip...]
       ~~~
 
-* Using the [Translation] Extension when the server is providing additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
+* Using the [Translation] Extension when the server provides additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
 
     Example
     ~~~
@@ -203,58 +203,6 @@ The following guidelines outline requesting and returning a resource in the requ
 
 For further guidance on language and locale for the generation of the resource narrative, see [Multi-Language support in FHIR (Localization/Internationalization)] in the core specification.
 
-
-<!--
-### Timezone and Time Offsets (*STRAWMAN PROPOSAL*)
-
->A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
-
-- Servers **SHALL** store the existing supplied time offset or convert to "Z" (-0 offset) time.
-
-
-  - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
-- The data source timezone **SHOULD** be preserved
-  - Use a [TZ Extension] on `[Resource]`  (plan to use new meta timezone element in R5)
-    - ValueCode:
-      - system = https://www.iana.org/time-zones
-      - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
-  - The TZ Extension is also used to override the global timezone information within particular dateTime elements
-
-    Example:
-
-    ~~~
-    {
-      "resource": {
-        "id": "1",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
-              "valueCode": "US/Pacific"
-            }
-            ],
-... [snip] ...
-      "authoredOn": "2019-08-28T15:20:27+00:00",
-      "_authoredOn": {
-           "extension": [
-             {
-              "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
-              "valueCode": "US/Mountain"
-              }
-            ]
-      },
-... [snip] ...
-    ~~~
-
-Client algorithm for resolving time offsets and timezones.
-
-  1. Look for a time offset on a specific datetime. If present, treat that as the data source time offset.
-  1. Look for a data source timezone in `[dateTime element].extension`. If present, treat that as the data source timezone.
-  1. Look for a data source timezone in `[Resource].meta.extension`. If present, treat that as the data source timezone.
-  1. If there is no data source timezone in `[dateTime element].extension` or `[Resource].meta.extension`. The timezone may be calculated from the source location and time offset.
-  * If hours and minutes are specified and there is no time offset on a specific datetime, the resource is invalid.
-
--->
-
 ### Read (Fetch) Syntax
 
 Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance is included on the US core Profile pages for conformance and informative purposes:
@@ -284,11 +232,11 @@ All the search interactions in this guide use the `GET` command with the followi
 -   Variables surrounded by "\{\}" are optional *for the client* to supply and will be replaced by the string literal identified.
     -   base: The Service Root URL (e.g., "<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -  Resource-type: The name of a resource type (e.g., "Patient")
-    -  parameter: the search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
+    -  parameter: the search parameters as defined for the particular interaction (e.g.,"?patient=Patient/123")
     -  value: the search parameter value for a particular search
        - When searching using the `token` type searchparameter [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.:
-       - When searching using the `reference` type searchparameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
-       - When searching using the `date` type searchparameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
+       - When searching using the `reference` type SearchParameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
+       - When searching using the `date` type SearchParameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
     - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
@@ -301,15 +249,15 @@ In the simplest case, a search is executed by performing a GET operation in the 
 
 For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC code.  For more information, see the [FHIR RESTful Search API]
 
-Note that the patient may be *implicit* in the context of some implementations (e.g., using SMART). Then the patient parameter can be omitted:
+Note that when the patient is *implicit* in the context of some implementations (e.g., using SMART), the patient parameter can be omitted:
 
 `GET [base]/[Resource-type]{?other-parameters}`
 
 ### Searching Multiple Patients
 
-Currently, most EHRs permit queries that provide a single patient id but do not support the comma-separated query or a query where the patient parameter is omitted, as described in the standard FHIR REST API. Instead, a user-facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system-level query to access large volumes of information on a group of individuals. It can also be used to identify and query against an unknown population, such as when looking for population-based research data or population-level queries for public health surveillance.
+Currently, most EHRs permit queries that provide a single patient resource id but do not support the comma-separated query or a query where the patient parameter is omitted, as described in the standard FHIR REST API. Instead, a user-facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system-level query to access large volumes of information on a group of individuals. It can also be used to identify and query against an unknown population, such as when looking for population-based research data or population-level queries for public health surveillance.
 
-However, neither specification defines how a user-facing provider app is able to seek real-time "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
+However, neither specification defines how a user-facing provider app can seek real-time "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
 
 <div class="bg-success" markdown="1">
 
@@ -363,22 +311,22 @@ Example CapabilityStatement snippet for a server supporting the `_lastUpdated` s
 
 <div class="stu-note" markdown="1">
 
-Many servers are unable to populate the `Meta.lastUpdated` element accurately. Work is in progress to enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
+Many servers are unable to accurately populate the `Meta.lastUpdated` element. Work is in progress to enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
 </div><!-- stu-note -->
 
 </div><!-- new-content -->
 
 ### Compartment Based Search
 
-US Core servers are not required to support  patient [compartment] based searches.
+US Core servers are not required to support patient [compartment] based searches.
 
 ### Across Platform Searches
 
-US Core servers are not required to resolve absolute URLs that are external to their environment.
+US Core servers are not required to resolve absolute URLs external to their environment.
 
 ### Limiting The Number Of Search Results
 
-Servers can choose to return the results in a series of pages to manage the number of search results returned. The search result set contains the URLs used to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
+Servers can choose to return the results in a series of pages to manage the number of search results returned. The search result set contains the URLs used to request additional pages from the search set. For a simple RESTful search, the page links are included in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
 
 ------------------------------------------------------------------------
 <!--
@@ -388,6 +336,6 @@ Footnotes:
 
 [^1]: This extension is [converted from a new element] in a future version of CapabilityStatement.
 
-[^2]: For example, the base Location resource is being referenced by the US Core Encounter and US Core PractitionerRole resources.
+[^2]: For example, the base Location resource is referenced by the US Core Encounter and US Core PractitionerRole resources.
 
 {% include link-list.md %}
