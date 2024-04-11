@@ -1,27 +1,27 @@
 
 
-The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements. The sections below defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
+The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements. The sections below define the server and client expectations for processing these elements and illustrate how they are displayed and documented.
 
 
 
 ### Mandatory Elements
 
-*Mandatory* elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and guidance for when data is missing is provided in the [Missing Data] section and the next section. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
+*Mandatory* elements have a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected always to be present. However, very rarely it may be missing, and the [Missing Data] section and the next section provide guidance when the data is missing. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
 For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [Future of US Core] page for writing and updating US Core Profiles):
 
-* US Core Responders **SHALL** be capable of populating all data elements as part of the query results as specified by the [US Core Server Capability Statement].
+* US Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server Capability Statement].
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words, US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
-* In situations where information on a particular data element is not present, and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
+* When information on a particular data element is not present, and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.
-* In situations where information on a particular data element is missing or suppressed, refer to the guidance for [Missing Data] and [Suppressed Data]. In cases where information on a specific data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information. This is done by following the same methodology outlined in the [Missing Data] section but using the appropriate reason code instead of `unknown`.
+* When information on a particular data element is missing or suppressed, refer to the guidance for [Missing Data] and [Suppressed Data]. In cases where information on a specific data element is missing, *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information. This is done by following the same methodology outlined in the [Missing Data] section but using the appropriate reason code instead of `unknown`.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
-The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
+The terms *US Core Responder* Actor and *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
 
-Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search], and [FHIR Resource] formats before implementing US Core requirements.
+Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, [FHIR Data Types], [FHIR Search], and [FHIR Resource] formats before implementing US Core requirements.
 
 All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. This may be useful to testers and analysts to review the *Must Support* and *Mandatory* elements across profiles in a single table.
 
@@ -33,7 +33,7 @@ This [Observation Summary Table] compares *Must Support* Elements across all the
 
 ### Additional USCDI Requirements 
 
-The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI)]. Some US Core Profile elements that are needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements *Additional USCDI Requirements*.
+The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI)]. Some US Core Profile elements needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements *Additional USCDI Requirements*.
 
 <!-- The following table summarizes the difference between USCDI data classes or elements and *Must Support* and *Additional USCDI Requirements* conformance requirements. 
  
@@ -57,7 +57,7 @@ To communicate when *Additional USCDI Requirements* elements are in a US Core pr
 
 1. The profiles page includes an "Additional USCDI Requirements" listing the elements under the "Mandatory and Must Support Data Elements" section. 
 2. The computable [US Core USCDI Requirement Extension] is added to each element in the profile's [StructureDefinition].
-3. The formal views of profile content display "**ADDITIONAL USCDI:**" in the element's short description (see below for examples).
+3. The formal view of the profile content displays "**ADDITIONAL USCDI:**" in the element's short description (see below for examples).
 
 
 ### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
@@ -73,8 +73,8 @@ Elements with a cardinality starting with "1"  under the column header, "Card." 
 #### Key Elements Table View
  
 The "Key Elements Table" view consists of:
-1. all the *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements in the differential view
-2. any *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements inherited from a US Core Profile or other profile from which it is derived. (e.g.,  [US Core Body Height Profile] is based on the [US Core Vital Signs Profile] or [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
+1. All the *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements in the differential view
+2. Any *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements inherited from a US Core Profile or other profile from which it is derived. (e.g., the [US Core Body Height Profile] is based on the [US Core Vital Signs Profile], and the [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
 3. any *Mandatory* or [modifier elements] not in 1. or 2.
 
 This view includes the same flags and labels described in Differential Table View:
@@ -94,7 +94,7 @@ This view includes the same flags and labels as described in Differential Table 
 
 #### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], which is used almost exclusively for the CodeableConcept and Coding datatypes. If the element is marked as Must Support and defined by a pattern, then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], used almost exclusively for the CodeableConcept and Coding datatypes. If an element is marked as Must Support and defined by a pattern, then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.
 
 For example, the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in `DiagnosticReport.category.coding.system`  and `DiagnosticReport.category.coding.code` for a Coding element. When claiming conformance to this profile:
 
@@ -116,9 +116,9 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 
 #### Must Support - Complex Elements
 
-Complex elements are composed of primitive and/or other complex elements.   Note that coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) also have additional binding rules, which are documented in the [Coded Elements] section.
+Complex elements are composed of primitive and other complex elements.   Note that coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) also have additional binding rules documented in the [Coded Elements] section.
 
-For any complex element marked as Must Support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as Must Support, it must meet the Must Support requirements as well and satisfy the Must Support requirement for the parent element.
+For any complex element marked as Must Support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as Must Support, it must also meet the Must Support requirements and satisfy the Must Support requirements for the parent element.
 
 For example, the [US Core DiagnosticReport Profile for Report and Note exchange] `presentedForm` element is labeled Must Support and has no Must Support sub-elements. When claiming conformance to this profile:
 
@@ -130,7 +130,7 @@ For example, the [US Core DiagnosticReport Profile for Report and Note exchange]
 For example, the [US Core Patient Profile] `name` element is labeled Must Support and has Must Support sub-elements "family" and "given". When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
-- US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
+- US Core Requestors **SHALL** be capable of processing the value in `Patient.name.family` and `Patient.name.given`.
 
 {% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
@@ -145,7 +145,7 @@ For example, the [US Core Patient Profile] `telecom` element is not labeled Must
 {% include img.html img="Must_Support_Patient_telecom.png" caption="Figure 8: US Core Patient.telecom" %}
 
 </div><!-- new-content -->
-Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI)] may require additional elements, for example, `suffix`.
+Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI)] may require additional elements such as `Patient.suffix`.
 
 #### Must Support - Resource References
 
@@ -173,7 +173,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 
 #### Must Support - Choice of Data Types
 
-Some elements allow different data types (e.g., Observation.effective[x]) for their content. Only specific data type choice elements are labeled as *Must Support* in these situations.
+Some elements allow different data types (e.g., Observation.effective[x]) for their content. Only specific data type choice elements are labeled  *Must Support* in these situations.
 
 For example, the [US Core Observation Clinical Result Profile] effectiveDateTime is labeled *Must Support*. When claiming conformance to this profile:
 
@@ -196,7 +196,7 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 #### Must Support - Choice of Profile Elements
 
-There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the Must Support requirement. In such cases, the server **SHALL** support at least one element, and the client application **SHALL** support all elements. Unfortunately, there is no way to define this in a computable way, but these instances are clearly documented in the *Profile specific implementation guidance* sections.
+There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the Must Support requirement. In such cases, the server **SHALL** support at least one element, and the client application **SHALL** support all elements. Unfortunately, there is no way to define this in a computable way, but these instances are documented in the *Profile specific implementation guidance* sections.
 
 For example:
 
