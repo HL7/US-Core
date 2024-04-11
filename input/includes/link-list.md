@@ -448,3 +448,5 @@
 [registry of standard extensions]: {{site.data.fhir.path}}extensibility-registry.html
 [HL7 v2]: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
 [Clinical Information Reconciliation and Incorporation (CIRI)]: https://www.healthit.gov/test-method/clinical-information-reconciliation-and-incorporation
+[Normative]: {{site.data.fhir.path}}versions.html#maturity
+[US Realm Steering Committee (USRSC)]: https://confluence.hl7.org/display/USR/US+Realm+Steering+Committee

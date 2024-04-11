@@ -247,7 +247,7 @@ In the simplest case, a search is executed by performing a GET operation in the 
 
 `GET [base]/[Resource-type]?name=value&...`
 
-For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC code.  For more information, see the [FHIR RESTful Search API]
+For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource has the name "code" for searching on the LOINC code.  For more information, see the [FHIR RESTful Search API].
 
 Note that when the patient is *implicit* in the context of some implementations (e.g., using SMART), the patient parameter can be omitted:
 
@@ -257,7 +257,7 @@ Note that when the patient is *implicit* in the context of some implementations 
 
 Currently, most EHRs permit queries that provide a single patient resource id but do not support the comma-separated query or a query where the patient parameter is omitted, as described in the standard FHIR REST API. Instead, a user-facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system-level query to access large volumes of information on a group of individuals. It can also be used to identify and query against an unknown population, such as when looking for population-based research data or population-level queries for public health surveillance.
 
-However, neither specification defines how a user-facing provider app can seek real-time "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
+However, neither specification defines how a user-facing provider app can seek real-time "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core].
 
 <div class="bg-success" markdown="1">
 
@@ -300,18 +300,21 @@ Example CapabilityStatement snippet for a server supporting the `_lastUpdated` s
 }
 ~~~
 
+<div class="stu-note" markdown="1">
+
+Many servers are unable to accurately populate the `Meta.lastUpdated` element. 
+
 **Note to Clients:**
+- Updates to `Meta.lastUpdated` may not reflect a change in the resource and resource updates may not result in updates to `Meta.lastUpdated`.
+- `_lastUpdated` search results may not reflect changes clients can access and all updates to a resource may not be returned using the `_lastUpdated` search. (in other words, false negatives and false positives `_lastUpdated` search results are possible).
+- Updates to `Meta.lastUpdated` may reflect changes a client can not access. (for example, the client may not be authorized to see the changed data).
 - Supporting `Meta.lastUpdated` in a resource does not imply support for searches using the `_lastUpdated` search parameter.
 - Support for searches using the `_lastUpdated` search parameter does not require servers to support `Meta.lastUpdated`; servers can use an alternative method to track changes to an instance.
-- False negatives and false positives `_lastUpdated` search results are possible.
-- Updates to `Meta.lastUpdated` does not necessarily reflect changes a client can access. A record may change, but the client's view of the resource may not (for example, if the client is not authorized to see the changed data).
 
 **Note to Servers:**
 - Updating the timestamp too frequently is better than missing updates.
 
-<div class="stu-note" markdown="1">
-
-Many servers are unable to accurately populate the `Meta.lastUpdated` element. Work is in progress to enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
+Work is in progress to enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
 </div><!-- stu-note -->
 
 </div><!-- new-content -->
