@@ -1,22 +1,22 @@
 ### Version = 7.0.0
 - url: <http://hl7.org/fhir/us/core/STU7/>
-- Based on FHIR version : 4.0.1
+- Based on FHIR version: 4.0.1
 
-The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2024 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the HL7 International Cross-Group Projects work group members.
+The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2024 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments.
 #### What's new in Version 7.0.0 of US Core:
 
-Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 7.0.0 version of US Core and each previous major release on [Changes Between Versions] page. Below is a brief overview of significant changes in Version 7.0.0 of US Core.
+Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 7.0.0 version of US Core and each previous major release on [Changes Between Versions] page. Below is an overview of significant changes in Version 7.0.0 of US Core.
 
 - [SMART on FHIR Obligations and Capabilities](scopes.html): We rewrote the SMART scopes guidance page to clarify the granular scope requirement in [HTI-1 final rule](https://www.federalregister.gov/documents/2023/04/18/2023-07229/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and), and expanded the guidance to include SMART on FHIR capabilities, token introspection, and `/.well-known/smart-configuration`.
-- {: #last-updated }`Meta.lastUpdated` and `_lastUpdated`: We added `Meta.lastUpdated` element as Must Support recommend using the `_lastUpdated` search parameter for the US Core Profiles listed below. The General Guidance page documents how to use them to represent and search for resources whose content has changed.  We also updated the guidance on deletion of records.
+- {: #last-updated }`Meta.lastUpdated` and `_lastUpdated`: We added the `Meta.lastUpdated` element as Must Support and recommend using the `_lastUpdated` search parameter for the US Core Profiles listed below. The General Guidance page documents how to use them to represent and search for resources whose content has changed. We also updated the guidance on the deletion of records.
   - [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html)
   - [US Core DiagnosticReport Profile for Laboratory Results Reporting](StructureDefinition-us-core-diagnosticreport-lab.html)
   - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
   - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html)
   - [Searching Using lastUpdated](general-guidance.html#searching-using-lastupdated)
   - [Representing Deleted Information](general-guidance.html#representing-deleted-information)
-- [US Core Medication Adherence Extension](StructureDefinition-us-core-medication-adherence.html): In the previous ballot version, we added support for Medication Adherence as an *Additional USCDI Requirement* using the new US Core Medication Adherence Extension. In this version, we simplified the adherence codes and change the information source from a FHIR Reference to actor codes.
-- [US Core Average Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-average-blood-pressure.html): In the previous ballot version, we added the US Core Average Blood Pressure Profile to support the USCDI Average Blood Pressure data element. In this version, it was rewritten, and the guidance updated. Notably, it is based upon the FHIR Observation and not the US Core Vital Signs Profile.
+- [US Core Medication Adherence Extension](StructureDefinition-us-core-medication-adherence.html): In the previous ballot version, we added support for Medication Adherence as an *Additional USCDI Requirement* using the new US Core Medication Adherence Extension. In this version, we simplified the adherence codes and changed the information source from a FHIR Reference to actor codes.
+- [US Core Average Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-average-blood-pressure.html): In the previous ballot version, we added the US Core Average Blood Pressure Profile to support the USCDI Average Blood Pressure data element. It was rewritten, and the guidance was updated in this version. Notably, it is based upon the FHIR Observation and not the US Core Vital Signs Profile.
 - [US Core Smoking Status Observation Profile](StructureDefinition-us-core-smokingstatus.html). This Profile and its terminology were updated to accommodate more smoking-related observations.
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources (Value Set Authority Center (VSAC)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA]. The Following Value sets are now in VSAC:
 
@@ -33,6 +33,7 @@ Each update to a new version of US Core changes the US Core Profiles and conform
 The ballot-related comments resulted in over 80 changes to this specification, which are listed below:
 
 **Tracker Status**: **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
+
 
 1. **Applied:** (Enhancement) Updated Gender Identity binding to align with C-CDA [FHIR-43052](https://jira.hl7.org/browse/FHIR-43052) [See Changes Here](StructureDefinition-us-core-genderIdentity.html)
 2. **Applied:** (Clarification) Rename fhir-write to vitals-write [FHIR-43400](https://jira.hl7.org/browse/FHIR-43400) [See Changes Here](vitals-write.html)
