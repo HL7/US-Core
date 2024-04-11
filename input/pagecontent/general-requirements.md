@@ -1,16 +1,16 @@
 
-This page documents requirements common to all US Core actors used in this guide. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
+This page documents requirements common to all US Core actors in this guide. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 
 <!-- This page defines how CapabilityStatements are used and the expectations for mandatory and Must Support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).  Note that the conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules]. -->
 
 
 ### US Core Conformance Artifacts
 
-The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  US Core Profile [StructureDefinitions] defines the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present and constrains the way the elements are used when using the profile. Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile
+The [Profiles and Extensions] page lists the US Core Profiles defined for this implementation guide.  US Core Profile [StructureDefinitions] define the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present and constrains how the elements are used when using the profile. Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile.
 
-The US Core Profile elements include *Mandatory*, *Must Support*, and *Additional USCDI Requirements*.  Mandatory elements are required and have a minimum cardinality of 1 (min=1). Must Support element server and client expectations are defined by US Core. Additional USCDI Requirements elements are neither Mandatory nor Must Support but designated USCDI Requirements for ONC Health IT Certification and, for certified systems, are equivalent to Must Support elements. All Mandatory, Must Support, or Additional USCDI Requirements are in-scope for [ONC Health IT Certification] (g(10) certification) testing. The [Must Support] page defines the server and client expectations for processing these different element requirements and illustrates how they are displayed and documented.
+The US Core Profile elements include *Mandatory*, *Must Support*, and *Additional USCDI Requirements*.  Mandatory elements are required and have a minimum cardinality of 1 (min=1). Must Support element server and client expectations are defined by US Core. Additional USCDI Requirements elements are neither Mandatory nor Must Support but designated USCDI Requirements for ONC Health IT Certification and, for certified systems, are equivalent to Must Support elements. All Mandatory, Must Support, or Additional USCDI Requirements are in scope for [ONC Health IT Certification] (g(10) certification) testing. The [Must Support] page defines the server and client expectations for processing these different element requirements and illustrates how they are displayed and documented.
 
-The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resources specify how the server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
+The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resource specify how the server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
 
 ### Conforming to US Core
 
@@ -27,9 +27,9 @@ An example scenario would be a server using only the [FHIR Bulk Data Access (Fla
 
 To support a US Core Profile, a server:
 
-- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
-- **SHOULD** declare support for a US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
-    - the US Core Profile's official or "canonical" URL is located on each US Core Profile page
+- **SHALL** Be able to populate all profile data elements that are mandatory and flagged as Must Support as defined by that profile's StructureDefinition.
+- **SHOULD** declare support for a US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element.
+    - The US Core Profile's official or "canonical" URL is located on each US Core Profile page
 
       example CapabilityStatement snippet for a server supporting the US Core Patient Profile:
       ~~~
@@ -77,15 +77,15 @@ A server that certifies to the [21st Century Cures Act for accessing patient dat
 - **SHOULD** declare conformance with the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
-    - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
-      - the US Core Profile's official or "canonical" URL is located on each US Core Profile page
-    - Declare support for the US Core Profile's FHIR RESTful transactions
+    - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element.
+      - the US Core Profile's official or "canonical" URL is located on each US Core Profile page.
+    - Declare support for the US Core Profile's FHIR RESTful transactions.
       - The restful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.
  
 
     Example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
 
-    {% include examplebutton_default.html example="conform-patient" b_title = "Click Here an example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:" %}
+    {% include examplebutton_default.html example="conform-patient" b_title = "Click Here for an example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:" %}
 
 ### Using Codes in US Core Profiles
 
@@ -111,21 +111,21 @@ Because of the  FHIR conformance rule:
 FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in Figure 2 below illustrates this structure for the repeating `DocumentReference.category` element:
 
 - This structure allows 0..\* concept(s) from the *required* ValueSet.
-- This structure, by being 0..\*, allows servers to send concepts, not in the required ValueSet.
+- By being 0..\*, thie structure permits servers to send concepts not in the required ValueSet.
 
 
   {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 2: US Core DocumentReference.category" %}
 
 #### Extensible Binding for Coded Elements
 
-[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.  If no suitable code exists in the ValueSet, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and if only text is available and <span class="bg-success" markdown="1">it has no conceptual overlap to the bound coded values</span><!-- new-content -->, then just text may be used.
+[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.  If no suitable code exists in the ValueSet, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings. If only text is available and <span class="bg-success" markdown="1">it has no conceptual overlap with the bound coded values</span><!-- new-content -->, then just text may be used.
 
-The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
+The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for the CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** provide:
-  - a code from this valueset in `AllergyIntolerance.code.code` *if the concept exists* in the ValueSet
-  - or an alternative code *if the concept does not exist* in the ValueSet
-  - or text in `AllergyIntolerance.code. text' if only text is available.
+  - A code from this valueset in `AllergyIntolerance.code.code` *if the concept exists* in the ValueSet
+  - Or an alternative code *if the concept does not exist* in the ValueSet
+  - Or text in `AllergyIntolerance.code. text' if only text is available.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 3: US Core AllergyIntolerance.code" %}
@@ -134,7 +134,7 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
 
 #### Current Binding for Coded Elements
 
-The FHIR rules for extensible bindings state that *all conceptual overlaps*, including free text, should be mapped to the coded values in the bindings. US Core adopts the [current] additional binding from FHIR R5 for more flexibility in exchanging legacy and text-only data. The current binding requires newly recorded, non-legacy data, to be drawn from the value set.
+The FHIR rules for extensible bindings state that *all conceptual overlaps*, including free text, should be mapped to the coded values in the bindings. US Core adopts the [current] additional binding from FHIR R5 for more flexibility in exchanging legacy and text-only data. The current binding requires newly recorded, non-legacy data to be drawn from the value set.
 
 For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueSets cover the entire domain. For data not captured by fine-grained code, it is possible to provide a high-level abstract code, such as SNOMED CT "Procedure". Therefore, instead of requiring systems to map all legacy and text data to standard codes, the value set uses a "current" binding
  
@@ -149,7 +149,7 @@ The "current" binding corresponds to the UC Core's interpretation of extensible 
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
 
-Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. The alternate codes are called "translations". These translations may be equivalent to or narrower in meaning than the standard concept code.
+Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called "translations". They may be equivalent to or narrower in meaning than the standard concept code.
 
 Example of multiple translations for Body Weight concept code.
 
@@ -157,23 +157,23 @@ Example of multiple translations for Body Weight concept code.
     "code": {
         "coding": [
          {
-            "system": "http://loinc.org",  //NOTE:this is the standard concept defined in the ValueSet//
+            "system": "http://loinc.org",  //NOTE: this is the standard concept defined in the ValueSet//
             "code": "29463-7",
             "display": "Body Weight"
           },
-    //NOTE:this is a translation to a more specific concept
+    //NOTE: this is a translation to a more specific concept
          {
             "system": "http://loinc.org",
             "code": "3141-9",
             "display": "Body Weight Measured"
           },
-    //NOTE:this is a translation to a different code system (Snomed CT)
+    //NOTE: this is a translation to a different code system (Snomed CT)
          {
             "system": "http://snomed.info/sct",
             "code": "364589006",
             "display": "Body Weight"
           }
-    //NOTE:this is a translation to a locally defined code
+    //NOTE: this is a translation to a locally defined code
          {
             "system": "http://AcmeHealthCare.org",
             "code": "BWT",
@@ -217,7 +217,7 @@ Some examples of modifiers that are not Must Support elements in US Core Profile
 - `Practitioner.identifier.use`
 - `Patient.active`
 
-Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in the figure below.
+Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and modifier elements for a profile, as demonstrated in the figure below.
 
  {% include img.html img="modifier-element-view.png" caption="Figure 5: Modifier Elements Listed in Key Element View" %}
 
@@ -250,12 +250,12 @@ There are situations when information on a particular data element is missing, a
     ~~~
 
 1. For *coded* data elements:
-   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept , or Coding datatypes):
-      - if the source systems has text but no coded data, only the `text` element is used.
-          - for Coding datatypes, the text-only data is represented as a `display` element.
-      - if there is neither text nor coded data:
-        - use the appropriate "unknown" concept code from the ValueSet if available
-        - if the ValueSet does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
+   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept or Coding datatypes):
+      - If the source system has text but no coded data, only the `text` element is used.
+          - For Coding datatypes, the text-only data is represented as a `display` element.
+      - If there is neither text nor coded data:
+        - Use the appropriate "unknown" concept code from the ValueSet if available.
+        - If the ValueSet does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
 
       
 
@@ -286,7 +286,7 @@ There are situations when information on a particular data element is missing, a
 
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the ValueSet if available
-      - if the ValueSet does not have the appropriate "unknown" concept code, you must use a concept from the ValueSet otherwise, the instance will not be conformant
+      - if the ValueSet does not have the appropriate "unknown" concept code, you must use a concept from the ValueSet. Otherwise, the instance will not be conformant
 
         - For the US Core profiles, the following mandatory or conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`*
@@ -297,11 +297,11 @@ There are situations when information on a particular data element is missing, a
 
         *The <span class="bg-success" markdown="1">`clinicalStatus`</span><!-- new-content --> element is conditionally mandatory based on resource-specific constraints.
 
-        If any of these status code is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.
+        If any of these status codes is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.
 
 ### FHIR RESTful Search API Requirements
 
-The [FHIR RESTful Search API] requires that servers that support search **SHALL** support the HTTP `POST` based search. For all the supported search interactions in this guide, servers **SHALL** also support the `GET` based search.
+The [FHIR RESTful Search API] requires that servers that support search **SHALL** support the HTTP `POST`-based search. For all the supported search interactions in this guide, servers **SHALL** also support the `GET`-based search.
 
 - When searching using the `token` type searchparameter  [(how to search by token)]
     - The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
@@ -334,7 +334,7 @@ For searches where the client does not supply a status parameter, an implementat
 - **SHALL NOT** restrict search results ( i.e., apply 'hidden' filters) when a client includes status parameters in the query.
   - If a system doesn't support a specific status code value that is queried, it  **SHOULD** return an HTTP `200` status with a search bundle. The search bundle **SHOULD** contain resources matching the search criteria *and* an OperationOutcome warning the client which status code value is not supported.
 
-   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, and `entered-in-error` but not the concept `refuted`, the search parameter is referring to an unsupported code since `refuted` is not known to the server.
+   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, and `entered-in-error` but not the concept `refuted`, the search parameter refers to an unsupported code since `refuted` is not known to the server.
 
      {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 

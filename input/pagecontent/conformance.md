@@ -1,6 +1,6 @@
 
 - [General Requirements]
 - [Must Support]
-- [US Core SMART Scopes]
+- [SMART on FHIR Obligations and Capabilities]
 
 {% include link-list.md %}

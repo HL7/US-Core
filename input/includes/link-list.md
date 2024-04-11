@@ -404,7 +404,8 @@
 [PHDSC Payer Type Committee User's Guide]: https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf
 [resource level scopes]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
 [granular scopes]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters
-[US Core SMART Scopes]: scopes.html
+[SMART on FHIR Obligations and Capabilities]: scopes.html
+[US Core SMART Scopes]: scopes.html#smart-scopes
 [Value Set Authority Center (VSAC)]: https://vsac.nlm.nih.gov/
 [PHQ-9]: https://en.wikipedia.org/wiki/PHQ-9
 [Apgar score]: https://en.wikipedia.org/wiki/Apgar_score
