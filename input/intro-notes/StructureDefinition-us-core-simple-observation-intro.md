@@ -3,8 +3,8 @@
 
 The following are example usage scenarios for this profile:
 
--  Query for clinical observations or assessments about a patient’s health status.
--  [Record or update] clinical observations or assessments about a patient’s health status.
+-  Query for clinical observations or assessments about a patient's health status.
+-  [Record or update] clinical observations or assessments about a patient's health status.
 
 ### Mandatory and Must Support Data Elements
 
@@ -39,9 +39,9 @@ The following data elements must always be present ([Mandatory] definition) or m
   -  a "qualifier" confirming or refuting a statement about findings in code. For example:
       **code**: Transport too expensive (SNOMED CT: 160695008)  
       **value**: true
-{% include obs_cat_guidance.md category="sdoh, functional-status, or social history" %}
+{% include obs_cat_guidance.md category= "sdoh, functional-status, or social history" %}
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
-  - \*Observations that are formally part of an assessment tool or survey**SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools and **SHOULD** reference them using `Observation.derivedFrom`.
+  - \*Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
 - \*As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom' to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
   -  {% include no-ms-refs.md element="Observation.derivedFrom" %} 

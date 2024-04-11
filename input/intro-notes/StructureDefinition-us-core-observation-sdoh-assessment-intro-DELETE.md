@@ -8,7 +8,7 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-*In addition to* the Mandatory and Must Support data elements in the US Core Observation Survey Profile, the following data-elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements. Note that the *Key Elements Table* view aggregates all the Must Support elements between this profile and its parent profiles.
+*In addition to* the Mandatory and Must Support data elements in the US Core Observation Survey Profile, the following data elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements. Note that the *Key Elements Table* view aggregates all the Must Support elements between this profile and its parent profiles.
 
 **Each Observation Must Support:**
 

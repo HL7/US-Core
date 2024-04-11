@@ -153,7 +153,7 @@ The SMART App Launch guide requires the following JSON file metadata:
 
 #### Additional US Core Requirements
 
-US Core requires this additional SMART App Launch metadata:
+US Core requires following additional metadata:
 
 - `scopes_supported`: Array of scopes a client may request.
     - The server **SHALL** support all scopes listed in the table above for the US Core Profiles they support; additional scopes **MAY** be supported (so clients should not consider this array an exhaustive list). 

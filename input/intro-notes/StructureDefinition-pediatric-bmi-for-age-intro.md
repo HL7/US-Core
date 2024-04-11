@@ -8,16 +8,16 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-*In addition* to the Mandatory and Must Support data elements in the US Core Vital Signs Profile, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements.  {% include diff-display-note.md parent_profile='US Core Vital Signs Profile' %}
+*In addition* to the Mandatory and Must Support data elements in the US Core Vital Signs Profile, the following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  {% include diff-display-note.md parent_profile='US Core Vital Signs Profile' %}
 
 **Each Observation Must Have:**
 
-1.  a patient
-1.  a fixed code for pediatric BMI per age and gender measurement
+1. a patient
+1. a fixed code for pediatric BMI per age and gender measurement
 
 **Each Observation Must Support:**
 
-1.  a result value
+1. a result value
 
 **Profile Specific Implementation Guidance:**
 

@@ -43,7 +43,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 |URI|Source|Comment|OID (for non-FHIR systems)|
 |---|---|---|---|
-|`https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets`|[CMS](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)|*Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes*|2.16.840.1.113883.6.285|
+|`https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets`|[CMS](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)|*Healthcare Common Procedure Coding System (HCPCS) Level II alphanumeric codes*|2.16.840.1.113883.6.285|
 |`http://www.cms.gov/Medicare/Coding/ICD10`|[CMS](http://www.cms.gov/Medicare/Coding/ICD10/)|*International Classification of Diseases, 10th Revision, Procedure Coding System (ICD-10-PCS)* -  See [ICD-10 PCS Codes](http://www.icd10data.com/icd10pcs) for online access to codes for general information purposes. |2.16.840.1.113883.6.4|
 |`http://www.ada.org/cdt`|[ADA](http://www.ada.org/en/publications/cdt)|*Code on Dental Procedures and Nomenclature*|2.16.840.1.113883.6.13|
 |`https://www.usps.com`|[USPS](http://pe.usps.com/text/pub28/28apb.htm)|*United States Postal Service Two–Letter State and Possession Abbreviations*|2.16.840.1.113883.6.92|
@@ -60,10 +60,10 @@ The following table lists all the CodeSystems used in US Core and where they can
 
 ### The Value Set Authority Center (VSAC)
 
-This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable using a RESTful API service for accessing the VSAC value sets and supported code systems. See the table above for a list of value sets used in US core that are defined by VSAC.
+This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)]), where applicable, using a RESTful API service to access the VSAC value sets and supported code systems. See the table above for a list of value sets used in US Core that VSAC defines.
 
 
-####   fow to Acess Value Sets in VSAC
+####   How to Acess Value Sets in VSAC
 
 
   -  VSAC requires login using your own *UMLS API Key* to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html). (See the screenshots below)
@@ -78,7 +78,7 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
        `GET https://cts.nlm.nih.gov/fhir/ValueSet/[VSAC OID]`
 
-  - To fetch the FHIR ValueSet resource expansion use the FHIR `$expand` operation:
+  - To fetch the FHIR ValueSet resource expansion, use the FHIR `$expand` operation:
 
        `GET https://cts.nlm.nih.gov/fhir/ValueSet/[VSAC OID]/$expand`
 

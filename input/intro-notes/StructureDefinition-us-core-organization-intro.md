@@ -9,19 +9,19 @@ The following are example usage scenarios for this profile:
 ### Mandatory and Must Support Data Elements
 
 
-The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
 
 **Each Organization Must Have:**
 
-1.  A status of the organization (i.e., whether is still active )
-1.  A name
+1. A status of the organization (i.e., whether it is still active )
+1. A name
 
 
 **Each Organization Must Support:**
 
-1.  An identifier*
-1.  A list of contact information
-1.  An address*
+1. An identifier*
+1. A list of contact information
+1. An address*
 
 *see guidance below
 

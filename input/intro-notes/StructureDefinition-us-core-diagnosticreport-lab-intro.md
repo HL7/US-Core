@@ -8,7 +8,7 @@ The following are example usage scenarios for the US Core DiagnosticReport Profi
 
 ### Mandatory and Must Support Data Elements
 
-The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
 
 **Each DiagnosticReport Must Have:**
 
@@ -20,7 +20,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. when the report was released*
 
 \*These elements have the following constraints: **SHALL** be present if status is
-'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.
+'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.
 
 **Each DiagnosticReport Must Support:**
 
@@ -31,13 +31,13 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-* Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed.  For example:
-   -  providing both a local system codes and a LOINC code that it map to
-   -  providing a more specific category codes to the “LAB” category code, such as “CH” (chemistry), in an additional coding element.
+* Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed. For example:
+   -  providing both a local system code and a LOINC code that it maps to
+   -  providing a more specific category code to the "LAB" category code, such as "CH" (chemistry), in an additional coding element.
 * Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
-- <span class="bg-success" markdown="1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
+- <span class= "bg-success" markdown= "1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
   - <span class="bg-success" markdown="1">New laboratory reports</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">Changes in the status of laboratory reports including events that trigger the same status (e.g., amended → amended).</span><!-- new-content -->
+  - <span class= "bg-success" markdown= "1">Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).</span><!-- new-content -->
 
 {% include meta-updated-next-version.md %}
 

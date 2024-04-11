@@ -5,7 +5,7 @@
 
   - [Must Support] one code from OMB Ethnicity Categories
   - May include additional ethnicity codes from CDC Ethnicity Codes
-  - Must include text description of ethnicity
+  - Must include a text description of ethnicity
 
 - A<!-- [`race`]-->n [`ethnicity`]<!-- [`gender-identity`]--> search parameter has been defined for this extension.  However, there are no  <!--race-->ethnicity<!--gender-identity-->  search requirements for the client or server.
 

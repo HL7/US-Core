@@ -12,9 +12,9 @@ example usage:
 
 {% include obs_cat_guidance.md -%}
 {% include additional-codings.md %}
-* Systems **SHOULD** support `Observation.effectivePeriod` to accurately represent procedure tests that are collected over a period of time {{include.example2}}.
+* Systems **SHOULD** support `Observation.effectivePeriod` to accurately represent measurements over time {{include.example2}}.
 {% include DAR-exception.md %}
-* See the [General Guidance] page for further guidance on using SNOMED and UCUM.
+* See the [General Guidance] page for further guidance on SNOMED and UCUM.
 * See the [LOINC scale type to FHIR data type mapping] for guidance on which `Observation.value[x]` data type to use based on the LOINC Type of Scale.
 
 {% include link-list.md %}

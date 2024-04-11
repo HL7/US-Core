@@ -26,7 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 <div class="bg-success" markdown="1">
 <div class="stu-note" markdown="1">
-This profile conforms to the base FHIR ver 4.0.1 vitals profile which defines a *required* binding for `Quantity.code` concepts. This means validation errors occur when validating derived profiles that use other `Quantity.code` concepts such as `L/min` for `Observation.component.value(x)` in the [US Core Pulse Oximetry Profile].  This is a known issue and is corrected the base FHIR specification since version 4.3.0 ("Release 4B").
+This profile conforms to the base FHIR ver 4.0.1 vitals profile, which defines a *required* binding for `Quantity.code` concepts. This means validation errors occur when validating derived profiles that use other `Quantity.code` concepts such as `L/min` for `Observation.component.value(x)` in the [US Core Pulse Oximetry Profile]. This known issue has been corrected in the base FHIR specification since version 4.3.0 ("Release 4B").
 </div><!-- stu-note -->
 
 </div><!-- new-content -->
