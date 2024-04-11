@@ -1,5 +1,5 @@
 
-​This section provides implementers with important definitions, requirements, and guidance to create, use, and share Clinical Notes.
+​This section provides implementers with important definitions, requirements, and guidance on creating, using, and sharing Clinical Notes.
 
 ### Clinical Notes
 
@@ -52,7 +52,7 @@ To enable consistent access to scanned DiagnosticReport clinical reports, the FH
 * `DocumentReference.content.attachment.url`
 * `DiagnosticReport.presentedForm.url`
 
-For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers to implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g., Pathology scan in DiagnosticReport), this wouldn't be required. However at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in the proper use of these resources.
+For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers to implement the duplicate reference to allow clients to find Pathology reports or other Diagnostic Reports in either resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g., Pathology scan in DiagnosticReport), this wouldn't be required. However, at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in the proper use of these resources.
 
 {% include img.html img="both-url.jpg" caption="Figure 2: Expose a PDF Report Through Both DiagnosticReport and DocumentReference" %}
 
@@ -114,11 +114,11 @@ Servers that support DiagnosticReport will include the clinical note narrative c
 
 A method for discovering the types of notes and reports that a server supports is described in the [Determining Server Note Type](#using-expand) section below.
 
-Note that this guide focuses on exposing existing information, not how systems allow users to capture data. The contents of the notes or reports, even using standard LOINC concepts, may vary widely by the health system or location. For example, CT Spleen WO contrast (LOINC 30621-7) may include individual sections for history, impressions, conclusions, or just an impressions section. In addition, discharge Summaries may have a different facility or regulatory content requirements.
+Note that this guide focuses on exposing existing information, not how systems allow users to capture data. The contents of the notes or reports, even using standard LOINC concepts, may vary widely by the health system or location. For example, CT Spleen WO contrast (LOINC 30621-7) may include individual sections for history, impressions, conclusions, or just an impressions section. In addition, discharge Summaries may have different facility or regulatory content requirements.
 
 #### Search
 
-The standard FHIR [search] API is used to retrieve clinical notes and reports. In this guide, the US Core [CapabilityStatement] and the *Quick Start* sections for the US Core Clinical Notes and Diagnostic Report and US Core DocumentReference Profiles define the required search parameters and describe how they are used.
+The standard FHIR [search] API retrieves clinical notes and reports. In this guide, the US Core [CapabilityStatement] and the *Quick Start* sections for the US Core Clinical Notes and Diagnostic Report and US Core DocumentReference Profiles define the required search parameters and describe how they are used.
 
 Common client search scenarios include:
 
@@ -139,7 +139,7 @@ Common client search scenarios include:
 ### Determining Server Note Type
 {: #using-expand}
 
-In addition to inspecting a server CapabilityStatement, a client can determine the note, and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.
+In addition to inspecting a server CapabilityStatement, a client can determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.
 
 #### Discovering Note and Report Types
 
@@ -190,9 +190,9 @@ When reviewing the minimal number of elements required for each Resource, the [F
 
 * Discrete result information
 * Note types
-* Consistent Client access to scanned, or narrative-only, reports
+* Consistent Client access to scanned or narrative-only reports
 
-While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?", especially considering the variability of Note formats. For example, systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the DocumentReference and DiagnosticReport resources as index mechanisms to the underlying content. In other words, a client can query one of these resources, and it will return a pointer to a specific resource or the underlying binary content.
+While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?", especially considering the variability of Note formats. For example, systems use text, XHTML, PDF, and CDA to capture clinical notes. This variability led the designers to select the DocumentReference and DiagnosticReport resources as index mechanisms to the underlying content. In other words, a client can query one of these resources, and it will return a pointer to a specific resource or the underlying binary content.
 
 For example, consider the following situation for a Discharge Summary Note:
 
@@ -220,8 +220,8 @@ However, in existing EHRs, the clinical impression is often contained within a b
 
 Footnotes
 
-[^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all `DiagnosticReport.category`="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize Lab reports with DiagnosticReport.
+[^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all `DiagnosticReport.category`="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize laboratory reports with DiagnosticReport.
 
-[^2]: The developers of this guide considered requiring Clients to query *both* DocumentReference and DiagnosticReport to get all the information for a patient. However, the requirement to query two places is potentially dangerous if a client doesn't understand or follow this requirement and queries only one resource type, thereby potentially missing vital information from the other type.
+[^2]: The developers of this guide considered requiring Clients to query *both* DocumentReference and DiagnosticReport to get all the information for a patient. However, the requirement to query two places is potentially dangerous if a client doesn't understand or follow this requirement and queries only one resource type, potentially missing vital information from the other type.
 
 {% include link-list.md %}
