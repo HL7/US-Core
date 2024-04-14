@@ -118,7 +118,7 @@ FHIR profiles use [slicing] when a coded element is a repeating element, and a p
 
 #### Extensible Binding for Coded Elements
 
-[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.  If no suitable code exists in the ValueSet, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings. If only text is available and <span class="bg-success" markdown="1">it has no conceptual overlap with the bound coded values</span><!-- new-content -->, then just text may be used.
+[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.  If no suitable code exists in the ValueSet, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings. If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used.
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for the CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
@@ -130,7 +130,7 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 3: US Core AllergyIntolerance.code" %}
 
-<div class="bg-success" markdown="1">
+
 
 #### Current Binding for Coded Elements
 
@@ -145,7 +145,7 @@ The "current" binding corresponds to the UC Core's interpretation of extensible 
 
   {% include img.html img="Must_Support_Condition_code.png" caption="Figure 4: US Core Condition.code" %}
 
-</div><!-- new-content -->
+
 
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
@@ -296,7 +296,7 @@ There are situations when information on a particular data element is missing, a
           - `Immunization.status`
           - `Goal.lifecycleStatus`
 
-        *The <span class="bg-success" markdown="1">`clinicalStatus`</span><!-- new-content --> element is conditionally mandatory based on resource-specific constraints.
+        *The `clinicalStatus` element is conditionally mandatory based on resource-specific constraints.
 
         If any of these status codes is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.
 

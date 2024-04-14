@@ -31,9 +31,9 @@ The figure below shows how screening and assessments lead to providing services 
 - **Interventions**:  The [US Core ServiceRequest Profile] communicates services offered to patients to address problems/health concerns. The [US Core Procedure Profile] can also record a completed service or intervention.
 - **Goals**: Identifying and defining a future desired condition or change in condition (for example, "Has adequate quality meals and snacks") is represented by [US Core Goal Profile].
 
-<div class="bg-success" markdown="1">
+
 {% include img.html img="screening_and_assessments.svg" caption="Screening and Assessment Activities" %}
-</div><!-- new-content -->
+
 
 ### Screening and Assessments
 
@@ -85,20 +85,20 @@ The sections below provide additional guidance on when Observations and Question
 
 [US Core Observation Screening Assessment Profile] is defined to record observations from responses to screening tools and assessments used for any context (e.g., SDOH, functional status, etc.). Although systems can represent most questions and answers in healthcare assessments as FHIR Observations, it is only sometimes necessary and appropriate to represent all of them as Observations. Only relevant responses should be extracted as Observations. For example, depending on the use case and focus of the Assessment or Survey, patient demographic information may be recorded in the Patient resource instead of Observations. The observations can be grouped and nested to preserve the structure of screening or assessment instruments. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment "item" Observations. Each box represents an Observation:
 
-<div class="bg-success" markdown="1">
+
 {% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening Assessment Observations" %}
 
-</div><!-- new-content -->
+
 Note that the panels can be nested to create additional groupings of responses. See the [US Core Observation Screening Assessment Profile] page for detailed documentation on how the observations are linked, examples, and search requirements.
 
 ###### Searching for Screening and Assessment Data
 
 Unlike QuestionnaireResponse, When Observations are used to record a set of Screening and Assessments responses, clients can query individual responses using the standard FHIR RESTful API search parameters. The example below is a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment:
 
-<div class="bg-success" markdown="1">
+
 {% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %}
 
-</div><!-- new-content -->
+
 ##### SDC Base Questionnaire/US Core QuestionnaireResponse Profile
 
 Screening and assessment instruments may be represented as questionnaires, including FHIR Questionnaires. The [Structured Data Capture (SDC)] specification documents the workflow for the creation, discovery, retrieval, and data extraction of FHIR Questionnaire and QuestionnaireResponse. The [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile]) and is used to capture, exchange, and persist the response data. QuestionnaireResponse can be considered a snapshot of the filled-out answer forms to the screening and assessment questions in the [SDC Base Questionnaire]. It is ordered and grouped according to the FHIR Questionnaire and can be consulted when a complete and accurate record of the responses is required. Refer to the [US Core QuestionnaireResponse Profile] page for detailed documentation, examples, and search requirements.
@@ -123,14 +123,14 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 #### Category Codes
 
-API consumers <span class="bg-success" markdown="1">can</span><!-- new-content --> query by category (for example, `sdoh`) when accessing patient information. The USCDI Health Assessments Data Elements category codes are listed below. They **SHOULD** be used when generating resources that conform to these profiles:
+API consumers can query by category (for example, `sdoh`) when accessing patient information. The USCDI Health Assessments Data Elements category codes are listed below. They **SHOULD** be used when generating resources that conform to these profiles:
 
 - US Core Simple Observation Profile
 - US Core Observation Screening Assessment Profile
 - US Core Condition Problems and Health Concerns Profile
 - US Core ServiceRequest Profile 
 
-<div class="bg-success" markdown="1">
+
 
 ##### USCDI Health Assessments Data Element Category
 
@@ -190,7 +190,7 @@ to represent conclusions or diagnoses about drug misuse or abuse. In many cases,
 {% include assessment-valueset-table-generator.html %}
 
 This information is also available as a [csv](tables/assessments-valuesets.csv) or [excel](tables/assessments-valuesets.xlsx) file:
-</div><!-- new-content -->
+
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
@@ -203,11 +203,11 @@ US Core uses broadly defined value sets that contain concepts used across use ca
 
  The figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped value set is compatible with the broader US Core Problem code value set.
  
-<div class="bg-success" markdown="1">
+
 
 {% include img-med.html img="sdoh_condition.svg" caption="SDOH Grouped Value Set Reuse in US Core" %}
 
-</div><!-- new-content -->
+
 
 ### Examples
 

@@ -106,7 +106,7 @@ When writing an Observation that was retrieved from an external organization (e.
 - Apps **MAY** include a Provenance resource with `agent.type = transmitter` with information on the entity that submitted the data. Systems **MAY** store and display this information and **MAY** populate this information based on the SMART context associated with the write.
 
 Example:
-"`js
+```js
 {
   "resourceType": "Observation",
   "contained": [{
@@ -155,12 +155,12 @@ Example:
 
 When writing an Observation that was not retrieved from an external organization (e.g., transmitted by a home blood pressure cuff or manually entered by a patient):
 
-  The app **MAY** include a contained Provenance resource with `agent.type = author` containing information on the party that wrote the data. Systems **MAY** store and display this information and **MAY** populate it based on the SMART context associated with the write.
+   - Apps **MAY** include a contained Provenance resource with `agent.type = author` containing information on the party that wrote the data. Systems **MAY** store and display this information and **MAY** populate it based on the SMART context associated with the write.
+  - Apps **MAY** include one or more contained Provenance resources with `agent.type = composer` and `agent.type = assembler` with information on the device, app, or apps that captured or passed along the data.
 
-  - App **MAY** include one or more contained Provenance resources with `agent.type = composer` and `agent.type = assembler` with information on the device, app, or apps that captured or passed along the data.
 
 Example:
-"`js
+```js
 [{
   "resourceType": "Provenance",
   "target": [{"reference": "#"}],

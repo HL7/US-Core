@@ -99,6 +99,88 @@
     }
   ],
   "definition": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#7.0.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#7.0.0-ballot"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#6.1.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#6.0.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#6.0.0-ballot"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#5.0.1"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#5.0.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#4.1.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#4.0.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#3.2.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#3.1.1"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#3.1.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#3.0.1"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#3.0.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#2.1.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#2.0.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#1.1.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#1.0.1"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#1.0.0"
+      },
+      {
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
+        "valueCode": "hl7.fhir.us.core#0.0.0"
+      }
+    ],
     "resource": [
       {
         "reference": {
@@ -3747,10 +3829,6 @@
         "value": "Bundle/docref-example-2"
       },
       {
-        "code": "version-comparison-master",
-        "value": "7.0.0-ballot"
-      },
-      {
         "code": "version-comparison",
         "value": "6.1.0"
       },
@@ -3933,84 +4011,6 @@
       {
         "code": "path-history",
         "value": "http://hl7.org/fhir/us/core/history.html"
-      }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#7.0.0-ballot"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#6.1.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#6.0.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#6.0.0-ballot"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#5.0.1"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#5.0.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#4.1.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#4.0.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#3.2.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#3.1.1"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#3.1.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#3.0.1"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#3.0.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#2.1.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#2.0.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#1.1.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#1.0.1"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#1.0.0"
-      },
-      {
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency",
-        "valueCode": "hl7.fhir.us.core#0.0.0"
       }
     ]
   }

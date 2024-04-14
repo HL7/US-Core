@@ -64,7 +64,7 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category = `laboratory` and status ([how to search by reference] and [how to search by token])
 
-1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`_lastUpdated`](SearchParameter-us-core-observation-lastupdated.html)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`_lastUpdated`](SearchParameter-us-core-observation-lastupdated.html)** search parameters:
     - including support for these `_lastUpdated` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `_lastUpdated` (e.g.`_lastUpdated=[date]&_lastUpdated=[date]]&...`)
 

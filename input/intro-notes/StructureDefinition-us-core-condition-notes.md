@@ -121,7 +121,7 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
 
-2. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`_lastUpdated`](SearchParameter-us-core-condition-lastupdated.html)** search parameters:
+2. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`_lastUpdated`](SearchParameter-us-core-condition-lastupdated.html)** search parameters:
     - including support for these `_lastUpdated` comparators: `gt,lt,ge,le`s
     - including optional support for *AND* search on `_lastUpdated` (e.g.`_lastUpdated=[date]&_lastUpdated=[date]]&...`)
 

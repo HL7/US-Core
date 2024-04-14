@@ -26,7 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Diagnostic Report Must Support:**
 
-1.  <span class="bg-success" markdown="1">encounter associated with DiagnosticReport</span><!-- new-content -->
+1. encounter associated with DiagnosticReport
 1. instant the report was released
 1. an author (actor) producing the report
 2. a reference to one or more test results

@@ -19,7 +19,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Condition Must Support:**
 
-1. <span class="bg-success" markdown="1">a timestamp when the resource last changed*</span><!-- new-content -->
+1. a timestamp when the resource last changed*
 1. a clinical status of the condition (e.g., active or resolved)
 1. a verification status
 2. additional health status/assessment categories
@@ -32,8 +32,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * For Encounter Diagnosis, use the [US Core Condition Encounter Diagnosis Profile].
-* <span class="bg-success" markdown="1">\*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.</span><!-- new-content -->
+* \*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.
+  - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.
   - USCDI's applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
@@ -44,9 +44,9 @@ The following data elements must always be present ([Mandatory] definition) or m
     * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A server may support both, which means they support all 3 locations.
     * The client application **SHALL** support all three elements.
 
-- <span class="bg-success" markdown="1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">New problems and health concerns</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">Changes in the clinical status or verifications status of problems or health concerns</span><!-- new-content -->
+- \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
+  - New problems and health concerns
+  - Changes in the clinical status or verifications status of problems or health concerns
 
 {% include meta-updated-next-version.md %}
 

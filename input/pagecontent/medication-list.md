@@ -99,10 +99,10 @@ This specification does not specify de-duplication best practices; however, syst
 * Compare the generic or brand name included in the medication resource. The system will require access to terminology capabilities to identify equivalence.
 * Finally, in the de-duplication process, systems must exercise caution in marking things as equivalent only if they are certain.
 
-{% include link-list.md %}
-
 ---
+
 Footnotes
 
-[1]: Future versions of FHIR are anticipated to include further changes to the medication resources, which may lead to changes in our guidance for fetching patient medications in future versions of this guide.
-<br />
+[^1]: Future versions of FHIR are anticipated to include further changes to the medication resources, which may lead to changes in our guidance for fetching patient medications in future versions of this guide.
+
+{% include link-list.md %}

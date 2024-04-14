@@ -3,9 +3,9 @@
 
 The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore, a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
 
-<div class="bg-success" markdown="1">
+
 FHIR resource elements of the [Reference] datatype reference other FHIR resources. For all references, US Core Responders **SHOULD** return resources that conform to a US Core profile if a US Core profile exists for the resource type. In some cases, US Core profiles explicitly constrain these references to point to the relevant US Core profile because the element is typically a *Must Support* or *Additional USCDI Requirements* element. For example, `CareTeam.subject` in [US Core CareTeam Profile] references the [US Core Patient Profile]. In other cases, referencing elements point to the base FHIR resource because they are not a *Must Support* or *Additional USCDI Requirements* element and, therefore, are unconstrained by US Core. (This is an editorial decision to simplify and improve the readability of the Profile rendering in this guide.) For example, although US Core does not constrain `Condition.asserter`, its reference to Patient or Practitioner **SHOULD** be a valid [US Core Patient Profile] or [US Core Practitioner Profile].
-</div><!-- new-content -->
+
 
 ### Contained Resources
 
@@ -60,7 +60,7 @@ In situations where the specific piece of data is hidden for security or privacy
 
 ###  Using UCUM codes in the [Quantity] datatype
 
-Some US Core Profiles bind the <span class="bg-success" markdown="1">`Quantity.code` element in the Quantity datatype to the [UCUM] code system. For example, in the [US Core Laboratory Result Observation Profile], `Observation.valueQuantity`, `Observation.referenceRange.low`, and `Observation.referenceRange.high` are bound to UCUM. Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements).</span><!-- new-content --> A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or when the units are missing, which will likely occur in the real world.  
+Some US Core Profiles bind the `Quantity.code` element in the Quantity datatype to the [UCUM] code system. For example, in the [US Core Laboratory Result Observation Profile], `Observation.valueQuantity`, `Observation.referenceRange.low`, and `Observation.referenceRange.high` are bound to UCUM. Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements). A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or when the units are missing, which will likely occur in the real world.  
 
 **UCUM code provided**
 
@@ -91,7 +91,7 @@ Some US Core Profiles bind the <span class="bg-success" markdown="1">`Quantity.c
  }
 ```
 
-<div class="bg-success" markdown="1">
+
 
 ### Representing Deleted Information
 
@@ -109,11 +109,11 @@ Clinical information entered in error in the patient's record needs to be repres
     -  For *patient facing* applications, A FHIR Server **SHOULD** remove the resource's contents, leaving only an id and status.   Note that this typically will not conform to the US Core or FHIR StructureDefinitions.
     - For *provider-facing* applications,  the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
 
-</div><!-- new-content -->
+
 
 ### Narrative
 
-The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile <span class="bg-success" markdown="1">can</span><!-- new-content --> include a human-readable narrative containing a summary of the resource and may be used to represent the resource's content to a human.  For further guidance, refer to the [Narrative documentation] in the FHIR Specification.
+The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile can include a human-readable narrative containing a summary of the resource and may be used to represent the resource's content to a human.  For further guidance, refer to the [Narrative documentation] in the FHIR Specification.
 
 ### Language Support
 
@@ -259,7 +259,7 @@ Currently, most EHRs permit queries that provide a single patient resource id bu
 
 However, neither specification defines how a user-facing provider app can seek real-time "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core].
 
-<div class="bg-success" markdown="1">
+
 
 ### Searching Using lastUpdated
 
@@ -317,7 +317,7 @@ Many servers are unable to accurately populate the `Meta.lastUpdated` element.
 Work is in progress to enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
 </div><!-- stu-note -->
 
-</div><!-- new-content -->
+
 
 ### Compartment Based Search
 

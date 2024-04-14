@@ -1,3 +1,3 @@
-- <span class="bg-success" markdown="1">The context or precondition of a patient's preference SHOULD be supplied in:</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">the `Observation.valueString` (for example, "If this [health scenario] were to occur, ...”) or</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">an extension such as the PACIO Advance Directive Interoperability Implementation Guide's [Enclosed Precondition Extension].</span><!-- new-content -->
+- The context or precondition of a patient's preference SHOULD be supplied in:
+  - the `Observation.valueString` (for example, "If this [health scenario] were to occur, ...”) or
+  - an extension such as the PACIO Advance Directive Interoperability Implementation Guide's [Enclosed Precondition Extension].

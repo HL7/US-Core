@@ -62,7 +62,7 @@ To communicate when *Additional USCDI Requirements* elements are in a US Core pr
 
 ### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
 
-On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table". <span class="bg-success" markdown="1">Several examples below illustrate the presentation of Must Support elements and their rules. For the sake of simplicity, the Additional USCDI Requirements are not considered in these examples.</span><!-- new-content -->
+On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table". Several examples below illustrate the presentation of Must Support elements and their rules. For the sake of simplicity, the Additional USCDI Requirements are not considered in these examples.
 
 #### Differential Table View
 
@@ -135,7 +135,7 @@ For example, the [US Core Patient Profile] `name` element is labeled Must Suppor
 {% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
 On the other hand, if any sub-element is marked as Must Support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, you must support the sub-element (s) marked as Must Support.
-<div class="bg-success" markdown="1">
+
 
 For example, the [US Core Patient Profile] `telecom` element is not labeled Must Support, but `telecom.system`, `telecom.value`, `telecom.use` are. When claiming conformance to this profile:
 
@@ -144,7 +144,7 @@ For example, the [US Core Patient Profile] `telecom` element is not labeled Must
 
 {% include img.html img="Must_Support_Patient_telecom.png" caption="Figure 8: US Core Patient.telecom" %}
 
-</div><!-- new-content -->
+
 Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI)] may require additional elements such as `Patient.suffix`.
 
 #### Must Support - Resource References

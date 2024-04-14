@@ -31,8 +31,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * For Problems and Health Concerns, use the [US Core Condition Problems and Health Concerns Profile].
-* <span class= "bg-success" markdown= "1">\*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.</span><!-- new-content -->
-  - <span class= "bg-success" markdown= "1">For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.</span><!-- new-content -->
+* \*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.
+  - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.
   - USCDI's applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM.
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.

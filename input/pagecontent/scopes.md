@@ -1,6 +1,6 @@
-<div class="bg-success" markdown="1">
+
 This page is updated content for version 7.0.0
-</div><!-- new-content -->
+
 
  SMART App Launch Implementation Guide Release 2.0.0 describes a set of foundational patterns based on OAuth 2.0 for client applications to authorize, authenticate, and integrate with FHIR-based data systems. This page documents the SMART on FHIR obligations and capabilities for US Core Servers supporting User-Facing Applications and Backend Services. 
 

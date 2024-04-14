@@ -15,7 +15,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Goal Must Have:**
 
 1. a status
-1.  <span class="bg-success" markdown="1">description of the goal</span><!-- new-content -->
+1. description of the goal
 1. a patient
 
 

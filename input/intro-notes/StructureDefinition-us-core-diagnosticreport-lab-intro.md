@@ -24,7 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each DiagnosticReport Must Support:**
 
-1. <span class="bg-success" markdown="1">a timestamp when the resource last changed*</span><!-- new-content -->
+1. a timestamp when the resource last changed*
 1. encounter associated with DiagnosticReport
 2. who issues the report
 3. a result
@@ -35,9 +35,9 @@ The following data elements must always be present ([Mandatory] definition) or m
    -  providing both a local system code and a LOINC code that it maps to
    -  providing a more specific category code to the "LAB" category code, such as "CH" (chemistry), in an additional coding element.
 * Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
-- <span class= "bg-success" markdown= "1">\* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">New laboratory reports</span><!-- new-content -->
-  - <span class= "bg-success" markdown= "1">Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).</span><!-- new-content -->
+- \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
+  - New laboratory reports
+  - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).
 
 {% include meta-updated-next-version.md %}
 

@@ -7,14 +7,14 @@ Yearly US Core updates reflect changes to [U.S. Core Data for Interoperability (
 
 {% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
 
-<div class="bg-success" markdown="1">
+
 ### FHIR Version Support
 
-US Core has been based on [FHIR Version R4] since US Core version 3.0.0. FHIR Version R4 was released on Dec 27, 2018, and was the first version with [Normative] content. HL7's [US Realm Steering Committee (USRSC)] directs US Realm activities, including this guide. In January 2024, the USRSC decided that the next version of FHIR that US Core will be based on will be the upcoming FHIR Version R6. As of the publication date, there is no timeline for this update. When we update FHIR Version R6, these breaking updates to US Core are under consideration.
+US Core has been based on [FHIR Version R4] since US Core version 3.0.0. FHIR Version R4 was released on Dec 27, 2018, and was the first version with [Normative] content. HL7's [US Realm Steering Committee (USRSC)] directs US Realm activities, including this guide. In January 2024, the USRSC decided that the next version of FHIR that US Core will be based on will be the upcoming FHIR Version R6. As of the publication date, there is no timeline for this update. When we update to FHIR Version R6, these breaking updates to US Core are under consideration.
 
 - Addition of MedicationStatement
 - Mandate supporting PractionerRole
-</div><!-- new-content -->
+
 
 ### Growth Path of US Core
 
@@ -72,7 +72,7 @@ Systems may use operations that create and update resources for any of the profi
   - Indicating the source of the update
 
 
-The Argonaut project has defined <span class="bg-success" markdown="1">[Writing Vital Signs](vitals-write.html)</span><!-- new-content --> for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types. After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
+The Argonaut project has defined [Writing Vital Signs](vitals-write.html) for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types. After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
 
 
 ------------------------------------------------------------------------

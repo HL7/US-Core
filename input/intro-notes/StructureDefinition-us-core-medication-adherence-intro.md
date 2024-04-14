@@ -2,7 +2,7 @@
 
 **Profile Specific Implementation Guidance:**
 
-<div class="bg-success" markdown="1">
+
 This Complex Extension is made up of three sub-extensions:
 
 1. A required Medication Adherence Code, which is bound to the [Medication Adherence ValueSet] -  a "starter" set of medication compliance SNOMED CT and NullValue codes. Its binding is [extensible], and other concepts from SNOMED CT or another code system, including local codes, can be used. The table below illustrates basic scenarios of how an implementer can use them:
@@ -16,6 +16,6 @@ This Complex Extension is made up of three sub-extensions:
 
 2. A required date asserting when the information was provided
 3. A Must Support information source code with an [example binding] to the *Medication Adherence ValueSet* - a "starter" set of informant role codes.
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

@@ -25,7 +25,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
     
-      1. <span class="bg-success" markdown="1">GET [base]/Observation?patient=1186747&amp;code={{code1}},{{code2}},{{code3}}</span><!-- new-content -->
+      1. GET [base]/Observation?patient=1186747&amp;code={{code1}},{{code2}},{{code3}}
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s). **SHOULD** support search by multiple codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
 
@@ -57,7 +57,7 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category and status ([how to search by reference] and [how to search by token])
 
-1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`_lastUpdated`](SearchParameter-us-core-observation-lastupdated.html)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`_lastUpdated`](SearchParameter-us-core-observation-lastupdated.html)** search parameters:
     - including support for these `_lastUpdated` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `_lastUpdated` (e.g.`_lastUpdated=[date]&_lastUpdated=[date]]&...`)
 
@@ -78,7 +78,7 @@ The following search parameter combinations **SHOULD** be supported:
 
     Example:
     
-      1. <span class="bg-success" markdown="1">GET [base]/Observation?patient=1186747&amp;code={{code1}},{{code2}},{{code3}}&amp;date=ge2020-01-01T00:00:00Z</span><!-- new-content -->
+      1. GET [base]/Observation?patient=1186747&amp;code={{code1}},{{code2}},{{code3}}&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s). **SHOULD** support search by multiple codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 

@@ -37,6 +37,6 @@ In order to access care team member's names, identifiers, locations, and contact
   * Although *both* US Core Practitioner Profile and US Core PractitionerRole are Must Support, the server system is not required to support references to both, but **SHALL** support *at least* one of them.
   * The client application **SHALL** support all three profile references.
   * Because the US Core PractitionerRole Profile supplies the provider's location and contact information and a reference to the Practitioner, server systems **SHOULD** reference it instead of the US Core Practitioner Profile. The quick start section below shows an example of how to access the practitioner name and identifier.
-  * Servers that support only US Core Practitioner Profile <span class="bg-success" markdown="1">and do not support the US Core PractitionerRole Profile</span><!-- new-content --> **SHALL** provide implementation-specific guidance on how to access a provider's location and contact information using only the Practitioner resource.
+  * Servers that support only US Core Practitioner Profile and do not support the US Core PractitionerRole Profile **SHALL** provide implementation-specific guidance on how to access a provider's location and contact information using only the Practitioner resource.
 
 {% include link-list.md %}
