@@ -1,6 +1,6 @@
 <!-- {% raw %} {% include note-to-balloters.md %} {% endraw %} --> 
 
-<!-- Where possible, new and updated pre-publishing content is highlighted with <span class="bg-success" markdown="1">green text and background</span><!-- new-content --> - **This highlighting will be removed prior to publication.** -->
+<!-- Where possible, new and updated pre-publishing content is highlighted with green{:.bg-success} text and background- **This highlighting will be removed prior to publication.** -->
 
 Key updates and detailed changes between this and prior versions are available on the US Core [Change Log] and [Changes Between Versions] pages.
 {:.stu-note}
