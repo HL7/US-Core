@@ -73,7 +73,7 @@ date: 2024-03-14
 version: '7.0.0'
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.uv.bulkdata: 2.0.0
+  # hl7.fhir.uv.bulkdata: 2.0.0
   hl7.fhir.uv.smart-app-launch: 2.0.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
@@ -85,7 +85,7 @@ dependencies:
     id: uscdcphinvads
     uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
     version: 0.12.0
-  ihe.formatcode.fhir: 1.2.0
+  # ihe.formatcode.fhir: 1.2.0
   hl7.fhir.uv.extensions: 5.1.0-cibuild #5.1.0-ballot1  # <<<< If your WG is not in the older list, you need to add an explicit dependency to the current version of the extensions pack
 pages:
   index.md:
