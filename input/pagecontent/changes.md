@@ -132,7 +132,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
   - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
   - [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
 82. **Applied:** (Correction) Update DocumentReference.content.format binding [FHIR-45302](https://jira.hl7.org/browse/FHIR-45302) [See Changes Here](StructureDefinition-us-core-documentreference.html#terminology-bindings-differential)
-83. **Applied:** (Correction) Update code systmm URL in US Core Discharge Disposition [FHIR-45303](https://jira.hl7.org/browse/FHIR-45303) [See Changes Here](https://hl7.org/fhir/us/core/2024Jan/ValueSet-us-core-discharge-disposition.html)
+83. **Applied:** (Correction) Update code system URL in US Core Discharge Disposition [FHIR-45303](https://jira.hl7.org/browse/FHIR-45303) [See Changes Here](https://hl7.org/fhir/us/core/2024Jan/ValueSet-us-core-discharge-disposition.html)
 
 The application of the following tracker is pending and will not be completed by the publication date.
 
