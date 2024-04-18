@@ -34,7 +34,7 @@
 - [type](SearchParameter-us-core-device-type.html)
 
 ##### DiagnosticReport
-- SearchParameter-us-core-diagnosticreport-lastupdated.html)
+- [_lastUpdated](SearchParameter-us-core-diagnosticreport-lastupdated.html)
 - [category](SearchParameter-us-core-diagnosticreport-category.html)
 - [code](SearchParameter-us-core-diagnosticreport-code.html)
 - [date](SearchParameter-us-core-diagnosticreport-date.html)

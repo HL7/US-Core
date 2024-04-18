@@ -127,10 +127,12 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 78. **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
 79. **Applied:** (Clarification) Align category term with community understanding [FHIR-45002](https://jira.hl7.org/browse/FHIR-45002) [See Changes Here](CodeSystem-condition-category.html)
 80. **Applied:** (Enhancement) Add Guidance on meeting the definition of 'X' [FHIR-45177](https://jira.hl7.org/browse/FHIR-45177) [See Changes Here](StructureDefinition-us-core-sex.html)
-81. **Pre-Applied:** (Clarification) Clarify 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜 requirements for Reference datatype [FHIR-45204](https://jira.hl7.org/browse/FHIR-45204) See Changes Here:
+81. **Applied:** (Clarification) Clarify 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜 requirements for Reference datatype [FHIR-45204](https://jira.hl7.org/browse/FHIR-45204) See Changes Here:
   - [US Core Procedure Profile](StructureDefinition-us-core-procedure.html#mandatory-and-must-support-data-elements)
   - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
   - [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
+82. **Applied:** (Correction) Update DocumentReference.content.format binding [FHIR-45302](https://jira.hl7.org/browse/FHIR-45302) [See Changes Here](StructureDefinition-us-core-documentreference.html#terminology-bindings-differential)
+83. **Applied:** (Correction) Update code systmm URL in US Core Discharge Disposition [FHIR-45303](https://jira.hl7.org/browse/FHIR-45303) [See Changes Here](https://hl7.org/fhir/us/core/2024Jan/ValueSet-us-core-discharge-disposition.html)
 
 The application of the following tracker is pending and will not be completed by the publication date.
 
