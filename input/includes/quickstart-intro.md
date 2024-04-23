@@ -2,25 +2,23 @@
 {% assign smart_scope = false %}
 {% for scope in site.data.scopes %}
   {% if scope.page_path == page.path %}
-    {%capture smart_scope %}
-Servers providing access to {{ scope.data_element }} data **SHALL** support these [US Core SMART Scopes]:
+    {% capture smart_scope %}
+
+      {% assign scope_string = scope | inspect %} 
+      {% assign conf_verbs = "SHALL,SHOULD,MAY" | split: "," %}
+      {% for conf in conf_verbs %}
+        {%- if scope_string contains conf %}
+Servers providing access to {{ scope.data_element }} data **{{conf}}** support these [US Core SMART Scopes]:
+          {%- if scope.resource_conformance == conf %}
   -  [resource level scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs`
-{% for i in (1..6) %}{% assign category =  'category_' | append: i %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
-{%- if scope[category] and scope[category_conformance] == "SHALL" %}
+          {% endif -%}
+          {% for i in (1..6) %}{% assign category =  'category_' | append: i %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
+            {%- if scope[category] and scope[category_conformance] == conf %}
   -  [granular scopes]\: `<patient|user|system>.{{ scope.resource_type }}.rs?category={{ scope[category] }}`
-{% endif -%}
-{%- endfor -%}
-{%- for i in (1..6) %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
-{%- if scope[category_conformance] == "SHOULD" %}
-Servers providing access to {{ scope.data_element }} data **SHOULD** support these [US Core SMART Scopes]:
-{% for i in (1..6) %}{% assign category =  'category_' | append: i %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
-{%- if scope[category] and scope[category_conformance] == "SHOULD" %}
-  -  [granular scopes]\: `<patient|user|system>.{{ scope.resource_type }}.rs?category={{ scope[category] }}`
-{% endif -%}
-{%- endfor -%}
-{% break -%}
-{%- endif -%}
-{%- endfor -%}
+            {% endif -%}
+          {% endfor -%}
+        {% endif -%}
+      {% endfor -%}
      {% endcapture %}
     {% break %}
   {% endif %}
