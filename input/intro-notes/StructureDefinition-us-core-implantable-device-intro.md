@@ -1,5 +1,5 @@
 
-�**Example Usage Scenarios:**
+**Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
 

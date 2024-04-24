@@ -140,7 +140,7 @@ For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueS
  
 <div class="stu-note" markdown="1">
 
-The "current" binding corresponds to the UC Core's interpretation of extensible bindings US Core version 6.1.0 and earlier.
+The "current" binding corresponds to the US Core's interpretation of extensible bindings US Core version 6.1.0 and earlier.
 </div><!-- stu-note -->
 
   {% include img.html img="Must_Support_Condition_code.png" caption="Figure 4: US Core Condition.code" %}

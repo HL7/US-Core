@@ -1950,7 +1950,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-care-experience-preference"
         },
-        "description": "The US Core Care Experience Preference Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to This profile provides guidance on how to record a care experience preference expressed by the patient regarding their care and treatment. Examples include, but are not limited to, religious preferences, dislikes and fears, preferred place for birth, preferred pharmacy, and thoughts and feelings to be shared. This profile does not represent an actual order, but it can guide caregivers and medical personnel about what is important for the person. This profile sets minimum expectations for the Observation resource to record, search, and fetch for a patient care experience preferences. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption",
+        "description": "The US Core Care Experience Preference Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to This profile provides guidance on how to record a care experience preference expressed by the patient regarding their care and treatment. Examples include, but are not limited to, religious preferences, dislikes and fears, preferred place for birth, preferred pharmacy, and thoughts and feelings to be shared. This profile does not represent an actual order, but it can guide caregivers and medical personnel about what is important for the person. This profile sets minimum expectations for the Observation resource to record, search, and fetch for a patient care experience preferences. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
         "exampleBoolean": false,
         "name": "US Core Care Experience Preference Profile"
       },
@@ -2150,7 +2150,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-extension-questionnaire-uri"
         },
-        "description": "The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical) for the FHIR Questionnaire is used.",
+        "description": "The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey, form, or questionnaire which is being answered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical) for the FHIR Questionnaire is used.",
         "exampleBoolean": false,
         "name": "US Core Extension Questionnaire URI"
       },

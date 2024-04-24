@@ -1579,7 +1579,7 @@ definition:
       for a patient care experience preferences. It specifies which core elements,
       extensions,  vocabularies, and value sets **SHALL** be present in the resource
       and constrains how the elements are used. Providing the floor for standards
-      development for specific use cases promotes interoperability and adoption
+      development for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Care Experience Preference Profile
   - reference:
@@ -1824,8 +1824,8 @@ definition:
   - reference:
       reference: StructureDefinition/us-core-extension-questionnaire-uri
     description: The location where a non-FHIR questionnaire/survey form can be found.
-      This extension is used when the survey,form, or questionnaire which is being
-      anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html),
+      This extension is used when the survey, form, or questionnaire which is being
+      answered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html),
       otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical)
       for the FHIR Questionnaire is used.
     exampleBoolean: false

@@ -35,9 +35,9 @@ In some FHIR servers, the identifier of the underlying clinical data is not main
 
 * Servers **SHOULD** maintain a stable common identifier for a resource across versions.
 
-### Expectation that DSTU2 Data is Preserved in R4
+### Expectation that FHIR DSTU2 Data is Preserved in FHIR R4
 
-In an upgraded R4 endpoint, any data in DSTU2 **SHOULD** be in R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
+In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
 
 * The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation
   - Exceptions
