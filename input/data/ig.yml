@@ -56,7 +56,7 @@ dependsOn:
 - id: vsac
   packageId: us.nlm.vsac
   uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-  version: 0.17.0
+  version: 0.18.0
 - packageId: hl7.fhir.uv.sdc
   version: 3.0.0
   uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
@@ -2141,11 +2141,6 @@ definition:
     exampleBoolean: false
     name: US Core Observation Sexual Orientation Profile
   - reference:
-      reference: ValueSet/us-core-observation-value-codes
-    description: '[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results'
-    exampleBoolean: false
-    name: US Core Observation Value Codes (SNOMED-CT)
-  - reference:
       reference: StructureDefinition/us-core-organization
     description: The US Core Organization Profile inherits from the FHIR [Organization](https://hl7.org/fhir/R4/organization.html)
       resource; refer to it for scope and usage definitions. This profile sets minimum
@@ -2418,12 +2413,6 @@ definition:
     exampleBoolean: false
     name: US Core Simple Observation Category
   - reference:
-      reference: ValueSet/simple-observation
-    description: This value set includes all LOINC codes and the SNOMED CT finding
-      hierarchy codes
-    exampleBoolean: false
-    name: US Core Simple Observation Codes
-  - reference:
       reference: StructureDefinition/us-core-simple-observation
     description: The US Core Simple Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html)
       resource; refer to it for scope and usage definitions. This US Core FHIR Profile
@@ -2438,12 +2427,6 @@ definition:
       interoperability and adoption.
     exampleBoolean: false
     name: US Core Simple Observation Profile
-  - reference:
-      reference: ValueSet/us-core-smoking-status-observation-codes
-    description: The US Core Smoking Status Observation Codes Value Set is a 'starter
-      set' of concepts to capture smoking status.
-    exampleBoolean: false
-    name: US Core Smoking Status Observation Codes
   - reference:
       reference: StructureDefinition/us-core-smokingstatus
     description: The US Core Smoking Status Observation Profile inherits from the

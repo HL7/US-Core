@@ -65,7 +65,7 @@
       "id": "vsac",
       "packageId": "us.nlm.vsac",
       "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-      "version": "0.17.0"
+      "version": "0.18.0"
     },
     {
       "packageId": "hl7.fhir.uv.sdc",
@@ -2348,14 +2348,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-observation-value-codes"
-        },
-        "description": "[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results",
-        "exampleBoolean": false,
-        "name": "US Core Observation Value Codes (SNOMED-CT)"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-organization"
         },
         "description": "The US Core Organization Profile inherits from the FHIR [Organization](https://hl7.org/fhir/R4/organization.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Organization resource to record, search, and fetch patient or provider organziation information. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
@@ -2572,27 +2564,11 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/simple-observation"
-        },
-        "description": "This value set includes all LOINC codes and the SNOMED CT finding hierarchy codes",
-        "exampleBoolean": false,
-        "name": "US Core Simple Observation Codes"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-simple-observation"
         },
         "description": "The US Core Simple Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This US Core FHIR Profile captures any \"simple\" observations not covered by other US Core Observation profiles. It represents any observation not classified as vital signs, laboratory,  imaging, or other specific observation types. This profile sets minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about patient health status or other general observations. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
         "exampleBoolean": false,
         "name": "US Core Simple Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-smoking-status-observation-codes"
-        },
-        "description": "The US Core Smoking Status Observation Codes Value Set is a 'starter set' of concepts to capture smoking status.",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Observation Codes"
       },
       {
         "reference": {

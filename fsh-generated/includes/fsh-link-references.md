@@ -270,7 +270,6 @@
 [USCoreObservationPregnancyStatusProfile]: StructureDefinition-us-core-observation-pregnancystatus.html
 [USCoreObservationScreeningAssessmentProfile]: StructureDefinition-us-core-observation-screening-assessment.html
 [USCoreObservationSexualOrientationProfile]: StructureDefinition-us-core-observation-sexual-orientation.html
-[USCoreObservationValueCodes]: ValueSet-us-core-observation-value-codes.html
 [USCoreOrganizationProfile]: StructureDefinition-us-core-organization.html
 [USCorePatientProfile]: StructureDefinition-us-core-patient.html
 [USCorePediatricBMIforAgeObservationProfile]: StructureDefinition-pediatric-bmi-for-age.html
@@ -298,9 +297,7 @@
 [USCoreServiceRequestProfile]: StructureDefinition-us-core-servicerequest.html
 [USCoreSexExtension]: StructureDefinition-us-core-sex.html
 [USCoreSimpleObservationCategory]: ValueSet-us-core-simple-observation-category.html
-[USCoreSimpleObservationCodes]: ValueSet-simple-observation.html
 [USCoreSimpleObservationProfile]: StructureDefinition-us-core-simple-observation.html
-[USCoreSmokingStatusObservationCodes]: ValueSet-us-core-smoking-status-observation-codes.html
 [USCoreSmokingStatusProfile]: StructureDefinition-us-core-smokingstatus.html
 [USCoreSpecimenProfile]: StructureDefinition-us-core-specimen.html
 [USCoreObservationSmokingStatusStatus]: ValueSet-us-core-observation-smoking-status-status.html
