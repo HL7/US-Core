@@ -39,7 +39,7 @@ item:
                     system: 'http://unitsofmeasure.org'
         required: false
         linkId: /89555-7
-        text: How many D per W did you engage in moderate to strenuous physical activity in the last 30D
+        text: How many days per week did you engage in moderate to strenuous physical activity in the last 30 days
 
     - 
         type: decimal
@@ -47,7 +47,7 @@ item:
             - 
                 code: 68516-4
                 system: 'http://loinc.org'
-                display: 'On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise?'
+                display: 'On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise'
         extension:
             - 
                 url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit'

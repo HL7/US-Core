@@ -25,7 +25,7 @@ item:
     text: Personal characteristics
     item:
     - linkId: /93043-8/56051-6
-      text: Do you consider yourself Hispanic/Latino?
+      text: Hispanic or Latino
       answer:
       - valueCoding:
           system: http://loinc.org
@@ -43,15 +43,14 @@ item:
           code: LA30187-1
           display: Pacific Islander
     - linkId: /93043-8/93035-4
-      text: At any point in the past 2 years, has season or migrant farm work been
-        your or your family's main source of income?
+      text: Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]
       answer:
       - valueCoding:
           system: http://loinc.org
           code: LA33-6
           display: 'Yes'
     - linkId: /93043-8/93034-7
-      text: Have you been discharged from the armed forces of the United States?
+      text: Discharged from the U.S. Armed Forces
       answer:
       - valueCoding:
           system: http://loinc.org
@@ -68,7 +67,7 @@ item:
     text: Family and home
     item:
     - linkId: /93042-0/63512-8
-      text: How many people are living or staying at this address?
+      text: How many people are living or staying at this address [#]
       answer:
       - valueInteger: 6
     - linkId: /93042-0/71802-3
@@ -80,7 +79,7 @@ item:
           display: I do not have housing (staying with others, in a hotel, in a shelter,
             living outside on the street, on a beach, in a car, or in a park)
     - linkId: /93042-0/93033-9
-      text: Are you worried about losing your housing?
+      text: Are you worried about losing your housing [PRAPARE]
       answer:
       - valueCoding:
           system: http://loinc.org
@@ -115,13 +114,11 @@ item:
           code: LA17849-3
           display: Medicaid
     - linkId: /93041-2/63586-2
-      text: What was your best estimate of the total income of all family members
-        from all sources, before taxes, in last year?
+      text: What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]
       answer:
       - valueDecimal: 25000
     - linkId: /93041-2/93031-3
-      text: In the past year, have you or any family members you live with been unable
-        to get any of the following when it was really needed?
+      text: Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]
       answer:
       - valueCoding:
           system: http://loinc.org
@@ -144,9 +141,7 @@ item:
     text: Social and emotional health
     item:
     - linkId: /93040-4/93029-7
-      text: 'How often do you see or talk to people that you care about and feel close
-        to (For example: talking to friends on the phone, visiting friends or family,
-        going to church or club meetings)?'
+      text: How often do you see or talk to people that you care about and feel close to [PRAPARE]
       answer:
       - valueCoding:
           system: http://loinc.org
@@ -164,29 +159,28 @@ item:
     text: Optional additional questions
     item:
     - linkId: /93039-6/93028-9
-      text: In the past year, have you spent more than 2 nights in a row in a jail,
-        prison, detention center, or juvenile correctional facility?
+      text: Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]
       answer:
       - valueCoding:
           system: http://loinc.org
           code: LA32-8
           display: 'No'
     - linkId: /93039-6/93027-1
-      text: Are you a refugee?
+      text: Are you a refugee
       answer:
       - valueCoding:
           system: http://loinc.org
           code: LA32-8
           display: 'No'
     - linkId: /93039-6/93026-3
-      text: Do you feel physically and emotionally safe where you currently live?
+      text: Do you feel physically and emotionally safe where you currently live [PRAPARE]
       answer:
       - valueCoding:
           system: http://loinc.org
           code: LA32-8
           display: 'No'
     - linkId: /93039-6/76501-6
-      text: Within the last year, have you been afraid of your partner or ex-partner?
+      text: Within the last year, have you been afraid of your partner or ex-partner
       answer:
       - valueCoding:
           system: http://loinc.org

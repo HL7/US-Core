@@ -8,11 +8,11 @@ extension:
 - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
   valueInteger: 3
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 7.0.0
+version: 8.0.0
 name: USCore
 title: US Core Implementation Guide
 status: active
-date: '2024-03-14'
+date: '2024-10-09'
 publisher: HL7 International / Cross-Group Projects
 contact:
 - name: HL7 International / Cross-Group Projects
@@ -66,7 +66,7 @@ dependsOn:
   uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads
   version: 0.12.0
 - packageId: hl7.fhir.uv.extensions
-  version: 5.1.0-cibuild
+  version: 5.1.0
   uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
   id: hl7_fhir_uv_extensions
 definition:
@@ -93,24 +93,6 @@ definition:
     valueCode: hl7.fhir.us.core#3.2.0
   - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
     valueCode: hl7.fhir.us.core#3.1.1
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#3.1.0
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#3.0.1
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#3.0.0
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#2.1.0
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#2.0.0
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#1.1.0
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#1.0.1
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#1.0.0
-  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-    valueCode: hl7.fhir.us.core#0.0.0
   resource:
   - reference:
       reference: Observation/10-minute-apgar-color
@@ -615,29 +597,29 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
   - reference:
       reference: Observation/HVS-item-example-88122-7
-    description: This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our)
+    description: This is a HVS Item Example 88122-7 ((I/We) worried whether (my/our)
       food would run out before (I/we) got money to buy more.) for the *US Core Observation
       Screening Assessment Profile*
-    name: Hvs Item Example 88122-7
+    name: HVS Item Example 88122-7
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/HVS-item-example-88123-5
-    description: This is a Hvs Item Example 88123-5 (The food that (I/we) bought just
+    description: This is a HVS Item Example 88123-5 (The food that (I/we) bought just
       didn't last, and (I/we) didn't have money to get more.) for the *US Core Observation
       Screening Assessment Profile*
-    name: Hvs Item Example 88123-5
+    name: HVS Item Example 88123-5
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/HVS-item-example-88124-3
-    description: This is a Hvs Item Example 88124-3 (Food insecurity risk) for the
+    description: This is a HVS Item Example 88124-3 (Food insecurity risk) for the
       *US Core Observation Screening Assessment Profile*
-    name: Hvs Item Example 88124-3
+    name: HVS Item Example 88124-3
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/HVS-panel-example-88121-9
-    description: This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for
+    description: This is a HVSPanel Example 88121-9 (Hunger Vital Sign [HVS]) for
       the *US Core Observation Screening Assessment Profile*
-    name: Hvs Panel Example 88121-9
+    name: HVSPanel Example 88121-9
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Immunization/imm-1
@@ -3459,7 +3441,7 @@ definition:
   - code: copyrightyear
     value: 2024+
   - code: releaselabel
-    value: STU7
+    value: Ballot
   - code: path-resource
     value: input/resources
   - code: path-resource

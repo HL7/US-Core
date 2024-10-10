@@ -51,8 +51,8 @@ item:
       code:
       - code: 56051-6
         system: http://loinc.org
-        display: Do you consider yourself Hispanic/Latino?
-      text: Do you consider yourself Hispanic/Latino?
+        display: Hispanic or Latino
+      text: Hispanic or Latino
       type: choice
       required: false
       answerOption:
@@ -114,10 +114,8 @@ item:
       code:
       - code: 93035-4
         system: http://loinc.org
-        display: At any point in the past 2 years, has season or migrant farm work
-          been your or your family's main source of income?
-      text: At any point in the past 2 years, has season or migrant farm work been
-        your or your family's main source of income?
+        display: Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]
+      text: Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]
       type: choice
       required: false
       answerOption:
@@ -137,8 +135,8 @@ item:
       code:
       - code: 93034-7
         system: http://loinc.org
-        display: Have you been discharged from the armed forces of the United States?
-      text: Have you been discharged from the armed forces of the United States?
+        display: Discharged from the U.S. Armed Forces
+      text: Discharged from the U.S. Armed Forces
       type: choice
       required: false
       answerOption:
@@ -188,8 +186,8 @@ item:
       code:
       - code: 63512-8
         system: http://loinc.org
-        display: How many people are living or staying at this address?
-      text: How many people are living or staying at this address?
+        display: How many people are living or staying at this address [#]
+      text: How many people are living or staying at this address [#]
       type: integer
       required: false
     - linkId: /93042-0/71802-3
@@ -222,8 +220,8 @@ item:
       code:
       - code: 93033-9
         system: http://loinc.org
-        display: Are you worried about losing your housing?
-      text: Are you worried about losing your housing?
+        display: Are you worried about losing your housing [PRAPARE]
+      text: Are you worried about losing your housing [PRAPARE]
       type: choice
       required: false
       answerOption:
@@ -352,20 +350,16 @@ item:
       code:
       - code: 63586-2
         system: http://loinc.org
-        display: What was your best estimate of the total income of all family members
-          from all sources, before taxes, in last year?
-      text: What was your best estimate of the total income of all family members
-        from all sources, before taxes, in last year?
+        display: What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]
+      text: What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]
       type: decimal
       required: false
     - linkId: /93041-2/93031-3
       code:
       - code: 93031-3
         system: http://loinc.org
-        display: In the past year, have you or any family members you live with been
-          unable to get any of the following when it was really needed?
-      text: In the past year, have you or any family members you live with been unable
-        to get any of the following when it was really needed?
+        display: Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]
+      text: Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]
       type: choice
       repeats: true
       required: false
@@ -457,12 +451,8 @@ item:
       code:
       - code: 93029-7
         system: http://loinc.org
-        display: 'How often do you see or talk to people that you care about and feel
-          close to (For example: talking to friends on the phone, visiting friends
-          or family, going to church or club meetings)?'
-      text: 'How often do you see or talk to people that you care about and feel close
-        to (For example: talking to friends on the phone, visiting friends or family,
-        going to church or club meetings)?'
+        display: How often do you see or talk to people that you care about and feel close to [PRAPARE]
+      text: How often do you see or talk to people that you care about and feel close to [PRAPARE]
       type: choice
       required: false
       answerOption:
@@ -533,10 +523,8 @@ item:
       code:
       - code: 93028-9
         system: http://loinc.org
-        display: In the past year, have you spent more than 2 nights in a row in a
-          jail, prison, detention center, or juvenile correctional facility?
-      text: In the past year, have you spent more than 2 nights in a row in a jail,
-        prison, detention center, or juvenile correctional facility?
+        display: Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]
+      text: Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]
       type: choice
       required: false
       answerOption:
@@ -556,8 +544,8 @@ item:
       code:
       - code: 93027-1
         system: http://loinc.org
-        display: Are you a refugee?
-      text: Are you a refugee?
+        display: Are you a refugee
+      text: Are you a refugee
       type: choice
       required: false
       answerOption:
@@ -577,8 +565,8 @@ item:
       code:
       - code: 93026-3
         system: http://loinc.org
-        display: Do you feel physically and emotionally safe where you currently live?
-      text: Do you feel physically and emotionally safe where you currently live?
+        display: Do you feel physically and emotionally safe where you currently live [PRAPARE]
+      text: Do you feel physically and emotionally safe where you currently live [PRAPARE]
       type: choice
       required: false
       answerOption:
@@ -602,8 +590,8 @@ item:
       code:
       - code: 76501-6
         system: http://loinc.org
-        display: Within the last year, have you been afraid of your partner or ex-partner?
-      text: Within the last year, have you been afraid of your partner or ex-partner?
+        display: Within the last year, have you been afraid of your partner or ex-partner
+      text: Within the last year, have you been afraid of your partner or ex-partner
       type: choice
       required: false
       answerOption:
