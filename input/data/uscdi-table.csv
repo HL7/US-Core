@@ -61,7 +61,8 @@
 ,Health Status Assessments,US Core Simple Observation Profile | US Core Condition Problems and Health Concerns Profile | US Core Observation Screening Assessment Profile | US Core QuestionnaireResponse Profile,SDOH Assessment,Simple | Condition | QuestionnaireResponse,Simple | Condition | QuestionnaireResponse,,Observation | Condition | QuestionnaireResponse,See Screening and Assessments Guidance,screening-and-assessments.html
 ,Health Status Assessments,US Core Smoking Status Observation Profile,Smoking Status,Observation,Observation,,Observation,,
 11,Immunizations,US Core Immunization Profile,,,,,Immunization,,
-,Immunizations,US Core Immunization Profile,,Immunization,Immunization,,Immunization,,
+,Immunizations,US Core Immunization Profile,Immunizations,Immunization,Immunization,,Immunization,,
+,Immunizations,US Core Immunization Profile,Lot Number,Immunization,Immunization,,Immunization.lotNumber,,
 12,Laboratory,US Core Laboratory Result Observation Profile| US Core DiagnosticReport Profile for Laboratory Results Reporting | US Core Specimen Profile,,,,,Observation | DiagnosticReport | Specimen,,
 ,Laboratory,US Core Laboratory Result Observation Profile| US Core DiagnosticReport Profile for Laboratory Results Reporting,Tests,Observation | DiagnosticReport,Observation | DiagnosticReport,,Observation.code | DiagnosticReport.code,,
 ,Laboratory,US Core Laboratory Result Observation Profile| US Core DiagnosticReport Profile for Laboratory Results Reporting,Values/Results,Observation | DiagnosticReport,Observation | DiagnosticReport,,Observation.value[x] | DiagnosticReport.result,,

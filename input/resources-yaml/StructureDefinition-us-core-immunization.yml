@@ -107,6 +107,7 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Immunization.reported
+
   - id: Immunization.location
     path: Immunization.location
     short: Where the vaccine was administered
@@ -114,4 +115,8 @@ differential:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+    mustSupport: true
+#  USCDI 5 addition
+  - id: Immunization.lotNumber
+    path: Immunization.lotNumber
     mustSupport: true
