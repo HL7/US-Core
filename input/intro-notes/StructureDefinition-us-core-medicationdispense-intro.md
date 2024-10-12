@@ -31,7 +31,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 5. the quantity dispensed
 6. a date for when medication was dispensed to the patient
 7. free text dosage instructions (the *SIG*)
-8. the dose and rate
+8. <span class="bg-success" markdown="1">when medication should be administered</span><!-- new-content -->
+9. <span class="bg-success" markdown="1">the route of administration</span><!-- new-content -->
+10. the dose and rate
 
 
 **Profile Specific Implementation Guidance:**

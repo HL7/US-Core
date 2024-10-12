@@ -256,6 +256,16 @@
                 "mustSupport": true
             },
             {
+                "id": "MedicationDispense.dosageInstruction.route",
+                "path": "MedicationDispense.dosageInstruction.route",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "\u261e\u261e\u261e Use  SNOMED CT and SPL(NCI Thesaurus) values in final version to meet USCDI terminology requirements",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/route-codes"
+                }
+            },
+            {
                 "id": "MedicationDispense.dosageInstruction.doseAndRate",
                 "path": "MedicationDispense.dosageInstruction.doseAndRate",
                 "mustSupport": true

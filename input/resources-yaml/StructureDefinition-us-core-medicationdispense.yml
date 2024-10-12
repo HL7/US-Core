@@ -143,6 +143,20 @@ differential:
   - id: MedicationDispense.dosageInstruction.timing
     path: MedicationDispense.dosageInstruction.timing
     mustSupport: true
+
+
+# USCDI 5 element
+
+  - id: MedicationDispense.dosageInstruction.route
+    path: MedicationDispense.dosageInstruction.route
+    mustSupport: true
+    binding:
+      strength: extensible
+      description: ☞☞☞ Use  SNOMED CT and SPL(NCI Thesaurus) values in final version to meet USCDI terminology requirements
+      valueSet: http://hl7.org/fhir/ValueSet/route-codes #create a group with SPL codes
+
+
+
   - id: MedicationDispense.dosageInstruction.doseAndRate
     path: MedicationDispense.dosageInstruction.doseAndRate
     mustSupport: true

@@ -28,14 +28,16 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. the encounters
 4. a prescriber
 5. a date for when written
-6. the prescription *Sig*
-7. the amount dispensed and number of refills
-8. the dose and rate
+6. <span class="bg-success" markdown="1">free text dosage instructions (the *SIG*)</span><!-- new-content --> 
+7. <span class="bg-success" markdown="1">when medication should be administered</span><!-- new-content -->
+8. <span class="bg-success" markdown="1">the route of administration</span><!-- new-content -->
+9. the dose and rate
+10. the amount dispensed and number of refills
 
 {% include additional-requirements-intro.md type="MedicationRequest" plural="true" %}
 
 1. the reason or indication for the prescription*
-1. reported adherence to prescribed medication instructions*
+2. reported adherence to prescribed medication instructions*
  
 \* see guidance below
 

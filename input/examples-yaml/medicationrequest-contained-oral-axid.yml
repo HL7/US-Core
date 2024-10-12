@@ -39,6 +39,15 @@ dosageInstruction:
       periodUnit: d
       boundsPeriod:
         start: '2008-04-05'
+
+ # USCDI5 data elemnent       
+  route:
+    coding:
+    - system: http://snomed.info/sct
+      version: http://snomed.info/sct/731000124108
+      code: '26643006'
+      display: Oral route
+
   doseAndRate:
   - doseQuantity:
       value: 10
