@@ -1664,6 +1664,30 @@
       },
       {
         "reference": {
+          "reference": "ServiceRequest/cbc"
+        },
+        "description": "This is an example requesting a Laboratory Order (CBC panel) for a patient using the *US Core ServiceRequest Profile Profile*.",
+        "name": "ServiceRequest CBC Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/chest-xray"
+        },
+        "description": "This is an example requesting a Imaging Order (Portable XR Chest Views) for a patient using the *US Core ServiceRequest Profile Profile*.",
+        "name": "ServiceRequest Chest XRay Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/ekg"
+        },
+        "description": "This is an example requesting a Clinical Test Order (EKG panel) for a patient using the *US Core ServiceRequest Profile Profile*.",
+        "name": "ServiceRequest EKG Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
           "reference": "ServiceRequest/foodpantry-referral"
         },
         "description": "This is a service request example for the *US Core ServiceRequest Profile Profile*.",

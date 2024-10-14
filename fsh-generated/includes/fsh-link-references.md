@@ -189,6 +189,9 @@
 [serum-sodium]: Observation-serum-sodium.html
 [specimen-example-serum]: Specimen-specimen-example-serum.html
 [serum-total-bilirubin]: Observation-serum-total-bilirubin.html
+[cbc]: ServiceRequest-cbc.html
+[chest-xray]: ServiceRequest-chest-xray.html
+[ekg]: ServiceRequest-ekg.html
 [foodpantry-referral]: ServiceRequest-foodpantry-referral.html
 [rehab]: ServiceRequest-rehab.html
 [sexual-orientation-example]: Observation-sexual-orientation-example.html

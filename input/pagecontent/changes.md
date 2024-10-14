@@ -14,6 +14,14 @@ This ballot addresses the following:
 
   - For the USCDI Route of Administration data element, we added `MedicationRequest.dosageInstruction.route` to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) and `MedicationDispense.dosageInstruction.route` to the [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html) as *Must Support* elements.
 
+  - For the USCDI Orders data class:
+    - The [US Core MedicationRequest Profile] supports the USCDI Medication Order data element.
+    - To support the USCDI Laboratory Order, Diagnostic Imaging Order, Clinical Test Order, and Procedure Order data element, we provide detailed guidance on terminology for the [US Core ServiceRequest Profile] `ServiceRequest.category` and `ServiceRequest.code` elements.
+
+  - For the USCDI Patient Demographics/Information data class:
+    - 
+
+
 #### Changes:
 
 - Implementers submitted over 50 trackers since the publication of US Core ver 7.0.0. We have addressed them and applied over 40 changes listed below:
