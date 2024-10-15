@@ -24,7 +24,7 @@
                 {
                     "system": "http://snomed.info/sct",
                     "version": "http://snomed.info/sct/731000124108",
-                    "code": "363679005",
+                    "code": "386053000",
                     "display": "Evaluation procedure (procedure)"
                 }
             ],
@@ -53,15 +53,17 @@
     "requester": {
         "reference": "Practitioner/practitioner-1"
     },
-    "reasonCode": {
-        "-coding": [
-            {
-                "system": "http://snomed.info/sct",
-                "version": "http://snomed.info/sct/731000124108",
-                "code": "698247007",
-                "display": "Cardiac arrhythmia (disorder)"
-            }
-        ],
-        "text": "Cardiac arrhythmia"
-    }
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/731000124108",
+                    "code": "698247007",
+                    "display": "Cardiac arrhythmia (disorder)"
+                }
+            ],
+            "text": "Cardiac arrhythmia"
+        }
+    ]
 }

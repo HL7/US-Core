@@ -15,11 +15,13 @@ This ballot addresses the following:
   - For the USCDI Route of Administration data element, we added `MedicationRequest.dosageInstruction.route` to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) and `MedicationDispense.dosageInstruction.route` to the [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html) as *Must Support* elements.
 
   - For the USCDI Orders data class:
-    - The [US Core MedicationRequest Profile] supports the USCDI Medication Order data element.
-    - To support the USCDI Laboratory Order, Diagnostic Imaging Order, Clinical Test Order, and Procedure Order data element, we provide detailed guidance on terminology for the [US Core ServiceRequest Profile] `ServiceRequest.category` and `ServiceRequest.code` elements.
+    - The [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) supports the USCDI Medication Order data element.
+    - To support the USCDI Laboratory Order, Diagnostic Imaging Order, Clinical Test Order, and Procedure Order data element, we provide detailed guidance on terminology for the [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html) `ServiceRequest.category` and `ServiceRequest.code` elements.
 
   - For the USCDI Patient Demographics/Information data class:
-    - 
+    - The [US Core Patient Profile](StructureDefinition-us-core-patient.html) `Patient.name.use` element supports the USCDI Name to Use data element.
+    - To support the USCDI Pronouns data element, we added the FHIR standard [Individual Pronouns Extension] to the [US Core Patient Profile](StructureDefinition-us-core-patient.html)  as an *Additional USCDI* element.
+    - To support the USCDI Interpreter Needed data element, we added the [US Core Interpreter Required Extension](StructureDefinition-us-core-interpreter-required.html) to the [US Core Patient Profile](StructureDefinition-us-core-patient.html) and [US Core Encounter Profile](StructureDefinition-us-core-encounter.html) as *Additional USCDI* elements. (Note that the version 5.1.0 FHIR standard [Patient Interpreter Required](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-interpreterRequired.html) extension does not meet the USCDI terminology requirement or the multiple context needed. Change request [FHIR-47587](https://jira.hl7.org/browse/FHIR-47587) was submitted to address these limitations.)
 
 
 #### Changes:
@@ -27,7 +29,7 @@ This ballot addresses the following:
 - Implementers submitted over 50 trackers since the publication of US Core ver 7.0.0. We have addressed them and applied over 40 changes listed below:
 
 **Tracker Status**: **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
-  
+  13:02:16
 
 ### Version = 7.0.0
 - url: <https://hl7.org/fhir/us/core/STU7/>

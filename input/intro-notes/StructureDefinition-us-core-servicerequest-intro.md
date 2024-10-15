@@ -44,8 +44,8 @@ The following data elements must always be present ([Mandatory] definition) or m
   |---|---|
   |Laboratory Order| [108252007 Laboratory procedure (procedure)]|
   |Imaging Order|[363679005 Imaging (procedure)]|
-  |Clinical Test Order|[363679005 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
-  |Procedure Order|[363679005 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]| 
+  |Clinical Test Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
+  |Procedure Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]| 
   {:.grid}
 
   </div><!-- new-content -->
@@ -54,11 +54,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 
   <div class="bg-success" markdown="1">
 
-  |USCDI Order Data Element|Additional Binding|Binding Strength|
-  |---|---|---|
-  |Laboratory Order|[LOINC Common Laboratory Orders Value Set]|[extensible]|
-  |Imaging Order|[LOINC Radiology Codes]|[preferred]|
-  |Clinical Test Order|[LOINC Clinical Test Codes]|[example]|
+  |USCDI Order Data Element|Additional Binding|Binding Strength|Comments|
+  |---|---|---|---|
+  |Laboratory Order|[LOINC Common Laboratory Orders Value Set]|[extensible]|The LOINC Common Laboratory Orders Value Set is a ‘starter set’ for mapping commonly used laboratory orders. It does not attempt to include all possible laboratory order codes. For additional information on LOINC Common Laboratory Orders Value Set, refer to [www.loinc.org/usage/orders].|
+  |Imaging Order|[LOINC Radiology Codes]|[preferred]|The LOINC Radiology Codes include all imaging codes minus concepts that are deprecated or discouraged.|
+  |Clinical Test Order|[LOINC Clinical Test Codes]|[example]|LOINC Clinical Test Codes include all non-laboratory and non-imaging clinical test codes|
   {:.grid}
 
   </div><!-- new-content -->
