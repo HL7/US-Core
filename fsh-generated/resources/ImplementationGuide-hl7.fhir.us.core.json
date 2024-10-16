@@ -16,7 +16,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-  "version": "8.0.0",
+  "version": "8.0.0-ballot",
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
@@ -3779,6 +3779,14 @@
       {
         "code": "no-narrative",
         "value": "Bundle/docref-example-2"
+      },
+      {
+        "code": "version-comparison-master",
+        "value": "7.0.0"
+      },
+      {
+        "code": "version-comparison",
+        "value": "7.0.0"
       },
       {
         "code": "version-comparison",

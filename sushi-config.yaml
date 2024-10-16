@@ -53,7 +53,7 @@ description: >-
 
 license: CC0-1.0
 date: 2024-10-09
-version: '8.0.0'
+version: '8.0.0-ballot'
 fhirVersion: 4.0.1
 dependencies:
   # hl7.fhir.uv.bulkdata: 2.0.0
@@ -140,8 +140,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
-  # version-comparison-master: 7.0.0-ballot
+  version-comparison-master: 7.0.0
   version-comparison:
+    - 7.0.0
     - 6.1.0
     - 5.0.1
     - 4.0.0

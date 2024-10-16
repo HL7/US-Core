@@ -12,7 +12,7 @@ This ballot addresses the following:
 
   - For the USCDI Immunization Lot Number data element, we added `Immunization.lotNumber` to the [US Core Immunization Profile](StructureDefinition-us-core-immunization.html) as a *Must Support* element.
 
-  - For the USCDI Route of Administration data element, we added `MedicationRequest.dosageInstruction.route` to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) and `MedicationDispense.dosageInstruction.route` to the [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html) as *Must Support* elements.
+  - For the USCDI Route of Administration data element, we added `MedicationRequest.dosageInstruction.route` to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) and `MedicationDispense.dosageInstruction.route` to the [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html) as *Must Support* elements and use an *extensible* value set of SNOMED CT and NCI Thesaurus SPL codes.
 
   - For the USCDI Orders data class:
     - The [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) supports the USCDI Medication Order data element.
