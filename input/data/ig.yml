@@ -144,6 +144,23 @@ definition:
     name: 10 Minute Apgar Score Panel Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
+      reference: Observation/ADI-example
+    description: 'This is a Observation example for the USCDI5 ADI Observation Data
+      Element to show whether and location of a patient has an advance directive using
+      a new code = "45473-6" - (Advance directive/living will completed) and and value
+      of "Yes"/"No"/"Unknown" (TODO: pick a convenient value set  LOINC answer list
+      ll50-6, Snomed, hl7 (https://terminology.hl7.org/ValueSet-yes-no-unknown-not-asked.html))'
+    name: ADI Observation Presence ADI Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
+  - reference:
+      reference: Observation/no-ADI-example
+    description: 'This is a Observation example for the USCDI5 ADI Observation Data
+      Element to show whether a patient has an advance directive using a new code
+      = "45473-6" - (Advance directive/living will completed) and and value of "Yes"/"No"/"Unknown"
+      (TODO: pick a convenient value set  LOINC answer list ll50-6, Snomed, hl7 (https://terminology.hl7.org/ValueSet-yes-no-unknown-not-asked.html))'
+    name: ADI Observation Presence No ADI Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
+  - reference:
       reference: Observation/AHC-HRSN-item-example-68517-2
     description: This AHC HRSN Item Example 68517-2 (How many times in the past 12
       months have you had 5 or more drinks in a day (males) or 4 or more drinks in
@@ -376,6 +393,24 @@ definition:
       Procedure Notes and Discharge Summaries for 2019](StructureDefinition-us-core-documentreference.html#mandatory-operation).'
     name: Docref Example 2
     exampleBoolean: true
+  - reference:
+      reference: DocumentReference/adi-intubation
+    description: This is a an example of ADI-DNI (PDF) for the *US Core ADI DocumentReference
+      Profile*
+    name: DocumentReference ADI-DNI (PDF)
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
+  - reference:
+      reference: DocumentReference/living-will
+    description: This is a an example of Living Will (PDF) for the *US Core ADI DocumentReference
+      Profile*
+    name: DocumentReference Living Will (PDF)
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
+  - reference:
+      reference: DocumentReference/polst
+    description: This is a an example of POLST (PDF) for the *US Core ADI DocumentReference
+      Profile*
+    name: DocumentReference POLST (PDF)
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
   - reference:
       reference: DiagnosticReport/bone-density-report
     description: This is a DXA Bone density quantitative measurement panel report
@@ -1480,6 +1515,28 @@ definition:
     name: Urobilinogen Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
+      reference: StructureDefinition/us-core-adi-documentreference
+    description: The US Core ADI DocumentReference Profile inherits from the FHIR
+      [DocumentReference](https://hl7.org/fhir/R4/documentreference.html) resource;
+      refer to it for scope and usage definitions. This profile and the [US Core Observation
+      ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html)
+      meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)
+      *Advance Directive Observation* Data Element requirements. It sets minimum expectations
+      for searching and fetching patient ADI documents using the DocumentReference
+      resource. Examples of advance healthcare directive documents include physician
+      order for life sustaining treatment (POLST), do not resuscitate order (DNR),
+      and medical power of attorney. In addition to the document contents, it communicates
+      the type of advance directive document, the author, the verifier, and other
+      properties. To represent whether advance directive documents exist for a patient,
+      see the US Core Observation ADI Documentation Profile. This profile sets minimum
+      expectations for searching and fetching patient ADI documents using the DocumentReference
+      resource. It specifies which core elements, extensions, vocabularies, and value
+      sets **SHALL** be present and constrains how the elements are used. Providing
+      the floor for standards development for specific use cases promotes interoperability
+      and adoption.
+    exampleBoolean: false
+    name: US Core ADI DocumentReference Profile
+  - reference:
       reference: StructureDefinition/us-core-allergyintolerance
     description: The US Core AllergyIntolerance Profile inherits from the FHIR [AllergyIntolerance](https://hl7.org/fhir/R4/allergyintolerance.html)
       resource; refer to it for scope and usage definitions. This profile sets minimum
@@ -1490,6 +1547,12 @@ definition:
       for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core AllergyIntolerance Profile
+  - reference:
+      reference: StructureDefinition/us-core-authentication-time
+    description: This extension indicates when the information in the document was
+      verified.
+    exampleBoolean: false
+    name: US Core Authentication Time Extension
   - reference:
       reference: StructureDefinition/us-core-average-blood-pressure
     description: The US Core Average Blood Pressure Profile inherits from the [Observation](https://hl7.org/fobservation.html)
@@ -1933,6 +1996,13 @@ definition:
     exampleBoolean: false
     name: US Core Implantable Device Profile
   - reference:
+      reference: StructureDefinition/us-core-interpreter-required
+    description: This extension indicates the individual's need for an interpreter
+      to communicate healthcare information in a language other than the default language
+      of the organization.
+    exampleBoolean: false
+    name: US Core Interpreter Required Extension
+  - reference:
       reference: StructureDefinition/us-core-jurisdiction
     description: An extension to communicate the US state or local jurisdiction for
       individual and entity identifiers. For example, a practitioner's state or local
@@ -2015,7 +2085,7 @@ definition:
       reference: StructureDefinition/us-core-medicationrequest
     description: The US Core MedicationRequest Profile inherits from the FHIR [MedicationRequest](https://hl7.org/fhir/R4/medicationrequest.html)
       resource; refer to it for scope and usage definitions. This profile meets the
-      requirements of the U.S. Core Data for Interoperability (USCDI)  *Medications*
+      requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)  *Medications*
       Data Class. This profile sets minimum expectations for the MedicationRequest
       resource to record, search, and fetch a patient's medication prescriptions or
       orders. It specifies which core elements, extensions, vocabularies, and value
@@ -2039,6 +2109,27 @@ definition:
       diagnostic observations and reports.
     exampleBoolean: false
     name: US Core Non Laboratory Codes
+  - reference:
+      reference: StructureDefinition/us-core-observation-adi-documentation
+    description: The US Core Observation ADI Documentation Profile inherits from the
+      FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer
+      to it for scope and usage definitions. This profile and the [US Core Observation
+      ADI DocumentationReference Profile](StructureDefinition-us-core-adi-documentreference.html)
+      meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)
+      *Advance Directive Observation* Data Element requirements. It is used to communicate
+      the presence and location of advance directive documents for a patient. Examples
+      of advance healthcare directive documents include physician order for life sustaining
+      treatment (POLST), do not resuscitate order (DNR), and medical power of attorney.
+      To communicate the type of advance directive document, the author, the verifier,
+      and other properties, see the US Core Observation ADI Documentation Profile.
+      This profile sets minimum expectations for the Observation resource to record,
+      search, and fetch findings about the presence of a patient's advance directives.
+      It specifies which core elements, extensions,  vocabularies, and value sets
+      **SHALL** be present in the resource and constrains how the elements are used.
+      Providing the floor for standards development for specific use cases promotes
+      interoperability and adoption.
+    exampleBoolean: false
+    name: US Core Observation ADI Documentation Profile
   - reference:
       reference: StructureDefinition/us-core-observation-clinical-result
     description: 'The US Core Observation Clinical Result Profile is based upon the
@@ -2155,13 +2246,13 @@ definition:
       reference: StructureDefinition/us-core-patient
     description: The US Core Patient Profile inherits from the FHIR [Patient](https://hl7.org/fhir/R4/patient.html)
       resource; refer to it for scope and usage definitions. This profile meets the
-      requirements of the U.S. Core Data for Interoperability (USCDI)  *Patient Demographics/Information*
-      Data Class. It sets minimum expectations for the Patient resource to record,
-      search, and fetch basic demographics and other administrative information about
-      an individual patient. It specifies which core elements, extensions, vocabularies,
-      and value sets **SHALL** be present and constrains how the elements are used.
-      Providing the floor for standards development for specific use cases promotes
-      interoperability and adoption.
+      requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)
+      *Patient Demographics/Information* Data Class. It sets minimum expectations
+      for the Patient resource to record, search, and fetch basic demographics and
+      other administrative information about an individual patient. It specifies which
+      core elements, extensions, vocabularies, and value sets **SHALL** be present
+      and constrains how the elements are used. Providing the floor for standards
+      development for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Patient Profile
   - reference:

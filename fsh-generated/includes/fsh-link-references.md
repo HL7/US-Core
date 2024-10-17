@@ -5,6 +5,8 @@
 [10-minute-apgar-respiratory-effort]: Observation-10-minute-apgar-respiratory-effort.html
 [10-minute-apgar-score]: Observation-10-minute-apgar-score.html
 [10-minute-apgar-score-panel]: Observation-10-minute-apgar-score-panel.html
+[ADI-example]: Observation-ADI-example.html
+[no-ADI-example]: Observation-no-ADI-example.html
 [AHC-HRSN-item-example-68517-2]: Observation-AHC-HRSN-item-example-68517-2.html
 [AUDIT-C]: Questionnaire-AUDIT-C.html
 [AUDIT-C]: QuestionnaireResponse-AUDIT-C.html
@@ -42,6 +44,9 @@
 [discharge-summary]: DocumentReference-discharge-summary.html
 [docref-example-1]: Bundle-docref-example-1.html
 [docref-example-2]: Bundle-docref-example-2.html
+[adi-intubation]: DocumentReference-adi-intubation.html
+[living-will]: DocumentReference-living-will.html
+[polst]: DocumentReference-polst.html
 [bone-density-report]: DiagnosticReport-bone-density-report.html
 [dxa-femur-l-armass-bmd]: Observation-dxa-femur-l-armass-bmd.html
 [dxa-femur-l-t-score-bmd]: Observation-dxa-femur-l-t-score-bmd.html
@@ -215,7 +220,9 @@
 [treatment-intervention-preference]: Observation-treatment-intervention-preference.html
 [udi-1]: Device-udi-1.html
 [urobilinogen]: Observation-urobilinogen.html
+[USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
 [USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html
+[USCoreAuthenticationTimeExtension]: StructureDefinition-us-core-authentication-time.html
 [USCoreAverageBloodPressureProfile]: StructureDefinition-us-core-average-blood-pressure.html
 [USCoreBirthSexExtension]: StructureDefinition-us-core-birthsex.html
 [USCoreBloodPressureProfile]: StructureDefinition-us-core-blood-pressure.html
@@ -257,6 +264,7 @@
 [USCoreHeartRateProfile]: StructureDefinition-us-core-heart-rate.html
 [USCoreImmunizationProfile]: StructureDefinition-us-core-immunization.html
 [USCoreImplantableDeviceProfile]: StructureDefinition-us-core-implantable-device.html
+[USCoreInterpreterRequiredExtension]: StructureDefinition-us-core-interpreter-required.html
 [USCoreJurisdictionExtension]: StructureDefinition-us-core-jurisdiction.html
 [USCoreLaboratoryResultObservationProfile]: StructureDefinition-us-core-observation-lab.html
 [USCoreLaboratoryTestCodes]: ValueSet-us-core-laboratory-test-codes.html
@@ -267,6 +275,7 @@
 [USCoreMedicationRequestProfile]: StructureDefinition-us-core-medicationrequest.html
 [NarrativeStatus]: ValueSet-us-core-narrative-status.html
 [USCoreNonLaboratoryCodes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
+[USCoreObservationADIDocumentationProfile]: StructureDefinition-us-core-observation-adi-documentation.html
 [USCoreObservationClinicalResultProfile]: StructureDefinition-us-core-observation-clinical-result.html
 [USCoreObservationOccupationProfile]: StructureDefinition-us-core-observation-occupation.html
 [USCoreObservationPregnancyIntentProfile]: StructureDefinition-us-core-observation-pregnancyintent.html

@@ -17,6 +17,15 @@
             }
         ]
     },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required",
+            "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "373066001"
+            }
+        }
+    ],
     "status": "finished",
     "class": {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",

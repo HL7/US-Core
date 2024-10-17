@@ -1,0 +1,46 @@
+resourceType: StructureDefinition
+id: us-core-authentication-time
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time'
+#url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
+name: USCoreAuthenticationTimeExtension
+title: US Core Authentication Time Extension
+# alias:
+#    - verification date
+status: active
+date: 2024-10-07
+description: >-
+  This extension indicates when the information in the document was verified.
+kind: complex-type
+abstract: false
+
+context:
+  - type: element
+    expression: DocumentReference
+
+type: Extension
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+derivation: constraint
+
+differential:
+  element:
+    - id: Extension
+      path: Extension
+
+
+      short: Authentication time
+      definition: >-
+        When the information in the document was verified.
+      min: 0
+      max: '*'
+    - id: Extension.extension
+      path: Extension.extension
+      max: '0'
+    - id: Extension.url
+      path: Extension.url
+      #fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
+      fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time'
+    - id: 'Extension.value[x]'
+      path: 'Extension.value[x]'
+      min: 1
+      type:
+        - code: dateTime

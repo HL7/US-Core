@@ -8,7 +8,7 @@
     "status": "active",
     "experimental": false,
     "date": "2023-10-17",
-    "description": "The US Core MedicationRequest Profile inherits from the FHIR [MedicationRequest](https://hl7.org/fhir/R4/medicationrequest.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Medications* Data Class. This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication prescriptions or orders. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+    "description": "The US Core MedicationRequest Profile inherits from the FHIR [MedicationRequest](https://hl7.org/fhir/R4/medicationrequest.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)  *Medications* Data Class. This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication prescriptions or orders. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "publisher": "HL7 US Realm Steering Committee",
     "contact": [
         {
@@ -439,8 +439,8 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
-                    "description": "SNOMED CT and NCI Thesaurus SPL route of administration codes",
-                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.22"
+                    "description": "\u261e\u261e\u261e Use  SNOMED CT and SPL(NCI Thesaurus) values in final version to meet USCDI terminology requirements",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/route-codes"
                 }
             },
             {

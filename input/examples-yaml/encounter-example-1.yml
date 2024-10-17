@@ -9,6 +9,13 @@ meta:
     valueString: Encounter 1 Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a encounter 1 example for the *US Core Encounter Profile*.
+#USCDI5
+extension:
+    - 
+        url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required'
+        valueCoding: 
+          system: http://snomed.info/sct
+          code: '373066001' #<-- Snomed CT "Yes (qualifier value)"
 status: finished
 class:
   system: http://terminology.hl7.org/CodeSystem/v3-ActCode

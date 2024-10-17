@@ -18,7 +18,7 @@
 # - US Core QuestionnaireResponse Tags ValueSet
 # - USCoreClinicalResultObservationCategory
 # - USCoreTreatmentInterventionPreferenceValueSet
-
+- USCoreClinicalNoteType
 
 
 # CodeSystems
@@ -48,7 +48,7 @@
 # - USCoreAverageBloodPressureProfile
 - USCoreMedicationRequestProfile
 # - USCoreLocationProfile
-# - USCoreEncounterProfile
+- USCoreEncounterProfile
 - USCoreImmunizationProfile
 # - USCoreDiagnosticReportProfileLaboratoryReporting
 # - USCoreDiagnosticReportProfileNoteExchange
@@ -63,6 +63,9 @@
 # - USCoreGoalProfile
 # - USCoreObservationSexualOrientationProfile
 # - USCoreSmokingStatusProfile
+- USCorePatientProfile
+- USCoreObservationADIDocumentationProfile
+- US Core ADI DocumentReference Profile
 
 
 
@@ -76,6 +79,8 @@
 # - USCoreSexExtension
 # - USCoreMedicationAdherenceExtension
 # - USCDIRequirement
+- USCoreAuthenticationTimeExtension
+- USCoreInterpreterRequiredExtension
 
 # OperationDefinition
 
@@ -199,7 +204,7 @@
 # - At Home In Vitro Test Example
 # - CBC Example
 # - Metabolic Panel Example
-# - Encounter 1 Example
+- Encounter 1 Example
 # - HL7East Example
 # - Rehab Example
 - ServiceRequest for Rehab Example
@@ -254,3 +259,9 @@
 # - Sexual Orientation Observation Example
 # - 2 Packs a Day Smoker 
 - Immunization Example 1
+- Patient Example
+- ADI Observation Presence ADI Example
+- ADI Observation Presence No ADI Example
+- DocumentReference ADI-DNI (PDF)
+- DocumentReference Living Will (PDF)
+- DocumentReference POLST (PDF)
