@@ -19,6 +19,18 @@ differential:
     path: Encounter
     mustSupport: false
 
+# ==== added lastUpdated to the mustSupport list ====
+
+  - id: Encounter.meta
+    path: Encounter.meta
+    mustSupport: true
+  - id: Encounter.meta.lastUpdated
+    path: Encounter.meta.lastUpdated
+    short: When the resource last changed
+    mustSupport: true
+
+# ====================================================
+
 # =================== USCDI5  ================
   - id: Encounter.extension:interpreterRequired
     extension:
@@ -36,17 +48,9 @@ differential:
       - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required'
     mustSupport: false
 
-# ==== added lastUpdated to the mustSupport list ====
+# ====================================================
 
-  - id: Encounter.meta
-    path: Encounter.meta
-    mustSupport: true
-  - id: Encounter.meta.lastUpdated
-    path: Encounter.meta.lastUpdated
-    short: When the resource last changed
-    mustSupport: true
 
-# ==== added lastUpdated to the mustSupport list ====
 
   - id: Encounter.identifier
     path: Encounter.identifier

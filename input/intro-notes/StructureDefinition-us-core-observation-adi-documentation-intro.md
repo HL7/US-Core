@@ -12,7 +12,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Have:**
 
 1. a status
-2. a code for presence of advance directives
+2. a fixed code for the presence of advance directives
 3. a patient
   
 **Each Observation Must Support:**
