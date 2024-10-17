@@ -308,30 +308,6 @@
                     "strength": "extensible",
                     "valueSet": "http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes"
                 }
-            },
-            {
-                "id": "DocumentReference.context",
-                "path": "DocumentReference.context",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.context.encounter",
-                "path": "DocumentReference.context.encounter",
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.context.period",
-                "path": "DocumentReference.context.period",
-                "mustSupport": true
             }
         ]
     }

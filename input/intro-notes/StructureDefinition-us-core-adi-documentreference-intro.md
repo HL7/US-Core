@@ -28,8 +28,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a verifier (in other words, an authenticator)
 3. a verification date
 4. a code identifying the specific details about the format of the document — over and above the content's MIME type
-5. the patient encounter that is being referenced
-6. clinically relevant date
+
+<!-- 5. the patient encounter that is being referenced
+1. clinically relevant date -->
 
 <!-- {% raw %} {% include additional-requirements-intro.md type="DocumentReference" %}
  {% endraw %} -->

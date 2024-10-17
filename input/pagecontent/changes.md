@@ -30,7 +30,7 @@ This ballot addresses the following:
   - For the USCDI Provenance Author and Author Role data elements, we detailed the individual US Core Profile elements representing these provenance data elements in a table on the [Basic Provenance] page.
 
   - Other USCDI changes:
-     - Added National Healthcare Safety Network (NHSN) Healthcare Facility Patient Care Location (HSLOC) and SNOMED CT location type codes to the [US Core Location Profile](StructureDefinition-us-core-location.html) `Location.type` binding.
+     - Added National Healthcare Safety Network (NHSN) [Healthcare Facility Patient Care Location (HSLOC)] location type codes to the [US Core Location Profile](StructureDefinition-us-core-location.html) `Location.type` binding.
 
 #### Changes:
 

@@ -474,3 +474,4 @@
 [US Core Interpreter Required Extension]: StructureDefinition-us-core-interpreter-required.html
 [US Core Observation ADI Documentation Profile]: StructureDefinition-us-core-observation-adi-documentation.html
 [www.loinc.org/usage/orders]: https://loinc.org/usage/orders/
+[Healthcare Facility Patient Care Location (HSLOC)]: https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html
