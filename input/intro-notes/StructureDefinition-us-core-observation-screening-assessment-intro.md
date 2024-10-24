@@ -23,19 +23,20 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a time indicating when the survey was taken
 3. the answer or a reason why the data is absent*
    - if the result value is a numeric quantity and coded quantity units are used, [UCUM] is required.
-4. who answered the questions
+4. who answered the questions <span class="bg-success" markdown="1">(in other words, a performer)*</span><!-- new-content -->
 5. related questionnaire responses or observations that this observation is made from
-6. reference to observations that make up this observation**
+6. reference to observations that make up this observation*
 
-\* \*\* see guidance below
+\* see guidance below
 
 **Profile Specific Implementation Guidance:**
-- \*\*See the [Screening and Assessments] guidance page for how this profile represents surveys, screenings, and assessments.
+- \*See the [Screening and Assessments] guidance page for how this profile represents surveys, screenings, and assessments.
   - Each response to individual questions and each answer to a multi-select or "check all that apply" question is a separate US Core Screening and Assessments Observation. The question is communicated in `Observation.code`, and the answer is in `Observation.value`.
   - Multi-question screenings and assessments use the US Core Screening and Assessments Observation to represent a "panel" or grouping. The multi-question surveys or assessments  `Observation.code` is an overarching assessment or screening code, and the `Observation.value` element **SHOULD** be empty. `Observation.hasMember` references US Core Screening and Assessments Observations that represent the responses to each question in the screening or assessment. 
 - A practitioner's clinical observation or assertion about a patient's health status, which is not a response to a screening or assessment question,**SHOULD** use the [US Core Simple Observation Profile] instead.
 {% include obs_cat_guidance.md category='survey' recommendation="The category type 'survey' is required, and a set of categories that represent the USCDI data elements and further specify the assessment must be supported. Because of [technical requirements], a value set with a [Required Binding] is needed for USCDI categories. However, other categories are permitted." -%}
 {% include DAR-exception.md %}
-- Although both `Reference(US Core Observation  Profile)` or `Reference(US Core QuestionnaireResponse Profile)` are marked as MustSupport for `Observation.derivedFrom`, the server system is not required to support both, but **SHALL** support at least one.
-
+- <span class="bg-success" markdown="1">\*Although 'Observation.performer' target profiles [US Core Practitioner] and [US Core Patient] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
+- \*<span class="bg-success" markdown="1">Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. The certifying server system is not required to support both, but **SHALL** support at least one. The client application **SHALL** support both.</span><!-- new-content -->
+  
 {% include link-list.md %}

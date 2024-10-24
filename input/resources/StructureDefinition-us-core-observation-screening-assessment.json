@@ -187,8 +187,8 @@
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
@@ -198,7 +198,7 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
+                                        "valueBoolean": true
                                     }
                                 ]
                             },
@@ -206,7 +206,7 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
+                                        "valueBoolean": true
                                     }
                                 ]
                             },

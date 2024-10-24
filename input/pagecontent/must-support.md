@@ -151,9 +151,12 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 This section documents additional Must Support requirements for the `Reference` element.
 
-In certain profiles, only specific resource references are labeled as *Must Support*.
+<div class="bg-success" markdown="1">
 
-For example, the [US Core DocumentReference Profile] author US Core Practitioner Profile is labeled *Must Support*. When claiming conformance to this profile:
+In most cases, a `Reference` element labeled as *Must Support* has multiple target profiles referenced, but only specific ones are labeled as *Must Support*.
+
+For example, the US Core DocumentReference Profile `DocumentReference.author` is a *Must Support* element, and six target profiles are displayed with only the US Core Practitioner Profile labeled *Must Support*. When claiming conformance to this profile:
+</div><!-- new-content -->
 
 * US Core Responders **SHALL** be capable of providing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
 * US Core Requestors **SHALL** be capable of processing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
@@ -162,7 +165,7 @@ Systems can support other references, but this is not a requirement of US Core.
 
 {% include img.html img="Must_Support_DocumentReference.png" caption="Figure 9: US Core DocumentReference.author" %}
 
-In specific profiles, only a single resource reference is present on an element labeled *Must Support*.
+In some profiles, only a single resource reference is present on an element labeled *Must Support*.
 
 For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to this profile:
 
@@ -170,6 +173,20 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 * US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
 {% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 10: US Core AllergyIntolerance.patient" %}
+
+<div class="bg-success" markdown="1">
+
+In rare situations, a `Reference` element labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*.
+When no referenced profile is marked as *Must Support*, *at least one* target profile **SHALL** be supported.
+
+For example, the US Core Simple Observation Profile `Observation.derivedFrom` is an *Additional USCDI Requirement* element, and there are six target profiles displayed with none labeled as *Must Support*. When claiming conformance to this profile:
+
+* US Core Responders **SHALL** be capable of supporting `Observation.derivedFrom` with a valid reference to *at least one* target profile.
+* US Core Requestors **SHALL** be capable of processing `Observation.derivedFrom` with a valid reference to *any* target profile.
+
+{% include img.html img="Must_Support_Simple_Observation.derivedFrom.png" caption="Figure 11: US Core Simple Observation Profile `Observation.derivedFrom`" %}
+
+</div><!-- new-content -->
 
 #### Must Support - Choice of Data Types
 
@@ -191,7 +208,7 @@ For the [US Core Observation Clinical Result Profile] value element, multiple el
 
 Systems can support the other elements, but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 11: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 12: US Core `Observation.value[x]`" %}
 
 
 #### Must Support - Choice of Profile Elements
@@ -199,7 +216,14 @@ Systems can support the other elements, but this is not a requirement of US Core
 There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the Must Support requirement. In such cases, the server **SHALL** support at least one element, and the client application **SHALL** support all elements. Unfortunately, there is no way to define this in a computable way, but these instances are documented in the *Profile specific implementation guidance* sections.
 
 For example:
+<div class="bg-success" markdown="1">
 
-[US Core MedicationRequest Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or another resource type. Although both are marked as Must Support, servers are not required to support a boolean and a reference but **SHALL** choose to support at least one of these elements.
+* [US Core MedicationRequest Profile] can represent that information is from a secondary source using a boolean flag in `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`. 
+   *  Although both are marked as Must Support, the server system is not required to support both, but **SHALL** support at least one of these elements.
+   *  The client application **SHALL** support both elements.
+
+{% include img.html img="Must_Support_MedicationRequest.reported.png" caption="Figure 13: US Core `MedicationRequest.reported[x]`" %}
+
+</div><!-- new-content -->
 
 {% include link-list.md %}
