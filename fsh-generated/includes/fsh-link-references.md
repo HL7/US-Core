@@ -269,6 +269,7 @@
 [USCoreLaboratoryResultObservationProfile]: StructureDefinition-us-core-observation-lab.html
 [USCoreLaboratoryTestCodes]: ValueSet-us-core-laboratory-test-codes.html
 [USCoreLocationProfile]: StructureDefinition-us-core-location.html
+[USCoreLocationType]: ValueSet-us-core-location-type.html
 [USCoreMedicationAdherenceExtension]: StructureDefinition-us-core-medication-adherence.html
 [USCoreMedicationProfile]: StructureDefinition-us-core-medication.html
 [USCoreMedicationDispenseProfile]: StructureDefinition-us-core-medicationdispense.html

@@ -44,6 +44,6 @@ The following data elements must always be present ([Mandatory] definition) or m
   - \*Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
 -   <span class="bg-success" markdown="1">\*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
 -  <span class="bg-success" markdown="1">\*Although none of the `Observation.derivedFrom` [referenced target profiles are flagged as *Must Support*](must-support.html#must-support---resource-references), The certifying server system **SHALL** support at least one of them. The client application **SHALL** support all.</span><!-- new-content -->
-   - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom' to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
+   - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
 {% include link-list.md %}

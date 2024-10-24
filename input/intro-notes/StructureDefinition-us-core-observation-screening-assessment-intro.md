@@ -36,7 +36,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 - A practitioner's clinical observation or assertion about a patient's health status, which is not a response to a screening or assessment question,**SHOULD** use the [US Core Simple Observation Profile] instead.
 {% include obs_cat_guidance.md category='survey' recommendation="The category type 'survey' is required, and a set of categories that represent the USCDI data elements and further specify the assessment must be supported. Because of [technical requirements], a value set with a [Required Binding] is needed for USCDI categories. However, other categories are permitted." -%}
 {% include DAR-exception.md %}
-- <span class="bg-success" markdown="1">\*Although 'Observation.performer' target profiles [US Core Practitioner] and [US Core Patient] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
+- <span class="bg-success" markdown="1">\*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
 - \*<span class="bg-success" markdown="1">Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. The certifying server system is not required to support both, but **SHALL** support at least one. The client application **SHALL** support both.</span><!-- new-content -->
   
 {% include link-list.md %}

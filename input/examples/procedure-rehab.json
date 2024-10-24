@@ -1,50 +1,40 @@
 {
-    "resourceType": "Procedure",
-    "id": "rehab",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Rehab Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a rehab example for the *US Core Procedure Profile*."
-            }
-        ]
-    },
-    "basedOn": [
-        {
-            "reference": "ServiceRequest/rehab"
-        }
+  "resourceType": "Procedure",
+  "id": "rehab",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|8.0.0-ballot"
+    ]
+  },
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/rehab"
+    }
+  ],
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24165007",
+        "display": "Alcoholism counseling",
+        "version": "http://snomed.info/sct/731000124108"
+      },
+      {
+        "system": "http://www.cms.gov/Medicare/Coding/ICD10",
+        "code": "HZ30ZZZ",
+        "display": "Individual Counseling for Substance Abuse Treatment, Cognitive"
+      }
     ],
-    "status": "completed",
-    "code": {
-        "coding": [
-            {
-                "system": "http://snomed.info/sct",
-                "code": "24165007",
-                "display": "Alcoholism counseling",
-                "version": "http://snomed.info/sct/731000124108"
-            },
-            {
-                "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-                "code": "HZ30ZZZ",
-                "display": "Individual Counseling for Substance Abuse Treatment, Cognitive"
-            }
-        ],
-        "text": "Alcohol rehabilitation"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "encounter": {
-        "reference": "Encounter/example-1",
-        "display": "Office Visit"
-    },
-    "performedDateTime": "2002-05-23"
+    "text": "Alcohol rehabilitation"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "encounter": {
+    "reference": "Encounter/example-1",
+    "display": "Office Visit"
+  },
+  "performedDateTime": "2002-05-23"
 }

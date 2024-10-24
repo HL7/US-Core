@@ -1,0 +1,27 @@
+resourceType: ValueSet
+id: us-core-location-type
+
+url: 'http://hl7.org/fhir/us/core/ValueSet/us-core-location-type'
+
+name: USCoreLocationType
+title: US Core Location Type
+status: active
+experimental: false
+date: 2024-10-24
+
+description: >-
+  Concepts representing locations and settings where healthcare services are provided.
+
+# copyright: >-
+#   ServiceDeliveryLocationRoleType derives from the HL7 Terminology THO. THO is copyright ©1989+
+#   Health Level Seven International and is made available under the CC0
+#   designation. For more licensing information see:
+#   https://terminology.hl7.org/license.
+#   The HSLOC code system is part of the UMLS Metathesaurus, which is licensed under the UMLS Metathesaurus License Agreement
+
+compose:
+  include:
+    - valueSet:
+      - http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
+    - valueSet:
+       - http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275
