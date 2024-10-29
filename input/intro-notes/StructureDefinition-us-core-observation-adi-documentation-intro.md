@@ -18,7 +18,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Support:**
 
 1. references to ADI documents if they exist*
-2. a category code of "advance-directive-observation"
+2. a category code of "observation-adi-documentation"
 3. when this verified observation was made available
 4. one or more performers of the observation*
 5. a "yes/no/unknown" value confirming or refuting the code

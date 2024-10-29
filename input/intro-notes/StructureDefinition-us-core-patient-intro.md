@@ -69,7 +69,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 - \*US Core aligns with the [HL7 Gender Harmony Project] gender and sex information, which includes data elements, value sets, and code systems. Refer to it and the [FHIR R5 Patient Resource Gender and Sex Notes] for additional guidance and background for representing Administrative Gender, Sex Assigned at Birth, Gender Identity, <span class="bg-success" markdown="1"> and Sex Parameter For Clinical Use (SPCU)</span><!-- new-content --> Note that:
   - The [US Core Birth Sex Extension] is no longer a USCDI Requirement.
   - The [US Core Sex Extension] <span class="bg-success" markdown="1">represents</span><!-- new-content --> the [U.S. Core Data for Interoperability (USCDI)] data element "Sex".
-  - <span class="bg-success" markdown="1">The FHIR [Patient Sex Parameter For Clinical Use] extension represents the *Sex Parameter for Clinical Use* USCDI Data Element.</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">The FHIR [Patient Sex Parameter For Clinical Use] extension is an acceptable representation of the *Sex Parameter for Clinical Use* USCDI Data Element.</span><!-- new-content -->
 
 <div class="stu-note" markdown="1">
 <div class="bg-success" markdown="1">
