@@ -1,12 +1,11 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core ADI DocumentReference profile. See the [Clinical Notes] section for additional details on using this profile for Clinical Notes:
+The following are example usage scenarios for the US Core ADI DocumentReference profile:
 
 -   Query for all ADI documents belonging to a Patient
 -   Query for a specific ADI Document type (e.g., POLST or Living Will)
--   Write a new ADI document to a Patient's Chart
-
+  
 ### Mandatory and Must Support Data Elements
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
