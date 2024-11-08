@@ -374,14 +374,7 @@
             },
             {
                 "id": "Observation.derivedFrom",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.derivedFrom",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Related Observation(s) or other resource the observation is made from",
                 "definition": "Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived.",
                 "type": [
                     {

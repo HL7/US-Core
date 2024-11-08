@@ -614,13 +614,6 @@ definition:
     name: Hemoglobin Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
-      reference: Specimen/example-serum-hemolyzed
-    description: This is a serum specimen example for the *US Core Specimen Profile*.
-      It demonstrates the use of the USCDI requirements for specimen condition and
-      body source site.
-    name: Hemolyzed Serum Specimen Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
-  - reference:
       reference: Location/hl7east
     description: This is a HL7East example for the *US Core Location Profile*.
     name: HL7East Example
@@ -690,6 +683,13 @@ definition:
       and CBC example for the *US Core DiagnosticReport Lab Profile*.
     name: Leukocytes Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Specimen/example-serum-lipemic
+    description: This is a serum specimen example for the *US Core Specimen Profile*.
+      It demonstrates the use of the USCDI requirements for specimen condition using
+      SNOMED CT codes
+    name: Lipemic Serum Specimen Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
   - reference:
       reference: Observation/cbc-mch
     description: This is a MCH example for the *US Core Observation Lab Profile*.
@@ -2538,6 +2538,13 @@ definition:
       and adoption.
     exampleBoolean: false
     name: US Core Smoking Status Observation Profile
+  - reference:
+      reference: ValueSet/us-core-specimen-condition
+    description: "This value set contains concepts the provide information regarding\
+      \ a specimen, including the container, that does not meet a laboratory\u2019\
+      s criteria for acceptability."
+    exampleBoolean: false
+    name: US Core Specimen Condition
   - reference:
       reference: StructureDefinition/us-core-specimen
     description: The US Core Specimen Profile inherits from the FHIR [Specimen](https://hl7.org/fhir/R4/specimen.html)

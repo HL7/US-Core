@@ -176,7 +176,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 
 <div class="bg-success" markdown="1">
 
-In rare situations, a `Reference` element labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*.
+In rare situations, a `Reference` element labeled as *Must Support* or *Additional USCDI Requirement* has multiple target profiles referenced, but none are labeled as *Must Support*.
 When no referenced profile is marked as *Must Support*, *at least one* target profile **SHALL** be supported.
 
 For example, the US Core Simple Observation Profile `Observation.derivedFrom` is an *Additional USCDI Requirement* element, and there are six target profiles displayed with none labeled as *Must Support*. When claiming conformance to this profile:

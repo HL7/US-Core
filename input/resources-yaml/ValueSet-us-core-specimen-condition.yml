@@ -1,0 +1,26 @@
+resourceType: ValueSet
+id: us-core-specimen-condition
+
+url: 'http://hl7.org/fhir/us/core/ValueSet/us-core-specimen-condition'
+
+name: USCoreSpecimenCondition
+title: US Core Specimen Condition
+status: active
+experimental: false
+date: 2024-11-05
+
+description: >-
+  This value set contains concepts the provide information regarding a specimen, including the container, that does not meet a laboratory’s criteria for acceptability.
+
+copyright: >-
+  This value set includes content from SNOMED CT, which is copyright © 2002+
+  International Health Terminology Standards Development Organisation (IHTSDO),
+  and distributed by agreement between IHTSDO and HL7. Implementer use of
+  SNOMED CT is not covered by this agreement
+
+compose:
+  include:
+    - valueSet:
+      - http://terminology.hl7.org/ValueSet/v2-0493
+    - valueSet:
+       - http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.24

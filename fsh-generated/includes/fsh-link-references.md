@@ -80,7 +80,6 @@
 [height]: Observation-height.html
 [cbc-hematocrit]: Observation-cbc-hematocrit.html
 [cbc-hemoglobin]: Observation-cbc-hemoglobin.html
-[example-serum-hemolyzed]: Specimen-example-serum-hemolyzed.html
 [hl7east]: Location-hl7east.html
 [hospital]: Location-hospital.html
 [HVS-item-example-88122-7]: Observation-HVS-item-example-88122-7.html
@@ -92,6 +91,7 @@
 [LanguageCodesWithLanguageAndOptionallyARegionModifier]: ValueSet-simple-language.html
 [length]: Observation-length.html
 [cbc-leukocytes]: Observation-cbc-leukocytes.html
+[example-serum-lipemic]: Specimen-example-serum-lipemic.html
 [cbc-mch]: Observation-cbc-mch.html
 [cbc-mchc]: Observation-cbc-mchc.html
 [cbc-mcv]: Observation-cbc-mcv.html
@@ -312,6 +312,7 @@
 [USCoreSimpleObservationCategory]: ValueSet-us-core-simple-observation-category.html
 [USCoreSimpleObservationProfile]: StructureDefinition-us-core-simple-observation.html
 [USCoreSmokingStatusProfile]: StructureDefinition-us-core-smokingstatus.html
+[USCoreSpecimenCondition]: ValueSet-us-core-specimen-condition.html
 [USCoreSpecimenProfile]: StructureDefinition-us-core-specimen.html
 [USCoreObservationSmokingStatusStatus]: ValueSet-us-core-observation-smoking-status-status.html
 [USCoreSurveyCodes]: ValueSet-us-core-survey-codes.html

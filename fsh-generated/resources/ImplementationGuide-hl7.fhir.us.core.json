@@ -792,14 +792,6 @@
       },
       {
         "reference": {
-          "reference": "Specimen/example-serum-hemolyzed"
-        },
-        "description": "This is a serum specimen example for the *US Core Specimen Profile*. It demonstrates the use of the USCDI requirements for specimen condition and body source site.",
-        "name": "Hemolyzed Serum Specimen Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|8.0.0-ballot"
-      },
-      {
-        "reference": {
           "reference": "Location/hl7east"
         },
         "description": "This is a HL7East example for the *US Core Location Profile*.",
@@ -885,6 +877,14 @@
         "description": "This is a Leukocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
         "name": "Leukocytes Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|8.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/example-serum-lipemic"
+        },
+        "description": "This is a serum specimen example for the *US Core Specimen Profile*. It demonstrates the use of the USCDI requirements for specimen condition using SNOMED CT codes",
+        "name": "Lipemic Serum Specimen Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|8.0.0-ballot"
       },
       {
         "reference": {
@@ -2645,6 +2645,14 @@
         "description": "The US Core Smoking Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Smoking Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
         "exampleBoolean": false,
         "name": "US Core Smoking Status Observation Profile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-specimen-condition"
+        },
+        "description": "This value set contains concepts the provide information regarding a specimen, including the container, that does not meet a laboratory’s criteria for acceptability.",
+        "exampleBoolean": false,
+        "name": "US Core Specimen Condition"
       },
       {
         "reference": {
