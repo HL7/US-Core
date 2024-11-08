@@ -27,7 +27,14 @@ This ballot addresses the following:
     - To support the Sex Parameter for Clinical Use data element, we added the 5.1.0 FHIR standard [Patient Sex Parameter for Clinical Use Extension](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-sexParameterForClinicalUse.html) to the [US Core Patient Profile](StructureDefinition-us-core-patient.html) as an *Additional USCDI* element, and document its use on other US Core Profiles for specific clinical contexts.
      - To support the Advance Directive Observation data element, we added the [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html), [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html), and [US Core Authentication Time Extension](StructureDefinition-us-core-authentication-time.html).
   
-  - For the USCDI Provenance Author and Author Role data elements, we detailed the individual US Core Profile elements representing these provenance data elements in a table on the [Basic Provenance] page.
+  - For the USCDI Provenance Author and Author Role data elements, because systems typically do not use the Provenance Resource to represent this information at an individual level (in other words, activities by the patient or provider), We updated the [Basic Provenance] page to document the various FHIR resource elements that track the "small p provenance" information at the individual level. Additionally we added these *Must Support* elements to the following profiles:
+  
+    - `Observation.performer` to [US Core Vitals Signs](StructureDefinition-us-core-vital-signs.html)
+    - `Observation.performer` to [US Core Average Blood Pressure Profile](StructureDefinition-us-core-average-blood-pressure.html)
+  
+    and these *Additional USCDI* elements to the following profiles:
+
+    - `Procedure.performer.actor` to [US Core Procedure](StructureDefinition-us-core-procedure.html)
 
   - Other USCDI changes:
      -  We updated the [US Core Location Profile](StructureDefinition-us-core-location.html) `Location.type` binding to [US Core Location Type](ValueSet-us-core-location-type.html) to support:

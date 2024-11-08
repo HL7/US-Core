@@ -123,6 +123,49 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Procedure.performed[x]
+
+# =========== New for USCDI 5 Provenance Author  ==================
+  
+  - id: Procedure.performer
+    path: Procedure.performer
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: The people who performed the procedure"
+
+  - id: Procedure.performer.actor
+    path: Procedure.performer.actor
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: The reference to the practitioner"
+    type:
+      - code: Reference
+        targetProfile:
+          - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-Practitioner'
+          - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-PractitionerRole'
+          - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-Organization'
+          - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-Patient'
+          - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-RelatedPerson'
+          - 'http://hl7.org/fhir/StructureDefinition/Device'
+        _targetProfile:
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
+
+# ====================================================================
+
   - id: Procedure.reasonCode
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

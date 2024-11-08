@@ -1,7 +1,6 @@
 resourceType: Observation
+id: satO2-fiO2
 meta:
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Observation SatO2 FiO2 Example
@@ -9,7 +8,8 @@ meta:
     valueMarkdown: This is a observation satO2 fiO2 example for the *US Core Pulse
       Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min
       of O2 suppplemental oxygen.
-id: satO2-fiO2
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
 identifier:
 - system: http://goodcare.org/observation/id
   value: o1223435-10
@@ -33,9 +33,12 @@ code:
     display: MDC_PULS_OXIM_SAT_O2
 subject:
   reference: Patient/example
-effectiveDateTime: '2014-12-05T09:30:10+01:00'
+effectiveDateTime: 2014-12-05T09:30:10+01:00
+performer:
+- reference: Practitioner/practitioner1
+  display: Dr Ronald Bone
 valueQuantity:
-  value: 95
+  value: 95.0
   unit: '%'
   system: http://unitsofmeasure.org
   code: '%'
@@ -49,12 +52,12 @@ device:
   display: Acme Pulse Oximeter 2000
 referenceRange:
 - low:
-    value: 90
+    value: 90.0
     unit: '%'
     system: http://unitsofmeasure.org
     code: '%'
   high:
-    value: 99
+    value: 99.0
     unit: '%'
     system: http://unitsofmeasure.org
     code: '%'
@@ -66,9 +69,7 @@ component:
       display: Inhaled oxygen flow rate
     text: Inhaled oxygen flow rate
   valueQuantity:
-    value: 6
+    value: 6.0
     unit: liters/min
     system: http://unitsofmeasure.org
     code: L/min
-
-

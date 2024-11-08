@@ -1,14 +1,14 @@
 resourceType: Observation
 id: head-circumference
 meta:
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Head Circumference Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a head circumference example for the *US Core Head Circumference
       Profile*.
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference
 status: final
 category:
 - coding:
@@ -24,7 +24,10 @@ code:
   text: Head Circumference
 subject:
   reference: Patient/infant-example
-effectiveDateTime: '2020-11-18T16:19:31-08:00'
+effectiveDateTime: 2020-11-18T16:19:31-08:00
+performer:
+- reference: Practitioner/practitioner1
+  display: Dr Ronald Bone
 valueQuantity:
   value: 51.2
   unit: cm

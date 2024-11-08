@@ -25,9 +25,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Support:**
 
 1.  clinically relevant time-period for the average of blood pressure readings
-2. a result value for the average systolic blood pressure
-3. a result value for the average diastolic blood pressure
-4.  a reason if the value is absent*
+2.  <span class="bg-success" markdown="1">a performer</span><!-- new-content -->
+3. a result value for the average systolic blood pressure
+4. a result value for the average diastolic blood pressure
+5.  a reason if the value is absent*
   
 *see guidance below
 

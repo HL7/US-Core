@@ -13,10 +13,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Observation Must Support:**
 
-1. a result value
+1. <span class="bg-success" markdown="1">a performer</span><!-- new-content -->
+2. a result value
     - if the result value is a numeric quantity, a standard [UCUM] unit
-1. a reason if the value is absent*
-1. component results
+3. a reason if the value is absent*
+4. component results
 
 *see guidance below
 

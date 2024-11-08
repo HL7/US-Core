@@ -1,14 +1,14 @@
 resourceType: Observation
+id: ofc-percentile
 meta:
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: OFC Percentile Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a OFC percentile example for the *Head Occipital Frontal
       Circumference Percentile Profile*.
-id: ofc-percentile
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
 status: final
 category:
 - coding:
@@ -23,11 +23,14 @@ code:
     display: Head Occipital-frontal circumference Percentile
   text: Head Occipital-frontal circumference Percentile
 subject:
-  display: Infant Example
   reference: Patient/infant-example
-effectiveDateTime: '2020-07-01'
+  display: Infant Example
+effectiveDateTime: 2020-07-01
+performer:
+- reference: Practitioner/practitioner1
+  display: Dr Ronald Bone
 valueQuantity:
-  value: 82
+  value: 82.0
   unit: '%'
   system: http://unitsofmeasure.org
   code: '%'

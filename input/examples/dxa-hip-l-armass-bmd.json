@@ -1,46 +1,56 @@
 {
-  "resourceType": "Observation",
-  "id": "dxa-hip-l-armass-bmd",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|8.0.0-ballot"
-    ]
-  },
-  "status": "final",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "Observation",
+    "id": "dxa-hip-l-armass-bmd",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "DXA Hip-L ArMass BMD Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a DXA Hip-L ArMass BMD Example for the *Imaging Result Observation Profile*."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+        ]
+    },
+    "status": "final",
+    "category": [
         {
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "code": "imaging",
-          "display": "Imaging"
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "imaging",
+                    "display": "Imaging"
+                }
+            ],
+            "text": "Imaging"
         }
-      ],
-      "text": "Imaging"
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "46278-8",
-        "display": "DXA Hip-L ArMass BMD"
-      }
     ],
-    "text": "DXA Hip-L ArMass BMD"
-  },
-  "subject": {
-    "reference": "Patient/example",
-    "display": "Amy Shaw"
-  },
-  "encounter": {
-    "display": "Bone Scan"
-  },
-  "effectiveDateTime": "2021-11-10T19:14:41.088720-08:00",
-  "valueQuantity": {
-    "value": 0.734,
-    "unit": "g/cm2",
-    "system": "http://unitsofmeasure.org",
-    "code": "g/cm2"
-  }
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "46278-8",
+                "display": "DXA Hip-L ArMass BMD"
+            }
+        ],
+        "text": "DXA Hip-L ArMass BMD"
+    },
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy Shaw"
+    },
+    "encounter": {
+        "display": "Bone Scan"
+    },
+    "effectiveDateTime": "2021-11-10T19:14:41.088720-08:00",
+    "valueQuantity": {
+        "value": 0.734,
+        "unit": "g/cm2",
+        "system": "http://unitsofmeasure.org",
+        "code": "g/cm2"
+    }
 }

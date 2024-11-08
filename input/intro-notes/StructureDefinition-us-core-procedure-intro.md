@@ -21,11 +21,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Procedure Must Support:**
 
+
 1. the encounter associated with the procedure
 
 {% include additional-requirements-intro.md type="Procedure" %}
 
-1. a reason or indication for referral or consultation*
+1. <span class="bg-success" markdown="1">who was involved in the procedure</span><!-- new-content -->
+2. a reason or indication for referral or consultation*
 
 *see guidance below
 
