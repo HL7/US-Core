@@ -346,3 +346,4 @@
 [writing and updating]: future-of-US-core.html#future-candidate-requirements-under-consideration
 [www.loinc.org/usage/orders]: https://loinc.org/usage/orders/
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
+[NUCC to SNOMED CT Mappings]: https://build.fhir.org/ig/HL7/davinci-ehrx/ConceptMap-NUCC-CareTeamMemberFunction.html
