@@ -40,7 +40,7 @@
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Certifying systems]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
-[Clinical Information Reconciliation and Incorporation (CIRI)]: https://www.healthit.gov/test-method/clinical-information-reconciliation-and-incorporation
+[Clinical Information Reconciliation and Incorporation (CIRI)]: https://www.ecfr.gov/current/title-45/part-170#p-170.315(b)(2) "45 CFR 170.315(b)(2)"
 [Clinical Laboratory Improvement Amendments (CLIA)]: http://www.cdc.gov/clia/
 [Clinician Access for EHR Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#clinician-access-for-standalone
 [Code on Dental Procedures and Nomenclature (CDT Code)]: http://www.ada.org/en/publications/cdt/

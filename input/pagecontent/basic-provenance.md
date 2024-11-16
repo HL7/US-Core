@@ -29,7 +29,23 @@ The HL7 Basic Provenance Informative implementation guide outlines four use case
 
 #### Clinical Information Reconciliation and Incorporation
 
-[Clinical Information Reconciliation and Incorporation (CIRI)] is when a user reviews and updates or accepts information into their system. The data could come from a Health Information Exchange (HIE), a 3rd-party FHIR server, or a patient providing information. Figure 1 represents information from Good Health and Sunshine Health Organization. Dr. Reconciled reviews the data in Figure 1, updates the reaction to hives, and stores it in the Future Health Organization system. When a mobile app requests the information, it receives Dr. Reconciled as the Author and Future Health as the organization. This type of authorship change is only relevant for data suitable for reconciliation, such as medications, allergies, and problems. If Dr. Accepted had saved other clinical content into his EHR that is not reconciled but stored, such as clinical notes, that content must retain its original author.
+[<span class="bg-success" markdown="1">[Clinical Information Reconciliation and
+Incorporation (CIRI)] allows clinicians to reconcile and incorporate patient
+health information sent in from external sources to maintain a more accurate
+and up-to-date patient records. Consolidated Clinical Document Architecture
+(C-CDA) documents are often used to share clinical information with clinicians
+from external sources like hospitals, Health Information Exchanges (HIEs), or
+other clinicians, and allows the clinician to import and reconcile health care
+information into their own patient record.</span><!-- new-content --> Figure 1
+represents information from Good Health and Sunshine Health Organization. Dr.
+Reconciled reviews the data in Figure 1, updates the reaction to hives, and
+stores it in the Future Health Organization system. When a mobile app requests
+the information, it receives Dr. Reconciled as the Author and Future Health as
+the organization. This type of authorship change is only relevant for data
+suitable for reconciliation, such as medications, allergies, and problems. If
+Dr. Accepted had saved other clinical content into his EHR that is not
+reconciled but stored, such as clinical notes, that content must retain its
+original author.
 
 The Figure below represents information from two different organizations to a clinician for reconciliation:
 

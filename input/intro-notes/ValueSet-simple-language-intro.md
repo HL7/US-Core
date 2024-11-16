@@ -1,9 +1,32 @@
 
 <div markdown="1" class="stu-note">
 
-The HL7 Terminology define the ICD9CM code system's FHIR URL, http://terminology.hl7.org/CodeSystem/icd9cm, but the codes are are not represented in the CodeSystem and therefore will not display here. Downloadable files of diagnosis and procedure codes and their full and abbreviated titles are available at
+The publication tooling cannot expand the language value set because they are based on a grammar.  To aid in the reader's understanding, sample codes are shown below:
 
-https://www.cms.gov/medicare/coding-billing/icd-10-codes/icd-9-cm-diagnosis-procedure-codes-abbreviated-and-full-code-titles
+
+**Examples of 2-character codes for common languages**
+
+|ISO 639-1 Code|English name of Language|
+|---|---|
+|en|English|
+|es|Spanish|
+|zh |Chinese|
+|fr|French|
+|tl|Tagalog|
+|vi|Vietnamese|
+{:.grid}
+
+**Examples of 3-character code for languages where a 2-character code does not exist**
+
+|ISO 639-2 Code|English name of Language|
+|---|---|
+|yue|Cantonese|
+|chn|Chinook jargon|
+|cho|Choctaw|
+|chp|Chipewyan|
+|chr|Cherokee|
+{:.grid}
+
+For a more complete list of both 2 and 3-letter examples, see [https://www.loc.gov/standards/iso639-2/php/code_list.php](https://www.loc.gov/standards/iso639-2/php/code_list.php)
 
 </div>
-
