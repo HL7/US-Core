@@ -1,12 +1,6 @@
-<div class="note-to-balloters" markdown="1">
-
-#### The January 2025 Ballot
-
 {% include img-small.html img="todo.png" %}
 
-This ballot addresses the following:
-
-- We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v5] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2024:
+- We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v5](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v5) Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2024:
 
   - We have added the USCDI Clinical Notes Operative Note and Emergency Department Note data elements to US Core's ["Common Clinical Notes" list](clinical-notes.html) and to the [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html) value set.
 
@@ -27,7 +21,7 @@ This ballot addresses the following:
     - To support the Sex Parameter for Clinical Use data element, we added the 5.1.0 FHIR standard [Patient Sex Parameter for Clinical Use Extension](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-sexParameterForClinicalUse.html) to the [US Core Patient Profile](StructureDefinition-us-core-patient.html) as an *Additional USCDI* element, and document its use on other US Core Profiles for specific clinical contexts.
      - To support the Advance Directive Observation data element, we added the [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html), [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html), and [US Core Authentication Time Extension](StructureDefinition-us-core-authentication-time.html).
   
-  - For the USCDI Provenance Author and Author Role data elements, because systems typically do not use the Provenance Resource to represent this information at an individual level (in other words, activities by the patient or provider), We updated the [Basic Provenance] page to document the various FHIR resource elements that track the "small p provenance" information at the individual level. Additionally we added these *Must Support* elements to the following profiles:
+  - For the USCDI Provenance Author and Author Role data elements, because systems typically do not use the Provenance Resource to represent this information at an individual level (in other words, activities by the patient or provider), We updated the [Basic Provenance] page to document the various FHIR resource elements that track the "small p provenance" information at the individual level. Based on current usage, we added these *Must Support* elements to the following profiles:
   
     - `Observation.performer` to [US Core Vitals Signs](StructureDefinition-us-core-vital-signs.html)
     - `Observation.performer` to [US Core Average Blood Pressure Profile](StructureDefinition-us-core-average-blood-pressure.html)
@@ -38,7 +32,5 @@ This ballot addresses the following:
 
   - Other USCDI changes:
      -  We updated the [US Core Location Profile](StructureDefinition-us-core-location.html) `Location.type` binding to [US Core Location Type](ValueSet-us-core-location-type.html) to support:
-        - the National Healthcare Safety Network (NHSN) [Healthcare Facility Patient Care Location (HSLOC)] codes as an applicable standard to the USCDI Encounter Location data element,
-        - the Centers for Medicare & Medicaid Services (CMS) maintained [Place of Service Code Set](Place of Service Code Set(POS)](https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets) codes (see FHIR-46258)
-
-</div><!-- note-to-balloters -->
+        - the National Healthcare Safety Network (NHSN) [Healthcare Facility Patient Care Location (HSLOC)](https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html) codes as an applicable standard to the USCDI Encounter Location data element,
+        - the Centers for Medicare & Medicaid Services (CMS) maintained [Place of Service Code Set(POS)](https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets) codes (see FHIR-46258)

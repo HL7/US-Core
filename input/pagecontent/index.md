@@ -1,4 +1,10 @@
-{% include note-to-balloters.md %}
+<div class="note-to-balloters" markdown="1">
+
+**The January 2025 ballot addresses the following**
+
+{% include whats-new-v8-ballot.md %}
+
+</div><!-- note-to-balloters -->
 
 Where possible, new and updated pre-publishing content is highlighted with green text and background- **This highlighting will be removed prior to publication.**
 {:.new-content}

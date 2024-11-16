@@ -23,13 +23,18 @@ The terms *US Core Responder* Actor and *US Core Requestor Actor* are used throu
 
 Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, [FHIR Data Types], [FHIR Search], and [FHIR Resource] formats before implementing US Core requirements.
 
-All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. This may be useful to testers and analysts to review the *Must Support* and *Mandatory* elements across profiles in a single table.
+<div class="bg-success" markdown="1">
+#### US Core Must Support Summaries
 
-- [CSV](all-profiles.csv)
-- [Excel](all-profiles.xlsx)
+The following summary tables  may be useful to testers and analysts to review the *Must Support* and *Mandatory* elements across profiles.
 
-This [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
+- All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. 
+  - [CSV](all-profiles.csv)
+  - [Excel](all-profiles.xlsx)
+- The [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles. 
+- the [Must Support - Resource References](#must-support---resource-references) section below lists all the *Must Support* references to other US Core Profiles and FHIR resources for each US Core Profile.
 
+</div><!-- new-content -->
 
 ### Additional USCDI Requirements 
 
@@ -153,19 +158,9 @@ This section documents additional Must Support requirements for the `Reference` 
 
 <div class="bg-success" markdown="1">
 
-In most cases, a `Reference` element labeled as *Must Support* has multiple target profiles referenced, but only specific ones are labeled as *Must Support*.
+##### Must Support Targets for US Core Profiles
 
-For example, the US Core DocumentReference Profile `DocumentReference.author` is a *Must Support* element, and six target profiles are displayed with only the US Core Practitioner Profile labeled *Must Support*. When claiming conformance to this profile:
-</div><!-- new-content -->
-
-* US Core Responders **SHALL** be capable of providing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
-* US Core Requestors **SHALL** be capable of processing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
-
-Systems can support other references, but this is not a requirement of US Core.
-
-{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 9: US Core DocumentReference.author" %}
-
-In some profiles, only a single resource reference is present on an element labeled *Must Support*.
+When a `Reference` element labeled as *Must Support* has a single target profile referenced, the target profile is a *Must Support*.
 
 For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to this profile:
 
@@ -174,17 +169,49 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 
 {% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 10: US Core AllergyIntolerance.patient" %}
 
-<div class="bg-success" markdown="1">
+When a `Reference` element labeled as *Must Support* has multiple target profiles referenced, typically specific targets are labeled as *Must Support*.
 
-In rare situations, a `Reference` element labeled as *Must Support* or *Additional USCDI Requirement* has multiple target profiles referenced, but none are labeled as *Must Support*.
-When no referenced profile is marked as *Must Support*, *at least one* target profile **SHALL** be supported.
+For example, the US Core DocumentReference Profile `DocumentReference.author` is a *Must Support* element, and six target profiles are displayed with only the US Core Practitioner Profile labeled *Must Support*. When claiming conformance to this profile:
 
-For example, the US Core Simple Observation Profile `Observation.derivedFrom` is an *Additional USCDI Requirement* element, and there are six target profiles displayed with none labeled as *Must Support*. When claiming conformance to this profile:
+* US Core Responders **SHALL** be capable of providing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
+* US Core Requestors **SHALL** be capable of processing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
 
-* US Core Responders **SHALL** be capable of supporting `Observation.derivedFrom` with a valid reference to *at least one* target profile.
-* US Core Requestors **SHALL** be capable of processing `Observation.derivedFrom` with a valid reference to *any* target profile.
+Systems can support other references, but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Simple_Observation.derivedFrom.png" caption="Figure 11: US Core Simple Observation Profile `Observation.derivedFrom`" %}
+{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 9: US Core DocumentReference.author" %}
+
+The tables below list the *Must Support* target US Core Profiles and FHIR Resources for each US Core Profile.
+
+*Must Support* Targets for *Must Support* US Core Elements
+
+{% include ms-target-table-generator.md file="ms_refs" %}
+
+Additional *Must Support* Targets for certifying systems supporting *Additional USCDI* US Core Elements as *Must Support* (see [Additional USCDI Requirements](#additional-uscdi-requirements) above).
+
+{% include ms-target-table-generator.md file="addl_uscdi_refs" %}
+
+##### Choice of At Least One Targets for US Core Profiles
+
+When a `Reference` element labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*, *at least one* target profile **SHALL** be supported.
+
+For example, the US Core Vital Signs Profile  `Observation.performer` is a *Must Support* element, and there are six target profiles displayed with none labeled as *Must Support*. When claiming conformance to this profile:
+
+* US Core Responders **SHALL** be capable of supporting `Observation.performer` with a valid reference to *at least one* target profile.
+* US Core Requestors **SHALL** be capable of processing `Observation.performer` with a valid reference to *any* target profile.
+
+{% include img.html img="Must_Support_vital_signs.performer.png" caption="Figure 11: US Core Vital Signs Profile `Observation.performer`" %}
+
+The tables below list the *at least one* candidate target US Core Profiles and FHIR Resources for each US Core Profile.  Note that these targets may overlap with the *Must Support* Targets listed above.
+
+Choice of Targets for *Must Support* US Core Elements
+
+{% include ms-target-table-generator.md file="ms_choice_refs" %}
+
+Choice of Targets for *Additional USCDI* US Core Elements
+
+{% include ms-target-table-generator.md file="addl_uscdi_choice_refs" %}
+
+{% include link-list.md %}
 
 </div><!-- new-content -->
 

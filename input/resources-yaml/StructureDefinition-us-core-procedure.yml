@@ -39,6 +39,13 @@ differential:
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+      _targetProfile:
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
     mustSupport: false
   - id: Procedure.status
     path: Procedure.status
@@ -128,11 +135,17 @@ differential:
   
   - id: Procedure.performer
     path: Procedure.performer
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
       \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: The people who performed the procedure"
 
   - id: Procedure.performer.actor
     path: Procedure.performer.actor
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
       \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: The reference to the practitioner"
     type:
