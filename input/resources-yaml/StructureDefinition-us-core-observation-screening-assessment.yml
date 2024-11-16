@@ -4,7 +4,7 @@ url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screeni
 name: USCoreObservationScreeningAssessmentProfile
 title: US Core Observation Screening Assessment Profile
 status: active
-date: 2023-10-17
+date: 2024-11-16
 description: The US Core Observation Screening Assessment Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Health Status Assessments* Data Class. It sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. This profile specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. Before reviewing this profile, implementers are encouraged to read the Screening and Assessments guidance page, which documents the process of recording responses and capturing assertions/determinations resulting from surveys and questionnaires.
 fhirVersion: 4.0.1
 kind: resource
@@ -57,10 +57,17 @@ differential:
     requirements: Used for filtering the type of screening or assessment observation.
     mustSupport: true
     binding:
+#=============== minimum binding extension here =================
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet
+        valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category
+#================================================================
       strength: required
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category
+#=============== new valueset here that excludes "survey " =================
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-maximum-category
+#================================================================
   - id: Observation.code
     path: Observation.code
     mustSupport: true

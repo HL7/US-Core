@@ -121,22 +121,23 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 ### Terminology
 
+<div class="bg-success" markdown="1">
+
 #### Category Codes
 
-API consumers can query by category (for example, `sdoh`) when accessing patient information. The USCDI Health Assessments Data Elements category codes are listed below. They **SHOULD** be used when generating resources that conform to these profiles:
+API consumers can query by category when accessing patient information. Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. US Core defined these USCDI Health Assessments Data Elements category codes:
 
-- US Core Simple Observation Profile
-- US Core Observation Screening Assessment Profile
-- US Core Condition Problems and Health Concerns Profile
-- US Core ServiceRequest Profile 
+<!-- {% raw %} {% include assessment-category-table-generator.html %} {% endraw %} -->
 
+For the US Core Simple Observation Profile and US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes listed above.
 
+For the US Core Condition Problems and Health Concerns Profile, Servers **SHALL** support the code ,"sdoh", and **SHOULD** support the other category codes listed above.
 
-##### USCDI Health Assessments Data Element Category
+For the US Core ServiceRequest Profile, Servers **SHOULD** support all the above category codes.
 
-{% include assessment-category-table-generator.html %}
+The category element is optional in US Core Procedure and US Core Goal, but implementers can categorize them using one of the above category codes or infer the context by inspecting the referenced ServiceRequest if available. Similarly, they can review the Questionnaire resource's metadata to determine the context of the US Core QuestionnaireResponse. 
 
-Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. The category element is optional in US Core Procedure and US Core Goal, but implementers can categorize them using a value from the [US Core Category] code system or infer the context by inspecting the referenced ServiceRequest if available. Similarly, they can review the Questionnaire's metadata to determine the US Core QuestionnaireResponse's context. Although not defined in US Core Procedure, implementers can categorize procedures using US Core Category codes or infer the context by inspecting the referenced ServiceRequest. Similarly, they can review the Questionnaire's metadata to determine the US Core QuestionnaireResponse's context.
+</div><!-- new-content -->
 
  <span class= "bg-warning" markdown= "1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more beneficial to use queries based on a specific code or set of codes or to perform additional client-side filtering of query results.</span><!-- bg-warning -->
 

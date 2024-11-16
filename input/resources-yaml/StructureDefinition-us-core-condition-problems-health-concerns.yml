@@ -75,6 +75,7 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Condition.category
+
   - id: Condition.category:us-core
     path: Condition.category
     sliceName: us-core
@@ -86,6 +87,8 @@ differential:
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
+
+# ================= new minimum valueset binding in v8 =====================
   - id: Condition.category:screening-assessment
     path: Condition.category
     sliceName: screening-assessment
@@ -95,10 +98,22 @@ differential:
     requirements: Used for filtering condition
     mustSupport: true
     binding:
+
+#=============== minimum binding extension here =================
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet
+        valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
+
+#================================================================
+
       strength: required
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
+#=============== new valueset here that same as simple =================
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
+#===============================================================
+
+# ===========================================================
   - id: Condition.code
     path: Condition.code
     min: 1

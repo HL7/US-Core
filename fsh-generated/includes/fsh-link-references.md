@@ -305,6 +305,7 @@
 [USCoreRespiratoryRateProfile]: StructureDefinition-us-core-respiratory-rate.html
 [USCoreScreeningAssessmentConditionCategory]: ValueSet-us-core-screening-assessment-condition-category.html
 [USCoreScreeningAssessmentObservationCategory]: ValueSet-us-core-screening-assessment-observation-category.html
+[USCoreScreeningAssessmentObservationMaximumCategory]: ValueSet-us-core-screening-assessment-observation-maximum-category.html
 [UsCoreServerCapabilityStatement]: CapabilityStatement-us-core-server.html
 [USCoreServiceRequestCategoryCodes]: ValueSet-us-core-servicerequest-category.html
 [USCoreServiceRequestProfile]: StructureDefinition-us-core-servicerequest.html

@@ -14,7 +14,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Have:**
 
 1. a status
-1. a category code
+1. a category code*
 2. a code
 3. a patient
 
@@ -26,6 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Observation" %}
 
+1. <span class="bg-success" markdown="1">a screening and assessments category code*</span><!-- new-content -->
 1. references to an associated survey, assessment, or screening tool*
 
 \*see guidance below
@@ -39,6 +40,18 @@ The following data elements must always be present ([Mandatory] definition) or m
   -  a "qualifier" confirming or refuting a statement about findings in code. For example:
       **code**: Transport too expensive (SNOMED CT: 160695008)  
       **value**: true
+
+<div class="bg-success" markdown="1">
+
+- \*At a minimum, Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
+
+    {% include obs_cat_guidance.md category="sdoh, functional-status, or social history"%}
+</div><!-- new-content -->
+
+{% include DAR-exception.md %}
+- <span class="bg-success" markdown="1">
+- 
+- \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
 {% include obs_cat_guidance.md category= "sdoh, functional-status, or social history" %}
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
   - \*Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.

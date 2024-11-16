@@ -1,3 +1,4 @@
+{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -19,13 +20,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Condition Must Support:**
 
-1. a timestamp when the resource last changed*
-1. a clinical status of the condition (e.g., active or resolved)
-1. a verification status
-2. additional health status/assessment categories
-3. a date of diagnosis*
-4. abatement date (in other words, date of resolution or remission)
-5. a date when recorded*
+1. additional health status/assessment categories*
+2. a timestamp when the resource last changed*
+3. a clinical status of the condition (e.g., active or resolved)
+4. a verification status
+5. a date of diagnosis*
+6. abatement date (in other words, date of resolution or remission)
+7. a date when recorded*
 
 *see guidance below
 
@@ -37,7 +38,12 @@ The following data elements must always be present ([Mandatory] definition) or m
   - USCDI's applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
-* If `Condition.category` contains a Problem List item category (`problem-list-item`), `Condition.clinicalStatus` **SHOULD** be present.
+<div class="bg-success" markdown="1">
+
+* \*The category of "problem-list-item" or "health-concern" is required, and, at a minimum, Servers **SHALL** support, a category of "sdoh", **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
+  * If the category is "problem-list-item", `Condition.clinicalStatus` **SHOULD** be present.
+</div><!-- new-content -->
+
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
     * Although all three are marked as Must Support, the server is not required to support all.
   * A server **SHALL** support `Condition.recordedDate`.
