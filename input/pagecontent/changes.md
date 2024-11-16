@@ -22,7 +22,7 @@ The January 2025 ballot addresses the following:
     - [FHIR RESTful Capabilities](CapabilityStatement-us-core-server.html#behavior)
 2. **Applied:** (Correction) Update Condition.code ICD9 value set link and add STU Note [FHIR-45136](https://jira.hl7.org/browse/FHIR-45136) [See Changes Here](ValueSet-us-core-condition-code.html)
 3. **Applied:** (Clarification) Clarify definition of Clinical Information Reconciliation and Incorporation (CIRI) [FHIR-45267](https://jira.hl7.org/browse/FHIR-45267) [See Changes Here](basic-provenance.html#clinical-information-reconciliation-and-incorporation)
-4. **Resolved - change required:** (Enhancement) Remove dated footnote from Provenance page. [FHIR-45283](https://jira.hl7.org/browse/FHIR-45283) [See Changes Here](#.html)
+4. **Applied:** (Enhancement) Remove dated footnote from Provenance page. [FHIR-45283](https://jira.hl7.org/browse/FHIR-45283)
 5. **Resolved - change required:** (Enhancement) add link to Da Vinci SNOMED NUCC mapping to practionerrole page as additional guidance [FHIR-45286](https://jira.hl7.org/browse/FHIR-45286) [See Changes Here](#.html)
 6. **Resolved - change required:** (Clarification) Clarify Observation Screening Assessment category must support [FHIR-45319](https://jira.hl7.org/browse/FHIR-45319) [See Changes Here](#.html)
 7. **Triaged:** (Clarification) Clarify must-support requirements for requestors, especially for dateTime [FHIR-45448](https://jira.hl7.org/browse/FHIR-45448) [See Changes Here](#.html)
@@ -81,8 +81,8 @@ html#additional-uscdi-requirements)
     - [Lipemic Serum Specimen Example](Specimen-example-serum-lipemic.html)
 31. **Triaged:** (Clarification) Update last_updated SHOULDS to SHALLS [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542) [See Changes Here](#.html)
 32. **Resolved - change required:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](#.html)
-32. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
-32. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
+33. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
+34. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
 
 The application of the following tracker is pending and will not be completed by the ballot date.
 

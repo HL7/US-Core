@@ -1,5 +1,5 @@
 
-​This section provides implementers with important definitions to create and share the Provenance Resource[^1].
+​This section provides implementers with important definitions to create and share the Provenance Resource.
 
 ### Basic Provenance
 
@@ -116,10 +116,5 @@ This [US Core Provenance Profile] resource communicates who, how, and when eleme
 {% include examplebutton_default.html example="Provenance-example-targeted-provenance.json" b_title = "Click Here to See an Element Level Provenance Example" %}
 
 <br />
-
----
-Footnotes
-
-[^1]: This Basic Provenance guidance and [US Core Provenance Profile] are provisional and may change in future releases. Although it is based on feedback from the HL7 and Argonaut communities, there was only preliminary testing of this approach before publication.
 
 {% include link-list.md %}

@@ -34,3 +34,4 @@
      -  We updated the [US Core Location Profile](StructureDefinition-us-core-location.html) `Location.type` binding to [US Core Location Type](ValueSet-us-core-location-type.html) to support:
         - the National Healthcare Safety Network (NHSN) [Healthcare Facility Patient Care Location (HSLOC)](https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html) codes as an applicable standard to the USCDI Encounter Location data element,
         - the Centers for Medicare & Medicaid Services (CMS) maintained [Place of Service Code Set(POS)](https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets) codes (see FHIR-46258)
+- We updated and clarify conformance rules for [Must Support for Resource References](must-support.html#must-support---resource-references),and included lists of Must Support target profiles for each US Core Profile.
