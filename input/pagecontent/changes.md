@@ -32,8 +32,10 @@ The January 2025 ballot addresses the following:
     - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
     - [US Core Screening Assessment Condition Category](ValueSet-us-core-screening-assessment-condition-category.html)
 1. **Applied:** (Clarification) Clarify Must Support requirements for requestors [FHIR-45448](https://jira.hl7.org/browse/FHIR-45448) [See Changes Here](must-support.html#must-support-elements)
-2.  **Resolved - change required:** (Correction) Move ""time-period"" from Must Support to Must Have section in introduction. [FHIR-45726](https://jira.hl7.org/browse/FHIR-45726) [See Changes Here](#.html)
-3.  **Resolved - change required:** (Clarification) Align the Sig description in the medication profile introductions. [FHIR-45951](https://jira.hl7.org/browse/FHIR-45951) [See Changes Here](#.html)
+2.  **Applied:** (Correction) Move ""time-period"" from Must Support to Must Have section in introduction. [FHIR-45726](https://jira.hl7.org/browse/FHIR-45726) [See Changes Here](StructureDefinition-us-core-average-blood-pressure.html)
+3.  **Applied:** (Clarification) Align the Sig description in the medication profile introductions. [FHIR-45951](https://jira.hl7.org/browse/FHIR-45951) See Changes Here:
+    - [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html)
+    - [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html)
 4.  **Resolved - change required:** (Clarification) Derive composite search parameters for derived normal parameters [FHIR-46036](https://jira.hl7.org/browse/FHIR-46036) [See Changes Here](#.html)
 5.  **Resolved - change required:** (Correction) Procedure.code should be Procedure.performed [FHIR-46037](https://jira.hl7.org/browse/FHIR-46037) [See Changes Here](#.html)
 6.  **Resolved - change required:** (Correction) Incorrect Examples [FHIR-46099](https://jira.hl7.org/browse/FHIR-46099) [See Changes Here](#.html)
