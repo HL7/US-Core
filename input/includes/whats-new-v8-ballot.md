@@ -36,9 +36,11 @@
         - the Centers for Medicare & Medicaid Services (CMS) maintained [Place of Service Code Set(POS)](https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets) codes (see FHIR-46258)
 - We updated and clarified the conformance rules for [Must Support for Resource References](must-support.html#must-support---resource-references), and included lists of Must Support target profiles for each US Core Profile.
 - We clarified the conformance expectation for [Screening and Assessment category codes](screening-and-assessments.html#terminology) when using US Core Profiles used to represent those activities.  For details see the changes associated with [FHIR-45319](#fhir-45319) below.
-- We continue our efforts to align terminology between US Core and [HL7 C-CDA] amd link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] or [HL7 Terminology (THO)] where applicable.  The Following Valuesets has been moved:
+- We continue our efforts to align terminology between US Core and [HL7 C-CDA] amd link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)]) or [HL7 Terminology (THO)] where applicable.  The Following Valuesets has been moved:
   
-   |Pre 7.0.0-Ballot US Core ValueSet|7.0.0-Ballot VSAC ValueSet|
-   |---|---|
-   [US Core Discharge Disposition Value Set](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-sexual-orientation.html)|[V3 Discharge Disposition](http://terminology.hl7.org/ValueSet/v3-DischargeDisposition)
+   |Pre 8.0.0-Ballot US Core ValueSet|8.0.0-Ballot ValueSet|THO/VSAC|
+   |---|---|---|
+   [US Core Discharge Disposition Value Set](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-sexual-orientation.html)|[V3 Discharge Disposition](http://terminology.hl7.org/ValueSet/v3-DischargeDisposition)|THO|
+   [US Core Pregnancy Status Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status)|[Pregnancy Status Observation](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.12/expansion)|VSAC|
+   [US Core Pregnancy Intent Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-intent)|[Pregnancy Intention](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1166.22/expansion)|VSAC|
    {:.grid}

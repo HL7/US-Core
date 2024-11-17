@@ -56,7 +56,7 @@ dependsOn:
 - id: vsac
   packageId: us.nlm.vsac
   uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-  version: 0.19.0
+  version: 0.20.0
 - packageId: hl7.fhir.uv.sdc
   version: 3.0.0
   uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
@@ -2317,19 +2317,6 @@ definition:
       the [ONC Provider Directory Workshop](https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents).
     exampleBoolean: false
     name: US Core PractitionerRole Profile
-  - reference:
-      reference: ValueSet/us-core-pregnancy-intent
-    description: This value set includes SNOMED CT codes and the HL7 V3 code for the
-      concept "unknown".
-    exampleBoolean: false
-    name: US Core Pregnancy Intent Codes
-  - reference:
-      reference: ValueSet/us-core-pregnancy-status
-    description: This value set includes SNOMED CT codes and the HL7 V3 code for the
-      concept "unknown". These codes have historically been used to communicate the
-      pregnancy status of a patient.
-    exampleBoolean: false
-    name: US Core Pregnancy Status Codes
   - reference:
       reference: ValueSet/us-core-problem-or-health-concern
     description: Code set for category codes for *US Core Condition Problems and Health

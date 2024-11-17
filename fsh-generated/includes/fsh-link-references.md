@@ -289,8 +289,6 @@
 [USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
 [USCorePractitionerProfile]: StructureDefinition-us-core-practitioner.html
 [USCorePractitionerRoleProfile]: StructureDefinition-us-core-practitionerrole.html
-[USCorePregnancyIntentCodes]: ValueSet-us-core-pregnancy-intent.html
-[USCorePregnancyStatusCodes]: ValueSet-us-core-pregnancy-status.html
 [USCoreProblemOrHealthConcern]: ValueSet-us-core-problem-or-health-concern.html
 [USCoreProcedureCodes]: ValueSet-us-core-procedure-code.html
 [USCoreProcedureProfile]: StructureDefinition-us-core-procedure.html

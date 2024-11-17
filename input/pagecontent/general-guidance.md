@@ -317,8 +317,6 @@ Many servers are unable to accurately populate the `Meta.lastUpdated` element.
 Work is in progress to enable [FHIR Topic-Based Subscription] for notifications on relevant events as an alternative to search polling.
 </div><!-- stu-note -->
 
-
-
 ### Compartment Based Search
 
 US Core servers are not required to support patient [compartment] based searches.
@@ -330,6 +328,16 @@ US Core servers are not required to resolve absolute URLs external to their envi
 ### Limiting The Number Of Search Results
 
 Servers can choose to return the results in a series of pages to manage the number of search results returned. The search result set contains the URLs used to request additional pages from the search set. For a simple RESTful search, the page links are included in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
+
+### Client Best Practices for Search:
+
+To reduce API volume and ensure reliable use when implementing FHIR RESTful searches:
+
+1. When the Server supports it, Clients **SHOULD** use the _include search parameter to retrieve referenced content instead of searching for a resource and then performing a separate search for other references (for example, Patient, Encounter, and Location) in the result set.
+
+2. If the Server does not support the `_include`  search parameter, clients **SHOULD** consolidate duplicate searches before searching for referenced resources in the result set
+
+3. The [HTTP Cache-Control](https://httpwg.org/specs/rfc9111.html) response header stores a response associated with a request and reuses the stored response for subsequent requests. If Cache-Control is present in the Server response headers, the clients **SHOULD NOT** search the same data within the time stated in `Cache-Control` headers.
 
 ------------------------------------------------------------------------
 <!--

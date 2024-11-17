@@ -347,3 +347,4 @@
 [www.loinc.org/usage/orders]: https://loinc.org/usage/orders/
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [NUCC to SNOMED CT Mappings]: https://build.fhir.org/ig/HL7/davinci-ehrx/ConceptMap-NUCC-CareTeamMemberFunction.html
+[HTTP Cache-Control]: https://httpwg.org/specs/rfc9111.html 
