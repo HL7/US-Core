@@ -247,7 +247,6 @@
 [USCoreDiagnosticReportProfileLaboratoryReporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [USCoreDiagnosticReportProfileNoteExchange]: StructureDefinition-us-core-diagnosticreport-note.html
 [USCoreDirectEmailExtension]: StructureDefinition-us-core-direct.html
-[USCoreDischargeDisposition]: ValueSet-us-core-discharge-disposition.html
 [USCoreDocumentReferenceCategory]: ValueSet-us-core-documentreference-category.html
 [USCoreDocumentReferenceProfile]: StructureDefinition-us-core-documentreference.html
 [USCoreDocumentReferenceType]: ValueSet-us-core-documentreference-type.html

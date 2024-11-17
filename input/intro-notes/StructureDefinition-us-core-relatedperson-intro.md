@@ -15,7 +15,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each RelatedPerson Must Have:**
 
-1. a status
+1. <span class="bg-success" markdown="1">an active flag</span><!-- new-content -->
 2. a patient
 
 **Each RelatedPerson Must Support:**

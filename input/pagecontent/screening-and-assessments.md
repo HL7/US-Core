@@ -62,23 +62,17 @@ Every server that supports the USDCI Data Class "Health Status/Assessments":
 
 
 #### Structured Screening and Assessments
+<div class="bg-success" markdown="1">
 
 Screening and Assessments can be structured survey instruments consisting of questions with various responses, including true/false, coded, textual, and multiple choice. Examples include PRAPARE, [Apgar score], and [PHQ-9]. US Core defines two ways to represent the questions and responses to these screening and assessment instruments:
 
 - Observation: [US Core Observation Screening Assessment Profile]
 - Questionnaire/QuestionnaireResponse: [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]
 
-Systems *SHOULD* support all three profiles for USDCI Data Class Health Status/Assessments. The table below summarizes the differences in conformance requirements for these profiles between version 5.0.1 and 6.0.0 of US Core.
+Servers that support the USCDI Health Status/Assessments Data Class **SHALL** support the US Core Observation Screening Assessment Profile and **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile.
 
-US Core Profile|5.0.1|6.0.0
----|---|---
-The US Core Observation Screening Assessment Profile|SHALL(US Core Observation SDOH Assessment Profile)|SHALL
-SDC Base Questionnaire|undefined|SHOULD
-US Core QuestionnaireResponse Profile|MAY|SHOULD
-{:.grid}
-
+</div><!-- new-content -->
 The sections below provide additional guidance on when Observations and Questionnaire/QuestionnaireResponse can be used to represent the structured screenings and assessments.
-
 
 ##### US Core Observation Screening Assessment Profile
 

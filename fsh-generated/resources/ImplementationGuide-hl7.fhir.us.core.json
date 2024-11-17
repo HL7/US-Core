@@ -2128,14 +2128,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-discharge-disposition"
-        },
-        "description": "[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17.",
-        "exampleBoolean": false,
-        "name": "US Core Discharge Disposition"
-      },
-      {
-        "reference": {
           "reference": "ValueSet/us-core-documentreference-category"
         },
         "description": "The US Core DocumentReferences Category Value Set is a 'starter set' of categories supported for fetching and storing clinical notes.",
@@ -3686,9 +3678,14 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                  "valueCode": "trial-use",
-                  "observation-summary.md": null,
-                  "title": "Observation Summary Table"
+                  "valueCode": "trial-use"
+                }
+              ],
+              "page": [
+                {
+                  "nameUrl": "observation-summary.html",
+                  "title": "Observation Summary Table",
+                  "generation": "markdown"
                 }
               ]
             },
