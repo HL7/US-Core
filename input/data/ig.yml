@@ -3844,23 +3844,36 @@ definition:
     - nameUrl: conformance.html
       title: Conformance
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
       page:
       - nameUrl: general-requirements.html
         title: General Requirements
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
       - nameUrl: must-support.html
         title: Must Support
         generation: markdown
-        page:
-        - nameUrl: observation-summary.html
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
+          observation-summary.md: null
           title: Observation Summary Table
-          generation: markdown
       - nameUrl: scopes.html
         title: SMART on FHIR Obligations and Capabilities
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
     - nameUrl: guidance.html
       title: Guidance
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
       page:
       - nameUrl: uscdi.html
         title: USCDI
@@ -3868,28 +3881,52 @@ definition:
       - nameUrl: general-guidance.html
         title: General Guidance
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
       - nameUrl: clinical-notes.html
         title: Clinical Notes
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
       - nameUrl: medication-list.html
         title: Medication List
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
       - nameUrl: basic-provenance.html
         title: Basic Provenance
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
       - nameUrl: screening-and-assessments.html
         title: Screening and Assessments
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
       - nameUrl: changes-between-versions.html
         title: Changes Between Versions
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
       - nameUrl: future-of-US-core.html
         title: Future of US Core
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
         page:
         - nameUrl: vitals-write.html
           title: Writing Vital Signs
           generation: markdown
+          extension:
+          - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+            valueCode: trial-use
     - nameUrl: profiles-and-extensions.html
       title: Profiles and Extensions
       generation: markdown
@@ -3899,12 +3936,21 @@ definition:
     - nameUrl: search-parameters-and-operations.html
       title: Search Parameters and Operations
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     - nameUrl: terminology.html
       title: Terminology
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     - nameUrl: security.html
       title: Security
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     - nameUrl: examples.html
       title: Examples
       generation: markdown

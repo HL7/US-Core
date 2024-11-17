@@ -3661,28 +3661,47 @@
           "nameUrl": "conformance.html",
           "title": "Conformance",
           "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "trial-use"
+            }
+          ],
           "page": [
             {
               "nameUrl": "general-requirements.html",
               "title": "General Requirements",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             },
             {
               "nameUrl": "must-support.html",
               "title": "Must Support",
               "generation": "markdown",
-              "page": [
+              "extension": [
                 {
-                  "nameUrl": "observation-summary.html",
-                  "title": "Observation Summary Table",
-                  "generation": "markdown"
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use",
+                  "observation-summary.md": null,
+                  "title": "Observation Summary Table"
                 }
               ]
             },
             {
               "nameUrl": "scopes.html",
               "title": "SMART on FHIR Obligations and Capabilities",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             }
           ]
         },
@@ -3690,6 +3709,12 @@
           "nameUrl": "guidance.html",
           "title": "Guidance",
           "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "trial-use"
+            }
+          ],
           "page": [
             {
               "nameUrl": "uscdi.html",
@@ -3699,42 +3724,90 @@
             {
               "nameUrl": "general-guidance.html",
               "title": "General Guidance",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             },
             {
               "nameUrl": "clinical-notes.html",
               "title": "Clinical Notes",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             },
             {
               "nameUrl": "medication-list.html",
               "title": "Medication List",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             },
             {
               "nameUrl": "basic-provenance.html",
               "title": "Basic Provenance",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             },
             {
               "nameUrl": "screening-and-assessments.html",
               "title": "Screening and Assessments",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             },
             {
               "nameUrl": "changes-between-versions.html",
               "title": "Changes Between Versions",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             },
             {
               "nameUrl": "future-of-US-core.html",
               "title": "Future of US Core",
               "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ],
               "page": [
                 {
                   "nameUrl": "vitals-write.html",
                   "title": "Writing Vital Signs",
-                  "generation": "markdown"
+                  "generation": "markdown",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                      "valueCode": "trial-use"
+                    }
+                  ]
                 }
               ]
             }
@@ -3753,17 +3826,35 @@
         {
           "nameUrl": "search-parameters-and-operations.html",
           "title": "Search Parameters and Operations",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "trial-use"
+            }
+          ]
         },
         {
           "nameUrl": "terminology.html",
           "title": "Terminology",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "trial-use"
+            }
+          ]
         },
         {
           "nameUrl": "security.html",
           "title": "Security",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "trial-use"
+            }
+          ]
         },
         {
           "nameUrl": "examples.html",

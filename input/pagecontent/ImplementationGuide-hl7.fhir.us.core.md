@@ -36,14 +36,18 @@ This IG Contains the following dependencies on other IGs.
 
 The following [IG Parameters](https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters) are set for this Implementation Guide:
 
-{% for p in site.data.ig.definition.parameter- %}
+{% for p in site.data.ig.definition.parameter -%}
 - code: {{p.code}}<br/>value: {{p.value }}
 {% endfor %}
 
-<!-- {% raw %} ### IG Page Links
+<!-- {% raw %}
+
+ ### IG Page Links
 
 Relative links to all the pages
 
 ~~~
 {% include page-link-list.md %}
-~~~ {% endraw %} -->
+~~~
+
+{% endraw %} -->

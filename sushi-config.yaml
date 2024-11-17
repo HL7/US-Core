@@ -72,38 +72,110 @@ dependencies:
   hl7.fhir.uv.extensions: 5.1.0 #5.1.0-cibuild #5.1.0-ballot1  # <<<< If your WG is not in the older list, you need to add an explicit dependency to the current version of the extensions pack
 pages:
   index.md:
+    # extension:
+    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #   valueCode: trial-use
     title: Home
   conformance.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
     general-requirements.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     must-support.md:
-      observation-summary.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+        observation-summary.md:
         title: Observation Summary Table
     scopes.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
       title: SMART on FHIR Obligations and Capabilities
   guidance.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
     uscdi.md:
+      # extension:
+      # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      #   valueCode: trial-use
       title: USCDI
     general-guidance.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     clinical-notes.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     medication-list.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     basic-provenance.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     screening-and-assessments.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
       title:  Screening and Assessments
     changes-between-versions.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
     future-of-US-core.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
       title: Future of US Core
       vitals-write.md:
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
         title: Writing Vital Signs
   profiles-and-extensions.md:
+    # extension:
+    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #   valueCode: trial-use
   capability-statements.md:
+    # extension:
+    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #   valueCode: trial-use
   search-parameters-and-operations.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
   terminology.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
   security.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: trial-use
   examples.md:
+    # extension:
+    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #   valueCode: trial-use
   downloads.md:
+    # extension:
+    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #   valueCode: trial-use
   changes.md:
+    # extension:
+    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #   valueCode: trial-use
     title: Change Log
   ImplementationGuide-hl7.fhir.us.core.md:
+    # extension:
+    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #   valueCode: trial-use
     title: US Core ImplementationGuide Resource
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

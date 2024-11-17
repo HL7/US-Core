@@ -49,13 +49,13 @@ The January 2025 ballot addresses the following:
     - [Hvs Item Example 88121-9](Observation-HVS-item-example-88121-9.html)
 7.  **Applied:** (Clarification) Remove the Must Support on DiagnosticReport (Report and Notes) `media.link` [FHIR-46240](https://jira.hl7.org/browse/FHIR-46240) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html)
 8.  **Applied:** (Clarification) Clarify the level of granular scopes server shall support [FHIR-46277](https://jira.hl7.org/browse/FHIR-46277) [See Changes Here](scopes.html#additional-us-core-requirements)
-9.  **Applied:** (Enhancement) reference specific version of USCDI for each version of USCore [FHIR-46466](https://jira.hl7.org/browse/FHIR-46466)  See Changes Here:
+9.  **Applied:** (Enhancement) Reference specific version of USCDI for each version of USCore [FHIR-46466](https://jira.hl7.org/browse/FHIR-46466)  See Changes Here:
     - [USCDI](uscdi.html)
     - [Publication (Version) History](https://hl7.org/fhir/us/core/history.html)
     - [Change Log](changes.html)
     - [Future of US Core](future-of-US-core.html)
-10. **Resolved - change required:** (Correction) change page status [FHIR-46514](https://jira.hl7.org/browse/FHIR-46514) [See Changes Here](#.html)
-11. **Resolved - change required:** (Clarification) clarify conformance requirements for structured assessments [FHIR-47139](https://jira.hl7.org/browse/FHIR-47139) [See Changes Here](#.html)
+10. **Applied:** (Correction) Change page status from "Informative" to "Trial-use" where appropriate[FHIR-46514](https://jira.hl7.org/browse/FHIR-46514) (See the tracker comments for a list of changes)
+11. **Applied:** (Clarification) Clarify conformance requirements for structured assessments [FHIR-47139](https://jira.hl7.org/browse/FHIR-47139) [See Changes Here](screening-and-assessments.html#structured-screening-and-assessments)
 12. **Resolved - change required:** (Enhancement) Point to new THO Discharge Disposition (NUBC) instead of US Core based set [FHIR-47416](https://jira.hl7.org/browse/FHIR-47416) [See Changes Here](#.html)
 13. **Resolved - change required:** (Enhancement) Tighten constraint on name.use to support better patient matching  [FHIR-48416](https://jira.hl7.org/browse/FHIR-48416) [See Changes Here](#.html)
 14. **Resolved - change required:** (Clarification) RelatedPerson ""active"" is required [FHIR-48439](https://jira.hl7.org/browse/FHIR-48439) [See Changes Here](#.html)
