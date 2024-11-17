@@ -35,7 +35,10 @@ subject:
   reference: Patient/example
 valueCodeableConcept:
   coding:
-  - code: LA28397-0
+  - extension:
+      - url: 'http://hl7.org/fhir/StructureDefinition/itemWeight'
+        valueDecimal: 1
+    code: LA28397-0
     display: Often true
     system: http://loinc.org
   text: Often true

@@ -33,7 +33,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-- \*The `Procedure.code` is mandatory if `Procedure.status` is 'completed' or 'in-progress'.
+- <span class="bg-success" markdown="1">\*The `Procedure.performed`</span> is mandatory if `Procedure.status` is 'completed' or 'in-progress'.</span><!-- new-content -->
 - \*The `Procedure.code` has an *additional binding* of "[current]" and a base "preferred" binding.
    - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.
    - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.

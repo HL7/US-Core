@@ -64,6 +64,12 @@
     "valueCodeableConcept": {
         "coding": [
             {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/itemWeight",
+                        "valueDecimal": 1
+                    }
+                ],
                 "code": "LA28397-0",
                 "display": "Often true",
                 "system": "http://loinc.org"
