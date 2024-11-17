@@ -2468,8 +2468,7 @@ definition:
     description: This value set is a value set of category codes used in the US Core
       Observation Screening Assessment that any conformant system **SHOULD** support
       to help identify the type of USCDI Health Status/Assessment data class being
-      reported. Additional codes can be taken from it in addition to the US Core Screening
-      Assessment Observation Maximum Category values.
+      reported.
     exampleBoolean: false
     name: US Core Screening Assessment Observation Maximum Category
   - reference:
@@ -2638,52 +2637,78 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
   - reference:
       reference: SearchParameter/us-core-allergyintolerance-clinical-status
-    description: "**active | inactive | resolved**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**active | inactive | resolved**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreAllergyintoleranceClinicalStatus
   - reference:
       reference: SearchParameter/us-core-allergyintolerance-patient
-    description: "**Who the sensitivity is for**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Who the sensitivity is for**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreAllergyintolerancePatient
   - reference:
       reference: SearchParameter/us-core-careplan-category
-    description: "**Type of plan**  \n**NOTE**: This US Core SearchParameter definition\
-      \ extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Type of plan**  \nNOTE: This SearchParameter is defined only to\
+      \ document Server and Client expectations. Its definition is derived from the\
+      \ standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreCareplanCategory
   - reference:
       reference: SearchParameter/us-core-careplan-date
-    description: "**Time period plan covers**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Time period plan covers**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreCareplanDate
   - reference:
       reference: SearchParameter/us-core-careplan-patient
-    description: "**Who the care plan is for**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Who the care plan is for**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreCareplanPatient
   - reference:
       reference: SearchParameter/us-core-careplan-status
     description: "**draft | active | on-hold | revoked | completed | entered-in-error\
-      \ | unknown**  \n**NOTE**: This US Core SearchParameter definition extends the\
-      \ usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ | unknown**  \nNOTE: This SearchParameter is defined only to document Server\
+      \ and Client expectations. Its definition is derived from the standard FHIR\
+      \ SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreCareplanStatus
   - reference:
       reference: SearchParameter/us-core-careteam-patient
-    description: "**Who care team is for**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Who care team is for**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreCareteamPatient
   - reference:
@@ -2695,17 +2720,23 @@ definition:
   - reference:
       reference: SearchParameter/us-core-careteam-status
     description: "**proposed | active | suspended | inactive | entered-in-error**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \  \nNOTE: This SearchParameter is defined only to document Server and Client\
+      \ expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreCareteamStatus
   - reference:
       reference: SearchParameter/us-core-condition-abatement-date
-    description: "**Date-related abatements (dateTime and period)**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Date-related abatements (dateTime and period)**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionAbatementDate
   - reference:
@@ -2716,209 +2747,300 @@ definition:
     name: USCoreConditionAssertedDate
   - reference:
       reference: SearchParameter/us-core-condition-category
-    description: "**The category of the condition**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The category of the condition**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionCategory
   - reference:
       reference: SearchParameter/us-core-condition-clinical-status
-    description: "**The clinical status of the condition**  \n**NOTE**: This US Core\
-      \ SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The clinical status of the condition**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionClinicalStatus
   - reference:
       reference: SearchParameter/us-core-condition-code
-    description: "**Code for the condition**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Code for the condition**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionCode
   - reference:
       reference: SearchParameter/us-core-condition-encounter
-    description: "**Encounter created as part of**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Encounter created as part of**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionEncounter
   - reference:
       reference: SearchParameter/us-core-condition-lastupdated
-    description: "**When the resource version last changed**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**When the resource version last changed**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionLastUpdated
   - reference:
       reference: SearchParameter/us-core-condition-onset-date
-    description: "**Date related onsets (dateTime and Period)**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Date related onsets (dateTime and Period)**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionOnsetDate
   - reference:
       reference: SearchParameter/us-core-condition-patient
-    description: "**Who has the condition?**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Who has the condition?**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionPatient
   - reference:
       reference: SearchParameter/us-core-condition-recorded-date
-    description: "**Date record was first recorded**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Date record was first recorded**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreConditionRecordedDate
   - reference:
       reference: SearchParameter/us-core-coverage-patient
-    description: "**Retrieve coverages for a patient**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Retrieve coverages for a patient**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreCoveragePatient
   - reference:
       reference: SearchParameter/us-core-device-patient
     description: "**Patient information, if the resource is affixed to a person**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \  \nNOTE: This SearchParameter is defined only to document Server and Client\
+      \ expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDevicePatient
   - reference:
       reference: SearchParameter/us-core-device-status
-    description: "**active | inactive | entered-in-error | unknown**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**active | inactive | entered-in-error | unknown**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDeviceStatus
   - reference:
       reference: SearchParameter/us-core-device-type
-    description: "**The type of the device**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The type of the device**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDeviceType
   - reference:
       reference: SearchParameter/us-core-diagnosticreport-category
     description: "**Which diagnostic discipline/department created the report**  \n\
-      **NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      NOTE: This SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDiagnosticreportCategory
   - reference:
       reference: SearchParameter/us-core-diagnosticreport-code
     description: "**The code for the report, as opposed to codes for the atomic results,\
       \ which are the names on the observation resource referred to from the result**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \  \nNOTE: This SearchParameter is defined only to document Server and Client\
+      \ expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDiagnosticreportCode
   - reference:
       reference: SearchParameter/us-core-diagnosticreport-date
-    description: "**The clinically relevant time of the report**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The clinically relevant time of the report**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDiagnosticreportDate
   - reference:
       reference: SearchParameter/us-core-diagnosticreport-lastupdated
-    description: "**When the resource version last changed**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**When the resource version last changed**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDiagnosticreportLastUpdated
   - reference:
       reference: SearchParameter/us-core-diagnosticreport-patient
-    description: "**The subject of the report if a patient**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The subject of the report if a patient**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDiagnosticreportPatient
   - reference:
       reference: SearchParameter/us-core-diagnosticreport-status
-    description: "**The status of the report**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The status of the report**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDiagnosticreportStatus
   - reference:
       reference: SearchParameter/us-core-documentreference-category
-    description: "**Categorization of document**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Categorization of document**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDocumentreferenceCategory
   - reference:
       reference: SearchParameter/us-core-documentreference-date
-    description: "**When this document reference was created**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**When this document reference was created**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDocumentreferenceDate
   - reference:
       reference: SearchParameter/us-core-documentreference-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDocumentreferenceId
   - reference:
       reference: SearchParameter/us-core-documentreference-patient
-    description: "**Who/what is the subject of the document**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Who/what is the subject of the document**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDocumentreferencePatient
   - reference:
       reference: SearchParameter/us-core-documentreference-period
-    description: "**Time of service that is being documented**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Time of service that is being documented**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDocumentreferencePeriod
   - reference:
       reference: SearchParameter/us-core-documentreference-status
-    description: "**current | superseded | entered-in-error**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**current | superseded | entered-in-error**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDocumentreferenceStatus
   - reference:
       reference: SearchParameter/us-core-documentreference-type
-    description: "**Kind of document (LOINC if possible)**  \n**NOTE**: This US Core\
-      \ SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Kind of document (LOINC if possible)**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreDocumentreferenceType
   - reference:
       reference: SearchParameter/us-core-encounter-class
-    description: "**Classification of patient encounter**  \n**NOTE**: This US Core\
-      \ SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Classification of patient encounter**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterClass
   - reference:
       reference: SearchParameter/us-core-encounter-date
-    description: "**A date within the period the Encounter lasted**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A date within the period the Encounter lasted**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterDate
   - reference:
@@ -2929,56 +3051,79 @@ definition:
     name: USCoreEncounterDischargeDisposition
   - reference:
       reference: SearchParameter/us-core-encounter-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterId
   - reference:
       reference: SearchParameter/us-core-encounter-identifier
-    description: "**Identifier(s) by which this encounter is known**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Identifier(s) by which this encounter is known**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterIdentifier
   - reference:
       reference: SearchParameter/us-core-encounter-lastupdated
-    description: "**When the resource version last changed**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**When the resource version last changed**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterLastUpdated
   - reference:
       reference: SearchParameter/us-core-encounter-location
-    description: "**Location the encounter takes place**  \n**NOTE**: This US Core\
-      \ SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Location the encounter takes place**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterLocation
   - reference:
       reference: SearchParameter/us-core-encounter-patient
-    description: "**The patient or group present at the encounter**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The patient or group present at the encounter**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterPatient
   - reference:
       reference: SearchParameter/us-core-encounter-status
     description: "**planned | arrived | triaged | in-progress | onleave | finished\
-      \ | cancelled +**  \n**NOTE**: This US Core SearchParameter definition extends\
-      \ the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ | cancelled +**  \nNOTE: This SearchParameter is defined only to document\
+      \ Server and Client expectations. Its definition is derived from the standard\
+      \ FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterStatus
   - reference:
       reference: SearchParameter/us-core-encounter-type
-    description: "**Specific type of encounter**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Specific type of encounter**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreEncounterType
   - reference:
@@ -2998,193 +3143,277 @@ definition:
   - reference:
       reference: SearchParameter/us-core-goal-lifecycle-status
     description: "**proposed | planned | accepted | active | on-hold | completed |\
-      \ cancelled | entered-in-error | rejected**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ cancelled | entered-in-error | rejected**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreGoalLifecycleStatus
   - reference:
       reference: SearchParameter/us-core-goal-patient
-    description: "**Who this goal is intended for**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Who this goal is intended for**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreGoalPatient
   - reference:
       reference: SearchParameter/us-core-goal-target-date
-    description: "**Reach goal on or before**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Reach goal on or before**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreGoalTargetDate
   - reference:
       reference: SearchParameter/us-core-immunization-date
-    description: "**Vaccination  (non)-Administration Date**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Vaccination  (non)-Administration Date**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreImmunizationDate
   - reference:
       reference: SearchParameter/us-core-immunization-patient
-    description: "**The patient for the vaccination record**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The patient for the vaccination record**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreImmunizationPatient
   - reference:
       reference: SearchParameter/us-core-immunization-status
-    description: "**Immunization event status**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Immunization event status**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreImmunizationStatus
   - reference:
       reference: SearchParameter/us-core-location-address
-    description: "**A (part of the) address of the location**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A (part of the) address of the location**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreLocationAddress
   - reference:
       reference: SearchParameter/us-core-location-address-city
-    description: "**A city specified in an address**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A city specified in an address**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreLocationAddressCity
   - reference:
       reference: SearchParameter/us-core-location-address-postalcode
-    description: "**A postal code specified in an address**  \n**NOTE**: This US Core\
-      \ SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A postal code specified in an address**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreLocationAddressPostalcode
   - reference:
       reference: SearchParameter/us-core-location-address-state
-    description: "**A state specified in an address**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A state specified in an address**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreLocationAddressState
   - reference:
       reference: SearchParameter/us-core-location-name
-    description: "**A portion of the location's name or alias**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A portion of the location's name or alias**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreLocationName
   - reference:
       reference: SearchParameter/us-core-medicationdispense-patient
-    description: "**The identity of a patient to list dispenses  for**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The identity of a patient to list dispenses  for**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationdispensePatient
   - reference:
       reference: SearchParameter/us-core-medicationdispense-status
-    description: "**Returns dispenses with a specified dispense status**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Returns dispenses with a specified dispense status**  \nNOTE:\
+      \ This SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationdispenseStatus
   - reference:
       reference: SearchParameter/us-core-medicationdispense-type
-    description: "**Returns dispenses of a specific type**  \n**NOTE**: This US Core\
-      \ SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Returns dispenses of a specific type**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationdispenseType
   - reference:
       reference: SearchParameter/us-core-medicationrequest-authoredon
-    description: "**Return prescriptions written on this date**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Return prescriptions written on this date**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationrequestAuthoredon
   - reference:
       reference: SearchParameter/us-core-medicationrequest-encounter
-    description: "**Return prescriptions with this encounter identifier**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Return prescriptions with this encounter identifier**  \nNOTE:\
+      \ This SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationrequestEncounter
   - reference:
       reference: SearchParameter/us-core-medicationrequest-intent
-    description: "**Returns prescriptions with different intents**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Returns prescriptions with different intents**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationrequestIntent
   - reference:
       reference: SearchParameter/us-core-medicationrequest-patient
-    description: "**Returns prescriptions for a specific patient**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Returns prescriptions for a specific patient**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationrequestPatient
   - reference:
       reference: SearchParameter/us-core-medicationrequest-status
-    description: "**Status of the prescription**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Status of the prescription**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreMedicationrequestStatus
   - reference:
       reference: SearchParameter/us-core-observation-category
-    description: "**The classification of the type of observation**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The classification of the type of observation**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreObservationCategory
   - reference:
       reference: SearchParameter/us-core-observation-code
-    description: "**The code of the observation type**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The code of the observation type**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreObservationCode
   - reference:
       reference: SearchParameter/us-core-observation-date
     description: "**Obtained date/time. If the obtained element is a period, a date\
-      \ that falls in the period**  \n**NOTE**: This US Core SearchParameter definition\
-      \ extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ that falls in the period**  \nNOTE: This SearchParameter is defined only to\
+      \ document Server and Client expectations. Its definition is derived from the\
+      \ standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreObservationDate
   - reference:
       reference: SearchParameter/us-core-observation-lastupdated
-    description: "**When the resource version last changed**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**When the resource version last changed**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreObservationLastUpdated
   - reference:
       reference: SearchParameter/us-core-observation-patient
-    description: "**The subject that the observation is about (if patient)**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The subject that the observation is about (if patient)**  \nNOTE:\
+      \ This SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreObservationPatient
   - reference:
       reference: SearchParameter/us-core-observation-status
-    description: "**The status of the observation**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The status of the observation**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreObservationStatus
   - reference:
@@ -3206,32 +3435,46 @@ definition:
     name: USCoreOrganizationName
   - reference:
       reference: SearchParameter/us-core-patient-birthdate
-    description: "**The patient's date of birth**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The patient's date of birth**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientBirthdate
   - reference:
       reference: SearchParameter/us-core-patient-death-date
     description: "**The date of death has been provided and satisfies this search\
-      \ value**  \n**NOTE**: This US Core SearchParameter definition extends the usage\
-      \ context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ value**  \nNOTE: This SearchParameter is defined only to document Server and\
+      \ Client expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientDeathDate
   - reference:
       reference: SearchParameter/us-core-patient-family
-    description: "**A portion of the family name of the patient**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A portion of the family name of the patient**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientFamily
   - reference:
       reference: SearchParameter/us-core-patient-gender
-    description: "**Gender of the patient**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Gender of the patient**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientGender
   - reference:
@@ -3242,140 +3485,203 @@ definition:
     name: USCorePatientGenderIdentity
   - reference:
       reference: SearchParameter/us-core-patient-given
-    description: "**A portion of the given name of the patient**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A portion of the given name of the patient**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientGiven
   - reference:
       reference: SearchParameter/us-core-patient-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientId
   - reference:
       reference: SearchParameter/us-core-patient-identifier
-    description: "**A patient identifier**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A patient identifier**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientIdentifier
   - reference:
       reference: SearchParameter/us-core-patient-name
     description: "**A server defined search that may match any of the string fields\
       \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \  \nNOTE: This SearchParameter is defined only to document Server and Client\
+      \ expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientName
   - reference:
       reference: SearchParameter/us-core-practitioner-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePractitionerId
   - reference:
       reference: SearchParameter/us-core-practitioner-identifier
-    description: "**A practitioner's Identifier**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A practitioner's Identifier**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePractitionerIdentifier
   - reference:
       reference: SearchParameter/us-core-practitioner-name
     description: "**A server defined search that may match any of the string fields\
       \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \  \nNOTE: This SearchParameter is defined only to document Server and Client\
+      \ expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePractitionerName
   - reference:
       reference: SearchParameter/us-core-practitionerrole-practitioner
     description: "**Practitioner that is able to provide the defined services for\
-      \ the organization**  \n**NOTE**: This US Core SearchParameter definition extends\
-      \ the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ the organization**  \nNOTE: This SearchParameter is defined only to document\
+      \ Server and Client expectations. Its definition is derived from the standard\
+      \ FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePractitionerrolePractitioner
   - reference:
       reference: SearchParameter/us-core-practitionerrole-specialty
-    description: "**The practitioner has this specialty at an organization**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The practitioner has this specialty at an organization**  \nNOTE:\
+      \ This SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePractitionerroleSpecialty
   - reference:
       reference: SearchParameter/us-core-procedure-code
-    description: "**A code to identify a  procedure**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**A code to identify a  procedure**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreProcedureCode
   - reference:
       reference: SearchParameter/us-core-procedure-date
-    description: "**When the procedure was performed**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**When the procedure was performed**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreProcedureDate
   - reference:
       reference: SearchParameter/us-core-procedure-patient
-    description: "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Search by subject - a patient**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreProcedurePatient
   - reference:
       reference: SearchParameter/us-core-procedure-status
     description: "**preparation | in-progress | not-done | on-hold | stopped | completed\
-      \ | entered-in-error | unknown**  \n**NOTE**: This US Core SearchParameter definition\
-      \ extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ | entered-in-error | unknown**  \nNOTE: This SearchParameter is defined only\
+      \ to document Server and Client expectations. Its definition is derived from\
+      \ the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreProcedureStatus
   - reference:
       reference: SearchParameter/us-core-questionnaireresponse-authored
-    description: "**When the questionnaire response was last changed**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**When the questionnaire response was last changed**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreQuestionnaireresponseAuthored
   - reference:
       reference: SearchParameter/us-core-questionnaireresponse-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreQuestionnaireresponseId
   - reference:
       reference: SearchParameter/us-core-questionnaireresponse-patient
     description: "**The patient that is the subject of the questionnaire response**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \  \nNOTE: This SearchParameter is defined only to document Server and Client\
+      \ expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreQuestionnaireresponsePatient
   - reference:
       reference: SearchParameter/us-core-questionnaireresponse-questionnaire
-    description: "**The questionnaire the answers are provided for**  \n**NOTE**:\
-      \ This US Core SearchParameter definition extends the usage context of the\n\
-      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The questionnaire the answers are provided for**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreQuestionnaireresponseQuestionnaire
   - reference:
       reference: SearchParameter/us-core-questionnaireresponse-status
-    description: "**The status of the questionnaire response**  \n**NOTE**: This US\
-      \ Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The status of the questionnaire response**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreQuestionnaireresponseStatus
   - reference:
@@ -3385,84 +3691,124 @@ definition:
     name: USCoreRace
   - reference:
       reference: SearchParameter/us-core-relatedperson-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreRelatedpersonId
   - reference:
       reference: SearchParameter/us-core-relatedperson-name
     description: "**A server defined search that may match any of the string fields\
       \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
-      \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \  \nNOTE: This SearchParameter is defined only to document Server and Client\
+      \ expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreRelatedpersonName
   - reference:
       reference: SearchParameter/us-core-relatedperson-patient
-    description: "**The patient this related person is related to**  \n**NOTE**: This\
-      \ US Core SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The patient this related person is related to**  \nNOTE: This\
+      \ SearchParameter is defined only to document Server and Client expectations.\
+      \ Its definition is derived from the standard FHIR SearchParameter and it uses\
+      \ the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreRelatedpersonPatient
   - reference:
       reference: SearchParameter/us-core-servicerequest-authored
-    description: "**Date request signed**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Date request signed**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreServicerequestAuthored
   - reference:
       reference: SearchParameter/us-core-servicerequest-category
-    description: "**Classification of service**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Classification of service**  \nNOTE: This SearchParameter is defined\
+      \ only to document Server and Client expectations. Its definition is derived\
+      \ from the standard FHIR SearchParameter and it uses the [Conformance expectation\
+      \ extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreServicerequestCategory
   - reference:
       reference: SearchParameter/us-core-servicerequest-code
-    description: "**What is being requested/ordered**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**What is being requested/ordered**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreServicerequestCode
   - reference:
       reference: SearchParameter/us-core-servicerequest-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreServicerequestId
   - reference:
       reference: SearchParameter/us-core-servicerequest-patient
-    description: "**Search by subject - a patient**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Search by subject - a patient**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreServicerequestPatient
   - reference:
       reference: SearchParameter/us-core-servicerequest-status
     description: "**draft | active | on-hold | revoked | completed | entered-in-error\
-      \ | unknown**  \n**NOTE**: This US Core SearchParameter definition extends the\
-      \ usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+      \ | unknown**  \nNOTE: This SearchParameter is defined only to document Server\
+      \ and Client expectations. Its definition is derived from the standard FHIR\
+      \ SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreServicerequestStatus
   - reference:
       reference: SearchParameter/us-core-specimen-id
-    description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreSpecimenId
   - reference:
       reference: SearchParameter/us-core-specimen-patient
-    description: "**The patient the specimen comes from**  \n**NOTE**: This US Core\
-      \ SearchParameter definition extends the usage context of the\n[Conformance\
-      \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    description: "**The patient the specimen comes from**  \nNOTE: This SearchParameter\
+      \ is defined only to document Server and Client expectations. Its definition\
+      \ is derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      For search operations, Servers and Clients **SHOULD** use standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCoreSpecimenPatient
   - reference:

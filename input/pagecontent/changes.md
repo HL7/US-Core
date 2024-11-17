@@ -36,7 +36,10 @@ The January 2025 ballot addresses the following:
 3.  **Applied:** (Clarification) Align the Sig description in the medication profile introductions. [FHIR-45951](https://jira.hl7.org/browse/FHIR-45951) See Changes Here:
     - [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html)
     - [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html)
-4.  **Resolved - change required:** (Clarification) Derive composite search parameters for derived normal parameters [FHIR-46036](https://jira.hl7.org/browse/FHIR-46036) [See Changes Here](#.html)
+4.  **Applied:** (Clarification) Clarify Role and use of US Core SearchParameters vs FHIR standard SearchParameters [FHIR-46036](https://jira.hl7.org/browse/FHIR-46036) See Changes Here:
+    - [US Core Search Parameters](search-parameters-and-operations.html#search-parameters)
+    - [SearchParameter: USCoreAllergyintoleranceClinicalStatus](SearchParameter-us-core-allergyintolerance-clinical-status.html)
+    - [US Core Server CapabilityStatement - FHIR RESTful Capabilities](CapabilityStatement-us-core-server.html#behavior)
 5.  **Resolved - change required:** (Correction) Procedure.code should be Procedure.performed [FHIR-46037](https://jira.hl7.org/browse/FHIR-46037) [See Changes Here](#.html)
 6.  **Resolved - change required:** (Correction) Incorrect Examples [FHIR-46099](https://jira.hl7.org/browse/FHIR-46099) [See Changes Here](#.html)
 7.  **Resolved - change required:** (Clarification) Clarify (reduce) the media.link requirements for DiagnosticReport (Report and Notes) [FHIR-46240](https://jira.hl7.org/browse/FHIR-46240) [See Changes Here](#.html)
