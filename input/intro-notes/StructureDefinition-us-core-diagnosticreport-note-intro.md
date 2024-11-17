@@ -43,11 +43,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access to the images.
 
-   * The `media.link` element is marked as Must Support, and the [Media] resource to which it links can support various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).
+   * <span class="bg-success" markdown="1">Although the `media.link` element is not marked as *Must Support*, the [Media] resource to which it links can support various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).</span><!-- new-content -->
    * DICOM studies, series, and SOP instances are encoded as UUID identifiers in the [ImagingStudy] resource, which is referenced by the `imagingStudy` element. Systems with the tools and specific viewers can use this optional element to view these images.
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifier` element to access the source images from external sources.
   
-   [The Argonauts 2023 SMART Imaging Access](https://confluence.hl7.org/display/AP/SMART+Imaging+Access) project is testing an approach to access imaging studies using a single authorization flow"
+   [The Argonauts 2023 SMART Imaging Access](https://confluence.hl7.org/display/AP/SMART+Imaging+Access) project is testing an approach to access imaging studies using a single authorization flow
    {: .stu-note}
 
 

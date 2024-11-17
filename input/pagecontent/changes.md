@@ -46,7 +46,7 @@ The January 2025 ballot addresses the following:
     - [Hvs Item Example 88122-7](Observation-HVS-item-example-88122-7.html)
     - [Hvs Item Example 88123-5](Observation-HVS-item-example-88123-5.html)
     - [Hvs Item Example 88121-9](Observation-HVS-item-example-88121-9.html)
-7.  **Resolved - change required:** (Clarification) Clarify (reduce) the media.link requirements for DiagnosticReport (Report and Notes) [FHIR-46240](https://jira.hl7.org/browse/FHIR-46240) [See Changes Here](#.html)
+7.  **Applied:** (Clarification) Remove the Must Support on DiagnosticReport (Report and Notes) `media.link` [FHIR-46240](https://jira.hl7.org/browse/FHIR-46240) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html)
 8.  **Resolved - change required:** (Clarification) Clarify the level of granular scopes server shall support [FHIR-46277](https://jira.hl7.org/browse/FHIR-46277) [See Changes Here](#.html)
 9.  **Resolved - change required:** (Enhancement) reference specific version of USCDI for each version of USCore [FHIR-46466](https://jira.hl7.org/browse/FHIR-46466) [See Changes Here](#.html)
 10. **Resolved - change required:** (Correction) change page status [FHIR-46514](https://jira.hl7.org/browse/FHIR-46514) [See Changes Here](#.html)
