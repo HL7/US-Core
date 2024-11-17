@@ -2,6 +2,7 @@
 - url: <https://hl7.org/fhir/us/core/2025Jan/>
 - Based on FHIR version : 4.0.1
 
+
 #### The January 2025 Ballot
 
 The January 2025 ballot addresses the following:
@@ -48,7 +49,11 @@ The January 2025 ballot addresses the following:
     - [Hvs Item Example 88121-9](Observation-HVS-item-example-88121-9.html)
 7.  **Applied:** (Clarification) Remove the Must Support on DiagnosticReport (Report and Notes) `media.link` [FHIR-46240](https://jira.hl7.org/browse/FHIR-46240) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html)
 8.  **Applied:** (Clarification) Clarify the level of granular scopes server shall support [FHIR-46277](https://jira.hl7.org/browse/FHIR-46277) [See Changes Here](scopes.html#additional-us-core-requirements)
-9.  **Resolved - change required:** (Enhancement) reference specific version of USCDI for each version of USCore [FHIR-46466](https://jira.hl7.org/browse/FHIR-46466) [See Changes Here](#.html)
+9.  **Applied:** (Enhancement) reference specific version of USCDI for each version of USCore [FHIR-46466](https://jira.hl7.org/browse/FHIR-46466)  See Changes Here:
+    - [USCDI](uscdi.html)
+    - [Publication (Version) History](https://hl7.org/fhir/us/core/history.html)
+    - [Change Log](changes.html)
+    - [Future of US Core](future-of-US-core.html)
 10. **Resolved - change required:** (Correction) change page status [FHIR-46514](https://jira.hl7.org/browse/FHIR-46514) [See Changes Here](#.html)
 11. **Resolved - change required:** (Clarification) clarify conformance requirements for structured assessments [FHIR-47139](https://jira.hl7.org/browse/FHIR-47139) [See Changes Here](#.html)
 12. **Resolved - change required:** (Enhancement) Point to new THO Discharge Disposition (NUBC) instead of US Core based set [FHIR-47416](https://jira.hl7.org/browse/FHIR-47416) [See Changes Here](#.html)
@@ -114,7 +119,7 @@ The following trackers have been identified as publishing issues and we are work
 4. **Publishing:** (Correction) US Core Survey Codes expansion error [FHIR-46272](https://jira.hl7.org/browse/FHIR-46272) [See Changes Here](#.html)
 5. **Publishing:** (Correction) US Core detailed ethnicity expansion error [FHIR-46638](https://jira.hl7.org/browse/FHIR-46638) [See Changes Here](#.html)
 
-### Version = 7.0.0
+### Version = 7.0.0 (Meets USCDI v4 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU7/>
 - Based on FHIR version: 4.0.1
 
@@ -398,7 +403,7 @@ The following trackers have been identified as publishing issues and we will wor
 7. **PUBLISHING** valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107)
 8. **APPLIED** Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105)
 
-### Version = 6.1.0
+### Version = 6.1.0 (Meets USCDI v3 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU6.1/>
 - Based on FHIR version : 4.0.1
 
@@ -625,6 +630,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 - url: <https://hl7.org/fhir/us/core/2023Jan/>
 - Based on FHIR version : 4.0.1
 
+
 #### The January 2023 Ballot
 
 This ballot addresses the following:
@@ -704,9 +710,10 @@ This ballot addresses the following:
 52. **Applied:** Change ServiceRequest.category to min=0 [FHIR-39493](https://jira.hl7.org/browse/FHIR-39493) [See Changes Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-servicerequest.html)
 53. **Applied:** Fix provenance-1 [FHIR-39518](https://jira.hl7.org/browse/FHIR-39518) [See Changes Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-provenance.html)
 
-### Version = 5.0.1
+### Version = 5.0.1 (Meets USCDI v2 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU5.0.1/>
 - Based on FHIR version : 4.0.1
+
 
 The changes in this errata to version 5.0.0 of US Core have been reviewed by the public through the HL7 errata process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### Corrected Errata in Version 5.0.1 of US Core:
@@ -993,11 +1000,10 @@ This Ballot addresses the following issues:
 
 ---
 
-### Version = 4.0.0
+### Version = 4.0.0 (Meets USCDI v1 Requirements)
 - Publication Date: 2021-06-28
 - url: <https://hl7.org/fhir/us/core/STU4>
 - Based on FHIR version : 4.0.1
-
 
 #### Changes:
  The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2021 HL7 balloting process.  The resolution of the community comments has been agreed to and voted on by the members of the sponsoring work group [HL7 International Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
@@ -1360,11 +1366,10 @@ listed below are the resolved trackers for this version:
 
 ---
 
-### Version = 3.1.1
+### Version = 3.1.1 (Meets USCDI V1 requirements)
 - Publication Date: 2020-6-30
 - url: <https://hl7.org/fhir/us/core/STU3.1.1>
 - Based on FHIR version : 4.0.1
-
 
 #### Changes:
  This update addresses several technical corrections and errata and clarifications. They have been reviewed and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:

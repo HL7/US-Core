@@ -3,7 +3,18 @@ The US Core FHIR Profiles are designed to be the base set of requirements for FH
 
 ### US Core Yearly Updates
 
-Yearly US Core updates reflect changes to [U.S. Core Data for Interoperability (USCDI)] and requests from the US Realm FHIR community. This approach is outlined in the figure below:
+<div class="bg-success" markdown="1">
+
+Yearly US Core updates reflect [U.S. Core Data for Interoperability (USCDI)] changes and requests from the US Realm FHIR community.
+
+The following table shows the relationship between each USCDI and US Core Version.
+The USCDI version links to its respective ONC Standards Bulletin, which provides background and the new data classes and elements for the version.
+
+{% include uscdi-uscore-version-table.md %}
+
+Our yearly road map is outlined in the figure below:
+
+</div><!-- new-content -->
 
 {% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
 

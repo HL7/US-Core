@@ -232,10 +232,10 @@
 [Token Introspection]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/token-introspection.html#token-introspection)
 [Translation]: {{site.data.fhir.path}}extension-translation.html
 [U.S. Core Data for Interoperability (USCDI) v1]: https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf
-[U.S. Core Data for Interoperability (USCDI) v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
-[U.S. Core Data for Interoperability (USCDI) v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
-[U.S. Core Data for Interoperability (USCDI) v4]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v4
-[U.S. Core Data for Interoperability (USCDI) v5]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v5
+[U.S. Core Data for Interoperability (USCDI) v2]: https://www.healthit.gov/isp/sites/isp/files/2021-07/USCDI-Version-2-July-2021-Final.pdf
+[U.S. Core Data for Interoperability (USCDI) v3]: https://www.healthit.gov/isp/sites/isp/files/2022-10/USCDI-Version-3-October-2022-Errata-Final.pdf
+[U.S. Core Data for Interoperability (USCDI) v4]: https://www.healthit.gov/isp/sites/isp/files/2023-10/USCDI-Version-4-October-2023-Errata-Final.pdf
+[U.S. Core Data for Interoperability (USCDI) v5]: https://www.healthit.gov/isp/sites/isp/files/2024-07/USCDI-Version-5-July-2024-Final.pdf
 [U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi
 [UCUM Codes ValueSet]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
