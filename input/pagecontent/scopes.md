@@ -156,8 +156,8 @@ The SMART App Launch guide requires the following JSON file metadata:
 US Core requires following additional metadata:
 
 - `scopes_supported`: Array of scopes a client may request.
-    - The server **SHALL** support all scopes listed in the table above for the US Core Profiles they support; additional scopes **MAY** be supported (so clients should not consider this array an exhaustive list). 
-
+    - <span class="bg-success" markdown="1">The server **SHALL** list all the required US Core Scopes from the table above for the US Core Profiles they support in the `scopes_supported` array; additional scopes **MAY** be supported (so clients should not consider this array an exhaustive list). 
+</span><!-- new-content -->
     - Servers **MAY** limit clients' scopes to those configured at registration time. Servers **SHALL** allow users to select a subset of the requested scopes at the approval time. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.
 - `introspection_endpoint`: The URL to a server's introspection endpoint, which can be used to validate a token. 
   - Servers **SHALL** document this endpoint in the file
