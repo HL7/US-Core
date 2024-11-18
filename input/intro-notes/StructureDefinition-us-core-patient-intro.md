@@ -62,9 +62,14 @@ The following data elements must always be present ([Mandatory] definition) or m
      - <span class="bg-success" markdown="1">When multiple languages are represented, systems **MAY** designate the patient's *Preferred Language* in the `Communication.preferred` element or by using the FHIR standard [Patient Proficiency Extension] and infer a patient's language service needs from it.</span><!-- new-content -->
   - The [Patient example] demonstrates how these elements are represented.
 
-- [Certifying systems] **SHALL** and non-certifying systems **SHOULD** follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] as the standard style guide for `Patient.address.line` and  `Patient.address.city` for new and updated records.
+<div class="bg-success" markdown="1">
 
-   - For certifying systems, this requirement does not apply to historical records or documents that are exposed through FHIR-based APIs.
+- The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying systems] **SHALL** and non-certifying systems **SHOULD** follow it as the standard style guide for Patient addresses.  
+ 
+   -  Consult the style guide for details about the format for the Address datatypes elements, especially `Patient.address.line` and `Patient.address.city`.
+
+   - Note: historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.
+</div><!-- new-content -->
 
 - \*US Core aligns with the [HL7 Gender Harmony Project] gender and sex information, which includes data elements, value sets, and code systems. Refer to it and the [FHIR R5 Patient Resource Gender and Sex Notes] for additional guidance and background for representing Administrative Gender, Sex Assigned at Birth, Gender Identity, <span class="bg-success" markdown="1"> and Sex Parameter For Clinical Use (SPCU)</span><!-- new-content --> Note that:
   - The [US Core Birth Sex Extension] is no longer a USCDI Requirement.

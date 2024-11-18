@@ -116,7 +116,7 @@
 [Guide to Resources]: {{site.data.fhir.path}}resourceguide.html
 [HL7 C-CDA]: https://hl7.org/cda/us/ccda/history.html
 [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation, Edition 1]: https://hl7.org/xprod/ig/uv/gender-harmony/
-[HL7 Cross Paradigm Implementation Guide: UDI Pattern]: http://www.hl7.org/documentcenter/private/standards/HL7_IG_UDI_R2_2020JUN.pdf
+[HL7 Cross Paradigm Implementation Guide: UDI Pattern]: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=487
 [HL7 Gender Harmony Project]: https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project
 [HL7 Terminology (THO)]: https://terminology.hl7.org
 [HL7 U.S. Data Access Framework (DAF)]: https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home

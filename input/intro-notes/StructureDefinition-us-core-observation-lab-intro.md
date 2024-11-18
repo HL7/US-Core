@@ -40,6 +40,6 @@ The following are example usage scenarios for this profile:
   - New laboratory observations
   - Changes in the status of laboratory observations, including events that trigger the same status (e.g., amended → amended).
   
-{% include meta-updated-next-version.md %}
+
 
 {% include link-list.md %}

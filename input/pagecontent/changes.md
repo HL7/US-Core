@@ -16,7 +16,7 @@ The January 2025 ballot addresses the following:
 **Tracker Status**: **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
 
 
-1. **Resolved - change required:** (Enhancement) Add link in history page to approved pages [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](https://hl7.org/fhir/us/core/history.html)
+1. **Resolved - change required:** (Enhancement) Fix the US Core History Page [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) and [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) [See Changes Here](https://hl7.org/fhir/us/core/history.html)
 1. **Applied:** (Enhancement) Make Must Support Reference Table more visible [FHIR-44977](https://jira.hl7.org/browse/FHIR-44977) See Changes Here:
     - [Must Support - Resource References](must-support.html#must-support---resource-references)
     - [Must Support Elements](must-support.html#must-support-elements)
@@ -25,7 +25,7 @@ The January 2025 ballot addresses the following:
 3. **Applied:** (Clarification) Clarify definition of Clinical Information Reconciliation and Incorporation (CIRI) [FHIR-45267](https://jira.hl7.org/browse/FHIR-45267) [See Changes Here](basic-provenance.html#clinical-information-reconciliation-and-incorporation)
 4. **Applied:** (Enhancement) Remove dated footnote from Provenance page. [FHIR-45283](https://jira.hl7.org/browse/FHIR-45283)
 5. **Applied** (Enhancement) Add SNOMED NUCC Mapping link to US Core PractitionerRole Profile guidance[FHIR-45286](https://jira.hl7.org/browse/FHIR-45286) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
-6. {:#fhir-45319}**Applied:** (Clarification) Clarify Observation Screening Assessment category Must Support requirements [FHIR-45319](https://jira.hl7.org/browse/FHIR-45319) See Changes Here:
+6. {:#fhir-45319}**Applied:** (Clarification) Clarify Observation Screening Assessment category Must Support requirements [FHIR-45319](https://jira.hl7.org/browse/FHIR-45319) and [FHIR-46052](https://jira.hl7.org/browse/FHIR-46052) See Changes Here:
     - [Screening and Assessments](screening-and-assessments.html#terminology)
     - [US Core Observation Screening Assessment Profile ](StructureDefinition-us-core-observation-screening-assessment.html)
     - [US Core Screening Assessment Observation Maximum Category](ValueSet-us-core-screening-assessment-observation-maximum-category.html)
@@ -91,22 +91,20 @@ html#additional-uscdi-requirements)
 18. **Triaged:** (Enhancement) All lab orders and results across all FHIR IGs need to indicate the performing laboratory test order name and/or performing laboratory test result name [FHIR-43301](https://jira.hl7.org/browse/FHIR-43301) [See Changes Here](#.html)
 19. **Triaged:** (Enhancement) Create new section in Guidance on Sex and Gender in USCore [FHIR-44115](https://jira.hl7.org/browse/FHIR-44115) [See Changes Here](#.html)
 20. **Applied:** (Correction) Spelling errors in US Core Server Capability Statement [FHIR-45451](https://jira.hl7.org/browse/FHIR-45451)
-21. **Applied:** (Correction) PHINVADS links broken [FHIR-45494](https://jira.hl7.org/browse/FHIR-45494) [See Changes Here](terminology.html)
+21. **Applied:** (Correction) Fix broken PHINVADS links [FHIR-45494](https://jira.hl7.org/browse/FHIR-45494) [See Changes Here](terminology.html)
 22. **Applied:** (Correction) Typo in Condition's granular scope [FHIR-45961](https://jira.hl7.org/browse/FHIR-45961) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#us-core-scopes)
-23. **Resolved - change required:** (Clarification) clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) [See Changes Here](#.html)
+23. **Applied:** (Clarification) clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 24. **Triaged:** (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) [See Changes Here](#.html)
-25. **Triaged:** (Correction) US Core Screening Assessment Observation Category in US Core v7 [FHIR-46052](https://jira.hl7.org/browse/FHIR-46052) [See Changes Here](#.html)
-26. **Triaged:** (Enhancement) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) [See Changes Here](#.html)
 27. **Pre-Applied:** (Enhancement) Create SCT Specimen Condition value set to include SNOMED CT [FHIR-47061](https://jira.hl7.org/browse/FHIR-47061) See Changes Here:
     - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html)
     - [US Core Specimen Condition ValueSet](ValueSet-us-core-specimen-condition.html)
     - [Lipemic Serum Specimen Example](Specimen-example-serum-lipemic.html)
-28. **Triaged:** (Clarification) Update last_updated SHOULDS to SHALLS [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542) [See Changes Here](#.html)
-29. **Resolved - change required:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](#.html)
+28. **Pre-Applied:** (Clarification) Remove Meta.lastUpdated STU comments [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542)
+29. **Applied:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
 30. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
 31. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
 
-The application of the following tracker is pending and will not be completed by the ballot date.
+The application of the following trackers are pending and will not be completed by the ballot date.
 
 1. **Resolved - change required:** (Enhancement) Create a tracker to THO to add codes from US Core Category to the Observation Category Codesystem [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541)
 2. **Triaged:** (Correction) US Core Coverage Profile [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122)

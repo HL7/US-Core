@@ -39,6 +39,6 @@ The following data elements must always be present ([Mandatory] definition) or m
   - New laboratory reports
   - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).
 
-{% include meta-updated-next-version.md %}
+
 
 {% include link-list.md %}

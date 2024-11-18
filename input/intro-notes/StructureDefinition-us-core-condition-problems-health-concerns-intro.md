@@ -54,6 +54,6 @@ The following data elements must always be present ([Mandatory] definition) or m
   - New problems and health concerns
   - Changes in the clinical status or verifications status of problems or health concerns
 
-{% include meta-updated-next-version.md %}
+
 
 {% include link-list.md %}

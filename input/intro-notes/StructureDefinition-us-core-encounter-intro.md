@@ -58,6 +58,6 @@ The following data elements must always be present ([Mandatory] definition) or m
   - New encounters/visits
   - Changes in the status of encounters, including events that trigger the same status (e.g., in-progress → in-progress). These status changes correspond to events that can initiate [HL7 V2] ADT messages.
 
-{% include meta-updated-next-version.md %}
+
 
 {% include link-list.md %}
