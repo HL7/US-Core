@@ -44,4 +44,5 @@
    [US Core Pregnancy Status Codes](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-pregnancy-status.html)|[Pregnancy Status Observation](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.12/expansion)|VSAC|
    [US Core Pregnancy Intent Codes](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-pregnancy-intent.html)|[Pregnancy Intention](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1166.22/expansion)|VSAC|
    [US Core Survey Codes](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-survey-codes.html)|[Screening and Assessment Survey Codes](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.13/expansion)|VSAC|
+   [US Core Encounter Type](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-encounter-type.html)|[Encounter Type](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.23/expansion)|VSAC|
    {:.grid}

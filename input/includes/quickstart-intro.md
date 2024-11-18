@@ -14,7 +14,7 @@ Servers providing access to {{ scope.data_element }} data **{{conf}}** support t
           {% endif -%}
           {% for i in (1..6) %}{% assign category =  'category_' | append: i %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
             {%- if scope[category] and scope[category_conformance] == conf %}
-  -  [granular scopes]\: `<patient|user|system>.{{ scope.resource_type }}.rs?category={{ scope[category] }}`
+  -  [granular scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs?category={{ scope[category] }}`
             {% endif -%}
           {% endfor -%}
         {% endif -%}

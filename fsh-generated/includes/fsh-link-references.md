@@ -252,7 +252,6 @@
 [USCoreDocumentReferenceType]: ValueSet-us-core-documentreference-type.html
 [USCoreDocumentReferencesCategoryCodes]: CodeSystem-us-core-documentreference-category.html
 [USCoreEncounterProfile]: StructureDefinition-us-core-encounter.html
-[USCoreEncounterType]: ValueSet-us-core-encounter-type.html
 [USCoreEthnicityExtension]: StructureDefinition-us-core-ethnicity.html
 [USCoreExtensionQuestionnaireUri]: StructureDefinition-us-core-extension-questionnaire-uri.html
 [USCoreFetchDocumentReference]: OperationDefinition-docref.html

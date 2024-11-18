@@ -14,7 +14,7 @@
   - 'ValueSet-{{stem_URL}}.html'
 'http://phinvads.cdc.gov/fhir/':
   - PHINVADS
-  - 'http://phinvads.cdc.gov/fhir/ValueSet/{{stem_URL}}'
+  - 'https://phinvads.cdc.gov/vads/ViewValueSet.action?oid={{stem_URL}}'
 'http://terminology.hl7.org/':
   - THO
   - 'http://terminology.hl7.org/ValueSet/{{stem_URL}}'

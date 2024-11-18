@@ -1854,20 +1854,6 @@ definition:
     exampleBoolean: false
     name: US Core Encounter Profile
   - reference:
-      reference: ValueSet/us-core-encounter-type
-    description: 'The type of encounter: a specific code indicating type of service
-      provided. This value set includes codes from SNOMED CT decending from the concept
-      308335008 (Patient encounter procedure (procedure)) and codes from the Current
-      Procedure and Terminology (CPT) found in the following CPT sections:
-
-      - 99211-99499 E/M - 99500-99600 home health (mainly nonphysician, such as newborn
-      care in home) - 99605-99607 medication management - 98966-98968 non physician
-      telephone services
-
-      (subscription to AMA Required)'
-    exampleBoolean: false
-    name: US Core Encounter Type
-  - reference:
       reference: StructureDefinition/us-core-ethnicity
     description: 'Concepts classifying the person into a named category of humans
       sharing common history, traits, geographical origin or nationality.  The ethnicity
