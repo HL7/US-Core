@@ -313,7 +313,6 @@
 [USCoreSpecimenCondition]: ValueSet-us-core-specimen-condition.html
 [USCoreSpecimenProfile]: StructureDefinition-us-core-specimen.html
 [USCoreObservationSmokingStatusStatus]: ValueSet-us-core-observation-smoking-status-status.html
-[USCoreSurveyCodes]: ValueSet-us-core-survey-codes.html
 [USCoreTreatmentInterventionPreferenceProfile]: StructureDefinition-us-core-treatment-intervention-preference.html
 [USCoreTribalAffiliationExtension]: StructureDefinition-us-core-tribal-affiliation.html
 [USCDIRequirement]: StructureDefinition-uscdi-requirement.html

@@ -2556,13 +2556,6 @@ definition:
     exampleBoolean: false
     name: US Core Status for Smoking Status Observation
   - reference:
-      reference: ValueSet/us-core-survey-codes
-    description: This value set includes screening and assessment panel codes in LOINC
-      (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/)
-      of LOINC Users' Guide).
-    exampleBoolean: false
-    name: US Core Survey Codes
-  - reference:
       reference: StructureDefinition/us-core-treatment-intervention-preference
     description: The US Core Treatment Intervention Preference Profile inherits from
       the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer

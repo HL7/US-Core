@@ -47,7 +47,26 @@
                 "path": "Goal.description",
                 "mustSupport": true,
                 "binding": {
-                    "strength": "extensible",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+                            "extension": [
+                                {
+                                    "url": "purpose",
+                                    "valueCode": "preferred"
+                                },
+                                {
+                                    "url": "valueSet",
+                                    "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.71"
+                                },
+                                {
+                                    "url": "documentation",
+                                    "valueMarkdown": "Social Determinants of Health Goals when the Goal is an SDOH goal."
+                                }
+                            ]
+                        }
+                    ],
+                    "strength": "preferred",
                     "description": "Value set to describe the Goal",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description"
                 },
