@@ -210,7 +210,6 @@
 [SDC Base Questionnaire]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaire.html
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/index.html
-[SMART App Launch version]: http://hl7.org/fhir/smart-app-launch/history.html
 [SMART App Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}
 [SNOMED CT]: http://snomed.info/sct
 [SNOMED CT]: http://snomed.info/sct/731000124108 "SNOMED CT US Edition"
@@ -347,4 +346,5 @@
 [www.loinc.org/usage/orders]: https://loinc.org/usage/orders/
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [NUCC to SNOMED CT Mappings]: https://build.fhir.org/ig/HL7/davinci-ehrx/ConceptMap-NUCC-CareTeamMemberFunction.html
-[HTTP Cache-Control]: https://httpwg.org/specs/rfc9111.html 
+[HTTP Cache-Control]: https://httpwg.org/specs/rfc9111.html
+[Social Determinants of Health Goals]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion

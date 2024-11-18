@@ -1,9 +1,2177 @@
-<!--this liquid script generate a link-list of the IG pages including  all the IG artifacts based on their titles -->
-{%- for pages_hash in site.data.pages -%}
-{%- assign page = pages_hash[0] -%} 
-{%- assign hash= pages_hash[1] -%}
-{%- capture link -%}
-{{hash.title | prepend: "[" | append: "]"}}: {{page}}
-{%- endcapture -%}
-{{link}}
-{% endfor %} 
+[Table of Contents]: toc.html
+[Home]: index.html
+[Conformance]: conformance.html
+[General Requirements]: general-requirements.html
+[Must Support]: must-support.html
+[Observation Summary Table]: observation-summary.html
+[SMART on FHIR Obligations and Capabilities]: scopes.html
+[Guidance]: guidance.html
+[USCDI]: uscdi.html
+[General Guidance]: general-guidance.html
+[Clinical Notes]: clinical-notes.html
+[Medication List]: medication-list.html
+[Basic Provenance]: basic-provenance.html
+[Screening and Assessments]: screening-and-assessments.html
+[Changes Between Versions]: changes-between-versions.html
+[Future of US Core]: future-of-US-core.html
+[Writing Vital Signs]: vitals-write.html
+[Profiles and Extensions]: profiles-and-extensions.html
+[Capability Statements]: capability-statements.html
+[Search Parameters and Operations]: search-parameters-and-operations.html
+[Terminology]: terminology.html
+[Security]: security.html
+[Examples]: examples.html
+[Downloads]: downloads.html
+[Change Log]: changes.html
+[US Core ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.core.html
+[Artifacts Summary]: artifacts.html
+[US Core Client CapabilityStatement]: CapabilityStatement-us-core-client.html
+[US Core Client CapabilityStatement - Testing]: CapabilityStatement-us-core-client-testing.html
+[US Core Client CapabilityStatement - XML Representation]: CapabilityStatement-us-core-client.xml.html
+[US Core Client CapabilityStatement - JSON Representation]: CapabilityStatement-us-core-client.json.html
+[US Core Client CapabilityStatement - TTL Representation]: CapabilityStatement-us-core-client.ttl.html
+[US Core Server CapabilityStatement]: CapabilityStatement-us-core-server.html
+[US Core Server CapabilityStatement - Testing]: CapabilityStatement-us-core-server-testing.html
+[US Core Server CapabilityStatement - XML Representation]: CapabilityStatement-us-core-server.xml.html
+[US Core Server CapabilityStatement - JSON Representation]: CapabilityStatement-us-core-server.json.html
+[US Core Server CapabilityStatement - TTL Representation]: CapabilityStatement-us-core-server.ttl.html
+[US Core Fetch DocumentReference]: OperationDefinition-docref.html
+[US Core Fetch DocumentReference - Testing]: OperationDefinition-docref-testing.html
+[US Core Fetch DocumentReference - XML Representation]: OperationDefinition-docref.xml.html
+[US Core Fetch DocumentReference - JSON Representation]: OperationDefinition-docref.json.html
+[US Core Fetch DocumentReference - TTL Representation]: OperationDefinition-docref.ttl.html
+[USCoreAllergyintoleranceClinicalStatus]: SearchParameter-us-core-allergyintolerance-clinical-status.html
+[USCoreAllergyintoleranceClinicalStatus - Testing]: SearchParameter-us-core-allergyintolerance-clinical-status-testing.html
+[USCoreAllergyintoleranceClinicalStatus - XML Representation]: SearchParameter-us-core-allergyintolerance-clinical-status.xml.html
+[USCoreAllergyintoleranceClinicalStatus - JSON Representation]: SearchParameter-us-core-allergyintolerance-clinical-status.json.html
+[USCoreAllergyintoleranceClinicalStatus - TTL Representation]: SearchParameter-us-core-allergyintolerance-clinical-status.ttl.html
+[USCoreAllergyintolerancePatient]: SearchParameter-us-core-allergyintolerance-patient.html
+[USCoreAllergyintolerancePatient - Testing]: SearchParameter-us-core-allergyintolerance-patient-testing.html
+[USCoreAllergyintolerancePatient - XML Representation]: SearchParameter-us-core-allergyintolerance-patient.xml.html
+[USCoreAllergyintolerancePatient - JSON Representation]: SearchParameter-us-core-allergyintolerance-patient.json.html
+[USCoreAllergyintolerancePatient - TTL Representation]: SearchParameter-us-core-allergyintolerance-patient.ttl.html
+[USCoreCareplanCategory]: SearchParameter-us-core-careplan-category.html
+[USCoreCareplanCategory - Testing]: SearchParameter-us-core-careplan-category-testing.html
+[USCoreCareplanCategory - XML Representation]: SearchParameter-us-core-careplan-category.xml.html
+[USCoreCareplanCategory - JSON Representation]: SearchParameter-us-core-careplan-category.json.html
+[USCoreCareplanCategory - TTL Representation]: SearchParameter-us-core-careplan-category.ttl.html
+[USCoreCareplanDate]: SearchParameter-us-core-careplan-date.html
+[USCoreCareplanDate - Testing]: SearchParameter-us-core-careplan-date-testing.html
+[USCoreCareplanDate - XML Representation]: SearchParameter-us-core-careplan-date.xml.html
+[USCoreCareplanDate - JSON Representation]: SearchParameter-us-core-careplan-date.json.html
+[USCoreCareplanDate - TTL Representation]: SearchParameter-us-core-careplan-date.ttl.html
+[USCoreCareplanPatient]: SearchParameter-us-core-careplan-patient.html
+[USCoreCareplanPatient - Testing]: SearchParameter-us-core-careplan-patient-testing.html
+[USCoreCareplanPatient - XML Representation]: SearchParameter-us-core-careplan-patient.xml.html
+[USCoreCareplanPatient - JSON Representation]: SearchParameter-us-core-careplan-patient.json.html
+[USCoreCareplanPatient - TTL Representation]: SearchParameter-us-core-careplan-patient.ttl.html
+[USCoreCareplanStatus]: SearchParameter-us-core-careplan-status.html
+[USCoreCareplanStatus - Testing]: SearchParameter-us-core-careplan-status-testing.html
+[USCoreCareplanStatus - XML Representation]: SearchParameter-us-core-careplan-status.xml.html
+[USCoreCareplanStatus - JSON Representation]: SearchParameter-us-core-careplan-status.json.html
+[USCoreCareplanStatus - TTL Representation]: SearchParameter-us-core-careplan-status.ttl.html
+[USCoreCareteamPatient]: SearchParameter-us-core-careteam-patient.html
+[USCoreCareteamPatient - Testing]: SearchParameter-us-core-careteam-patient-testing.html
+[USCoreCareteamPatient - XML Representation]: SearchParameter-us-core-careteam-patient.xml.html
+[USCoreCareteamPatient - JSON Representation]: SearchParameter-us-core-careteam-patient.json.html
+[USCoreCareteamPatient - TTL Representation]: SearchParameter-us-core-careteam-patient.ttl.html
+[USCoreCareTeamRole]: SearchParameter-us-core-careteam-role.html
+[USCoreCareTeamRole - Testing]: SearchParameter-us-core-careteam-role-testing.html
+[USCoreCareTeamRole - XML Representation]: SearchParameter-us-core-careteam-role.xml.html
+[USCoreCareTeamRole - JSON Representation]: SearchParameter-us-core-careteam-role.json.html
+[USCoreCareTeamRole - TTL Representation]: SearchParameter-us-core-careteam-role.ttl.html
+[USCoreCareteamStatus]: SearchParameter-us-core-careteam-status.html
+[USCoreCareteamStatus - Testing]: SearchParameter-us-core-careteam-status-testing.html
+[USCoreCareteamStatus - XML Representation]: SearchParameter-us-core-careteam-status.xml.html
+[USCoreCareteamStatus - JSON Representation]: SearchParameter-us-core-careteam-status.json.html
+[USCoreCareteamStatus - TTL Representation]: SearchParameter-us-core-careteam-status.ttl.html
+[USCoreConditionAbatementDate]: SearchParameter-us-core-condition-abatement-date.html
+[USCoreConditionAbatementDate - Testing]: SearchParameter-us-core-condition-abatement-date-testing.html
+[USCoreConditionAbatementDate - XML Representation]: SearchParameter-us-core-condition-abatement-date.xml.html
+[USCoreConditionAbatementDate - JSON Representation]: SearchParameter-us-core-condition-abatement-date.json.html
+[USCoreConditionAbatementDate - TTL Representation]: SearchParameter-us-core-condition-abatement-date.ttl.html
+[USCoreConditionAssertedDate]: SearchParameter-us-core-condition-asserted-date.html
+[USCoreConditionAssertedDate - Testing]: SearchParameter-us-core-condition-asserted-date-testing.html
+[USCoreConditionAssertedDate - XML Representation]: SearchParameter-us-core-condition-asserted-date.xml.html
+[USCoreConditionAssertedDate - JSON Representation]: SearchParameter-us-core-condition-asserted-date.json.html
+[USCoreConditionAssertedDate - TTL Representation]: SearchParameter-us-core-condition-asserted-date.ttl.html
+[USCoreConditionCategory]: SearchParameter-us-core-condition-category.html
+[USCoreConditionCategory - Testing]: SearchParameter-us-core-condition-category-testing.html
+[USCoreConditionCategory - XML Representation]: SearchParameter-us-core-condition-category.xml.html
+[USCoreConditionCategory - JSON Representation]: SearchParameter-us-core-condition-category.json.html
+[USCoreConditionCategory - TTL Representation]: SearchParameter-us-core-condition-category.ttl.html
+[USCoreConditionClinicalStatus]: SearchParameter-us-core-condition-clinical-status.html
+[USCoreConditionClinicalStatus - Testing]: SearchParameter-us-core-condition-clinical-status-testing.html
+[USCoreConditionClinicalStatus - XML Representation]: SearchParameter-us-core-condition-clinical-status.xml.html
+[USCoreConditionClinicalStatus - JSON Representation]: SearchParameter-us-core-condition-clinical-status.json.html
+[USCoreConditionClinicalStatus - TTL Representation]: SearchParameter-us-core-condition-clinical-status.ttl.html
+[USCoreConditionCode]: SearchParameter-us-core-condition-code.html
+[USCoreConditionCode - Testing]: SearchParameter-us-core-condition-code-testing.html
+[USCoreConditionCode - XML Representation]: SearchParameter-us-core-condition-code.xml.html
+[USCoreConditionCode - JSON Representation]: SearchParameter-us-core-condition-code.json.html
+[USCoreConditionCode - TTL Representation]: SearchParameter-us-core-condition-code.ttl.html
+[USCoreConditionEncounter]: SearchParameter-us-core-condition-encounter.html
+[USCoreConditionEncounter - Testing]: SearchParameter-us-core-condition-encounter-testing.html
+[USCoreConditionEncounter - XML Representation]: SearchParameter-us-core-condition-encounter.xml.html
+[USCoreConditionEncounter - JSON Representation]: SearchParameter-us-core-condition-encounter.json.html
+[USCoreConditionEncounter - TTL Representation]: SearchParameter-us-core-condition-encounter.ttl.html
+[USCoreConditionLastUpdated]: SearchParameter-us-core-condition-lastupdated.html
+[USCoreConditionLastUpdated - Testing]: SearchParameter-us-core-condition-lastupdated-testing.html
+[USCoreConditionLastUpdated - XML Representation]: SearchParameter-us-core-condition-lastupdated.xml.html
+[USCoreConditionLastUpdated - JSON Representation]: SearchParameter-us-core-condition-lastupdated.json.html
+[USCoreConditionLastUpdated - TTL Representation]: SearchParameter-us-core-condition-lastupdated.ttl.html
+[USCoreConditionOnsetDate]: SearchParameter-us-core-condition-onset-date.html
+[USCoreConditionOnsetDate - Testing]: SearchParameter-us-core-condition-onset-date-testing.html
+[USCoreConditionOnsetDate - XML Representation]: SearchParameter-us-core-condition-onset-date.xml.html
+[USCoreConditionOnsetDate - JSON Representation]: SearchParameter-us-core-condition-onset-date.json.html
+[USCoreConditionOnsetDate - TTL Representation]: SearchParameter-us-core-condition-onset-date.ttl.html
+[USCoreConditionPatient]: SearchParameter-us-core-condition-patient.html
+[USCoreConditionPatient - Testing]: SearchParameter-us-core-condition-patient-testing.html
+[USCoreConditionPatient - XML Representation]: SearchParameter-us-core-condition-patient.xml.html
+[USCoreConditionPatient - JSON Representation]: SearchParameter-us-core-condition-patient.json.html
+[USCoreConditionPatient - TTL Representation]: SearchParameter-us-core-condition-patient.ttl.html
+[USCoreConditionRecordedDate]: SearchParameter-us-core-condition-recorded-date.html
+[USCoreConditionRecordedDate - Testing]: SearchParameter-us-core-condition-recorded-date-testing.html
+[USCoreConditionRecordedDate - XML Representation]: SearchParameter-us-core-condition-recorded-date.xml.html
+[USCoreConditionRecordedDate - JSON Representation]: SearchParameter-us-core-condition-recorded-date.json.html
+[USCoreConditionRecordedDate - TTL Representation]: SearchParameter-us-core-condition-recorded-date.ttl.html
+[USCoreCoveragePatient]: SearchParameter-us-core-coverage-patient.html
+[USCoreCoveragePatient - Testing]: SearchParameter-us-core-coverage-patient-testing.html
+[USCoreCoveragePatient - XML Representation]: SearchParameter-us-core-coverage-patient.xml.html
+[USCoreCoveragePatient - JSON Representation]: SearchParameter-us-core-coverage-patient.json.html
+[USCoreCoveragePatient - TTL Representation]: SearchParameter-us-core-coverage-patient.ttl.html
+[USCoreDevicePatient]: SearchParameter-us-core-device-patient.html
+[USCoreDevicePatient - Testing]: SearchParameter-us-core-device-patient-testing.html
+[USCoreDevicePatient - XML Representation]: SearchParameter-us-core-device-patient.xml.html
+[USCoreDevicePatient - JSON Representation]: SearchParameter-us-core-device-patient.json.html
+[USCoreDevicePatient - TTL Representation]: SearchParameter-us-core-device-patient.ttl.html
+[USCoreDeviceStatus]: SearchParameter-us-core-device-status.html
+[USCoreDeviceStatus - Testing]: SearchParameter-us-core-device-status-testing.html
+[USCoreDeviceStatus - XML Representation]: SearchParameter-us-core-device-status.xml.html
+[USCoreDeviceStatus - JSON Representation]: SearchParameter-us-core-device-status.json.html
+[USCoreDeviceStatus - TTL Representation]: SearchParameter-us-core-device-status.ttl.html
+[USCoreDeviceType]: SearchParameter-us-core-device-type.html
+[USCoreDeviceType - Testing]: SearchParameter-us-core-device-type-testing.html
+[USCoreDeviceType - XML Representation]: SearchParameter-us-core-device-type.xml.html
+[USCoreDeviceType - JSON Representation]: SearchParameter-us-core-device-type.json.html
+[USCoreDeviceType - TTL Representation]: SearchParameter-us-core-device-type.ttl.html
+[USCoreDiagnosticreportCategory]: SearchParameter-us-core-diagnosticreport-category.html
+[USCoreDiagnosticreportCategory - Testing]: SearchParameter-us-core-diagnosticreport-category-testing.html
+[USCoreDiagnosticreportCategory - XML Representation]: SearchParameter-us-core-diagnosticreport-category.xml.html
+[USCoreDiagnosticreportCategory - JSON Representation]: SearchParameter-us-core-diagnosticreport-category.json.html
+[USCoreDiagnosticreportCategory - TTL Representation]: SearchParameter-us-core-diagnosticreport-category.ttl.html
+[USCoreDiagnosticreportCode]: SearchParameter-us-core-diagnosticreport-code.html
+[USCoreDiagnosticreportCode - Testing]: SearchParameter-us-core-diagnosticreport-code-testing.html
+[USCoreDiagnosticreportCode - XML Representation]: SearchParameter-us-core-diagnosticreport-code.xml.html
+[USCoreDiagnosticreportCode - JSON Representation]: SearchParameter-us-core-diagnosticreport-code.json.html
+[USCoreDiagnosticreportCode - TTL Representation]: SearchParameter-us-core-diagnosticreport-code.ttl.html
+[USCoreDiagnosticreportDate]: SearchParameter-us-core-diagnosticreport-date.html
+[USCoreDiagnosticreportDate - Testing]: SearchParameter-us-core-diagnosticreport-date-testing.html
+[USCoreDiagnosticreportDate - XML Representation]: SearchParameter-us-core-diagnosticreport-date.xml.html
+[USCoreDiagnosticreportDate - JSON Representation]: SearchParameter-us-core-diagnosticreport-date.json.html
+[USCoreDiagnosticreportDate - TTL Representation]: SearchParameter-us-core-diagnosticreport-date.ttl.html
+[USCoreDiagnosticreportLastUpdated]: SearchParameter-us-core-diagnosticreport-lastupdated.html
+[USCoreDiagnosticreportLastUpdated - Testing]: SearchParameter-us-core-diagnosticreport-lastupdated-testing.html
+[USCoreDiagnosticreportLastUpdated - XML Representation]: SearchParameter-us-core-diagnosticreport-lastupdated.xml.html
+[USCoreDiagnosticreportLastUpdated - JSON Representation]: SearchParameter-us-core-diagnosticreport-lastupdated.json.html
+[USCoreDiagnosticreportLastUpdated - TTL Representation]: SearchParameter-us-core-diagnosticreport-lastupdated.ttl.html
+[USCoreDiagnosticreportPatient]: SearchParameter-us-core-diagnosticreport-patient.html
+[USCoreDiagnosticreportPatient - Testing]: SearchParameter-us-core-diagnosticreport-patient-testing.html
+[USCoreDiagnosticreportPatient - XML Representation]: SearchParameter-us-core-diagnosticreport-patient.xml.html
+[USCoreDiagnosticreportPatient - JSON Representation]: SearchParameter-us-core-diagnosticreport-patient.json.html
+[USCoreDiagnosticreportPatient - TTL Representation]: SearchParameter-us-core-diagnosticreport-patient.ttl.html
+[USCoreDiagnosticreportStatus]: SearchParameter-us-core-diagnosticreport-status.html
+[USCoreDiagnosticreportStatus - Testing]: SearchParameter-us-core-diagnosticreport-status-testing.html
+[USCoreDiagnosticreportStatus - XML Representation]: SearchParameter-us-core-diagnosticreport-status.xml.html
+[USCoreDiagnosticreportStatus - JSON Representation]: SearchParameter-us-core-diagnosticreport-status.json.html
+[USCoreDiagnosticreportStatus - TTL Representation]: SearchParameter-us-core-diagnosticreport-status.ttl.html
+[USCoreDocumentreferenceCategory]: SearchParameter-us-core-documentreference-category.html
+[USCoreDocumentreferenceCategory - Testing]: SearchParameter-us-core-documentreference-category-testing.html
+[USCoreDocumentreferenceCategory - XML Representation]: SearchParameter-us-core-documentreference-category.xml.html
+[USCoreDocumentreferenceCategory - JSON Representation]: SearchParameter-us-core-documentreference-category.json.html
+[USCoreDocumentreferenceCategory - TTL Representation]: SearchParameter-us-core-documentreference-category.ttl.html
+[USCoreDocumentreferenceDate]: SearchParameter-us-core-documentreference-date.html
+[USCoreDocumentreferenceDate - Testing]: SearchParameter-us-core-documentreference-date-testing.html
+[USCoreDocumentreferenceDate - XML Representation]: SearchParameter-us-core-documentreference-date.xml.html
+[USCoreDocumentreferenceDate - JSON Representation]: SearchParameter-us-core-documentreference-date.json.html
+[USCoreDocumentreferenceDate - TTL Representation]: SearchParameter-us-core-documentreference-date.ttl.html
+[USCoreDocumentreferenceId]: SearchParameter-us-core-documentreference-id.html
+[USCoreDocumentreferenceId - Testing]: SearchParameter-us-core-documentreference-id-testing.html
+[USCoreDocumentreferenceId - XML Representation]: SearchParameter-us-core-documentreference-id.xml.html
+[USCoreDocumentreferenceId - JSON Representation]: SearchParameter-us-core-documentreference-id.json.html
+[USCoreDocumentreferenceId - TTL Representation]: SearchParameter-us-core-documentreference-id.ttl.html
+[USCoreDocumentreferencePatient]: SearchParameter-us-core-documentreference-patient.html
+[USCoreDocumentreferencePatient - Testing]: SearchParameter-us-core-documentreference-patient-testing.html
+[USCoreDocumentreferencePatient - XML Representation]: SearchParameter-us-core-documentreference-patient.xml.html
+[USCoreDocumentreferencePatient - JSON Representation]: SearchParameter-us-core-documentreference-patient.json.html
+[USCoreDocumentreferencePatient - TTL Representation]: SearchParameter-us-core-documentreference-patient.ttl.html
+[USCoreDocumentreferencePeriod]: SearchParameter-us-core-documentreference-period.html
+[USCoreDocumentreferencePeriod - Testing]: SearchParameter-us-core-documentreference-period-testing.html
+[USCoreDocumentreferencePeriod - XML Representation]: SearchParameter-us-core-documentreference-period.xml.html
+[USCoreDocumentreferencePeriod - JSON Representation]: SearchParameter-us-core-documentreference-period.json.html
+[USCoreDocumentreferencePeriod - TTL Representation]: SearchParameter-us-core-documentreference-period.ttl.html
+[USCoreDocumentreferenceStatus]: SearchParameter-us-core-documentreference-status.html
+[USCoreDocumentreferenceStatus - Testing]: SearchParameter-us-core-documentreference-status-testing.html
+[USCoreDocumentreferenceStatus - XML Representation]: SearchParameter-us-core-documentreference-status.xml.html
+[USCoreDocumentreferenceStatus - JSON Representation]: SearchParameter-us-core-documentreference-status.json.html
+[USCoreDocumentreferenceStatus - TTL Representation]: SearchParameter-us-core-documentreference-status.ttl.html
+[USCoreDocumentreferenceType]: SearchParameter-us-core-documentreference-type.html
+[USCoreDocumentreferenceType - Testing]: SearchParameter-us-core-documentreference-type-testing.html
+[USCoreDocumentreferenceType - XML Representation]: SearchParameter-us-core-documentreference-type.xml.html
+[USCoreDocumentreferenceType - JSON Representation]: SearchParameter-us-core-documentreference-type.json.html
+[USCoreDocumentreferenceType - TTL Representation]: SearchParameter-us-core-documentreference-type.ttl.html
+[USCoreEncounterClass]: SearchParameter-us-core-encounter-class.html
+[USCoreEncounterClass - Testing]: SearchParameter-us-core-encounter-class-testing.html
+[USCoreEncounterClass - XML Representation]: SearchParameter-us-core-encounter-class.xml.html
+[USCoreEncounterClass - JSON Representation]: SearchParameter-us-core-encounter-class.json.html
+[USCoreEncounterClass - TTL Representation]: SearchParameter-us-core-encounter-class.ttl.html
+[USCoreEncounterDate]: SearchParameter-us-core-encounter-date.html
+[USCoreEncounterDate - Testing]: SearchParameter-us-core-encounter-date-testing.html
+[USCoreEncounterDate - XML Representation]: SearchParameter-us-core-encounter-date.xml.html
+[USCoreEncounterDate - JSON Representation]: SearchParameter-us-core-encounter-date.json.html
+[USCoreEncounterDate - TTL Representation]: SearchParameter-us-core-encounter-date.ttl.html
+[USCoreEncounterDischargeDisposition]: SearchParameter-us-core-encounter-discharge-disposition.html
+[USCoreEncounterDischargeDisposition - Testing]: SearchParameter-us-core-encounter-discharge-disposition-testing.html
+[USCoreEncounterDischargeDisposition - XML Representation]: SearchParameter-us-core-encounter-discharge-disposition.xml.html
+[USCoreEncounterDischargeDisposition - JSON Representation]: SearchParameter-us-core-encounter-discharge-disposition.json.html
+[USCoreEncounterDischargeDisposition - TTL Representation]: SearchParameter-us-core-encounter-discharge-disposition.ttl.html
+[USCoreEncounterId]: SearchParameter-us-core-encounter-id.html
+[USCoreEncounterId - Testing]: SearchParameter-us-core-encounter-id-testing.html
+[USCoreEncounterId - XML Representation]: SearchParameter-us-core-encounter-id.xml.html
+[USCoreEncounterId - JSON Representation]: SearchParameter-us-core-encounter-id.json.html
+[USCoreEncounterId - TTL Representation]: SearchParameter-us-core-encounter-id.ttl.html
+[USCoreEncounterIdentifier]: SearchParameter-us-core-encounter-identifier.html
+[USCoreEncounterIdentifier - Testing]: SearchParameter-us-core-encounter-identifier-testing.html
+[USCoreEncounterIdentifier - XML Representation]: SearchParameter-us-core-encounter-identifier.xml.html
+[USCoreEncounterIdentifier - JSON Representation]: SearchParameter-us-core-encounter-identifier.json.html
+[USCoreEncounterIdentifier - TTL Representation]: SearchParameter-us-core-encounter-identifier.ttl.html
+[USCoreEncounterLastUpdated]: SearchParameter-us-core-encounter-lastupdated.html
+[USCoreEncounterLastUpdated - Testing]: SearchParameter-us-core-encounter-lastupdated-testing.html
+[USCoreEncounterLastUpdated - XML Representation]: SearchParameter-us-core-encounter-lastupdated.xml.html
+[USCoreEncounterLastUpdated - JSON Representation]: SearchParameter-us-core-encounter-lastupdated.json.html
+[USCoreEncounterLastUpdated - TTL Representation]: SearchParameter-us-core-encounter-lastupdated.ttl.html
+[USCoreEncounterLocation]: SearchParameter-us-core-encounter-location.html
+[USCoreEncounterLocation - Testing]: SearchParameter-us-core-encounter-location-testing.html
+[USCoreEncounterLocation - XML Representation]: SearchParameter-us-core-encounter-location.xml.html
+[USCoreEncounterLocation - JSON Representation]: SearchParameter-us-core-encounter-location.json.html
+[USCoreEncounterLocation - TTL Representation]: SearchParameter-us-core-encounter-location.ttl.html
+[USCoreEncounterPatient]: SearchParameter-us-core-encounter-patient.html
+[USCoreEncounterPatient - Testing]: SearchParameter-us-core-encounter-patient-testing.html
+[USCoreEncounterPatient - XML Representation]: SearchParameter-us-core-encounter-patient.xml.html
+[USCoreEncounterPatient - JSON Representation]: SearchParameter-us-core-encounter-patient.json.html
+[USCoreEncounterPatient - TTL Representation]: SearchParameter-us-core-encounter-patient.ttl.html
+[USCoreEncounterStatus]: SearchParameter-us-core-encounter-status.html
+[USCoreEncounterStatus - Testing]: SearchParameter-us-core-encounter-status-testing.html
+[USCoreEncounterStatus - XML Representation]: SearchParameter-us-core-encounter-status.xml.html
+[USCoreEncounterStatus - JSON Representation]: SearchParameter-us-core-encounter-status.json.html
+[USCoreEncounterStatus - TTL Representation]: SearchParameter-us-core-encounter-status.ttl.html
+[USCoreEncounterType]: SearchParameter-us-core-encounter-type.html
+[USCoreEncounterType - Testing]: SearchParameter-us-core-encounter-type-testing.html
+[USCoreEncounterType - XML Representation]: SearchParameter-us-core-encounter-type.xml.html
+[USCoreEncounterType - JSON Representation]: SearchParameter-us-core-encounter-type.json.html
+[USCoreEncounterType - TTL Representation]: SearchParameter-us-core-encounter-type.ttl.html
+[USCoreEthnicity]: SearchParameter-us-core-ethnicity.html
+[USCoreEthnicity - Testing]: SearchParameter-us-core-ethnicity-testing.html
+[USCoreEthnicity - XML Representation]: SearchParameter-us-core-ethnicity.xml.html
+[USCoreEthnicity - JSON Representation]: SearchParameter-us-core-ethnicity.json.html
+[USCoreEthnicity - TTL Representation]: SearchParameter-us-core-ethnicity.ttl.html
+[USCoreGoalDescription]: SearchParameter-us-core-goal-description.html
+[USCoreGoalDescription - Testing]: SearchParameter-us-core-goal-description-testing.html
+[USCoreGoalDescription - XML Representation]: SearchParameter-us-core-goal-description.xml.html
+[USCoreGoalDescription - JSON Representation]: SearchParameter-us-core-goal-description.json.html
+[USCoreGoalDescription - TTL Representation]: SearchParameter-us-core-goal-description.ttl.html
+[USCoreGoalLifecycleStatus]: SearchParameter-us-core-goal-lifecycle-status.html
+[USCoreGoalLifecycleStatus - Testing]: SearchParameter-us-core-goal-lifecycle-status-testing.html
+[USCoreGoalLifecycleStatus - XML Representation]: SearchParameter-us-core-goal-lifecycle-status.xml.html
+[USCoreGoalLifecycleStatus - JSON Representation]: SearchParameter-us-core-goal-lifecycle-status.json.html
+[USCoreGoalLifecycleStatus - TTL Representation]: SearchParameter-us-core-goal-lifecycle-status.ttl.html
+[USCoreGoalPatient]: SearchParameter-us-core-goal-patient.html
+[USCoreGoalPatient - Testing]: SearchParameter-us-core-goal-patient-testing.html
+[USCoreGoalPatient - XML Representation]: SearchParameter-us-core-goal-patient.xml.html
+[USCoreGoalPatient - JSON Representation]: SearchParameter-us-core-goal-patient.json.html
+[USCoreGoalPatient - TTL Representation]: SearchParameter-us-core-goal-patient.ttl.html
+[USCoreGoalTargetDate]: SearchParameter-us-core-goal-target-date.html
+[USCoreGoalTargetDate - Testing]: SearchParameter-us-core-goal-target-date-testing.html
+[USCoreGoalTargetDate - XML Representation]: SearchParameter-us-core-goal-target-date.xml.html
+[USCoreGoalTargetDate - JSON Representation]: SearchParameter-us-core-goal-target-date.json.html
+[USCoreGoalTargetDate - TTL Representation]: SearchParameter-us-core-goal-target-date.ttl.html
+[USCoreImmunizationDate]: SearchParameter-us-core-immunization-date.html
+[USCoreImmunizationDate - Testing]: SearchParameter-us-core-immunization-date-testing.html
+[USCoreImmunizationDate - XML Representation]: SearchParameter-us-core-immunization-date.xml.html
+[USCoreImmunizationDate - JSON Representation]: SearchParameter-us-core-immunization-date.json.html
+[USCoreImmunizationDate - TTL Representation]: SearchParameter-us-core-immunization-date.ttl.html
+[USCoreImmunizationPatient]: SearchParameter-us-core-immunization-patient.html
+[USCoreImmunizationPatient - Testing]: SearchParameter-us-core-immunization-patient-testing.html
+[USCoreImmunizationPatient - XML Representation]: SearchParameter-us-core-immunization-patient.xml.html
+[USCoreImmunizationPatient - JSON Representation]: SearchParameter-us-core-immunization-patient.json.html
+[USCoreImmunizationPatient - TTL Representation]: SearchParameter-us-core-immunization-patient.ttl.html
+[USCoreImmunizationStatus]: SearchParameter-us-core-immunization-status.html
+[USCoreImmunizationStatus - Testing]: SearchParameter-us-core-immunization-status-testing.html
+[USCoreImmunizationStatus - XML Representation]: SearchParameter-us-core-immunization-status.xml.html
+[USCoreImmunizationStatus - JSON Representation]: SearchParameter-us-core-immunization-status.json.html
+[USCoreImmunizationStatus - TTL Representation]: SearchParameter-us-core-immunization-status.ttl.html
+[USCoreLocationAddress]: SearchParameter-us-core-location-address.html
+[USCoreLocationAddress - Testing]: SearchParameter-us-core-location-address-testing.html
+[USCoreLocationAddress - XML Representation]: SearchParameter-us-core-location-address.xml.html
+[USCoreLocationAddress - JSON Representation]: SearchParameter-us-core-location-address.json.html
+[USCoreLocationAddress - TTL Representation]: SearchParameter-us-core-location-address.ttl.html
+[USCoreLocationAddressCity]: SearchParameter-us-core-location-address-city.html
+[USCoreLocationAddressCity - Testing]: SearchParameter-us-core-location-address-city-testing.html
+[USCoreLocationAddressCity - XML Representation]: SearchParameter-us-core-location-address-city.xml.html
+[USCoreLocationAddressCity - JSON Representation]: SearchParameter-us-core-location-address-city.json.html
+[USCoreLocationAddressCity - TTL Representation]: SearchParameter-us-core-location-address-city.ttl.html
+[USCoreLocationAddressPostalcode]: SearchParameter-us-core-location-address-postalcode.html
+[USCoreLocationAddressPostalcode - Testing]: SearchParameter-us-core-location-address-postalcode-testing.html
+[USCoreLocationAddressPostalcode - XML Representation]: SearchParameter-us-core-location-address-postalcode.xml.html
+[USCoreLocationAddressPostalcode - JSON Representation]: SearchParameter-us-core-location-address-postalcode.json.html
+[USCoreLocationAddressPostalcode - TTL Representation]: SearchParameter-us-core-location-address-postalcode.ttl.html
+[USCoreLocationAddressState]: SearchParameter-us-core-location-address-state.html
+[USCoreLocationAddressState - Testing]: SearchParameter-us-core-location-address-state-testing.html
+[USCoreLocationAddressState - XML Representation]: SearchParameter-us-core-location-address-state.xml.html
+[USCoreLocationAddressState - JSON Representation]: SearchParameter-us-core-location-address-state.json.html
+[USCoreLocationAddressState - TTL Representation]: SearchParameter-us-core-location-address-state.ttl.html
+[USCoreLocationName]: SearchParameter-us-core-location-name.html
+[USCoreLocationName - Testing]: SearchParameter-us-core-location-name-testing.html
+[USCoreLocationName - XML Representation]: SearchParameter-us-core-location-name.xml.html
+[USCoreLocationName - JSON Representation]: SearchParameter-us-core-location-name.json.html
+[USCoreLocationName - TTL Representation]: SearchParameter-us-core-location-name.ttl.html
+[USCoreMedicationdispensePatient]: SearchParameter-us-core-medicationdispense-patient.html
+[USCoreMedicationdispensePatient - Testing]: SearchParameter-us-core-medicationdispense-patient-testing.html
+[USCoreMedicationdispensePatient - XML Representation]: SearchParameter-us-core-medicationdispense-patient.xml.html
+[USCoreMedicationdispensePatient - JSON Representation]: SearchParameter-us-core-medicationdispense-patient.json.html
+[USCoreMedicationdispensePatient - TTL Representation]: SearchParameter-us-core-medicationdispense-patient.ttl.html
+[USCoreMedicationdispenseStatus]: SearchParameter-us-core-medicationdispense-status.html
+[USCoreMedicationdispenseStatus - Testing]: SearchParameter-us-core-medicationdispense-status-testing.html
+[USCoreMedicationdispenseStatus - XML Representation]: SearchParameter-us-core-medicationdispense-status.xml.html
+[USCoreMedicationdispenseStatus - JSON Representation]: SearchParameter-us-core-medicationdispense-status.json.html
+[USCoreMedicationdispenseStatus - TTL Representation]: SearchParameter-us-core-medicationdispense-status.ttl.html
+[USCoreMedicationdispenseType]: SearchParameter-us-core-medicationdispense-type.html
+[USCoreMedicationdispenseType - Testing]: SearchParameter-us-core-medicationdispense-type-testing.html
+[USCoreMedicationdispenseType - XML Representation]: SearchParameter-us-core-medicationdispense-type.xml.html
+[USCoreMedicationdispenseType - JSON Representation]: SearchParameter-us-core-medicationdispense-type.json.html
+[USCoreMedicationdispenseType - TTL Representation]: SearchParameter-us-core-medicationdispense-type.ttl.html
+[USCoreMedicationrequestAuthoredon]: SearchParameter-us-core-medicationrequest-authoredon.html
+[USCoreMedicationrequestAuthoredon - Testing]: SearchParameter-us-core-medicationrequest-authoredon-testing.html
+[USCoreMedicationrequestAuthoredon - XML Representation]: SearchParameter-us-core-medicationrequest-authoredon.xml.html
+[USCoreMedicationrequestAuthoredon - JSON Representation]: SearchParameter-us-core-medicationrequest-authoredon.json.html
+[USCoreMedicationrequestAuthoredon - TTL Representation]: SearchParameter-us-core-medicationrequest-authoredon.ttl.html
+[USCoreMedicationrequestEncounter]: SearchParameter-us-core-medicationrequest-encounter.html
+[USCoreMedicationrequestEncounter - Testing]: SearchParameter-us-core-medicationrequest-encounter-testing.html
+[USCoreMedicationrequestEncounter - XML Representation]: SearchParameter-us-core-medicationrequest-encounter.xml.html
+[USCoreMedicationrequestEncounter - JSON Representation]: SearchParameter-us-core-medicationrequest-encounter.json.html
+[USCoreMedicationrequestEncounter - TTL Representation]: SearchParameter-us-core-medicationrequest-encounter.ttl.html
+[USCoreMedicationrequestIntent]: SearchParameter-us-core-medicationrequest-intent.html
+[USCoreMedicationrequestIntent - Testing]: SearchParameter-us-core-medicationrequest-intent-testing.html
+[USCoreMedicationrequestIntent - XML Representation]: SearchParameter-us-core-medicationrequest-intent.xml.html
+[USCoreMedicationrequestIntent - JSON Representation]: SearchParameter-us-core-medicationrequest-intent.json.html
+[USCoreMedicationrequestIntent - TTL Representation]: SearchParameter-us-core-medicationrequest-intent.ttl.html
+[USCoreMedicationrequestPatient]: SearchParameter-us-core-medicationrequest-patient.html
+[USCoreMedicationrequestPatient - Testing]: SearchParameter-us-core-medicationrequest-patient-testing.html
+[USCoreMedicationrequestPatient - XML Representation]: SearchParameter-us-core-medicationrequest-patient.xml.html
+[USCoreMedicationrequestPatient - JSON Representation]: SearchParameter-us-core-medicationrequest-patient.json.html
+[USCoreMedicationrequestPatient - TTL Representation]: SearchParameter-us-core-medicationrequest-patient.ttl.html
+[USCoreMedicationrequestStatus]: SearchParameter-us-core-medicationrequest-status.html
+[USCoreMedicationrequestStatus - Testing]: SearchParameter-us-core-medicationrequest-status-testing.html
+[USCoreMedicationrequestStatus - XML Representation]: SearchParameter-us-core-medicationrequest-status.xml.html
+[USCoreMedicationrequestStatus - JSON Representation]: SearchParameter-us-core-medicationrequest-status.json.html
+[USCoreMedicationrequestStatus - TTL Representation]: SearchParameter-us-core-medicationrequest-status.ttl.html
+[USCoreObservationCategory]: SearchParameter-us-core-observation-category.html
+[USCoreObservationCategory - Testing]: SearchParameter-us-core-observation-category-testing.html
+[USCoreObservationCategory - XML Representation]: SearchParameter-us-core-observation-category.xml.html
+[USCoreObservationCategory - JSON Representation]: SearchParameter-us-core-observation-category.json.html
+[USCoreObservationCategory - TTL Representation]: SearchParameter-us-core-observation-category.ttl.html
+[USCoreObservationCode]: SearchParameter-us-core-observation-code.html
+[USCoreObservationCode - Testing]: SearchParameter-us-core-observation-code-testing.html
+[USCoreObservationCode - XML Representation]: SearchParameter-us-core-observation-code.xml.html
+[USCoreObservationCode - JSON Representation]: SearchParameter-us-core-observation-code.json.html
+[USCoreObservationCode - TTL Representation]: SearchParameter-us-core-observation-code.ttl.html
+[USCoreObservationDate]: SearchParameter-us-core-observation-date.html
+[USCoreObservationDate - Testing]: SearchParameter-us-core-observation-date-testing.html
+[USCoreObservationDate - XML Representation]: SearchParameter-us-core-observation-date.xml.html
+[USCoreObservationDate - JSON Representation]: SearchParameter-us-core-observation-date.json.html
+[USCoreObservationDate - TTL Representation]: SearchParameter-us-core-observation-date.ttl.html
+[USCoreObservationLastUpdated]: SearchParameter-us-core-observation-lastupdated.html
+[USCoreObservationLastUpdated - Testing]: SearchParameter-us-core-observation-lastupdated-testing.html
+[USCoreObservationLastUpdated - XML Representation]: SearchParameter-us-core-observation-lastupdated.xml.html
+[USCoreObservationLastUpdated - JSON Representation]: SearchParameter-us-core-observation-lastupdated.json.html
+[USCoreObservationLastUpdated - TTL Representation]: SearchParameter-us-core-observation-lastupdated.ttl.html
+[USCoreObservationPatient]: SearchParameter-us-core-observation-patient.html
+[USCoreObservationPatient - Testing]: SearchParameter-us-core-observation-patient-testing.html
+[USCoreObservationPatient - XML Representation]: SearchParameter-us-core-observation-patient.xml.html
+[USCoreObservationPatient - JSON Representation]: SearchParameter-us-core-observation-patient.json.html
+[USCoreObservationPatient - TTL Representation]: SearchParameter-us-core-observation-patient.ttl.html
+[USCoreObservationStatus]: SearchParameter-us-core-observation-status.html
+[USCoreObservationStatus - Testing]: SearchParameter-us-core-observation-status-testing.html
+[USCoreObservationStatus - XML Representation]: SearchParameter-us-core-observation-status.xml.html
+[USCoreObservationStatus - JSON Representation]: SearchParameter-us-core-observation-status.json.html
+[USCoreObservationStatus - TTL Representation]: SearchParameter-us-core-observation-status.ttl.html
+[USCoreOrganizationAddress]: SearchParameter-us-core-organization-address.html
+[USCoreOrganizationAddress - Testing]: SearchParameter-us-core-organization-address-testing.html
+[USCoreOrganizationAddress - XML Representation]: SearchParameter-us-core-organization-address.xml.html
+[USCoreOrganizationAddress - JSON Representation]: SearchParameter-us-core-organization-address.json.html
+[USCoreOrganizationAddress - TTL Representation]: SearchParameter-us-core-organization-address.ttl.html
+[USCoreOrganizationName]: SearchParameter-us-core-organization-name.html
+[USCoreOrganizationName - Testing]: SearchParameter-us-core-organization-name-testing.html
+[USCoreOrganizationName - XML Representation]: SearchParameter-us-core-organization-name.xml.html
+[USCoreOrganizationName - JSON Representation]: SearchParameter-us-core-organization-name.json.html
+[USCoreOrganizationName - TTL Representation]: SearchParameter-us-core-organization-name.ttl.html
+[USCorePatientBirthdate]: SearchParameter-us-core-patient-birthdate.html
+[USCorePatientBirthdate - Testing]: SearchParameter-us-core-patient-birthdate-testing.html
+[USCorePatientBirthdate - XML Representation]: SearchParameter-us-core-patient-birthdate.xml.html
+[USCorePatientBirthdate - JSON Representation]: SearchParameter-us-core-patient-birthdate.json.html
+[USCorePatientBirthdate - TTL Representation]: SearchParameter-us-core-patient-birthdate.ttl.html
+[USCorePatientDeathDate]: SearchParameter-us-core-patient-death-date.html
+[USCorePatientDeathDate - Testing]: SearchParameter-us-core-patient-death-date-testing.html
+[USCorePatientDeathDate - XML Representation]: SearchParameter-us-core-patient-death-date.xml.html
+[USCorePatientDeathDate - JSON Representation]: SearchParameter-us-core-patient-death-date.json.html
+[USCorePatientDeathDate - TTL Representation]: SearchParameter-us-core-patient-death-date.ttl.html
+[USCorePatientFamily]: SearchParameter-us-core-patient-family.html
+[USCorePatientFamily - Testing]: SearchParameter-us-core-patient-family-testing.html
+[USCorePatientFamily - XML Representation]: SearchParameter-us-core-patient-family.xml.html
+[USCorePatientFamily - JSON Representation]: SearchParameter-us-core-patient-family.json.html
+[USCorePatientFamily - TTL Representation]: SearchParameter-us-core-patient-family.ttl.html
+[USCorePatientGender]: SearchParameter-us-core-patient-gender.html
+[USCorePatientGender - Testing]: SearchParameter-us-core-patient-gender-testing.html
+[USCorePatientGender - XML Representation]: SearchParameter-us-core-patient-gender.xml.html
+[USCorePatientGender - JSON Representation]: SearchParameter-us-core-patient-gender.json.html
+[USCorePatientGender - TTL Representation]: SearchParameter-us-core-patient-gender.ttl.html
+[USCorePatientGenderIdentity]: SearchParameter-us-core-patient-gender-identity.html
+[USCorePatientGenderIdentity - Testing]: SearchParameter-us-core-patient-gender-identity-testing.html
+[USCorePatientGenderIdentity - XML Representation]: SearchParameter-us-core-patient-gender-identity.xml.html
+[USCorePatientGenderIdentity - JSON Representation]: SearchParameter-us-core-patient-gender-identity.json.html
+[USCorePatientGenderIdentity - TTL Representation]: SearchParameter-us-core-patient-gender-identity.ttl.html
+[USCorePatientGiven]: SearchParameter-us-core-patient-given.html
+[USCorePatientGiven - Testing]: SearchParameter-us-core-patient-given-testing.html
+[USCorePatientGiven - XML Representation]: SearchParameter-us-core-patient-given.xml.html
+[USCorePatientGiven - JSON Representation]: SearchParameter-us-core-patient-given.json.html
+[USCorePatientGiven - TTL Representation]: SearchParameter-us-core-patient-given.ttl.html
+[USCorePatientId]: SearchParameter-us-core-patient-id.html
+[USCorePatientId - Testing]: SearchParameter-us-core-patient-id-testing.html
+[USCorePatientId - XML Representation]: SearchParameter-us-core-patient-id.xml.html
+[USCorePatientId - JSON Representation]: SearchParameter-us-core-patient-id.json.html
+[USCorePatientId - TTL Representation]: SearchParameter-us-core-patient-id.ttl.html
+[USCorePatientIdentifier]: SearchParameter-us-core-patient-identifier.html
+[USCorePatientIdentifier - Testing]: SearchParameter-us-core-patient-identifier-testing.html
+[USCorePatientIdentifier - XML Representation]: SearchParameter-us-core-patient-identifier.xml.html
+[USCorePatientIdentifier - JSON Representation]: SearchParameter-us-core-patient-identifier.json.html
+[USCorePatientIdentifier - TTL Representation]: SearchParameter-us-core-patient-identifier.ttl.html
+[USCorePatientName]: SearchParameter-us-core-patient-name.html
+[USCorePatientName - Testing]: SearchParameter-us-core-patient-name-testing.html
+[USCorePatientName - XML Representation]: SearchParameter-us-core-patient-name.xml.html
+[USCorePatientName - JSON Representation]: SearchParameter-us-core-patient-name.json.html
+[USCorePatientName - TTL Representation]: SearchParameter-us-core-patient-name.ttl.html
+[USCorePractitionerId]: SearchParameter-us-core-practitioner-id.html
+[USCorePractitionerId - Testing]: SearchParameter-us-core-practitioner-id-testing.html
+[USCorePractitionerId - XML Representation]: SearchParameter-us-core-practitioner-id.xml.html
+[USCorePractitionerId - JSON Representation]: SearchParameter-us-core-practitioner-id.json.html
+[USCorePractitionerId - TTL Representation]: SearchParameter-us-core-practitioner-id.ttl.html
+[USCorePractitionerIdentifier]: SearchParameter-us-core-practitioner-identifier.html
+[USCorePractitionerIdentifier - Testing]: SearchParameter-us-core-practitioner-identifier-testing.html
+[USCorePractitionerIdentifier - XML Representation]: SearchParameter-us-core-practitioner-identifier.xml.html
+[USCorePractitionerIdentifier - JSON Representation]: SearchParameter-us-core-practitioner-identifier.json.html
+[USCorePractitionerIdentifier - TTL Representation]: SearchParameter-us-core-practitioner-identifier.ttl.html
+[USCorePractitionerName]: SearchParameter-us-core-practitioner-name.html
+[USCorePractitionerName - Testing]: SearchParameter-us-core-practitioner-name-testing.html
+[USCorePractitionerName - XML Representation]: SearchParameter-us-core-practitioner-name.xml.html
+[USCorePractitionerName - JSON Representation]: SearchParameter-us-core-practitioner-name.json.html
+[USCorePractitionerName - TTL Representation]: SearchParameter-us-core-practitioner-name.ttl.html
+[USCorePractitionerrolePractitioner]: SearchParameter-us-core-practitionerrole-practitioner.html
+[USCorePractitionerrolePractitioner - Testing]: SearchParameter-us-core-practitionerrole-practitioner-testing.html
+[USCorePractitionerrolePractitioner - XML Representation]: SearchParameter-us-core-practitionerrole-practitioner.xml.html
+[USCorePractitionerrolePractitioner - JSON Representation]: SearchParameter-us-core-practitionerrole-practitioner.json.html
+[USCorePractitionerrolePractitioner - TTL Representation]: SearchParameter-us-core-practitionerrole-practitioner.ttl.html
+[USCorePractitionerroleSpecialty]: SearchParameter-us-core-practitionerrole-specialty.html
+[USCorePractitionerroleSpecialty - Testing]: SearchParameter-us-core-practitionerrole-specialty-testing.html
+[USCorePractitionerroleSpecialty - XML Representation]: SearchParameter-us-core-practitionerrole-specialty.xml.html
+[USCorePractitionerroleSpecialty - JSON Representation]: SearchParameter-us-core-practitionerrole-specialty.json.html
+[USCorePractitionerroleSpecialty - TTL Representation]: SearchParameter-us-core-practitionerrole-specialty.ttl.html
+[USCoreProcedureCode]: SearchParameter-us-core-procedure-code.html
+[USCoreProcedureCode - Testing]: SearchParameter-us-core-procedure-code-testing.html
+[USCoreProcedureCode - XML Representation]: SearchParameter-us-core-procedure-code.xml.html
+[USCoreProcedureCode - JSON Representation]: SearchParameter-us-core-procedure-code.json.html
+[USCoreProcedureCode - TTL Representation]: SearchParameter-us-core-procedure-code.ttl.html
+[USCoreProcedureDate]: SearchParameter-us-core-procedure-date.html
+[USCoreProcedureDate - Testing]: SearchParameter-us-core-procedure-date-testing.html
+[USCoreProcedureDate - XML Representation]: SearchParameter-us-core-procedure-date.xml.html
+[USCoreProcedureDate - JSON Representation]: SearchParameter-us-core-procedure-date.json.html
+[USCoreProcedureDate - TTL Representation]: SearchParameter-us-core-procedure-date.ttl.html
+[USCoreProcedurePatient]: SearchParameter-us-core-procedure-patient.html
+[USCoreProcedurePatient - Testing]: SearchParameter-us-core-procedure-patient-testing.html
+[USCoreProcedurePatient - XML Representation]: SearchParameter-us-core-procedure-patient.xml.html
+[USCoreProcedurePatient - JSON Representation]: SearchParameter-us-core-procedure-patient.json.html
+[USCoreProcedurePatient - TTL Representation]: SearchParameter-us-core-procedure-patient.ttl.html
+[USCoreProcedureStatus]: SearchParameter-us-core-procedure-status.html
+[USCoreProcedureStatus - Testing]: SearchParameter-us-core-procedure-status-testing.html
+[USCoreProcedureStatus - XML Representation]: SearchParameter-us-core-procedure-status.xml.html
+[USCoreProcedureStatus - JSON Representation]: SearchParameter-us-core-procedure-status.json.html
+[USCoreProcedureStatus - TTL Representation]: SearchParameter-us-core-procedure-status.ttl.html
+[USCoreQuestionnaireresponseAuthored]: SearchParameter-us-core-questionnaireresponse-authored.html
+[USCoreQuestionnaireresponseAuthored - Testing]: SearchParameter-us-core-questionnaireresponse-authored-testing.html
+[USCoreQuestionnaireresponseAuthored - XML Representation]: SearchParameter-us-core-questionnaireresponse-authored.xml.html
+[USCoreQuestionnaireresponseAuthored - JSON Representation]: SearchParameter-us-core-questionnaireresponse-authored.json.html
+[USCoreQuestionnaireresponseAuthored - TTL Representation]: SearchParameter-us-core-questionnaireresponse-authored.ttl.html
+[USCoreQuestionnaireresponseId]: SearchParameter-us-core-questionnaireresponse-id.html
+[USCoreQuestionnaireresponseId - Testing]: SearchParameter-us-core-questionnaireresponse-id-testing.html
+[USCoreQuestionnaireresponseId - XML Representation]: SearchParameter-us-core-questionnaireresponse-id.xml.html
+[USCoreQuestionnaireresponseId - JSON Representation]: SearchParameter-us-core-questionnaireresponse-id.json.html
+[USCoreQuestionnaireresponseId - TTL Representation]: SearchParameter-us-core-questionnaireresponse-id.ttl.html
+[USCoreQuestionnaireresponsePatient]: SearchParameter-us-core-questionnaireresponse-patient.html
+[USCoreQuestionnaireresponsePatient - Testing]: SearchParameter-us-core-questionnaireresponse-patient-testing.html
+[USCoreQuestionnaireresponsePatient - XML Representation]: SearchParameter-us-core-questionnaireresponse-patient.xml.html
+[USCoreQuestionnaireresponsePatient - JSON Representation]: SearchParameter-us-core-questionnaireresponse-patient.json.html
+[USCoreQuestionnaireresponsePatient - TTL Representation]: SearchParameter-us-core-questionnaireresponse-patient.ttl.html
+[USCoreQuestionnaireresponseQuestionnaire]: SearchParameter-us-core-questionnaireresponse-questionnaire.html
+[USCoreQuestionnaireresponseQuestionnaire - Testing]: SearchParameter-us-core-questionnaireresponse-questionnaire-testing.html
+[USCoreQuestionnaireresponseQuestionnaire - XML Representation]: SearchParameter-us-core-questionnaireresponse-questionnaire.xml.html
+[USCoreQuestionnaireresponseQuestionnaire - JSON Representation]: SearchParameter-us-core-questionnaireresponse-questionnaire.json.html
+[USCoreQuestionnaireresponseQuestionnaire - TTL Representation]: SearchParameter-us-core-questionnaireresponse-questionnaire.ttl.html
+[USCoreQuestionnaireresponseStatus]: SearchParameter-us-core-questionnaireresponse-status.html
+[USCoreQuestionnaireresponseStatus - Testing]: SearchParameter-us-core-questionnaireresponse-status-testing.html
+[USCoreQuestionnaireresponseStatus - XML Representation]: SearchParameter-us-core-questionnaireresponse-status.xml.html
+[USCoreQuestionnaireresponseStatus - JSON Representation]: SearchParameter-us-core-questionnaireresponse-status.json.html
+[USCoreQuestionnaireresponseStatus - TTL Representation]: SearchParameter-us-core-questionnaireresponse-status.ttl.html
+[USCoreRace]: SearchParameter-us-core-race.html
+[USCoreRace - Testing]: SearchParameter-us-core-race-testing.html
+[USCoreRace - XML Representation]: SearchParameter-us-core-race.xml.html
+[USCoreRace - JSON Representation]: SearchParameter-us-core-race.json.html
+[USCoreRace - TTL Representation]: SearchParameter-us-core-race.ttl.html
+[USCoreRelatedpersonId]: SearchParameter-us-core-relatedperson-id.html
+[USCoreRelatedpersonId - Testing]: SearchParameter-us-core-relatedperson-id-testing.html
+[USCoreRelatedpersonId - XML Representation]: SearchParameter-us-core-relatedperson-id.xml.html
+[USCoreRelatedpersonId - JSON Representation]: SearchParameter-us-core-relatedperson-id.json.html
+[USCoreRelatedpersonId - TTL Representation]: SearchParameter-us-core-relatedperson-id.ttl.html
+[USCoreRelatedpersonName]: SearchParameter-us-core-relatedperson-name.html
+[USCoreRelatedpersonName - Testing]: SearchParameter-us-core-relatedperson-name-testing.html
+[USCoreRelatedpersonName - XML Representation]: SearchParameter-us-core-relatedperson-name.xml.html
+[USCoreRelatedpersonName - JSON Representation]: SearchParameter-us-core-relatedperson-name.json.html
+[USCoreRelatedpersonName - TTL Representation]: SearchParameter-us-core-relatedperson-name.ttl.html
+[USCoreRelatedpersonPatient]: SearchParameter-us-core-relatedperson-patient.html
+[USCoreRelatedpersonPatient - Testing]: SearchParameter-us-core-relatedperson-patient-testing.html
+[USCoreRelatedpersonPatient - XML Representation]: SearchParameter-us-core-relatedperson-patient.xml.html
+[USCoreRelatedpersonPatient - JSON Representation]: SearchParameter-us-core-relatedperson-patient.json.html
+[USCoreRelatedpersonPatient - TTL Representation]: SearchParameter-us-core-relatedperson-patient.ttl.html
+[USCoreServicerequestAuthored]: SearchParameter-us-core-servicerequest-authored.html
+[USCoreServicerequestAuthored - Testing]: SearchParameter-us-core-servicerequest-authored-testing.html
+[USCoreServicerequestAuthored - XML Representation]: SearchParameter-us-core-servicerequest-authored.xml.html
+[USCoreServicerequestAuthored - JSON Representation]: SearchParameter-us-core-servicerequest-authored.json.html
+[USCoreServicerequestAuthored - TTL Representation]: SearchParameter-us-core-servicerequest-authored.ttl.html
+[USCoreServicerequestCategory]: SearchParameter-us-core-servicerequest-category.html
+[USCoreServicerequestCategory - Testing]: SearchParameter-us-core-servicerequest-category-testing.html
+[USCoreServicerequestCategory - XML Representation]: SearchParameter-us-core-servicerequest-category.xml.html
+[USCoreServicerequestCategory - JSON Representation]: SearchParameter-us-core-servicerequest-category.json.html
+[USCoreServicerequestCategory - TTL Representation]: SearchParameter-us-core-servicerequest-category.ttl.html
+[USCoreServicerequestCode]: SearchParameter-us-core-servicerequest-code.html
+[USCoreServicerequestCode - Testing]: SearchParameter-us-core-servicerequest-code-testing.html
+[USCoreServicerequestCode - XML Representation]: SearchParameter-us-core-servicerequest-code.xml.html
+[USCoreServicerequestCode - JSON Representation]: SearchParameter-us-core-servicerequest-code.json.html
+[USCoreServicerequestCode - TTL Representation]: SearchParameter-us-core-servicerequest-code.ttl.html
+[USCoreServicerequestId]: SearchParameter-us-core-servicerequest-id.html
+[USCoreServicerequestId - Testing]: SearchParameter-us-core-servicerequest-id-testing.html
+[USCoreServicerequestId - XML Representation]: SearchParameter-us-core-servicerequest-id.xml.html
+[USCoreServicerequestId - JSON Representation]: SearchParameter-us-core-servicerequest-id.json.html
+[USCoreServicerequestId - TTL Representation]: SearchParameter-us-core-servicerequest-id.ttl.html
+[USCoreServicerequestPatient]: SearchParameter-us-core-servicerequest-patient.html
+[USCoreServicerequestPatient - Testing]: SearchParameter-us-core-servicerequest-patient-testing.html
+[USCoreServicerequestPatient - XML Representation]: SearchParameter-us-core-servicerequest-patient.xml.html
+[USCoreServicerequestPatient - JSON Representation]: SearchParameter-us-core-servicerequest-patient.json.html
+[USCoreServicerequestPatient - TTL Representation]: SearchParameter-us-core-servicerequest-patient.ttl.html
+[USCoreServicerequestStatus]: SearchParameter-us-core-servicerequest-status.html
+[USCoreServicerequestStatus - Testing]: SearchParameter-us-core-servicerequest-status-testing.html
+[USCoreServicerequestStatus - XML Representation]: SearchParameter-us-core-servicerequest-status.xml.html
+[USCoreServicerequestStatus - JSON Representation]: SearchParameter-us-core-servicerequest-status.json.html
+[USCoreServicerequestStatus - TTL Representation]: SearchParameter-us-core-servicerequest-status.ttl.html
+[USCoreSpecimenId]: SearchParameter-us-core-specimen-id.html
+[USCoreSpecimenId - Testing]: SearchParameter-us-core-specimen-id-testing.html
+[USCoreSpecimenId - XML Representation]: SearchParameter-us-core-specimen-id.xml.html
+[USCoreSpecimenId - JSON Representation]: SearchParameter-us-core-specimen-id.json.html
+[USCoreSpecimenId - TTL Representation]: SearchParameter-us-core-specimen-id.ttl.html
+[USCoreSpecimenPatient]: SearchParameter-us-core-specimen-patient.html
+[USCoreSpecimenPatient - Testing]: SearchParameter-us-core-specimen-patient-testing.html
+[USCoreSpecimenPatient - XML Representation]: SearchParameter-us-core-specimen-patient.xml.html
+[USCoreSpecimenPatient - JSON Representation]: SearchParameter-us-core-specimen-patient.json.html
+[USCoreSpecimenPatient - TTL Representation]: SearchParameter-us-core-specimen-patient.ttl.html
+[US Core ADI DocumentReference Profile]: StructureDefinition-us-core-adi-documentreference.html
+[US Core ADI DocumentReference Profile - Definitions]: StructureDefinition-us-core-adi-documentreference-definitions.html
+[US Core ADI DocumentReference Profile - Mappings]: StructureDefinition-us-core-adi-documentreference-mappings.html
+[US Core ADI DocumentReference Profile - Testing]: StructureDefinition-us-core-adi-documentreference-testing.html
+[US Core ADI DocumentReference Profile - Examples]: StructureDefinition-us-core-adi-documentreference-examples.html
+[US Core ADI DocumentReference Profile - XML Representation]: StructureDefinition-us-core-adi-documentreference.profile.xml.html
+[US Core ADI DocumentReference Profile - JSON Representation]: StructureDefinition-us-core-adi-documentreference.profile.json.html
+[US Core ADI DocumentReference Profile - TTL Representation]: StructureDefinition-us-core-adi-documentreference.profile.ttl.html
+[US Core AllergyIntolerance Profile]: StructureDefinition-us-core-allergyintolerance.html
+[US Core AllergyIntolerance Profile - Definitions]: StructureDefinition-us-core-allergyintolerance-definitions.html
+[US Core AllergyIntolerance Profile - Mappings]: StructureDefinition-us-core-allergyintolerance-mappings.html
+[US Core AllergyIntolerance Profile - Testing]: StructureDefinition-us-core-allergyintolerance-testing.html
+[US Core AllergyIntolerance Profile - Examples]: StructureDefinition-us-core-allergyintolerance-examples.html
+[US Core AllergyIntolerance Profile - XML Representation]: StructureDefinition-us-core-allergyintolerance.profile.xml.html
+[US Core AllergyIntolerance Profile - JSON Representation]: StructureDefinition-us-core-allergyintolerance.profile.json.html
+[US Core AllergyIntolerance Profile - TTL Representation]: StructureDefinition-us-core-allergyintolerance.profile.ttl.html
+[US Core Average Blood Pressure Profile]: StructureDefinition-us-core-average-blood-pressure.html
+[US Core Average Blood Pressure Profile - Definitions]: StructureDefinition-us-core-average-blood-pressure-definitions.html
+[US Core Average Blood Pressure Profile - Mappings]: StructureDefinition-us-core-average-blood-pressure-mappings.html
+[US Core Average Blood Pressure Profile - Testing]: StructureDefinition-us-core-average-blood-pressure-testing.html
+[US Core Average Blood Pressure Profile - Examples]: StructureDefinition-us-core-average-blood-pressure-examples.html
+[US Core Average Blood Pressure Profile - XML Representation]: StructureDefinition-us-core-average-blood-pressure.profile.xml.html
+[US Core Average Blood Pressure Profile - JSON Representation]: StructureDefinition-us-core-average-blood-pressure.profile.json.html
+[US Core Average Blood Pressure Profile - TTL Representation]: StructureDefinition-us-core-average-blood-pressure.profile.ttl.html
+[US Core Blood Pressure Profile]: StructureDefinition-us-core-blood-pressure.html
+[US Core Blood Pressure Profile - Definitions]: StructureDefinition-us-core-blood-pressure-definitions.html
+[US Core Blood Pressure Profile - Mappings]: StructureDefinition-us-core-blood-pressure-mappings.html
+[US Core Blood Pressure Profile - Testing]: StructureDefinition-us-core-blood-pressure-testing.html
+[US Core Blood Pressure Profile - Examples]: StructureDefinition-us-core-blood-pressure-examples.html
+[US Core Blood Pressure Profile - XML Representation]: StructureDefinition-us-core-blood-pressure.profile.xml.html
+[US Core Blood Pressure Profile - JSON Representation]: StructureDefinition-us-core-blood-pressure.profile.json.html
+[US Core Blood Pressure Profile - TTL Representation]: StructureDefinition-us-core-blood-pressure.profile.ttl.html
+[US Core BMI Profile]: StructureDefinition-us-core-bmi.html
+[US Core BMI Profile - Definitions]: StructureDefinition-us-core-bmi-definitions.html
+[US Core BMI Profile - Mappings]: StructureDefinition-us-core-bmi-mappings.html
+[US Core BMI Profile - Testing]: StructureDefinition-us-core-bmi-testing.html
+[US Core BMI Profile - Examples]: StructureDefinition-us-core-bmi-examples.html
+[US Core BMI Profile - XML Representation]: StructureDefinition-us-core-bmi.profile.xml.html
+[US Core BMI Profile - JSON Representation]: StructureDefinition-us-core-bmi.profile.json.html
+[US Core BMI Profile - TTL Representation]: StructureDefinition-us-core-bmi.profile.ttl.html
+[US Core Body Height Profile]: StructureDefinition-us-core-body-height.html
+[US Core Body Height Profile - Definitions]: StructureDefinition-us-core-body-height-definitions.html
+[US Core Body Height Profile - Mappings]: StructureDefinition-us-core-body-height-mappings.html
+[US Core Body Height Profile - Testing]: StructureDefinition-us-core-body-height-testing.html
+[US Core Body Height Profile - Examples]: StructureDefinition-us-core-body-height-examples.html
+[US Core Body Height Profile - XML Representation]: StructureDefinition-us-core-body-height.profile.xml.html
+[US Core Body Height Profile - JSON Representation]: StructureDefinition-us-core-body-height.profile.json.html
+[US Core Body Height Profile - TTL Representation]: StructureDefinition-us-core-body-height.profile.ttl.html
+[US Core Body Temperature Profile]: StructureDefinition-us-core-body-temperature.html
+[US Core Body Temperature Profile - Definitions]: StructureDefinition-us-core-body-temperature-definitions.html
+[US Core Body Temperature Profile - Mappings]: StructureDefinition-us-core-body-temperature-mappings.html
+[US Core Body Temperature Profile - Testing]: StructureDefinition-us-core-body-temperature-testing.html
+[US Core Body Temperature Profile - Examples]: StructureDefinition-us-core-body-temperature-examples.html
+[US Core Body Temperature Profile - XML Representation]: StructureDefinition-us-core-body-temperature.profile.xml.html
+[US Core Body Temperature Profile - JSON Representation]: StructureDefinition-us-core-body-temperature.profile.json.html
+[US Core Body Temperature Profile - TTL Representation]: StructureDefinition-us-core-body-temperature.profile.ttl.html
+[US Core Body Weight Profile]: StructureDefinition-us-core-body-weight.html
+[US Core Body Weight Profile - Definitions]: StructureDefinition-us-core-body-weight-definitions.html
+[US Core Body Weight Profile - Mappings]: StructureDefinition-us-core-body-weight-mappings.html
+[US Core Body Weight Profile - Testing]: StructureDefinition-us-core-body-weight-testing.html
+[US Core Body Weight Profile - Examples]: StructureDefinition-us-core-body-weight-examples.html
+[US Core Body Weight Profile - XML Representation]: StructureDefinition-us-core-body-weight.profile.xml.html
+[US Core Body Weight Profile - JSON Representation]: StructureDefinition-us-core-body-weight.profile.json.html
+[US Core Body Weight Profile - TTL Representation]: StructureDefinition-us-core-body-weight.profile.ttl.html
+[US Core Care Experience Preference Profile]: StructureDefinition-us-core-care-experience-preference.html
+[US Core Care Experience Preference Profile - Definitions]: StructureDefinition-us-core-care-experience-preference-definitions.html
+[US Core Care Experience Preference Profile - Mappings]: StructureDefinition-us-core-care-experience-preference-mappings.html
+[US Core Care Experience Preference Profile - Testing]: StructureDefinition-us-core-care-experience-preference-testing.html
+[US Core Care Experience Preference Profile - Examples]: StructureDefinition-us-core-care-experience-preference-examples.html
+[US Core Care Experience Preference Profile - XML Representation]: StructureDefinition-us-core-care-experience-preference.profile.xml.html
+[US Core Care Experience Preference Profile - JSON Representation]: StructureDefinition-us-core-care-experience-preference.profile.json.html
+[US Core Care Experience Preference Profile - TTL Representation]: StructureDefinition-us-core-care-experience-preference.profile.ttl.html
+[US Core CarePlan Profile]: StructureDefinition-us-core-careplan.html
+[US Core CarePlan Profile - Definitions]: StructureDefinition-us-core-careplan-definitions.html
+[US Core CarePlan Profile - Mappings]: StructureDefinition-us-core-careplan-mappings.html
+[US Core CarePlan Profile - Testing]: StructureDefinition-us-core-careplan-testing.html
+[US Core CarePlan Profile - Examples]: StructureDefinition-us-core-careplan-examples.html
+[US Core CarePlan Profile - XML Representation]: StructureDefinition-us-core-careplan.profile.xml.html
+[US Core CarePlan Profile - JSON Representation]: StructureDefinition-us-core-careplan.profile.json.html
+[US Core CarePlan Profile - TTL Representation]: StructureDefinition-us-core-careplan.profile.ttl.html
+[US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
+[US Core CareTeam Profile - Definitions]: StructureDefinition-us-core-careteam-definitions.html
+[US Core CareTeam Profile - Mappings]: StructureDefinition-us-core-careteam-mappings.html
+[US Core CareTeam Profile - Testing]: StructureDefinition-us-core-careteam-testing.html
+[US Core CareTeam Profile - Examples]: StructureDefinition-us-core-careteam-examples.html
+[US Core CareTeam Profile - XML Representation]: StructureDefinition-us-core-careteam.profile.xml.html
+[US Core CareTeam Profile - JSON Representation]: StructureDefinition-us-core-careteam.profile.json.html
+[US Core CareTeam Profile - TTL Representation]: StructureDefinition-us-core-careteam.profile.ttl.html
+[US Core Condition Encounter Diagnosis Profile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
+[US Core Condition Encounter Diagnosis Profile - Definitions]: StructureDefinition-us-core-condition-encounter-diagnosis-definitions.html
+[US Core Condition Encounter Diagnosis Profile - Mappings]: StructureDefinition-us-core-condition-encounter-diagnosis-mappings.html
+[US Core Condition Encounter Diagnosis Profile - Testing]: StructureDefinition-us-core-condition-encounter-diagnosis-testing.html
+[US Core Condition Encounter Diagnosis Profile - Examples]: StructureDefinition-us-core-condition-encounter-diagnosis-examples.html
+[US Core Condition Encounter Diagnosis Profile - XML Representation]: StructureDefinition-us-core-condition-encounter-diagnosis.profile.xml.html
+[US Core Condition Encounter Diagnosis Profile - JSON Representation]: StructureDefinition-us-core-condition-encounter-diagnosis.profile.json.html
+[US Core Condition Encounter Diagnosis Profile - TTL Representation]: StructureDefinition-us-core-condition-encounter-diagnosis.profile.ttl.html
+[US Core Condition Problems and Health Concerns Profile]: StructureDefinition-us-core-condition-problems-health-concerns.html
+[US Core Condition Problems and Health Concerns Profile - Definitions]: StructureDefinition-us-core-condition-problems-health-concerns-definitions.html
+[US Core Condition Problems and Health Concerns Profile - Mappings]: StructureDefinition-us-core-condition-problems-health-concerns-mappings.html
+[US Core Condition Problems and Health Concerns Profile - Testing]: StructureDefinition-us-core-condition-problems-health-concerns-testing.html
+[US Core Condition Problems and Health Concerns Profile - Examples]: StructureDefinition-us-core-condition-problems-health-concerns-examples.html
+[US Core Condition Problems and Health Concerns Profile - XML Representation]: StructureDefinition-us-core-condition-problems-health-concerns.profile.xml.html
+[US Core Condition Problems and Health Concerns Profile - JSON Representation]: StructureDefinition-us-core-condition-problems-health-concerns.profile.json.html
+[US Core Condition Problems and Health Concerns Profile - TTL Representation]: StructureDefinition-us-core-condition-problems-health-concerns.profile.ttl.html
+[US Core Coverage Profile]: StructureDefinition-us-core-coverage.html
+[US Core Coverage Profile - Definitions]: StructureDefinition-us-core-coverage-definitions.html
+[US Core Coverage Profile - Mappings]: StructureDefinition-us-core-coverage-mappings.html
+[US Core Coverage Profile - Testing]: StructureDefinition-us-core-coverage-testing.html
+[US Core Coverage Profile - Examples]: StructureDefinition-us-core-coverage-examples.html
+[US Core Coverage Profile - XML Representation]: StructureDefinition-us-core-coverage.profile.xml.html
+[US Core Coverage Profile - JSON Representation]: StructureDefinition-us-core-coverage.profile.json.html
+[US Core Coverage Profile - TTL Representation]: StructureDefinition-us-core-coverage.profile.ttl.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting - Definitions]: StructureDefinition-us-core-diagnosticreport-lab-definitions.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting - Mappings]: StructureDefinition-us-core-diagnosticreport-lab-mappings.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting - Testing]: StructureDefinition-us-core-diagnosticreport-lab-testing.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting - Examples]: StructureDefinition-us-core-diagnosticreport-lab-examples.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting - XML Representation]: StructureDefinition-us-core-diagnosticreport-lab.profile.xml.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting - JSON Representation]: StructureDefinition-us-core-diagnosticreport-lab.profile.json.html
+[US Core DiagnosticReport Profile for Laboratory Results Reporting - TTL Representation]: StructureDefinition-us-core-diagnosticreport-lab.profile.ttl.html
+[US Core DiagnosticReport Profile for Report and Note Exchange]: StructureDefinition-us-core-diagnosticreport-note.html
+[US Core DiagnosticReport Profile for Report and Note Exchange - Definitions]: StructureDefinition-us-core-diagnosticreport-note-definitions.html
+[US Core DiagnosticReport Profile for Report and Note Exchange - Mappings]: StructureDefinition-us-core-diagnosticreport-note-mappings.html
+[US Core DiagnosticReport Profile for Report and Note Exchange - Testing]: StructureDefinition-us-core-diagnosticreport-note-testing.html
+[US Core DiagnosticReport Profile for Report and Note Exchange - Examples]: StructureDefinition-us-core-diagnosticreport-note-examples.html
+[US Core DiagnosticReport Profile for Report and Note Exchange - XML Representation]: StructureDefinition-us-core-diagnosticreport-note.profile.xml.html
+[US Core DiagnosticReport Profile for Report and Note Exchange - JSON Representation]: StructureDefinition-us-core-diagnosticreport-note.profile.json.html
+[US Core DiagnosticReport Profile for Report and Note Exchange - TTL Representation]: StructureDefinition-us-core-diagnosticreport-note.profile.ttl.html
+[US Core DocumentReference Profile]: StructureDefinition-us-core-documentreference.html
+[US Core DocumentReference Profile - Definitions]: StructureDefinition-us-core-documentreference-definitions.html
+[US Core DocumentReference Profile - Mappings]: StructureDefinition-us-core-documentreference-mappings.html
+[US Core DocumentReference Profile - Testing]: StructureDefinition-us-core-documentreference-testing.html
+[US Core DocumentReference Profile - Examples]: StructureDefinition-us-core-documentreference-examples.html
+[US Core DocumentReference Profile - XML Representation]: StructureDefinition-us-core-documentreference.profile.xml.html
+[US Core DocumentReference Profile - JSON Representation]: StructureDefinition-us-core-documentreference.profile.json.html
+[US Core DocumentReference Profile - TTL Representation]: StructureDefinition-us-core-documentreference.profile.ttl.html
+[US Core Encounter Profile]: StructureDefinition-us-core-encounter.html
+[US Core Encounter Profile - Definitions]: StructureDefinition-us-core-encounter-definitions.html
+[US Core Encounter Profile - Mappings]: StructureDefinition-us-core-encounter-mappings.html
+[US Core Encounter Profile - Testing]: StructureDefinition-us-core-encounter-testing.html
+[US Core Encounter Profile - Examples]: StructureDefinition-us-core-encounter-examples.html
+[US Core Encounter Profile - XML Representation]: StructureDefinition-us-core-encounter.profile.xml.html
+[US Core Encounter Profile - JSON Representation]: StructureDefinition-us-core-encounter.profile.json.html
+[US Core Encounter Profile - TTL Representation]: StructureDefinition-us-core-encounter.profile.ttl.html
+[US Core Goal Profile]: StructureDefinition-us-core-goal.html
+[US Core Goal Profile - Definitions]: StructureDefinition-us-core-goal-definitions.html
+[US Core Goal Profile - Mappings]: StructureDefinition-us-core-goal-mappings.html
+[US Core Goal Profile - Testing]: StructureDefinition-us-core-goal-testing.html
+[US Core Goal Profile - Examples]: StructureDefinition-us-core-goal-examples.html
+[US Core Goal Profile - XML Representation]: StructureDefinition-us-core-goal.profile.xml.html
+[US Core Goal Profile - JSON Representation]: StructureDefinition-us-core-goal.profile.json.html
+[US Core Goal Profile - TTL Representation]: StructureDefinition-us-core-goal.profile.ttl.html
+[US Core Head Circumference Profile]: StructureDefinition-us-core-head-circumference.html
+[US Core Head Circumference Profile - Definitions]: StructureDefinition-us-core-head-circumference-definitions.html
+[US Core Head Circumference Profile - Mappings]: StructureDefinition-us-core-head-circumference-mappings.html
+[US Core Head Circumference Profile - Testing]: StructureDefinition-us-core-head-circumference-testing.html
+[US Core Head Circumference Profile - Examples]: StructureDefinition-us-core-head-circumference-examples.html
+[US Core Head Circumference Profile - XML Representation]: StructureDefinition-us-core-head-circumference.profile.xml.html
+[US Core Head Circumference Profile - JSON Representation]: StructureDefinition-us-core-head-circumference.profile.json.html
+[US Core Head Circumference Profile - TTL Representation]: StructureDefinition-us-core-head-circumference.profile.ttl.html
+[US Core Heart Rate Profile]: StructureDefinition-us-core-heart-rate.html
+[US Core Heart Rate Profile - Definitions]: StructureDefinition-us-core-heart-rate-definitions.html
+[US Core Heart Rate Profile - Mappings]: StructureDefinition-us-core-heart-rate-mappings.html
+[US Core Heart Rate Profile - Testing]: StructureDefinition-us-core-heart-rate-testing.html
+[US Core Heart Rate Profile - Examples]: StructureDefinition-us-core-heart-rate-examples.html
+[US Core Heart Rate Profile - XML Representation]: StructureDefinition-us-core-heart-rate.profile.xml.html
+[US Core Heart Rate Profile - JSON Representation]: StructureDefinition-us-core-heart-rate.profile.json.html
+[US Core Heart Rate Profile - TTL Representation]: StructureDefinition-us-core-heart-rate.profile.ttl.html
+[US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
+[US Core Immunization Profile - Definitions]: StructureDefinition-us-core-immunization-definitions.html
+[US Core Immunization Profile - Mappings]: StructureDefinition-us-core-immunization-mappings.html
+[US Core Immunization Profile - Testing]: StructureDefinition-us-core-immunization-testing.html
+[US Core Immunization Profile - Examples]: StructureDefinition-us-core-immunization-examples.html
+[US Core Immunization Profile - XML Representation]: StructureDefinition-us-core-immunization.profile.xml.html
+[US Core Immunization Profile - JSON Representation]: StructureDefinition-us-core-immunization.profile.json.html
+[US Core Immunization Profile - TTL Representation]: StructureDefinition-us-core-immunization.profile.ttl.html
+[US Core Implantable Device Profile]: StructureDefinition-us-core-implantable-device.html
+[US Core Implantable Device Profile - Definitions]: StructureDefinition-us-core-implantable-device-definitions.html
+[US Core Implantable Device Profile - Mappings]: StructureDefinition-us-core-implantable-device-mappings.html
+[US Core Implantable Device Profile - Testing]: StructureDefinition-us-core-implantable-device-testing.html
+[US Core Implantable Device Profile - Examples]: StructureDefinition-us-core-implantable-device-examples.html
+[US Core Implantable Device Profile - XML Representation]: StructureDefinition-us-core-implantable-device.profile.xml.html
+[US Core Implantable Device Profile - JSON Representation]: StructureDefinition-us-core-implantable-device.profile.json.html
+[US Core Implantable Device Profile - TTL Representation]: StructureDefinition-us-core-implantable-device.profile.ttl.html
+[US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
+[US Core Laboratory Result Observation Profile - Definitions]: StructureDefinition-us-core-observation-lab-definitions.html
+[US Core Laboratory Result Observation Profile - Mappings]: StructureDefinition-us-core-observation-lab-mappings.html
+[US Core Laboratory Result Observation Profile - Testing]: StructureDefinition-us-core-observation-lab-testing.html
+[US Core Laboratory Result Observation Profile - Examples]: StructureDefinition-us-core-observation-lab-examples.html
+[US Core Laboratory Result Observation Profile - XML Representation]: StructureDefinition-us-core-observation-lab.profile.xml.html
+[US Core Laboratory Result Observation Profile - JSON Representation]: StructureDefinition-us-core-observation-lab.profile.json.html
+[US Core Laboratory Result Observation Profile - TTL Representation]: StructureDefinition-us-core-observation-lab.profile.ttl.html
+[US Core Location Profile]: StructureDefinition-us-core-location.html
+[US Core Location Profile - Definitions]: StructureDefinition-us-core-location-definitions.html
+[US Core Location Profile - Mappings]: StructureDefinition-us-core-location-mappings.html
+[US Core Location Profile - Testing]: StructureDefinition-us-core-location-testing.html
+[US Core Location Profile - Examples]: StructureDefinition-us-core-location-examples.html
+[US Core Location Profile - XML Representation]: StructureDefinition-us-core-location.profile.xml.html
+[US Core Location Profile - JSON Representation]: StructureDefinition-us-core-location.profile.json.html
+[US Core Location Profile - TTL Representation]: StructureDefinition-us-core-location.profile.ttl.html
+[US Core Medication Profile]: StructureDefinition-us-core-medication.html
+[US Core Medication Profile - Definitions]: StructureDefinition-us-core-medication-definitions.html
+[US Core Medication Profile - Mappings]: StructureDefinition-us-core-medication-mappings.html
+[US Core Medication Profile - Testing]: StructureDefinition-us-core-medication-testing.html
+[US Core Medication Profile - Examples]: StructureDefinition-us-core-medication-examples.html
+[US Core Medication Profile - XML Representation]: StructureDefinition-us-core-medication.profile.xml.html
+[US Core Medication Profile - JSON Representation]: StructureDefinition-us-core-medication.profile.json.html
+[US Core Medication Profile - TTL Representation]: StructureDefinition-us-core-medication.profile.ttl.html
+[US Core MedicationDispense Profile]: StructureDefinition-us-core-medicationdispense.html
+[US Core MedicationDispense Profile - Definitions]: StructureDefinition-us-core-medicationdispense-definitions.html
+[US Core MedicationDispense Profile - Mappings]: StructureDefinition-us-core-medicationdispense-mappings.html
+[US Core MedicationDispense Profile - Testing]: StructureDefinition-us-core-medicationdispense-testing.html
+[US Core MedicationDispense Profile - Examples]: StructureDefinition-us-core-medicationdispense-examples.html
+[US Core MedicationDispense Profile - XML Representation]: StructureDefinition-us-core-medicationdispense.profile.xml.html
+[US Core MedicationDispense Profile - JSON Representation]: StructureDefinition-us-core-medicationdispense.profile.json.html
+[US Core MedicationDispense Profile - TTL Representation]: StructureDefinition-us-core-medicationdispense.profile.ttl.html
+[US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
+[US Core MedicationRequest Profile - Definitions]: StructureDefinition-us-core-medicationrequest-definitions.html
+[US Core MedicationRequest Profile - Mappings]: StructureDefinition-us-core-medicationrequest-mappings.html
+[US Core MedicationRequest Profile - Testing]: StructureDefinition-us-core-medicationrequest-testing.html
+[US Core MedicationRequest Profile - Examples]: StructureDefinition-us-core-medicationrequest-examples.html
+[US Core MedicationRequest Profile - XML Representation]: StructureDefinition-us-core-medicationrequest.profile.xml.html
+[US Core MedicationRequest Profile - JSON Representation]: StructureDefinition-us-core-medicationrequest.profile.json.html
+[US Core MedicationRequest Profile - TTL Representation]: StructureDefinition-us-core-medicationrequest.profile.ttl.html
+[US Core Observation ADI Documentation Profile]: StructureDefinition-us-core-observation-adi-documentation.html
+[US Core Observation ADI Documentation Profile - Definitions]: StructureDefinition-us-core-observation-adi-documentation-definitions.html
+[US Core Observation ADI Documentation Profile - Mappings]: StructureDefinition-us-core-observation-adi-documentation-mappings.html
+[US Core Observation ADI Documentation Profile - Testing]: StructureDefinition-us-core-observation-adi-documentation-testing.html
+[US Core Observation ADI Documentation Profile - Examples]: StructureDefinition-us-core-observation-adi-documentation-examples.html
+[US Core Observation ADI Documentation Profile - XML Representation]: StructureDefinition-us-core-observation-adi-documentation.profile.xml.html
+[US Core Observation ADI Documentation Profile - JSON Representation]: StructureDefinition-us-core-observation-adi-documentation.profile.json.html
+[US Core Observation ADI Documentation Profile - TTL Representation]: StructureDefinition-us-core-observation-adi-documentation.profile.ttl.html
+[US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html
+[US Core Observation Clinical Result Profile - Definitions]: StructureDefinition-us-core-observation-clinical-result-definitions.html
+[US Core Observation Clinical Result Profile - Mappings]: StructureDefinition-us-core-observation-clinical-result-mappings.html
+[US Core Observation Clinical Result Profile - Testing]: StructureDefinition-us-core-observation-clinical-result-testing.html
+[US Core Observation Clinical Result Profile - Examples]: StructureDefinition-us-core-observation-clinical-result-examples.html
+[US Core Observation Clinical Result Profile - XML Representation]: StructureDefinition-us-core-observation-clinical-result.profile.xml.html
+[US Core Observation Clinical Result Profile - JSON Representation]: StructureDefinition-us-core-observation-clinical-result.profile.json.html
+[US Core Observation Clinical Result Profile - TTL Representation]: StructureDefinition-us-core-observation-clinical-result.profile.ttl.html
+[US Core Observation Occupation Profile]: StructureDefinition-us-core-observation-occupation.html
+[US Core Observation Occupation Profile - Definitions]: StructureDefinition-us-core-observation-occupation-definitions.html
+[US Core Observation Occupation Profile - Mappings]: StructureDefinition-us-core-observation-occupation-mappings.html
+[US Core Observation Occupation Profile - Testing]: StructureDefinition-us-core-observation-occupation-testing.html
+[US Core Observation Occupation Profile - Examples]: StructureDefinition-us-core-observation-occupation-examples.html
+[US Core Observation Occupation Profile - XML Representation]: StructureDefinition-us-core-observation-occupation.profile.xml.html
+[US Core Observation Occupation Profile - JSON Representation]: StructureDefinition-us-core-observation-occupation.profile.json.html
+[US Core Observation Occupation Profile - TTL Representation]: StructureDefinition-us-core-observation-occupation.profile.ttl.html
+[US Core Observation Pregnancy Intent Profile]: StructureDefinition-us-core-observation-pregnancyintent.html
+[US Core Observation Pregnancy Intent Profile - Definitions]: StructureDefinition-us-core-observation-pregnancyintent-definitions.html
+[US Core Observation Pregnancy Intent Profile - Mappings]: StructureDefinition-us-core-observation-pregnancyintent-mappings.html
+[US Core Observation Pregnancy Intent Profile - Testing]: StructureDefinition-us-core-observation-pregnancyintent-testing.html
+[US Core Observation Pregnancy Intent Profile - Examples]: StructureDefinition-us-core-observation-pregnancyintent-examples.html
+[US Core Observation Pregnancy Intent Profile - XML Representation]: StructureDefinition-us-core-observation-pregnancyintent.profile.xml.html
+[US Core Observation Pregnancy Intent Profile - JSON Representation]: StructureDefinition-us-core-observation-pregnancyintent.profile.json.html
+[US Core Observation Pregnancy Intent Profile - TTL Representation]: StructureDefinition-us-core-observation-pregnancyintent.profile.ttl.html
+[US Core Observation Pregnancy Status Profile]: StructureDefinition-us-core-observation-pregnancystatus.html
+[US Core Observation Pregnancy Status Profile - Definitions]: StructureDefinition-us-core-observation-pregnancystatus-definitions.html
+[US Core Observation Pregnancy Status Profile - Mappings]: StructureDefinition-us-core-observation-pregnancystatus-mappings.html
+[US Core Observation Pregnancy Status Profile - Testing]: StructureDefinition-us-core-observation-pregnancystatus-testing.html
+[US Core Observation Pregnancy Status Profile - Examples]: StructureDefinition-us-core-observation-pregnancystatus-examples.html
+[US Core Observation Pregnancy Status Profile - XML Representation]: StructureDefinition-us-core-observation-pregnancystatus.profile.xml.html
+[US Core Observation Pregnancy Status Profile - JSON Representation]: StructureDefinition-us-core-observation-pregnancystatus.profile.json.html
+[US Core Observation Pregnancy Status Profile - TTL Representation]: StructureDefinition-us-core-observation-pregnancystatus.profile.ttl.html
+[US Core Observation Screening Assessment Profile]: StructureDefinition-us-core-observation-screening-assessment.html
+[US Core Observation Screening Assessment Profile - Definitions]: StructureDefinition-us-core-observation-screening-assessment-definitions.html
+[US Core Observation Screening Assessment Profile - Mappings]: StructureDefinition-us-core-observation-screening-assessment-mappings.html
+[US Core Observation Screening Assessment Profile - Testing]: StructureDefinition-us-core-observation-screening-assessment-testing.html
+[US Core Observation Screening Assessment Profile - Examples]: StructureDefinition-us-core-observation-screening-assessment-examples.html
+[US Core Observation Screening Assessment Profile - XML Representation]: StructureDefinition-us-core-observation-screening-assessment.profile.xml.html
+[US Core Observation Screening Assessment Profile - JSON Representation]: StructureDefinition-us-core-observation-screening-assessment.profile.json.html
+[US Core Observation Screening Assessment Profile - TTL Representation]: StructureDefinition-us-core-observation-screening-assessment.profile.ttl.html
+[US Core Observation Sexual Orientation Profile]: StructureDefinition-us-core-observation-sexual-orientation.html
+[US Core Observation Sexual Orientation Profile - Definitions]: StructureDefinition-us-core-observation-sexual-orientation-definitions.html
+[US Core Observation Sexual Orientation Profile - Mappings]: StructureDefinition-us-core-observation-sexual-orientation-mappings.html
+[US Core Observation Sexual Orientation Profile - Testing]: StructureDefinition-us-core-observation-sexual-orientation-testing.html
+[US Core Observation Sexual Orientation Profile - Examples]: StructureDefinition-us-core-observation-sexual-orientation-examples.html
+[US Core Observation Sexual Orientation Profile - XML Representation]: StructureDefinition-us-core-observation-sexual-orientation.profile.xml.html
+[US Core Observation Sexual Orientation Profile - JSON Representation]: StructureDefinition-us-core-observation-sexual-orientation.profile.json.html
+[US Core Observation Sexual Orientation Profile - TTL Representation]: StructureDefinition-us-core-observation-sexual-orientation.profile.ttl.html
+[US Core Organization Profile]: StructureDefinition-us-core-organization.html
+[US Core Organization Profile - Definitions]: StructureDefinition-us-core-organization-definitions.html
+[US Core Organization Profile - Mappings]: StructureDefinition-us-core-organization-mappings.html
+[US Core Organization Profile - Testing]: StructureDefinition-us-core-organization-testing.html
+[US Core Organization Profile - Examples]: StructureDefinition-us-core-organization-examples.html
+[US Core Organization Profile - XML Representation]: StructureDefinition-us-core-organization.profile.xml.html
+[US Core Organization Profile - JSON Representation]: StructureDefinition-us-core-organization.profile.json.html
+[US Core Organization Profile - TTL Representation]: StructureDefinition-us-core-organization.profile.ttl.html
+[US Core Patient Profile]: StructureDefinition-us-core-patient.html
+[US Core Patient Profile - Definitions]: StructureDefinition-us-core-patient-definitions.html
+[US Core Patient Profile - Mappings]: StructureDefinition-us-core-patient-mappings.html
+[US Core Patient Profile - Testing]: StructureDefinition-us-core-patient-testing.html
+[US Core Patient Profile - Examples]: StructureDefinition-us-core-patient-examples.html
+[US Core Patient Profile - XML Representation]: StructureDefinition-us-core-patient.profile.xml.html
+[US Core Patient Profile - JSON Representation]: StructureDefinition-us-core-patient.profile.json.html
+[US Core Patient Profile - TTL Representation]: StructureDefinition-us-core-patient.profile.ttl.html
+[US Core Pediatric BMI for Age Observation Profile]: StructureDefinition-pediatric-bmi-for-age.html
+[US Core Pediatric BMI for Age Observation Profile - Definitions]: StructureDefinition-pediatric-bmi-for-age-definitions.html
+[US Core Pediatric BMI for Age Observation Profile - Mappings]: StructureDefinition-pediatric-bmi-for-age-mappings.html
+[US Core Pediatric BMI for Age Observation Profile - Testing]: StructureDefinition-pediatric-bmi-for-age-testing.html
+[US Core Pediatric BMI for Age Observation Profile - Examples]: StructureDefinition-pediatric-bmi-for-age-examples.html
+[US Core Pediatric BMI for Age Observation Profile - XML Representation]: StructureDefinition-pediatric-bmi-for-age.profile.xml.html
+[US Core Pediatric BMI for Age Observation Profile - JSON Representation]: StructureDefinition-pediatric-bmi-for-age.profile.json.html
+[US Core Pediatric BMI for Age Observation Profile - TTL Representation]: StructureDefinition-pediatric-bmi-for-age.profile.ttl.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile - Definitions]: StructureDefinition-head-occipital-frontal-circumference-percentile-definitions.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile - Mappings]: StructureDefinition-head-occipital-frontal-circumference-percentile-mappings.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile - Testing]: StructureDefinition-head-occipital-frontal-circumference-percentile-testing.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile - Examples]: StructureDefinition-head-occipital-frontal-circumference-percentile-examples.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile - XML Representation]: StructureDefinition-head-occipital-frontal-circumference-percentile.profile.xml.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile - JSON Representation]: StructureDefinition-head-occipital-frontal-circumference-percentile.profile.json.html
+[US Core Pediatric Head Occipital Frontal Circumference Percentile Profile - TTL Representation]: StructureDefinition-head-occipital-frontal-circumference-percentile.profile.ttl.html
+[US Core Pediatric Weight for Height Observation Profile]: StructureDefinition-pediatric-weight-for-height.html
+[US Core Pediatric Weight for Height Observation Profile - Definitions]: StructureDefinition-pediatric-weight-for-height-definitions.html
+[US Core Pediatric Weight for Height Observation Profile - Mappings]: StructureDefinition-pediatric-weight-for-height-mappings.html
+[US Core Pediatric Weight for Height Observation Profile - Testing]: StructureDefinition-pediatric-weight-for-height-testing.html
+[US Core Pediatric Weight for Height Observation Profile - Examples]: StructureDefinition-pediatric-weight-for-height-examples.html
+[US Core Pediatric Weight for Height Observation Profile - XML Representation]: StructureDefinition-pediatric-weight-for-height.profile.xml.html
+[US Core Pediatric Weight for Height Observation Profile - JSON Representation]: StructureDefinition-pediatric-weight-for-height.profile.json.html
+[US Core Pediatric Weight for Height Observation Profile - TTL Representation]: StructureDefinition-pediatric-weight-for-height.profile.ttl.html
+[US Core Practitioner Profile]: StructureDefinition-us-core-practitioner.html
+[US Core Practitioner Profile - Definitions]: StructureDefinition-us-core-practitioner-definitions.html
+[US Core Practitioner Profile - Mappings]: StructureDefinition-us-core-practitioner-mappings.html
+[US Core Practitioner Profile - Testing]: StructureDefinition-us-core-practitioner-testing.html
+[US Core Practitioner Profile - Examples]: StructureDefinition-us-core-practitioner-examples.html
+[US Core Practitioner Profile - XML Representation]: StructureDefinition-us-core-practitioner.profile.xml.html
+[US Core Practitioner Profile - JSON Representation]: StructureDefinition-us-core-practitioner.profile.json.html
+[US Core Practitioner Profile - TTL Representation]: StructureDefinition-us-core-practitioner.profile.ttl.html
+[US Core PractitionerRole Profile]: StructureDefinition-us-core-practitionerrole.html
+[US Core PractitionerRole Profile - Definitions]: StructureDefinition-us-core-practitionerrole-definitions.html
+[US Core PractitionerRole Profile - Mappings]: StructureDefinition-us-core-practitionerrole-mappings.html
+[US Core PractitionerRole Profile - Testing]: StructureDefinition-us-core-practitionerrole-testing.html
+[US Core PractitionerRole Profile - XML Representation]: StructureDefinition-us-core-practitionerrole.profile.xml.html
+[US Core PractitionerRole Profile - JSON Representation]: StructureDefinition-us-core-practitionerrole.profile.json.html
+[US Core PractitionerRole Profile - TTL Representation]: StructureDefinition-us-core-practitionerrole.profile.ttl.html
+[US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
+[US Core Procedure Profile - Definitions]: StructureDefinition-us-core-procedure-definitions.html
+[US Core Procedure Profile - Mappings]: StructureDefinition-us-core-procedure-mappings.html
+[US Core Procedure Profile - Testing]: StructureDefinition-us-core-procedure-testing.html
+[US Core Procedure Profile - Examples]: StructureDefinition-us-core-procedure-examples.html
+[US Core Procedure Profile - XML Representation]: StructureDefinition-us-core-procedure.profile.xml.html
+[US Core Procedure Profile - JSON Representation]: StructureDefinition-us-core-procedure.profile.json.html
+[US Core Procedure Profile - TTL Representation]: StructureDefinition-us-core-procedure.profile.ttl.html
+[US Core Provenance Profile]: StructureDefinition-us-core-provenance.html
+[US Core Provenance Profile - Definitions]: StructureDefinition-us-core-provenance-definitions.html
+[US Core Provenance Profile - Mappings]: StructureDefinition-us-core-provenance-mappings.html
+[US Core Provenance Profile - Testing]: StructureDefinition-us-core-provenance-testing.html
+[US Core Provenance Profile - Examples]: StructureDefinition-us-core-provenance-examples.html
+[US Core Provenance Profile - XML Representation]: StructureDefinition-us-core-provenance.profile.xml.html
+[US Core Provenance Profile - JSON Representation]: StructureDefinition-us-core-provenance.profile.json.html
+[US Core Provenance Profile - TTL Representation]: StructureDefinition-us-core-provenance.profile.ttl.html
+[US Core Pulse Oximetry Profile]: StructureDefinition-us-core-pulse-oximetry.html
+[US Core Pulse Oximetry Profile - Definitions]: StructureDefinition-us-core-pulse-oximetry-definitions.html
+[US Core Pulse Oximetry Profile - Mappings]: StructureDefinition-us-core-pulse-oximetry-mappings.html
+[US Core Pulse Oximetry Profile - Testing]: StructureDefinition-us-core-pulse-oximetry-testing.html
+[US Core Pulse Oximetry Profile - Examples]: StructureDefinition-us-core-pulse-oximetry-examples.html
+[US Core Pulse Oximetry Profile - XML Representation]: StructureDefinition-us-core-pulse-oximetry.profile.xml.html
+[US Core Pulse Oximetry Profile - JSON Representation]: StructureDefinition-us-core-pulse-oximetry.profile.json.html
+[US Core Pulse Oximetry Profile - TTL Representation]: StructureDefinition-us-core-pulse-oximetry.profile.ttl.html
+[US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html
+[US Core QuestionnaireResponse Profile - Definitions]: StructureDefinition-us-core-questionnaireresponse-definitions.html
+[US Core QuestionnaireResponse Profile - Mappings]: StructureDefinition-us-core-questionnaireresponse-mappings.html
+[US Core QuestionnaireResponse Profile - Testing]: StructureDefinition-us-core-questionnaireresponse-testing.html
+[US Core QuestionnaireResponse Profile - Examples]: StructureDefinition-us-core-questionnaireresponse-examples.html
+[US Core QuestionnaireResponse Profile - XML Representation]: StructureDefinition-us-core-questionnaireresponse.profile.xml.html
+[US Core QuestionnaireResponse Profile - JSON Representation]: StructureDefinition-us-core-questionnaireresponse.profile.json.html
+[US Core QuestionnaireResponse Profile - TTL Representation]: StructureDefinition-us-core-questionnaireresponse.profile.ttl.html
+[US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html
+[US Core RelatedPerson Profile - Definitions]: StructureDefinition-us-core-relatedperson-definitions.html
+[US Core RelatedPerson Profile - Mappings]: StructureDefinition-us-core-relatedperson-mappings.html
+[US Core RelatedPerson Profile - Testing]: StructureDefinition-us-core-relatedperson-testing.html
+[US Core RelatedPerson Profile - Examples]: StructureDefinition-us-core-relatedperson-examples.html
+[US Core RelatedPerson Profile - XML Representation]: StructureDefinition-us-core-relatedperson.profile.xml.html
+[US Core RelatedPerson Profile - JSON Representation]: StructureDefinition-us-core-relatedperson.profile.json.html
+[US Core RelatedPerson Profile - TTL Representation]: StructureDefinition-us-core-relatedperson.profile.ttl.html
+[US Core Respiratory Rate Profile]: StructureDefinition-us-core-respiratory-rate.html
+[US Core Respiratory Rate Profile - Definitions]: StructureDefinition-us-core-respiratory-rate-definitions.html
+[US Core Respiratory Rate Profile - Mappings]: StructureDefinition-us-core-respiratory-rate-mappings.html
+[US Core Respiratory Rate Profile - Testing]: StructureDefinition-us-core-respiratory-rate-testing.html
+[US Core Respiratory Rate Profile - Examples]: StructureDefinition-us-core-respiratory-rate-examples.html
+[US Core Respiratory Rate Profile - XML Representation]: StructureDefinition-us-core-respiratory-rate.profile.xml.html
+[US Core Respiratory Rate Profile - JSON Representation]: StructureDefinition-us-core-respiratory-rate.profile.json.html
+[US Core Respiratory Rate Profile - TTL Representation]: StructureDefinition-us-core-respiratory-rate.profile.ttl.html
+[US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
+[US Core ServiceRequest Profile - Definitions]: StructureDefinition-us-core-servicerequest-definitions.html
+[US Core ServiceRequest Profile - Mappings]: StructureDefinition-us-core-servicerequest-mappings.html
+[US Core ServiceRequest Profile - Testing]: StructureDefinition-us-core-servicerequest-testing.html
+[US Core ServiceRequest Profile - Examples]: StructureDefinition-us-core-servicerequest-examples.html
+[US Core ServiceRequest Profile - XML Representation]: StructureDefinition-us-core-servicerequest.profile.xml.html
+[US Core ServiceRequest Profile - JSON Representation]: StructureDefinition-us-core-servicerequest.profile.json.html
+[US Core ServiceRequest Profile - TTL Representation]: StructureDefinition-us-core-servicerequest.profile.ttl.html
+[US Core Simple Observation Profile]: StructureDefinition-us-core-simple-observation.html
+[US Core Simple Observation Profile - Definitions]: StructureDefinition-us-core-simple-observation-definitions.html
+[US Core Simple Observation Profile - Mappings]: StructureDefinition-us-core-simple-observation-mappings.html
+[US Core Simple Observation Profile - Testing]: StructureDefinition-us-core-simple-observation-testing.html
+[US Core Simple Observation Profile - Examples]: StructureDefinition-us-core-simple-observation-examples.html
+[US Core Simple Observation Profile - XML Representation]: StructureDefinition-us-core-simple-observation.profile.xml.html
+[US Core Simple Observation Profile - JSON Representation]: StructureDefinition-us-core-simple-observation.profile.json.html
+[US Core Simple Observation Profile - TTL Representation]: StructureDefinition-us-core-simple-observation.profile.ttl.html
+[US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
+[US Core Smoking Status Observation Profile - Definitions]: StructureDefinition-us-core-smokingstatus-definitions.html
+[US Core Smoking Status Observation Profile - Mappings]: StructureDefinition-us-core-smokingstatus-mappings.html
+[US Core Smoking Status Observation Profile - Testing]: StructureDefinition-us-core-smokingstatus-testing.html
+[US Core Smoking Status Observation Profile - Examples]: StructureDefinition-us-core-smokingstatus-examples.html
+[US Core Smoking Status Observation Profile - XML Representation]: StructureDefinition-us-core-smokingstatus.profile.xml.html
+[US Core Smoking Status Observation Profile - JSON Representation]: StructureDefinition-us-core-smokingstatus.profile.json.html
+[US Core Smoking Status Observation Profile - TTL Representation]: StructureDefinition-us-core-smokingstatus.profile.ttl.html
+[US Core Specimen Profile]: StructureDefinition-us-core-specimen.html
+[US Core Specimen Profile - Definitions]: StructureDefinition-us-core-specimen-definitions.html
+[US Core Specimen Profile - Mappings]: StructureDefinition-us-core-specimen-mappings.html
+[US Core Specimen Profile - Testing]: StructureDefinition-us-core-specimen-testing.html
+[US Core Specimen Profile - Examples]: StructureDefinition-us-core-specimen-examples.html
+[US Core Specimen Profile - XML Representation]: StructureDefinition-us-core-specimen.profile.xml.html
+[US Core Specimen Profile - JSON Representation]: StructureDefinition-us-core-specimen.profile.json.html
+[US Core Specimen Profile - TTL Representation]: StructureDefinition-us-core-specimen.profile.ttl.html
+[US Core Treatment Intervention Preference Profile]: StructureDefinition-us-core-treatment-intervention-preference.html
+[US Core Treatment Intervention Preference Profile - Definitions]: StructureDefinition-us-core-treatment-intervention-preference-definitions.html
+[US Core Treatment Intervention Preference Profile - Mappings]: StructureDefinition-us-core-treatment-intervention-preference-mappings.html
+[US Core Treatment Intervention Preference Profile - Testing]: StructureDefinition-us-core-treatment-intervention-preference-testing.html
+[US Core Treatment Intervention Preference Profile - Examples]: StructureDefinition-us-core-treatment-intervention-preference-examples.html
+[US Core Treatment Intervention Preference Profile - XML Representation]: StructureDefinition-us-core-treatment-intervention-preference.profile.xml.html
+[US Core Treatment Intervention Preference Profile - JSON Representation]: StructureDefinition-us-core-treatment-intervention-preference.profile.json.html
+[US Core Treatment Intervention Preference Profile - TTL Representation]: StructureDefinition-us-core-treatment-intervention-preference.profile.ttl.html
+[US Core Vital Signs Profile]: StructureDefinition-us-core-vital-signs.html
+[US Core Vital Signs Profile - Definitions]: StructureDefinition-us-core-vital-signs-definitions.html
+[US Core Vital Signs Profile - Mappings]: StructureDefinition-us-core-vital-signs-mappings.html
+[US Core Vital Signs Profile - Testing]: StructureDefinition-us-core-vital-signs-testing.html
+[US Core Vital Signs Profile - XML Representation]: StructureDefinition-us-core-vital-signs.profile.xml.html
+[US Core Vital Signs Profile - JSON Representation]: StructureDefinition-us-core-vital-signs.profile.json.html
+[US Core Vital Signs Profile - TTL Representation]: StructureDefinition-us-core-vital-signs.profile.ttl.html
+[US Core Authentication Time Extension]: StructureDefinition-us-core-authentication-time.html
+[US Core Authentication Time Extension - Definitions]: StructureDefinition-us-core-authentication-time-definitions.html
+[US Core Authentication Time Extension - Mappings]: StructureDefinition-us-core-authentication-time-mappings.html
+[US Core Authentication Time Extension - Testing]: StructureDefinition-us-core-authentication-time-testing.html
+[US Core Authentication Time Extension - XML Representation]: StructureDefinition-us-core-authentication-time.profile.xml.html
+[US Core Authentication Time Extension - JSON Representation]: StructureDefinition-us-core-authentication-time.profile.json.html
+[US Core Authentication Time Extension - TTL Representation]: StructureDefinition-us-core-authentication-time.profile.ttl.html
+[US Core Birth Sex Extension]: StructureDefinition-us-core-birthsex.html
+[US Core Birth Sex Extension - Definitions]: StructureDefinition-us-core-birthsex-definitions.html
+[US Core Birth Sex Extension - Mappings]: StructureDefinition-us-core-birthsex-mappings.html
+[US Core Birth Sex Extension - Testing]: StructureDefinition-us-core-birthsex-testing.html
+[US Core Birth Sex Extension - XML Representation]: StructureDefinition-us-core-birthsex.profile.xml.html
+[US Core Birth Sex Extension - JSON Representation]: StructureDefinition-us-core-birthsex.profile.json.html
+[US Core Birth Sex Extension - TTL Representation]: StructureDefinition-us-core-birthsex.profile.ttl.html
+[US Core Direct email Extension]: StructureDefinition-us-core-direct.html
+[US Core Direct email Extension - Definitions]: StructureDefinition-us-core-direct-definitions.html
+[US Core Direct email Extension - Mappings]: StructureDefinition-us-core-direct-mappings.html
+[US Core Direct email Extension - Testing]: StructureDefinition-us-core-direct-testing.html
+[US Core Direct email Extension - XML Representation]: StructureDefinition-us-core-direct.profile.xml.html
+[US Core Direct email Extension - JSON Representation]: StructureDefinition-us-core-direct.profile.json.html
+[US Core Direct email Extension - TTL Representation]: StructureDefinition-us-core-direct.profile.ttl.html
+[US Core Ethnicity Extension]: StructureDefinition-us-core-ethnicity.html
+[US Core Ethnicity Extension - Definitions]: StructureDefinition-us-core-ethnicity-definitions.html
+[US Core Ethnicity Extension - Mappings]: StructureDefinition-us-core-ethnicity-mappings.html
+[US Core Ethnicity Extension - Testing]: StructureDefinition-us-core-ethnicity-testing.html
+[US Core Ethnicity Extension - XML Representation]: StructureDefinition-us-core-ethnicity.profile.xml.html
+[US Core Ethnicity Extension - JSON Representation]: StructureDefinition-us-core-ethnicity.profile.json.html
+[US Core Ethnicity Extension - TTL Representation]: StructureDefinition-us-core-ethnicity.profile.ttl.html
+[US Core Extension Questionnaire URI]: StructureDefinition-us-core-extension-questionnaire-uri.html
+[US Core Extension Questionnaire URI - Definitions]: StructureDefinition-us-core-extension-questionnaire-uri-definitions.html
+[US Core Extension Questionnaire URI - Mappings]: StructureDefinition-us-core-extension-questionnaire-uri-mappings.html
+[US Core Extension Questionnaire URI - Testing]: StructureDefinition-us-core-extension-questionnaire-uri-testing.html
+[US Core Extension Questionnaire URI - XML Representation]: StructureDefinition-us-core-extension-questionnaire-uri.profile.xml.html
+[US Core Extension Questionnaire URI - JSON Representation]: StructureDefinition-us-core-extension-questionnaire-uri.profile.json.html
+[US Core Extension Questionnaire URI - TTL Representation]: StructureDefinition-us-core-extension-questionnaire-uri.profile.ttl.html
+[US Core Gender Identity Extension]: StructureDefinition-us-core-genderIdentity.html
+[US Core Gender Identity Extension - Definitions]: StructureDefinition-us-core-genderIdentity-definitions.html
+[US Core Gender Identity Extension - Mappings]: StructureDefinition-us-core-genderIdentity-mappings.html
+[US Core Gender Identity Extension - Testing]: StructureDefinition-us-core-genderIdentity-testing.html
+[US Core Gender Identity Extension - XML Representation]: StructureDefinition-us-core-genderIdentity.profile.xml.html
+[US Core Gender Identity Extension - JSON Representation]: StructureDefinition-us-core-genderIdentity.profile.json.html
+[US Core Gender Identity Extension - TTL Representation]: StructureDefinition-us-core-genderIdentity.profile.ttl.html
+[US Core Interpreter Required Extension]: StructureDefinition-us-core-interpreter-required.html
+[US Core Interpreter Required Extension - Definitions]: StructureDefinition-us-core-interpreter-required-definitions.html
+[US Core Interpreter Required Extension - Mappings]: StructureDefinition-us-core-interpreter-required-mappings.html
+[US Core Interpreter Required Extension - Testing]: StructureDefinition-us-core-interpreter-required-testing.html
+[US Core Interpreter Required Extension - XML Representation]: StructureDefinition-us-core-interpreter-required.profile.xml.html
+[US Core Interpreter Required Extension - JSON Representation]: StructureDefinition-us-core-interpreter-required.profile.json.html
+[US Core Interpreter Required Extension - TTL Representation]: StructureDefinition-us-core-interpreter-required.profile.ttl.html
+[US Core Jurisdiction Extension]: StructureDefinition-us-core-jurisdiction.html
+[US Core Jurisdiction Extension - Definitions]: StructureDefinition-us-core-jurisdiction-definitions.html
+[US Core Jurisdiction Extension - Mappings]: StructureDefinition-us-core-jurisdiction-mappings.html
+[US Core Jurisdiction Extension - Testing]: StructureDefinition-us-core-jurisdiction-testing.html
+[US Core Jurisdiction Extension - XML Representation]: StructureDefinition-us-core-jurisdiction.profile.xml.html
+[US Core Jurisdiction Extension - JSON Representation]: StructureDefinition-us-core-jurisdiction.profile.json.html
+[US Core Jurisdiction Extension - TTL Representation]: StructureDefinition-us-core-jurisdiction.profile.ttl.html
+[US Core Medication Adherence Extension]: StructureDefinition-us-core-medication-adherence.html
+[US Core Medication Adherence Extension - Definitions]: StructureDefinition-us-core-medication-adherence-definitions.html
+[US Core Medication Adherence Extension - Mappings]: StructureDefinition-us-core-medication-adherence-mappings.html
+[US Core Medication Adherence Extension - Testing]: StructureDefinition-us-core-medication-adherence-testing.html
+[US Core Medication Adherence Extension - XML Representation]: StructureDefinition-us-core-medication-adherence.profile.xml.html
+[US Core Medication Adherence Extension - JSON Representation]: StructureDefinition-us-core-medication-adherence.profile.json.html
+[US Core Medication Adherence Extension - TTL Representation]: StructureDefinition-us-core-medication-adherence.profile.ttl.html
+[US Core Race Extension]: StructureDefinition-us-core-race.html
+[US Core Race Extension - Definitions]: StructureDefinition-us-core-race-definitions.html
+[US Core Race Extension - Mappings]: StructureDefinition-us-core-race-mappings.html
+[US Core Race Extension - Testing]: StructureDefinition-us-core-race-testing.html
+[US Core Race Extension - XML Representation]: StructureDefinition-us-core-race.profile.xml.html
+[US Core Race Extension - JSON Representation]: StructureDefinition-us-core-race.profile.json.html
+[US Core Race Extension - TTL Representation]: StructureDefinition-us-core-race.profile.ttl.html
+[US Core Sex Extension]: StructureDefinition-us-core-sex.html
+[US Core Sex Extension - Definitions]: StructureDefinition-us-core-sex-definitions.html
+[US Core Sex Extension - Mappings]: StructureDefinition-us-core-sex-mappings.html
+[US Core Sex Extension - Testing]: StructureDefinition-us-core-sex-testing.html
+[US Core Sex Extension - XML Representation]: StructureDefinition-us-core-sex.profile.xml.html
+[US Core Sex Extension - JSON Representation]: StructureDefinition-us-core-sex.profile.json.html
+[US Core Sex Extension - TTL Representation]: StructureDefinition-us-core-sex.profile.ttl.html
+[US Core Tribal Affiliation Extension]: StructureDefinition-us-core-tribal-affiliation.html
+[US Core Tribal Affiliation Extension - Definitions]: StructureDefinition-us-core-tribal-affiliation-definitions.html
+[US Core Tribal Affiliation Extension - Mappings]: StructureDefinition-us-core-tribal-affiliation-mappings.html
+[US Core Tribal Affiliation Extension - Testing]: StructureDefinition-us-core-tribal-affiliation-testing.html
+[US Core Tribal Affiliation Extension - XML Representation]: StructureDefinition-us-core-tribal-affiliation.profile.xml.html
+[US Core Tribal Affiliation Extension - JSON Representation]: StructureDefinition-us-core-tribal-affiliation.profile.json.html
+[US Core Tribal Affiliation Extension - TTL Representation]: StructureDefinition-us-core-tribal-affiliation.profile.ttl.html
+[US Core USCDI Requirement Extension]: StructureDefinition-uscdi-requirement.html
+[US Core USCDI Requirement Extension - Definitions]: StructureDefinition-uscdi-requirement-definitions.html
+[US Core USCDI Requirement Extension - Mappings]: StructureDefinition-uscdi-requirement-mappings.html
+[US Core USCDI Requirement Extension - Testing]: StructureDefinition-uscdi-requirement-testing.html
+[US Core USCDI Requirement Extension - XML Representation]: StructureDefinition-uscdi-requirement.profile.xml.html
+[US Core USCDI Requirement Extension - JSON Representation]: StructureDefinition-uscdi-requirement.profile.json.html
+[US Core USCDI Requirement Extension - TTL Representation]: StructureDefinition-uscdi-requirement.profile.ttl.html
+[Detailed ethnicity]: ValueSet-detailed-ethnicity.html
+[Detailed ethnicity - Testing]: ValueSet-detailed-ethnicity-testing.html
+[Detailed ethnicity - XML Representation]: ValueSet-detailed-ethnicity.xml.html
+[Detailed ethnicity - JSON Representation]: ValueSet-detailed-ethnicity.json.html
+[Detailed ethnicity - TTL Representation]: ValueSet-detailed-ethnicity.ttl.html
+[Detailed Race]: ValueSet-detailed-race.html
+[Detailed Race - Testing]: ValueSet-detailed-race-testing.html
+[Detailed Race - XML Representation]: ValueSet-detailed-race.xml.html
+[Detailed Race - JSON Representation]: ValueSet-detailed-race.json.html
+[Detailed Race - TTL Representation]: ValueSet-detailed-race.ttl.html
+[Language codes with language and optionally a region modifier]: ValueSet-simple-language.html
+[Language codes with language and optionally a region modifier - Testing]: ValueSet-simple-language-testing.html
+[Language codes with language and optionally a region modifier - XML Representation]: ValueSet-simple-language.xml.html
+[Language codes with language and optionally a region modifier - JSON Representation]: ValueSet-simple-language.json.html
+[Language codes with language and optionally a region modifier - TTL Representation]: ValueSet-simple-language.ttl.html
+[OMB Ethnicity Categories]: ValueSet-omb-ethnicity-category.html
+[OMB Ethnicity Categories - Testing]: ValueSet-omb-ethnicity-category-testing.html
+[OMB Ethnicity Categories - XML Representation]: ValueSet-omb-ethnicity-category.xml.html
+[OMB Ethnicity Categories - JSON Representation]: ValueSet-omb-ethnicity-category.json.html
+[OMB Ethnicity Categories - TTL Representation]: ValueSet-omb-ethnicity-category.ttl.html
+[OMB Race Categories]: ValueSet-omb-race-category.html
+[OMB Race Categories - Testing]: ValueSet-omb-race-category-testing.html
+[OMB Race Categories - XML Representation]: ValueSet-omb-race-category.xml.html
+[OMB Race Categories - JSON Representation]: ValueSet-omb-race-category.json.html
+[OMB Race Categories - TTL Representation]: ValueSet-omb-race-category.ttl.html
+[US Core Clinical Note Type]: ValueSet-us-core-clinical-note-type.html
+[US Core Clinical Note Type - Testing]: ValueSet-us-core-clinical-note-type-testing.html
+[US Core Clinical Note Type - XML Representation]: ValueSet-us-core-clinical-note-type.xml.html
+[US Core Clinical Note Type - JSON Representation]: ValueSet-us-core-clinical-note-type.json.html
+[US Core Clinical Note Type - TTL Representation]: ValueSet-us-core-clinical-note-type.ttl.html
+[US Core Clinical Result Observation Category]: ValueSet-us-core-clinical-result-observation-category.html
+[US Core Clinical Result Observation Category - Testing]: ValueSet-us-core-clinical-result-observation-category-testing.html
+[US Core Clinical Result Observation Category - XML Representation]: ValueSet-us-core-clinical-result-observation-category.xml.html
+[US Core Clinical Result Observation Category - JSON Representation]: ValueSet-us-core-clinical-result-observation-category.json.html
+[US Core Clinical Result Observation Category - TTL Representation]: ValueSet-us-core-clinical-result-observation-category.ttl.html
+[US Core Condition Codes]: ValueSet-us-core-condition-code.html
+[US Core Condition Codes - Testing]: ValueSet-us-core-condition-code-testing.html
+[US Core Condition Codes - XML Representation]: ValueSet-us-core-condition-code.xml.html
+[US Core Condition Codes - JSON Representation]: ValueSet-us-core-condition-code.json.html
+[US Core Condition Codes - TTL Representation]: ValueSet-us-core-condition-code.ttl.html
+[US Core Diagnostic Report Category Codes]: ValueSet-us-core-diagnosticreport-category.html
+[US Core Diagnostic Report Category Codes - Testing]: ValueSet-us-core-diagnosticreport-category-testing.html
+[US Core Diagnostic Report Category Codes - XML Representation]: ValueSet-us-core-diagnosticreport-category.xml.html
+[US Core Diagnostic Report Category Codes - JSON Representation]: ValueSet-us-core-diagnosticreport-category.json.html
+[US Core Diagnostic Report Category Codes - TTL Representation]: ValueSet-us-core-diagnosticreport-category.ttl.html
+[US Core DocumentReference Category]: ValueSet-us-core-documentreference-category.html
+[US Core DocumentReference Category - Testing]: ValueSet-us-core-documentreference-category-testing.html
+[US Core DocumentReference Category - XML Representation]: ValueSet-us-core-documentreference-category.xml.html
+[US Core DocumentReference Category - JSON Representation]: ValueSet-us-core-documentreference-category.json.html
+[US Core DocumentReference Category - TTL Representation]: ValueSet-us-core-documentreference-category.ttl.html
+[US Core DocumentReference Type]: ValueSet-us-core-documentreference-type.html
+[US Core DocumentReference Type - Testing]: ValueSet-us-core-documentreference-type-testing.html
+[US Core DocumentReference Type - XML Representation]: ValueSet-us-core-documentreference-type.xml.html
+[US Core DocumentReference Type - JSON Representation]: ValueSet-us-core-documentreference-type.json.html
+[US Core DocumentReference Type - TTL Representation]: ValueSet-us-core-documentreference-type.ttl.html
+[US Core Encounter Type]: ValueSet-us-core-encounter-type.html
+[US Core Encounter Type - Testing]: ValueSet-us-core-encounter-type-testing.html
+[US Core Encounter Type - XML Representation]: ValueSet-us-core-encounter-type.xml.html
+[US Core Encounter Type - JSON Representation]: ValueSet-us-core-encounter-type.json.html
+[US Core Encounter Type - TTL Representation]: ValueSet-us-core-encounter-type.ttl.html
+[US Core Goal Codes]: ValueSet-us-core-goal-description.html
+[US Core Goal Codes - Testing]: ValueSet-us-core-goal-description-testing.html
+[US Core Goal Codes - XML Representation]: ValueSet-us-core-goal-description.xml.html
+[US Core Goal Codes - JSON Representation]: ValueSet-us-core-goal-description.json.html
+[US Core Goal Codes - TTL Representation]: ValueSet-us-core-goal-description.ttl.html
+[US Core Laboratory Test Codes]: ValueSet-us-core-laboratory-test-codes.html
+[US Core Laboratory Test Codes - Testing]: ValueSet-us-core-laboratory-test-codes-testing.html
+[US Core Laboratory Test Codes - XML Representation]: ValueSet-us-core-laboratory-test-codes.xml.html
+[US Core Laboratory Test Codes - JSON Representation]: ValueSet-us-core-laboratory-test-codes.json.html
+[US Core Laboratory Test Codes - TTL Representation]: ValueSet-us-core-laboratory-test-codes.ttl.html
+[US Core Location Type]: ValueSet-us-core-location-type.html
+[US Core Location Type - Testing]: ValueSet-us-core-location-type-testing.html
+[US Core Location Type - XML Representation]: ValueSet-us-core-location-type.xml.html
+[US Core Location Type - JSON Representation]: ValueSet-us-core-location-type.json.html
+[US Core Location Type - TTL Representation]: ValueSet-us-core-location-type.ttl.html
+[US Core Narrative Status]: ValueSet-us-core-narrative-status.html
+[US Core Narrative Status - Testing]: ValueSet-us-core-narrative-status-testing.html
+[US Core Narrative Status - XML Representation]: ValueSet-us-core-narrative-status.xml.html
+[US Core Narrative Status - JSON Representation]: ValueSet-us-core-narrative-status.json.html
+[US Core Narrative Status - TTL Representation]: ValueSet-us-core-narrative-status.ttl.html
+[US Core Non Laboratory Codes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
+[US Core Non Laboratory Codes - Testing]: ValueSet-us-core-diagnosticreport-report-and-note-codes-testing.html
+[US Core Non Laboratory Codes - XML Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.xml.html
+[US Core Non Laboratory Codes - JSON Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.json.html
+[US Core Non Laboratory Codes - TTL Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.ttl.html
+[US Core Problem or Health Concern]: ValueSet-us-core-problem-or-health-concern.html
+[US Core Problem or Health Concern - Testing]: ValueSet-us-core-problem-or-health-concern-testing.html
+[US Core Problem or Health Concern - XML Representation]: ValueSet-us-core-problem-or-health-concern.xml.html
+[US Core Problem or Health Concern - JSON Representation]: ValueSet-us-core-problem-or-health-concern.json.html
+[US Core Problem or Health Concern - TTL Representation]: ValueSet-us-core-problem-or-health-concern.ttl.html
+[US Core Procedure Codes]: ValueSet-us-core-procedure-code.html
+[US Core Procedure Codes - Testing]: ValueSet-us-core-procedure-code-testing.html
+[US Core Procedure Codes - XML Representation]: ValueSet-us-core-procedure-code.xml.html
+[US Core Procedure Codes - JSON Representation]: ValueSet-us-core-procedure-code.json.html
+[US Core Procedure Codes - TTL Representation]: ValueSet-us-core-procedure-code.ttl.html
+[US Core Provenance Participant Type Codes]: ValueSet-us-core-provenance-participant-type.html
+[US Core Provenance Participant Type Codes - Testing]: ValueSet-us-core-provenance-participant-type-testing.html
+[US Core Provenance Participant Type Codes - XML Representation]: ValueSet-us-core-provenance-participant-type.xml.html
+[US Core Provenance Participant Type Codes - JSON Representation]: ValueSet-us-core-provenance-participant-type.json.html
+[US Core Provenance Participant Type Codes - TTL Representation]: ValueSet-us-core-provenance-participant-type.ttl.html
+[US Core Screening Assessment Condition Category]: ValueSet-us-core-screening-assessment-condition-category.html
+[US Core Screening Assessment Condition Category - Testing]: ValueSet-us-core-screening-assessment-condition-category-testing.html
+[US Core Screening Assessment Condition Category - XML Representation]: ValueSet-us-core-screening-assessment-condition-category.xml.html
+[US Core Screening Assessment Condition Category - JSON Representation]: ValueSet-us-core-screening-assessment-condition-category.json.html
+[US Core Screening Assessment Condition Category - TTL Representation]: ValueSet-us-core-screening-assessment-condition-category.ttl.html
+[US Core Screening Assessment Observation Category]: ValueSet-us-core-screening-assessment-observation-category.html
+[US Core Screening Assessment Observation Category - Testing]: ValueSet-us-core-screening-assessment-observation-category-testing.html
+[US Core Screening Assessment Observation Category - XML Representation]: ValueSet-us-core-screening-assessment-observation-category.xml.html
+[US Core Screening Assessment Observation Category - JSON Representation]: ValueSet-us-core-screening-assessment-observation-category.json.html
+[US Core Screening Assessment Observation Category - TTL Representation]: ValueSet-us-core-screening-assessment-observation-category.ttl.html
+[US Core Screening Assessment Observation Maximum Category]: ValueSet-us-core-screening-assessment-observation-maximum-category.html
+[US Core Screening Assessment Observation Maximum Category - Testing]: ValueSet-us-core-screening-assessment-observation-maximum-category-testing.html
+[US Core Screening Assessment Observation Maximum Category - XML Representation]: ValueSet-us-core-screening-assessment-observation-maximum-category.xml.html
+[US Core Screening Assessment Observation Maximum Category - JSON Representation]: ValueSet-us-core-screening-assessment-observation-maximum-category.json.html
+[US Core Screening Assessment Observation Maximum Category - TTL Representation]: ValueSet-us-core-screening-assessment-observation-maximum-category.ttl.html
+[US Core ServiceRequest Category Codes]: ValueSet-us-core-servicerequest-category.html
+[US Core ServiceRequest Category Codes - Testing]: ValueSet-us-core-servicerequest-category-testing.html
+[US Core ServiceRequest Category Codes - XML Representation]: ValueSet-us-core-servicerequest-category.xml.html
+[US Core ServiceRequest Category Codes - JSON Representation]: ValueSet-us-core-servicerequest-category.json.html
+[US Core ServiceRequest Category Codes - TTL Representation]: ValueSet-us-core-servicerequest-category.ttl.html
+[US Core Simple Observation Category]: ValueSet-us-core-simple-observation-category.html
+[US Core Simple Observation Category - Testing]: ValueSet-us-core-simple-observation-category-testing.html
+[US Core Simple Observation Category - XML Representation]: ValueSet-us-core-simple-observation-category.xml.html
+[US Core Simple Observation Category - JSON Representation]: ValueSet-us-core-simple-observation-category.json.html
+[US Core Simple Observation Category - TTL Representation]: ValueSet-us-core-simple-observation-category.ttl.html
+[US Core Specimen Condition]: ValueSet-us-core-specimen-condition.html
+[US Core Specimen Condition - Testing]: ValueSet-us-core-specimen-condition-testing.html
+[US Core Specimen Condition - XML Representation]: ValueSet-us-core-specimen-condition.xml.html
+[US Core Specimen Condition - JSON Representation]: ValueSet-us-core-specimen-condition.json.html
+[US Core Specimen Condition - TTL Representation]: ValueSet-us-core-specimen-condition.ttl.html
+[US Core Status for Smoking Status Observation]: ValueSet-us-core-observation-smoking-status-status.html
+[US Core Status for Smoking Status Observation - Testing]: ValueSet-us-core-observation-smoking-status-status-testing.html
+[US Core Status for Smoking Status Observation - XML Representation]: ValueSet-us-core-observation-smoking-status-status.xml.html
+[US Core Status for Smoking Status Observation - JSON Representation]: ValueSet-us-core-observation-smoking-status-status.json.html
+[US Core Status for Smoking Status Observation - TTL Representation]: ValueSet-us-core-observation-smoking-status-status.ttl.html
+[US Core Survey Codes]: ValueSet-us-core-survey-codes.html
+[US Core Survey Codes - Testing]: ValueSet-us-core-survey-codes-testing.html
+[US Core Survey Codes - XML Representation]: ValueSet-us-core-survey-codes.xml.html
+[US Core Survey Codes - JSON Representation]: ValueSet-us-core-survey-codes.json.html
+[US Core Survey Codes - TTL Representation]: ValueSet-us-core-survey-codes.ttl.html
+[USPS Two Letter Alphabetic Codes]: ValueSet-us-core-usps-state.html
+[USPS Two Letter Alphabetic Codes - Testing]: ValueSet-us-core-usps-state-testing.html
+[USPS Two Letter Alphabetic Codes - XML Representation]: ValueSet-us-core-usps-state.xml.html
+[USPS Two Letter Alphabetic Codes - JSON Representation]: ValueSet-us-core-usps-state.json.html
+[USPS Two Letter Alphabetic Codes - TTL Representation]: ValueSet-us-core-usps-state.ttl.html
+[US Core CarePlan Category Extension Codes]: CodeSystem-careplan-category.html
+[US Core CarePlan Category Extension Codes - Testing]: CodeSystem-careplan-category-testing.html
+[US Core CarePlan Category Extension Codes - XML Representation]: CodeSystem-careplan-category.xml.html
+[US Core CarePlan Category Extension Codes - JSON Representation]: CodeSystem-careplan-category.json.html
+[US Core CarePlan Category Extension Codes - TTL Representation]: CodeSystem-careplan-category.ttl.html
+[US Core Category]: CodeSystem-us-core-category.html
+[US Core Category - Testing]: CodeSystem-us-core-category-testing.html
+[US Core Category - XML Representation]: CodeSystem-us-core-category.xml.html
+[US Core Category - JSON Representation]: CodeSystem-us-core-category.json.html
+[US Core Category - TTL Representation]: CodeSystem-us-core-category.ttl.html
+[US Core Condition Category Extension Codes]: CodeSystem-condition-category.html
+[US Core Condition Category Extension Codes - Testing]: CodeSystem-condition-category-testing.html
+[US Core Condition Category Extension Codes - XML Representation]: CodeSystem-condition-category.xml.html
+[US Core Condition Category Extension Codes - JSON Representation]: CodeSystem-condition-category.json.html
+[US Core Condition Category Extension Codes - TTL Representation]: CodeSystem-condition-category.ttl.html
+[US Core DocumentReferences Category Codes]: CodeSystem-us-core-documentreference-category.html
+[US Core DocumentReferences Category Codes - Testing]: CodeSystem-us-core-documentreference-category-testing.html
+[US Core DocumentReferences Category Codes - XML Representation]: CodeSystem-us-core-documentreference-category.xml.html
+[US Core DocumentReferences Category Codes - JSON Representation]: CodeSystem-us-core-documentreference-category.json.html
+[US Core DocumentReferences Category Codes - TTL Representation]: CodeSystem-us-core-documentreference-category.ttl.html
+[US Core Provenance Participant Type Extension Codes]: CodeSystem-us-core-provenance-participant-type.html
+[US Core Provenance Participant Type Extension Codes - Testing]: CodeSystem-us-core-provenance-participant-type-testing.html
+[US Core Provenance Participant Type Extension Codes - XML Representation]: CodeSystem-us-core-provenance-participant-type.xml.html
+[US Core Provenance Participant Type Extension Codes - JSON Representation]: CodeSystem-us-core-provenance-participant-type.json.html
+[US Core Provenance Participant Type Extension Codes - TTL Representation]: CodeSystem-us-core-provenance-participant-type.ttl.html
+[10 minute Apgar Color Example]: Observation-10-minute-apgar-color.html
+[10 minute Apgar Color Example - XML Representation]: Observation-10-minute-apgar-color.xml.html
+[10 minute Apgar Color Example - JSON Representation]: Observation-10-minute-apgar-color.json.html
+[10 minute Apgar Color Example - TTL Representation]: Observation-10-minute-apgar-color.ttl.html
+[10 minute Apgar Heart Rate Example]: Observation-10-minute-apgar-heart-rate.html
+[10 minute Apgar Heart Rate Example - XML Representation]: Observation-10-minute-apgar-heart-rate.xml.html
+[10 minute Apgar Heart Rate Example - JSON Representation]: Observation-10-minute-apgar-heart-rate.json.html
+[10 minute Apgar Heart Rate Example - TTL Representation]: Observation-10-minute-apgar-heart-rate.ttl.html
+[10 minute Apgar Muscle Tone Example]: Observation-10-minute-apgar-muscle-tone.html
+[10 minute Apgar Muscle Tone Example - XML Representation]: Observation-10-minute-apgar-muscle-tone.xml.html
+[10 minute Apgar Muscle Tone Example - JSON Representation]: Observation-10-minute-apgar-muscle-tone.json.html
+[10 minute Apgar Muscle Tone Example - TTL Representation]: Observation-10-minute-apgar-muscle-tone.ttl.html
+[10 minute Apgar Reflex Irritability Example]: Observation-10-minute-apgar-reflex-irritability.html
+[10 minute Apgar Reflex Irritability Example - XML Representation]: Observation-10-minute-apgar-reflex-irritability.xml.html
+[10 minute Apgar Reflex Irritability Example - JSON Representation]: Observation-10-minute-apgar-reflex-irritability.json.html
+[10 minute Apgar Reflex Irritability Example - TTL Representation]: Observation-10-minute-apgar-reflex-irritability.ttl.html
+[10 minute Apgar Respiratory effort Example]: Observation-10-minute-apgar-respiratory-effort.html
+[10 minute Apgar Respiratory effort Example - XML Representation]: Observation-10-minute-apgar-respiratory-effort.xml.html
+[10 minute Apgar Respiratory effort Example - JSON Representation]: Observation-10-minute-apgar-respiratory-effort.json.html
+[10 minute Apgar Respiratory effort Example - TTL Representation]: Observation-10-minute-apgar-respiratory-effort.ttl.html
+[10 Minute Apgar Score Example]: Observation-10-minute-apgar-score.html
+[10 Minute Apgar Score Example - XML Representation]: Observation-10-minute-apgar-score.xml.html
+[10 Minute Apgar Score Example - JSON Representation]: Observation-10-minute-apgar-score.json.html
+[10 Minute Apgar Score Example - TTL Representation]: Observation-10-minute-apgar-score.ttl.html
+[10 Minute Apgar Score Panel Example]: Observation-10-minute-apgar-score-panel.html
+[10 Minute Apgar Score Panel Example - XML Representation]: Observation-10-minute-apgar-score-panel.xml.html
+[10 Minute Apgar Score Panel Example - JSON Representation]: Observation-10-minute-apgar-score-panel.json.html
+[10 Minute Apgar Score Panel Example - TTL Representation]: Observation-10-minute-apgar-score-panel.ttl.html
+[ADI Observation Presence ADI Example]: Observation-ADI-example.html
+[ADI Observation Presence ADI Example - XML Representation]: Observation-ADI-example.xml.html
+[ADI Observation Presence ADI Example - JSON Representation]: Observation-ADI-example.json.html
+[ADI Observation Presence ADI Example - TTL Representation]: Observation-ADI-example.ttl.html
+[ADI Observation Presence No ADI Example]: Observation-no-ADI-example.html
+[ADI Observation Presence No ADI Example - XML Representation]: Observation-no-ADI-example.xml.html
+[ADI Observation Presence No ADI Example - JSON Representation]: Observation-no-ADI-example.json.html
+[ADI Observation Presence No ADI Example - TTL Representation]: Observation-no-ADI-example.ttl.html
+[Ahc-Hrsn Item Observation Example 68517-2]: Observation-AHC-HRSN-item-example-68517-2.html
+[Ahc-Hrsn Item Observation Example 68517-2 - XML Representation]: Observation-AHC-HRSN-item-example-68517-2.xml.html
+[Ahc-Hrsn Item Observation Example 68517-2 - JSON Representation]: Observation-AHC-HRSN-item-example-68517-2.json.html
+[Ahc-Hrsn Item Observation Example 68517-2 - TTL Representation]: Observation-AHC-HRSN-item-example-68517-2.ttl.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example]: Questionnaire-AUDIT-C.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example - Testing]: Questionnaire-AUDIT-C-testing.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example - XML Representation]: Questionnaire-AUDIT-C.xml.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example - JSON Representation]: Questionnaire-AUDIT-C.json.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example - TTL Representation]: Questionnaire-AUDIT-C.ttl.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) QuestionnaireResponse Example]: QuestionnaireResponse-AUDIT-C.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) QuestionnaireResponse Example - XML Representation]: QuestionnaireResponse-AUDIT-C.xml.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) QuestionnaireResponse Example - JSON Representation]: QuestionnaireResponse-AUDIT-C.json.html
+[Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) QuestionnaireResponse Example - TTL Representation]: QuestionnaireResponse-AUDIT-C.ttl.html
+[Alcohol Use Status Example]: Observation-alcohol-use-status.html
+[Alcohol Use Status Example - XML Representation]: Observation-alcohol-use-status.xml.html
+[Alcohol Use Status Example - JSON Representation]: Observation-alcohol-use-status.json.html
+[Alcohol Use Status Example - TTL Representation]: Observation-alcohol-use-status.ttl.html
+[Alcoholic Drinks Per Day Example]: Observation-alcoholic-drinks-per-day.html
+[Alcoholic Drinks Per Day Example - XML Representation]: Observation-alcoholic-drinks-per-day.xml.html
+[Alcoholic Drinks Per Day Example - JSON Representation]: Observation-alcoholic-drinks-per-day.json.html
+[Alcoholic Drinks Per Day Example - TTL Representation]: Observation-alcoholic-drinks-per-day.ttl.html
+[AllergyIntolerance Example]: AllergyIntolerance-example.html
+[AllergyIntolerance Example - XML Representation]: AllergyIntolerance-example.xml.html
+[AllergyIntolerance Example - JSON Representation]: AllergyIntolerance-example.json.html
+[AllergyIntolerance Example - TTL Representation]: AllergyIntolerance-example.ttl.html
+[AllergyIntolerance Non-pharmacologic Agent Example]: AllergyIntolerance-non-pharmacologic-agent-example.html
+[AllergyIntolerance Non-pharmacologic Agent Example - XML Representation]: AllergyIntolerance-non-pharmacologic-agent-example.xml.html
+[AllergyIntolerance Non-pharmacologic Agent Example - JSON Representation]: AllergyIntolerance-non-pharmacologic-agent-example.json.html
+[AllergyIntolerance Non-pharmacologic Agent Example - TTL Representation]: AllergyIntolerance-non-pharmacologic-agent-example.ttl.html
+[AllergyIntolerance Provenance Example]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.html
+[AllergyIntolerance Provenance Example - XML Representation]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.xml.html
+[AllergyIntolerance Provenance Example - JSON Representation]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.json.html
+[AllergyIntolerance Provenance Example - TTL Representation]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.ttl.html
+[At Home In Vitro Test Example]: Observation-at-home-in-vitro-test.html
+[At Home In Vitro Test Example - XML Representation]: Observation-at-home-in-vitro-test.xml.html
+[At Home In Vitro Test Example - JSON Representation]: Observation-at-home-in-vitro-test.json.html
+[At Home In Vitro Test Example - TTL Representation]: Observation-at-home-in-vitro-test.ttl.html
+[Audit-C Item Example 68517-2]: Observation-AUDIT-C-item-example-68517-2.html
+[Audit-C Item Example 68517-2 - XML Representation]: Observation-AUDIT-C-item-example-68517-2.xml.html
+[Audit-C Item Example 68517-2 - JSON Representation]: Observation-AUDIT-C-item-example-68517-2.json.html
+[Audit-C Item Example 68517-2 - TTL Representation]: Observation-AUDIT-C-item-example-68517-2.ttl.html
+[Audit-C Item Example 68519-8]: Observation-AUDIT-C-item-example-68519-8.html
+[Audit-C Item Example 68519-8 - XML Representation]: Observation-AUDIT-C-item-example-68519-8.xml.html
+[Audit-C Item Example 68519-8 - JSON Representation]: Observation-AUDIT-C-item-example-68519-8.json.html
+[Audit-C Item Example 68519-8 - TTL Representation]: Observation-AUDIT-C-item-example-68519-8.ttl.html
+[Audit-C Item Example 68520-6]: Observation-AUDIT-C-item-example-68520-6.html
+[Audit-C Item Example 68520-6 - XML Representation]: Observation-AUDIT-C-item-example-68520-6.xml.html
+[Audit-C Item Example 68520-6 - JSON Representation]: Observation-AUDIT-C-item-example-68520-6.json.html
+[Audit-C Item Example 68520-6 - TTL Representation]: Observation-AUDIT-C-item-example-68520-6.ttl.html
+[Audit-C Item Example 75626-2]: Observation-AUDIT-C-item-example-75626-2.html
+[Audit-C Item Example 75626-2 - XML Representation]: Observation-AUDIT-C-item-example-75626-2.xml.html
+[Audit-C Item Example 75626-2 - JSON Representation]: Observation-AUDIT-C-item-example-75626-2.json.html
+[Audit-C Item Example 75626-2 - TTL Representation]: Observation-AUDIT-C-item-example-75626-2.ttl.html
+[Audit-C Panel Example 72109-2]: Observation-AUDIT-C-panel-example-72109-2.html
+[Audit-C Panel Example 72109-2 - XML Representation]: Observation-AUDIT-C-panel-example-72109-2.xml.html
+[Audit-C Panel Example 72109-2 - JSON Representation]: Observation-AUDIT-C-panel-example-72109-2.json.html
+[Audit-C Panel Example 72109-2 - TTL Representation]: Observation-AUDIT-C-panel-example-72109-2.ttl.html
+[Average Blood Pressure Example]: Observation-average-blood-pressure.html
+[Average Blood Pressure Example - XML Representation]: Observation-average-blood-pressure.xml.html
+[Average Blood Pressure Example - JSON Representation]: Observation-average-blood-pressure.json.html
+[Average Blood Pressure Example - TTL Representation]: Observation-average-blood-pressure.ttl.html
+[Blood Pressure Example]: Observation-blood-pressure.html
+[Blood Pressure Example - XML Representation]: Observation-blood-pressure.xml.html
+[Blood Pressure Example - JSON Representation]: Observation-blood-pressure.json.html
+[Blood Pressure Example - TTL Representation]: Observation-blood-pressure.ttl.html
+[BMI Example]: Observation-bmi.html
+[BMI Example - XML Representation]: Observation-bmi.xml.html
+[BMI Example - JSON Representation]: Observation-bmi.json.html
+[BMI Example - TTL Representation]: Observation-bmi.ttl.html
+[BP Data Absent Example]: Observation-bp-data-absent.html
+[BP Data Absent Example - XML Representation]: Observation-bp-data-absent.xml.html
+[BP Data Absent Example - JSON Representation]: Observation-bp-data-absent.json.html
+[BP Data Absent Example - TTL Representation]: Observation-bp-data-absent.ttl.html
+[Capillary refill Time Nail Bed Example]: Observation-capillary-refill-time-nail-bed.html
+[Capillary refill Time Nail Bed Example - XML Representation]: Observation-capillary-refill-time-nail-bed.xml.html
+[Capillary refill Time Nail Bed Example - JSON Representation]: Observation-capillary-refill-time-nail-bed.json.html
+[Capillary refill Time Nail Bed Example - TTL Representation]: Observation-capillary-refill-time-nail-bed.ttl.html
+[Care Experience Preference Example]: Observation-care-experience-preference.html
+[Care Experience Preference Example - XML Representation]: Observation-care-experience-preference.xml.html
+[Care Experience Preference Example - JSON Representation]: Observation-care-experience-preference.json.html
+[Care Experience Preference Example - TTL Representation]: Observation-care-experience-preference.ttl.html
+[CareTeam Example]: CareTeam-example.html
+[CareTeam Example - XML Representation]: CareTeam-example.xml.html
+[CareTeam Example - JSON Representation]: CareTeam-example.json.html
+[CareTeam Example - TTL Representation]: CareTeam-example.ttl.html
+[CBC Example]: DiagnosticReport-cbc.html
+[CBC Example - XML Representation]: DiagnosticReport-cbc.xml.html
+[CBC Example - JSON Representation]: DiagnosticReport-cbc.json.html
+[CBC Example - TTL Representation]: DiagnosticReport-cbc.ttl.html
+[Chest Xray Example]: Media-chest-xray.html
+[Chest Xray Example - XML Representation]: Media-chest-xray.xml.html
+[Chest Xray Example - JSON Representation]: Media-chest-xray.json.html
+[Chest Xray Example - TTL Representation]: Media-chest-xray.ttl.html
+[Cigarette Pack-Years Example]: Observation-pack-years-example.html
+[Cigarette Pack-Years Example - XML Representation]: Observation-pack-years-example.xml.html
+[Cigarette Pack-Years Example - JSON Representation]: Observation-pack-years-example.json.html
+[Cigarette Pack-Years Example - TTL Representation]: Observation-pack-years-example.ttl.html
+[Colonoscopy Example]: CarePlan-colonoscopy.html
+[Colonoscopy Example - XML Representation]: CarePlan-colonoscopy.xml.html
+[Colonoscopy Example - JSON Representation]: CarePlan-colonoscopy.json.html
+[Colonoscopy Example - TTL Representation]: CarePlan-colonoscopy.ttl.html
+[Condition Duodenal Ulcer Example]: Condition-condition-duodenal-ulcer.html
+[Condition Duodenal Ulcer Example - XML Representation]: Condition-condition-duodenal-ulcer.xml.html
+[Condition Duodenal Ulcer Example - JSON Representation]: Condition-condition-duodenal-ulcer.json.html
+[Condition Duodenal Ulcer Example - TTL Representation]: Condition-condition-duodenal-ulcer.ttl.html
+[Coverage Example]: Coverage-coverage-example.html
+[Coverage Example - XML Representation]: Coverage-coverage-example.xml.html
+[Coverage Example - JSON Representation]: Coverage-coverage-example.json.html
+[Coverage Example - TTL Representation]: Coverage-coverage-example.ttl.html
+[Deceased Patient Example]: Patient-deceased-example.html
+[Deceased Patient Example - XML Representation]: Patient-deceased-example.xml.html
+[Deceased Patient Example - JSON Representation]: Patient-deceased-example.json.html
+[Deceased Patient Example - TTL Representation]: Patient-deceased-example.ttl.html
+[Device Defib Example]: Device-udi-2.html
+[Device Defib Example - XML Representation]: Device-udi-2.xml.html
+[Device Defib Example - JSON Representation]: Device-udi-2.json.html
+[Device Defib Example - TTL Representation]: Device-udi-2.ttl.html
+[Device Knee Example]: Device-udi-3.html
+[Device Knee Example - XML Representation]: Device-udi-3.xml.html
+[Device Knee Example - JSON Representation]: Device-udi-3.json.html
+[Device Knee Example - TTL Representation]: Device-udi-3.ttl.html
+[DiagnosticReport Cardiology Report Example]: DiagnosticReport-cardiology-report.html
+[DiagnosticReport Cardiology Report Example - XML Representation]: DiagnosticReport-cardiology-report.xml.html
+[DiagnosticReport Cardiology Report Example - JSON Representation]: DiagnosticReport-cardiology-report.json.html
+[DiagnosticReport Cardiology Report Example - TTL Representation]: DiagnosticReport-cardiology-report.ttl.html
+[DiagnosticReport Chest Xray Report Example]: DiagnosticReport-chest-xray-report.html
+[DiagnosticReport Chest Xray Report Example - XML Representation]: DiagnosticReport-chest-xray-report.xml.html
+[DiagnosticReport Chest Xray Report Example - JSON Representation]: DiagnosticReport-chest-xray-report.json.html
+[DiagnosticReport Chest Xray Report Example - TTL Representation]: DiagnosticReport-chest-xray-report.ttl.html
+[Discharge Summary Example]: DocumentReference-discharge-summary.html
+[Discharge Summary Example - XML Representation]: DocumentReference-discharge-summary.xml.html
+[Discharge Summary Example - JSON Representation]: DocumentReference-discharge-summary.json.html
+[Discharge Summary Example - TTL Representation]: DocumentReference-discharge-summary.ttl.html
+[Docref Example 1]: Bundle-docref-example-1.html
+[Docref Example 1 - XML Representation]: Bundle-docref-example-1.xml.html
+[Docref Example 1 - JSON Representation]: Bundle-docref-example-1.json.html
+[Docref Example 1 - TTL Representation]: Bundle-docref-example-1.ttl.html
+[Docref Example 2]: Bundle-docref-example-2.html
+[Docref Example 2 - XML Representation]: Bundle-docref-example-2.xml.html
+[Docref Example 2 - JSON Representation]: Bundle-docref-example-2.json.html
+[Docref Example 2 - TTL Representation]: Bundle-docref-example-2.ttl.html
+[DocumentReference ADI-DNI (PDF)]: DocumentReference-adi-intubation.html
+[DocumentReference ADI-DNI (PDF) - XML Representation]: DocumentReference-adi-intubation.xml.html
+[DocumentReference ADI-DNI (PDF) - JSON Representation]: DocumentReference-adi-intubation.json.html
+[DocumentReference ADI-DNI (PDF) - TTL Representation]: DocumentReference-adi-intubation.ttl.html
+[DocumentReference Living Will (PDF)]: DocumentReference-living-will.html
+[DocumentReference Living Will (PDF) - XML Representation]: DocumentReference-living-will.xml.html
+[DocumentReference Living Will (PDF) - JSON Representation]: DocumentReference-living-will.json.html
+[DocumentReference Living Will (PDF) - TTL Representation]: DocumentReference-living-will.ttl.html
+[DocumentReference POLST (PDF)]: DocumentReference-polst.html
+[DocumentReference POLST (PDF) - XML Representation]: DocumentReference-polst.xml.html
+[DocumentReference POLST (PDF) - JSON Representation]: DocumentReference-polst.json.html
+[DocumentReference POLST (PDF) - TTL Representation]: DocumentReference-polst.ttl.html
+[DXA Bone density quantitative measurement panel Example]: DiagnosticReport-bone-density-report.html
+[DXA Bone density quantitative measurement panel Example - XML Representation]: DiagnosticReport-bone-density-report.xml.html
+[DXA Bone density quantitative measurement panel Example - JSON Representation]: DiagnosticReport-bone-density-report.json.html
+[DXA Bone density quantitative measurement panel Example - TTL Representation]: DiagnosticReport-bone-density-report.ttl.html
+[DXA Femur-L ArMass BMD Example]: Observation-dxa-femur-l-armass-bmd.html
+[DXA Femur-L ArMass BMD Example - XML Representation]: Observation-dxa-femur-l-armass-bmd.xml.html
+[DXA Femur-L ArMass BMD Example - JSON Representation]: Observation-dxa-femur-l-armass-bmd.json.html
+[DXA Femur-L ArMass BMD Example - TTL Representation]: Observation-dxa-femur-l-armass-bmd.ttl.html
+[DXA Femur-L T-score BMD Example]: Observation-dxa-femur-l-t-score-bmd.html
+[DXA Femur-L T-score BMD Example - XML Representation]: Observation-dxa-femur-l-t-score-bmd.xml.html
+[DXA Femur-L T-score BMD Example - JSON Representation]: Observation-dxa-femur-l-t-score-bmd.json.html
+[DXA Femur-L T-score BMD Example - TTL Representation]: Observation-dxa-femur-l-t-score-bmd.ttl.html
+[DXA Femur-L Z-score BMD Example]: Observation-dxa-femur-l-z-score-bmd.html
+[DXA Femur-L Z-score BMD Example - XML Representation]: Observation-dxa-femur-l-z-score-bmd.xml.html
+[DXA Femur-L Z-score BMD Example - JSON Representation]: Observation-dxa-femur-l-z-score-bmd.json.html
+[DXA Femur-L Z-score BMD Example - TTL Representation]: Observation-dxa-femur-l-z-score-bmd.ttl.html
+[DXA Hip-L ArMass BMD Example]: Observation-dxa-hip-l-armass-bmd.html
+[DXA Hip-L ArMass BMD Example - XML Representation]: Observation-dxa-hip-l-armass-bmd.xml.html
+[DXA Hip-L ArMass BMD Example - JSON Representation]: Observation-dxa-hip-l-armass-bmd.json.html
+[DXA Hip-L ArMass BMD Example - TTL Representation]: Observation-dxa-hip-l-armass-bmd.ttl.html
+[DXA Hip-L T-score BMD Example]: Observation-dxa-hip-l-t-score-bmd.html
+[DXA Hip-L T-score BMD Example - XML Representation]: Observation-dxa-hip-l-t-score-bmd.xml.html
+[DXA Hip-L T-score BMD Example - JSON Representation]: Observation-dxa-hip-l-t-score-bmd.json.html
+[DXA Hip-L T-score BMD Example - TTL Representation]: Observation-dxa-hip-l-t-score-bmd.ttl.html
+[DXA Hip-L Z-score BMD Example]: Observation-dxa-hip-l-z-score-bmd.html
+[DXA Hip-L Z-score BMD Example - XML Representation]: Observation-dxa-hip-l-z-score-bmd.xml.html
+[DXA Hip-L Z-score BMD Example - JSON Representation]: Observation-dxa-hip-l-z-score-bmd.json.html
+[DXA Hip-L Z-score BMD Example - TTL Representation]: Observation-dxa-hip-l-z-score-bmd.ttl.html
+[EKG impression Example]: Observation-ekg-impression.html
+[EKG impression Example - XML Representation]: Observation-ekg-impression.xml.html
+[EKG impression Example - JSON Representation]: Observation-ekg-impression.json.html
+[EKG impression Example - TTL Representation]: Observation-ekg-impression.ttl.html
+[EKG lead Example]: Observation-ekg-lead.html
+[EKG lead Example - XML Representation]: Observation-ekg-lead.xml.html
+[EKG lead Example - JSON Representation]: Observation-ekg-lead.json.html
+[EKG lead Example - TTL Representation]: Observation-ekg-lead.ttl.html
+[EKG Strip Image]: Media-ekg-strip.html
+[EKG Strip Image - XML Representation]: Media-ekg-strip.xml.html
+[EKG Strip Image - JSON Representation]: Media-ekg-strip.json.html
+[EKG Strip Image - TTL Representation]: Media-ekg-strip.ttl.html
+[Encounter 1 Example]: Encounter-example-1.html
+[Encounter 1 Example - XML Representation]: Encounter-example-1.xml.html
+[Encounter 1 Example - JSON Representation]: Encounter-example-1.json.html
+[Encounter 1 Example - TTL Representation]: Encounter-example-1.ttl.html
+[Encounter 1036 Example]: Encounter-1036.html
+[Encounter 1036 Example - XML Representation]: Encounter-1036.xml.html
+[Encounter 1036 Example - JSON Representation]: Encounter-1036.json.html
+[Encounter 1036 Example - TTL Representation]: Encounter-1036.ttl.html
+[Encounter Delivery Example]: Encounter-delivery.html
+[Encounter Delivery Example - XML Representation]: Encounter-delivery.xml.html
+[Encounter Delivery Example - JSON Representation]: Encounter-delivery.json.html
+[Encounter Delivery Example - TTL Representation]: Encounter-delivery.ttl.html
+[Encounter Diagnosis Example 1]: Condition-encounter-diagnosis-example1.html
+[Encounter Diagnosis Example 1 - XML Representation]: Condition-encounter-diagnosis-example1.xml.html
+[Encounter Diagnosis Example 1 - JSON Representation]: Condition-encounter-diagnosis-example1.json.html
+[Encounter Diagnosis Example 1 - TTL Representation]: Condition-encounter-diagnosis-example1.ttl.html
+[Encounter Diagnosis Example 2]: Condition-encounter-diagnosis-example2.html
+[Encounter Diagnosis Example 2 - XML Representation]: Condition-encounter-diagnosis-example2.xml.html
+[Encounter Diagnosis Example 2 - JSON Representation]: Condition-encounter-diagnosis-example2.json.html
+[Encounter Diagnosis Example 2 - TTL Representation]: Condition-encounter-diagnosis-example2.ttl.html
+[Episode Summary Example]: DocumentReference-episode-summary.html
+[Episode Summary Example - XML Representation]: DocumentReference-episode-summary.xml.html
+[Episode Summary Example - JSON Representation]: DocumentReference-episode-summary.json.html
+[Episode Summary Example - TTL Representation]: DocumentReference-episode-summary.ttl.html
+[Erythrocytes Example]: Observation-cbc-erythrocytes.html
+[Erythrocytes Example - XML Representation]: Observation-cbc-erythrocytes.xml.html
+[Erythrocytes Example - JSON Representation]: Observation-cbc-erythrocytes.json.html
+[Erythrocytes Example - TTL Representation]: Observation-cbc-erythrocytes.ttl.html
+[Evs Item Example 68516-4]: Observation-EVS-item-example-68516-4.html
+[Evs Item Example 68516-4 - XML Representation]: Observation-EVS-item-example-68516-4.xml.html
+[Evs Item Example 68516-4 - JSON Representation]: Observation-EVS-item-example-68516-4.json.html
+[Evs Item Example 68516-4 - TTL Representation]: Observation-EVS-item-example-68516-4.ttl.html
+[Evs Item Example 89555-7]: Observation-EVS-item-example-89555-7.html
+[Evs Item Example 89555-7 - XML Representation]: Observation-EVS-item-example-89555-7.xml.html
+[Evs Item Example 89555-7 - JSON Representation]: Observation-EVS-item-example-89555-7.json.html
+[Evs Item Example 89555-7 - TTL Representation]: Observation-EVS-item-example-89555-7.ttl.html
+[Evs Panel Example 89574-8]: Observation-EVS-panel-example-89574-8.html
+[Evs Panel Example 89574-8 - XML Representation]: Observation-EVS-panel-example-89574-8.xml.html
+[Evs Panel Example 89574-8 - JSON Representation]: Observation-EVS-panel-example-89574-8.json.html
+[Evs Panel Example 89574-8 - TTL Representation]: Observation-EVS-panel-example-89574-8.ttl.html
+[Exercise Per Day Example]: Observation-exercise-per-day.html
+[Exercise Per Day Example - XML Representation]: Observation-exercise-per-day.xml.html
+[Exercise Per Day Example - JSON Representation]: Observation-exercise-per-day.json.html
+[Exercise Per Day Example - TTL Representation]: Observation-exercise-per-day.ttl.html
+[Exercise Per Week Example]: Observation-exercise-per-week.html
+[Exercise Per Week Example - XML Representation]: Observation-exercise-per-week.xml.html
+[Exercise Per Week Example - JSON Representation]: Observation-exercise-per-week.json.html
+[Exercise Per Week Example - TTL Representation]: Observation-exercise-per-week.ttl.html
+[Exercise Vital Sign Questionnaire Example]: Questionnaire-exercise-vital-sign.html
+[Exercise Vital Sign Questionnaire Example - Testing]: Questionnaire-exercise-vital-sign-testing.html
+[Exercise Vital Sign Questionnaire Example - XML Representation]: Questionnaire-exercise-vital-sign.xml.html
+[Exercise Vital Sign Questionnaire Example - JSON Representation]: Questionnaire-exercise-vital-sign.json.html
+[Exercise Vital Sign Questionnaire Example - TTL Representation]: Questionnaire-exercise-vital-sign.ttl.html
+[Exercise Vital Sign QuestionnaireResponse Example]: QuestionnaireResponse-exercise-vital-sign.html
+[Exercise Vital Sign QuestionnaireResponse Example - XML Representation]: QuestionnaireResponse-exercise-vital-sign.xml.html
+[Exercise Vital Sign QuestionnaireResponse Example - JSON Representation]: QuestionnaireResponse-exercise-vital-sign.json.html
+[Exercise Vital Sign QuestionnaireResponse Example - TTL Representation]: QuestionnaireResponse-exercise-vital-sign.ttl.html
+[Goal 1 Example]: Goal-goal-1.html
+[Goal 1 Example - XML Representation]: Goal-goal-1.xml.html
+[Goal 1 Example - JSON Representation]: Goal-goal-1.json.html
+[Goal 1 Example - TTL Representation]: Goal-goal-1.ttl.html
+[Goal 2 Example]: Goal-goal-sdoh-2.html
+[Goal 2 Example - XML Representation]: Goal-goal-sdoh-2.xml.html
+[Goal 2 Example - JSON Representation]: Goal-goal-sdoh-2.json.html
+[Goal 2 Example - TTL Representation]: Goal-goal-sdoh-2.ttl.html
+[Head Circumference Example]: Observation-head-circumference.html
+[Head Circumference Example - XML Representation]: Observation-head-circumference.xml.html
+[Head Circumference Example - JSON Representation]: Observation-head-circumference.json.html
+[Head Circumference Example - TTL Representation]: Observation-head-circumference.ttl.html
+[Health Concern Example]: Condition-health-concern-example.html
+[Health Concern Example - XML Representation]: Condition-health-concern-example.xml.html
+[Health Concern Example - JSON Representation]: Condition-health-concern-example.json.html
+[Health Concern Example - TTL Representation]: Condition-health-concern-example.ttl.html
+[Heart Rate Example]: Observation-heart-rate.html
+[Heart Rate Example - XML Representation]: Observation-heart-rate.xml.html
+[Heart Rate Example - JSON Representation]: Observation-heart-rate.json.html
+[Heart Rate Example - TTL Representation]: Observation-heart-rate.ttl.html
+[Heart rate rhythm Example]: Observation-heart-rate-rhythm.html
+[Heart rate rhythm Example - XML Representation]: Observation-heart-rate-rhythm.xml.html
+[Heart rate rhythm Example - JSON Representation]: Observation-heart-rate-rhythm.json.html
+[Heart rate rhythm Example - TTL Representation]: Observation-heart-rate-rhythm.ttl.html
+[Height Example]: Observation-height.html
+[Height Example - XML Representation]: Observation-height.xml.html
+[Height Example - JSON Representation]: Observation-height.json.html
+[Height Example - TTL Representation]: Observation-height.ttl.html
+[Hematocrit Example]: Observation-cbc-hematocrit.html
+[Hematocrit Example - XML Representation]: Observation-cbc-hematocrit.xml.html
+[Hematocrit Example - JSON Representation]: Observation-cbc-hematocrit.json.html
+[Hematocrit Example - TTL Representation]: Observation-cbc-hematocrit.ttl.html
+[Hemoglobin Example]: Observation-cbc-hemoglobin.html
+[Hemoglobin Example - XML Representation]: Observation-cbc-hemoglobin.xml.html
+[Hemoglobin Example - JSON Representation]: Observation-cbc-hemoglobin.json.html
+[Hemoglobin Example - TTL Representation]: Observation-cbc-hemoglobin.ttl.html
+[HL7East Example]: Location-hl7east.html
+[HL7East Example - XML Representation]: Location-hl7east.xml.html
+[HL7East Example - JSON Representation]: Location-hl7east.json.html
+[HL7East Example - TTL Representation]: Location-hl7east.ttl.html
+[Hospital Location]: Location-hospital.html
+[Hospital Location - XML Representation]: Location-hospital.xml.html
+[Hospital Location - JSON Representation]: Location-hospital.json.html
+[Hospital Location - TTL Representation]: Location-hospital.ttl.html
+[HVS Item Example 88122-7]: Observation-HVS-item-example-88122-7.html
+[HVS Item Example 88122-7 - XML Representation]: Observation-HVS-item-example-88122-7.xml.html
+[HVS Item Example 88122-7 - JSON Representation]: Observation-HVS-item-example-88122-7.json.html
+[HVS Item Example 88122-7 - TTL Representation]: Observation-HVS-item-example-88122-7.ttl.html
+[HVS Item Example 88123-5]: Observation-HVS-item-example-88123-5.html
+[HVS Item Example 88123-5 - XML Representation]: Observation-HVS-item-example-88123-5.xml.html
+[HVS Item Example 88123-5 - JSON Representation]: Observation-HVS-item-example-88123-5.json.html
+[HVS Item Example 88123-5 - TTL Representation]: Observation-HVS-item-example-88123-5.ttl.html
+[HVS Item Example 88124-3]: Observation-HVS-item-example-88124-3.html
+[HVS Item Example 88124-3 - XML Representation]: Observation-HVS-item-example-88124-3.xml.html
+[HVS Item Example 88124-3 - JSON Representation]: Observation-HVS-item-example-88124-3.json.html
+[HVS Item Example 88124-3 - TTL Representation]: Observation-HVS-item-example-88124-3.ttl.html
+[HVSPanel Example 88121-9]: Observation-HVS-panel-example-88121-9.html
+[HVSPanel Example 88121-9 - XML Representation]: Observation-HVS-panel-example-88121-9.xml.html
+[HVSPanel Example 88121-9 - JSON Representation]: Observation-HVS-panel-example-88121-9.json.html
+[HVSPanel Example 88121-9 - TTL Representation]: Observation-HVS-panel-example-88121-9.ttl.html
+[Immunization Example 1]: Immunization-imm-1.html
+[Immunization Example 1 - XML Representation]: Immunization-imm-1.xml.html
+[Immunization Example 1 - JSON Representation]: Immunization-imm-1.json.html
+[Immunization Example 1 - TTL Representation]: Immunization-imm-1.ttl.html
+[Jugular vein distension Example]: Observation-jugular-vein-distension.html
+[Jugular vein distension Example - XML Representation]: Observation-jugular-vein-distension.xml.html
+[Jugular vein distension Example - JSON Representation]: Observation-jugular-vein-distension.json.html
+[Jugular vein distension Example - TTL Representation]: Observation-jugular-vein-distension.ttl.html
+[Length Example]: Observation-length.html
+[Length Example - XML Representation]: Observation-length.xml.html
+[Length Example - JSON Representation]: Observation-length.json.html
+[Length Example - TTL Representation]: Observation-length.ttl.html
+[Leukocytes Example]: Observation-cbc-leukocytes.html
+[Leukocytes Example - XML Representation]: Observation-cbc-leukocytes.xml.html
+[Leukocytes Example - JSON Representation]: Observation-cbc-leukocytes.json.html
+[Leukocytes Example - TTL Representation]: Observation-cbc-leukocytes.ttl.html
+[Lipemic Serum Specimen Example]: Specimen-example-serum-lipemic.html
+[Lipemic Serum Specimen Example - XML Representation]: Specimen-example-serum-lipemic.xml.html
+[Lipemic Serum Specimen Example - JSON Representation]: Specimen-example-serum-lipemic.json.html
+[Lipemic Serum Specimen Example - TTL Representation]: Specimen-example-serum-lipemic.ttl.html
+[MCH Example]: Observation-cbc-mch.html
+[MCH Example - XML Representation]: Observation-cbc-mch.xml.html
+[MCH Example - JSON Representation]: Observation-cbc-mch.json.html
+[MCH Example - TTL Representation]: Observation-cbc-mch.ttl.html
+[MCHC Example]: Observation-cbc-mchc.html
+[MCHC Example - XML Representation]: Observation-cbc-mchc.xml.html
+[MCHC Example - JSON Representation]: Observation-cbc-mchc.json.html
+[MCHC Example - TTL Representation]: Observation-cbc-mchc.ttl.html
+[MCV Example]: Observation-cbc-mcv.html
+[MCV Example - XML Representation]: Observation-cbc-mcv.xml.html
+[MCV Example - JSON Representation]: Observation-cbc-mcv.json.html
+[MCV Example - TTL Representation]: Observation-cbc-mcv.ttl.html
+[Medication Dispense Example]: MedicationDispense-medicationdispense-example.html
+[Medication Dispense Example - XML Representation]: MedicationDispense-medicationdispense-example.xml.html
+[Medication Dispense Example - JSON Representation]: MedicationDispense-medicationdispense-example.json.html
+[Medication Dispense Example - TTL Representation]: MedicationDispense-medicationdispense-example.ttl.html
+[MedicationRequest Coded Oral Axid Example]: MedicationRequest-medicationrequest-coded-oral-axid.html
+[MedicationRequest Coded Oral Axid Example - XML Representation]: MedicationRequest-medicationrequest-coded-oral-axid.xml.html
+[MedicationRequest Coded Oral Axid Example - JSON Representation]: MedicationRequest-medicationrequest-coded-oral-axid.json.html
+[MedicationRequest Coded Oral Axid Example - TTL Representation]: MedicationRequest-medicationrequest-coded-oral-axid.ttl.html
+[MedicationRequest Contained Oral Axid Example]: MedicationRequest-medicationrequest-contained-oral-axid.html
+[MedicationRequest Contained Oral Axid Example - XML Representation]: MedicationRequest-medicationrequest-contained-oral-axid.xml.html
+[MedicationRequest Contained Oral Axid Example - JSON Representation]: MedicationRequest-medicationrequest-contained-oral-axid.json.html
+[MedicationRequest Contained Oral Axid Example - TTL Representation]: MedicationRequest-medicationrequest-contained-oral-axid.ttl.html
+[MedicationRequest Referenced Oral Axid Example]: MedicationRequest-medicationrequest-referenced-oral-axid.html
+[MedicationRequest Referenced Oral Axid Example - XML Representation]: MedicationRequest-medicationrequest-referenced-oral-axid.xml.html
+[MedicationRequest Referenced Oral Axid Example - JSON Representation]: MedicationRequest-medicationrequest-referenced-oral-axid.json.html
+[MedicationRequest Referenced Oral Axid Example - TTL Representation]: MedicationRequest-medicationrequest-referenced-oral-axid.ttl.html
+[MedicationRequest Self Tylenol Example]: MedicationRequest-self-tylenol.html
+[MedicationRequest Self Tylenol Example - XML Representation]: MedicationRequest-self-tylenol.xml.html
+[MedicationRequest Self Tylenol Example - JSON Representation]: MedicationRequest-self-tylenol.json.html
+[MedicationRequest Self Tylenol Example - TTL Representation]: MedicationRequest-self-tylenol.ttl.html
+[Metabolic Panel Example]: DiagnosticReport-metabolic-panel.html
+[Metabolic Panel Example - XML Representation]: DiagnosticReport-metabolic-panel.xml.html
+[Metabolic Panel Example - JSON Representation]: DiagnosticReport-metabolic-panel.json.html
+[Metabolic Panel Example - TTL Representation]: DiagnosticReport-metabolic-panel.ttl.html
+[Missing Coded Data Example]: CareTeam-missing-coded-data-example.html
+[Missing Coded Data Example - XML Representation]: CareTeam-missing-coded-data-example.xml.html
+[Missing Coded Data Example - JSON Representation]: CareTeam-missing-coded-data-example.json.html
+[Missing Coded Data Example - TTL Representation]: CareTeam-missing-coded-data-example.ttl.html
+[Observation SatO2 FiO2 Example]: Observation-satO2-fiO2.html
+[Observation SatO2 FiO2 Example - XML Representation]: Observation-satO2-fiO2.xml.html
+[Observation SatO2 FiO2 Example - JSON Representation]: Observation-satO2-fiO2.json.html
+[Observation SatO2 FiO2 Example - TTL Representation]: Observation-satO2-fiO2.ttl.html
+[Occupation Observation Example]: Observation-observation-occupation.html
+[Occupation Observation Example - XML Representation]: Observation-observation-occupation.xml.html
+[Occupation Observation Example - JSON Representation]: Observation-observation-occupation.json.html
+[Occupation Observation Example - TTL Representation]: Observation-observation-occupation.ttl.html
+[Occupation Observation Example: Industry Unknown]: Observation-observation-occupation-industry-unknown.html
+[Occupation Observation Example: Industry Unknown - XML Representation]: Observation-observation-occupation-industry-unknown.xml.html
+[Occupation Observation Example: Industry Unknown - JSON Representation]: Observation-observation-occupation-industry-unknown.json.html
+[Occupation Observation Example: Industry Unknown - TTL Representation]: Observation-observation-occupation-industry-unknown.ttl.html
+[Occupation Observation Example: Unknown Occupation]: Observation-observation-occupation-unknown.html
+[Occupation Observation Example: Unknown Occupation - XML Representation]: Observation-observation-occupation-unknown.xml.html
+[Occupation Observation Example: Unknown Occupation - JSON Representation]: Observation-observation-occupation-unknown.json.html
+[Occupation Observation Example: Unknown Occupation - TTL Representation]: Observation-observation-occupation-unknown.ttl.html
+[OFC Percentile Example]: Observation-ofc-percentile.html
+[OFC Percentile Example - XML Representation]: Observation-ofc-percentile.xml.html
+[OFC Percentile Example - JSON Representation]: Observation-ofc-percentile.json.html
+[OFC Percentile Example - TTL Representation]: Observation-ofc-percentile.ttl.html
+[Organization 2 Example]: Organization-example-organization-2.html
+[Organization 2 Example - XML Representation]: Organization-example-organization-2.xml.html
+[Organization 2 Example - JSON Representation]: Organization-example-organization-2.json.html
+[Organization 2 Example - TTL Representation]: Organization-example-organization-2.ttl.html
+[Organization Acme Lab Example]: Organization-acme-lab.html
+[Organization Acme Lab Example - XML Representation]: Organization-acme-lab.xml.html
+[Organization Acme Lab Example - JSON Representation]: Organization-acme-lab.json.html
+[Organization Acme Lab Example - TTL Representation]: Organization-acme-lab.ttl.html
+[Organization Acme Payer Example]: Organization-acme-payer.html
+[Organization Acme Payer Example - XML Representation]: Organization-acme-payer.xml.html
+[Organization Acme Payer Example - JSON Representation]: Organization-acme-payer.json.html
+[Organization Acme Payer Example - TTL Representation]: Organization-acme-payer.ttl.html
+[Organization Holy Healthcare Example]: Organization-holy-healthcare.html
+[Organization Holy Healthcare Example - XML Representation]: Organization-holy-healthcare.xml.html
+[Organization Holy Healthcare Example - JSON Representation]: Organization-holy-healthcare.json.html
+[Organization Holy Healthcare Example - TTL Representation]: Organization-holy-healthcare.ttl.html
+[Oxygen Saturation Example]: Observation-oxygen-saturation.html
+[Oxygen Saturation Example - XML Representation]: Observation-oxygen-saturation.xml.html
+[Oxygen Saturation Example - JSON Representation]: Observation-oxygen-saturation.json.html
+[Oxygen Saturation Example - TTL Representation]: Observation-oxygen-saturation.ttl.html
+[P-R interval {EKG lead} Example]: Observation-p-r-interval-ekg-lead.html
+[P-R interval {EKG lead} Example - XML Representation]: Observation-p-r-interval-ekg-lead.xml.html
+[P-R interval {EKG lead} Example - JSON Representation]: Observation-p-r-interval-ekg-lead.json.html
+[P-R interval {EKG lead} Example - TTL Representation]: Observation-p-r-interval-ekg-lead.ttl.html
+[Patient Child Example]: Patient-child-example.html
+[Patient Child Example - XML Representation]: Patient-child-example.xml.html
+[Patient Child Example - JSON Representation]: Patient-child-example.json.html
+[Patient Child Example - TTL Representation]: Patient-child-example.ttl.html
+[Patient Example]: Patient-example.html
+[Patient Example - XML Representation]: Patient-example.xml.html
+[Patient Example - JSON Representation]: Patient-example.json.html
+[Patient Example - TTL Representation]: Patient-example.ttl.html
+[Patient Infant Example]: Patient-infant-example.html
+[Patient Infant Example - XML Representation]: Patient-infant-example.xml.html
+[Patient Infant Example - JSON Representation]: Patient-infant-example.json.html
+[Patient Infant Example - TTL Representation]: Patient-infant-example.ttl.html
+[Patient Niece Example]: RelatedPerson-shaw-niece.html
+[Patient Niece Example - XML Representation]: RelatedPerson-shaw-niece.xml.html
+[Patient Niece Example - JSON Representation]: RelatedPerson-shaw-niece.json.html
+[Patient Niece Example - TTL Representation]: RelatedPerson-shaw-niece.ttl.html
+[Pediatric BMI Example]: Observation-pediatric-bmi-example.html
+[Pediatric BMI Example - XML Representation]: Observation-pediatric-bmi-example.xml.html
+[Pediatric BMI Example - JSON Representation]: Observation-pediatric-bmi-example.json.html
+[Pediatric BMI Example - TTL Representation]: Observation-pediatric-bmi-example.ttl.html
+[Pediatric Wt Example]: Observation-pediatric-wt-example.html
+[Pediatric Wt Example - XML Representation]: Observation-pediatric-wt-example.xml.html
+[Pediatric Wt Example - JSON Representation]: Observation-pediatric-wt-example.json.html
+[Pediatric Wt Example - TTL Representation]: Observation-pediatric-wt-example.ttl.html
+[PHQ9 Item Example 44250-9]: Observation-PHQ9-item-example-44250-9.html
+[PHQ9 Item Example 44250-9 - XML Representation]: Observation-PHQ9-item-example-44250-9.xml.html
+[PHQ9 Item Example 44250-9 - JSON Representation]: Observation-PHQ9-item-example-44250-9.json.html
+[PHQ9 Item Example 44250-9 - TTL Representation]: Observation-PHQ9-item-example-44250-9.ttl.html
+[PHQ9 Item Example 44251-7]: Observation-PHQ9-item-example-44251-7.html
+[PHQ9 Item Example 44251-7 - XML Representation]: Observation-PHQ9-item-example-44251-7.xml.html
+[PHQ9 Item Example 44251-7 - JSON Representation]: Observation-PHQ9-item-example-44251-7.json.html
+[PHQ9 Item Example 44251-7 - TTL Representation]: Observation-PHQ9-item-example-44251-7.ttl.html
+[PHQ9 Item Example 44252-5]: Observation-PHQ9-item-example-44252-5.html
+[PHQ9 Item Example 44252-5 - XML Representation]: Observation-PHQ9-item-example-44252-5.xml.html
+[PHQ9 Item Example 44252-5 - JSON Representation]: Observation-PHQ9-item-example-44252-5.json.html
+[PHQ9 Item Example 44252-5 - TTL Representation]: Observation-PHQ9-item-example-44252-5.ttl.html
+[PHQ9 Item Example 44253-3]: Observation-PHQ9-item-example-44253-3.html
+[PHQ9 Item Example 44253-3 - XML Representation]: Observation-PHQ9-item-example-44253-3.xml.html
+[PHQ9 Item Example 44253-3 - JSON Representation]: Observation-PHQ9-item-example-44253-3.json.html
+[PHQ9 Item Example 44253-3 - TTL Representation]: Observation-PHQ9-item-example-44253-3.ttl.html
+[PHQ9 Item Example 44254-1]: Observation-PHQ9-item-example-44254-1.html
+[PHQ9 Item Example 44254-1 - XML Representation]: Observation-PHQ9-item-example-44254-1.xml.html
+[PHQ9 Item Example 44254-1 - JSON Representation]: Observation-PHQ9-item-example-44254-1.json.html
+[PHQ9 Item Example 44254-1 - TTL Representation]: Observation-PHQ9-item-example-44254-1.ttl.html
+[PHQ9 Item Example 44255-8]: Observation-PHQ9-item-example-44255-8.html
+[PHQ9 Item Example 44255-8 - XML Representation]: Observation-PHQ9-item-example-44255-8.xml.html
+[PHQ9 Item Example 44255-8 - JSON Representation]: Observation-PHQ9-item-example-44255-8.json.html
+[PHQ9 Item Example 44255-8 - TTL Representation]: Observation-PHQ9-item-example-44255-8.ttl.html
+[PHQ9 Item Example 44258-2]: Observation-PHQ9-item-example-44258-2.html
+[PHQ9 Item Example 44258-2 - XML Representation]: Observation-PHQ9-item-example-44258-2.xml.html
+[PHQ9 Item Example 44258-2 - JSON Representation]: Observation-PHQ9-item-example-44258-2.json.html
+[PHQ9 Item Example 44258-2 - TTL Representation]: Observation-PHQ9-item-example-44258-2.ttl.html
+[PHQ9 Item Example 44259-0]: Observation-PHQ9-item-example-44259-0.html
+[PHQ9 Item Example 44259-0 - XML Representation]: Observation-PHQ9-item-example-44259-0.xml.html
+[PHQ9 Item Example 44259-0 - JSON Representation]: Observation-PHQ9-item-example-44259-0.json.html
+[PHQ9 Item Example 44259-0 - TTL Representation]: Observation-PHQ9-item-example-44259-0.ttl.html
+[PHQ9 Item Example 44260-8]: Observation-PHQ9-item-example-44260-8.html
+[PHQ9 Item Example 44260-8 - XML Representation]: Observation-PHQ9-item-example-44260-8.xml.html
+[PHQ9 Item Example 44260-8 - JSON Representation]: Observation-PHQ9-item-example-44260-8.json.html
+[PHQ9 Item Example 44260-8 - TTL Representation]: Observation-PHQ9-item-example-44260-8.ttl.html
+[PHQ9 Item Example 44261-6]: Observation-PHQ9-item-example-44261-6.html
+[PHQ9 Item Example 44261-6 - XML Representation]: Observation-PHQ9-item-example-44261-6.xml.html
+[PHQ9 Item Example 44261-6 - JSON Representation]: Observation-PHQ9-item-example-44261-6.json.html
+[PHQ9 Item Example 44261-6 - TTL Representation]: Observation-PHQ9-item-example-44261-6.ttl.html
+[PHQ9 Item Example 69722-7]: Observation-PHQ9-item-example-69722-7.html
+[PHQ9 Item Example 69722-7 - XML Representation]: Observation-PHQ9-item-example-69722-7.xml.html
+[PHQ9 Item Example 69722-7 - JSON Representation]: Observation-PHQ9-item-example-69722-7.json.html
+[PHQ9 Item Example 69722-7 - TTL Representation]: Observation-PHQ9-item-example-69722-7.ttl.html
+[PHQ9 Panel Example 44249-1]: Observation-PHQ9-panel-example-44249-1.html
+[PHQ9 Panel Example 44249-1 - XML Representation]: Observation-PHQ9-panel-example-44249-1.xml.html
+[PHQ9 Panel Example 44249-1 - JSON Representation]: Observation-PHQ9-panel-example-44249-1.json.html
+[PHQ9 Panel Example 44249-1 - TTL Representation]: Observation-PHQ9-panel-example-44249-1.ttl.html
+[Platelets Example]: Observation-cbc-platelets.html
+[Platelets Example - XML Representation]: Observation-cbc-platelets.xml.html
+[Platelets Example - JSON Representation]: Observation-cbc-platelets.json.html
+[Platelets Example - TTL Representation]: Observation-cbc-platelets.ttl.html
+[Practitioner 1 Example]: Practitioner-practitioner-1.html
+[Practitioner 1 Example - XML Representation]: Practitioner-practitioner-1.xml.html
+[Practitioner 1 Example - JSON Representation]: Practitioner-practitioner-1.json.html
+[Practitioner 1 Example - TTL Representation]: Practitioner-practitioner-1.ttl.html
+[Practitioner 2 Example]: Practitioner-practitioner-2.html
+[Practitioner 2 Example - XML Representation]: Practitioner-practitioner-2.xml.html
+[Practitioner 2 Example - JSON Representation]: Practitioner-practitioner-2.json.html
+[Practitioner 2 Example - TTL Representation]: Practitioner-practitioner-2.ttl.html
+[Practitioner Pharmacist Example]: Practitioner-practitioner-pharmacist.html
+[Practitioner Pharmacist Example - XML Representation]: Practitioner-practitioner-pharmacist.xml.html
+[Practitioner Pharmacist Example - JSON Representation]: Practitioner-practitioner-pharmacist.json.html
+[Practitioner Pharmacist Example - TTL Representation]: Practitioner-practitioner-pharmacist.ttl.html
+[PractitionerRole_Practitioner_Endpoint_Bundle_Example Example]: Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.html
+[PractitionerRole_Practitioner_Endpoint_Bundle_Example Example - XML Representation]: Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.xml.html
+[PractitionerRole_Practitioner_Endpoint_Bundle_Example Example - JSON Representation]: Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.json.html
+[PractitionerRole_Practitioner_Endpoint_Bundle_Example Example - TTL Representation]: Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.ttl.html
+[Prapare Item Example 54899-0]: Observation-PRAPARE-item-example-54899-0.html
+[Prapare Item Example 54899-0 - XML Representation]: Observation-PRAPARE-item-example-54899-0.xml.html
+[Prapare Item Example 54899-0 - JSON Representation]: Observation-PRAPARE-item-example-54899-0.json.html
+[Prapare Item Example 54899-0 - TTL Representation]: Observation-PRAPARE-item-example-54899-0.ttl.html
+[Prapare Item Example 56051-6]: Observation-PRAPARE-item-example-56051-6.html
+[Prapare Item Example 56051-6 - XML Representation]: Observation-PRAPARE-item-example-56051-6.xml.html
+[Prapare Item Example 56051-6 - JSON Representation]: Observation-PRAPARE-item-example-56051-6.json.html
+[Prapare Item Example 56051-6 - TTL Representation]: Observation-PRAPARE-item-example-56051-6.ttl.html
+[Prapare Item Example 56799-0]: Observation-PRAPARE-item-example-56799-0.html
+[Prapare Item Example 56799-0 - XML Representation]: Observation-PRAPARE-item-example-56799-0.xml.html
+[Prapare Item Example 56799-0 - JSON Representation]: Observation-PRAPARE-item-example-56799-0.json.html
+[Prapare Item Example 56799-0 - TTL Representation]: Observation-PRAPARE-item-example-56799-0.ttl.html
+[Prapare Item Example 63512-8]: Observation-PRAPARE-item-example-63512-8.html
+[Prapare Item Example 63512-8 - XML Representation]: Observation-PRAPARE-item-example-63512-8.xml.html
+[Prapare Item Example 63512-8 - JSON Representation]: Observation-PRAPARE-item-example-63512-8.json.html
+[Prapare Item Example 63512-8 - TTL Representation]: Observation-PRAPARE-item-example-63512-8.ttl.html
+[Prapare Item Example 63586-2]: Observation-PRAPARE-item-example-63586-2.html
+[Prapare Item Example 63586-2 - XML Representation]: Observation-PRAPARE-item-example-63586-2.xml.html
+[Prapare Item Example 63586-2 - JSON Representation]: Observation-PRAPARE-item-example-63586-2.json.html
+[Prapare Item Example 63586-2 - TTL Representation]: Observation-PRAPARE-item-example-63586-2.ttl.html
+[Prapare Item Example 67875-5]: Observation-PRAPARE-item-example-67875-5.html
+[Prapare Item Example 67875-5 - XML Representation]: Observation-PRAPARE-item-example-67875-5.xml.html
+[Prapare Item Example 67875-5 - JSON Representation]: Observation-PRAPARE-item-example-67875-5.json.html
+[Prapare Item Example 67875-5 - TTL Representation]: Observation-PRAPARE-item-example-67875-5.ttl.html
+[Prapare Item Example 71802-3]: Observation-PRAPARE-item-example-71802-3.html
+[Prapare Item Example 71802-3 - XML Representation]: Observation-PRAPARE-item-example-71802-3.xml.html
+[Prapare Item Example 71802-3 - JSON Representation]: Observation-PRAPARE-item-example-71802-3.json.html
+[Prapare Item Example 71802-3 - TTL Representation]: Observation-PRAPARE-item-example-71802-3.ttl.html
+[Prapare Item Example 76437-3]: Observation-PRAPARE-item-example-76437-3.html
+[Prapare Item Example 76437-3 - XML Representation]: Observation-PRAPARE-item-example-76437-3.xml.html
+[Prapare Item Example 76437-3 - JSON Representation]: Observation-PRAPARE-item-example-76437-3.json.html
+[Prapare Item Example 76437-3 - TTL Representation]: Observation-PRAPARE-item-example-76437-3.ttl.html
+[Prapare Item Example 76501-6]: Observation-PRAPARE-item-example-76501-6.html
+[Prapare Item Example 76501-6 - XML Representation]: Observation-PRAPARE-item-example-76501-6.xml.html
+[Prapare Item Example 76501-6 - JSON Representation]: Observation-PRAPARE-item-example-76501-6.json.html
+[Prapare Item Example 76501-6 - TTL Representation]: Observation-PRAPARE-item-example-76501-6.ttl.html
+[Prapare Item Example 82589-3]: Observation-PRAPARE-item-example-82589-3.html
+[Prapare Item Example 82589-3 - XML Representation]: Observation-PRAPARE-item-example-82589-3.xml.html
+[Prapare Item Example 82589-3 - JSON Representation]: Observation-PRAPARE-item-example-82589-3.json.html
+[Prapare Item Example 82589-3 - TTL Representation]: Observation-PRAPARE-item-example-82589-3.ttl.html
+[Prapare Item Example 93026-3]: Observation-PRAPARE-item-example-93026-3.html
+[Prapare Item Example 93026-3 - XML Representation]: Observation-PRAPARE-item-example-93026-3.xml.html
+[Prapare Item Example 93026-3 - JSON Representation]: Observation-PRAPARE-item-example-93026-3.json.html
+[Prapare Item Example 93026-3 - TTL Representation]: Observation-PRAPARE-item-example-93026-3.ttl.html
+[Prapare Item Example 93027-1]: Observation-PRAPARE-item-example-93027-1.html
+[Prapare Item Example 93027-1 - XML Representation]: Observation-PRAPARE-item-example-93027-1.xml.html
+[Prapare Item Example 93027-1 - JSON Representation]: Observation-PRAPARE-item-example-93027-1.json.html
+[Prapare Item Example 93027-1 - TTL Representation]: Observation-PRAPARE-item-example-93027-1.ttl.html
+[Prapare Item Example 93028-9]: Observation-PRAPARE-item-example-93028-9.html
+[Prapare Item Example 93028-9 - XML Representation]: Observation-PRAPARE-item-example-93028-9.xml.html
+[Prapare Item Example 93028-9 - JSON Representation]: Observation-PRAPARE-item-example-93028-9.json.html
+[Prapare Item Example 93028-9 - TTL Representation]: Observation-PRAPARE-item-example-93028-9.ttl.html
+[Prapare Item Example 93029-7]: Observation-PRAPARE-item-example-93029-7.html
+[Prapare Item Example 93029-7 - XML Representation]: Observation-PRAPARE-item-example-93029-7.xml.html
+[Prapare Item Example 93029-7 - JSON Representation]: Observation-PRAPARE-item-example-93029-7.json.html
+[Prapare Item Example 93029-7 - TTL Representation]: Observation-PRAPARE-item-example-93029-7.ttl.html
+[Prapare Item Example 93030-5]: Observation-PRAPARE-item-example-93030-5.html
+[Prapare Item Example 93030-5 - XML Representation]: Observation-PRAPARE-item-example-93030-5.xml.html
+[Prapare Item Example 93030-5 - JSON Representation]: Observation-PRAPARE-item-example-93030-5.json.html
+[Prapare Item Example 93030-5 - TTL Representation]: Observation-PRAPARE-item-example-93030-5.ttl.html
+[Prapare Item Example 93033-9]: Observation-PRAPARE-item-example-93033-9.html
+[Prapare Item Example 93033-9 - XML Representation]: Observation-PRAPARE-item-example-93033-9.xml.html
+[Prapare Item Example 93033-9 - JSON Representation]: Observation-PRAPARE-item-example-93033-9.json.html
+[Prapare Item Example 93033-9 - TTL Representation]: Observation-PRAPARE-item-example-93033-9.ttl.html
+[Prapare Item Example 93034-7]: Observation-PRAPARE-item-example-93034-7.html
+[Prapare Item Example 93034-7 - XML Representation]: Observation-PRAPARE-item-example-93034-7.xml.html
+[Prapare Item Example 93034-7 - JSON Representation]: Observation-PRAPARE-item-example-93034-7.json.html
+[Prapare Item Example 93034-7 - TTL Representation]: Observation-PRAPARE-item-example-93034-7.ttl.html
+[Prapare Item Example 93035-4]: Observation-PRAPARE-item-example-93035-4.html
+[Prapare Item Example 93035-4 - XML Representation]: Observation-PRAPARE-item-example-93035-4.xml.html
+[Prapare Item Example 93035-4 - JSON Representation]: Observation-PRAPARE-item-example-93035-4.json.html
+[Prapare Item Example 93035-4 - TTL Representation]: Observation-PRAPARE-item-example-93035-4.ttl.html
+[Prapare Item Example 93038-8]: Observation-PRAPARE-item-example-93038-8.html
+[Prapare Item Example 93038-8 - XML Representation]: Observation-PRAPARE-item-example-93038-8.xml.html
+[Prapare Item Example 93038-8 - JSON Representation]: Observation-PRAPARE-item-example-93038-8.json.html
+[Prapare Item Example 93038-8 - TTL Representation]: Observation-PRAPARE-item-example-93038-8.ttl.html
+[Prapare Multiselect-Item Example 32624-9-Answer0]: Observation-PRAPARE-multiselect-item-example-32624-9-answer0.html
+[Prapare Multiselect-Item Example 32624-9-Answer0 - XML Representation]: Observation-PRAPARE-multiselect-item-example-32624-9-answer0.xml.html
+[Prapare Multiselect-Item Example 32624-9-Answer0 - JSON Representation]: Observation-PRAPARE-multiselect-item-example-32624-9-answer0.json.html
+[Prapare Multiselect-Item Example 32624-9-Answer0 - TTL Representation]: Observation-PRAPARE-multiselect-item-example-32624-9-answer0.ttl.html
+[Prapare Multiselect-Item Example 32624-9-Answer1]: Observation-PRAPARE-multiselect-item-example-32624-9-answer1.html
+[Prapare Multiselect-Item Example 32624-9-Answer1 - XML Representation]: Observation-PRAPARE-multiselect-item-example-32624-9-answer1.xml.html
+[Prapare Multiselect-Item Example 32624-9-Answer1 - JSON Representation]: Observation-PRAPARE-multiselect-item-example-32624-9-answer1.json.html
+[Prapare Multiselect-Item Example 32624-9-Answer1 - TTL Representation]: Observation-PRAPARE-multiselect-item-example-32624-9-answer1.ttl.html
+[Prapare Multiselect-Item Example 93031-3-Answer0]: Observation-PRAPARE-multiselect-item-example-93031-3-answer0.html
+[Prapare Multiselect-Item Example 93031-3-Answer0 - XML Representation]: Observation-PRAPARE-multiselect-item-example-93031-3-answer0.xml.html
+[Prapare Multiselect-Item Example 93031-3-Answer0 - JSON Representation]: Observation-PRAPARE-multiselect-item-example-93031-3-answer0.json.html
+[Prapare Multiselect-Item Example 93031-3-Answer0 - TTL Representation]: Observation-PRAPARE-multiselect-item-example-93031-3-answer0.ttl.html
+[Prapare Multiselect-Item Example 93031-3-Answer1]: Observation-PRAPARE-multiselect-item-example-93031-3-answer1.html
+[Prapare Multiselect-Item Example 93031-3-Answer1 - XML Representation]: Observation-PRAPARE-multiselect-item-example-93031-3-answer1.xml.html
+[Prapare Multiselect-Item Example 93031-3-Answer1 - JSON Representation]: Observation-PRAPARE-multiselect-item-example-93031-3-answer1.json.html
+[Prapare Multiselect-Item Example 93031-3-Answer1 - TTL Representation]: Observation-PRAPARE-multiselect-item-example-93031-3-answer1.ttl.html
+[Prapare Panel Example 93025-5]: Observation-PRAPARE-panel-example-93025-5.html
+[Prapare Panel Example 93025-5 - XML Representation]: Observation-PRAPARE-panel-example-93025-5.xml.html
+[Prapare Panel Example 93025-5 - JSON Representation]: Observation-PRAPARE-panel-example-93025-5.json.html
+[Prapare Panel Example 93025-5 - TTL Representation]: Observation-PRAPARE-panel-example-93025-5.ttl.html
+[Prapare Panel Example 93039-6]: Observation-PRAPARE-panel-example-93039-6.html
+[Prapare Panel Example 93039-6 - XML Representation]: Observation-PRAPARE-panel-example-93039-6.xml.html
+[Prapare Panel Example 93039-6 - JSON Representation]: Observation-PRAPARE-panel-example-93039-6.json.html
+[Prapare Panel Example 93039-6 - TTL Representation]: Observation-PRAPARE-panel-example-93039-6.ttl.html
+[Prapare Panel Example 93040-4]: Observation-PRAPARE-panel-example-93040-4.html
+[Prapare Panel Example 93040-4 - XML Representation]: Observation-PRAPARE-panel-example-93040-4.xml.html
+[Prapare Panel Example 93040-4 - JSON Representation]: Observation-PRAPARE-panel-example-93040-4.json.html
+[Prapare Panel Example 93040-4 - TTL Representation]: Observation-PRAPARE-panel-example-93040-4.ttl.html
+[Prapare Panel Example 93041-2]: Observation-PRAPARE-panel-example-93041-2.html
+[Prapare Panel Example 93041-2 - XML Representation]: Observation-PRAPARE-panel-example-93041-2.xml.html
+[Prapare Panel Example 93041-2 - JSON Representation]: Observation-PRAPARE-panel-example-93041-2.json.html
+[Prapare Panel Example 93041-2 - TTL Representation]: Observation-PRAPARE-panel-example-93041-2.ttl.html
+[Prapare Panel Example 93042-0]: Observation-PRAPARE-panel-example-93042-0.html
+[Prapare Panel Example 93042-0 - XML Representation]: Observation-PRAPARE-panel-example-93042-0.xml.html
+[Prapare Panel Example 93042-0 - JSON Representation]: Observation-PRAPARE-panel-example-93042-0.json.html
+[Prapare Panel Example 93042-0 - TTL Representation]: Observation-PRAPARE-panel-example-93042-0.ttl.html
+[PRAPARE Panel Example 93043-8]: Observation-PRAPARE-panel-example-93043-8.html
+[PRAPARE Panel Example 93043-8 - XML Representation]: Observation-PRAPARE-panel-example-93043-8.xml.html
+[PRAPARE Panel Example 93043-8 - JSON Representation]: Observation-PRAPARE-panel-example-93043-8.json.html
+[PRAPARE Panel Example 93043-8 - TTL Representation]: Observation-PRAPARE-panel-example-93043-8.ttl.html
+[Pregnancy Intent Observation Example]: Observation-pregnancy-intent.html
+[Pregnancy Intent Observation Example - XML Representation]: Observation-pregnancy-intent.xml.html
+[Pregnancy Intent Observation Example - JSON Representation]: Observation-pregnancy-intent.json.html
+[Pregnancy Intent Observation Example - TTL Representation]: Observation-pregnancy-intent.ttl.html
+[Pregnancy Status Observation Example]: Observation-pregnancy-status.html
+[Pregnancy Status Observation Example - XML Representation]: Observation-pregnancy-status.xml.html
+[Pregnancy Status Observation Example - JSON Representation]: Observation-pregnancy-status.json.html
+[Pregnancy Status Observation Example - TTL Representation]: Observation-pregnancy-status.ttl.html
+[Procedure Defibrillator Implant Example]: Procedure-defib-implant.html
+[Procedure Defibrillator Implant Example - XML Representation]: Procedure-defib-implant.xml.html
+[Procedure Defibrillator Implant Example - JSON Representation]: Procedure-defib-implant.json.html
+[Procedure Defibrillator Implant Example - TTL Representation]: Procedure-defib-implant.ttl.html
+[Pulse intensity Palpation Example]: Observation-pulse-intensity-palpation.html
+[Pulse intensity Palpation Example - XML Representation]: Observation-pulse-intensity-palpation.xml.html
+[Pulse intensity Palpation Example - JSON Representation]: Observation-pulse-intensity-palpation.json.html
+[Pulse intensity Palpation Example - TTL Representation]: Observation-pulse-intensity-palpation.ttl.html
+[Q-T interval {EKG lead} Example]: Observation-q-t-interval-ekg-lead.html
+[Q-T interval {EKG lead} Example - XML Representation]: Observation-q-t-interval-ekg-lead.xml.html
+[Q-T interval {EKG lead} Example - JSON Representation]: Observation-q-t-interval-ekg-lead.json.html
+[Q-T interval {EKG lead} Example - TTL Representation]: Observation-q-t-interval-ekg-lead.ttl.html
+[QRS dur {EKG lead} Example]: Observation-qrs-dur-ekg-lead.html
+[QRS dur {EKG lead} Example - XML Representation]: Observation-qrs-dur-ekg-lead.xml.html
+[QRS dur {EKG lead} Example - JSON Representation]: Observation-qrs-dur-ekg-lead.json.html
+[QRS dur {EKG lead} Example - TTL Representation]: Observation-qrs-dur-ekg-lead.ttl.html
+[Questionnaire Hunger Vital Sign (HVS) Example]: Questionnaire-hunger-vital-sign-example.html
+[Questionnaire Hunger Vital Sign (HVS) Example - Testing]: Questionnaire-hunger-vital-sign-example-testing.html
+[Questionnaire Hunger Vital Sign (HVS) Example - XML Representation]: Questionnaire-hunger-vital-sign-example.xml.html
+[Questionnaire Hunger Vital Sign (HVS) Example - JSON Representation]: Questionnaire-hunger-vital-sign-example.json.html
+[Questionnaire Hunger Vital Sign (HVS) Example - TTL Representation]: Questionnaire-hunger-vital-sign-example.ttl.html
+[Questionnaire PHQ-9 Example]: Questionnaire-phq-9-example.html
+[Questionnaire PHQ-9 Example - Testing]: Questionnaire-phq-9-example-testing.html
+[Questionnaire PHQ-9 Example - XML Representation]: Questionnaire-phq-9-example.xml.html
+[Questionnaire PHQ-9 Example - JSON Representation]: Questionnaire-phq-9-example.json.html
+[Questionnaire PHQ-9 Example - TTL Representation]: Questionnaire-phq-9-example.ttl.html
+[Questionnaire PRAPARE Example]: Questionnaire-prapare-example.html
+[Questionnaire PRAPARE Example - Testing]: Questionnaire-prapare-example-testing.html
+[Questionnaire PRAPARE Example - XML Representation]: Questionnaire-prapare-example.xml.html
+[Questionnaire PRAPARE Example - JSON Representation]: Questionnaire-prapare-example.json.html
+[Questionnaire PRAPARE Example - TTL Representation]: Questionnaire-prapare-example.ttl.html
+[QuestionnaireResponse Glascow Coma Score Example]: QuestionnaireResponse-glascow-coma-score.html
+[QuestionnaireResponse Glascow Coma Score Example - XML Representation]: QuestionnaireResponse-glascow-coma-score.xml.html
+[QuestionnaireResponse Glascow Coma Score Example - JSON Representation]: QuestionnaireResponse-glascow-coma-score.json.html
+[QuestionnaireResponse Glascow Coma Score Example - TTL Representation]: QuestionnaireResponse-glascow-coma-score.ttl.html
+[QuestionnaireResponse Hunger Vital Sign (HVS) Example]: QuestionnaireResponse-hunger-vital-sign-example.html
+[QuestionnaireResponse Hunger Vital Sign (HVS) Example - XML Representation]: QuestionnaireResponse-hunger-vital-sign-example.xml.html
+[QuestionnaireResponse Hunger Vital Sign (HVS) Example - JSON Representation]: QuestionnaireResponse-hunger-vital-sign-example.json.html
+[QuestionnaireResponse Hunger Vital Sign (HVS) Example - TTL Representation]: QuestionnaireResponse-hunger-vital-sign-example.ttl.html
+[QuestionnaireResponse PHQ-9 Example]: QuestionnaireResponse-phq-9-example.html
+[QuestionnaireResponse PHQ-9 Example - XML Representation]: QuestionnaireResponse-phq-9-example.xml.html
+[QuestionnaireResponse PHQ-9 Example - JSON Representation]: QuestionnaireResponse-phq-9-example.json.html
+[QuestionnaireResponse PHQ-9 Example - TTL Representation]: QuestionnaireResponse-phq-9-example.ttl.html
+[QuestionnaireResponse PRAPARE Example]: QuestionnaireResponse-prapare-example.html
+[QuestionnaireResponse PRAPARE Example - XML Representation]: QuestionnaireResponse-prapare-example.xml.html
+[QuestionnaireResponse PRAPARE Example - JSON Representation]: QuestionnaireResponse-prapare-example.json.html
+[QuestionnaireResponse PRAPARE Example - TTL Representation]: QuestionnaireResponse-prapare-example.ttl.html
+[Rehab Example]: Procedure-rehab.html
+[Rehab Example - XML Representation]: Procedure-rehab.xml.html
+[Rehab Example - JSON Representation]: Procedure-rehab.json.html
+[Rehab Example - TTL Representation]: Procedure-rehab.ttl.html
+[Respiratory Rate Example]: Observation-respiratory-rate.html
+[Respiratory Rate Example - XML Representation]: Observation-respiratory-rate.xml.html
+[Respiratory Rate Example - JSON Representation]: Observation-respiratory-rate.json.html
+[Respiratory Rate Example - TTL Representation]: Observation-respiratory-rate.ttl.html
+[Saint Luke W Endpoint Example]: Organization-saint-luke-w-endpoint.html
+[Saint Luke W Endpoint Example - XML Representation]: Organization-saint-luke-w-endpoint.xml.html
+[Saint Luke W Endpoint Example - JSON Representation]: Organization-saint-luke-w-endpoint.json.html
+[Saint Luke W Endpoint Example - TTL Representation]: Organization-saint-luke-w-endpoint.ttl.html
+[SDOH Problem/Health Concern Example]: Condition-condition-SDOH-example.html
+[SDOH Problem/Health Concern Example - XML Representation]: Condition-condition-SDOH-example.xml.html
+[SDOH Problem/Health Concern Example - JSON Representation]: Condition-condition-SDOH-example.json.html
+[SDOH Problem/Health Concern Example - TTL Representation]: Condition-condition-SDOH-example.ttl.html
+[Serum BUN Example]: Observation-serum-bun.html
+[Serum BUN Example - XML Representation]: Observation-serum-bun.xml.html
+[Serum BUN Example - JSON Representation]: Observation-serum-bun.json.html
+[Serum BUN Example - TTL Representation]: Observation-serum-bun.ttl.html
+[Serum Calcium Example]: Observation-serum-calcium.html
+[Serum Calcium Example - XML Representation]: Observation-serum-calcium.xml.html
+[Serum Calcium Example - JSON Representation]: Observation-serum-calcium.json.html
+[Serum Calcium Example - TTL Representation]: Observation-serum-calcium.ttl.html
+[Serum Chloride Example]: Observation-serum-chloride.html
+[Serum Chloride Example - XML Representation]: Observation-serum-chloride.xml.html
+[Serum Chloride Example - JSON Representation]: Observation-serum-chloride.json.html
+[Serum Chloride Example - TTL Representation]: Observation-serum-chloride.ttl.html
+[Serum CO2 Example]: Observation-serum-co2.html
+[Serum CO2 Example - XML Representation]: Observation-serum-co2.xml.html
+[Serum CO2 Example - JSON Representation]: Observation-serum-co2.json.html
+[Serum CO2 Example - TTL Representation]: Observation-serum-co2.ttl.html
+[Serum Creatinine Example]: Observation-serum-creatinine.html
+[Serum Creatinine Example - XML Representation]: Observation-serum-creatinine.xml.html
+[Serum Creatinine Example - JSON Representation]: Observation-serum-creatinine.json.html
+[Serum Creatinine Example - TTL Representation]: Observation-serum-creatinine.ttl.html
+[Serum Glucose Example]: Observation-serum-glucose.html
+[Serum Glucose Example - XML Representation]: Observation-serum-glucose.xml.html
+[Serum Glucose Example - JSON Representation]: Observation-serum-glucose.json.html
+[Serum Glucose Example - TTL Representation]: Observation-serum-glucose.ttl.html
+[Serum Potassium Example]: Observation-serum-potassium.html
+[Serum Potassium Example - XML Representation]: Observation-serum-potassium.xml.html
+[Serum Potassium Example - JSON Representation]: Observation-serum-potassium.json.html
+[Serum Potassium Example - TTL Representation]: Observation-serum-potassium.ttl.html
+[Serum Sodium Example]: Observation-serum-sodium.html
+[Serum Sodium Example - XML Representation]: Observation-serum-sodium.xml.html
+[Serum Sodium Example - JSON Representation]: Observation-serum-sodium.json.html
+[Serum Sodium Example - TTL Representation]: Observation-serum-sodium.ttl.html
+[Serum Specimen Example]: Specimen-specimen-example-serum.html
+[Serum Specimen Example - XML Representation]: Specimen-specimen-example-serum.xml.html
+[Serum Specimen Example - JSON Representation]: Specimen-specimen-example-serum.json.html
+[Serum Specimen Example - TTL Representation]: Specimen-specimen-example-serum.ttl.html
+[Serum Total Bilirubin Example]: Observation-serum-total-bilirubin.html
+[Serum Total Bilirubin Example - XML Representation]: Observation-serum-total-bilirubin.xml.html
+[Serum Total Bilirubin Example - JSON Representation]: Observation-serum-total-bilirubin.json.html
+[Serum Total Bilirubin Example - TTL Representation]: Observation-serum-total-bilirubin.ttl.html
+[ServiceRequest CBC Example]: ServiceRequest-cbc.html
+[ServiceRequest CBC Example - XML Representation]: ServiceRequest-cbc.xml.html
+[ServiceRequest CBC Example - JSON Representation]: ServiceRequest-cbc.json.html
+[ServiceRequest CBC Example - TTL Representation]: ServiceRequest-cbc.ttl.html
+[ServiceRequest Chest XRay Example]: ServiceRequest-chest-xray.html
+[ServiceRequest Chest XRay Example - XML Representation]: ServiceRequest-chest-xray.xml.html
+[ServiceRequest Chest XRay Example - JSON Representation]: ServiceRequest-chest-xray.json.html
+[ServiceRequest Chest XRay Example - TTL Representation]: ServiceRequest-chest-xray.ttl.html
+[ServiceRequest EKG Example]: ServiceRequest-ekg.html
+[ServiceRequest EKG Example - XML Representation]: ServiceRequest-ekg.xml.html
+[ServiceRequest EKG Example - JSON Representation]: ServiceRequest-ekg.json.html
+[ServiceRequest EKG Example - TTL Representation]: ServiceRequest-ekg.ttl.html
+[ServiceRequest Example]: ServiceRequest-foodpantry-referral.html
+[ServiceRequest Example - XML Representation]: ServiceRequest-foodpantry-referral.xml.html
+[ServiceRequest Example - JSON Representation]: ServiceRequest-foodpantry-referral.json.html
+[ServiceRequest Example - TTL Representation]: ServiceRequest-foodpantry-referral.ttl.html
+[ServiceRequest for Rehab Example]: ServiceRequest-rehab.html
+[ServiceRequest for Rehab Example - XML Representation]: ServiceRequest-rehab.xml.html
+[ServiceRequest for Rehab Example - JSON Representation]: ServiceRequest-rehab.json.html
+[ServiceRequest for Rehab Example - TTL Representation]: ServiceRequest-rehab.ttl.html
+[Sexual Orientation Observation Example]: Observation-sexual-orientation-example.html
+[Sexual Orientation Observation Example - XML Representation]: Observation-sexual-orientation-example.xml.html
+[Sexual Orientation Observation Example - JSON Representation]: Observation-sexual-orientation-example.json.html
+[Sexual Orientation Observation Example - TTL Representation]: Observation-sexual-orientation-example.ttl.html
+[Simple Observation Cognitive Status Example]: Observation-simple-observation-cognitive-status.html
+[Simple Observation Cognitive Status Example - XML Representation]: Observation-simple-observation-cognitive-status.xml.html
+[Simple Observation Cognitive Status Example - JSON Representation]: Observation-simple-observation-cognitive-status.json.html
+[Simple Observation Cognitive Status Example - TTL Representation]: Observation-simple-observation-cognitive-status.ttl.html
+[Simple Observation Disability Status Example]: Observation-simple-observation-disability-status.html
+[Simple Observation Disability Status Example - XML Representation]: Observation-simple-observation-disability-status.xml.html
+[Simple Observation Disability Status Example - JSON Representation]: Observation-simple-observation-disability-status.json.html
+[Simple Observation Disability Status Example - TTL Representation]: Observation-simple-observation-disability-status.ttl.html
+[Simple Observation Functional Status Example]: Observation-simple-observation-functional-status.html
+[Simple Observation Functional Status Example - XML Representation]: Observation-simple-observation-functional-status.xml.html
+[Simple Observation Functional Status Example - JSON Representation]: Observation-simple-observation-functional-status.json.html
+[Simple Observation Functional Status Example - TTL Representation]: Observation-simple-observation-functional-status.ttl.html
+[Simple Observation SDOH Example]: Observation-simple-observation-sdoh.html
+[Simple Observation SDOH Example - XML Representation]: Observation-simple-observation-sdoh.xml.html
+[Simple Observation SDOH Example - JSON Representation]: Observation-simple-observation-sdoh.json.html
+[Simple Observation SDOH Example - TTL Representation]: Observation-simple-observation-sdoh.ttl.html
+[Some Day Smoker Example]: Observation-some-day-smoker.html
+[Some Day Smoker Example - XML Representation]: Observation-some-day-smoker.xml.html
+[Some Day Smoker Example - JSON Representation]: Observation-some-day-smoker.json.html
+[Some Day Smoker Example - TTL Representation]: Observation-some-day-smoker.ttl.html
+[Substance Use Status Example]: Observation-substance-use-status.html
+[Substance Use Status Example - XML Representation]: Observation-substance-use-status.xml.html
+[Substance Use Status Example - JSON Representation]: Observation-substance-use-status.json.html
+[Substance Use Status Example - TTL Representation]: Observation-substance-use-status.ttl.html
+[Taps Item Example 75889-6]: Observation-TAPS-item-example-75889-6.html
+[Taps Item Example 75889-6 - XML Representation]: Observation-TAPS-item-example-75889-6.xml.html
+[Taps Item Example 75889-6 - JSON Representation]: Observation-TAPS-item-example-75889-6.json.html
+[Taps Item Example 75889-6 - TTL Representation]: Observation-TAPS-item-example-75889-6.ttl.html
+[Taps Item Example 88037-7]: Observation-TAPS-item-example-88037-7.html
+[Taps Item Example 88037-7 - XML Representation]: Observation-TAPS-item-example-88037-7.xml.html
+[Taps Item Example 88037-7 - JSON Representation]: Observation-TAPS-item-example-88037-7.json.html
+[Taps Item Example 88037-7 - TTL Representation]: Observation-TAPS-item-example-88037-7.ttl.html
+[Taps Item Example 96842-0]: Observation-TAPS-item-example-96842-0.html
+[Taps Item Example 96842-0 - XML Representation]: Observation-TAPS-item-example-96842-0.xml.html
+[Taps Item Example 96842-0 - JSON Representation]: Observation-TAPS-item-example-96842-0.json.html
+[Taps Item Example 96842-0 - TTL Representation]: Observation-TAPS-item-example-96842-0.ttl.html
+[Taps Item Example 96843-8]: Observation-TAPS-item-example-96843-8.html
+[Taps Item Example 96843-8 - XML Representation]: Observation-TAPS-item-example-96843-8.xml.html
+[Taps Item Example 96843-8 - JSON Representation]: Observation-TAPS-item-example-96843-8.json.html
+[Taps Item Example 96843-8 - TTL Representation]: Observation-TAPS-item-example-96843-8.ttl.html
+[Taps Item Example 96844-6]: Observation-TAPS-item-example-96844-6.html
+[Taps Item Example 96844-6 - XML Representation]: Observation-TAPS-item-example-96844-6.xml.html
+[Taps Item Example 96844-6 - JSON Representation]: Observation-TAPS-item-example-96844-6.json.html
+[Taps Item Example 96844-6 - TTL Representation]: Observation-TAPS-item-example-96844-6.ttl.html
+[Taps Panel Example 96841-2]: Observation-TAPS-panel-example-96841-2.html
+[Taps Panel Example 96841-2 - XML Representation]: Observation-TAPS-panel-example-96841-2.xml.html
+[Taps Panel Example 96841-2 - JSON Representation]: Observation-TAPS-panel-example-96841-2.json.html
+[Taps Panel Example 96841-2 - TTL Representation]: Observation-TAPS-panel-example-96841-2.ttl.html
+[Targeted Provenance Example]: Provenance-example-targeted-provenance.html
+[Targeted Provenance Example - XML Representation]: Provenance-example-targeted-provenance.xml.html
+[Targeted Provenance Example - JSON Representation]: Provenance-example-targeted-provenance.json.html
+[Targeted Provenance Example - TTL Representation]: Provenance-example-targeted-provenance.ttl.html
+[Targeted Provenance Patient Example]: Patient-example-targeted-provenance.html
+[Targeted Provenance Patient Example - XML Representation]: Patient-example-targeted-provenance.xml.html
+[Targeted Provenance Patient Example - JSON Representation]: Patient-example-targeted-provenance.json.html
+[Targeted Provenance Patient Example - TTL Representation]: Patient-example-targeted-provenance.ttl.html
+[Temperature Example]: Observation-temperature.html
+[Temperature Example - XML Representation]: Observation-temperature.xml.html
+[Temperature Example - JSON Representation]: Observation-temperature.json.html
+[Temperature Example - TTL Representation]: Observation-temperature.ttl.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example]: Questionnaire-TAPS.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example - Testing]: Questionnaire-TAPS-testing.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example - XML Representation]: Questionnaire-TAPS.xml.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example - JSON Representation]: Questionnaire-TAPS.json.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example - TTL Representation]: Questionnaire-TAPS.ttl.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) QuestionnaireResponse Example]: QuestionnaireResponse-TAPS.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) QuestionnaireResponse Example - XML Representation]: QuestionnaireResponse-TAPS.xml.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) QuestionnaireResponse Example - JSON Representation]: QuestionnaireResponse-TAPS.json.html
+[Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) QuestionnaireResponse Example - TTL Representation]: QuestionnaireResponse-TAPS.ttl.html
+[Treatment Intervention Preference Example]: Observation-treatment-intervention-preference.html
+[Treatment Intervention Preference Example - XML Representation]: Observation-treatment-intervention-preference.xml.html
+[Treatment Intervention Preference Example - JSON Representation]: Observation-treatment-intervention-preference.json.html
+[Treatment Intervention Preference Example - TTL Representation]: Observation-treatment-intervention-preference.ttl.html
+[UDI 1 Example]: Device-udi-1.html
+[UDI 1 Example - XML Representation]: Device-udi-1.xml.html
+[UDI 1 Example - JSON Representation]: Device-udi-1.json.html
+[UDI 1 Example - TTL Representation]: Device-udi-1.ttl.html
+[Urobilinogen Example]: Observation-urobilinogen.html
+[Urobilinogen Example - XML Representation]: Observation-urobilinogen.xml.html
+[Urobilinogen Example - JSON Representation]: Observation-urobilinogen.json.html
+[Urobilinogen Example - TTL Representation]: Observation-urobilinogen.ttl.html
+[Uscore Med1 Example]: Medication-uscore-med1.html
+[Uscore Med1 Example - XML Representation]: Medication-uscore-med1.xml.html
+[Uscore Med1 Example - JSON Representation]: Medication-uscore-med1.json.html
+[Uscore Med1 Example - TTL Representation]: Medication-uscore-med1.ttl.html
+[Uscore Med2 Example]: Medication-uscore-med2.html
+[Uscore Med2 Example - XML Representation]: Medication-uscore-med2.xml.html
+[Uscore Med2 Example - JSON Representation]: Medication-uscore-med2.json.html
+[Uscore Med2 Example - TTL Representation]: Medication-uscore-med2.ttl.html
+[Weight Example]: Observation-weight.html
+[Weight Example - XML Representation]: Observation-weight.xml.html
+[Weight Example - JSON Representation]: Observation-weight.json.html
+[Weight Example - TTL Representation]: Observation-weight.ttl.html
+[Xray Chest Findings Example]: Observation-xray-chest-findings.html
+[Xray Chest Findings Example - XML Representation]: Observation-xray-chest-findings.xml.html
+[Xray Chest Findings Example - JSON Representation]: Observation-xray-chest-findings.json.html
+[Xray Chest Findings Example - TTL Representation]: Observation-xray-chest-findings.ttl.html
+[Xray Chest Impression Example]: Observation-xray-chest-impression.html
+[Xray Chest Impression Example - XML Representation]: Observation-xray-chest-impression.xml.html
+[Xray Chest Impression Example - JSON Representation]: Observation-xray-chest-impression.json.html
+[Xray Chest Impression Example - TTL Representation]: Observation-xray-chest-impression.ttl.html
