@@ -1,15 +1,15 @@
 Is_New,Addl_USCDI,Profile,FHIR_Element
 ,Contact Detail,US Core Patient Profile,Patient.telecom
 ,A Communication Language,US Core Patient Profile,Patient.communication
-TRUE,An Interpreter Required Flag,US Core Patient Profile,Patient.extension:interpreterRequired
-TRUE,An Interpreter Required Flag,US Core Encounter Profile,Encounter.extension:interpreterRequired
+True,An Interpreter Required Flag,US Core Patient Profile,Patient.extension:interpreterRequired
+True,An Interpreter Required Flag,US Core Encounter Profile,Encounter.extension:interpreterRequired
 ,A Race,US Core Patient Profile,Patient.extension:race
 ,An Ethnicity,US Core Patient Profile,Patient.extension:ethnicity
 ,A Tribal Affiliation,US Core Patient Profile,Patient.extension:tribalAffiliation
 ,A Sex,US Core Patient Profile,Patient.extension:sex
-TRUE,Sex Parameter For Clinical Use,US Core Patient Profile,Patient.extension:sexParameterForClinicalUse
+True,Sex Parameter For Clinical Use,US Core Patient Profile,Patient.extension:sexParameterForClinicalUse
 ,Gender Identity,US Core Patient Profile,Patient.extension:genderIdentity
-TRUE,Personal Pronouns,US Core Patient Profile,Patient.extension:personalPronouns
+True,Personal Pronouns,US Core Patient Profile,Patient.extension:personalPronouns
 ,Date Of Death,US Core Patient Profile,Patient.deceased[x]
 ,Address Use,US Core Patient Profile,Patient.address.use
 ,Address Period,US Core Patient Profile,Patient.address.period
@@ -18,8 +18,8 @@ TRUE,Personal Pronouns,US Core Patient Profile,Patient.extension:personalPronoun
 ,Suffix,US Core Patient Profile,Patient.name.suffix
 ,A Reason Or Indication For Referral Or Consultation,US Core ServiceRequest Profile,ServiceRequest.reasonCode
 ,A Reason Or Indication For Referral Or Consultation,US Core ServiceRequest Profile,ServiceRequest.reasonReference
-TRUE,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.performer
-TRUE,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.performer.actor
+True,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.performer
+True,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.performer.actor
 ,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.reasonCode
 ,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.reasonReference
 ,The Reason Or Indication For The Prescription,US Core MedicationRequest Profile,MedicationRequest.reasonCode
@@ -31,4 +31,4 @@ TRUE,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profi
 ,Specimen Source Site,US Core Specimen Profile,Specimen.collection
 ,Specimen Source Site,US Core Specimen Profile,Specimen.collection.bodySite
 ,Specimen Condition Acceptability,US Core Specimen Profile,Specimen.condition
-TRUE,Health Status Assessments,US Core Simple Observation Profile,Observation.category:us-core
+True,Health Status Assessments,US Core Simple Observation Profile,Observation.category:us-core
