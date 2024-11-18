@@ -40,7 +40,7 @@
   
    |Pre 8.0.0-Ballot US Core ValueSet|8.0.0-Ballot ValueSet|THO/VSAC|
    |---|---|---|
-   [US Core Discharge Disposition Value Set](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-sexual-orientation.html)|[V3 Discharge Disposition](http://terminology.hl7.org/ValueSet/v3-DischargeDisposition)|THO|
+   [US Core Discharge Disposition Value Set](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-sexual-orientation.html)|[V3 Discharge Disposition](https://terminology.hl7.org/6.0.2/ValueSet-v3-USEncounterDischargeDisposition.html)|THO|
    [US Core Pregnancy Status Codes](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-pregnancy-status.html)|[Pregnancy Status Observation](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.12/expansion)|VSAC|
    [US Core Pregnancy Intent Codes](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-pregnancy-intent.html)|[Pregnancy Intention](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1166.22/expansion)|VSAC|
    [US Core Survey Codes](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-survey-codes.html)|[Screening and Assessment Survey Codes](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.13/expansion)|VSAC|

@@ -172,7 +172,7 @@ differential:
       strength: preferred
       description: '[National Uniform Billing Committee](http://www.nubc.org/), manual
         UB-04, UB form locator 17'
-      valueSet: http://terminology.hl7.org/ValueSet/v3-DischargeDisposition
+      valueSet: https://terminology.hl7.org/6.0.2/ValueSet-v3-USEncounterDischargeDisposition.html
   - id: Encounter.location
     path: Encounter.location
     mustSupport: true
