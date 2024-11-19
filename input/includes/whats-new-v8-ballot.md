@@ -1,4 +1,3 @@
-{% include img-small.html img="todo.png" %}
 
 - We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v5](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v5) Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2024:
 

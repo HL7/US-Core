@@ -64,45 +64,47 @@ The January 2025 ballot addresses the following:
     - [US Core Client CapabilityStatement - FHIR RESTful Capabilities](CapabilityStatement-us-core-server.html)
 html#additional-uscdi-requirements)
 1.  **Applied:** (Enhancement) Add section on client best practices for search [FHIR-45179](https://jira.hl7.org/browse/FHIR-45179) [See Changes Here](#.general-guidance.html)
-2.  **Triaged:** (Clarification) Is the Provenance Quick Start API Correct? [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) [See Changes Here](#.html)
+2.  **Triaged:** (Clarification) Is the Provenance Quick Start API Correct? [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) See Changes Here:
+    - [US Core Provenance Profile](StructureDefinition-us-core-provenance.html#mandatory-search-parametersl)
+    - [Provenance example TODO...](#.html)
 3.  **Applied:** (Enhancement) Continue to harmonize/share value sets used in US Core and C-CDA in the US Core 8.0 ballot and C-CDA 4.0 ballot [FHIR-46181](https://jira.hl7.org/browse/FHIR-46181) (See Changes Listed in introduction above)
 4.  **Applied:** (Enhancement) Updates and Corrections to Medication Clinical Drug VSAC Valueset used by US Core Medication, MedicationDispense Profile, and MedicationRequest Profiles [FHIR-46255](https://jira.hl7.org/browse/FHIR-46255) [See Changes Here](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion/Latest)
-1.  **Applied:** (Enhancement) Replace US Core Pregnancy Status Codes Value Set with equivalent [Value Set Authority Center (VSAC)] Value Set [FHIR-46257](https://jira.hl7.org/browse/FHIR-46257) [See Changes Here](StructureDefinition-us-core-observation-pregnancystatus.html)
-2.  **Applied:** (Enhancement) Allow CMS Place of Service codes for 'location.type' in US Core Location Profile [FHIR-46258](https://jira.hl7.org/browse/FHIR-46258) See Changes Here:
+5.  **Applied:** (Enhancement) Replace US Core Pregnancy Status Codes Value Set with equivalent [Value Set Authority Center (VSAC)] Value Set [FHIR-46257](https://jira.hl7.org/browse/FHIR-46257) [See Changes Here](StructureDefinition-us-core-observation-pregnancystatus.html)
+6.  **Applied:** (Enhancement) Allow CMS Place of Service codes for 'location.type' in US Core Location Profile [FHIR-46258](https://jira.hl7.org/browse/FHIR-46258) See Changes Here:
     - [US Core Location Profile](StructureDefinition-us-core-location.html)
     - [US Core Location Type ValueSet](ValueSet-us-core-location-type.html)
-3.  **Applied:** (Enhancement) Replace US Core Pregnancy Intent Codes Value Set with equivalent [Value Set Authority Center (VSAC)] Value Set [FHIR-46263](https://jira.hl7.org/browse/FHIR-46263) [See Changes Here](StructureDefinition-us-core-observation-pregnancyintent.html)
-4.  **Applied:** (Enhancement) Add SDOH Goals value set as ""Additional Binding"" in Goal Profile [FHIR-46266](https://jira.hl7.org/browse/FHIR-46266) [See Changes Here](StructureDefinition-us-core-goal.html)
-5.  **Applied:** (Correction) Specify SMART App Launch Version [FHIR-46279](https://jira.hl7.org/browse/FHIR-46279) Here:
+7.  **Applied:** (Enhancement) Replace US Core Pregnancy Intent Codes Value Set with equivalent [Value Set Authority Center (VSAC)] Value Set [FHIR-46263](https://jira.hl7.org/browse/FHIR-46263) [See Changes Here](StructureDefinition-us-core-observation-pregnancyintent.html)
+8.  **Applied:** (Enhancement) Add SDOH Goals value set as ""Additional Binding"" in Goal Profile [FHIR-46266](https://jira.hl7.org/browse/FHIR-46266) [See Changes Here](StructureDefinition-us-core-goal.html)
+9.  **Applied:** (Correction) Specify SMART App Launch Version [FHIR-46279](https://jira.hl7.org/browse/FHIR-46279) Here:
     - [Security](security.html)
     - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html)
-6.  **Applied:** (Enhancement) Replace US Core Survey Codes Value Set with [Value Set Authority Center (VSAC)] Value Set and remove Laboratory LOINCs [FHIR-46347](https://jira.hl7.org/browse/FHIR-46347) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
-7.  **Applied:** (Clarification) Clarify when granular scopes overlap [FHIR-46748](https://jira.hl7.org/browse/FHIR-46748) [See Changes Here](scopes.html)
-8.  **Applied:** (Enhancement) Add USCDI v5 Data Elements to US Core [FHIR-48443](https://jira.hl7.org/browse/FHIR-48443) [See Changes Here](#.html)
-9.  **Applied:** (Correction) Update US Core Clinical Note Type Valueset to align with Clinical Note Guidance [FHIR-48607](https://jira.hl7.org/browse/FHIR-48607)  Here:
+10. **Applied:** (Enhancement) Replace US Core Survey Codes Value Set with [Value Set Authority Center (VSAC)] Value Set and remove Laboratory LOINCs [FHIR-46347](https://jira.hl7.org/browse/FHIR-46347) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
+11. **Applied:** (Clarification) Clarify when granular scopes overlap [FHIR-46748](https://jira.hl7.org/browse/FHIR-46748) [See Changes Here](scopes.html)
+12. **Applied:** (Enhancement) Add USCDI v5 Data Elements to US Core [FHIR-48443](https://jira.hl7.org/browse/FHIR-48443) [See Changes Here](#.html)
+13. **Applied:** (Correction) Update US Core Clinical Note Type Valueset to align with Clinical Note Guidance [FHIR-48607](https://jira.hl7.org/browse/FHIR-48607)  Here:
     - [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
     - [Clinical Notes](clinical-notes.html)
-10. **Applied:** (Correction) Change Average Blood Pressure Profile `Observation.subject` minimum from 0 to 1 [FHIR-45724](https://jira.hl7.org/browse/FHIR-45724) [See Changes Here](StructureDefinition-us-core-average-blood-pressure.html)
-11. **Applied:** (Enhancement) Align Encounter Type between C-CDA and FHIR US Core and Replace US Core Encounter Type Value Set with equivalent [Value Set Authority Center (VSAC)] Value Set [FHIR-46259](https://jira.hl7.org/browse/FHIR-46259) [See Changes Here](#.html)
-12. **Applied:** (Clarification) Update Must Support page when no reference targets labeled Must Support and update must support labels for Observation.performer targets [FHIR-48442](https://jira.hl7.org/browse/FHIR-48442) See Changes Here:
+14. **Applied:** (Correction) Change Average Blood Pressure Profile `Observation.subject` minimum from 0 to 1 [FHIR-45724](https://jira.hl7.org/browse/FHIR-45724) [See Changes Here](StructureDefinition-us-core-average-blood-pressure.html)
+15. **Applied:** (Enhancement) Align Encounter Type between C-CDA and FHIR US Core and Replace US Core Encounter Type Value Set with equivalent [Value Set Authority Center (VSAC)] Value Set [FHIR-46259](https://jira.hl7.org/browse/FHIR-46259) [See Changes Here](#.html)
+16. **Applied:** (Clarification) Update Must Support page when no reference targets labeled Must Support and update must support labels for Observation.performer targets [FHIR-48442](https://jira.hl7.org/browse/FHIR-48442) See Changes Here:
    - [Must Support - Resource References](must-support.html#must-support---resource-references)
    - [US Core Simple Observation Profile](StructureDefinition-us-core-simple-observation.html)
    - [US Core Observation Screening Assessment Profile](StructureDefinition-us-core-observation-screening-assessment.html)
-13. **Triaged:** (Enhancement) All lab orders and results across all FHIR IGs need to indicate the performing laboratory test order name and/or performing laboratory test result name [FHIR-43301](https://jira.hl7.org/browse/FHIR-43301) [See Changes Here](#.html)
-14. **Triaged:** (Enhancement) Create new section in Guidance on Sex and Gender in USCore [FHIR-44115](https://jira.hl7.org/browse/FHIR-44115) [See Changes Here](#.html)
-15. **Applied:** (Correction) Spelling errors in US Core Server Capability Statement [FHIR-45451](https://jira.hl7.org/browse/FHIR-45451)[See Changes Here](CapabilityStatement-us-core-server.html)
-16. **Applied:** (Correction) Fix broken PHINVADS links [FHIR-45494](https://jira.hl7.org/browse/FHIR-45494) [See Changes Here](terminology.html)
-17. **Applied:** (Correction) Typo in Condition's granular scope [FHIR-45961](https://jira.hl7.org/browse/FHIR-45961) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#us-core-scopes)
-18. **Applied:** (Clarification) Clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
-19. **Triaged:** (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) [See Changes Here](#.html)
-20. **Pre-Applied:** (Enhancement) Create SCT Specimen Condition value set to include SNOMED CT [FHIR-47061](https://jira.hl7.org/browse/FHIR-47061) See Changes Here:
+17. **Triaged:** (Enhancement) All lab orders and results across all FHIR IGs need to indicate the performing laboratory test order name and/or performing laboratory test result name [FHIR-43301](https://jira.hl7.org/browse/FHIR-43301) [See Changes Here](#.html)
+18. **Triaged:** (Enhancement) Create new section in Guidance on Sex and Gender in USCore [FHIR-44115](https://jira.hl7.org/browse/FHIR-44115) [See Changes Here](#.html)
+19. **Applied:** (Correction) Spelling errors in US Core Server Capability Statement [FHIR-45451](https://jira.hl7.org/browse/FHIR-45451)[See Changes Here](CapabilityStatement-us-core-server.html)
+20. **Applied:** (Correction) Fix broken PHINVADS links [FHIR-45494](https://jira.hl7.org/browse/FHIR-45494) [See Changes Here](terminology.html)
+21. **Applied:** (Correction) Typo in Condition's granular scope [FHIR-45961](https://jira.hl7.org/browse/FHIR-45961) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#us-core-scopes)
+22. **Applied:** (Clarification) Clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
+23. **Triaged:** (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) [See Changes Here](#.html)
+24. **Pre-Applied:** (Enhancement) Create SCT Specimen Condition value set to include SNOMED CT [FHIR-47061](https://jira.hl7.org/browse/FHIR-47061) See Changes Here:
     - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html)
     - [US Core Specimen Condition ValueSet](ValueSet-us-core-specimen-condition.html)
     - [Lipemic Serum Specimen Example](Specimen-example-serum-lipemic.html)
-21. **Pre-Applied:** (Clarification) Remove Meta.lastUpdated STU comments [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542)
-22. **Applied:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
-23. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
-24. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
+25. **Pre-Applied:** (Clarification) Remove Meta.lastUpdated STU comments [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542)
+26. **Applied:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
+27. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
+28. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
 
 The application of the following trackers are pending and will not be completed by the ballot date.
 
