@@ -11,6 +11,7 @@
 [Clinical Notes]: clinical-notes.html
 [Medication List]: medication-list.html
 [Basic Provenance]: basic-provenance.html
+[Using Provenance To Target Resource Elements]: element-level-provenance.html
 [Screening and Assessments]: screening-and-assessments.html
 [Changes Between Versions]: changes-between-versions.html
 [Future of US Core]: future-of-US-core.html
@@ -1166,11 +1167,6 @@
 [US Core DocumentReference Type - XML Representation]: ValueSet-us-core-documentreference-type.xml.html
 [US Core DocumentReference Type - JSON Representation]: ValueSet-us-core-documentreference-type.json.html
 [US Core DocumentReference Type - TTL Representation]: ValueSet-us-core-documentreference-type.ttl.html
-[US Core Encounter Type]: ValueSet-us-core-encounter-type.html
-[US Core Encounter Type - Testing]: ValueSet-us-core-encounter-type-testing.html
-[US Core Encounter Type - XML Representation]: ValueSet-us-core-encounter-type.xml.html
-[US Core Encounter Type - JSON Representation]: ValueSet-us-core-encounter-type.json.html
-[US Core Encounter Type - TTL Representation]: ValueSet-us-core-encounter-type.ttl.html
 [US Core Goal Codes]: ValueSet-us-core-goal-description.html
 [US Core Goal Codes - Testing]: ValueSet-us-core-goal-description-testing.html
 [US Core Goal Codes - XML Representation]: ValueSet-us-core-goal-description.xml.html
@@ -1246,11 +1242,6 @@
 [US Core Status for Smoking Status Observation - XML Representation]: ValueSet-us-core-observation-smoking-status-status.xml.html
 [US Core Status for Smoking Status Observation - JSON Representation]: ValueSet-us-core-observation-smoking-status-status.json.html
 [US Core Status for Smoking Status Observation - TTL Representation]: ValueSet-us-core-observation-smoking-status-status.ttl.html
-[US Core Survey Codes]: ValueSet-us-core-survey-codes.html
-[US Core Survey Codes - Testing]: ValueSet-us-core-survey-codes-testing.html
-[US Core Survey Codes - XML Representation]: ValueSet-us-core-survey-codes.xml.html
-[US Core Survey Codes - JSON Representation]: ValueSet-us-core-survey-codes.json.html
-[US Core Survey Codes - TTL Representation]: ValueSet-us-core-survey-codes.ttl.html
 [USPS Two Letter Alphabetic Codes]: ValueSet-us-core-usps-state.html
 [USPS Two Letter Alphabetic Codes - Testing]: ValueSet-us-core-usps-state-testing.html
 [USPS Two Letter Alphabetic Codes - XML Representation]: ValueSet-us-core-usps-state.xml.html

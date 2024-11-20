@@ -100,9 +100,9 @@ pages:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: trial-use
     uscdi.md:
-      # extension:
-      # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-      #   valueCode: trial-use
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
       title: USCDI
     general-guidance.md:
       extension:
@@ -120,6 +120,11 @@ pages:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
+      element-level-provenance.md:
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative
+        title: Using Provenance To Target Resource Elements
     screening-and-assessments.md:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -137,16 +142,16 @@ pages:
       vitals-write.md:
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-          valueCode: trial-use
+          valueCode: informative
         title: Writing Vital Signs
   profiles-and-extensions.md:
-    # extension:
-    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    #   valueCode: trial-use
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
   capability-statements.md:
-    # extension:
-    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    #   valueCode: trial-use
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
   search-parameters-and-operations.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -160,22 +165,22 @@ pages:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: trial-use
   examples.md:
-    # extension:
-    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    #   valueCode: trial-use
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
   downloads.md:
-    # extension:
-    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    #   valueCode: trial-use
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
   changes.md:
-    # extension:
-    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    #   valueCode: trial-use
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Change Log
   ImplementationGuide-hl7.fhir.us.core.md:
-    # extension:
-    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    #   valueCode: trial-use
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: US Core ImplementationGuide Resource
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:

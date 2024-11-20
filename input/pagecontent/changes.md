@@ -64,7 +64,7 @@ The January 2025 ballot addresses the following:
     - [US Core Client CapabilityStatement - FHIR RESTful Capabilities](CapabilityStatement-us-core-server.html)
 html#additional-uscdi-requirements)
 1.  **Applied:** (Enhancement) Add section on client best practices for search [FHIR-45179](https://jira.hl7.org/browse/FHIR-45179) [See Changes Here](#.general-guidance.html)
-2.  **Triaged:** (Clarification) Is the Provenance Quick Start API Correct? [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) See Changes Here:
+2.  **Triaged:** (Clarification) Clarify the '_revinclude` expections for Provenance [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) See Changes Here:
     - [US Core Provenance Profile](StructureDefinition-us-core-provenance.html#mandatory-search-parametersl)
     - [Provenance example TODO...](#.html)
 3.  **Applied:** (Enhancement) Continue to harmonize/share value sets used in US Core and C-CDA in the US Core 8.0 ballot and C-CDA 4.0 ballot [FHIR-46181](https://jira.hl7.org/browse/FHIR-46181) (See Changes Listed in introduction above)

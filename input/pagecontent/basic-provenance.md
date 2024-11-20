@@ -1,11 +1,17 @@
 
-​This section provides implementers with important definitions to create and share the Provenance Resource.
+### Provenance in US Core
+<div class="bg-success" markdown="1">
 
-### Basic Provenance
+The FHIR [Provenance] Resource tracks information about the activity about a version of a resource, describing the entities and agents involved. FHIR resources also contain elements that represent "small-p provenance" information about how the resource was obtained which overlap with the functionality of the Provenance resource.
 
-The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It is not scoped to a specific use case nor limits the number of Provenance records associated with a Resource. The primary guidance here, and in the [US Core Provenance Profile], focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here does not preclude more advanced use cases or additional elements.
+​This page is divided into two section documenting how the [US Core Provenance Profile] records changes at the *organizational level*, and how the US Core Profiles' "small-p provenance" elements record changes at the *individual level*. The US Core Provenance Profile asserts where the data came from at an organizational or system level.  Because systems typically do not use the Provenance Resource to represent this information at an *individual level* (in other words, activities by the patient or provider), various FHIR resource elements are identified that track the "small p provenance" information at the individual level. The baseline rules and guidance here do not preclude more advanced use cases such as [Using Provenance To Target Resource Elements].
 
-Full Provenance of a Resource requires details from the original resource creator and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches and end-user display.  They agreed the most important information is the last organization making a meaningful clinical update to the data and the prior system providing it - the 'last hop'.  Participants didn't dispute the potential need to recreate the entire chain but didn't see this as relevant to the immediate end-user.
+</div><!-- new-content -->
+
+### <span class="bg-success" markdown="1">Organizational Level</span><!-- new-content --> Provenance
+
+<span class="bg-success" markdown="1">The [US Core Provenance Profile] focuses on a key subset of elements, the "last hop", and specific use cases used to assert changes to the record at the organizational level.</span><!-- new-content --> Full Provenance of a Resource requires details from the original resource creator and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches and end-user display. They agreed the most important information is the last organization making a meaningful clinical update to the data and the prior system providing it - the 'last hop'. Participants didn't dispute the potential need to recreate the entire chain but didn't see this as relevant to the immediate end-user.
+
 
 #### Key Provenance Elements
 
@@ -96,25 +102,51 @@ Unlike Use Case 3 - HIE Redistribution, Use Case 4 includes data transformation.
 
 Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The HIE must maintain the original data source. An `agent.type`="assembler", `agent.type`="transmitter", or other agents from [Provenance Agent Type] value set **MAY** also be included. Due to insufficient implementer guidance, the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include it in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
 
+### <span class="bg-success" markdown="1">Individual Level Provenance</span><!-- new-content -->
 
-### Element Level Provenance
+<div class="bg-warning" markdown="1">
+- Discuss:
+  - Which elements should be added  as *Must Support/Add'l USCDI*
+  - Which target resources should be added as *Must Support/Add'l USCDI*
+    - US Core Patient
+    - US Core Practitioner
+    - US Core PractitionerRole
+    - US Core RelatedPerson
+    - US Core Organization
+    - US Core Device
+  - If not adding *Must Support/Add'l USCDI* then what guidance do we give to meet the requirement?
 
-<div class="stu-note" markdown="1">
-This section is informative and not a requirement for systems conforming to the US Core Provenance Profile.
-</div><!-- stu-note -->
+(source excel file is here: https://1drv.ms/x/c/deea5e002be8d274/EazOGawVCEBBjJmfJXcI5DQBKbAXNqHGcHr4ioRM6s2m0g)
+</div><!-- new-content --> 
+<div class="bg-success" markdown="1">
 
- Using the FHIR Extension [Target Element], Provenance can target a particular element or set of elements. For example, to document how and who supplied patient demographic data such as Race and Ethnicity (R/E), gender identity, and sexual orientation.
+US Core Profiles contain elements that represent "small-p provenance" information about how the resource was obtained, which overlaps with the functionality of the Provenance resource discussed above. The table below identifies the author and author roles that meet the [U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals. In addition, they are listed in each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the target resource type referenced by it (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. The **bold asterisked** text indicates the elements and target resources that are labeled as *Must Support* in the respective US Core Profiles. Elements and target resources not labeled as *Must Support* **SHOULD** be supported in the profiles when the system captures the data.
 
-Example:
+##### Author and Author Role Data Elements
 
-In this [US Core Patient Profile] example, the patient demographic data such as Race and Ethnicity (R/E), gender identity, etc., have *individual element ids* within a resource for internal and external referencing:
+This table excludes these US Core Profiles, which are not typically associated with individual authorship:
 
-{% include examplebutton_default.html example="Patient-example-targeted-provenance.json" b_title = "Click Here to See Individual Element Ids Within a Patient Resource Example" %}
+- US Core Encounter
+- US Core Location
+- US Core Organization
+- US Core Practitioner
+- US Core PractitionerRole
+- US Core RelatedPerson
+- US Core Medication
+- US Core Provenance
+- US Core CareTeam
+- US Core Coverage
+- US Core Specimen
 
-This [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element ids within the Patient resource:
+<span style="color: red;">Red text</span> indicates proposed new *Must Support* elements and targets
 
-{% include examplebutton_default.html example="Provenance-example-targeted-provenance.json" b_title = "Click Here to See an Element Level Provenance Example" %}
+This information is also available as a [csv](tables/provenance-elements.csv) or [excel](tables/provenance-elements.xlsx) file:
 
-<br />
+{% include provenance-source-table-generator.md %}
+
+\* US Core *Must Support* or *Additional USCDI* element
+
+\** US Core *Must Support* Target Resource Type
+</div><!-- new-content -->
 
 {% include link-list.md %}

@@ -3840,6 +3840,9 @@ definition:
       - nameUrl: uscdi.html
         title: USCDI
         generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative
       - nameUrl: general-guidance.html
         title: General Guidance
         generation: markdown
@@ -3864,6 +3867,13 @@ definition:
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
           valueCode: trial-use
+        page:
+        - nameUrl: element-level-provenance.html
+          title: Using Provenance To Target Resource Elements
+          generation: markdown
+          extension:
+          - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+            valueCode: informative
       - nameUrl: screening-and-assessments.html
         title: Screening and Assessments
         generation: markdown
@@ -3888,13 +3898,19 @@ definition:
           generation: markdown
           extension:
           - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-            valueCode: trial-use
+            valueCode: informative
     - nameUrl: profiles-and-extensions.html
       title: Profiles and Extensions
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
     - nameUrl: capability-statements.html
       title: Capability Statements
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
     - nameUrl: search-parameters-and-operations.html
       title: Search Parameters and Operations
       generation: markdown
@@ -3916,15 +3932,27 @@ definition:
     - nameUrl: examples.html
       title: Examples
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
     - nameUrl: downloads.html
       title: Downloads
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
     - nameUrl: changes.html
       title: Change Log
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
     - nameUrl: ImplementationGuide-hl7.fhir.us.core.html
       title: US Core ImplementationGuide Resource
       generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   parameter:
   - code: copyrightyear
     value: 2024+

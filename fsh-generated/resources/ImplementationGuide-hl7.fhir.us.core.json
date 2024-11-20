@@ -3684,7 +3684,13 @@
             {
               "nameUrl": "uscdi.html",
               "title": "USCDI",
-              "generation": "markdown"
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                }
+              ]
             },
             {
               "nameUrl": "general-guidance.html",
@@ -3728,6 +3734,19 @@
                   "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
                   "valueCode": "trial-use"
                 }
+              ],
+              "page": [
+                {
+                  "nameUrl": "element-level-provenance.html",
+                  "title": "Using Provenance To Target Resource Elements",
+                  "generation": "markdown",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                      "valueCode": "informative"
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -3770,7 +3789,7 @@
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                      "valueCode": "trial-use"
+                      "valueCode": "informative"
                     }
                   ]
                 }
@@ -3781,12 +3800,24 @@
         {
           "nameUrl": "profiles-and-extensions.html",
           "title": "Profiles and Extensions",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
         },
         {
           "nameUrl": "capability-statements.html",
           "title": "Capability Statements",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
         },
         {
           "nameUrl": "search-parameters-and-operations.html",
@@ -3824,22 +3855,46 @@
         {
           "nameUrl": "examples.html",
           "title": "Examples",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
         },
         {
           "nameUrl": "downloads.html",
           "title": "Downloads",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
         },
         {
           "nameUrl": "changes.html",
           "title": "Change Log",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
         },
         {
           "nameUrl": "ImplementationGuide-hl7.fhir.us.core.html",
           "title": "US Core ImplementationGuide Resource",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
         }
       ]
     },
