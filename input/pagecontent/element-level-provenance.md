@@ -8,12 +8,174 @@ Provenance typically communicates a single activity about one or more target res
 
 Example:
 
-In the following [US Core Patient Profile] example, the patient demographic data such as Race and Ethnicity (R/E), gender identity, etc., have *individual element ids* within a resource for internal and external referencing:
+In the following [US Core Patient Profile] example, the patient demographic data such as race,ethnicity, etc.have *individual element ids* within a resource for internal and external referencing:
 
-<!-- {% raw %} {% include examplebutton_default.html example="Patient-example-targeted-provenance.json" b_title = "Click Here to See Individual Element Ids Within a Patient Resource Example" %} {% endraw %} -->
+<!-- {% raw %} {% include examplebutton_default.html example="Patient-example-targeted-provenance.json" b_title = "Click Here to See Individual Element Ids Within a Patient Resource Example" %} {% endraw %} The ig-publisher does not render version specific examples see chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Version-specific.20examples -->
 
-The following  [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element ids within the Patient resource:
+~~~
+{
+    "resourceType": "Patient",
+    "id": "example-targeted-provenance/_history/1",
+    "meta": {
+        "versionId": "1",
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+        ]
+    },
+    "extension": [
+        {
+            "id": "race",
+            "extension": [
+                {
+                    "url": "ombCategory",
+                    "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2106-3",
+                        "display": "White"
+                    }
+                },
+                {
+                    "url": "text",
+                    "valueString": "Mixed"
+                }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+            "id": "ethnicity",
+            "extension": [
+                {
+                    "url": "ombCategory",
+                    "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2135-2",
+                        "display": "Hispanic or Latino"
+                    }
+                },
+                {
+                    "url": "text",
+                    "valueString": "Hispanic or Latino"
+                }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+            "id": "birthsex",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "F"
+        },
+        {
+            "id": "sex",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+            "valueCode": "248152002"
+        },
+        {
+            "id": "genderIdentity",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                        "code": "UNK"
+                    }
+                ]
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "system": "http://hospital.smarthealthit.org",
+            "value": "1032702"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "family": "Shaw",
+            "given": [
+                "Amy",
+                "V."
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "555-555-5555"
+        }
+    ],
+    "gender": "female",
+    "_gender": {
+        "id": "gender"
+    },
+    "birthDate": "1987-02-20",
+    "address": [
+        {
+            "line": [
+                "183 MOUNTAIN VIEW ST"
+            ],
+            "city": "MOUNDS",
+            "state": "OK",
+            "postalCode": "74048"
+        }
+    ]
+}
 
-<!-- {% raw %} {% include examplebutton_default.html example="Provenance-example-targeted-provenance.json" b_title = "Click Here to See an Element Level Provenance Example" %} {% endraw %} -->
+~~~
+
+The following  [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element id "race" within the Patient resource:
+
+<!-- {% raw %} {% include examplebutton_default.html example="Provenance-example-targeted-provenance.json" b_title = "Click Here to See an Element Level Provenance Example" %} {% endraw %}
+The ig-publisher does not render version specific examples see chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Version-specific.20examples 
+-->
+
+~~~
+{
+    "resourceType": "Provenance",
+    "id": "example-targeted-provenance",
+    "meta": {
+        "versionId": "1",
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+        ]
+    },
+    "target": [
+        {
+            "reference": "Patient/example-targeted-provenance/_history/1",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/targetElement",
+                    "valueUri": "race"
+                }
+            ]
+        }
+    ],
+    "recorded": "2023-02-28T15:26:23.217+00:00",
+    "agent": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                        "code": "informant",
+                        "display": "Informant"
+                    }
+                ]
+            },
+            "who": {
+                "reference": "Patient/example-targeted-provenance"
+            }
+        }
+    ],
+    "entity": [
+        {
+            "role": "source",
+            "what": {
+                "display": "admission form"
+            }
+        }
+    ]
+}
+~~~
 
 {% include link-list.md %}

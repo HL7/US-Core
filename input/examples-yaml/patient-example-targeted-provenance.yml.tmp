@@ -1,13 +1,15 @@
 resourceType: Patient
-id: example-targeted-provenance
+id: example-targeted-provenance/_history/1
 meta:
+  versionId: '1'  # < add version for Provenance
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Targeted Provenance Patient Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a patient example for the *US Core Patient Profile* to
       demonstrate how Provenance can be used to document the source of individual
-      elements such as Race and Ethnicity (R/E), gender identity.
+      elements such as Race and Ethnicity (R/E), gender identity.(Note that this example
+      is version specific since Provenance targets the version named in the reference.)
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 extension:

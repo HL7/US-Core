@@ -938,7 +938,6 @@
 [US Core Provenance Profile - Definitions]: StructureDefinition-us-core-provenance-definitions.html
 [US Core Provenance Profile - Mappings]: StructureDefinition-us-core-provenance-mappings.html
 [US Core Provenance Profile - Testing]: StructureDefinition-us-core-provenance-testing.html
-[US Core Provenance Profile - Examples]: StructureDefinition-us-core-provenance-examples.html
 [US Core Provenance Profile - XML Representation]: StructureDefinition-us-core-provenance.profile.xml.html
 [US Core Provenance Profile - JSON Representation]: StructureDefinition-us-core-provenance.profile.json.html
 [US Core Provenance Profile - TTL Representation]: StructureDefinition-us-core-provenance.profile.ttl.html
@@ -1337,10 +1336,14 @@
 [AllergyIntolerance Non-pharmacologic Agent Example - XML Representation]: AllergyIntolerance-non-pharmacologic-agent-example.xml.html
 [AllergyIntolerance Non-pharmacologic Agent Example - JSON Representation]: AllergyIntolerance-non-pharmacologic-agent-example.json.html
 [AllergyIntolerance Non-pharmacologic Agent Example - TTL Representation]: AllergyIntolerance-non-pharmacologic-agent-example.ttl.html
-[AllergyIntolerance Provenance Example]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.html
-[AllergyIntolerance Provenance Example - XML Representation]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.xml.html
-[AllergyIntolerance Provenance Example - JSON Representation]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.json.html
-[AllergyIntolerance Provenance Example - TTL Representation]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.ttl.html
+[AllergyIntolerance Provenance Example 1]: Bundle-allergyintolerance-provenance-example1.html
+[AllergyIntolerance Provenance Example 1 - XML Representation]: Bundle-allergyintolerance-provenance-example1.xml.html
+[AllergyIntolerance Provenance Example 1 - JSON Representation]: Bundle-allergyintolerance-provenance-example1.json.html
+[AllergyIntolerance Provenance Example 1 - TTL Representation]: Bundle-allergyintolerance-provenance-example1.ttl.html
+[AllergyIntolerance Provenance Example 2]: Bundle-allergyintolerance-provenance-example2.html
+[AllergyIntolerance Provenance Example 2 - XML Representation]: Bundle-allergyintolerance-provenance-example2.xml.html
+[AllergyIntolerance Provenance Example 2 - JSON Representation]: Bundle-allergyintolerance-provenance-example2.json.html
+[AllergyIntolerance Provenance Example 2 - TTL Representation]: Bundle-allergyintolerance-provenance-example2.ttl.html
 [At Home In Vitro Test Example]: Observation-at-home-in-vitro-test.html
 [At Home In Vitro Test Example - XML Representation]: Observation-at-home-in-vitro-test.xml.html
 [At Home In Vitro Test Example - JSON Representation]: Observation-at-home-in-vitro-test.json.html
@@ -2113,14 +2116,6 @@
 [Taps Panel Example 96841-2 - XML Representation]: Observation-TAPS-panel-example-96841-2.xml.html
 [Taps Panel Example 96841-2 - JSON Representation]: Observation-TAPS-panel-example-96841-2.json.html
 [Taps Panel Example 96841-2 - TTL Representation]: Observation-TAPS-panel-example-96841-2.ttl.html
-[Targeted Provenance Example]: Provenance-example-targeted-provenance.html
-[Targeted Provenance Example - XML Representation]: Provenance-example-targeted-provenance.xml.html
-[Targeted Provenance Example - JSON Representation]: Provenance-example-targeted-provenance.json.html
-[Targeted Provenance Example - TTL Representation]: Provenance-example-targeted-provenance.ttl.html
-[Targeted Provenance Patient Example]: Patient-example-targeted-provenance.html
-[Targeted Provenance Patient Example - XML Representation]: Patient-example-targeted-provenance.xml.html
-[Targeted Provenance Patient Example - JSON Representation]: Patient-example-targeted-provenance.json.html
-[Targeted Provenance Patient Example - TTL Representation]: Patient-example-targeted-provenance.ttl.html
 [Temperature Example]: Observation-temperature.html
 [Temperature Example - XML Representation]: Observation-temperature.xml.html
 [Temperature Example - JSON Representation]: Observation-temperature.json.html

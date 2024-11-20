@@ -64,9 +64,10 @@ The January 2025 ballot addresses the following:
     - [US Core Client CapabilityStatement - FHIR RESTful Capabilities](CapabilityStatement-us-core-server.html)
 html#additional-uscdi-requirements)
 1.  **Applied:** (Enhancement) Add section on client best practices for search [FHIR-45179](https://jira.hl7.org/browse/FHIR-45179) [See Changes Here](#.general-guidance.html)
-2.  **Triaged:** (Clarification) Clarify the '_revinclude` expections for Provenance [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) See Changes Here:
+2.  **Pre-Applied:** (Clarification) Clarify the '_revinclude` expections for Provenance [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) See Changes Here:
     - [US Core Provenance Profile](StructureDefinition-us-core-provenance.html#mandatory-search-parametersl)
-    - [Provenance example TODO...](#.html)
+    - [AllergyIntolerance Provenance Example 1](Bundle-allergyintolerance-provenance-example1.html)
+    - [AllergyIntolerance Provenance Example 2](Bundle-allergyintolerance-provenance-example2.html)
 3.  **Applied:** (Enhancement) Continue to harmonize/share value sets used in US Core and C-CDA in the US Core 8.0 ballot and C-CDA 4.0 ballot [FHIR-46181](https://jira.hl7.org/browse/FHIR-46181) (See Changes Listed in introduction above)
 4.  **Applied:** (Enhancement) Updates and Corrections to Medication Clinical Drug VSAC Valueset used by US Core Medication, MedicationDispense Profile, and MedicationRequest Profiles [FHIR-46255](https://jira.hl7.org/browse/FHIR-46255) [See Changes Here](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion/Latest)
 5.  **Applied:** (Enhancement) Replace US Core Pregnancy Status Codes Value Set with equivalent [Value Set Authority Center (VSAC)] Value Set [FHIR-46257](https://jira.hl7.org/browse/FHIR-46257) [See Changes Here](StructureDefinition-us-core-observation-pregnancystatus.html)
@@ -96,7 +97,7 @@ html#additional-uscdi-requirements)
 20. **Applied:** (Correction) Fix broken PHINVADS links [FHIR-45494](https://jira.hl7.org/browse/FHIR-45494) [See Changes Here](terminology.html)
 21. **Applied:** (Correction) Typo in Condition's granular scope [FHIR-45961](https://jira.hl7.org/browse/FHIR-45961) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#us-core-scopes)
 22. **Applied:** (Clarification) Clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
-23. **Triaged:** (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) [See Changes Here](#.html)
+23. **Pre-Applied:** (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) [See Changes Here](must-support.html)
 24. **Pre-Applied:** (Enhancement) Create SCT Specimen Condition value set to include SNOMED CT [FHIR-47061](https://jira.hl7.org/browse/FHIR-47061) See Changes Here:
     - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html)
     - [US Core Specimen Condition ValueSet](ValueSet-us-core-specimen-condition.html)

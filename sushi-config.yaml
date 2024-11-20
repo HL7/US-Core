@@ -209,8 +209,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   #   - xml
   #   - json
   no-narrative:
-    - Patient/example-targeted-provenance
-    - Provenance/example-targeted-provenance
+    # - Patient/example-targeted-provenance
+    # - Provenance/example-targeted-provenance
     - DocumentReference/discharge-summary
     - Bundle/docref-example-1
     - Bundle/docref-example-2

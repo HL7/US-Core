@@ -213,9 +213,20 @@ definition:
     name: AllergyIntolerance Non-pharmacologic Agent Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
   - reference:
-      reference: Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901
-    description: This is a allergyintolerance provenance example for the *Bundle Profile*.
-    name: AllergyIntolerance Provenance Example
+      reference: Bundle/allergyintolerance-provenance-example1
+    description: This example show how  an "inline" search result parameter `_revinclude`
+      will return a FHIR searchset Bundle resource.  It contains the AllergyIntolerance
+      resource based on the `patient` search parameter and the last Provenance for
+      the version named in the reference.
+    name: AllergyIntolerance Provenance Example 1
+    exampleBoolean: true
+  - reference:
+      reference: Bundle/allergyintolerance-provenance-example2
+    description: This example show how  an "inline" search result parameter `_revinclude`
+      will return a FHIR searchset Bundle resource.  It contains the AllergyIntolerance
+      resource based on the `_id` search parameter and the last Provenance for the
+      version named in the reference.
+    name: AllergyIntolerance Provenance Example 2
     exampleBoolean: true
   - reference:
       reference: Observation/at-home-in-vitro-test
@@ -1461,20 +1472,6 @@ definition:
       Screening Assessment Profile*
     name: Taps Panel Example 96841-2
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Provenance/example-targeted-provenance
-    description: This is a provenance example for the *US Core Provenance Profile*
-      to demonstrate how Provenance can be used to document the source of individual
-      elements such as Race and Ethnicity (R/E), gender identity.
-    name: Targeted Provenance Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
-  - reference:
-      reference: Patient/example-targeted-provenance
-    description: This is a patient example for the *US Core Patient Profile* to demonstrate
-      how Provenance can be used to document the source of individual elements such
-      as Race and Ethnicity (R/E), gender identity.
-    name: Targeted Provenance Patient Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   - reference:
       reference: Observation/temperature
     description: This is a temperature example for the *Vitalsigns Profile*.
@@ -3988,10 +3985,6 @@ definition:
     value: DocumentReference/discharge-summary
   - code: tabbed-snapshots
     value: 'false'
-  - code: no-narrative
-    value: Patient/example-targeted-provenance
-  - code: no-narrative
-    value: Provenance/example-targeted-provenance
   - code: no-narrative
     value: DocumentReference/discharge-summary
   - code: no-narrative

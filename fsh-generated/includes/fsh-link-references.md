@@ -14,7 +14,8 @@
 [alcoholic-drinks-per-day]: Observation-alcoholic-drinks-per-day.html
 [example]: AllergyIntolerance-example.html
 [non-pharmacologic-agent-example]: AllergyIntolerance-non-pharmacologic-agent-example.html
-[c887e62f-6166-419f-8268-b5ecd6c7b901]: Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.html
+[allergyintolerance-provenance-example1]: Bundle-allergyintolerance-provenance-example1.html
+[allergyintolerance-provenance-example2]: Bundle-allergyintolerance-provenance-example2.html
 [at-home-in-vitro-test]: Observation-at-home-in-vitro-test.html
 [AUDIT-C-item-example-68517-2]: Observation-AUDIT-C-item-example-68517-2.html
 [AUDIT-C-item-example-68519-8]: Observation-AUDIT-C-item-example-68519-8.html
@@ -212,8 +213,6 @@
 [TAPS-item-example-96843-8]: Observation-TAPS-item-example-96843-8.html
 [TAPS-item-example-96844-6]: Observation-TAPS-item-example-96844-6.html
 [TAPS-panel-example-96841-2]: Observation-TAPS-panel-example-96841-2.html
-[example-targeted-provenance]: Provenance-example-targeted-provenance.html
-[example-targeted-provenance]: Patient-example-targeted-provenance.html
 [temperature]: Observation-temperature.html
 [TAPS]: Questionnaire-TAPS.html
 [TAPS]: QuestionnaireResponse-TAPS.html
