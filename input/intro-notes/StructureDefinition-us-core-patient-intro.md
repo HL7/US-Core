@@ -71,10 +71,14 @@ The following data elements must always be present ([Mandatory] definition) or m
    - Note: historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.
 </div><!-- new-content -->
 
-- \*US Core aligns with the [HL7 Gender Harmony Project] gender and sex information, which includes data elements, value sets, and code systems. Refer to it and the [FHIR R5 Patient Resource Gender and Sex Notes] for additional guidance and background for representing Administrative Gender, Sex Assigned at Birth, Gender Identity, <span class="bg-success" markdown="1"> and Sex Parameter For Clinical Use (SPCU)</span><!-- new-content --> Note that:
+<div class="bg-success" markdown="1">
+
+- \*US Core aligns with the [HL7 Gender Harmony Project] gender and sex information, which includes data elements, value sets, and code systems. Refer to it and the [FHIR R5 Patient Resource Gender and Sex Notes] for additional guidance and background for representing Administrative Gender, Sex Assigned at Birth, Gender Identity, and Sex Parameter For Clinical Use (SPCU) Note that:
   - The [US Core Birth Sex Extension] is no longer a USCDI Requirement.
-  - The [US Core Sex Extension] <span class="bg-success" markdown="1">represents</span><!-- new-content --> the [U.S. Core Data for Interoperability (USCDI)] data element "Sex".
-  - <span class="bg-success" markdown="1">The FHIR [Patient Sex Parameter For Clinical Use] extension is an acceptable representation of the *Sex Parameter for Clinical Use* USCDI Data Element.</span><!-- new-content -->
+  - The [US Core Sex Extension] represents the [U.S. Core Data for Interoperability (USCDI)] data element "Sex".
+  - The FHIR [Patient Sex Parameter For Clinical Use] extension is an acceptable representation of the *Sex Parameter for Clinical Use* USCDI Data Element.
+    - This extension's `value` url has the same meaning as the LOINC [99501-9] (Sex parameter for clinical use) and uses the same [Sex Parameter for Clinical Use ValueSet] answer list as the LOINC.
+</div><!-- new-content -->
 
 <div class="stu-note" markdown="1">
 <div class="bg-success" markdown="1">

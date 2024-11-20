@@ -80,7 +80,7 @@ html#additional-uscdi-requirements)
     - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html)
 10. **Applied:** (Enhancement) Replace US Core Survey Codes Value Set with [Value Set Authority Center (VSAC)] Value Set and remove Laboratory LOINCs [FHIR-46347](https://jira.hl7.org/browse/FHIR-46347) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
 11. **Applied:** (Clarification) Clarify when granular scopes overlap [FHIR-46748](https://jira.hl7.org/browse/FHIR-46748) [See Changes Here](scopes.html)
-12. **Applied:** (Enhancement) Add USCDI v5 Data Elements to US Core [FHIR-48443](https://jira.hl7.org/browse/FHIR-48443) [See Changes Here](#.html)
+12. **Applied:** (Enhancement) Add USCDI v5 Data Elements to US Core [FHIR-48443](https://jira.hl7.org/browse/FHIR-48443) See Changes Listed in introduction above.
 13. **Applied:** (Correction) Update US Core Clinical Note Type Valueset to align with Clinical Note Guidance [FHIR-48607](https://jira.hl7.org/browse/FHIR-48607)  Here:
     - [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
     - [Clinical Notes](clinical-notes.html)

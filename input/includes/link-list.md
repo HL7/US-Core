@@ -348,3 +348,5 @@
 [NUCC to SNOMED CT Mappings]: https://build.fhir.org/ig/HL7/davinci-ehrx/ConceptMap-NUCC-CareTeamMemberFunction.html
 [HTTP Cache-Control]: https://httpwg.org/specs/rfc9111.html
 [Social Determinants of Health Goals]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion
+[99501-9]: https://loinc.org/99501-9
+[Sex Parameter for Clinical Use ValueSet]: {{site.data.fhir.ver.hl7tx}}/ValueSet-sex-parameter-for-clinical-use.html 
