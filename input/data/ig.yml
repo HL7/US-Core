@@ -65,10 +65,10 @@ dependsOn:
   packageId: us.cdc.phinvads
   uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads
   version: 0.12.0
-- packageId: hl7.fhir.uv.extensions
+- packageId: hl7.fhir.uv.extensions.r4
   version: 5.1.0
   uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
-  id: hl7_fhir_uv_extensions
+  id: hl7_fhir_uv_extensions_r4
 definition:
   extension:
   - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
