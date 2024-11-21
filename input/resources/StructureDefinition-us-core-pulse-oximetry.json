@@ -35,7 +35,7 @@
                 "slicing": {
                     "discriminator": [
                         {
-                            "type": "pattern",
+                            "type": "value",
                             "path": "$this"
                         }
                     ],
@@ -131,7 +131,7 @@
                 "slicing": {
                     "discriminator": [
                         {
-                            "type": "pattern",
+                            "type": "value",
                             "path": "code"
                         }
                     ],

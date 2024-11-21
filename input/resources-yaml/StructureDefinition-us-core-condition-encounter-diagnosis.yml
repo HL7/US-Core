@@ -52,7 +52,7 @@ differential:
     path: Condition.category
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: $this
       rules: open
     short: category codes

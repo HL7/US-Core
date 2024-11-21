@@ -28,7 +28,7 @@ differential:
     path: Coverage.identifier
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: type
       rules: open
     short: Member ID and other identifiers
@@ -117,7 +117,7 @@ differential:
     path: Coverage.class
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: type
       description: Slice based on value pattern
       ordered: false

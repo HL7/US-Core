@@ -107,7 +107,7 @@ WARNING: Provenance/example-targeted-provenance: Provenance: Rule dom-6: 'A reso
 
 
 # =========================================================================================
-# === New Hints Warnings for 7.0.0  ====
+# === New Hints Warnings for 8.0.0   ====
 # =========================================================================================
 
 # === these CodeSystems and ValueSets are in FHIR Core/THO and not under the direct control of US Core editors (updated text from 7.0.0) ===
@@ -135,6 +135,9 @@ WARNING: Observation/observation-occupation: Observation.value.ofType(CodeableCo
 WARNING: Observation/observation-occupation: Observation.component[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 WARNING: Observation/observation-occupation-industry-unknown: Observation.value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 WARNING: Observation/observation-occupation-unknown: Observation.component[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
+WARNING: ValueSet.where(id = 'us-core-condition-code'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd9cm
+
+
 
 # === Code System not recognized due to AHA NUBC Patient Discharge Status Codes IP issues, these codes were checked manually (updated text from 7.0.0)===
 
@@ -180,8 +183,8 @@ WARNING: Observation/pack-years-example: Observation.value.ofType(Quantity): UCU
 ERROR: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide.definition.extension[81].extension[0].value.ofType(string): The value provided ('auto-oid-root') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'auto-oid-root' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0'; The provided code '#auto-oid-root' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0')
 ERROR: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide.definition.extension[161].extension[0].value.ofType(code): The value provided ('auto-oid-root') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'auto-oid-root' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0'; The provided code '#auto-oid-root' was not found in the value set 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.1.0')
 
+
 # === US Core thoroughly documents its Must Support expectations for the must supports includding on references.  See this chat https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Must.20Support.20Target.20Error.20for.20Reference.20type.20Element ===
 
 ERROR: StructureDefinition/us-core-procedure: StructureDefinition.snapshot.element[28]: The element Procedure.performer.actor has types/profiles/targets that are marked as must support, but the element itself is not marked as must-support
-
 

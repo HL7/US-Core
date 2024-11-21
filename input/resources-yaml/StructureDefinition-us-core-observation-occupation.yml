@@ -29,7 +29,7 @@ differential:
     path: Observation.category
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: $this
       rules: open
     mustSupport: true
@@ -80,7 +80,7 @@ differential:
     path: Observation.component
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: code
       rules: open
     mustSupport: true

@@ -2466,11 +2466,11 @@ definition:
       reference: StructureDefinition/us-core-sex
     description: "The Sex Extension is used to reflect the documentation of a person's\
       \ sex. Systems choosing to record sources of information should use the [Provenance\
-      \ resource](basic-provenance.html#element-level-provenance).\n \nUSCDI includes\
-      \ a data element for sex, intended to support the exchange of a sex value that\
-      \ is not characterized as sex assigned at birth or birth sex. This Sex extension\
-      \ supports USCDI. Sex assigned at birth or birth sex can be recorded using the\
-      \ more specific [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
+      \ resource](element-level-provenance.html).\n \nUSCDI includes a data element\
+      \ for sex, intended to support the exchange of a sex value that is not characterized\
+      \ as sex assigned at birth or birth sex. This Sex extension supports USCDI.\
+      \ Sex assigned at birth or birth sex can be recorded using the more specific\
+      \ [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
       Future versions of this extension may be informed by the content of the HL7\
       \ Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may\
       \ include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender))."

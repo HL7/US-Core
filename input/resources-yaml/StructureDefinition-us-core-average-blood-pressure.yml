@@ -148,7 +148,7 @@ differential:
     path: Observation.component
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: code
       ordered: false
       rules: open

@@ -40,7 +40,7 @@ differential:
     path: DiagnosticReport.category
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: $this
       rules: open
     min: 1

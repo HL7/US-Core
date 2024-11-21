@@ -58,6 +58,8 @@ Argonaut Vital Signs Observation Profile,US Core Vital Signs Profile,4.0.0,,"Pre
      -,US Core Average Blood Pressure Profile,7.0.0,,
      -,US Core Care Experience Preference Profile,7.0.0,,
      -,US Core Treatment Intervention Preference Profile,7.0.0,,
+     -,US Core Observation ADI Documentation Profile,8.0.0,,
+     -,US Core ADI DocumentReference Profile,8.0.0,,
 **Extensions**,,,,
 Sex of patient assigned at birth,US Core Birth Sex Extension,3.1.1*,,After version 6.0.0 this extension is no longer a USCDI requirement.
 Argonaut ethnicity Extension,US Core Ethnicity Extension,3.1.1*,,
@@ -69,5 +71,7 @@ Argonaut Race Extension,US Core Race Extension,3.1.1*,,
      -,US Core Jurisdiction Extension,6.0.0,,
      -,US Core USCDI Requirements Extension,6.0.0,,This extension is only used on US Core Profile StructureDefinition elements
      -,US Core Sex Extension,6.1.0,,
-     ,US Core Medication Adherence Extension,7.0.0,,
+     -,US Core Medication Adherence Extension,7.0.0,,
+     ,US Core Authentication Time Extension,8.0.0,,
+     -,US Core Interpreter Required Extension,8.0.0,,
 ,,,,\* 3.1.1  *or prior* version of US Core

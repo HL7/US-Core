@@ -35,7 +35,7 @@ differential:
     path: Provenance.agent
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: type
       rules: open
     constraint:

@@ -70,7 +70,7 @@
 [DocumentReference-episode-summary]: DocumentReference-episode-summary.html
 [DocumentReferenceStatus]: http://hl7.org/fhir/ValueSet-document-reference-status.html
 [Downloads]: downloads.html "Downloads Page"
-[Element Level Provenance]: basic-provenance.html#element-level-provenance
+[Element Level Provenance]: element-level-provenance.html
 [ElementDefinition.pattern]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.pattern_x_
 [Emergency Department Note (34111-5)]: https://loinc.org/34111-5.html
 [Emergency Department Note (34111-5)]: https://loinc.org/34111-5.html

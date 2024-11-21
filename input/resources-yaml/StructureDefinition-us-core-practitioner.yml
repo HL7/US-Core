@@ -24,7 +24,7 @@ differential:
     path: Practitioner.identifier
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: $this
       rules: open
     comment: NPI must be supported as the identifier system in the US, Tax id is allowed,

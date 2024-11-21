@@ -81,7 +81,7 @@ differential:
     path: MedicationRequest.category
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: $this
       rules: open
     mustSupport: true

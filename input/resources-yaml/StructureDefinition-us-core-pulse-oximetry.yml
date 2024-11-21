@@ -30,7 +30,7 @@ differential:
     path: Observation.code.coding
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: $this
       rules: open
     min: 2
@@ -93,7 +93,7 @@ differential:
     path: Observation.component
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: code
       rules: open
     short: Used when reporting flow rates or oxygen concentration.

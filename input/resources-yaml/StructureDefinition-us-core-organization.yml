@@ -22,7 +22,7 @@ differential:
     path: Organization.identifier
     slicing:
       discriminator:
-      - type: pattern
+      - type: value
         path: $this
       rules: open
     comment: NPI preferred.
