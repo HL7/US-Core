@@ -104,27 +104,15 @@ Transformation of data from one format to another **MAY** change the authorship 
 
 ### <span class="bg-success" markdown="1">Individual Level Provenance</span><!-- new-content -->
 
-<div class="bg-warning" markdown="1">
-- Discuss:
-  - Which elements should be added  as *Must Support/Add'l USCDI*
-  - Which target resources should be added as *Must Support/Add'l USCDI*
-    - US Core Patient
-    - US Core Practitioner
-    - US Core PractitionerRole
-    - US Core RelatedPerson
-    - US Core Organization
-    - US Core Device
-  - If not adding *Must Support/Add'l USCDI* then what guidance do we give to meet the requirement?
-
-(source excel file is here: https://1drv.ms/x/c/deea5e002be8d274/EazOGawVCEBBjJmfJXcI5DQBKbAXNqHGcHr4ioRM6s2m0g)
-</div><!-- new-content --> 
 <div class="bg-success" markdown="1">
 
-US Core Profiles contain elements that represent "small-p provenance" information about how the resource was obtained, which overlaps with the functionality of the Provenance resource discussed above. The table below identifies the author and author roles that meet the [U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals. In addition, they are listed in each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the target resource type referenced by it (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. The **bold asterisked** text indicates the elements and target resources that are labeled as *Must Support* in the respective US Core Profiles. Elements and target resources not labeled as *Must Support* **SHOULD** be supported in the profiles when the system captures the data.
+US Core Profiles contain elements that represent "small-p" provenance information about how the resource was obtained, which overlaps with the functionality of the Provenance resource discussed above. The US Core elements that communicate the author and author roles corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals* are listed in the table below and on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the target resource type referenced by it (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled [Must Support} or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.
 
 ##### Author and Author Role Data Elements
 
-This table excludes these US Core Profiles, which are not typically associated with individual authorship:
+
+The **bold asterisked** text indicates the elements are *Must Support* or "*Additional USCDI Requirements*, and target resources are *Must Support*.
+The following  US Core Profiles were not included because they are typically not associated with individual authorship:
 
 - US Core Encounter
 - US Core Location
@@ -137,10 +125,8 @@ This table excludes these US Core Profiles, which are not typically associated w
 - US Core CareTeam
 - US Core Coverage
 - US Core Specimen
-
-<span style="color: red;">Red text</span> indicates proposed new *Must Support* elements and targets
-
-This information is also available as a [csv](tables/provenance-elements.csv) or [excel](tables/provenance-elements.xlsx) file:
+ 
+This table is also available as a [csv](tables/provenance-elements.csv) or [excel](tables/provenance-elements.xlsx) file:
 
 {% include provenance-source-table-generator.md %}
 

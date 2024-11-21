@@ -121,7 +121,7 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 API consumers can query by category when accessing patient information. Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. US Core defined these USCDI Health Assessments Data Elements category codes:
 
-<!-- {% raw %} {% include assessment-category-table-generator.html %} {% endraw %} -->
+{% include assessment-category-table-generator.html %}
 
 For the US Core Simple Observation Profile and US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes listed above.
 

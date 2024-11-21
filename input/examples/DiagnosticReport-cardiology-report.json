@@ -1,80 +1,90 @@
 {
-  "resourceType": "DiagnosticReport",
-  "id": "cardiology-report",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|8.0.0-ballot"
-    ]
-  },
-  "status": "final",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "DiagnosticReport",
+    "id": "cardiology-report",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "DiagnosticReport Cardiology Report Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a DiagnosticReport cardiology report example for the *US Core DiagnosticReport Note Profile*."
+            }
+        ]
+    },
+    "status": "final",
+    "category": [
         {
-          "system": "http://loinc.org",
-          "code": "LP29708-2",
-          "display": "Cardiology"
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LP29708-2",
+                    "display": "Cardiology"
+                }
+            ],
+            "text": "Cardiology"
         }
-      ],
-      "text": "Cardiology"
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "45033-8",
-        "display": "Cardiovascular physiologic and EKG assessment panel"
-      }
     ],
-    "text": "Cardiovascular physiologic and EKG assessment panel"
-  },
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "effectiveDateTime": "2021-11-10T21:39:30.000Z",
-  "result": [
-    {
-      "reference": "Observation/qrs-dur-ekg-lead"
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "45033-8",
+                "display": "Cardiovascular physiologic and EKG assessment panel"
+            }
+        ],
+        "text": "Cardiovascular physiologic and EKG assessment panel"
     },
-    {
-      "reference": "Observation/pulse-intensity-palpation"
+    "subject": {
+        "reference": "Patient/example"
     },
-    {
-      "reference": "Observation/p-r-interval-ekg-lead"
-    },
-    {
-      "reference": "Observation/q-t-interval-ekg-lead"
-    },
-    {
-      "reference": "Observation/jugular-vein-distension"
-    },
-    {
-      "reference": "Observation/heart-rate-rhythm"
-    },
-    {
-      "reference": "Observation/ekg-lead"
-    },
-    {
-      "reference": "Observation/ekg-impression"
-    },
-    {
-      "reference": "Observation/capillary-refill-time-nail-bed"
-    }
-  ],
-  "media": [
-    {
-      "link": {
-        "reference": "Media/ekg-strip",
-        "display": "EKG Strip"
-      }
-    }
-  ],
-  "presentedForm": [
-    {
-      "contentType": "application/pdf",
-      "url": "http://example.org/pdfdownloads/cardiopanel-report-123.pdf",
-      "hash": "RVFILy4uQWdNRQo="
-    }
-  ]
+    "effectiveDateTime": "2021-11-10T21:39:30.000Z",
+    "result": [
+        {
+            "reference": "Observation/qrs-dur-ekg-lead"
+        },
+        {
+            "reference": "Observation/pulse-intensity-palpation"
+        },
+        {
+            "reference": "Observation/p-r-interval-ekg-lead"
+        },
+        {
+            "reference": "Observation/q-t-interval-ekg-lead"
+        },
+        {
+            "reference": "Observation/jugular-vein-distension"
+        },
+        {
+            "reference": "Observation/heart-rate-rhythm"
+        },
+        {
+            "reference": "Observation/ekg-lead"
+        },
+        {
+            "reference": "Observation/ekg-impression"
+        },
+        {
+            "reference": "Observation/capillary-refill-time-nail-bed"
+        }
+    ],
+    "media": [
+        {
+            "link": {
+                "reference": "Media/ekg-strip",
+                "display": "EKG Strip"
+            }
+        }
+    ],
+    "presentedForm": [
+        {
+            "contentType": "application/pdf",
+            "url": "http://example.org/pdfdownloads/cardiopanel-report-123.pdf",
+            "hash": "RVFILy4uQWdNRQo="
+        }
+    ]
 }

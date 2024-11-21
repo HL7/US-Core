@@ -24,9 +24,20 @@
   
     - `Observation.performer` to [US Core Vitals Signs](StructureDefinition-us-core-vital-signs.html)
     - `Observation.performer` to [US Core Average Blood Pressure Profile](StructureDefinition-us-core-average-blood-pressure.html)
+    - `Observation.performer` to [US Core Observation Clinical Result Profile](StructureDefinition-us-core-observation-clinical-result.html) and [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html)
+    - `Observation.performer` to [US Core Smoking Status Observation Profile](StructureDefinition-us-core-smokingstatus.html)
+    - `DiagnosticReport.resultsInterpreter` to [US Core DiagnosticReport Profile for Laboratory Results Reporting](StructureDefinition-us-core-diagnosticreport-lab.html)
+    - `DiagnosticReport.resultsInterpreter` to [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html)
+    - `Goal.expressedBy` to [US Core Goal Profile](StructureDefinition-us-core-goal.html)
+    - `Immunization.performer.actor`to [US Core Immunization Profile](StructureDefinition-us-core-immunization.html)
   
     and these *Additional USCDI* elements to the following profiles:
 
+    - `Observation.performer` to [US Core Observation Pregnancy Intent Profile](
+      StructureDefinition-us-core-observation-pregnancyintent.html) and [US Core Observation Pregnancy Status Profile](
+      StructureDefinition-us-core-observation-pregnancystatus.html)
+    - `Observation.performer` to [US Core Observation Sexual Orientation Profile](
+      StructureDefinition-us-core-observation-sexual-orientation.html)
     - `Procedure.performer.actor` to [US Core Procedure](StructureDefinition-us-core-procedure.html)
 
   - Other USCDI changes:

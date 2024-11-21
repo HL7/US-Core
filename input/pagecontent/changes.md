@@ -56,7 +56,9 @@ The January 2025 ballot addresses the following:
     - [Future of US Core](future-of-US-core.html)
 10. **Applied:** (Correction) Change page status from "Informative" to "Trial-use" where appropriate [FHIR-46514](https://jira.hl7.org/browse/FHIR-46514) (See the tracker comments for a list of changes)
 11. **Applied:** (Clarification) Clarify conformance requirements for structured assessments [FHIR-47139](https://jira.hl7.org/browse/FHIR-47139) [See Changes Here](screening-and-assessments.html#structured-screening-and-assessments)
-12. **Applied:** (Enhancement) Replace US Core Discharge Disposition Value Set with equivalent [HL7 Terminology (THO)] Value Set [FHIR-47416](https://jira.hl7.org/browse/FHIR-47416) and FHIR-46194](https://jira.hl7.org/browse/FHIR-46194) [See Changes Here](StructureDefinition-us-core-encounter.html)
+12. **Applied:** (Enhancement) Replace US Core Discharge Disposition Value Set with equivalent [HL7 Terminology (THO)] Value Set [FHIR-47416](https://jira.hl7.org/browse/FHIR-47416) and FHIR-46194](https://jira.hl7.org/browse/FHIR-46194)
+  - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html)
+  - [Encounter 1036 Example](Encounter-1036.html)
 13. **Applied:** (Enhancement) Tighten constraint on name.use to support better patient matching [FHIR-48416](https://jira.hl7.org/browse/FHIR-48416) [See Changes Here](StructureDefinition-us-core-patient.html)
 14. **Applied:** (Correction)Change "status" to "active flag" in US Core RelatedPerson introduction[FHIR-48439](https://jira.hl7.org/browse/FHIR-48439) [See Changes Here](StructureDefinition-us-core-relatedperson.html)
 15. **Applied:** (Clarification) Remove resolves declaration from US Core CapabilityStatements [FHIR-48446](https://jira.hl7.org/browse/FHIR-48446)  See Changes Here:
@@ -64,7 +66,7 @@ The January 2025 ballot addresses the following:
     - [US Core Client CapabilityStatement - FHIR RESTful Capabilities](CapabilityStatement-us-core-server.html)
 html#additional-uscdi-requirements)
 1.  **Applied:** (Enhancement) Add section on client best practices for search [FHIR-45179](https://jira.hl7.org/browse/FHIR-45179) [See Changes Here](general-guidance.html)
-2.  **Pre-Applied:** (Clarification) Clarify the '_revinclude` expections for Provenance [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) See Changes Here:
+2.  **Applied:** (Clarification) Clarify the '_revinclude` expections for Provenance [FHIR-46077](https://jira.hl7.org/browse/FHIR-46077) See Changes Here:
     - [US Core Provenance Profile](StructureDefinition-us-core-provenance.html#mandatory-search-parameters)
     - [AllergyIntolerance Provenance Example 1](Bundle-allergyintolerance-provenance-example1.html)
     - [AllergyIntolerance Provenance Example 2](Bundle-allergyintolerance-provenance-example2.html)
@@ -91,21 +93,20 @@ html#additional-uscdi-requirements)
    - [Must Support - Resource References](must-support.html#must-support---resource-references)
    - [US Core Simple Observation Profile](StructureDefinition-us-core-simple-observation.html)
    - [US Core Observation Screening Assessment Profile](StructureDefinition-us-core-observation-screening-assessment.html)
-17. **Triaged:** (Enhancement) All lab orders and results across all FHIR IGs need to indicate the performing laboratory test order name and/or performing laboratory test result name [FHIR-43301](https://jira.hl7.org/browse/FHIR-43301) [See Changes Here](#.html)
-18. **Triaged:** (Enhancement) Create new section in Guidance on Sex and Gender in USCore [FHIR-44115](https://jira.hl7.org/browse/FHIR-44115) [See Changes Here](#.html)
-19. **Applied:** (Correction) Spelling errors in US Core Server Capability Statement [FHIR-45451](https://jira.hl7.org/browse/FHIR-45451)[See Changes Here](CapabilityStatement-us-core-server.html)
-20. **Applied:** (Correction) Fix broken PHINVADS links [FHIR-45494](https://jira.hl7.org/browse/FHIR-45494) [See Changes Here](terminology.html)
-21. **Applied:** (Correction) Typo in Condition's granular scope [FHIR-45961](https://jira.hl7.org/browse/FHIR-45961) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#us-core-scopes)
-22. **Applied:** (Clarification) Clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
-23. **Pre-Applied:** (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) [See Changes Here](must-support.html)
-24. **Pre-Applied:** (Enhancement) Create SCT Specimen Condition value set to include SNOMED CT [FHIR-47061](https://jira.hl7.org/browse/FHIR-47061) See Changes Here:
+17. **Applied:** (Enhancement) Update Guidance on Sex and Gender in USCore [FHIR-44115](https://jira.hl7.org/browse/FHIR-44115) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
+18. **Applied:** (Correction) Spelling errors in US Core Server Capability Statement [FHIR-45451](https://jira.hl7.org/browse/FHIR-45451)[See Changes Here](CapabilityStatement-us-core-server.html)
+19. **Applied:** (Correction) Fix broken PHINVADS links [FHIR-45494](https://jira.hl7.org/browse/FHIR-45494) [See Changes Here](terminology.html)
+20. **Applied:** (Correction) Typo in Condition's granular scope [FHIR-45961](https://jira.hl7.org/browse/FHIR-45961) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#us-core-scopes)
+21. **Applied:** (Clarification) Clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
+22. **Pre-Applied:** (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) [See Changes Here](must-support.html)
+23. **Applied:** (Enhancement) Create SCT Specimen Condition value set to include SNOMED CT [FHIR-47061](https://jira.hl7.org/browse/FHIR-47061) See Changes Here:
     - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html)
     - [US Core Specimen Condition ValueSet](ValueSet-us-core-specimen-condition.html)
     - [Lipemic Serum Specimen Example](Specimen-example-serum-lipemic.html)
-25. **Pre-Applied:** (Clarification) Remove Meta.lastUpdated STU comments [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542)
-26. **Applied:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
-27. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
-28. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
+24. **Applied:** (Clarification) Remove Meta.lastUpdated STU comments [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542)
+25. **Applied:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
+26. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
+27. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
 
 The application of the following trackers are pending and will not be completed by the ballot date.
 
