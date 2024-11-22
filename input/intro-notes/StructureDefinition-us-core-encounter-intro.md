@@ -39,18 +39,18 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 * To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
 * The Encounter resource can represent a reason using a code with `Encounter.reasonCode` or a reference with `Encounter.reasonReference` to  Condition or other resources.
-   * Although both are marked as Must Support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.
-   * The client application **SHALL** support both elements.
+   * Although both are marked as Must Support, Servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.
+   * The Client application **SHALL** support both elements.
    * If `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable. For example, a laboratory result **SHOULD** conform to the [US Core Laboratory Result Observation Profile].
 * This profile supports *where the encounter occurred*.  The location address can be represented by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.
-  * Although both are marked as Must Support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
-  * The client application **SHALL** support both elements.
+  * Although both are marked as Must Support, Servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
+  * The Client application **SHALL** support both elements.
 
 {% include encounter-location.md %}
 
 <div class="bg-success" markdown="1">
 
-- \*Servers can use the US Core Interpreter Required Extension on the US Core Patient or [US Core Encounter Profiles] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, the certifying server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one. The certifying client application **SHALL** support the extension on both profiles.
+- \*Servers can use the US Core Interpreter Required Extension on the US Core Patient or [US Core Encounter Profiles] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.
   - System can communicate the patient's language preferences in the `Patient.language` element and the optional [Patient Proficiency Extension](https://hl7.org/fhir/extensions/StructureDefinition-patient-proficiency.html) and infer a patient's language service needs from it.
 </div><!-- new-content -->
 

@@ -5,6 +5,6 @@
   - [Must Support] at least one code from OMB Race Categories
   - May include additional race codes from CDC Race Codes
   - Must include a text description of race
-- A [`race`]<!--n [`ethnicity`]--><!-- [`gender-identity`]--> search parameter has been defined for this extension.  However, there are no race<!--ethnicity--><!--gender-identity--> search requirements for the client or server.
+- A [`race`]<!--n [`ethnicity`]--><!-- [`gender-identity`]--> search parameter has been defined for this extension.  However, there are no race<!--ethnicity--><!--gender-identity--> search requirements for the Client or Server.
 
 {% include link-list.md %}

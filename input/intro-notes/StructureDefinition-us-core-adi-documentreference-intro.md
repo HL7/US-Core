@@ -39,8 +39,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 - In addition to the [Advance Healthcare Directive Categories Grouper](http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25) value set, other category schemes may be used to facilitate the sharing of health documents.
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.
-    -  Although both are marked as Must Support, the server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
-    -  The client application **SHALL** support both elements.
+    -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
+    -  The Client application **SHALL** support both elements.
     -  The `content.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint.
         - If the endpoint is outside the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
     -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`. 

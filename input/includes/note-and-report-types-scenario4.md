@@ -1,5 +1,5 @@
 
-A client determines the category of reports they can access through DiagnosticReport. The server responds with Radiology, Pathology, and Cardiology report categories:
+A Client determines the category of reports they can access through DiagnosticReport. The Server responds with Radiology, Pathology, and Cardiology report categories:
 
 **Request for DiagnosticReport report type**
 
@@ -19,7 +19,7 @@ HTTP/1.1 200 OK
 ~~~
 {
   "resourceType": "ValueSet",
-  "id": "scenario4-server-diagnosticreport-category",
+  "id": "scenario4-Server-diagnosticreport-category",
   "url": "http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/diagnosticreport-category",
   "version": "3.0.1",
   "name": "ArgonautDiagnosticReportCategoryCodes",

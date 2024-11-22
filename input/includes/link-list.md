@@ -39,7 +39,7 @@
 [CVX vaccine codes]: https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
-[Certifying systems]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
+[Certifying Systems]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [Clinical Information Reconciliation and Incorporation (CIRI)]: https://www.ecfr.gov/current/title-45/part-170#p-170.315(b)(2) "45 CFR 170.315(b)(2)"
 [Clinical Laboratory Improvement Amendments (CLIA)]: http://www.cdc.gov/clia/
 [Clinician Access for EHR Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#clinician-access-for-standalone
@@ -48,9 +48,9 @@
 [Communications]: {{site.data.fhir.path}}security.html#http
 [Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
 [Conformance Requirements for Client]: CapabilityStatement-us-core-client.html "Conformance Requirements for Client Page"
-[Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
+[Conformance Requirements for Server]: CapabilityStatement-us-core-Server.html "Conformance Requirements for Server Page"
 [Conformance Requirements]: capability-statements.html "CapabilityStatements defined for this Guide"
-[Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
+[Conformance requirements for the US Core Server]: CapabilityStatement-us-core-Server.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [Contained resources]: {{site.data.fhir.path}}references.html#contained
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
@@ -216,7 +216,7 @@
 [Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
 [Searching Using lastUpdated]: general-guidance.html#searching-using-lastupdated
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
-[Servers Requiring Status]: general-requirements.html#search-for-servers-requiring-status
+[Servers Requiring Status]: general-requirements.html#search-for-Servers-requiring-status
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Structured Data Capture (SDC) Questionnaire Response Profile]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaireresponse.html
@@ -256,7 +256,7 @@
 [US Core Pediatric Head Occipital Frontal Circumference Observation Profile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [US Core SMART Scopes]: scopes.html#smart-scopes
 [US Core Security]: security.html
-[US Core Server Capability Statement]: CapabilityStatement-us-core-server.html
+[US Core Server Capability Statement]: CapabilityStatement-us-core-Server.html
 [US Realm Steering Committee (USRSC)]: https://confluence.hl7.org/display/USR/US+Realm+Steering+Committee
 [USCDI ONDEC process]: https://www.healthit.gov/isa/ONDEC
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2

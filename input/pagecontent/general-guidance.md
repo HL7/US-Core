@@ -9,7 +9,7 @@ FHIR resource elements of the [Reference] datatype reference other FHIR resource
 
 ### Contained Resources
 
-When responding to a query, servers **SHOULD** not use inline [contained] resources to represent the returned data. A contained resource can only be used when the source data exists within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used to represent the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
+When responding to a query, Servers **SHOULD** not use inline [contained] resources to represent the returned data. A contained resource can only be used when the source data exists within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used to represent the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
 
 
 ###  Suppressed Data
@@ -20,7 +20,7 @@ In situations where the specific piece of data is hidden for security or privacy
 
 ### SNOMED CT United States Edition
 
-[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI, which refers to an unspecified edition/version, as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe the edition as shown in option two.
+[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI, which refers to an unspecified edition/version, as shown in option one below. However, for terminology Servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe the edition as shown in option two.
 
 #### SNOMED CT Edition and Version Options
 
@@ -95,7 +95,7 @@ Some US Core Profiles bind the `Quantity.code` element in the Quantity datatype 
 
 ### Representing Deleted Information
 
-A FHIR Server **SHOULD** not delete records. A FHIR server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive` (refer to the next section). If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.
+A FHIR Server **SHOULD** not delete records. A FHIR Server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive` (refer to the next section). If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.
 
 ### Representing Entered in Error Information
 
@@ -103,9 +103,9 @@ Clinical information entered in error in the patient's record needs to be repres
 
 **Server Recommendations:**
 - A FHIR Server **SHOULD** not delete resources.
-- A FHIR server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive`.
-- A FHIR Server **SHOULD** allow these resources to be searchable by client applications.
-- If the FHIR server has updated the resource status to `entered-in-error`:
+- A FHIR Server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive`.
+- A FHIR Server **SHOULD** allow these resources to be searchable by Client applications.
+- If the FHIR Server has updated the resource status to `entered-in-error`:
     -  For *patient facing* applications, A FHIR Server **SHOULD** remove the resource's contents, leaving only an id and status.   Note that this typically will not conform to the US Core or FHIR StructureDefinitions.
     - For *provider-facing* applications,  the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
 
@@ -160,7 +160,7 @@ The following guidelines outline requesting and returning a resource in the requ
               [...snip...]
       ~~~
 
-* Using the [Translation] Extension when the server provides additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
+* Using the [Translation] Extension when the Server provides additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
 
     Example
     ~~~
@@ -210,33 +210,33 @@ Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance i
  **`GET [base]/[Resource-type]/[id] {parameters}`**
 
 -   GET is the HTTP verb used for fetching a resource
--   Content surrounded by \[\] is mandatory *for the client* to supply and will be replaced by the string literal identified.
+-   Content surrounded by \[\] is mandatory *for the Client* to supply and will be replaced by the string literal identified.
     -   base: The Service Root URL (e.g., "<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -   Resource-type: The name of a resource type (e.g., "Patient")
     -   id: The Logical Id of a resource(e.g., "24342")
--   Content surrounded by {} is optional *for the client* to supply and will be replaced by the string literal identified.
+-   Content surrounded by {} is optional *for the Client* to supply and will be replaced by the string literal identified.
     -   parameters: URL parameters as defined for the particular interaction (e.g., "?\_format=xml"}
 
 For more information, see the [FHIR RESTful API]
 
 ### Search Syntax
 
-Searching resources is defined by the [FHIR RESTful API] and included here for informative purposes. The [US Core FHIR RESTful Search API] Section documents the server and client rules for the RESTful interactions described in this guide.
+Searching resources is defined by the [FHIR RESTful API] and included here for informative purposes. The [US Core FHIR RESTful Search API] Section documents the Server and Client rules for the RESTful interactions described in this guide.
 
 All the search interactions in this guide use the `GET` command with the following syntax:
 
  **`GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&[parameter2]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]&...}`**
 
 -   GET is the HTTP verb used for fetching a resource
--   Variables surrounded by "\[\]" are mandatory *for the client* to supply and will be replaced by the string literal identified.
--   Variables surrounded by "\{\}" are optional *for the client* to supply and will be replaced by the string literal identified.
+-   Variables surrounded by "\[\]" are mandatory *for the Client* to supply and will be replaced by the string literal identified.
+-   Variables surrounded by "\{\}" are optional *for the Client* to supply and will be replaced by the string literal identified.
     -   base: The Service Root URL (e.g., "<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -  Resource-type: The name of a resource type (e.g., "Patient")
     -  parameter: the search parameters as defined for the particular interaction (e.g.,"?patient=Patient/123")
     -  value: the search parameter value for a particular search
-       - When searching using the `token` type searchparameter [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.:
-       - When searching using the `reference` type SearchParameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
-       - When searching using the `date` type SearchParameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
+       - When searching using the `token` type searchparameter [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the Client* to supply.:
+       - When searching using the `reference` type SearchParameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the Client* to supply:
+       - When searching using the `date` type SearchParameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a Server does not support the comparator.
     - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
@@ -265,7 +265,7 @@ However, neither specification defines how a user-facing provider app can seek r
 
 Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles and **SHOULD** populate [`Meta.lastUpdated`] for US Core Profiles as accurately as possible. Servers **SHALL** document in `CapabilityStatement.rest.resource.searchParam.documentation` the types of changes that can be detected using the `_lastUpdated` search parameter (see example snippet below).
 
-Example CapabilityStatement snippet for a server supporting the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile 
+Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile 
 
 ~~~
 {
@@ -273,7 +273,7 @@ Example CapabilityStatement snippet for a server supporting the `_lastUpdated` s
     ...
     "rest": {
       {
-        "mode": "server",
+        "mode": "Server",
         ...
         "resource": [
             {
@@ -302,14 +302,14 @@ Example CapabilityStatement snippet for a server supporting the `_lastUpdated` s
 
 <div class="stu-note" markdown="1">
 
-Many servers are unable to accurately populate the `Meta.lastUpdated` element. 
+Many Servers are unable to accurately populate the `Meta.lastUpdated` element. 
 
 **Note to Clients:**
 - Updates to `Meta.lastUpdated` may not reflect a change in the resource and resource updates may not result in updates to `Meta.lastUpdated`.
-- `_lastUpdated` search results may not reflect changes clients can access and all updates to a resource may not be returned using the `_lastUpdated` search. (in other words, false negatives and false positives `_lastUpdated` search results are possible).
-- Updates to `Meta.lastUpdated` may reflect changes a client can not access. (for example, the client may not be authorized to see the changed data).
+- `_lastUpdated` search results may not reflect changes Clients can access and all updates to a resource may not be returned using the `_lastUpdated` search. (in other words, false negatives and false positives `_lastUpdated` search results are possible).
+- Updates to `Meta.lastUpdated` may reflect changes a Client can not access. (for example, the Client may not be authorized to see the changed data).
 - Supporting `Meta.lastUpdated` in a resource does not imply support for searches using the `_lastUpdated` search parameter.
-- Support for searches using the `_lastUpdated` search parameter does not require servers to support `Meta.lastUpdated`; servers can use an alternative method to track changes to an instance.
+- Support for searches using the `_lastUpdated` search parameter does not require Servers to support `Meta.lastUpdated`; Servers can use an alternative method to track changes to an instance.
 
 **Note to Servers:**
 - Updating the timestamp too frequently is better than missing updates.
@@ -319,15 +319,16 @@ Work is in progress to enable [FHIR Topic-Based Subscription] for notifications 
 
 ### Compartment Based Search
 
-US Core servers are not required to support patient [compartment] based searches.
+US Core Servers are not required to support patient [compartment] based searches.
 
 ### Across Platform Searches
 
-US Core servers are not required to resolve absolute URLs external to their environment.
+US Core Servers are not required to resolve absolute URLs external to their environment.
 
 ### Limiting The Number Of Search Results
 
 Servers can choose to return the results in a series of pages to manage the number of search results returned. The search result set contains the URLs used to request additional pages from the search set. For a simple RESTful search, the page links are included in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
+<div class="bg-success" markdown="1">
 
 ### Client Best Practices for Search:
 
@@ -335,9 +336,10 @@ To reduce API volume and ensure reliable use when implementing FHIR RESTful sear
 
 1. When the Server supports it, Clients **SHOULD** use the _include search parameter to retrieve referenced content instead of searching for a resource and then performing a separate search for other references (for example, Patient, Encounter, and Location) in the result set.
 
-2. If the Server does not support the `_include`  search parameter, clients **SHOULD** consolidate duplicate searches before searching for referenced resources in the result set
+2. If the Server does not support the `_include`  search parameter, Clients **SHOULD** consolidate duplicate searches before searching for referenced resources in the result set
 
-3. The [HTTP Cache-Control](https://httpwg.org/specs/rfc9111.html) response header stores a response associated with a request and reuses the stored response for subsequent requests. If Cache-Control is present in the Server response headers, the clients **SHOULD NOT** search the same data within the time stated in `Cache-Control` headers.
+3. The [HTTP Cache-Control](https://httpwg.org/specs/rfc9111.html) response header stores a response associated with a request and reuses the stored response for subsequent requests. If Cache-Control is present in the Server response headers, the Clients **SHOULD NOT** search the same data within the time stated in `Cache-Control` headers.
+</div><!-- new-content -->
 
 ------------------------------------------------------------------------
 <!--

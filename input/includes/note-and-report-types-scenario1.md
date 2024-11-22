@@ -1,5 +1,5 @@
 
-A client determines the types of reports they can access through DiagnosticReport. The server responds with 'foo','bar' ,and 'baz' report types:
+A Client determines the types of reports they can access through DiagnosticReport. The Server responds with 'foo','bar' ,and 'baz' report types:
 
 **Request for DiagnosticReport report type**
 
@@ -19,7 +19,7 @@ HTTP/1.1 200 OK
 ~~~
 {
  "resourceType": "ValueSet",
- "id": "scenario1-server-diagnosticreport-codes",
+ "id": "scenario1-Server-diagnosticreport-codes",
  "url": "http://acme.org/ValueSet/diagnosticreport-codes",
  "version": "3.0.1",
  "name": "acme-diagnosticreport-codes",

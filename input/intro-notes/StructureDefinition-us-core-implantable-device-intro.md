@@ -57,7 +57,7 @@ In addition, the following data elements must be supported if the data is presen
    |model|`Device.model`|
    {:.grid}
 
-- Servers **SHOULD** support query by `Device.type` to allow clients to request the patient's devices by a specific type. Note: `Device.type` is too granular to differentiate implantable vs. non-implantable devices.  
+- Servers **SHOULD** support query by `Device.type` to allow Clients to request the patient's devices by a specific type. Note: `Device.type` is too granular to differentiate implantable vs. non-implantable devices.  
 - The [Quick Start] section below describes searching for all devices. Records of implanted devices **MAY** be queried against UDI data, including:
 
     - UDI HRF string (`udi-carrier`)

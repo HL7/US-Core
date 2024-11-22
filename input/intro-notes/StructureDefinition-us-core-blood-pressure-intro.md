@@ -35,7 +35,7 @@ The following are example usage scenarios for this profile:
 - Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
   - the `Observation.value[x]` element **SHOULD** be omitted
   - an Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
-  - *All server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
+  - *All Server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
 
 
 {% include link-list.md %}

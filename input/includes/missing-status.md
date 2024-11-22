@@ -13,7 +13,7 @@ Get “all encounters” for a patient 1137192 by querying Encounter using the p
 
 **Response:**
 
-Instead of returning a search Bundle resource containing all the Encounter for the patient, the server return a `400 Not Found` and an OperationOutcome detailing that a status parameter is required for this search.
+Instead of returning a search Bundle resource containing all the Encounter for the patient, the Server return a `400 Not Found` and an OperationOutcome detailing that a status parameter is required for this search.
 
     HTTP/1.1 400 Not Found
     [other headers]

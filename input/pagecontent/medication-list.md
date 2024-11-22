@@ -35,7 +35,7 @@ This IG focuses on access to a patient's medications. Therefore, it is essential
 
 #### Options for Representing Medication
 
- This guide supports representing a medication using a code or a reference to a Medication resource. Typically, a code will be for a branded (for example, Crestor 10mg tablet) or a generic (for example, Rosuvastatin 10mg tablet) medication. When using a code, the code  **SHALL** follow the [extensible] binding rules to [Medication Clinical Drug (RxNorm)] - i.e., unless RxNorm does not cover the concept, the RxNorm code **SHALL** be used. USCDI recommends the [National Drug Codes (NDC)] as an optional medication terminology. They can be supplied as an additional coding element. More information about using codes can be found in the [General Guidance] and the [FHIR Terminology] sections. A medication resource is typically used when information not included in the RxNorm code is required. For example, the Medication resource is the only way to represent compounded correctly or extemporaneously prepared medication. When referencing the Medication resource, the resource may be included in the returned bundle, as an external resource, or as a [contained] resource if it can't stand alone. These options are shown in Figure 3 below. The server application **MAY** choose any combination of these methods, but if an external reference to Medication is used, the server **SHALL** support the [`_include`] parameter for searching this element. The client application **MUST** support all methods. The [MedicationRequest examples] show these different methods. Additional guidance is provided below and in the [US Core Server Capability Statement] section.
+ This guide supports representing a medication using a code or a reference to a Medication resource. Typically, a code will be for a branded (for example, Crestor 10mg tablet) or a generic (for example, Rosuvastatin 10mg tablet) medication. When using a code, the code  **SHALL** follow the [extensible] binding rules to [Medication Clinical Drug (RxNorm)] - i.e., unless RxNorm does not cover the concept, the RxNorm code **SHALL** be used. USCDI recommends the [National Drug Codes (NDC)] as an optional medication terminology. They can be supplied as an additional coding element. More information about using codes can be found in the [General Guidance] and the [FHIR Terminology] sections. A medication resource is typically used when information not included in the RxNorm code is required. For example, the Medication resource is the only way to represent compounded correctly or extemporaneously prepared medication. When referencing the Medication resource, the resource may be included in the returned bundle, as an external resource, or as a [contained] resource if it can't stand alone. These options are shown in Figure 3 below. The Server application **MAY** choose any combination of these methods, but if an external reference to Medication is used, the Server **SHALL** support the [`_include`] parameter for searching this element. The Client application **MUST** support all methods. The [MedicationRequest examples] show these different methods. Additional guidance is provided below and in the [US Core Server Capability Statement] section.
 
 {% include img.html img="ArgoR4Meds_4.svg" caption="Figure 3: Ways to Represent the Medication" %}
 
@@ -73,7 +73,7 @@ A MedicationRequest resource query:
 
 #### Get All *Active* Medications
 
-1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` = "order,plan" `status` = "active" search parameters. See [MedicationRequest Quick Start] for further details. Note that the client should also consider MedicationRequests with a status of "unknown" and whether to query those as well.
+1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` = "order,plan" `status` = "active" search parameters. See [MedicationRequest Quick Start] for further details. Note that the Client should also consider MedicationRequests with a status of "unknown" and whether to query those as well.
 
    `GET /MedicationRequest?patient=[id]&intent=order,plan&status=active{&_include=MedicationRequest:medication}`
 
@@ -91,7 +91,7 @@ See the [US Core Server Capability Statement] for a complete list of supported R
 
 #### De-duplication of Data
 
-Medications may be duplicated in a medication list when multiple sources of data are used to generate the list. To provide a list of a patient's medications, it may be necessary to "de-duplicate" them. The de-duplication activity **MAY** be supplied by the server, but **SHOULD** be provided by the client.
+Medications may be duplicated in a medication list when multiple sources of data are used to generate the list. To provide a list of a patient's medications, it may be necessary to "de-duplicate" them. The de-duplication activity **MAY** be supplied by the Server, but **SHOULD** be provided by the Client.
 
 This specification does not specify de-duplication best practices; however, systems can consider the following approaches:
 

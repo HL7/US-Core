@@ -1,5 +1,5 @@
 
-A client determines the types of note or reports they can access through DocumentReference.  The server responds with the five "Common Clinical Notes" types:
+A Client determines the types of note or reports they can access through DocumentReference.  The Server responds with the five "Common Clinical Notes" types:
 
 **Request for DocumentReference note or report type**
 
@@ -19,7 +19,7 @@ HTTP/1.1 200 OK
 ~~~
 {
   "resourceType": "ValueSet",
-  "id": "scenario2-server-clinical-note-type",
+  "id": "scenario2-Server-clinical-note-type",
   "url": "http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/argonaut-clinical-note-type",
   "version": "3.0.1",
   "name": "ArgonautClinicalNotes",

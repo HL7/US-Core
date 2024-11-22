@@ -44,7 +44,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 - \*Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
   - the `Observation.value[x]` element **SHALL** be omitted
   - An Observation without a systolic or diastolic result value **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
-  - *All server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
+  - *All Server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
 - This Profile is not dependent on any specific protocol. Information about the protocol used **SHOULD** be supplied in either:
   - `Observation.note.text` (for example, "Average blood pressure is calculated from 12 measurements taken by the patient over three days.")
   - The standard FHIR extension <http://hl7.org/fhir/StructureDefinition/workflow-adheresTo>

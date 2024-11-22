@@ -27,7 +27,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:* Fetches a bundle containing any Patient resources matching the identifier ([how to search by token])
 
-1. **SHALL** support searching for a patient by a server defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](SearchParameter-us-core-patient-name.html)** search parameter:
+1. **SHALL** support searching for a patient by a Server defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](SearchParameter-us-core-patient-name.html)** search parameter:
 
     `GET [base]/Patient?name=[string]`
 

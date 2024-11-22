@@ -28,13 +28,13 @@ Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir
 
 ### Endpoint Discoverability
 
-A server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Core ver 3.1.1+ or both. A server may make explicit which version of Argo/US Core is on their FHIR endpoint (e.g., "DSTU2" or "R4" path component or separate files based on version). However, the best practice is to inspect the [endpoint metadata](http://hl7.org/fhir/R4/http.html) on each endpoint to discover the information about a server's capabilities, including the FHIR version and the US Core Profile version that is supported:
+A Server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Core ver 3.1.1+ or both. A Server may make explicit which version of Argo/US Core is on their FHIR endpoint (e.g., "DSTU2" or "R4" path component or separate files based on version). However, the best practice is to inspect the [endpoint metadata](http://hl7.org/fhir/R4/http.html) on each endpoint to discover the information about a Server's capabilities, including the FHIR version and the US Core Profile version that is supported:
 
 `GET [base]/metadata{?mode=[mode]} {&_format=[mime-type]}`
 
 ### No Guarantee that Resource IDs are Preserved
 
-In some FHIR servers, the identifier of the underlying clinical data is not maintained across FHIR versions. Therefore, client applications must plan on deduplication methods that rely on something other than a common identifier across FHIR versions.
+In some FHIR Servers, the identifier of the underlying clinical data is not maintained across FHIR versions. Therefore, Client applications must plan on deduplication methods that rely on something other than a common identifier across FHIR versions.
 
 * Servers **SHOULD** maintain a stable common identifier for a resource across versions.
 
@@ -53,14 +53,14 @@ In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. How
     - MedicationStatement data mapped to MedicationRequest
     - care teams, as represented by CarePlan, **SHOULD** be mapped to CareTeam in R4
 * Data **SHOULD** be maintained between versions (i.e., not be degraded).
-* When updating between versions, clients **SHOULD** consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.
+* When updating between versions, Clients **SHOULD** consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.
 
 
 ### Authorization Across Versions
 
 - Separate authorization is required
    - There is no expectation that DSTU2 authorizations will work on R4 endpoints, and reauthorization is required when migrating between versions.
-      - Maintaining the same auth server for both endpoints so that the refresh token is valid for both DSTU2 and the R4 endpoint may be possible but not in scope.
+      - Maintaining the same auth Server for both endpoints so that the refresh token is valid for both DSTU2 and the R4 endpoint may be possible but not in scope.
 - The new endpoint will bring additional/changed resource types and added scopes
 
 {% include link-list.md %}

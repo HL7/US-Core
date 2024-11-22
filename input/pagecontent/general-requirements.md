@@ -8,9 +8,9 @@ This page documents requirements common to all US Core actors in this guide. The
 
 The [Profiles and Extensions] page lists the US Core Profiles defined for this implementation guide.  US Core Profile [StructureDefinitions] define the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present and constrains how the elements are used when using the profile. Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile.
 
-The US Core Profile elements include *Mandatory*, *Must Support*, and *Additional USCDI Requirements*.  Mandatory elements are required and have a minimum cardinality of 1 (min=1). Must Support element server and client expectations are defined by US Core. Additional USCDI Requirements elements are neither Mandatory nor Must Support but designated USCDI Requirements for ONC Health IT Certification and, for certified systems, are equivalent to Must Support elements. All Mandatory, Must Support, or Additional USCDI Requirements are in scope for [ONC Health IT Certification] (g(10) certification) testing. The [Must Support] page defines the server and client expectations for processing these different element requirements and illustrates how they are displayed and documented.
+The US Core Profile elements include *Mandatory*, *Must Support*, and *Additional USCDI Requirements*.  Mandatory elements are required and have a minimum cardinality of 1 (min=1). Must Support element Server and Client expectations are defined by US Core. Additional USCDI Requirements elements are neither Mandatory nor Must Support but designated USCDI Requirements for ONC Health IT Certification and, for certified systems, are equivalent to Must Support elements. All Mandatory, Must Support, or Additional USCDI Requirements are in scope for [ONC Health IT Certification] (g(10) certification) testing. The [Must Support] page defines the Server and Client expectations for processing these different element requirements and illustrates how they are displayed and documented.
 
-The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resource specify how the server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
+The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resource specify how the Server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
 
 ### Conforming to US Core
 
@@ -23,22 +23,22 @@ There are two different ways to implement US Core:
 
 Systems may deploy and support one or more US Core Profiles to represent clinical information. They use the profile's content model without any expectations to implement the US Core interactions.
 
-An example scenario would be a server using only the [FHIR Bulk Data Access (Flat FHIR)] approach to export the US Core Data for Interoperability resources.  For this server, the US Core interactions are unnecessary.
+An example scenario would be a Server using only the [FHIR Bulk Data Access (Flat FHIR)] approach to export the US Core Data for Interoperability resources.  For this Server, the US Core interactions are unnecessary.
 
-To support a US Core Profile, a server:
+To support a US Core Profile, a Server:
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and flagged as Must Support as defined by that profile's StructureDefinition.
-- **SHOULD** declare support for a US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element.
+- **SHOULD** declare support for a US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.
     - The US Core Profile's official or "canonical" URL is located on each US Core Profile page
 
-      example CapabilityStatement snippet for a server supporting the US Core Patient Profile:
+      example CapabilityStatement snippet for a Server supporting the US Core Patient Profile:
       ~~~
       {
         "resourceType": "CapabilityStatement",
         ...
         "rest": [
           {
-            "mode": "server",
+            "mode": "Server",
             ...
             "resource": [
               ...
@@ -66,26 +66,26 @@ Servers may deploy and support one or more US Core Profiles to represent clinica
 - [Screening and Assessments]
 
 Servers implementing both can claim conformance to the US Core Profile content structure and the RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities as described below.
-A server that certifies to the [21st Century Cures Act for accessing patient data] must implement all components in the USCDI and the US Core CapabilityStatement.
+A Server that certifies to the [21st Century Cures Act for accessing patient data] must implement all components in the USCDI and the US Core CapabilityStatement.
 
 ##### Claiming conformance to a US Core Profile
 
- A conformant server:
+ A conformant Server:
 
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
-- **SHOULD** declare conformance with the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
+- **SHOULD** declare conformance with the [US Core Server Capability Statement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
-    - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element.
+    - Declare support for the US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.
       - the US Core Profile's official or "canonical" URL is located on each US Core Profile page.
     - Declare support for the US Core Profile's FHIR RESTful transactions.
       - The restful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.
  
 
-    Example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
+    Example CapabilityStatement snippet for a Server conforming to the US Core Patient Profile:
 
-    {% include examplebutton_default.html example="conform-patient" b_title = "Click Here for an example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:" %}
+    {% include examplebutton_default.html example="conform-patient" b_title = "Click Here for an example CapabilityStatement snippet for a Server conforming to the US Core Patient Profile:" %}
 
 ### Using Codes in US Core Profiles
 
@@ -111,7 +111,7 @@ Because of the  FHIR conformance rule:
 FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in Figure 2 below illustrates this structure for the repeating `DocumentReference.category` element:
 
 - This structure allows 0..\* concept(s) from the *required* ValueSet.
-- By being 0..\*, thie structure permits servers to send concepts not in the required ValueSet.
+- By being 0..\*, thie structure permits Servers to send concepts not in the required ValueSet.
 
 
   {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 2: US Core DocumentReference.category" %}
@@ -206,9 +206,9 @@ Example of translation of CVX vaccine code to NDC code.
 
 ### Modifier Elements
 
-A FHIR [modifier element] is an element that modifies the meaning of a resource element. Although servers and clients **SHALL** be able to process  [Mandatory] or [Must Support] elements, not all modifier elements are  Mandatory or Must Support, and there is no requirement for supporting them. Therefore, FHIR clients need to be aware of unexpected modifier elements in the data they receive because they can alter the meaning of the data and can potentially lead to errors or even security risks if not properly handled. In addition, modifiers can be introduced when the data is created, edited, or transmitted, so it is crucial to ensure that all modifiers are understood and handled correctly.
+A FHIR [modifier element] is an element that modifies the meaning of a resource element. Although Servers and Clients **SHALL** be able to process  [Mandatory] or [Must Support] elements, not all modifier elements are  Mandatory or Must Support, and there is no requirement for supporting them. Therefore, FHIR Clients need to be aware of unexpected modifier elements in the data they receive because they can alter the meaning of the data and can potentially lead to errors or even security risks if not properly handled. In addition, modifiers can be introduced when the data is created, edited, or transmitted, so it is crucial to ensure that all modifiers are understood and handled correctly.
 
-In addition to declaring which US Core profiles they support, Servers **MAY** communicate a system-wide profile in their CapabilityStatement to identify which additional elements, including modifier elements, they support. However, systems are free to include other data elements - and receivers **SHOULD** accept instances that even contain unexpected data elements *except* when those elements are modifier elements. Unless a client determines they can process it safely, rejection is typically the only safe action if unexpected modifier elements are present. For example, an app or system may process modifier elements nested inside an ignored element or in a resource only for human review.
+In addition to declaring which US Core profiles they support, Servers **MAY** communicate a system-wide profile in their CapabilityStatement to identify which additional elements, including modifier elements, they support. However, systems are free to include other data elements - and receivers **SHOULD** accept instances that even contain unexpected data elements *except* when those elements are modifier elements. Unless a Client determines they can process it safely, rejection is typically the only safe action if unexpected modifier elements are present. For example, an app or system may process modifier elements nested inside an ignored element or in a resource only for human review.
 
 Some examples of modifiers that are not Must Support elements in US Core Profiles include:
 
@@ -302,17 +302,17 @@ There are situations when information on a particular data element is missing, a
 
 ### FHIR RESTful Search API Requirements
 
-The [FHIR RESTful Search API] requires that servers that support search **SHALL** support the HTTP `POST`-based search. For all the supported search interactions in this guide, servers **SHALL** also support the `GET`-based search.
+The [FHIR RESTful Search API] requires that Servers that support search **SHALL** support the HTTP `POST`-based search. For all the supported search interactions in this guide, Servers **SHALL** also support the `GET`-based search.
 
 - When searching using the `token` type searchparameter  [(how to search by token)]
-    - The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
-    - The server **SHALL** support both.
+    - The Client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+    - The Server **SHALL** support both.
 - When searching using the `reference` type searchparameter  [(how to search by reference)]
-    - The client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.
-    - The server **SHALL** support both.
+    - The Client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.
+    - The Server **SHALL** support both.
 - When searching using the `date` type searchparameter [(how to search by date)]:
-    - The client **SHALL** provide values precise to the *day* for elements of datatype `date` and to the *second + time offset* for elements of datatype `dateTime`.
-    - The server **SHALL** support values precise to the *day* for elements of datatype `date` and  to the *second + time offset* for elements of datatype `dateTime`.
+    - The Client **SHALL** provide values precise to the *day* for elements of datatype `date` and to the *second + time offset* for elements of datatype `dateTime`.
+    - The Server **SHALL** support values precise to the *day* for elements of datatype `date` and  to the *second + time offset* for elements of datatype `dateTime`.
 
     The table below summarizes the date precision:
 
@@ -327,15 +327,15 @@ The [FHIR RESTful Search API] requires that servers that support search **SHALL*
 Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this, they **SHALL** follow the guidelines here.
 {: .highlight-note}
 
-For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
+For searches where the Client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
 
 - **SHALL** return an HTTP `400` status
 - **SHALL** return an [OperationOutcome] specifying that status(es) must be present.
 - **SHALL** support search with status if status required
-- **SHALL NOT** restrict search results ( i.e., apply 'hidden' filters) when a client includes status parameters in the query.
-  - If a system doesn't support a specific status code value that is queried, it  **SHOULD** return an HTTP `200` status with a search bundle. The search bundle **SHOULD** contain resources matching the search criteria *and* an OperationOutcome warning the client which status code value is not supported.
+- **SHALL NOT** restrict search results ( i.e., apply 'hidden' filters) when a Client includes status parameters in the query.
+  - If a system doesn't support a specific status code value that is queried, it  **SHOULD** return an HTTP `200` status with a search bundle. The search bundle **SHOULD** contain resources matching the search criteria *and* an OperationOutcome warning the Client which status code value is not supported.
 
-   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, and `entered-in-error` but not the concept `refuted`, the search parameter refers to an unsupported code since `refuted` is not known to the server.
+   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, and `entered-in-error` but not the concept `refuted`, the search parameter refers to an unsupported code since `refuted` is not known to the Server.
 
      {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 

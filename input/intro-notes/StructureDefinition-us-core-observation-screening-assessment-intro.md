@@ -43,6 +43,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include DAR-exception.md %}
 - <span class="bg-success" markdown="1">\*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
-- \*<span class="bg-success" markdown="1">Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. The certifying server system is not required to support both, but **SHALL** support at least one. The client application **SHALL** support both.</span><!-- new-content -->
+- \*<span class="bg-success" markdown="1">Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. The certifying Server system is not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.</span><!-- new-content -->
   
 {% include link-list.md %}

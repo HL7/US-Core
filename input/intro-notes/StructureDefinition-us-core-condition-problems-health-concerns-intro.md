@@ -45,10 +45,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 </div><!-- new-content -->
 
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
-    * Although all three are marked as Must Support, the server is not required to support all.
-  * A server **SHALL** support `Condition.recordedDate`.
-    * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A server may support both, which means they support all 3 locations.
-    * The client application **SHALL** support all three elements.
+    * Although all three are marked as Must Support, the Server is not required to support all.
+  * A Server **SHALL** support `Condition.recordedDate`.
+    * A Server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A Server may support both, which means they support all 3 locations.
+    * The Client application **SHALL** support all three elements.
 
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New problems and health concerns

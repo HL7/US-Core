@@ -43,8 +43,8 @@ The following data elements must always be present ([Mandatory] definition) or m
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.
-    -  Although both are marked as Must Support, the server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
-    -  The client application **SHALL** support both elements.
+    -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
+    -  The Client application **SHALL** support both elements.
     -  The `content.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint.
         - If the endpoint is outside the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
     -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`. 

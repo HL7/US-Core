@@ -38,9 +38,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`. An example search is shown in the [Quick Start](#search) section below.
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
-    * Although all three are marked as Must Support, the server is not required to support all.
-    * A server **SHALL** support `Condition.recordedDate`.
-    * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A server may support both, which means they support all three dates.
-    * The client application **SHALL** support all three elements.
+    * Although all three are marked as Must Support, the Server is not required to support all.
+    * A Server **SHALL** support `Condition.recordedDate`.
+    * A Server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A Server may support both, which means they support all three dates.
+    * The Client application **SHALL** support all three elements.
 
 {% include link-list.md %}

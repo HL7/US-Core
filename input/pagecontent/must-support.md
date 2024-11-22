@@ -1,6 +1,6 @@
 
 
-The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements. The sections below define the server and client expectations for processing these elements and illustrate how they are displayed and documented.
+The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements. The sections below define the Server and Client expectations for processing these elements and illustrate how they are displayed and documented.
 
 
 
@@ -19,7 +19,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * When information on a particular data element is missing or suppressed, refer to the guidance for [Missing Data] and [Suppressed Data]. In cases where information on a specific data element is missing, *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information. This is done by following the same methodology outlined in the [Missing Data] section but using the appropriate reason code instead of `unknown`.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
-The terms *US Core Responder* Actor and *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
+The terms *US Core Responder* Actor and *US Core Requestor Actor* are used throughout the guide and typically refer to a Server or a Client.
 
 Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, [FHIR Data Types], [FHIR Search], and [FHIR Resource] formats before implementing US Core requirements.
 
@@ -41,7 +41,7 @@ The following summary tables  may be useful to testers and analysts to review th
 
 The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI)]. See the [USCDI] page for more information about the US Core and USCDI relationship and a mapping between US Core Profiles and the USCDI Data Classes and Elements. Some US Core Profile elements needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements as *Additional USCDI Requirements*.
 
-Implementers seeking ONC certification **SHALL** interpret *Additional USCDI Requirements* as *Must Support* elements as documented above and below; otherwise, they are considered optional. All *Mandatory*, *Must Support*, or *Additional USCDI Requirements* are within the scope of ONC Health IT Certification. Only simple and complex data elements are defined as *Additional USCDI Requirements*. The *Must Support* sections below document how the conformance rules are displayed and applied.
+Implementers seeking ONC certification (Certifying Systems) **SHALL** interpret *Additional USCDI Requirements* as *Must Support* elements as documented above and below; otherwise, they are considered optional. All *Mandatory*, *Must Support*, or *Additional USCDI Requirements* are within the scope of ONC Health IT Certification. Only simple and complex data elements are defined as *Additional USCDI Requirements*. The *Must Support* sections below document how the conformance rules are displayed and applied.
 
 </div><!-- new-content -->
 
@@ -62,7 +62,7 @@ To communicate when *Additional USCDI Requirements* elements are in a US Core pr
 ### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
 
 On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table". Several examples below illustrate the presentation of *Must Support* elements and their rules. <span class="bg-success" markdown="1">
-Except where noted, the same rules apply for the *Additional USCDI Requirements* for certifying systems.
+Except where noted, the same rules apply for the *Additional USCDI Requirements* for Certifying Systems.
 </span><!-- new-content -->
 
 #### Differential Table View
@@ -95,7 +95,7 @@ This view includes the same flags and labels as described in Differential Table 
 
 #### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], used almost exclusively for the CodeableConcept and Coding datatypes. If an element is marked as *Must Support* and defined by a pattern, then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing. <span class="bg-success" markdown="1">If an element is marked as *Additional USCDI* and defined by a pattern, then the pattern defines the elements *and* element values that the certifying **SHALL** be capable of providing.</span><!-- new-content -->
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], used almost exclusively for the CodeableConcept and Coding datatypes. If an element is marked as *Must Support* and defined by a pattern, then the pattern defines the elements *and* element values that the Server **SHALL** be capable of providing. <span class="bg-success" markdown="1">If an element is marked as *Additional USCDI* and defined by a pattern, then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing.</span><!-- new-content -->
 
 
 For example, the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in `DiagnosticReport.category.coding.system`  and `DiagnosticReport.category.coding.code` for a Coding element. When claiming conformance to this profile:
@@ -107,7 +107,7 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 
 #### Must Support - Primitive Element
 
-Primitive elements are single elements with a primitive value. If they are marked as *Must Support*, then the server **SHALL** be capable of providing the element value to meet the *Must Support* requirement. <span class="bg-success" markdown="1">If they are marked as *Additional USCDI*, then the certifying system **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement.</span><!-- new-content -->
+Primitive elements are single elements with a primitive value. If they are marked as *Must Support*, then the Server **SHALL** be capable of providing the element value to meet the *Must Support* requirement. <span class="bg-success" markdown="1">If they are marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement.</span><!-- new-content -->
 
 For example, the [US Core DiagnosticReport Profile for Laboratory Results Reporting] issued element is a primitive `instant` datatype. Therefore, when claiming conformance to this profile:
 
@@ -120,10 +120,10 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 
 Complex elements are composed of primitive and other complex elements.   Note that coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) also have additional binding rules documented in the [Coded Elements] section.
 
-For any complex element marked as *Must Support*, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as *Must Support*, it must also meet the *Must Support* requirements and satisfy the *Must Support* requirements for the parent element.
+For any complex element marked as *Must Support*, the Server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as *Must Support*, it must also meet the *Must Support* requirements and satisfy the *Must Support* requirements for the parent element.
 <div class="bg-success" markdown="1">
 
-For any complex element marked as *Additional USCDI*, the certifying system **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as *Additional USCDI*, it must also meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element.
+For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as *Additional USCDI*, it must also meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element.
 </div><!-- new-content -->
 
 For example, the [US Core DiagnosticReport Profile for Report and Note exchange] `presentedForm` element is labeled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
@@ -140,7 +140,7 @@ For example, the [US Core Patient Profile] `name` element is labeled *Must Suppo
 
 {% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
-On the other hand, if any sub-element is marked as *Must Support* or  *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, <span class="bg-success" markdown="1">servers **SHALL** support the sub-element(s) marked as *Must Support* and certifying system  **SHALL** the sub-elements labeled as *Additional USCDI*.</span><!-- new-content -->
+On the other hand, if any sub-element is marked as *Must Support* or  *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, <span class="bg-success" markdown="1">Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** the sub-elements labeled as *Additional USCDI*.</span><!-- new-content -->
 
 
 For example, the [US Core Patient Profile] `telecom` element is not labeled *Must Support*, but `telecom.system`, `telecom.value`, `telecom.use` are. When claiming conformance to this profile:
@@ -161,7 +161,7 @@ This section documents additional *Must Support* requirements for the [Reference
 
 ##### Must Support Targets for US Core Profiles
 
-When a Reference type element is labeled as *Must Support*  has a single target profile referenced, the target profile **SHALL** be supported. When a Reference type element is labeled as *Additional USCDI* has a single target profile referenced, the target profile **SHALL** be supported for certifying systems.
+When a Reference type element is labeled as *Must Support*  has a single target profile referenced, the target profile **SHALL** be supported. When a Reference type element is labeled as *Additional USCDI* has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems.
 
 For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to this profile:
 
@@ -170,7 +170,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 
 {% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 10: US Core AllergyIntolerance.patient" %}
 
-When a Reference type element is labeled as *Must Support*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported. When a Reference type element labeled as *Additional USCDI*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported by certifying systems.
+When a Reference type element is labeled as *Must Support*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported. When a Reference type element labeled as *Additional USCDI*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported by Certifying Systems.
 
 For example, the US Core DocumentReference Profile `DocumentReference.author` is a *Must Support* element, and six target profiles are displayed with only the US Core Practitioner Profile labeled *Must Support*. When claiming conformance to this profile:
 
@@ -187,13 +187,13 @@ The tables below list the *Must Support* target US Core Profiles and FHIR Resour
 
 {% include ms-target-table-generator.md file="ms_refs" %}
 
-Additional *Must Support* Targets for certifying systems supporting *Additional USCDI* US Core Elements as *Must Support* (see [Additional USCDI Requirements](#additional-uscdi-requirements) above).
+Additional *Must Support* Targets for Certifying Systems supporting *Additional USCDI* US Core Elements as *Must Support* (see [Additional USCDI Requirements](#additional-uscdi-requirements) above).
 
 {% include ms-target-table-generator.md file="addl_uscdi_refs" %}
 
 ##### Choice of At Least One Targets for US Core Profiles
 
-When a Reference element is labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*, *at least one* target profile **SHALL** be supported. When a Reference element is labeled as *Additional USCDI* has multiple target profiles referenced, but none are labeled as *Must Support*, *at least one* target profile **SHALL** be supported by certifying systems.
+When a Reference element is labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*, *at least one* target profile **SHALL** be supported. When a Reference element is labeled as *Additional USCDI* has multiple target profiles referenced, but none are labeled as *Must Support*, *at least one* target profile **SHALL** be supported by Certifying Systems.
 
 For example, the US Core Vital Signs Profile  `Observation.performer` is a *Must Support* element, and there are six target profiles displayed with none labeled as *Must Support*. When claiming conformance to this profile:
 
@@ -218,7 +218,7 @@ Choice of Targets for *Additional USCDI* US Core Elements
 
 #### Must Support - Choice of Data Types
 
-<span class="bg-success" markdown="1">If a *Must Support* element has a choice of datatypes for its content, the datatypes the server **SHALL** support are labeled as *Must Support*.  If an *Additional USCDI* element has a choice of datatypes for its content, the datatypes the certifying system **SHALL** support are labeled as *Must Support*.</span><!-- new-content -->
+<span class="bg-success" markdown="1">If a *Must Support* element has a choice of datatypes for its content, the datatypes the Server **SHALL** support are labeled as *Must Support*.  If an *Additional USCDI* element has a choice of datatypes for its content, the datatypes the Certifying System **SHALL** support are labeled as *Must Support*.</span><!-- new-content -->
 
 For example, the [US Core Observation Clinical Result Profile] effectiveDateTime is labeled *Must Support*. When claiming conformance to this profile:
 
@@ -241,14 +241,14 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 #### Must Support - Choice of Profile Elements
 
-There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the *Must Support* <span class="bg-success" markdown="1">or *Additional USCDI*</span><!-- new-content --> requirements. In such cases, the server <span class="bg-success" markdown="1">or certifying system</span><!-- new-content --> **SHALL** support at least one element, and the client application **SHALL** support all elements. Unfortunately, there is no way to define this in a computable way, but these instances are documented in the *Profile specific implementation guidance* sections.
+There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the *Must Support* <span class="bg-success" markdown="1">or *Additional USCDI*</span><!-- new-content --> requirements. In such cases, the Server <span class="bg-success" markdown="1">or Certifying System</span><!-- new-content --> **SHALL** support at least one element, and the Client application **SHALL** support all elements. Unfortunately, there is no way to define this in a computable way, but these instances are documented in the *Profile specific implementation guidance* sections.
 
 For example:
 <div class="bg-success" markdown="1">
 
 * [US Core MedicationRequest Profile] can represent that information is from a secondary source using a boolean flag in `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`. 
-   *  Although both are marked as *Must Support*, the server system is not required to support both, but **SHALL** support at least one of these elements.
-   *  The client application **SHALL** support both elements.
+   *  Although both are marked as *Must Support*, the Server system is not required to support both, but **SHALL** support at least one of these elements.
+   *  The Client application **SHALL** support both elements.
 
 {% include img.html img="Must_Support_MedicationRequest.reported.png" caption="Figure 13: US Core `MedicationRequest.reported[x]`" %}
 

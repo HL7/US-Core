@@ -68,7 +68,7 @@ Clients face challenges displaying the source data's times and timezone regardle
 
 >A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
 
-A common practice is to preserve the source data time offsets as the original offset or convert them to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration. Another is adding server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third is providing a client algorithm for resolving time offsets and time zones.
+A common practice is to preserve the source data time offsets as the original offset or convert them to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration. Another is adding server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third is providing a Client algorithm for resolving time offsets and time zones.
 
 #### Record or Update Data
 

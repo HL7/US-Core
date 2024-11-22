@@ -48,12 +48,12 @@ There is no single best practice for representing a scanned or narrative-only re
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify duplicate data.
+To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the Client will receive all the clinical information available for a patient and can easily identify duplicate data.
 
 * `DocumentReference.content.attachment.url`
 * `DiagnosticReport.presentedForm.url`
 
-For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers to implement the duplicate reference to allow clients to find Pathology reports or other Diagnostic Reports in either resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g., Pathology scan in DiagnosticReport), this wouldn't be required. However, at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in the proper use of these resources.
+For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers to implement the duplicate reference to allow Clients to find Pathology reports or other Diagnostic Reports in either resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g., Pathology scan in DiagnosticReport), this wouldn't be required. However, at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in the proper use of these resources.
 
 {% include img.html img="both-url.jpg" caption="Figure 2: Expose a PDF Report Through Both DiagnosticReport and DocumentReference" %}
 
@@ -103,7 +103,7 @@ This guide requires systems to implement the [US Core DiagnosticReport Profile f
 
 Systems may support other categories as well.
 
-The vendors that participated in developing this guide did not differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Therefore, client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
+The vendors that participated in developing this guide did not differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Therefore, Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
 The following **SHOULD** be exposed via DiagnosticReport
 * Imaging Narrative
@@ -121,17 +121,17 @@ Note that this guide focuses on exposing existing information, not how systems a
 
 The standard FHIR [search] API retrieves clinical notes and reports. In this guide, the US Core [CapabilityStatement] and the *Quick Start* sections for the US Core Clinical Notes and Diagnostic Report and US Core DocumentReference Profiles define the required search parameters and describe how they are used.
 
-Common client search scenarios include:
+Common Client search scenarios include:
 
-1. A client interested in all Radiology reports can use the following query:
+1. A Client interested in all Radiology reports can use the following query:
 
    `GET [base]/DiagnosticReport?patient=[id]&category=http://loinc.org|LP29684-5`
 
-1. A client interested in all Clinical Notes can use the following query:
+1. A Client interested in all Clinical Notes can use the following query:
 
    `GET [base]/DocumentReference?patient=[id]&category=clinical-note`
 
-1. A client interested in all Discharge Summary Notes can use the following query:
+1. A Client interested in all Discharge Summary Notes can use the following query:
 
   `GET [base]/DocumentReference?patient=[id]&type=http://loinc.org|18842-5`
 
@@ -140,7 +140,7 @@ Common client search scenarios include:
 ### Determining Server Note Type
 {: #using-expand}
 
-In addition to inspecting a server CapabilityStatement, a client can determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.
+In addition to inspecting a server CapabilityStatement, a Client can determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.
 
 #### Discovering Note and Report Types
 
@@ -193,7 +193,7 @@ When reviewing the minimal number of elements required for each Resource, the [F
 * Note types
 * Consistent Client access to scanned or narrative-only reports
 
-While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?", especially considering the variability of Note formats. For example, systems use text, XHTML, PDF, and CDA to capture clinical notes. This variability led the designers to select the DocumentReference and DiagnosticReport resources as index mechanisms to the underlying content. In other words, a client can query one of these resources, and it will return a pointer to a specific resource or the underlying binary content.
+While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?", especially considering the variability of Note formats. For example, systems use text, XHTML, PDF, and CDA to capture clinical notes. This variability led the designers to select the DocumentReference and DiagnosticReport resources as index mechanisms to the underlying content. In other words, a Client can query one of these resources, and it will return a pointer to a specific resource or the underlying binary content.
 
 For example, consider the following situation for a Discharge Summary Note:
 
@@ -221,8 +221,8 @@ However, in existing EHRs, the clinical impression is often contained within a b
 
 Footnotes
 
-[^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all `DiagnosticReport.category`="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize laboratory reports with DiagnosticReport.
+[^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables Clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a Client can request all `DiagnosticReport.category`="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize laboratory reports with DiagnosticReport.
 
-[^2]: The developers of this guide considered requiring Clients to query *both* DocumentReference and DiagnosticReport to get all the information for a patient. However, the requirement to query two places is potentially dangerous if a client doesn't understand or follow this requirement and queries only one resource type, potentially missing vital information from the other type.
+[^2]: The developers of this guide considered requiring Clients to query *both* DocumentReference and DiagnosticReport to get all the information for a patient. However, the requirement to query two places is potentially dangerous if a Client doesn't understand or follow this requirement and queries only one resource type, potentially missing vital information from the other type.
 
 {% include link-list.md %}

@@ -50,20 +50,20 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include representing-meds.md %}
 
 * The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or a reference using `MedicationRequest.reportedReference`.
-   *  Although both are marked as Must Support, the server system is not required to support both, but **SHALL** support at least one of these elements.
-   *  The client application **SHALL** support both elements.
+   *  Although both are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.
+   *  The Client application **SHALL** support both elements.
 
 
 
 - \*The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
-    - Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both, but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.
+    - Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Additional USCDI Requirements. The certifying Server system is not required to support both, but **SHALL** support at least one of these elements. The certifying Client application **SHALL** support both elements.
        - when using  `MedicationRequest.reasonReference`:
          - Servers **SHALL** support *at least one* target resource in `MedicationRequest.reasonReference`. Clients SHALL support all target resources in `MedicationRequest.reasonReference`.
          - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
 
 
 
-* Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
+* Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps Client applications identify duplicates.
 * Servers **SHALL** follow the guidance on the [Medication List] page and return all `active` medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 
 - \*  This profile uses the [US Core Medication Adherence Extension] to report medication adherence. This extension communicates whether a medication has been consumed according to instructions.

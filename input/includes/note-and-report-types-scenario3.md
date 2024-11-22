@@ -1,5 +1,5 @@
 
-A client is only interested in retrieving notes by class (Note, DocumentReference.class is updated to DocumentReference.category in FHIR R4).  The server responds with the single category of 'Clinical Notes':
+A Client is only interested in retrieving notes by class (Note, DocumentReference.class is updated to DocumentReference.category in FHIR R4).  The Server responds with the single category of 'Clinical Notes':
 
 **Request for DocumentReference note categories**
 
@@ -19,7 +19,7 @@ HTTP/1.1 200 OK
 ~~~
 {
   "resourceType": "ValueSet",
-  "id": "scenario3-server-documentreference-category",
+  "id": "scenario3-Server-documentreference-category",
   "url": "http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/documentreference-category",
   "version": "3.0.1",
   "name": "ArgonautDocumentReferenceCategoryCodes",

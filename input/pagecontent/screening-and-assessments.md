@@ -55,7 +55,7 @@ Whether based on simple observations or detailed assessments, clinicians may rec
 
 Local policies guide what is appropriate for the problem list and what is appropriate for an observation. For example, some clinics may consider social needs sensitive information inappropriate for the problem list. Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.
 
-Every server that supports the USDCI Data Class "Health Status/Assessments":
+Every Server that supports the USDCI Data Class "Health Status/Assessments":
 
 -  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].  
 -  When a *Simple Observation* or *Problem or Health Concern* is recorded based on a structured screening and assessment (see below), the *US Core Simple Observation Profile* **SHOULD** reference it using the `derivedFrom` element and the *US Core Condition Problems and Health Concerns Profile* using the `evidence.detail` element,
@@ -87,7 +87,7 @@ Note that the panels can be nested to create additional groupings of responses. 
 
 ###### Searching for Screening and Assessment Data
 
-Unlike QuestionnaireResponse, When Observations are used to record a set of Screening and Assessments responses, clients can query individual responses using the standard FHIR RESTful API search parameters. The example below is a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment:
+Unlike QuestionnaireResponse, When Observations are used to record a set of Screening and Assessments responses, Clients can query individual responses using the standard FHIR RESTful API search parameters. The example below is a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment:
 
 
 {% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %}
@@ -133,7 +133,7 @@ The category element is optional in US Core Procedure and US Core Goal, but impl
 
 </div><!-- new-content -->
 
- <span class= "bg-warning" markdown= "1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more beneficial to use queries based on a specific code or set of codes or to perform additional client-side filtering of query results.</span><!-- bg-warning -->
+ <span class= "bg-warning" markdown= "1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the Client's expectations. Clients may find it more beneficial to use queries based on a specific code or set of codes or to perform additional Client-side filtering of query results.</span><!-- bg-warning -->
 
 #### Screening and Assessment Codes
 
@@ -189,7 +189,7 @@ This information is also available as a [csv](tables/assessments-valuesets.csv) 
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
-US Core uses broadly defined value sets that contain concepts used across use cases, including SDOH. For the SDOH Clinical Care HL7 Implementation Guide, the Gravity Project has defined "Grouped Value Sets" across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests. Value sets for each SDOH domain are bundled together to create the groupings. The links below are to these Gravity Project-managed value sets in the [Value Set Authority Center (VSAC)]. In VSAC, clicking "Grouping Members" within the Value Set Details tab will present the many individual value sets in the group representing the various SDOH domains. These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.
+US Core uses broadly defined value sets that contain concepts used across use cases, including SDOH. For the SDOH Clinical Care HL7 Implementation Guide, the Gravity Project has defined "Grouped Value Sets" across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests. Value sets for each SDOH domain are bundled together to create the groupings. The links below are to these Gravity Project-managed value sets in the [Value Set Authority Center (VSAC)]. In VSAC, clicking "Grouping Members" within the Value Set Details tab will present the many individual value sets in the group representing the various SDOH domains. These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, Servers **SHOULD** use them.
 
 * [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion)
 * [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)

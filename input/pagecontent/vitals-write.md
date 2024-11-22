@@ -22,7 +22,7 @@ Servers providing the ability to write FHIR vital sign Observation resources fro
 
 Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps **SHOULD** also support the registration and authorization of apps with the `patient/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope or a broader version of this scope such as `patient/Observation.u`. Note that systems can support only limited [update](#updating-previously-submitted-observations) capabilities. 
 
-When offering a patient write capability, health systems may choose to enable or disable this capability based on factors such as the provider, patient, payer, app, and vital type, or may choose to enable the capability broadly. If patients and apps attempting to write data are not enabled, and this can be discerned during the authorization process, the server **SHALL** omit these unsupported scopes from the resulting access token. If an app uses an access token without the required scopes to submit an `Observation` or the patient is not enabled to write data, the server **SHALL** return an error and **SHOULD** include an `OperationOutcome` in the response body.
+When offering a patient write capability, health systems may choose to enable or disable this capability based on factors such as the provider, patient, payer, app, and vital type, or may choose to enable the capability broadly. If patients and apps attempting to write data are not enabled, and this can be discerned during the authorization process, the Server **SHALL** omit these unsupported scopes from the resulting access token. If an app uses an access token without the required scopes to submit an `Observation` or the patient is not enabled to write data, the Server **SHALL** return an error and **SHOULD** include an `OperationOutcome` in the response body.
 
 #### Provider-facing apps
 
@@ -36,13 +36,13 @@ Servers **SHALL** document supported scopes in the `scopes_supported` section of
 
 ### Resource Submission
 
-Servers **SHALL** support the submission of Observation resources that _are not_ the result of a calculation and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the server for vital sign Observation read requests.
+Servers **SHALL** support the submission of Observation resources that _are not_ the result of a calculation and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the Server for vital sign Observation read requests.
 
-Servers **MAY** support the submission of Observation resources that _are_ the result of a calculation (such as the "US Core Pediatric BMI for Age Observation Profile") and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the server for vital sign Observation read requests.
+Servers **MAY** support the submission of Observation resources that _are_ the result of a calculation (such as the "US Core Pediatric BMI for Age Observation Profile") and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the Server for vital sign Observation read requests.
 
-Servers **SHALL** respond to supported and valid vital sign Observation creation requests with a status code of `200 OK` and a content location header, or with a status code of `202 Accepted`. If a content location header is provided, the resources **SHALL** be visible in subsequent read API calls and accessible within the system in the same manner as other patient-submitted data. If a content location header is not provided, and the server does not subsequently make the resource accessible in read API calls, the server **SHALL** have a documented and discoverable reason why it was discarded (e.g., a log entry describing rejection during a review workflow or the applicability of a condition in the "Discarding" section below).
+Servers **SHALL** respond to supported and valid vital sign Observation creation requests with a status code of `200 OK` and a content location header, or with a status code of `202 Accepted`. If a content location header is provided, the resources **SHALL** be visible in subsequent read API calls and accessible within the system in the same manner as other patient-submitted data. If a content location header is not provided, and the Server does not subsequently make the resource accessible in read API calls, the Server **SHALL** have a documented and discoverable reason why it was discarded (e.g., a log entry describing rejection during a review workflow or the applicability of a condition in the "Discarding" section below).
 
-Servers **SHALL** support the creation of a single vital sign through a FHIR `create` operation, and **MAY** support the creation of multiple vital signs by submitting a FHIR `Batch` bundle. When batch creation is supported, clients **MAY** use this approach to indicate that a set of Observation resources should be reviewed as a group, and systems **MAY** use this information when sending notifications or displaying the data.
+Servers **SHALL** support the creation of a single vital sign through a FHIR `create` operation, and **MAY** support the creation of multiple vital signs by submitting a FHIR `Batch` bundle. When batch creation is supported, Clients **MAY** use this approach to indicate that a set of Observation resources should be reviewed as a group, and systems **MAY** use this information when sending notifications or displaying the data.
 
 Systems may choose to segregate data that originated from a patient from other vital sign data for the patient (for example, showing it on a separate patient flow sheet).
 
@@ -51,8 +51,8 @@ The workflow for submitted Observations is the responsibility of the receiving s
 #### Observation Elements
 
 `meta.tag` 
-- Client - When writing patient-mediated data into the server, provider-facing apps **SHALL** include a `Meta.tag` with a system of `http://hl7.org/fhir/us/core/CodeSystem/us-core-tags` and a value of `patient-supplied` to indicate that the data was supplied by a patient or patient designee (such as a parent or spouse) rather than by a healthcare provider.
-- Server - Systems **SHALL** associate the `patient-supplied` tag with vital signs provided by a patient written through this API, and **MAY** associate the tag with vital signs supplied by a patient regardless of how they arrive in the system. Provider-facing apps writing data supplied by a patient **SHALL** include this tag in the submitted Observation resources. The server **MAY** subsequently dissociate the tag from the data through an explicit reconciliation process.
+- Client - When writing patient-mediated data into the Server, provider-facing apps **SHALL** include a `Meta.tag` with a system of `http://hl7.org/fhir/us/core/CodeSystem/us-core-tags` and a value of `patient-supplied` to indicate that the data was supplied by a patient or patient designee (such as a parent or spouse) rather than by a healthcare provider.
+- Server - Systems **SHALL** associate the `patient-supplied` tag with vital signs provided by a patient written through this API, and **MAY** associate the tag with vital signs supplied by a patient regardless of how they arrive in the system. Provider-facing apps writing data supplied by a patient **SHALL** include this tag in the submitted Observation resources. The Server **MAY** subsequently dissociate the tag from the data through an explicit reconciliation process.
 
 <div class="stu-note" markdown="1">
 An alternate way to tag any patient-generated data would be to use the  code "PATAST" in the `meta.security` element of the resource:
@@ -63,26 +63,26 @@ We are seeking feedback from the community on whether this more compact approach
 </div><!-- stu-note --> 
 
 `encounter` 
-- Client - If populating this element, apps **SHALL** use a reference to an Encounter resource in the server, and **MAY** use the value returned by the `launch/encounter` SMART scope. 
-- Server - Systems **SHOULD** document whether the `encounter` element is required to create a vital sign. When not required, servers **MAY** determine this value based on context if it is omitted.
+- Client - If populating this element, apps **SHALL** use a reference to an Encounter resource in the Server, and **MAY** use the value returned by the `launch/encounter` SMART scope. 
+- Server - Systems **SHOULD** document whether the `encounter` element is required to create a vital sign. When not required, Servers **MAY** determine this value based on context if it is omitted.
 
 `subject` 
-- Client - Apps **SHALL** populate the `subject` reference with a reference to a Patient resource in the server. Patient-facing apps **SHOULD** populate this element based on the value returned as part of the `launch/patient` SMART scope.
+- Client - Apps **SHALL** populate the `subject` reference with a reference to a Patient resource in the Server. Patient-facing apps **SHOULD** populate this element based on the value returned as part of the `launch/patient` SMART scope.
  
 `device` 
-- Client - Apps **MAY** populate the `device` reference with a reference to the Device resource in the server or a contained Device resource within the Observation. This is the device used to measure the vital sign (e.g., a BP cuff), not the device used to transmit the data (e.g., a phone). Contained device resources **SHALL** populate at least one `deviceName` element. 
-- Server - When this value is populated with a reference to a Device resource on the server, servers **SHALL** return this reference in subsequent reads operations of the resource that was created. When this value is populated with a reference to a valid contained Device resource, servers **MAY** ignore the contained Device, return the contained Device as part of subsequent read operations, or create a Device resource in the system and return a reference to it in subsequent read operations. Servers **SHALL** not return an error due to the presence of a valid contained Device resource. Servers **SHOULD** document their behavior with regard to contained Device resources.
+- Client - Apps **MAY** populate the `device` reference with a reference to the Device resource in the Server or a contained Device resource within the Observation. This is the device used to measure the vital sign (e.g., a BP cuff), not the device used to transmit the data (e.g., a phone). Contained device resources **SHALL** populate at least one `deviceName` element. 
+- Server - When this value is populated with a reference to a Device resource on the Server, Servers **SHALL** return this reference in subsequent reads operations of the resource that was created. When this value is populated with a reference to a valid contained Device resource, Servers **MAY** ignore the contained Device, return the contained Device as part of subsequent read operations, or create a Device resource in the system and return a reference to it in subsequent read operations. Servers **SHALL** not return an error due to the presence of a valid contained Device resource. Servers **SHOULD** document their behavior with regard to contained Device resources.
 
 `performer` 
-- Client - Apps **SHOULD** populate the `performer` element with a reference to a resource in the server when the resource exists, or the app can create it. For patient-facing apps, if the app knows that a patient collected this data, the app **SHALL** set the `performer` to a reference to the patient based on the SMART launch context (this should also match the `Observation.subject`). If the relevant resource does not exist and the app cannot create it, the app **SHOULD** populate `performer.display`.
+- Client - Apps **SHOULD** populate the `performer` element with a reference to a resource in the Server when the resource exists, or the app can create it. For patient-facing apps, if the app knows that a patient collected this data, the app **SHALL** set the `performer` to a reference to the patient based on the SMART launch context (this should also match the `Observation.subject`). If the relevant resource does not exist and the app cannot create it, the app **SHOULD** populate `performer.display`.
 - Server - When this value is populated in a successful create operation, systems **SHALL** return it in subsequent read operations of the resource that was created. Note that `performer` is not currently required in the US Core vital signs profile.
 
 
 ### Discarding Observations
 
-For a given vital sign type, if many Observations are submitted with `effectiveDateTime` or `effectivePeriod` values that are close in time, a server **MAY** choose to discard a portion of these Observations or **MAY** reject submitted Observations with an appropriate OperationOutcome. Systems **SHALL** clearly document this behavior or the ways in which health systems may customize this behavior in the API documentation.
+For a given vital sign type, if many Observations are submitted with `effectiveDateTime` or `effectivePeriod` values that are close in time, a Server **MAY** choose to discard a portion of these Observations or **MAY** reject submitted Observations with an appropriate OperationOutcome. Systems **SHALL** clearly document this behavior or the ways in which health systems may customize this behavior in the API documentation.
 
-If a server determines that a vital sign is a duplicate of one it has already stored, the server **MAY** ignore the Observation or **MAY** reject the submitted Observation with an appropriate OperationOutcome. Systems **SHALL** clearly document this behavior or the ways in which health systems may customize this behavior in the API documentation.
+If a Server determines that a vital sign is a duplicate of one it has already stored, the Server **MAY** ignore the Observation or **MAY** reject the submitted Observation with an appropriate OperationOutcome. Systems **SHALL** clearly document this behavior or the ways in which health systems may customize this behavior in the API documentation.
 
 ### Updating Previously Submitted Observations
 

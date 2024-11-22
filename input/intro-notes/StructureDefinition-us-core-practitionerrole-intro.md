@@ -30,6 +30,6 @@ The following data elements must always be present ([Mandatory] definition) or m
   * Systems that primarily rely on NUCC codes instead of SNOMED CT to represent role codes can use the Da Vinci HRex [NUCC to SNOMED CT Mappings] to aid in translations. 
 </div><!-- new-content --> 
 
-* Clients can request servers return the Practitioner and Endpoint resources using `_include`. See the [Quick Start] section below for further guidance.
+* Clients can request Servers return the Practitioner and Endpoint resources using `_include`. See the [Quick Start] section below for further guidance.
 
 {% include link-list.md %}

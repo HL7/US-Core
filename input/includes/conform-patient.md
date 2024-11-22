@@ -4,12 +4,12 @@
   "resourceType": "CapabilityStatement",
   ...
   "instantiates": [
-    "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
+    "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server"
   ],
   ...
   "rest": [
     {
-      "mode": "server",
+      "mode": "Server",
       ...
       "resource": [
         ...
@@ -100,7 +100,7 @@
               "name": "identifier",
               "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-identifier",
               "type": "token",
-              "documentation": "The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\nThe server **SHALL** support both."
+              "documentation": "The Client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\nThe Server **SHALL** support both."
             },
             {
               "name": "name",

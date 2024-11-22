@@ -19,7 +19,7 @@ HTTP/1.1 200 OK
 ~~~
 {
   "resourceType": "ValueSet",
-  "id": "scenario1-server-write-contenttype",
+  "id": "scenario1-Server-write-contenttype",
   "url": "http://acme.org/fhir/ValueSet/in-mimetypes-1",
   "version": "3.0.1",
   "name": "ArgonautServerWriteMimeTypes",
@@ -67,7 +67,7 @@ HTTP/1.1 200 OK
 ~~~
 {
   "resourceType": "ValueSet",
-  "id": "scenario1-server-read-contenttype",
+  "id": "scenario1-Server-read-contenttype",
   "url": "http://acme.org/fhir/ValueSet/out-mimetypes-1",
   "version": "3.0.1",
   "name": "ArgonautServerReadMimeTypes",

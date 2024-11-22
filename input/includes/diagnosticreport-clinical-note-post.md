@@ -1,5 +1,5 @@
 
-An example to demonstrate writing a note to the server.
+An example to demonstrate writing a note to the Server.
 
 **Clinical Note**
 
