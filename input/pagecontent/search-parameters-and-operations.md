@@ -46,7 +46,7 @@ These SearchParameter are used solely to document Server and Client expectations
 - `modifier`
 - `chain`
 
-For search operations, Servers and Clients **SHOULD** use the standard FHIR SearchParameter.
+They **SHALL NOT** be interpreted as search parameters for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters.
 
 {% include uscore_sp_list.md %}
 
