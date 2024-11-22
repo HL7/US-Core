@@ -27,7 +27,10 @@ subject:
   display: Amy Shaw
 encounter:
   display: ER Visit
-effectiveDateTime: '2019-02-03T19:43:30.000Z'
+effectiveDateTime: 2019-02-03T19:43:30+00:00
+performer:
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
 valueString: 'LINES AND TUBES: None.\n LUNGS AND PLEURA:\n Clear lungs. Normal pulmonary
   vascularity.\n No pleural effusion.\n No pneumothorax.\n HEART, MEDIASTINUM AND
   HILA:\n Heart is normal in size.\n Normal mediastinal and hilar contour.\n BONES

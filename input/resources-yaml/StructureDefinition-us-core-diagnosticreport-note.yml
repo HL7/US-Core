@@ -137,6 +137,34 @@ differential:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
     mustSupport: true
+
+
+# ============= new for USCDI 5 =================
+  - id: DiagnosticReport.resultsInterpreter
+    path: DiagnosticReport.resultsInterpreter
+    type:
+      - code: Reference
+        targetProfile:
+          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+        _targetProfile:
+          - extension:
+              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+                valueBoolean: true
+          - extension:
+              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+                valueBoolean: false
+          - extension:
+              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+                valueBoolean: false
+          - extension:
+              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+                valueBoolean: false
+    mustSupport: true
+# =================================================
+
   - id: DiagnosticReport.result
     path: DiagnosticReport.result
     type:

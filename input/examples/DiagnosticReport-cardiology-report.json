@@ -43,6 +43,12 @@
         "reference": "Patient/example"
     },
     "effectiveDateTime": "2021-11-10T21:39:30.000Z",
+    "resultsInterpreter": [
+        {
+            "reference": "Practitioner/practitioner-1",
+            "display": "Dr Ronald Bone"
+        }
+    ],
     "result": [
         {
             "reference": "Observation/qrs-dur-ekg-lead"

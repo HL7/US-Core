@@ -29,7 +29,7 @@
     - `DiagnosticReport.resultsInterpreter` to [US Core DiagnosticReport Profile for Laboratory Results Reporting](StructureDefinition-us-core-diagnosticreport-lab.html)
     - `DiagnosticReport.resultsInterpreter` to [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html)
     - `Goal.expressedBy` to [US Core Goal Profile](StructureDefinition-us-core-goal.html)
-    - `Immunization.performer.actor`to [US Core Immunization Profile](StructureDefinition-us-core-immunization.html)
+    - `Immunization.performer.actor` to [US Core Immunization Profile](StructureDefinition-us-core-immunization.html)
   
     and these *Additional USCDI* elements to the following profiles:
 

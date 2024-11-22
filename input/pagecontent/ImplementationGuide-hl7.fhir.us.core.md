@@ -39,15 +39,3 @@ The following [IG Parameters](https://confluence.hl7.org/display/FHIR/Implementa
 {% for p in site.data.ig.definition.parameter -%}
 - code: {{p.code}}<br/>value: {{p.value }}
 {% endfor %}
-
-<!-- {% raw %}
-
- ### IG Page Links
-
-Relative links to all the pages
-
-~~~
-{% include page-link-list.md %}
-~~~
-
-{% endraw %} -->

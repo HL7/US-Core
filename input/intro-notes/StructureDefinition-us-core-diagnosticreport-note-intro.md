@@ -16,7 +16,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Diagnostic Report Must Have:**
 
 1. a status
-1. a category
+1. a category*
 1. a code describing the type of report
 1. a patient
 1. the diagnostically relevant time (known as the "effective time" and typically the time of the procedure)*
@@ -29,9 +29,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. encounter associated with DiagnosticReport
 1. instant the report was released
 1. an author (actor) producing the report
-2. a reference to one or more test results
-2. a reference to one or more images
-4. a reference to the full report (presentedForm)
+2. <span class="bg-success" markdown="1">a results interpreter*</span><!-- new-content -->
+3. a reference to one or more test results
+4. a reference to one or more images
+5. a reference to the full report (presentedForm)
+
+\* see guidance below
 
 **Profile Specific Implementation Guidance:**
 
@@ -40,7 +43,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   - It is up to the data source to categorize the documents they send. Therefore, clients need to understand that data categorization is somewhat subjective, and the categorization applied by the source may not align with the client's expectations. Any linkages between specific LOINC codes and the LP-type codes may be used as guidance. If LOINC develops a hierarchy or categorization to align these concepts, US Core will be updated.
 - A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g., a system may categorize an orthopedic note as cardiology.)
 - For Diagnostic Imaging Reports systems **SHOULD** support using the subset of  LOINC codes defined in CONF-DIR-19 in *HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) - Universal Realm, Release 1.0.
-
+{% include provenance-author-bullet.md %}
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access to the images.
 
    * <span class="bg-success" markdown="1">The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).</span><!-- new-content -->

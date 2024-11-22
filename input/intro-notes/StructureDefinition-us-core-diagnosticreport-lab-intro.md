@@ -26,14 +26,18 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a timestamp when the resource last changed*
 1. encounter associated with DiagnosticReport
-2. who issues the report
-3. a result
+2. who issues the report*
+3. <span class="bg-success" markdown="1">a results interpreter*</span><!-- new-content -->
+4. a result
+
+\* see guidance below
 
 **Profile Specific Implementation Guidance:**
 
 * Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed. For example:
    -  providing both a local system code and a LOINC code that it maps to
    -  providing a more specific category code to the "LAB" category code, such as "CH" (chemistry), in an additional coding element.
+{% include provenance-author-bullet.md %}
 * Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New laboratory reports

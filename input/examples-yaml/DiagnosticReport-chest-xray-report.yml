@@ -29,6 +29,12 @@ issued: '2019-02-04T19:43:30.000Z'
 performer:
 - reference: Practitioner/practitioner-1
   display: Ronald Bone
+
+# =========== New for USCDI 5 =============
+resultsInterpreter: 
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
+# ==========================================
 result:
 - reference: Observation/xray-chest-findings
   display: Findings

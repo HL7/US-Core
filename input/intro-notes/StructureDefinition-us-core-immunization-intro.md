@@ -26,6 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. the encounter the immunization was part of
 4. where the vaccine was administered
 5. <span class="bg-success" markdown="1">vaccine lot number*</span><!-- new-content -->
+6. <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
 
 *see guidance below
 
@@ -37,5 +38,6 @@ The following data elements must always be present ([Mandatory] definition) or m
     - Be aware that there is a *10-digit (with dashes)* NDC format displayed on drug packaging and an *11-digit (no dashes)* NDC format for billing and prescribing (for example, "49281-121-65" and "49281012165"). Normalization may be required to avoid validation errors and warnings.
     - The CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using the CVX and 11-digit NDC codes based on this table.
     - <span class="bg-success" markdown="1">*Although there is no guarantee that vaccine lot numbers are globally unique, they effectively are when combined with the vaccine code. NDC codes are defined by manufacturer, and CVX codes, which are much less granular, are often limited to a single product made by a single manufacturer. Implementers **MAY** communicate the `Immunization.manufacturer` as well to ensure global uniqueness to lot numbers.</span><!-- new-content -->
+{% include provenance-author-bullet.md %}
 
 {% include link-list.md %}

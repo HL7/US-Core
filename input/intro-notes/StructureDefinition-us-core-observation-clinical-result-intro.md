@@ -22,16 +22,20 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. encounter associated with Observation
 2. a time indicating when the measurement was taken
-3. a result value
+3. <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
+4. a result value
    - if the result value is a numeric quantity, a standard [UCUM] unit
-4. a reason why the data is absent*
+5. a reason why the data is absent*
 
 \* see guidance below
 
 **Profile Specific Implementation Guidance:**
 
-{% include observation_guidance_1.md category="procedure, exam or laboratory" recommendation="Servers **SHOULD** use the base FHIR [Observation Category Codes]." %}
-- For a *starter set* of example clinical test LOINC codes, see [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter].
 - See the [US Core Laboratory Result Observation Profile] to represent laboratory test results.
+- {% include observation_guidance_1.md category="procedure, exam or laboratory" recommendation="Servers **SHOULD** use the base FHIR [Observation Category Codes]." %}
+- For a *starter set* of example clinical test LOINC codes, see [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter].
+{% include provenance-author-bullet.md %}
+
+
 
 {% include link-list.md %}

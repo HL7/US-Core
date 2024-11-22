@@ -47,8 +47,14 @@
         "display": "Cardiology Consult"
     },
     "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
+    "performer": [
+        {
+            "reference": "Practitioner/practitioner-1",
+            "display": "Dr Ronald Bone"
+        }
+    ],
     "valueQuantity": {
-        "value": 1,
+        "value": 1.0,
         "unit": "s",
         "system": "http://unitsofmeasure.org",
         "code": "s"

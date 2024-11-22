@@ -106,13 +106,12 @@ Transformation of data from one format to another **MAY** change the authorship 
 
 <div class="bg-success" markdown="1">
 
-US Core Profiles contain elements that represent "small-p" provenance information about how the resource was obtained, which overlaps with the functionality of the Provenance resource discussed above. The US Core elements that communicate the author and author roles corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals* are listed in the table below and on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the target resource type referenced by it (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled [Must Support} or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.
+the functionality of the Provenance resource discussed above. The table below lists the US Core elements that communicate the author and author roles corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals*. They are also documented on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled [Must Support] or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.
 
 ##### Author and Author Role Data Elements
 
-
-The **bold asterisked** text indicates the elements are *Must Support* or "*Additional USCDI Requirements*, and target resources are *Must Support*.
-The following  US Core Profiles were not included because they are typically not associated with individual authorship:
+The elements and target resources listed in bold asterisked text indicate that they are *Must Support* or *Additional USCDI Requirements*.
+The following US Core Profiles were omitted because they are typically not associated with individual authorship:
 
 - US Core Encounter
 - US Core Location

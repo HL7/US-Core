@@ -1,9 +1,7 @@
 {
     "resourceType": "Observation",
+    "id": "pack-years-example",
     "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
-        ],
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
@@ -13,9 +11,11 @@
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
                 "valueMarkdown": "This example for the *US Core Smokingstatus Profile* shows a Quantitative result."
             }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
         ]
     },
-    "id": "pack-years-example",
     "status": "final",
     "category": [
         {
@@ -43,9 +43,15 @@
         "reference": "Patient/example",
         "display": "Amy Shaw"
     },
-    "effectiveDateTime": "2016-03-18T05:27:04Z",
+    "effectiveDateTime": "2016-03-18T05:27:04+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/practitioner-1",
+            "display": "Dr Ronald Bone"
+        }
+    ],
     "valueQuantity": {
-        "value": 26,
+        "value": 26.0,
         "unit": "pack-years",
         "system": "http://unitsofmeasure.org",
         "code": "{pack-years}"

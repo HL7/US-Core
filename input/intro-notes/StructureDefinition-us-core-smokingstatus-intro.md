@@ -18,15 +18,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a code for smoking observation*
 1. a patient
 1. when the observation occurred
-2. a result value*
+3. <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
+3. a result value*
 
 \* see guidance below
 
 **Profile Specific Implementation Guidance:**
 
-
-
 - \* The *Smoking Status Type* Value Set on `Observation.code` is a "starter" set of concepts to capture smoking status, and the *Smoking Status Comprehensive* Value Set for `Observation.valueCodeableConcept` contains terms representing nicotine, smoking, vaping, chew, and snuff use to encourage the use of this profile for other smoking and nicotine questions.
+{% include provenance-author-bullet.md %}
 
 
 {% include link-list.md %}

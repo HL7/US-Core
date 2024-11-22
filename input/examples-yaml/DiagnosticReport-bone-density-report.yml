@@ -25,6 +25,13 @@ code:
 subject:
   reference: Patient/example
 effectiveDateTime: '2021-11-10T19:30:46-08:00'
+
+# =========== New for USCDI 5 =============
+resultsInterpreter: 
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
+# ==========================================
+
 result:
 - reference: Observation/dxa-hip-l-z-score-bmd
 - reference: Observation/dxa-hip-l-t-score-bmd

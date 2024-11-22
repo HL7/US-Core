@@ -25,7 +25,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Observation Must Support:**
 
-1.  <span class="bg-success" markdown="1">a performer</span><!-- new-content -->
+1.  <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
 3. a result value for the average systolic blood pressure
 4. a result value for the average diastolic blood pressure
 5.  a reason if the value is absent*
@@ -40,6 +40,7 @@ The following data elements must always be present ([Mandatory] definition) or m
    -  providing more specific codes
 
   a code system value **SHOULD** be supplied for each additional code.
+{% include provenance-author-bullet.md %}
 - \*Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
   - the `Observation.value[x]` element **SHALL** be omitted
   - An Observation without a systolic or diastolic result value **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`

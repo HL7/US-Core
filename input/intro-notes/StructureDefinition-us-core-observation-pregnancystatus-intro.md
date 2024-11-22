@@ -23,10 +23,17 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a category code of "social-history"
 
+<div class="bg-success" markdown="1">
+
+{% include additional-requirements-intro.md type="Observation" plural="false" %}
+
+1. a performer*
+</div><!-- new-content -->
 
 **Profile Specific Implementation Guidance:**
 
 - To represent the patient's  *intent* to become pregnant, use the [US Core Observation Pregnancy Intent Profile].
+{% include provenance-author-bullet.md %}
 - The [US Core Pregnancy Status Codes] value set includes SNOMED CT codes and the HL7 V3 code for the concept "unknown". These codes have historically been used to communicate the pregnancy status of a patient.
 
 {% include link-list.md %}

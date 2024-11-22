@@ -24,6 +24,13 @@ performer:
 - display: Acme Laboratory, Inc
   reference: Organization/acme-lab
 resourceType: DiagnosticReport
+
+# =========== New for USCDI 5 =============
+resultsInterpreter: 
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
+# ==========================================
+
 result:
 - display: LEUKOCYTES
   reference: Observation/cbc-leukocytes

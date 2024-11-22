@@ -13,7 +13,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Observation Must Support:**
 
-1. <span class="bg-success" markdown="1">a performer</span><!-- new-content -->
+1. <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
 2. a result value
     - if the result value is a numeric quantity, a standard [UCUM] unit
 3. a reason if the value is absent*
@@ -24,6 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 {% include vitals-guidance.md %}
+{% include provenance-author-bullet.md %}
 
 
 <div class="stu-note" markdown="1">

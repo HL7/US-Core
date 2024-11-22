@@ -27,7 +27,10 @@ subject:
   display: Amy Shaw
 encounter:
   display: Bone Scan
-effectiveDateTime: '2021-11-10T19:14:41.088720-08:00'
+effectiveDateTime: 2021-11-10T19:14:41.088720-08:00
+performer:
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
 valueQuantity:
   value: 0.631
   unit: g/cm2

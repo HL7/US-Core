@@ -12,10 +12,10 @@
                 "valueMarkdown": "This is an At home in vitro test example for the *US Core Observation Lab Profile*, with a coded result value."
             }
         ],
+        "lastUpdated": "2021-01-28T16:06:21-05:00",
         "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-        ],
-        "lastUpdated": "2021-01-28T16:06:21-05:00"
+        ]
     },
     "status": "final",
     "category": [
@@ -47,13 +47,18 @@
         "display": "Office Visit"
     },
     "effectiveDateTime": "2021-01-28T16:06:21-05:00",
+    "performer": [
+        {
+            "reference": "Patient/example"
+        }
+    ],
     "valueCodeableConcept": {
         "coding": [
             {
                 "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/731000124108",
                 "code": "260373001",
-                "display": "Detected",
-                "version": "http://snomed.info/sct/731000124108"
+                "display": "Detected"
             }
         ]
     },

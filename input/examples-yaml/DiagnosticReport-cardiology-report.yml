@@ -25,6 +25,13 @@ code:
 subject:
   reference: Patient/example
 effectiveDateTime: '2021-11-10T21:39:30.000Z'
+
+# =========== New for USCDI 5 =============
+resultsInterpreter: 
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
+# ==========================================
+
 result:
 - reference: Observation/qrs-dur-ekg-lead
 - reference: Observation/pulse-intensity-palpation

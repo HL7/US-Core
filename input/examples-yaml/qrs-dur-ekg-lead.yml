@@ -27,9 +27,12 @@ subject:
   display: Amy Shaw
 encounter:
   display: Cardiology Consult
-effectiveDateTime: '2021-11-10T16:48:57.246958-08:00'
+effectiveDateTime: 2021-11-10T16:48:57.246958-08:00
+performer:
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
 valueQuantity:
-  value: 60
+  value: 60.0
   unit: ms
   system: http://unitsofmeasure.org
   code: ms
