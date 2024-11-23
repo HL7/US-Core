@@ -29,7 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. contact detail (e.g., a telephone number or an email address)
 2. a communication language*
-3. <span class="bg-success" markdown="1">interpreter required flag*</span><!-- new-content -->
+3. <span class="bg-success" markdown="1">Interpreter Needed flag*</span><!-- new-content -->
 4. a race*
 5. an ethnicity*
 6. a tribal affiliation
@@ -55,10 +55,10 @@ The following data elements must always be present ([Mandatory] definition) or m
   - *Date of Death* is communicated using the `Patient.deceasedDateTime` element.
     - Although `Patient.deceased[x]` is marked as 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜, Certifying Systems are not required to support both, but **SHALL** support at least `Patient.deceasedDateTime`
   - <span class="bg-success" markdown="1">*Name to Use* is represented by setting `Patient.name.use` to "usual".</span><!-- new-content -->
-  - Previous name is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.
+  - *Previous name* is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.
   - *Suffix* is represented using the `Patient.name.suffix` element.
   - *Previous Address* is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.
-  - <span class="bg-success" markdown="1">Servers can use the [US Core Interpreter Required Extension] on the US Core Patient or [US Core Encounter Profiles] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">Servers can use the [US Core Interpreter Needed Extension] on the US Core Patient or [US Core Encounter Profiles] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.</span><!-- new-content -->
      - <span class="bg-success" markdown="1">When multiple languages are represented, systems **MAY** designate the patient's *Preferred Language* in the `Communication.preferred` element or by using the FHIR standard [Patient Proficiency Extension] and infer a patient's language service needs from it.</span><!-- new-content -->
   - The [Patient example] demonstrates how these elements are represented.
 

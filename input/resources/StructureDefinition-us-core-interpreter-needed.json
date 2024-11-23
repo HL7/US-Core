@@ -1,12 +1,12 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-interpreter-required",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required",
-    "name": "USCoreInterpreterRequiredExtension",
-    "title": "US Core Interpreter Required Extension",
+    "id": "us-core-interpreter-needed",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed",
+    "name": "USCoreInterpreterNeededExtension",
+    "title": "US Core Interpreter Needed Extension",
     "status": "active",
     "date": "2024-09-11",
-    "description": "This extension indicates the individual's need for an interpreter to communicate healthcare information in a language other than the default language of the organization.",
+    "description": "This extension indicates the individual's need for an interpreter to communicate healthcare information in a language other than the default language of the organization. It has the same meaning as the LOINC [54588-9](https://loinc.org/54588-9) (Interpreter needed)",
     "kind": "complex-type",
     "abstract": false,
     "context": [
@@ -56,7 +56,7 @@
                         "display": "Interpreter needed"
                     }
                 ],
-                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required"
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed"
             },
             {
                 "id": "Extension.value[x]",

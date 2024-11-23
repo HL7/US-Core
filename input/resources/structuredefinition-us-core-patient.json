@@ -240,7 +240,7 @@
                     {
                         "code": "Extension",
                         "profile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed"
                         ]
                     }
                 ],
@@ -313,7 +313,8 @@
                     }
                 ],
                 "path": "Patient.name.use",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: usual | official | temp | nickname | anonymous | old | maiden"
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: usual | official | temp | nickname | anonymous | old | maiden",
+                "comment": "The [United States Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) Patient Demographics/Information Data Element, *Name to Use*, is represented by the code \"usual\", and, *Previous Name*, by the code \"old\"."
             },
             {
                 "id": "Patient.name.family",

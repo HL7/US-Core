@@ -111,7 +111,7 @@
 ,Patient Demographics,US Core Patient Profile | US Core Gender Identity Extension,Gender Identity,Patient,Patient,Gender Identity Extension,Patient.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity'),,,,,,,,,,
 ,Patient Demographics,US Core Observation Sexual Orientation Profile,Sexual Orientation,Observation,Observation,,Observation,,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Preferred Language,Patient,Patient,,Patient.communication,,,,,,,,,,
-,Patient Demographics,US Core Patient Profile | US Core Encounter Profile,Interpreter Needed,Patient | Encounter,Patient | Encounter,US Core Interpreter Required Extension,Patient.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required'') | Encounter.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-required'') ,,,,,,,,,,
+,Patient Demographics,US Core Patient Profile | US Core Encounter Profile,Interpreter Needed,Patient | Encounter,Patient | Encounter,US Core Interpreter Required Extension,Patient.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed'') | Encounter.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed'') ,,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Address,Patient,Patient,,Patient.address,,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Previous Address,Patient,Patient,,Patient.address,,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Email,Patient,Patient,,Patient.telecom,,,,,,,,,,

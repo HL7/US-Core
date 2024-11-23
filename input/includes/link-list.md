@@ -216,7 +216,7 @@
 [Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
 [Searching Using lastUpdated]: general-guidance.html#searching-using-lastupdated
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
-[Servers Requiring Status]: general-requirements.html#search-for-Servers-requiring-status
+[Servers Requiring Status]: general-requirements.html#search-for-servers-requiring-status
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Structured Data Capture (SDC) Questionnaire Response Profile]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaireresponse.html

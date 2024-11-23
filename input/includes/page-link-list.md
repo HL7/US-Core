@@ -1062,13 +1062,13 @@
 [US Core Gender Identity Extension - XML Representation]: StructureDefinition-us-core-genderIdentity.profile.xml.html
 [US Core Gender Identity Extension - JSON Representation]: StructureDefinition-us-core-genderIdentity.profile.json.html
 [US Core Gender Identity Extension - TTL Representation]: StructureDefinition-us-core-genderIdentity.profile.ttl.html
-[US Core Interpreter Required Extension]: StructureDefinition-us-core-interpreter-required.html
-[US Core Interpreter Required Extension - Definitions]: StructureDefinition-us-core-interpreter-required-definitions.html
-[US Core Interpreter Required Extension - Mappings]: StructureDefinition-us-core-interpreter-required-mappings.html
-[US Core Interpreter Required Extension - Testing]: StructureDefinition-us-core-interpreter-required-testing.html
-[US Core Interpreter Required Extension - XML Representation]: StructureDefinition-us-core-interpreter-required.profile.xml.html
-[US Core Interpreter Required Extension - JSON Representation]: StructureDefinition-us-core-interpreter-required.profile.json.html
-[US Core Interpreter Required Extension - TTL Representation]: StructureDefinition-us-core-interpreter-required.profile.ttl.html
+[US Core Interpreter Needed Extension]: StructureDefinition-us-core-interpreter-needed.html
+[US Core Interpreter Needed Extension - Definitions]: StructureDefinition-us-core-interpreter-needed-definitions.html
+[US Core Interpreter Needed Extension - Mappings]: StructureDefinition-us-core-interpreter-needed-mappings.html
+[US Core Interpreter Needed Extension - Testing]: StructureDefinition-us-core-interpreter-needed-testing.html
+[US Core Interpreter Needed Extension - XML Representation]: StructureDefinition-us-core-interpreter-needed.profile.xml.html
+[US Core Interpreter Needed Extension - JSON Representation]: StructureDefinition-us-core-interpreter-needed.profile.json.html
+[US Core Interpreter Needed Extension - TTL Representation]: StructureDefinition-us-core-interpreter-needed.profile.ttl.html
 [US Core Jurisdiction Extension]: StructureDefinition-us-core-jurisdiction.html
 [US Core Jurisdiction Extension - Definitions]: StructureDefinition-us-core-jurisdiction-definitions.html
 [US Core Jurisdiction Extension - Mappings]: StructureDefinition-us-core-jurisdiction-mappings.html

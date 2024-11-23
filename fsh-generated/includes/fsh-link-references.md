@@ -261,7 +261,7 @@
 [USCoreHeartRateProfile]: StructureDefinition-us-core-heart-rate.html
 [USCoreImmunizationProfile]: StructureDefinition-us-core-immunization.html
 [USCoreImplantableDeviceProfile]: StructureDefinition-us-core-implantable-device.html
-[USCoreInterpreterRequiredExtension]: StructureDefinition-us-core-interpreter-required.html
+[USCoreInterpreterNeededExtension]: StructureDefinition-us-core-interpreter-needed.html
 [USCoreJurisdictionExtension]: StructureDefinition-us-core-jurisdiction.html
 [USCoreLaboratoryResultObservationProfile]: StructureDefinition-us-core-observation-lab.html
 [USCoreLaboratoryTestCodes]: ValueSet-us-core-laboratory-test-codes.html
