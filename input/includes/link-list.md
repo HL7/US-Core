@@ -3,7 +3,7 @@
 <!-- IG Pages (Including IG Artifacts -->
 {% include page-link-list.md %}
 [$docref operation]: OperationDefinition-docref.html
-[$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html "An operation used to create a simple collection of codes suitable for use for data entry or validation"
+[$expand]: {{site.data.fhir.path}}valueset-operation-expand.html "An operation used to create a simple collection of codes suitable for use for data entry or validation"
 [$expand]: {{site.data.fhir.path}}valueset-operation-expand.html "An operation used to create a simple collection of codes suitable for use for data entry or validation"
 [(how to search by date)]: {{site.data.fhir.path}}search.html#date
 [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
@@ -48,9 +48,9 @@
 [Communications]: {{site.data.fhir.path}}security.html#http
 [Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
 [Conformance Requirements for Client]: CapabilityStatement-us-core-client.html "Conformance Requirements for Client Page"
-[Conformance Requirements for Server]: CapabilityStatement-us-core-Server.html "Conformance Requirements for Server Page"
+[Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
 [Conformance Requirements]: capability-statements.html "CapabilityStatements defined for this Guide"
-[Conformance requirements for the US Core Server]: CapabilityStatement-us-core-Server.html
+[Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [Contained resources]: {{site.data.fhir.path}}references.html#contained
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
@@ -59,7 +59,7 @@
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [Deletion Safety Checks]: {{site.data.fhir.path}}safety.html#conformance
 [Device search parameters]: {{site.data.fhir.path}}device.html#search
-[DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
+[DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
 [Direct address]: https://www.healthit.gov/sites/default/files/directbasicsforprovidersqa_05092014.pdf
 [Directory of published versions]: {{site.data.fhir.canonical}}/history.html
@@ -256,7 +256,6 @@
 [US Core Pediatric Head Occipital Frontal Circumference Observation Profile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [US Core SMART Scopes]: scopes.html#smart-scopes
 [US Core Security]: security.html
-[US Core Server Capability Statement]: CapabilityStatement-us-core-Server.html
 [US Realm Steering Committee (USRSC)]: https://confluence.hl7.org/display/USR/US+Realm+Steering+Committee
 [USCDI ONDEC process]: https://www.healthit.gov/isa/ONDEC
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2

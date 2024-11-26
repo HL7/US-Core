@@ -31,11 +31,11 @@
 [US Core Client CapabilityStatement - XML Representation]: CapabilityStatement-us-core-client.xml.html
 [US Core Client CapabilityStatement - JSON Representation]: CapabilityStatement-us-core-client.json.html
 [US Core Client CapabilityStatement - TTL Representation]: CapabilityStatement-us-core-client.ttl.html
-[US Core Server CapabilityStatement]: CapabilityStatement-us-core-Server.html
-[US Core Server CapabilityStatement - Testing]: CapabilityStatement-us-core-Server-testing.html
-[US Core Server CapabilityStatement - XML Representation]: CapabilityStatement-us-core-Server.xml.html
-[US Core Server CapabilityStatement - JSON Representation]: CapabilityStatement-us-core-Server.json.html
-[US Core Server CapabilityStatement - TTL Representation]: CapabilityStatement-us-core-Server.ttl.html
+[US Core Server CapabilityStatement]: CapabilityStatement-us-core-server.html
+[US Core Server CapabilityStatement - Testing]: CapabilityStatement-us-core-server-testing.html
+[US Core Server CapabilityStatement - XML Representation]: CapabilityStatement-us-core-server.xml.html
+[US Core Server CapabilityStatement - JSON Representation]: CapabilityStatement-us-core-server.json.html
+[US Core Server CapabilityStatement - TTL Representation]: CapabilityStatement-us-core-server.ttl.html
 [US Core Fetch DocumentReference]: OperationDefinition-docref.html
 [US Core Fetch DocumentReference - Testing]: OperationDefinition-docref-testing.html
 [US Core Fetch DocumentReference - XML Representation]: OperationDefinition-docref.xml.html

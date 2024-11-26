@@ -58,7 +58,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   |---|---|---|---|
   |Laboratory Order|[LOINC Common Laboratory Orders Value Set]|[extensible]|The LOINC Common Laboratory Orders Value Set is a ‘starter set’ for mapping commonly used laboratory orders. It does not attempt to include all possible laboratory order codes. For additional information on LOINC Common Laboratory Orders Value Set, refer to [www.loinc.org/usage/orders].|
   |Imaging Order|[LOINC Radiology Codes]|[preferred]|The LOINC Radiology Codes include all imaging codes minus concepts that are deprecated or discouraged.|
-  |Clinical Test Order|[LOINC Clinical Test Codes]|[example]|LOINC Clinical Test Codes include all non-laboratory and non-imaging clinical test codes that represent clinical tests.|
+  |Clinical Test Order|[LOINC Clinical Test Codes]|[example]|LOINC Clinical Test Codes include non-laboratory and non-imaging clinical test codes that represent clinical tests.|
   {:.grid}
 
   </div><!-- new-content -->

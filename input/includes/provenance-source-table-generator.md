@@ -44,7 +44,7 @@ with the following columns:
 <!-- <th>Row #</th> -->
 <th>US Core Profile</th>
 <!-- <th>Survey 2 Results</th> -->
-<th>Data Elemnt Corresponding to Author Provenance</th>
+<th>Data Element Corresponding to Author Provenance</th>
 <th>Target Resource Types Corresponding to Author Role Provenance</th>
 </tr>
 </thead>
