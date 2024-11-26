@@ -1,102 +1,92 @@
 {
-    "resourceType": "Observation",
-    "id": "serum-total-bilirubin",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Serum Total Bilirubin Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a serum total bilirubin example for the *US Core Observation Lab Profile*."
-            }
-        ],
-        "lastUpdated": "2005-07-07T15:29:58.597000+00:00",
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-        ]
-    },
-    "status": "final",
-    "category": [
+  "resourceType": "Observation",
+  "id": "serum-total-bilirubin",
+  "meta": {
+    "lastUpdated": "2005-07-07T15:29:58.597000+00:00",
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|8.0.0-ballot|8.0.0-ballot|8.0.0-ballot"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "laboratory",
-                    "display": "Laboratory"
-                }
-            ],
-            "text": "Laboratory"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
         }
+      ],
+      "text": "Laboratory"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "1975-2",
+        "display": "Bilirub SerPl-mCnc"
+      }
     ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "1975-2",
-                "display": "Bilirub SerPl-mCnc"
-            }
-        ],
-        "text": "Bilirub SerPl-mCnc"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "effectiveDateTime": "2005-07-07",
-    "performer": [
+    "text": "Bilirub SerPl-mCnc"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-07",
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-1",
+      "display": "Dr Ronald Bone"
+    }
+  ],
+  "valueQuantity": {
+    "value": 8.6,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mg/dL"
+  },
+  "interpretation": [
+    {
+      "coding": [
         {
-            "reference": "Practitioner/practitioner-1",
-            "display": "Dr Ronald Bone"
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code": "H",
+          "display": "High"
         }
-    ],
-    "valueQuantity": {
-        "value": 8.6,
+      ],
+      "text": "High"
+    }
+  ],
+  "specimen": {
+    "reference": "Specimen/specimen-example-serum",
+    "display": "Serum specimen"
+  },
+  "referenceRange": [
+    {
+      "low": {
+        "value": 2,
         "unit": "mg/dL",
         "system": "http://unitsofmeasure.org",
         "code": "mg/dL"
-    },
-    "interpretation": [
-        {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-                    "code": "H",
-                    "display": "High"
-                }
-            ],
-            "text": "High"
-        }
-    ],
-    "specimen": {
-        "reference": "Specimen/specimen-example-serum",
-        "display": "Serum specimen"
-    },
-    "referenceRange": [
-        {
-            "low": {
-                "value": 2.0,
-                "unit": "mg/dL",
-                "system": "http://unitsofmeasure.org",
-                "code": "mg/dL"
-            },
-            "high": {
-                "value": 7.0,
-                "unit": "mg/dL",
-                "system": "http://unitsofmeasure.org",
-                "code": "mg/dL"
-            },
-            "type": {
-                "coding": [
-                    {
-                        "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
-                        "code": "normal",
-                        "display": "Normal Range"
-                    }
-                ],
-                "text": "Normal Range"
-            }
-        }
-    ]
+      },
+      "high": {
+        "value": 7,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+            "code": "normal",
+            "display": "Normal Range"
+          }
+        ],
+        "text": "Normal Range"
+      }
+    }
+  ]
 }

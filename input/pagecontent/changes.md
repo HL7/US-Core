@@ -56,7 +56,7 @@ The January 2025 ballot addresses the following:
     - [Future of US Core](future-of-US-core.html)
 10. **Applied:** (Correction) Change page status from "Informative" to "Trial-use" where appropriate [FHIR-46514](https://jira.hl7.org/browse/FHIR-46514) (See the tracker comments for a list of changes)
 11. **Applied:** (Clarification) Clarify conformance requirements for structured assessments [FHIR-47139](https://jira.hl7.org/browse/FHIR-47139) [See Changes Here](screening-and-assessments.html#structured-screening-and-assessments)
-12. **Applied:** (Enhancement) Replace US Core Discharge Disposition Value Set with equivalent [HL7 Terminology (THO)] Value Set [FHIR-47416](https://jira.hl7.org/browse/FHIR-47416) and FHIR-46194](https://jira.hl7.org/browse/FHIR-46194)
+12. **Applied:** (Enhancement) Replace US Core Discharge Disposition Value Set with equivalent [HL7 Terminology (THO)] Value Set [FHIR-47416](https://jira.hl7.org/browse/FHIR-47416) and [FHIR-46194](https://jira.hl7.org/browse/FHIR-46194)
   - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html)
   - [Encounter 1036 Example](Encounter-1036.html)
 13. **Applied:** (Enhancement) Tighten constraint on name.use to support better patient matching [FHIR-48416](https://jira.hl7.org/browse/FHIR-48416) [See Changes Here](StructureDefinition-us-core-patient.html)

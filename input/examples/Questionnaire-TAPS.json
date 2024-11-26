@@ -1,354 +1,344 @@
 {
-    "code": [
-        {
-            "code": "96841-2",
-            "display": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS]",
-            "system": "http://loinc.org"
-        }
-    ],
-    "title": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS]",
-    "resourceType": "Questionnaire",
-    "id": "TAPS",
-    "url": "http://hl7.org/fhir/us/core/Questionnaire/TAPS",
-    "name": "TAPS",
-    "status": "active",
-    "experimental": true,
-    "subjectType": [
-        "Patient"
-    ],
-    "date": "2023-08-14",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] questionnaire example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources."
-            }
-        ]
-    },
-    "item": [
-        {
-            "type": "choice",
-            "code": [
-                {
-                    "code": "96842-0",
-                    "display": "How often have you used any tobacco product in past 12 months",
-                    "system": "http://loinc.org"
-                }
-            ],
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "drop-down",
-                                "display": "Drop down"
-                            }
-                        ],
-                        "text": "Drop down"
-                    }
-                }
-            ],
-            "required": false,
-            "linkId": "/96842-0",
-            "text": "How often have you used any tobacco product in past 12 months",
-            "answerOption": [
-                {
-                    "valueCoding": {
-                        "code": "LA18934-2",
-                        "display": "Daily or almost daily",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18891-4",
-                        "display": "Weekly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18876-5",
-                        "display": "Monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18933-4",
-                        "display": "Less than monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA6270-8",
-                        "display": "Never",
-                        "system": "http://loinc.org"
-                    }
-                }
-            ]
-        },
-        {
-            "type": "choice",
-            "code": [
-                {
-                    "code": "88037-7",
-                    "display": "How often have you had five or more drinks in one day during the past year [Reported]",
-                    "system": "http://loinc.org"
-                }
-            ],
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "drop-down",
-                                "display": "Drop down"
-                            }
-                        ],
-                        "text": "Drop down"
-                    }
-                }
-            ],
-            "required": false,
-            "linkId": "/88037-7",
-            "text": "How often have you had five or more drinks in one day during the past year [Reported]",
-            "answerOption": [
-                {
-                    "valueCoding": {
-                        "code": "LA18934-2",
-                        "display": "Daily or almost daily",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18891-4",
-                        "display": "Weekly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18876-5",
-                        "display": "Monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18933-4",
-                        "display": "Less than monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA6270-8",
-                        "display": "Never",
-                        "system": "http://loinc.org"
-                    }
-                }
-            ],
-            "item": [
-                {
-                    "text": "Some measures (like electronic Clinical Quality Measure (eCQM) used by CMS) define \"risky drinker\" differently based on gender: 4 or more drinks per day for women and 5 or more drinks per day for men. The LOINC for 4 or more drinks per day is [LOINC: 75889-6].",
-                    "type": "display",
-                    "linkId": "/88037-7-help",
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                            "valueCodeableConcept": {
-                                "text": "Help-Button",
-                                "coding": [
-                                    {
-                                        "code": "help",
-                                        "display": "Help-Button",
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control"
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "choice",
-            "code": [
-                {
-                    "code": "75889-6",
-                    "display": "How often have you had four or more drinks in one day during the past year [Reported]",
-                    "system": "http://loinc.org"
-                }
-            ],
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "drop-down",
-                                "display": "Drop down"
-                            }
-                        ],
-                        "text": "Drop down"
-                    }
-                }
-            ],
-            "required": false,
-            "linkId": "/75889-6",
-            "text": "How often have you had four or more drinks in one day during the past year [Reported]",
-            "answerOption": [
-                {
-                    "valueCoding": {
-                        "code": "LA18934-2",
-                        "display": "Daily or almost daily",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18891-4",
-                        "display": "Weekly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18876-5",
-                        "display": "Monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18933-4",
-                        "display": "Less than monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA6270-8",
-                        "display": "Never",
-                        "system": "http://loinc.org"
-                    }
-                }
-            ],
-            "item": [
-                {
-                    "text": "A question asked to determine if the patient is considered a 'risky drinker'. This term was created for, but not limited in use to, an electronic Clinical Quality Measure (eCQM) to be used in the CMS EHR Incentive Program for Meaningful Use. The eCQM allows for multiple ways to screen for alcohol misuse, including AUDIT-C [LOINC: 75626-2] or one of two questions that assess whether the patient consumes alcohol [LOINC: 75855-7] and the frequency of heavy drinking days (this LOINC). The LOINC for five (5) or more drinks per day is [LOINC: 88037-7].",
-                    "type": "display",
-                    "linkId": "/75889-6-help",
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                            "valueCodeableConcept": {
-                                "text": "Help-Button",
-                                "coding": [
-                                    {
-                                        "code": "help",
-                                        "display": "Help-Button",
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control"
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "choice",
-            "code": [
-                {
-                    "code": "96843-8",
-                    "display": "How often have you used illegal or recreational drugs in past 12 months",
-                    "system": "http://loinc.org"
-                }
-            ],
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "drop-down",
-                                "display": "Drop down"
-                            }
-                        ],
-                        "text": "Drop down"
-                    }
-                }
-            ],
-            "required": false,
-            "linkId": "/96843-8",
-            "text": "How often have you used illegal or recreational drugs in past 12 months",
-            "answerOption": [
-                {
-                    "valueCoding": {
-                        "code": "LA18934-2",
-                        "display": "Daily or almost daily",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18891-4",
-                        "display": "Weekly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18876-5",
-                        "display": "Monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA18933-4",
-                        "display": "Less than monthly",
-                        "system": "http://loinc.org"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "code": "LA6270-8",
-                        "display": "Never",
-                        "system": "http://loinc.org"
-                    }
-                }
-            ]
-        },
-        {
-            "type": "string",
-            "code": [
-                {
-                    "code": "96844-6",
-                    "display": "How often have you used any prescription medications just for the feeling, more than prescribed or that were not prescribed for you in past 12 months [TAPS]",
-                    "system": "http://loinc.org"
-                }
-            ],
-            "required": false,
-            "linkId": "/96844-6",
-            "text": "How often have you used any prescription medications just for the feeling, more than prescribed or that were not prescribed for you in past 12 months [TAPS]"
-        }
+  "code": [
+    {
+      "code": "96841-2",
+      "display": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS]",
+      "system": "http://loinc.org"
+    }
+  ],
+  "title": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS]",
+  "resourceType": "Questionnaire",
+  "id": "TAPS",
+  "url": "http://hl7.org/fhir/us/core/Questionnaire/TAPS",
+  "name": "TAPS",
+  "status": "active",
+  "experimental": true,
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2023-08-14",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
     ]
+  },
+  "item": [
+    {
+      "type": "choice",
+      "code": [
+        {
+          "code": "96842-0",
+          "display": "How often have you used any tobacco product in past 12 months",
+          "system": "http://loinc.org"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ],
+            "text": "Drop down"
+          }
+        }
+      ],
+      "required": false,
+      "linkId": "/96842-0",
+      "text": "How often have you used any tobacco product in past 12 months",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "LA18934-2",
+            "display": "Daily or almost daily",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18891-4",
+            "display": "Weekly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18876-5",
+            "display": "Monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18933-4",
+            "display": "Less than monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA6270-8",
+            "display": "Never",
+            "system": "http://loinc.org"
+          }
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "code": [
+        {
+          "code": "88037-7",
+          "display": "How often have you had five or more drinks in one day during the past year [Reported]",
+          "system": "http://loinc.org"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ],
+            "text": "Drop down"
+          }
+        }
+      ],
+      "required": false,
+      "linkId": "/88037-7",
+      "text": "How often have you had five or more drinks in one day during the past year [Reported]",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "LA18934-2",
+            "display": "Daily or almost daily",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18891-4",
+            "display": "Weekly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18876-5",
+            "display": "Monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18933-4",
+            "display": "Less than monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA6270-8",
+            "display": "Never",
+            "system": "http://loinc.org"
+          }
+        }
+      ],
+      "item": [
+        {
+          "text": "Some measures (like electronic Clinical Quality Measure (eCQM) used by CMS) define \"risky drinker\" differently based on gender: 4 or more drinks per day for women and 5 or more drinks per day for men. The LOINC for 4 or more drinks per day is [LOINC: 75889-6].",
+          "type": "display",
+          "linkId": "/88037-7-help",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "text": "Help-Button",
+                "coding": [
+                  {
+                    "code": "help",
+                    "display": "Help-Button",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "code": [
+        {
+          "code": "75889-6",
+          "display": "How often have you had four or more drinks in one day during the past year [Reported]",
+          "system": "http://loinc.org"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ],
+            "text": "Drop down"
+          }
+        }
+      ],
+      "required": false,
+      "linkId": "/75889-6",
+      "text": "How often have you had four or more drinks in one day during the past year [Reported]",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "LA18934-2",
+            "display": "Daily or almost daily",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18891-4",
+            "display": "Weekly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18876-5",
+            "display": "Monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18933-4",
+            "display": "Less than monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA6270-8",
+            "display": "Never",
+            "system": "http://loinc.org"
+          }
+        }
+      ],
+      "item": [
+        {
+          "text": "A question asked to determine if the patient is considered a 'risky drinker'. This term was created for, but not limited in use to, an electronic Clinical Quality Measure (eCQM) to be used in the CMS EHR Incentive Program for Meaningful Use. The eCQM allows for multiple ways to screen for alcohol misuse, including AUDIT-C [LOINC: 75626-2] or one of two questions that assess whether the patient consumes alcohol [LOINC: 75855-7] and the frequency of heavy drinking days (this LOINC). The LOINC for five (5) or more drinks per day is [LOINC: 88037-7].",
+          "type": "display",
+          "linkId": "/75889-6-help",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "text": "Help-Button",
+                "coding": [
+                  {
+                    "code": "help",
+                    "display": "Help-Button",
+                    "system": "http://hl7.org/fhir/questionnaire-item-control"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "code": [
+        {
+          "code": "96843-8",
+          "display": "How often have you used illegal or recreational drugs in past 12 months",
+          "system": "http://loinc.org"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                "code": "drop-down",
+                "display": "Drop down"
+              }
+            ],
+            "text": "Drop down"
+          }
+        }
+      ],
+      "required": false,
+      "linkId": "/96843-8",
+      "text": "How often have you used illegal or recreational drugs in past 12 months",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "LA18934-2",
+            "display": "Daily or almost daily",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18891-4",
+            "display": "Weekly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18876-5",
+            "display": "Monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA18933-4",
+            "display": "Less than monthly",
+            "system": "http://loinc.org"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LA6270-8",
+            "display": "Never",
+            "system": "http://loinc.org"
+          }
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "code": [
+        {
+          "code": "96844-6",
+          "display": "How often have you used any prescription medications just for the feeling, more than prescribed or that were not prescribed for you in past 12 months [TAPS]",
+          "system": "http://loinc.org"
+        }
+      ],
+      "required": false,
+      "linkId": "/96844-6",
+      "text": "How often have you used any prescription medications just for the feeling, more than prescribed or that were not prescribed for you in past 12 months [TAPS]"
+    }
+  ]
 }
