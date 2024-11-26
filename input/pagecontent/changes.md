@@ -107,6 +107,7 @@ html#additional-uscdi-requirements)
 25. **Applied:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
 26. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.profile.json.html)
 27. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) [See Changes Here](StructureDefinition-us-core-procedure.profile.json.html)
+28. **Applied ** (Correction) US Core Survey Codes expansion error [FHIR-46272](https://jira.hl7.org/browse/FHIR-46272) [See Changes Here](https://hl7.org/fhir/us/core/STU7/ValueSet-us-core-survey-codes.html)
 
 The application of the following trackers are pending and will not be completed by the ballot date.
 
@@ -114,16 +115,17 @@ The application of the following trackers are pending and will not be completed 
 2. **Triaged:** (Correction) US Core Coverage Profile [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122)
 3. **Triaged:** (Correction) US Core Coverage.Type Code Link Update  [FHIR-44124](https://jira.hl7.org/browse/FHIR-44124)
 4. **Triaged:** (Correction) US Core Terminology Reference List # 62 [FHIR-44138](https://jira.hl7.org/browse/FHIR-44138)
-5. **Resolved - change required:** (Correction) NAIC Code Number Identifier system not registered in THO [FHIR-46185](https://jira.hl7.org/browse/FHIR-46185) [See Changes Here](#.html)
+5. **Resolved - change required:** (Correction) NAIC Code Number Identifier system not registered in THO [FHIR-46185](https://jira.hl7.org/browse/FHIR-46185)
 
 The following trackers have been identified as publishing issues and we are working with HL7 publishing to resolve them.
 
 1. **Publishing:** (Clarification) Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)
 2. **Publishing:** (Correction) AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636)
 3. **Publishing:** (Correction) Override built-in examples for address elements [FHIR-43054](https://jira.hl7.org/browse/FHIR-43054)
-4. **Publishing:** (Correction) US Core Survey Codes expansion error [FHIR-46272](https://jira.hl7.org/browse/FHIR-46272) [See Changes Here](#.html)
 5. **Publishing:** (Correction) US Core detailed ethnicity expansion error [FHIR-46638](https://jira.hl7.org/browse/FHIR-46638) [See Changes Here](#.html)
-6. **Publishing:** (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) [See Changes Here](#.html)
+6. **Publishing:** (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) See Changes Here:
+   - [Change Log](changes.html)
+   - [History Page](https://hl7.org/fhir/us/core/history.html)
 
 ### Version = 7.0.0 (Meets USCDI v4 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU7/>
