@@ -350,3 +350,4 @@
 [99501-9]: https://loinc.org/99501-9
 [Sex Parameter for Clinical Use ValueSet]: {{site.data.fhir.ver.hl7tx}}/ValueSet-sex-parameter-for-clinical-use.html
 [individual level provenance]: basic-provenance.html#individual-level-provenance
+[element ids]: {{site.data.fhir.path}}element.html

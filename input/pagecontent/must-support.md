@@ -12,7 +12,7 @@ The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USC
 
 For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [Future of US Core] page for writing and updating US Core Profiles):
 
-* US Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server Capability Statement].
+* US Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server CapabilityStatement].
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. <span class="bg-success" markdown="1">This processing may result in a determination not to use the resource if the resource content does not meet business requirements.</span><!-- new-content -->
 * When information on a particular data element is not present, and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.

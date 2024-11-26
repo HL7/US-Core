@@ -74,7 +74,7 @@ A Server that certifies to the [21st Century Cures Act for accessing patient dat
 
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
-- **SHOULD** declare conformance with the [US Core Server Capability Statement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`
+- **SHOULD** declare conformance with the [US Core Server CapabilityStatement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
     - Declare support for the US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.
