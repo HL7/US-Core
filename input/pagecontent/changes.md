@@ -122,7 +122,9 @@ The following trackers have been identified as publishing issues and we are work
 1. **Publishing:** (Clarification) Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)
 2. **Publishing:** (Correction) AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636)
 3. **Publishing:** (Correction) Override built-in examples for address elements [FHIR-43054](https://jira.hl7.org/browse/FHIR-43054)
-5. **Publishing:** (Correction) US Core detailed ethnicity expansion error [FHIR-46638](https://jira.hl7.org/browse/FHIR-46638) [See Changes Here](#.html)
+5. **Publishing:** (Correction) US Core detailed ethnicity expansion error [FHIR-46638](https://jira.hl7.org/browse/FHIR-46638) See STU Notes:
+   - [Detailed ethnicity](ValueSet-detailed-ethnicity.html)
+   - [Detailed race](ValueSet-detailed-race.html)
 6. **Publishing:** (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) See Changes Here:
    - [Change Log](changes.html)
    - [History Page](https://hl7.org/fhir/us/core/history.html)

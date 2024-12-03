@@ -4,12 +4,12 @@
 # ===  4 ERRORS Discussed on FMG IG review and variance granted 7.0.0  ===
 # ===========================================================-=====================
 
-# === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. This has been corrected in base FHIR ver 4.3.0 (“Release 4B”) which will correct this error when this guide is based a newer version of FHIR. ===
+# === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile, which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue, which means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. This issue has been corrected in base FHIR ver 4.3.0 ("Release 4B") which will correct this error when this guide is based a newer version of FHIR. ===
 
-ERROR: Observation/satO2-fiO2: Observation.component[0].value.ofType(Quantity): The code provided (http://unitsofmeasure.org#L/min) was not found in the value set 'Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a code from this value set is required: The provided code 'http://unitsofmeasure.org#L/min' was not found in the value set 'http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1'
+ERROR: Observation/satO2-fiO2: Observation.component[0].value.ofType(Quantity): The code provided (http://unitsofmeasure.org#L/min) was not found in the value set' Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a code from this value set is required: The provided code 'http://unitsofmeasure.org#L/min' was not found in the value set 'http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1'
 ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 
-# ==== This is a known issue with the terminology service - there is no timeline for their resolution ===
+# ==== This is a known issue with the terminology service - there is no timeline for its resolution ===
 
 ERROR: ValueSet.where(id = 'simple-language'): Error from http://tx.fhir.org/r4: Language valuesets cannot be expanded as they are based on a grammar
 
@@ -17,13 +17,13 @@ ERROR: ValueSet.where(id = 'simple-language'): Error from http://tx.fhir.org/r4:
 # === Warnings and Hints to be Discussed on FMG IG review  (granted for 7.0.0 ballot)====
 # =========================================================================================
 
-# === RESOLVED VSAC issues - The tooling infrastructure currently is unable to access these codes because this valueset is more recent than the latest VSAC package. They have been checked and the concepts are correct (5) ===
+# ===  The tooling infrastructure cannot access these codes because this value set is more recent than the latest VSAC package. They have been checked, and the concepts are correct===
 
 # ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.54 not found by validator
 # The valueSet reference http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.54 on element Specimen.type could not be resolved
 
                                             
-# === US Core Goal Description Binding is extensible which allow for text only and guidance to use free text for Goal.description is given in the US Core Goal Implementation Guidance (1). There are 2 Goal examples, Goal/goal-sdoh-2 uses a code this one does not. ===
+# === US Core Goal Description Binding is extensible, which allows for text only and guidance to use free text for Goal.description is provided.  ===
 
 
 # === Circular US Core Warnings since this is US Core (4): NONE ===
@@ -31,13 +31,13 @@ ERROR: ValueSet.where(id = 'simple-language'): Error from http://tx.fhir.org/r4:
 
 # === Several examples derived from this profile are provided in this guide (1) ===
 
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(URL = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile
 
-# === These questionnaires are created using NLM tooling based on LOINC LFORMs.  They use standard FHIR Questionnaire Extensions that "extend" the base SDC profile ===
+# === These questionnaires are created using NLM tooling based on LOINC LFORMs. They use standard FHIR Questionnaire Extensions that "extend" the base SDC profile ===
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|3.0.0
 
-# === Code is from the extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset (1) (updated text from 7.0.0) ===
+# === The code is from the US Core defined NUCC binding and not from base FHIR preferred c80-practice-codes value set (updated text from 7.0.0) ===
 
 None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set (codes = http://nucc.org/provider-taxonomy#208D00000X)
 
@@ -53,41 +53,41 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/Struct
 The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# ==== The pattern is set in a repeating slice.  The pattern is expected to hold for all repetitions of that slice.  (It's fixing the 'system' for the identifier.) ====
+# ==== The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.) ====
 
 INFORMATION: StructureDefinition/us-core-organization: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/us-core-organization: StructureDefinition.snapshot.element[19].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/us-core-organization: StructureDefinition.snapshot.element[20].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/us-core-practitioner: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 
-# ==== The self link for these searchset bundle is to the $docref operation and not a search ====
+# ==== The self-link for these searchset bundles is to the $docref operation and not to a FHIR search string====
 
 No types could be determined from the search string, so the types can't be checked
 
-# === Using the extension US Core Extension Questionnaire URI  pointing to a pdf form of the Questionnaire for this example.  Regarding the message: "No questionnaire is identified, so no validation can be performed against the base questionnaire" ===
+# === Using the extension US Core Extension Questionnaire URI  pointing to a pdf form of the Questionnaire for this example. Regarding the message: "No questionnaire is identified, so no validation can be performed against the base questionnaire" ===
 
 INFORMATION: QuestionnaireResponse/glascow-coma-score: QuestionnaireResponse: No questionnaire is identified, so no validation can be performed against the base questionnaire
 
-# ===  The following Warning is understood and the invariant reviewed. The type specified in ofType is Quantity *is* a possible candidate for the existing types of value[x]. This invariant has been tested in the FHIRPath tester and is intended as written ===
+# ===  The following Warning is understood, and the invariant has been reviewed. The type specified in ofType is Quantity *is* a possible candidate for the existing types of value[x]. This invariant has been tested in the FHIRPath tester and is intended as written ===
 
 
-# ===  The following Warning is understood and the invariant reviewed. The type specified in ofType is CodeableConcept *is* a possible candidate for the existing types of value[x]. This invariant has been tested in the FHIRPath tester and is intended as written ===
+# ===  The following Warning is understood and the invariant reviewed. The type specified in ofType is CodeableConcept *is* a possible candidate for the existing value[x] types. This invariant has been tested in the FHIRPath tester and is intended as written ===
 
 
-# === This Search Parameter expression `[Type].subject.where(resolve() is Patient)` is inherited from the FHIR base.  Nevertheless, the maximum cardinality of `subject` is 1 for all of these cases so there will never be more than han one item in the collection when resolving the reference. Additionally, this invariant has been tested in the FHIRPath tester and is intended as written. ===
+# === This Search Parameter expression `[Type].subject.where(resolve() is Patient)` is inherited from the FHIR base. Nevertheless, the maximum cardinality of `subject` is 1 for all of these cases, so there will never be more than one item in the collection when resolving the reference. Additionally, this invariant has been tested in the FHIRPath tester and is intended as written. ===
 
 
-# === This Search Parameter expression `Goal.target.due as date` is inherited from the FHIR base.  This is a legitimate warning and in R5 the expression has been udpated to `(Goal.target.due.ofType(date))`.  Since US Core inherits from the FHIR R4 base this warning is acknowledged as an issue with the base specification. ===
+# === This Search Parameter expression `Goal.target.due as date` is inherited from the FHIR base. Since US Core inherits from the FHIR R4 base, this warning is acknowledged as an issue with the base specification. In R5, this expression has been updated to `(Goal.target.due.ofType(date))`. ===
 
 WARNING: SearchParameter/us-core-goal-target-date: SearchParameter.expression: The left side is inherently a collection, and so the expression 'Goal.target.due as date' may fail or return false if there is more than one item in the content being evaluated
 
-# ===  The following Warning is understood and the invariant reviewed. The resolve() specified in the invariant has a maximum cardinality of 1 so there will never be more than han one item in the collection when resolving the reference. This invariant has been tested in the FHIRPath tester and is intended as written ===
+# ===  This invariant has been tested in the FHIRPath tester and is intended as written. The resolve() specified in the invariant has a maximum cardinality of 1, so there will never be more than one item in the collection when resolving the reference.  ===
 
 
-# === The US Core Observation Profile are based on US Vendor and Community input and decided that the `Observation.performer` element is optional for Many Observation profiles. ===
+# === The US Core Observation Profile is based on US Vendor and Community input, and it was decided that the `Observation.performer` element is optional for Many Observation profiles. ===
 
 
-# === The 'no-narrative' parameter is used for these resources instances because they are displayed as inline json examples for transaction and the narrative degrades human readability ===
+# === The 'no-narrative' parameter is used for these resources instances because they are displayed as inline JSON examples to illustrate transactions and the narrative degrades human readability ===
 
 WARNING: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Bundle/docref-example-2: Bundle.entry[0].resource/*DocumentReference/procedure-note123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
@@ -99,12 +99,12 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A 
 # === New Hints Warnings for 8.0.0   ====
 # =========================================================================================
 
-# === these CodeSystems and ValueSets are in FHIR Core/THO and not under the direct control of US Core editors ===
+# ===  The following code system and value set are in FHIR Core/THO and not under the direct control of US Core editors ===
 
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1
 
-# ==== The following code system are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked and the identifiers are correct (updated text from 7.0.0) ===========
+# ==== The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked and the identifiers are correct (updated text from 7.0.0) ===========
 
 WARNING: Observation/observation-occupation: Observation.value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 WARNING: Observation/observation-occupation: Observation.component[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
@@ -114,7 +114,7 @@ WARNING: ValueSet.where(id = 'us-core-condition-code'): Error from http://tx.fhi
 WARNING: ValueSet.where(id = 'us-core-location-type'): Unable to expand imported value set http://terminology.hl7.org/ValueSet/v3-HealthcareServiceLocation: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set (and Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set)
 
 
-# === The following code system are not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues, these codes were checked manually (updated text from 7.0.0)===
+# === The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues, these codes were checked manually (updated text from 7.0.0)===
 
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition.coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' could not be found, so the code cannot be validated
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set 'http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition|3.0.0' because the code system http://terminology.hl7.org/CodeSystem/nubc-UB92 was not found
@@ -126,19 +126,19 @@ INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReferenc
 
 
 
-# ==== The US Core Team is aware of this and will budget accordingly in a future publication cycle ===
+# ==== The US Core Team is aware of this and will budget and move these values to THO in a future publication cycle ===
 
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# ==== Understood and note the this is rendered by the ig-publisher in the ig as well =====
+# ==== Understood and note that this is rendered by the ig-publisher in the ig ====
 
 The value set expansion is too large, and only a subset has been displayed
 
-# === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) (updated text from 7.0.0-ballot) ===
+# === Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities: see FHIR-12419 (115) (updated text from 7.0.0-ballot) ===
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === These Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles  Updated from 7.0.0-ballot ===
+# === These Examples demonstrate the use of additional Codes or Identifiers not defined in US Core profiles  Updated from 7.0.0-ballot ===
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|8.0.0-ballot
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|8.0.0-ballot
@@ -147,23 +147,25 @@ This element does not match any known slice defined in the profile http://hl7.or
 A definition for CodeSystem 'http://example.org/michigan.gov/lara/license-type' could not be found, so the code cannot be validated
 
 
-# === In this example, representing the concept clearly with a human readable annotations {pack-years} is not misleading. It clearly illustrates how to use the Observation with the code and is a clinical need that outweighs the concerns about using the annotation. new in ver 7.0.0 ===
+# === In this example, representing the concept clearly with human-readable annotations {pack-years} is not misleading. It clearly illustrates how to use the Observation with the code, and demonstrates a clinical need outweighing concerns about using annotations. new in ver 7.0.0 ===
 
 WARNING: Observation/pack-years-example: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {pack-years} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 
 
-# === These errors awaiting updates to the terminology and extension dependencies or IG publisher to resolve. new in ver 7.0.0 ===
+# === These errors are awaiting updates to the VSAC to resolve new in ver 8.0.0 ===
 
 
-# === US Core thoroughly documents its Must Support expectations for the must supports includding on references.  See this chat https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Must.20Support.20Target.20Error.20for.20Reference.20type.20Element ===
+
+
+# === US Core thoroughly documents its Must Support expectations for the must supports, including how they apply to choice of target references. See this chat https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Must.20Support.20Target.20Error.20for.20Reference.20type.20Element ===
 
 The element Procedure.performer.actor has types/profiles/targets that are marked as must support, but the element itself is not marked as must-support
 
-# ==== There are 2 Bundle examples that use this profile and 1 non-validated inline example that conforms to it as well - when the publisher understands versioned examples will create a published example to replace it.  ===
+# === There are 2 Bundle examples that use this profile and 1 non-validated inline example that conforms to it as well - when the publisher understands versioned examples, we will create a published example to replace it.  ===
 
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance'): The Implementation Guide contains no explicitly linked examples for this profile
 
-# === The binding applies to the Quantity data type for US Core Vitals Signs Profile. It inherits the structure from Core, and a change request to correct this has been applied to the base FHIR ver 4.3.0 (“Release 4B”).  Will need to slice value[x] in future (updated text from 7.0.0)  ===
+# === The binding applies to the Quantity data type for US Core Vitals Signs Profile. It inherits the structure from Core, and a change request to correct this has been applied to the base FHIR ver 4.3.0 ("Release 4B"). Will need to slice value[x] in future (updated text from 7.0.0)  ===
 
 The element Observation.value[x] has a binding, and has multiple types subject to bindings ([dateTime, boolean, string, SampledData, Quantity, Period, Ratio, integer, time, Range, CodeableConcept]). The binding will apply to all the types
 

@@ -26,10 +26,10 @@ identifier:
 status: final
 code:
     coding:
-        -
-            system: 'http://loinc.org'
-            code: 11343-1
-            display: History of Other nonmedical drug use
+        # -
+        #     system: 'http://loinc.org'
+        #     code: 11343-1
+        #     display: History of Other nonmedical drug use
         -
             system: 'http://snomed.info/sct'
             version: 'http://snomed.info/sct/731000124108'
@@ -46,13 +46,15 @@ performer:
   - display: Amy Shaw
     reference: Patient/example
 
-valueCodeableConcept:
-    coding:
-        - 
-            system: 'http://snomed.info/sct'
-            code: '44870007'
-            display: Misused drugs in past (finding)
-    text:  other possible values - Misuses drugs (finding), Does not misuse drugs (finding), Has never misused drugs
+valueBoolean: true
+
+# valueCodeableConcept:
+#     coding:
+#         - 
+#             system: 'http://snomed.info/sct'
+#             code: '44870007'
+#             display: Misused drugs in past (finding)
+#     text:  other possible values - Misuses drugs (finding), Does not misuse drugs (finding), Has never misused drugs
 note: 
     - text: At parties
 component:
