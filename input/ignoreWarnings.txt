@@ -18,7 +18,7 @@ ERROR: ValueSet.where(id = 'simple-language'): Error from http://tx.fhir.org/r4:
 ERROR: Patient/example: Patient.extension[5].extension[1]: Extension.extension:supportingInfo.extension: max allowed = 0, but found 3 (from http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse|5.1.0)
 ERROR: Patient/example: Patient.extension[5].extension[1]: Extension.extension:supportingInfo.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse|5.1.0)
 
-# === Because the "is-a" filter is currently not defined by THO for CPT ,the publication validator does not recognize it. See this Chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Clarify.20why.20terminology.20server.20is.20yielding.20this.20error  The publication team is clarifying with CPT whether this filter is needed.
+# === Because the "is-a" filter is currently not defined by CPT; therefore, the publication validator does not recognize it. See this Chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Clarify.20why.20terminology.20server.20is.20yielding.20this.20error  The publication and VSAC team is clarifying with CPT whether this filter is allowed.
 
 ERROR: Encounter/example-1: Encounter.type[0]: Error from http://tx.fhir.org/r4: The filter "concept is-a 1013625" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.32|20240711 was not understood in the context of http://www.ama-assn.org/go/cpt
 
