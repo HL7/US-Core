@@ -79,7 +79,7 @@
             {% assign profiles = item.uscore_profile | split: "|" %}
             {% for profile in profiles %}
             {% capture title %}{{profile | strip}}{% endcapture %}
-            <a href="{% include sd_link.html title = title  %}">{{ profile }}</a>
+            <a href="{% include sd_link.html title = title  %}">{{ title }}</a>
             {% unless forloop.last %}
             <br />
             {% endunless %}
@@ -99,10 +99,11 @@
             {% assign profiles = item.uscore_profile | split: "|" %}
             {% for profile in profiles %}
             {% capture title %}{{profile | strip}}{% endcapture %}
-            {% if item.fhir_extension_url and title | contains "Extension %} <!--  Assume Standard FHIR Extension -->
-            <a href="{{site.data.fhir.ver.hl7_fhir_uv_extensions_r4}}/{{ item.fhir_extension_url }}">{{ profile }}</a>
+            {% capture url %}{% include sd_link.html title = title %}{% endcapture %}
+            {% if url == '' %} <!-- not a US Core defined SD - assume is standard extension and use URL provided in the csv  -->
+            <a href="{{site.data.fhir.ver.hl7_fhir_uv_extensions_r4}}/{{ item.fhir_extension_url }}">{{ title }}</a>
             {% else %}
-            <a href="{% include sd_link.html title = title  %}">{{ profile }}</a>
+            <a href="{{ url }}">{{ title }}</a>
             {% endif %}
             {% unless forloop.last %}
             <br />

@@ -49,9 +49,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 </div><!-- new-content -->
 
 {% include DAR-exception.md %}
-- <span class="bg-success" markdown="1">
-- 
-- \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
+- <span class="bg-success" markdown="1">\*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
 {% include obs_cat_guidance.md category= "sdoh, functional-status, or social history" %}
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
   - \*Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
