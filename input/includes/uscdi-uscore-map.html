@@ -77,6 +77,7 @@
           <th class="col-sm-4">{{ item.data_class }}</th>
           <th class="col-sm-4">
             {% assign profiles = item.uscore_profile | split: "|" %}
+            {% if profiles != empty %} <!-- no profiles defined in table for USCDI  ( e.g., Provenance )-->
             {% for profile in profiles %}
             {% capture title %}{{profile | strip}}{% endcapture %}
             <a href="{% include sd_link.html title = title  %}">{{ title }}</a>
@@ -84,6 +85,9 @@
             <br />
             {% endunless %}
             {% endfor %}
+            {% else %}
+            -
+            {% endif %}
           </th>
           <th class="col-sm-2"><a href="{{ item.comment_link }}">{{ item.comment }}</a></th>
         </tr>
@@ -97,6 +101,7 @@
 
           <td>
             {% assign profiles = item.uscore_profile | split: "|" %}
+            {% if profiles != empty %} <!-- no profiles defined in table for USCDI  ( e.g., Provenance )-->
             {% for profile in profiles %}
             {% capture title %}{{profile | strip}}{% endcapture %}
             {% capture url %}{% include sd_link.html title = title %}{% endcapture %}
@@ -109,6 +114,9 @@
             <br />
             {% endunless %}
             {% endfor %}
+            {% else %}
+            -
+            {% endif %}
           </td>
 
           <td>
