@@ -16,7 +16,7 @@
 [386053000 Evaluation procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=386053000&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [387713003 Surgical procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [410606002 Social service procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
-[5 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
+[10 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
 [API Resource Collection in Health (ARCH)]: https://www.healthit.gov/isa/api-resource-collection-health-arch
 [Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
 [American Heart Association]: http://heart.org/
