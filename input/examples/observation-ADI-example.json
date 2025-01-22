@@ -1,75 +1,85 @@
 {
-  "resourceType": "Observation",
-  "id": "ADI-example",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation|8.0.0-ballot"
-    ]
-  },
-  "status": "final",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "Observation",
+    "id": "ADI-example",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "ADI Observation Presence ADI Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Observation example for the USCDI5 ADI Observation Data Element to show whether and location of a patient has an advance directive using a new code = \"45473-6\" - (Advance directive/living will completed) and and value of \"Yes\"/\"No\"/\"Unknown\" (TODO: pick a convenient value set  LOINC answer list ll50-6, Snomed, hl7 (https://terminology.hl7.org/ValueSet-yes-no-unknown-not-asked.html))"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation"
+        ]
+    },
+    "status": "final",
+    "category": [
         {
-          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-          "code": "observation-adi-documentation",
-          "display": "Observation ADI Documentation"
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                    "code": "observation-adi-documentation",
+                    "display": "Observation ADI Documentation"
+                }
+            ],
+            "text": "Observation ADI Documentation"
         }
-      ],
-      "text": "Observation ADI Documentation"
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "45473-6",
-        "display": "Advance directive/living will completed"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "effectiveDateTime": "2024-05-16T01:06:06.393Z",
-  "issued": "2024-05-16T01:06:06.393Z",
-  "performer": [
-    {
-      "reference": "Practitioner/practitioner-1",
-      "display": "Dr Smith"
-    }
-  ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "version": "http://snomed.info/sct/731000124108",
-        "code": "373066001",
-        "display": "Yes (qualifier value)"
-      }
-    ]
-  },
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
-      "valueReference": {
-        "reference": "DocumentReference/polst",
-        "display": "POLST"
-      }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "45473-6",
+                "display": "Advance directive/living will completed"
+            }
+        ]
     },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
-      "valueReference": {
-        "reference": "DocumentReference/adi-intubation",
-        "display": "ADI DNI"
-      }
+    "subject": {
+        "reference": "Patient/example"
     },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
-      "valueReference": {
-        "reference": "DocumentReference/living-will",
-        "display": "Living Will"
-      }
-    }
-  ]
+    "effectiveDateTime": "2024-05-16T01:06:06.393Z",
+    "issued": "2024-05-16T01:06:06.393Z",
+    "performer": [
+        {
+            "reference": "Practitioner/practitioner-1",
+            "display": "Dr Smith"
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/731000124108",
+                "code": "373066001",
+                "display": "Yes (qualifier value)"
+            }
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
+            "valueReference": {
+                "reference": "DocumentReference/polst",
+                "display": "POLST"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
+            "valueReference": {
+                "reference": "DocumentReference/adi-intubation",
+                "display": "ADI DNI"
+            }
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo",
+            "valueReference": {
+                "reference": "DocumentReference/living-will",
+                "display": "Living Will"
+            }
+        }
+    ]
 }
