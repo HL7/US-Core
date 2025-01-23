@@ -140,7 +140,7 @@ For example, the [US Core Patient Profile] `name` element is labeled *Must Suppo
 
 {% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
-On the other hand, if any sub-element is marked as *Must Support* or  *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, <span class="bg-success" markdown="1">Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** the sub-elements labeled as *Additional USCDI*.</span><!-- new-content -->
+On the other hand, if any sub-element is marked as *Must Support* or  *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, <span class="bg-success" markdown="1">Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** support the sub-elements labeled as *Additional USCDI*.</span><!-- new-content -->
 
 
 For example, the [US Core Patient Profile] `telecom` element is not labeled *Must Support*, but `telecom.system`, `telecom.value`, `telecom.use` are. When claiming conformance to this profile:
