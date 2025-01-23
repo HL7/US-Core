@@ -46,7 +46,7 @@
         - the Centers for Medicare & Medicaid Services (CMS) maintained [Place of Service Code Set(POS)](https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets) codes (see FHIR-46258)
 - We updated and clarified the conformance rules for *Additional USCDI Requirements, Must Support for Resource References, and included lists of Must Support target profiles for each US Core Profile on the [Must Support](must-support.html) page.
 - We clarified the conformance expectation for [Screening and Assessment category codes](screening-and-assessments.html#terminology) when using US Core Profiles used to represent those activities.  For details see the changes associated with [FHIR-45319](changes.html#fhir-45319).
-- We continue our efforts to align terminology between US Core and [HL7 C-CDA] amd link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)]) or [HL7 Terminology (THO)] where applicable.  The following ValueSets has been moved:
+- We continue our efforts to align terminology between US Core and [HL7 C-CDA] and link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)]) or [HL7 Terminology (THO)] where applicable.  The following ValueSets has been moved:
   
    |Pre 8.0.0-Ballot US Core ValueSet|8.0.0-Ballot ValueSet|THO/VSAC|
    |---|---|---|

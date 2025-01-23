@@ -80,7 +80,7 @@ The "Key Elements Table" view consists of:
 
 This view includes the same flags and labels described in Differential Table View:
 
-{% include img.html img="Must_Support_Key_View.png" caption="Figure 2: Snapshot Table (Must Support) View" %}
+{% include img.html img="Must_Support_Key_View.png" caption="Figure 2: Key Elements Table View" %}
 
 #### Snapshot Table View
 
