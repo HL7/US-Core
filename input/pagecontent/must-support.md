@@ -161,7 +161,7 @@ This section documents additional *Must Support* requirements for the [Reference
 
 ##### Must Support Targets for US Core Profiles
 
-When a Reference type element is labeled as *Must Support*  has a single target profile referenced, the target profile **SHALL** be supported. When a Reference type element is labeled as *Additional USCDI* has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems.
+When a Reference type element is labeled as *Must Support* and has a single target profile referenced, the target profile **SHALL** be supported. When a Reference type element is labeled as *Additional USCDI* and has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems.
 
 For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to this profile:
 
