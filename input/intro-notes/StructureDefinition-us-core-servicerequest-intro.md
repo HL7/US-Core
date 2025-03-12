@@ -23,7 +23,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a category
 2. the encounter in which the request was created
-3. when requested service**SHOULD**happen
+3. when requested service <span class="bg-success" markdown="1">should</span><!-- new-content --> happen
 4. when the request was made
 5. the requester
 

@@ -37,15 +37,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 - See [Clinical Notes]
-- The `DocumentReference.type` binding Must Support, at a minimum, the [10 Common Clinical Notes] and may extend to the whole [US Core DocumentReference Type Value Set]
+- The `DocumentReference.type` binding Must Support, at a minimum, the <span class="bg-success" markdown="1">[10 Common Clinical Notes]</span><!-- new-content --> and may extend to the whole [US Core DocumentReference Type Value Set]
 - In addition to the [US Core DocumentReference Category] value set, other category schemes such as the LOINC-based [Document Class Value Set] and [IHE XDSclassCode] may be used to facilitate the sharing of health documents.
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
-- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.
+- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> or the content as inline base64 encoded data using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.data`</span><!-- new-content -->`.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The Client application **SHALL** support both elements.
-    -  The `content.attachment.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint.
+    -  The <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint.
         - If the endpoint is outside the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
     -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`. 
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
