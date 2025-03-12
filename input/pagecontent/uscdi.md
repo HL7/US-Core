@@ -16,13 +16,13 @@ icons (png files) = `input/images/<"kebab case" USCDI class names>.png`
    - this file depends on another liquid template {% include sd_link.html title = title  %} which refererence `includes/sd_link.html` to get the profile page link.
    1. icons (png images) are in the `input/images` are named using the "kebab case" USCDI class names.{% endraw %} -->
 
-<div class="bg-success" markdown="1">
+
 
 The US Core Profiles were initially designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7) and Application Access – Data Category Request 170.315(g)(8). US Core Editors have updated the guide annually to meet subsequent [U.S. Core Data for Interoperability (USCDI)] requirements: 
 
 {% include uscdi-uscore-version-table.md %}
 
-</div><!-- new-content -->
+
 ONC's USCDI and FHIR US Core are complementary initiatives, with USCDI defining high-level data requirements and FHIR US Core providing detailed FHIR-based profiles for meeting those requirements. Mapping between them is necessary for achieving interoperability and consistency in healthcare data exchange within the United States. However, to make USCDI implementable in FHIR, an interpretation of USCDI is necessary. For information about what US Core Profile elements and US Core transactions are in scope for ONC Health IT Certification, see the US Core [Conformance] pages.
 
 Note that:

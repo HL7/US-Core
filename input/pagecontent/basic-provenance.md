@@ -1,16 +1,16 @@
 
 ### Provenance in US Core
-<div class="bg-success" markdown="1">
+
 
 The FHIR [Provenance] Resource tracks information about the activity about a version of a resource, describing the entities and agents involved. FHIR resources also contain elements that represent "small-p provenance" information about how the resource was obtained which overlap with the functionality of the Provenance resource.
 
 ​This page is divided into two section documenting how the [US Core Provenance Profile] records changes at the *organizational level*, and how the US Core Profiles' "small-p provenance" elements record changes at the *individual level*. The US Core Provenance Profile asserts where the data came from at an organizational or system level.  Because systems typically do not use the Provenance Resource to represent this information at an *individual level* (in other words, activities by the patient or provider), various FHIR resource elements are identified that track the "small p provenance" information at the individual level. The baseline rules and guidance here do not preclude more advanced use cases such as [Using Provenance To Target Resource Elements].
 
-</div><!-- new-content -->
 
-### <span class="bg-success" markdown="1">Organizational Level</span><!-- new-content --> Provenance
 
-<span class="bg-success" markdown="1">The [US Core Provenance Profile] focuses on a key subset of elements, the "last hop", and specific use cases used to assert changes to the record at the organizational level.</span><!-- new-content --> Full Provenance of a Resource requires details from the original resource creator and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches and end-user display. They agreed the most important information is the last organization making a meaningful clinical update to the data and the prior system providing it - the 'last hop'. Participants didn't dispute the potential need to recreate the entire chain but didn't see this as relevant to the immediate end-user.
+### Organizational Level Provenance
+
+The [US Core Provenance Profile] focuses on a key subset of elements, the "last hop", and specific use cases used to assert changes to the record at the organizational level. Full Provenance of a Resource requires details from the original resource creator and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches and end-user display. They agreed the most important information is the last organization making a meaningful clinical update to the data and the prior system providing it - the 'last hop'. Participants didn't dispute the potential need to recreate the entire chain but didn't see this as relevant to the immediate end-user.
 
 
 #### Key Provenance Elements
@@ -35,14 +35,14 @@ The HL7 Basic Provenance Informative implementation guide outlines four use case
 
 #### Clinical Information Reconciliation and Incorporation
 
-[<span class="bg-success" markdown="1">[Clinical Information Reconciliation and
+[[Clinical Information Reconciliation and
 Incorporation (CIRI)] allows clinicians to reconcile and incorporate patient
 health information sent in from external sources to maintain a more accurate
 and up-to-date patient records. Consolidated Clinical Document Architecture
 (C-CDA) documents are often used to share clinical information with clinicians
 from external sources like hospitals, Health Information Exchanges (HIEs), or
 other clinicians, and allows the clinician to import and reconcile health care
-information into their own patient record.</span><!-- new-content --> Figure 1
+information into their own patient record. Figure 1
 represents information from Good Health and Sunshine Health Organization. Dr.
 Reconciled reviews the data in Figure 1, updates the reaction to hives, and
 stores it in the Future Health Organization system. When a mobile app requests
@@ -102,9 +102,9 @@ Unlike Use Case 3 - HIE Redistribution, Use Case 4 includes data transformation.
 
 Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The HIE must maintain the original data source. An `agent.type`="assembler", `agent.type`="transmitter", or other agents from [Provenance Agent Type] value set **MAY** also be included. Due to insufficient implementer guidance, the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include it in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
 
-### <span class="bg-success" markdown="1">Individual Level Provenance</span><!-- new-content -->
+### Individual Level Provenance
 
-<div class="bg-success" markdown="1">
+
 
 The functionality of the Provenance resource discussed above. The table below lists the US Core elements that communicate the author and author roles corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals*. They are also documented on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled [Must Support] or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.
 
@@ -132,6 +132,6 @@ This table is also available as a [csv](tables/provenance-elements.csv) or [exce
 \* US Core *Must Support* or *Additional USCDI* element
 
 \** US Core *Must Support* Target Resource Type
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

@@ -28,9 +28,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. the encounters
 4. a prescriber
 5. a date for when written
-6. <span class="bg-success" markdown="1">free text dosage instructions (the *SIG*)</span><!-- new-content --> 
-7. <span class="bg-success" markdown="1">when medication should be administered</span><!-- new-content -->
-8. <span class="bg-success" markdown="1">the route of administration</span><!-- new-content -->
+6. free text dosage instructions (the *SIG*) 
+7. when medication should be administered
+8. the route of administration
 9. the dose and rate
 10. the amount dispensed and number of refills
 

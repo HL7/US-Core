@@ -5,9 +5,9 @@
 
 Clinical notes are a key component in communicating a patient's current status. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing, and even handwritten notes by providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-This implementation guide defines how systems exchange <span class="bg-success" markdown="1">ten</span><!-- new-content --> "Common Clinical Notes" and three DiagnosticReport categories.
+This implementation guide defines how systems exchange ten "Common Clinical Notes" and three DiagnosticReport categories.
 
-Servers **SHALL** support, at *minimum*, these <span class="bg-success" markdown="1">ten</span><!-- new-content --> "Common Clinical Notes":
+Servers **SHALL** support, at *minimum*, these ten "Common Clinical Notes":
 
   1. [Consultation Note (11488-4)]
   1. [Discharge Summary (18842-5)]
@@ -17,8 +17,8 @@ Servers **SHALL** support, at *minimum*, these <span class="bg-success" markdown
   1. [Imaging Narrative (18748-4)]
   1. [Laboratory Report Narrative (11502-2)]
   1. [Pathology Report Narrative (11526-1)]
-  1. <span class="bg-success" markdown="1">[Surgical Operation Note (11504-8)]</span><!-- new-content -->
-  1. <span class="bg-success" markdown="1">[Emergency Department Note (34111-5)]</span><!-- new-content -->
+  1. [Surgical Operation Note (11504-8)]
+  1. [Emergency Department Note (34111-5)]
 
 Servers **SHALL** support, at *minimum*, these three DiagnosticReport categories:
 
@@ -93,7 +93,7 @@ Not all scanned information stored through DocumentReference will be exposed thr
 
 #### Support Requirements
 
-This guide requires systems to implement the [US Core DocumentReference Profile] and to support a *minimum* of all <span class="bg-success" markdown="1">ten</span><!-- new-content -->  Common Clinical Notes listed above. Systems may extend their capabilities to the complete [US Core DocumentReference Type Value Set]. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+This guide requires systems to implement the [US Core DocumentReference Profile] and to support a *minimum* of all ten  Common Clinical Notes listed above. Systems may extend their capabilities to the complete [US Core DocumentReference Type Value Set]. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
 This guide requires systems to implement the [US Core DiagnosticReport Profile for Report and Note exchange] and to support a *minimum* of the three report categories:
 

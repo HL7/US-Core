@@ -22,7 +22,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. encounter associated with Observation
 2. a time indicating when the measurement was taken
-3. <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
+3. a performer*
 4. a result value
    - if the result value is a numeric quantity, a standard [UCUM] unit
 5. a reason why the data is absent*

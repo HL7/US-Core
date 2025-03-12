@@ -27,7 +27,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a timestamp when the resource last changed*
 1. encounter associated with DiagnosticReport
 2. who issues the report*
-3. <span class="bg-success" markdown="1">a results interpreter*</span><!-- new-content -->
+3. a results interpreter*
 4. a result
 
 \* see guidance below

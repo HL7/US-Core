@@ -328,7 +328,7 @@ US Core Servers are not required to resolve absolute URLs external to their envi
 ### Limiting The Number Of Search Results
 
 Servers can choose to return the results in a series of pages to manage the number of search results returned. The search result set contains the URLs used to request additional pages from the search set. For a simple RESTful search, the page links are included in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
-<div class="bg-success" markdown="1">
+
 
 ### Client Best Practices for Search:
 
@@ -339,7 +339,7 @@ To reduce API volume and ensure reliable use when implementing FHIR RESTful sear
 2. If the Server does not support the `_include`  search parameter, Clients **SHOULD** consolidate duplicate searches before searching for referenced resources in the result set
 
 3. The [HTTP Cache-Control](https://httpwg.org/specs/rfc9111.html) response header stores a response associated with a request and reuses the stored response for subsequent requests. If Cache-Control is present in the Server response headers, the Clients **SHOULD NOT** search the same data within the time stated in `Cache-Control` headers.
-</div><!-- new-content -->
+
 
 ------------------------------------------------------------------------
 <!--

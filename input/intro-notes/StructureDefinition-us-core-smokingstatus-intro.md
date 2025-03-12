@@ -18,7 +18,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a code for smoking observation*
 1. a patient
 1. when the observation occurred
-3. <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
+3. a performer*
 3. a result value*
 
 \* see guidance below

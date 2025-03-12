@@ -23,7 +23,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a time indicating when the survey was taken
 3. the answer or a reason why the data is absent*
    - if the result value is a numeric quantity and coded quantity units are used, [UCUM] is required.
-4. who answered the questions <span class="bg-success" markdown="1">(in other words, a performer)*</span><!-- new-content -->
+4. who answered the questions (in other words, a performer)*
 5. related questionnaire responses or observations that this observation is made from
 6. reference to observations that make up this observation*
 
@@ -34,15 +34,15 @@ The following data elements must always be present ([Mandatory] definition) or m
   - Each response to individual questions and each answer to a multi-select or "check all that apply" question is a separate US Core Screening and Assessments Observation. The question is communicated in `Observation.code`, and the answer is in `Observation.value`.
   - Multi-question screenings and assessments use the US Core Screening and Assessments Observation to represent a "panel" or grouping. The multi-question surveys or assessments  `Observation.code` is an overarching assessment or screening code, and the `Observation.value` element **SHOULD** be empty. `Observation.hasMember` references US Core Screening and Assessments Observations that represent the responses to each question in the screening or assessment. 
 - A practitioner's clinical observation or assertion about a patient's health status, which is not a response to a screening or assessment question, **SHOULD** use the [US Core Simple Observation Profile] instead.
-<div class="bg-success" markdown="1">
+
 
 - \*The category type "survey" is required, and, at a minimum, Servers **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Screening Assessment Observation Maximum Category] codes, and **MAY** support other categories.
 
     {% include obs_cat_guidance.md category='survey'%}
-</div><!-- new-content -->
+
 
 {% include DAR-exception.md %}
-- <span class="bg-success" markdown="1">\*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.</span><!-- new-content -->
-- \*<span class="bg-success" markdown="1">Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. The certifying Server system is not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.</span><!-- new-content -->
+- \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
+- \*Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. The certifying Server system is not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.
   
 {% include link-list.md %}

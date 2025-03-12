@@ -21,11 +21,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 4. a fixed *component* code for average systolic blood pressure
 5. a fixed *component* code for average diastolic blood pressure
 6. a patient
-7. <span class="bg-success" markdown="1">clinically relevant time-period for the average of blood pressure readings</span><!-- new-content -->
+7. clinically relevant time-period for the average of blood pressure readings
 
 **Each Observation Must Support:**
 
-1.  <span class="bg-success" markdown="1">a performer*</span><!-- new-content -->
+1.  a performer*
 3. a result value for the average systolic blood pressure
 4. a result value for the average diastolic blood pressure
 5.  a reason if the value is absent*

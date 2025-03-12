@@ -23,12 +23,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a category code of "social-history"
 
-<div class="bg-success" markdown="1">
+
 
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
 1. a performer*
-</div><!-- new-content -->
+
 
 **Profile Specific Implementation Guidance:**
 

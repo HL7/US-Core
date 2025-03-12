@@ -22,12 +22,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a time indicating when the observation was made
 2. a sexual orientation value
 
-<div class="bg-success" markdown="1">
+
 
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
 1. a performer*
-</div><!-- new-content -->
+
 
 **Profile Specific Implementation Guidance:**
 

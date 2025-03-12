@@ -1585,8 +1585,8 @@ listed below are the resolved trackers for this version:
 
 ---
 
-<div class="bg-success" markdown="1">
+
 To review changes to US Core versions earlier than 3.1.1, refer to the [USCore 7.0.0 Change Log](https://hl7.org/fhir/us/core/STU7/changes.html).
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

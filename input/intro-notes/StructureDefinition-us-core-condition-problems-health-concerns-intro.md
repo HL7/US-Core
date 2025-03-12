@@ -38,11 +38,11 @@ The following data elements must always be present ([Mandatory] definition) or m
   - USCDI's applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
-<div class="bg-success" markdown="1">
+
 
 * \*The category of "problem-list-item" or "health-concern" is required, and, at a minimum, Servers **SHALL** support, a category of "sdoh", **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
   * If the category is "problem-list-item", `Condition.clinicalStatus` **SHOULD** be present.
-</div><!-- new-content -->
+
 
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
     * Although all three are marked as Must Support, the Server is not required to support all.

@@ -29,7 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. encounter associated with DiagnosticReport
 1. instant the report was released
 1. an author (actor) producing the report
-2. <span class="bg-success" markdown="1">a results interpreter*</span><!-- new-content -->
+2. a results interpreter*
 3. a reference to one or more test results
 4. a reference to one or more images
 5. a reference to the full report (presentedForm)
@@ -46,8 +46,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include provenance-author-bullet-generator.md %}
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access to the images.
 
-   * <span class="bg-success" markdown="1">The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).</span><!-- new-content -->
-   * <span class="bg-success" markdown="1">The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view DICOM studies, series, and SOP instances referenced in the [ImagingStudy] resource.</span><!-- new-content -->
+   * The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).
+   * The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view DICOM studies, series, and SOP instances referenced in the [ImagingStudy] resource.
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifier` element to access the source images from external sources.
   
    [The Argonauts 2023 SMART Imaging Access](https://confluence.hl7.org/display/AP/SMART+Imaging+Access) project is testing an approach to access imaging studies using a single authorization flow
