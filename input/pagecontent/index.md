@@ -2,7 +2,7 @@
 
 **The January 2025 ballot addresses the following**
 
-{% include whats-new-v8-ballot.md %}
+{% include whats-new/v8.md %}
 
 </div><!-- note-to-balloters -->
 

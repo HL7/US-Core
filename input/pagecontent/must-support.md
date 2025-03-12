@@ -47,7 +47,7 @@ Implementers seeking ONC certification (Certifying Systems) **SHALL** interpret 
 
 The table below lists the *Additional USCDI Requirements* and their corresponding Profiles and FHIR elements.
 
-{% include additional-uscdi-requirements.md %}
+{% include additional-uscdi-tabler.md %}
 
 #### Communicating Additional USCDI Requirements
 

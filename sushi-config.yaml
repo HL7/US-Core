@@ -12,7 +12,7 @@ extension:
     valueCode: cgp  # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
+  - url: http://hl7.o2025-03-11rg/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
     valueInteger: 3
 definition:
   extension:
@@ -53,7 +53,7 @@ description: >-
 
 license: CC0-1.0
 date: 2024-10-09
-version: '8.0.0-ballot'
+version: '8.0.0'
 fhirVersion: 4.0.1
 dependencies:
   # hl7.fhir.uv.bulkdata: 2.0.0
@@ -270,10 +270,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - init #init: Messages describing the start up process (for debugging)
     - progress #progress: Overall progress messages
   auto-oid-root: 2.16.840.1.113883.4.642.40.2
-copyrightyear: '2024+'
+copyrightyear: '2025+'
 # releaselabel: CI Build
-# releaselabel: STU7
-releaselabel: STU8 Ballot
+releaselabel: STU 8
+# releaselabel: STU 8 Ballot
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │

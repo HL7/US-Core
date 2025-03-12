@@ -37,7 +37,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 * Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed. For example:
    -  providing both a local system code and a LOINC code that it maps to
    -  providing a more specific category code to the "LAB" category code, such as "CH" (chemistry), in an additional coding element.
-{% include provenance-author-bullet.md %}
+{% include provenance-author-bullet-generator.md %}
 * Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New laboratory reports

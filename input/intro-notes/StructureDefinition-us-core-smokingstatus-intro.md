@@ -26,7 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 - \* The *Smoking Status Type* Value Set on `Observation.code` is a "starter" set of concepts to capture smoking status, and the *Smoking Status Comprehensive* Value Set for `Observation.valueCodeableConcept` contains terms representing nicotine, smoking, vaping, chew, and snuff use to encourage the use of this profile for other smoking and nicotine questions.
-{% include provenance-author-bullet.md %}
+{% include provenance-author-bullet-generator.md %}
 
 
 {% include link-list.md %}

@@ -24,7 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 {% include vitals-guidance.md %}
-{% include provenance-author-bullet.md %}
+{% include provenance-author-bullet-generator.md %}
 
 
 <div class="stu-note" markdown="1">

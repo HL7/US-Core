@@ -44,7 +44,7 @@
 {% for item in site.data.provenance-elements -%}
   {% if item.Is_Source == "TRUE" -%}
   {% if item.Path == page.path -%}
- - <span class="bg-success" markdown="1">\*The profile elements `{{ author | split: "," | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.<!-- new-content -->
+ - {% if item.isNew %}<span class="bg-success" markdown="1">{% endif %}\*The profile elements `{{ author | split: "," | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% if item.isNew %}</span><!-- new-content -->{% endif %}
        {% break -%}
     {% endif -%}
     {% endif -%}

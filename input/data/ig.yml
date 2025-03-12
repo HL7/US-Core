@@ -5,10 +5,10 @@ extension:
   valueCode: cgp
 - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
   valueCode: trial-use
-- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+- url: http://hl7.o2025-03-11rg/fhir/StructureDefinition/structuredefinition-fmm
   valueInteger: 3
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 8.0.0-ballot
+version: 8.0.0
 name: USCore
 title: US Core Implementation Guide
 status: active
@@ -4054,9 +4054,9 @@ definition:
         valueCode: informative
   parameter:
   - code: copyrightyear
-    value: 2024+
+    value: 2025+
   - code: releaselabel
-    value: STU8 Ballot
+    value: STU 8
   - code: path-resource
     value: input/resources
   - code: path-resource

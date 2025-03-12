@@ -40,7 +40,7 @@ The following data elements must always be present ([Mandatory] definition) or m
    -  providing more specific codes
 
   a code system value **SHOULD** be supplied for each additional code.
-{% include provenance-author-bullet.md %}
+{% include provenance-author-bullet-generator.md %}
 - \*Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
   - the `Observation.value[x]` element **SHALL** be omitted
   - An Observation without a systolic or diastolic result value **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
