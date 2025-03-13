@@ -42,7 +42,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
-- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> or the content as inline base64 encoded data using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.data`</span><!-- new-content -->`.
+- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> or the content as inline base64 encoded data using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.data`</span><!-- new-content -->.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The Client application **SHALL** support both elements.
     -  The <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint.

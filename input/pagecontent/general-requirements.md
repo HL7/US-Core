@@ -111,7 +111,7 @@ Because of the  FHIR conformance rule:
 FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in Figure 2 below illustrates this structure for the repeating `DocumentReference.category` element:
 
 - This structure allows 0..\* concept(s) from the *required* ValueSet.
-- By being 0..\*, thie structure permits Servers to send concepts not in the required ValueSet.
+- By being 0..\*, this structure permits Servers to send concepts not in the required ValueSet.
 
 
   {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 2: US Core DocumentReference.category" %}

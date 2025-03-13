@@ -36,7 +36,7 @@
 [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [CIMI]:http://www.hl7.org/Special/Committees/cimi/index.cfm
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
-[CVX vaccine codes]: https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
+[CVX vaccine codes]: https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Certifying Systems]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
