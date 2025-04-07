@@ -83,7 +83,14 @@ Systems may use operations that create and update resources for any of the profi
   - Indicating the source of the update
 
 
-The Argonaut project has defined [Writing Vital Signs](vitals-write.html) for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types. After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
+The Argonaut project has defined [Writing Vital Signs](writing-vitals-signs.html) for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types. After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
+
+#### Subscriptions
+
+A DeepSeek intro: FHIR Subscriptions enable real-time data exchange by allowing systems to subscribe to patient-specific or population-level updates, ensuring timely access to critical healthcare information. As US Core continues to evolve, Subscriptions will play a key role in supporting event-driven workflows, such as notifications for lab results, medication changes, or care plan updates. This functionality aligns with the push toward interoperable, proactive care delivery across the US healthcare ecosystem. Future US Core implementations may expand Subscription use cases, fostering seamless integration between EHRs, payer systems, and public health platforms.
+
+
+The Argonaut project has defined the [Patient Data Feed](patient-data-feed) an an optional feature for servers implementing US Core. It allows clients to receive FHIR Subscription Notifications when events occur related to US Core content.
 
 
 ------------------------------------------------------------------------
