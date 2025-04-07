@@ -38,7 +38,7 @@ The following data elements must always be present ([Mandatory] definition) or m
    -  providing both a local system code and a LOINC code that it maps to
    -  providing a more specific category code to the "LAB" category code, such as "CH" (chemistry), in an additional coding element.
 {% include provenance-author-bullet-generator.md %}
-* Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
+* Results that are free text or report form are represented using the `DiagnosticReport.pesentedForm` element.
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New laboratory reports
   - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).
