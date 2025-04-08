@@ -3979,12 +3979,6 @@ definition:
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
           valueCode: trial-use
-      - nameUrl: changes-between-versions.html
-        title: Changes Between Versions
-        generation: markdown
-        extension:
-        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-          valueCode: trial-use
     - nameUrl: profiles-and-extensions.html
       title: Profiles and Extensions
       generation: markdown
@@ -4021,6 +4015,31 @@ definition:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+    - nameUrl: downloads.html
+      title: Downloads
+      generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+    - nameUrl: version-history.html
+      title: Version History
+      generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+      page:
+      - nameUrl: changes-between-versions.html
+        title: Changes Between Versions
+        generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
+      - nameUrl: changes.html
+        title: Change Log
+        generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative
     - nameUrl: looking-ahead.html
       title: Looking Ahead
       generation: markdown
@@ -4029,7 +4048,7 @@ definition:
         valueCode: informative
       page:
       - nameUrl: us-core-roadmap.html
-        title: US Core Roadmap
+        title: Us Core Roadmap
         generation: markdown
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -4046,18 +4065,6 @@ definition:
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
           valueCode: informative
-    - nameUrl: downloads.html
-      title: Downloads
-      generation: markdown
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
-    - nameUrl: changes.html
-      title: Change Log
-      generation: markdown
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
     - nameUrl: ImplementationGuide-hl7.fhir.us.core.html
       title: US Core ImplementationGuide Resource
       generation: markdown

@@ -3751,17 +3751,6 @@
                   "valueCode": "trial-use"
                 }
               ]
-            },
-            {
-              "nameUrl": "changes-between-versions.html",
-              "title": "Changes Between Versions",
-              "generation": "markdown",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                  "valueCode": "trial-use"
-                }
-              ]
             }
           ]
         },
@@ -3832,6 +3821,52 @@
           ]
         },
         {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
+        },
+        {
+          "nameUrl": "version-history.html",
+          "title": "Version History",
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ],
+          "page": [
+            {
+              "nameUrl": "changes-between-versions.html",
+              "title": "Changes Between Versions",
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
+            },
+            {
+              "nameUrl": "changes.html",
+              "title": "Change Log",
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "nameUrl": "looking-ahead.html",
           "title": "Looking Ahead",
           "generation": "markdown",
@@ -3844,7 +3879,7 @@
           "page": [
             {
               "nameUrl": "us-core-roadmap.html",
-              "title": "US Core Roadmap",
+              "title": "Us Core Roadmap",
               "generation": "markdown",
               "extension": [
                 {
@@ -3874,28 +3909,6 @@
                   "valueCode": "informative"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "nameUrl": "downloads.html",
-          "title": "Downloads",
-          "generation": "markdown",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-              "valueCode": "informative"
-            }
-          ]
-        },
-        {
-          "nameUrl": "changes.html",
-          "title": "Change Log",
-          "generation": "markdown",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-              "valueCode": "informative"
             }
           ]
         },
