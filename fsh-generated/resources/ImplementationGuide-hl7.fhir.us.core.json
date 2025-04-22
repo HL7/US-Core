@@ -3751,6 +3751,17 @@
                   "valueCode": "trial-use"
                 }
               ]
+            },
+            {
+              "nameUrl": "changes-between-versions.html",
+              "title": "Changes Between Versions",
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             }
           ]
         },
@@ -3832,37 +3843,13 @@
           ]
         },
         {
-          "nameUrl": "version-history.html",
-          "title": "Version History",
+          "nameUrl": "changes.html",
+          "title": "Change Log",
           "generation": "markdown",
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
               "valueCode": "informative"
-            }
-          ],
-          "page": [
-            {
-              "nameUrl": "changes-between-versions.html",
-              "title": "Changes Between Versions",
-              "generation": "markdown",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                  "valueCode": "trial-use"
-                }
-              ]
-            },
-            {
-              "nameUrl": "changes.html",
-              "title": "Change Log",
-              "generation": "markdown",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                  "valueCode": "informative"
-                }
-              ]
             }
           ]
         },
@@ -3879,7 +3866,7 @@
           "page": [
             {
               "nameUrl": "us-core-roadmap.html",
-              "title": "Us Core Roadmap",
+              "title": "US Core Roadmap",
               "generation": "markdown",
               "extension": [
                 {
@@ -3907,6 +3894,19 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
                   "valueCode": "informative"
+                }
+              ],
+              "page": [
+                {
+                  "nameUrl": "patient-data-feed-additional-resources.html",
+                  "title": "Patient Data Feed Additional Resources",
+                  "generation": "markdown",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                      "valueCode": "informative"
+                    }
+                  ]
                 }
               ]
             }
