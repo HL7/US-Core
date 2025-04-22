@@ -134,16 +134,7 @@ pages:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
-    future-of-US-core.md:
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
-      title: Future of US Core
-      vitals-write.md:
-        extension:
-        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-          valueCode: informative
-        title: Writing Vital Signs
+
   profiles-and-extensions.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -172,11 +163,40 @@ pages:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
+  # version-history.md:
+  #   extension:
+  #   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+  #     valueCode: informative 
+  #   changes-between-versions.md:
+  #     extension:
+  #     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+  #       valueCode: trial-use
   changes.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
     title: Change Log
+  looking-ahead.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative 
+    us-core-roadmap.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+      title: US Core Roadmap
+    writing-vital-signs.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+    patient-data-feed.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+      patient-data-feed-additional-resources.md:
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative  
   ImplementationGuide-hl7.fhir.us.core.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -292,7 +312,7 @@ menu:
       Basic Provenance: basic-provenance.html
       Screening and Assessments: screening-and-assessments.html
       Changes Between Versions: changes-between-versions.html
-      Future of US Core: future-of-US-core.html
+
   FHIR Artifacts: #artifact.html
       Profiles: profiles-and-extensions.html#profiles
       Extensions: profiles-and-extensions.html#extensions
@@ -303,4 +323,13 @@ menu:
   Security: security.html
   Examples: examples.html
   Downloads: downloads.html
+
+  # Version History: #version-history.html
+  #     Changes Between Versions: changes-between-versions.html
   Change Log: changes.html
+
+  Looking Ahead: #looking-ahead.html
+      US Core Roadmap: us-core-roadmap.html
+      Writing Vital Signs: writing-vital-signs.html
+      Patient Data Feed: patient-data-feed.html
+

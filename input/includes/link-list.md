@@ -351,3 +351,7 @@
 [Sex Parameter for Clinical Use ValueSet]: {{site.data.fhir.ver.hl7tx}}/ValueSet-sex-parameter-for-clinical-use.html
 [individual level provenance]: basic-provenance.html#individual-level-provenance
 [element ids]: {{site.data.fhir.path}}element.html
+[Additional Resources]: patient-data-feed-additional-resources.html
+[Subscriptions R5 Backport Implementation guide]: https://hl7.org/fhir/uv/subscriptions-backport/index.html
+[filter-criteria extension]: https://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-filter-criteria.html
+

@@ -3985,19 +3985,6 @@ definition:
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
           valueCode: trial-use
-      - nameUrl: future-of-US-core.html
-        title: Future of US Core
-        generation: markdown
-        extension:
-        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-          valueCode: trial-use
-        page:
-        - nameUrl: vitals-write.html
-          title: Writing Vital Signs
-          generation: markdown
-          extension:
-          - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-            valueCode: informative
     - nameUrl: profiles-and-extensions.html
       title: Profiles and Extensions
       generation: markdown
@@ -4046,6 +4033,38 @@ definition:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+    - nameUrl: looking-ahead.html
+      title: Looking Ahead
+      generation: markdown
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+      page:
+      - nameUrl: us-core-roadmap.html
+        title: US Core Roadmap
+        generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
+      - nameUrl: writing-vital-signs.html
+        title: Writing Vital Signs
+        generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative
+      - nameUrl: patient-data-feed.html
+        title: Patient Data Feed
+        generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative
+        page:
+        - nameUrl: patient-data-feed-additional-resources.html
+          title: Patient Data Feed Additional Resources
+          generation: markdown
+          extension:
+          - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+            valueCode: informative
     - nameUrl: ImplementationGuide-hl7.fhir.us.core.html
       title: US Core ImplementationGuide Resource
       generation: markdown
