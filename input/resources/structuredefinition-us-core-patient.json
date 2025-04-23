@@ -6,7 +6,7 @@
     "title": "US Core Patient Profile",
     "status": "active",
     "experimental": false,
-    "date": "2023-10-17",
+    "date": "2025-04-22",
     "description": "The US Core Patient Profile inherits from the FHIR [Patient](https://hl7.org/fhir/R4/patient.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Patient Demographics/Information* Data Class. It sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -109,29 +109,6 @@
                 "mustSupport": false
             },
             {
-                "id": "Patient.extension:birthsex",
-                "path": "Patient.extension",
-                "sliceName": "birthsex",
-                "short": "Birth Sex Extension",
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
-                        ]
-                    }
-                ],
-                "mustSupport": false,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Patient.extension"
-                    }
-                ]
-            },
-            {
                 "id": "Patient.extension:sex",
                 "extension": [
                     {
@@ -149,75 +126,6 @@
                         "code": "Extension",
                         "profile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
-                        ]
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Patient.extension:sexParameterForClinicalUse",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Patient.extension",
-                "sliceName": "sexParameterForClinicalUse",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Sex Parameters for Clinical Use Extension",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse"
-                        ]
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Patient.extension:genderIdentity",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Patient.extension",
-                "sliceName": "genderIdentity",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: The individual's gender identity",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity"
-                        ]
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Patient.extension:personalPronouns",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Patient.extension",
-                "sliceName": "personalPronouns",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Individual's Pronouns Extension",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/StructureDefinition/individual-pronouns"
                         ]
                     }
                 ],
@@ -439,27 +347,6 @@
                     {
                         "identity": "argonaut-dq-dstu2",
                         "map": "NA"
-                    }
-                ]
-            },
-            {
-                "id": "Patient.gender",
-                "path": "Patient.gender",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "code"
-                    }
-                ],
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Patient.gender"
                     }
                 ]
             },

@@ -17,7 +17,7 @@ The following [Extensions] have been defined as part of the US Core Implementati
  <!-- string parameters passed in from the page used to define the extension for each section -->
  <!-- In future, made need to convert to data file as csv if gets bigger -->
 {% assign ig_only = "USCDIRequirement" %}
-{% assign realm_only = "USCoreDirectEmailExtension,USCoreJurisdictionExtension" %}
+{% assign realm_only = "USCoreDirectEmailExtension,USCoreJurisdictionExtension,USCoreBirthSexExtension,USCoreGenderIdentityExtension" %}
 
 #### US Core Profile Extensions
 The following extensions are used in US Core Profiles.

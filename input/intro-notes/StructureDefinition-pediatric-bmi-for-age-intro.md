@@ -13,7 +13,7 @@ The following are example usage scenarios for this profile:
 **Each Observation Must Have:**
 
 1. a patient
-1. a fixed code for pediatric BMI per age and gender measurement
+1. a fixed code for pediatric BMI per age and sex measurement
 
 **Each Observation Must Support:**
 

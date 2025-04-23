@@ -1,12 +1,18 @@
 {
     "resourceType": "StructureDefinition",
     "id": "us-core-birthsex",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "informative"
+        }
+    ],
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
     "name": "USCoreBirthSexExtension",
     "title": "US Core Birth Sex Extension",
     "status": "active",
-    "date": "2023-05-15",
-    "description": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9). After version 6.0.0, this extension is no longer a *USCDI Requirement*.",
+    "date": "2025-04-22",
+    "description": "A code classifying the person's sex assigned at birth. This extension aligns with LOINC 76689-9 (Sex assigned at birth).",
     "fhirVersion": "4.0.1",
     "kind": "complex-type",
     "abstract": false,
@@ -24,8 +30,8 @@
             {
                 "id": "Extension",
                 "path": "Extension",
-                "definition": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).",
-                "comment": "The codes required are intended to present birth sex (i.e., the sex recorded on the patient's birth certificate) and not gender identity or reassigned sex.",
+                "definition": "A code classifying the person's sex assigned at birth.",
+                "comment": "This extension aligns with LOINC 76689-9 (Sex assigned at birth).",
                 "min": 0,
                 "max": "1",
                 "isModifier": false,

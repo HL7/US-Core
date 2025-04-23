@@ -200,7 +200,6 @@
 [ekg]: ServiceRequest-ekg.html
 [foodpantry-referral]: ServiceRequest-foodpantry-referral.html
 [rehab]: ServiceRequest-rehab.html
-[sexual-orientation-example]: Observation-sexual-orientation-example.html
 [simple-observation-cognitive-status]: Observation-simple-observation-cognitive-status.html
 [simple-observation-disability-status]: Observation-simple-observation-disability-status.html
 [simple-observation-functional-status]: Observation-simple-observation-functional-status.html
@@ -396,7 +395,6 @@
 [USCorePatientDeathDate]: SearchParameter-us-core-patient-death-date.html
 [USCorePatientFamily]: SearchParameter-us-core-patient-family.html
 [USCorePatientGender]: SearchParameter-us-core-patient-gender.html
-[USCorePatientGenderIdentity]: SearchParameter-us-core-patient-gender-identity.html
 [USCorePatientGiven]: SearchParameter-us-core-patient-given.html
 [USCorePatientId]: SearchParameter-us-core-patient-id.html
 [USCorePatientIdentifier]: SearchParameter-us-core-patient-identifier.html

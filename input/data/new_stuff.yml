@@ -68,13 +68,13 @@
 # - USCoreCarePlanProfile
 # - USCoreCareTeamProfile
 # - USCoreGoalProfile
-# - USCoreObservationSexualOrientationProfile
+- USCoreObservationSexualOrientationProfile
 # - USCoreSmokingStatusProfile
-# - USCorePatientProfile
+- USCorePatientProfile
 # - USCoreObservationADIDocumentationProfile
 # - USCoreADIDocumentReferenceProfile
 # - USCoreVitalSignsProfile
-# - USCoreSimpleObservationProfile
+# - USCoreSexExtension
 
 
 
@@ -84,7 +84,9 @@
 # - USCoreTribalAffiliationExtension
 # - USCoreSexForClinicalUse
 # - USCoreJurisdictionExtension
-# - USCoreSexExtension
+- USCoreSexExtension
+- USCoreBirthSexExtension
+- USCoreGenderIdentityExtension
 # - USCoreMedicationAdherenceExtension
 # - USCDIRequirement
 # - USCoreAuthenticationTimeExtension
@@ -173,7 +175,6 @@
 # - MedicationRequest Contained Oral Axid Example
 # - MedicationRequest Referenced Oral Axid Example
 # - MedicationRequest Self Tylenol Example
-# - Deceased Patient Example
 # - Missing Coded Data Example
 # - Organization Acme Payer Example
 # - Simple Observation Cognitive Status Example
@@ -267,7 +268,10 @@
 # - Sexual Orientation Observation Example
 # - 2 Packs a Day Smoker 
 # - Immunization Example 1
-# - Patient Example
+- Patient Example
+- Patient Infant Example
+- Deceased Patient Example
+- Patient Child Example
 # - ADI Observation Presence ADI Example
 # - ADI Observation Presence No ADI Example
 # - DocumentReference ADI-DNI (PDF)

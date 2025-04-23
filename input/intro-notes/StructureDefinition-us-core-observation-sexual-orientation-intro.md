@@ -1,3 +1,4 @@
+{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -23,15 +24,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a sexual orientation value
 
 
-
-{% include additional-requirements-intro.md type="Observation" plural="false" %}
-
-1. a performer*
-
-
 **Profile Specific Implementation Guidance:**
 
+* <span class="bg-success" markdown="1">This profile is no longer a USCDI requirement. Implementers can look to the FHIR specification and other implementation guides for usage.</span><!-- new-content -->
 * Additional codes that translate or map to the Observation code (e.g., local codes) are allowed.
-{% include provenance-author-bullet-generator.md %}
+
 
 {% include link-list.md %}

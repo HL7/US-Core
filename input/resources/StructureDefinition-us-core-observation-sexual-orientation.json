@@ -19,7 +19,7 @@
             ]
         }
     ],
-    "description": "The US Core Observation Sexual Orientation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Sexual Orientation* Data Element. It sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+    "description": "The US Core Observation Sexual Orientation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to refer to it for scope and usage definitions. This Profile sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "jurisdiction": [
         {
             "coding": [
@@ -137,80 +137,6 @@
                     {
                         "identity": "argonaut-dq-dstu2",
                         "map": "Observation.effective[x]"
-                    }
-                ]
-            },
-            {
-                "id": "Observation.performer",
-                "path": "Observation.performer",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Who is responsible for the observation",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
                     }
                 ]
             },

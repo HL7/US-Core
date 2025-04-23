@@ -23,7 +23,6 @@ The following search parameters have been defined as optional search parameters 
 
 - [race]
 - [ethnicity]
-- [gender-identity]
 
 #### Search Parameters defined by this Implementation Guide
 

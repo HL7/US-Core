@@ -1385,12 +1385,6 @@ definition:
     name: ServiceRequest for Rehab Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
   - reference:
-      reference: Observation/sexual-orientation-example
-    description: This is an sexual orientation example for the *US Core Observation
-      Sexual Orientation Profile*.
-    name: Sexual Orientation Observation Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation
-  - reference:
       reference: Observation/simple-observation-cognitive-status
     description: This *US Core Simple Observation Profile* is a cognitive status determination
       which is not based on any formal assessment tool or survey. (This example is
@@ -1564,10 +1558,8 @@ definition:
     name: US Core Average Blood Pressure Profile
   - reference:
       reference: StructureDefinition/us-core-birthsex
-    description: A code classifying the person's sex assigned at birth  as specified
-      by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).
-      This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).
-      After version 6.0.0, this extension is no longer a *USCDI Requirement*.
+    description: A code classifying the person's sex assigned at birth. This extension
+      aligns with LOINC 76689-9 (Sex assigned at birth).
     exampleBoolean: false
     name: US Core Birth Sex Extension
   - reference:
@@ -1903,10 +1895,7 @@ definition:
       reference: StructureDefinition/us-core-genderIdentity
     description: This extension represents an individual's sense of being a man, woman,
       boy, girl, nonbinary, or something else, ascertained by asking them what that
-      identity is. Systems requiring multiple gender identities and associated dates
-      **SHOULD** use the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html).
-      When future versions of US Core are based on FHIR R5, the FHIR R5 extension
-      will supersede this extension.
+      identity is.
     exampleBoolean: false
     name: US Core Gender Identity Extension
   - reference:
@@ -2205,14 +2194,12 @@ definition:
       reference: StructureDefinition/us-core-observation-sexual-orientation
     description: The US Core Observation Sexual Orientation Profile inherits from
       the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer
-      to refer to it for scope and usage definitions. This profile meets the requirements
-      of the U.S. Core Data for Interoperability (USCDI) *Sexual Orientation* Data
-      Element. It sets minimum expectations for the Observation resource to record,
-      search, and fetch sexual orientation observations associated with a patient.
-      It specifies which core elements, extensions,  vocabularies, and value sets
-      **SHALL** be present in the resource and constrains how the elements are used.
-      Providing the floor for standards development for specific use cases promotes
-      interoperability and adoption.
+      to refer to it for scope and usage definitions. This Profile sets minimum expectations
+      for the Observation resource to record, search, and fetch sexual orientation
+      observations associated with a patient. It specifies which core elements, extensions,  vocabularies,
+      and value sets **SHALL** be present in the resource and constrains how the elements
+      are used. Providing the floor for standards development for specific use cases
+      promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Observation Sexual Orientation Profile
   - reference:
@@ -2269,8 +2256,8 @@ definition:
     description: US Core Pediatric Weight for Height Observation Profile inherits
       from the US Core Vital Signs Profile. This profile sets minimum expectations
       for the Observation resource to record, search,  and fetch pediatric weight-for-length
-      per age and gender observations in FHIR with a standard LOINC code and UCUM
-      units of measure. It specifies which *additional*  core elements, extensions,  vocabularies,
+      per age and sex observations in FHIR with a standard LOINC code and UCUM units
+      of measure. It specifies which *additional*  core elements, extensions,  vocabularies,
       and value sets **SHALL** be present in the resource and constrains how the elements
       are used. Providing the floor for standards development for specific use cases
       promotes interoperability and adoption.
@@ -2465,16 +2452,11 @@ definition:
     name: US Core ServiceRequest Profile
   - reference:
       reference: StructureDefinition/us-core-sex
-    description: "The Sex Extension is used to reflect the documentation of a person's\
-      \ sex. Systems choosing to record sources of information should use the [Provenance\
-      \ resource](element-level-provenance.html).\n \nUSCDI includes a data element\
-      \ for sex, intended to support the exchange of a sex value that is not characterized\
-      \ as sex assigned at birth or birth sex. This Sex extension supports USCDI.\
-      \ Sex assigned at birth or birth sex can be recorded using the more specific\
-      \ [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
-      Future versions of this extension may be informed by the content of the HL7\
-      \ Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may\
-      \ include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender))."
+    description: 'USCDI includes a data element for Sex, intended to support the exchange
+      of a recorded sex value. This extension aligns with the USCDI definition of
+      Sex: "Documentation of a specific instance of sex." It enables systems to share
+      the sex value as it was documented in a particular context.  Systems choosing
+      to record sources of information should use the [Provenance resource](element-level-provenance.html).'
     exampleBoolean: false
     name: US Core Sex Extension
   - reference:
@@ -3507,12 +3489,6 @@ definition:
       \ **SHOULD** use the standard FHIR SearchParameter.\n"
     exampleBoolean: false
     name: USCorePatientGender
-  - reference:
-      reference: SearchParameter/us-core-patient-gender-identity
-    description: Returns patients with an gender-identity extension matching the specified
-      code.
-    exampleBoolean: false
-    name: USCorePatientGenderIdentity
   - reference:
       reference: SearchParameter/us-core-patient-given
     description: "**A portion of the given name of the patient**  \nNOTE: This SearchParameter\

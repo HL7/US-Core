@@ -4,11 +4,11 @@
 This section is informative and not a requirement for systems conforming to the US Core Provenance Profile.
 </div><!-- stu-note -->
 
-Provenance typically communicates a single activity about one or more target resources identified via `Provenance.target`. However, it can focus on one or more resource *elements* using the FHIR [Target Element] extension on `Provenance.target` and identifying the target elements using [element ids]. For example, to document how and who supplied patient demographic data such as race and ethnicity, gender identity, and sexual orientation.
+Provenance typically communicates a single activity about one or more target resources identified via `Provenance.target`. However, it can focus on one or more resource *elements* using the FHIR [Target Element] extension on `Provenance.target` and identifying the target elements using [element ids]. For example, to document how and who supplied patient demographic data such as race, ethnicity, etc.
 
 Example:
 
-In the following [US Core Patient Profile] example, the patient demographic data such as race,ethnicity, etc.have *individual element ids* within a resource for internal and external referencing:
+In the following [US Core Patient Profile] example, the patient demographic data such as race have *individual element ids* within a resource for internal and external referencing:
 
 <!-- {% raw %} {% include examplebutton_default.html example="Patient-example-targeted-provenance.json" b_title = "Click Here to See Individual Element Ids Within a Patient Resource Example" %} {% endraw %} The ig-publisher does not render version specific examples see chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Version-specific.20examples -->
 
@@ -60,25 +60,13 @@ In the following [US Core Patient Profile] example, the patient demographic data
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
         },
         {
-            "id": "birthsex",
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-            "valueCode": "F"
-        },
-        {
             "id": "sex",
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
-            "valueCode": "248152002"
-        },
-        {
-            "id": "genderIdentity",
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
-            "valueCodeableConcept": {
-                "coding": [
-                    {
-                        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-                        "code": "UNK"
-                    }
-                ]
+            "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "version": "http://snomed.info/sct/731000124108",
+                "code": "248152002",
+                "display": "Female (finding)"
             }
         }
     ],
@@ -104,10 +92,6 @@ In the following [US Core Patient Profile] example, the patient demographic data
             "value": "555-555-5555"
         }
     ],
-    "gender": "female",
-    "_gender": {
-        "id": "gender"
-    },
     "birthDate": "1987-02-20",
     "address": [
         {
@@ -123,7 +107,7 @@ In the following [US Core Patient Profile] example, the patient demographic data
 
 ~~~
 
-The following  [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element id "race" within the Patient resource:
+The following  [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), sex, etc., were collected. Note that the [Target Element] Extension references the element id "race" within the Patient resource:
 
 <!-- {% raw %} {% include examplebutton_default.html example="Provenance-example-targeted-provenance.json" b_title = "Click Here to See an Element Level Provenance Example" %} {% endraw %}
 The ig-publisher does not render version specific examples see chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Version-specific.20examples 

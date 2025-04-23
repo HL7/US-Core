@@ -32,6 +32,14 @@ extension:
       display: Not Hispanic or Latino
   - url: text
     valueString: Not Hispanic or Latino
+#=====================change in US Core V8 ======================
+  - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex
+    valueCoding: 
+        system: http://snomed.info/sct
+        version: http://snomed.info/sct/731000124108
+        code: '248152002'
+        display: Female (finding)
+#=====================change in US Core V8 ======================
 identifier:
 - use: usual
   type:
@@ -54,7 +62,9 @@ telecom:
   use: home
 - system: email
   value: mary.shaw@example.com
-gender: female
+# ================== Removed in US Core V8 ============================
+# gender: female
+# ================== Removed in US Core V8 ============================
 birthDate: '1937-10-21'
 deceasedDateTime: '2022-07-22'
 address:

@@ -27,12 +27,20 @@ extension:
       display: Not Hispanic or Latino
   - url: text
     valueString: Not Hispanic or Latino
+    
+# ================== Removed in US Core V8 ============================
+# - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
+#   valueCode: M
+# ================== Removed in US Core V8 ============================
 
-- url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
-  valueCode: M
-
+#=====================change in US Core V8 ======================
 - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex
-  valueCode: '248153007'
+  valueCoding: 
+    system: http://snomed.info/sct
+    version: http://snomed.info/sct/731000124108
+    code: '248153007'
+    display: Male (finding)
+#=====================change in US Core V8 ======================
 
 identifier:
 - use: usual
@@ -53,7 +61,9 @@ telecom:
 - system: phone
   value: 555-555-5555
   use: home
-gender: male
+# ================== Removed in US Core V8 ============================
+# gender: male
+# ================== Removed in US Core V8 ============================
 birthDate: '2020-06-02'
 address:
 - line:
