@@ -193,11 +193,13 @@ Example of a Parameters resource for a notification with multiple triggers, incl
 
 ### Subscription Filters and Requests
 
-Servers SHALL allow clients to create Subscriptions according to the [Subscriptions R5 Backport Implementation guide]. This includes supporting filter criteria via the [filter-criteria extension] for each resource when notifications are requested.
+Servers SHALL allow clients to create Subscriptions according to the [Subscriptions R5 Backport Implementation guide] and support Subscriptions with zero or more supported filter criteria via the [filter-criteria extension].  For each supported resource type, servers SHALL support the Required-Support Filters as specified in Table 1 and SHOULD support the Recommended-Support Filters.
 
-For each supported resource type, servers SHALL support the Required-Support Filters as specified in Table 1 and SHOULD support the Recommended-Support Filters.
+Clients MAY include multiple resource types by supplying multiple filter-criteria extensions in a Subscription request; servers SHALL process all filter-criteria extensions provided by the client.
 
-Servers SHALL support Subscriptions with zero or more supported filters in any filter-criteria extension.
+  * If no filter criteria are provided, servers will, by default, send notifications for all supported resource types.
+    
+  * If one or more filter criteria are provided, servers will send notifications for *only those resources specified in the filter(s)*.
 
 #### Example Subscription Request
 
@@ -247,8 +249,6 @@ The following example Subscription request demonstrates filters based on patient
 ```
 
 #### Handling Multiple Resource Types and Filters
-
-1. Clients MAY include multiple resource types by supplying multiple filter-criteria extensions in a Subscription request; Servers SHALL process all filter-criteria extensions provided by the Client.
 
 2. Clients SHALL NOT include `patient=` filters for different patients in the same Subscription.
 
