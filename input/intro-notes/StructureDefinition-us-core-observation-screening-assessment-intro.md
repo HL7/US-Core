@@ -34,15 +34,13 @@ The following data elements must always be present ([Mandatory] definition) or m
   - Each response to individual questions and each answer to a multi-select or "check all that apply" question is a separate US Core Screening and Assessments Observation. The question is communicated in `Observation.code`, and the answer is in `Observation.value`.
   - Multi-question screenings and assessments use the US Core Screening and Assessments Observation to represent a "panel" or grouping. The multi-question surveys or assessments  `Observation.code` is an overarching assessment or screening code, and the `Observation.value` element **SHOULD** be empty. `Observation.hasMember` references US Core Screening and Assessments Observations that represent the responses to each question in the screening or assessment. 
 - A practitioner's clinical observation or assertion about a patient's health status, which is not a response to a screening or assessment question, **SHOULD** use the [US Core Simple Observation Profile] instead.
-
-
 - \*The category type "survey" is required, and, at a minimum, Servers **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Screening Assessment Observation Maximum Category] codes, and **MAY** support other categories.
 
     {% include obs_cat_guidance.md category='survey'%}
 
-
 {% include DAR-exception.md %}
-- \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
+{% include provenance-author-bullet-generator.md %}
+    - \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
 - \*Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. <span class="bg-success" markdown="1">Servers are </span><!-- new-content --> not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.
-  
+
 {% include link-list.md %}

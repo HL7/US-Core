@@ -132,9 +132,9 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
                             "http://hl7.org/fhir/StructureDefinition/Device"
@@ -160,12 +160,8 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
+                                        "valueBoolean": false
+                                    },
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": false

@@ -32,5 +32,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 - \* If the system asserts the patient has ADI documents and the references to the (electronic) documents are known, it **SHOULD** reference them in the [Supporting Info Extension] using the [US Core ADI DocumentReference Profile] to exchange the ADI documents and their properties.
   - If the system asserts the patient has ADI documents, but the location of the  documents is unknown, there would be no reference.
 - \* An `Observation.performer` of type Practitioner or Organization typically makes the observation, and an `Observation.performer` of Patient or RelatedPerson usually supplies the information (for example, a next of kin who answers questions about the patient's advance directives). Systems may use the standard [Performer function Extension] to distinguish the type of involvement of the performer in the Observation resource.
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

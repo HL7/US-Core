@@ -25,7 +25,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each MedicationDispense Must Support:**
 
 1. the encounter associated with the dispense
-2. who dispensed the medication
+2. who dispensed the medication*
 3. the authorizing prescription
 4. type of dispense (e.g., partially dispensed)
 5. the quantity dispensed
@@ -35,10 +35,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 9. the route of administration
 10. the dose and rate
 
+*see guidance below
 
 **Profile Specific Implementation Guidance:**
 
 * The MedicationDispense resource is used to represent the USCDI medication fill status.
 {% include representing-meds.md %}
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

@@ -25,7 +25,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. the encounter in which the request was created
 3. when requested service <span class="bg-success" markdown="1">should</span><!-- new-content --> happen
 4. when the request was made
-5. the requester
+5. the requester*
 
 {% include additional-requirements-intro.md type="ServiceRequest" %}
 
@@ -38,8 +38,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 - For more information on exchanging Social Determinants of Health (SDOH) service requests, See the [Screening and Assessments] guidance page.
 - The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes], and other category codes can be used. API consumers can query by category when accessing patient information. For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table below. For example, laboratory orders would have the category code "108252007" (Laboratory procedure).
 
-  
-
   |USCDI Order Data Element|Category Codes|
   |---|---|
   |Laboratory Order| [108252007 Laboratory procedure (procedure)]|
@@ -48,11 +46,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   |Procedure Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]| 
   {:.grid}
 
-  
-
 - The `ServiceRequest.code` value set is broad to accommodate a wide variety of use cases and **SHOULD** be constrained to a subset for a particular use case or domain.  These value sets contain concepts that span many use cases and are not bound to any USCDI Data Element. However, the table below identifies *additional* value set bindings for the USCDI *Laboratory Order, Imaging Order and Clinical Test Order* Data Elements. Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context. For example, laboratory orders are [extensibly] bound to the [LOINC Common Laboratory Orders Value Set]. Note that the USCDI Class *Procedure Order* Data Element has no additional binding.
-
-  
 
   |USCDI Order Data Element|Additional Binding|Binding Strength|Comments|
   |---|---|---|---|
@@ -61,14 +55,12 @@ The following data elements must always be present ([Mandatory] definition) or m
   |Clinical Test Order|[LOINC Clinical Test Codes]|[example]|LOINC Clinical Test Codes include non-laboratory and non-imaging clinical test codes that represent clinical tests.|
   {:.grid}
 
-  
-
-
 - *Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements. Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`. Depending on the procedure being documented, a Server will select the appropriate Profile to use.
    - Although both `ServiceRequest.reasonCode` and `ServiceRequest.reasonReference` are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements. The certifying Client application **SHALL** support both elements.
      - when using  `ServiceRequest.reasonReference`:
        - Servers **SHALL** support *at least one* target resource in `ServiceRequest.reasonReference`. Clients **SHALL** support all target resources.
        - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
+{% include provenance-author-bullet-generator.md %}
 
 
 

@@ -41,17 +41,15 @@ The following summary tables  may be useful to testers and analysts to review th
 
 The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI)]. See the [USCDI] page for more information about the US Core and USCDI relationship and a mapping between US Core Profiles and the USCDI Data Classes and Elements. Some US Core Profile elements needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements as *Additional USCDI Requirements*.
 
-Implementers seeking ONC certification (Certifying Systems) **SHALL** interpret *Additional USCDI Requirements* as *Must Support* elements as documented above and below; otherwise, they are considered optional. All *Mandatory*, *Must Support*, or *Additional USCDI Requirements* are within the scope of ONC Health IT Certification. Only simple and complex data elements are defined as *Additional USCDI Requirements*. The *Must Support* sections below document how the conformance rules are displayed and applied.
-
-
+Implementers seeking ONC certification **SHALL** interpret *Additional USCDI Requirements* as *Must Support* elements as documented above and below; otherwise, they are considered optional. All *Mandatory*, *Must Support*, or *Additional USCDI Requirements* are within the scope of ONC Health IT Certification. Only simple and complex data elements are defined as *Additional USCDI Requirements*. The *Must Support* sections below document how the conformance rules are displayed and applied.
 
 The table below lists the *Additional USCDI Requirements* and their corresponding Profiles and FHIR elements.
 
 {% include additional-uscdi-tabler.md %}
 
-#### Communicating Additional USCDI Requirements
+#### Communicating Additional USCDI Requirements <span class="bg-success" markdown="1">for Certifying Systems</span><!-- new-content -->
 
-To communicate when *Additional USCDI Requirements* elements are in a US Core profile:
+<span class="bg-success" markdown="1"> Throughout the rest of the specification, the term "Certifying System" will be used consistently to refer to such systems seeking ONC certification, distinguishing them from other implementers (e.g., non-certifying systems) that may treat Additional USCDI Requirements as optional.</span><!-- new-content -->  To communicate when *Additional USCDI Requirements* elements are in a US Core profile:
 
 1. The profiles page includes an "Additional USCDI Requirements" listing the elements under the "Mandatory and *Must Support* Data Elements" section. 
 2. The computable [US Core USCDI Requirement Extension] is added to each element in the profile's [StructureDefinition].

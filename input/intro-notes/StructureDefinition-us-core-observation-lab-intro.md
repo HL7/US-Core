@@ -39,7 +39,7 @@ The following are example usage scenarios for this profile:
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New laboratory observations
   - Changes in the status of laboratory observations, including events that trigger the same status (e.g., amended → amended).
-  
+
 
 
 {% include link-list.md %}

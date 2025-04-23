@@ -26,7 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Procedure" %}
 
-1. who was involved in the procedure
+1. who was involved in the procedure*
 2. a reason or indication for referral or consultation*
 
 *see guidance below
@@ -48,6 +48,6 @@ The following data elements must always be present ([Mandatory] definition) or m
      - when using  `Procedure.reasonReference`:
        - Servers **SHALL** support *at least one* target resource in `Procedure.reasonReference`. Clients **SHALL** support all target resources in `Procedure.reasonReference`.
        - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
-
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

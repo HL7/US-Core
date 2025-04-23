@@ -55,11 +55,13 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 38. **Applied:** (Correction) Typo "content.attachment.url/data" instead of "content.url/data" [FHIR-49023](https://jira.hl7.org/browse/FHIR-49023) See Changes:
    - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html)
    - [US Core ADI DocumentReference Profile ](StructureDefinition-us-core-adi-documentreference.html)
-39. **Triaged:** (Correction) Add Provenance Author and Author Role to USCDI Table [FHIR-49024](https://jira.hl7.org/browse/FHIR-49024) See Changes [Here](uscdi.html)
+39. **Applied:** (Correction) Add Provenance Author and Author Role to USCDI Table [FHIR-49024](https://jira.hl7.org/browse/FHIR-49024) See Changes [Here](uscdi.html)
 40. **Triaged:** (Clarification) Clarify A MedicationRequest resource query [FHIR-49038](https://jira.hl7.org/browse/FHIR-49038) See Changes [Here](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
 41. **Triaged:** (Clarification) Clarify MedicationRequest Profile Specific Implementation Guidance: [FHIR-49039](https://jira.hl7.org/browse/FHIR-49039) See Changes [Here](StructureDefinition-us-core-medicationrequest.html)
-42. **Triaged:** (Correction) Inconsistent individual level provenance documentation [FHIR-49064](https://jira.hl7.org/browse/FHIR-49064) See Changes [Here]()
-43. **Triaged:** (Correction) Screening Assessment profile is inconsistent in wording [FHIR-49065](https://jira.hl7.org/browse/FHIR-49065) See Changes [Here]()
+42. **Applied:** (Correction) Add author provenance documentation to all profiles listed Individual Level Provenance table.[FHIR-49064](https://jira.hl7.org/browse/FHIR-49064) For example, see Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
+43. **Applied:** (Correction) Define the use of use the term "certifying Server system" and remove it from US Core Observation Screening Assessment Profile. [FHIR-49065](https://jira.hl7.org/browse/FHIR-49065) See Changes:
+  - [US Core Observation Screening Assessment Profile](StructureDefinition-us-core-observation-screening-assessment.html) 
+  - [Additional USCDI Requirements](must-support.html#additional-uscdi-requirements) 
 44. **Applied:** (Correction) Corrected MS target for MedicationRequest.requester and .reportedReference data elements in Individual Level Provenance Table [FHIR-49066](https://jira.hl7.org/browse/FHIR-49066) See Changes [Here](basic-provenance.html#individual-level-provenance)
 45. **Applied:** (Correction) Plural vs singular wording for provenance elements [FHIR-49067](https://jira.hl7.org/browse/FHIR-49067) See Changes [Here](StructureDefinition-us-core-immunization.html)
 46. **Applied:** (Correction) Typo "service should happen" instead of "serviceSHOULDhappen" [FHIR-49068](https://jira.hl7.org/browse/FHIR-49068) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
@@ -156,7 +158,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 137. **Resolved - change required:** (Enhancement) Value sets should not include inactive codes unless specific to historical queries [FHIR-50156](https://jira.hl7.org/browse/FHIR-50156) See Changes [Here](254067)
 138. **Applied** (Correction) Added missing profiles to "omitted" Profile list for individual level provenance [FHIR-50163](https://jira.hl7.org/browse/FHIR-50163) See Changes [Here](basic-provenance.html#individual-level-provenance)
 139. **Applied:** (Correction) Changes to comply with Executive Order 14168 [FHIR-50177](https://jira.hl7.org/browse/FHIR-50177) See the summary of changes in the [What's New](#whats-new-in-version-800-of-us-core) section above.
-140. **Triaged:** (Clarification) Remove MS flag for Practitioner in MedicationDispense Profile [FHIR-50239](https://jira.hl7.org/browse/FHIR-50239) See Changes [Here](256387)
+140. **Pre-Applied:** (Clarification) Remove MS flag for Practitioner in MedicationDispense Profile [FHIR-50239](https://jira.hl7.org/browse/FHIR-50239) See Changes [Here](StructureDefinition-us-core-medicationdispense.html)
 141. **Triaged:** () Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](256476)
 142. **Triaged:** (Enhancement) Add section on slicing on the Must Support page  [FHIR-50286](https://jira.hl7.org/browse/FHIR-50286) See Changes [Here](256480)
 143. **Triaged:** () Encounter Diagnosis FHIR Resource Dates (e.g. AbatementDate) inherited requirements from Problems and Health Concerns [FHIR-50288](https://jira.hl7.org/browse/FHIR-50288) See Changes [Here](256483)

@@ -41,17 +41,15 @@ The following data elements must always be present ([Mandatory] definition) or m
       **code**: Transport too expensive (SNOMED CT: 160695008)  
       **value**: true
 
-
-
 - \*At a minimum, Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
 
     {% include obs_cat_guidance.md category="sdoh, functional-status, or social history"%}
 
-
 {% include DAR-exception.md %}
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
   - \*Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
--   \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
+{% include provenance-author-bullet-generator.md %}
+  -   \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
 -  \*Although none of the `Observation.derivedFrom` [referenced target profiles are flagged as *Must Support*](must-support.html#must-support---resource-references), Certifying System **SHALL** support at least one of them. Client Applications **SHALL** support all.
    - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
