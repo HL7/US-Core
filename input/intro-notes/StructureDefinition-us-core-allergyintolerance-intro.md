@@ -17,27 +17,33 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a code that tells you what the patient is allergic to
 1. a patient
 
-\*This element has the following constraints: **SHALL** be present if verification status is not "entered-in-error" and **SHALL NOT** be present if verification Status is "entered-in-error".
-
 **Each AllergyIntolerance Must Support:**
 
 1. a verification status
-1. a reaction manifestation
+2. a reaction manifestation
+
+<div class="bg-success" markdown="1">
+
+{% include additional-requirements-intro.md type="AllergyIntolerance" plural="false" %}
+
+1. a recorder*
+</div><!-- new-content -->
+
+*see guidance below
 
 **Profile Specific Implementation Guidance:**
 
+
+* \* The `AllergyIntolerance.clinicalStatus` element has the following constraints: **SHALL** be present if verification status is not "entered-in-error" and **SHALL NOT** be present if verification Status is "entered-in-error".
 * *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile with the appropriate negation code in `AllergyIntolerence.code` and the appropriate verification status in `AllergyIntolerance.verificationStatus`.
 
   If a patient has not been asked about their allergies, this would be represented as:
-
     * `AllergyIntolerance.code` = "1631000175102" (Patient not asked (contextual qualifier) (qualifier value))
-
     * `AllergyIntolerance.verificationStatus` = "unconfirmed" or empty (in other words, then element omitted)
-
+  
   If a patient has been asked, but has indicated they have no known allergies, this would be represented as:
-
   * `AllergyIntolerance.code` = "716186003" (No known allergy (situation))
-
   * `AllergyIntolerance.verificationStatus` = "confirmed"
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

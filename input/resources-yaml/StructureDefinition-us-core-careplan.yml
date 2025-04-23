@@ -121,3 +121,43 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: CarePlan.subject
+  #===================  new for USCDI 5====================================
+  - id: CarePlan.contributor
+    extension:
+      - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+        valueBoolean: true
+    path: CarePlan.contributor
+    short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Who provided the content of the care plan"
+    type:
+    - code: Reference
+      targetProfile:
+        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+        - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+        - "http://hl7.org/fhir/StructureDefinition/Device"
+      _targetProfile:
+        - extension:
+            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+              valueBoolean: false
+        - extension:
+            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+              valueBoolean: false
+        - extension:
+            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+              valueBoolean: false
+        - extension:
+            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+              valueBoolean: false
+        - extension:
+            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+              valueBoolean: false
+        - extension:
+            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+              valueBoolean: false
+        - extension:
+            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+              valueBoolean: false
+    #=================== new for USCDI 5 ====================================

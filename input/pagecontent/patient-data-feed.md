@@ -195,7 +195,7 @@ Example of a Parameters resource for a notification with multiple triggers, incl
 
 Servers SHALL allow clients to create Subscriptions according to the [Subscriptions R5 Backport Implementation guide] and support Subscriptions with zero or more supported filter criteria via the [filter-criteria extension].  For each supported resource type, servers SHALL support the Required-Support Filters as specified in Table 1 and SHOULD support the Recommended-Support Filters.
 
-Clients MAY include multiple resource types by supplying multiple filter-criteria extensions in a Subscription request; servers SHALL process all filter-criteria extensions provided by the client.
+Clients MAY include multiple filter-criteria extensions in a Subscription request; servers SHALL process all filter-criteria extensions provided by the client.
 
   * If no filter criteria are provided, servers will, by default, send notifications for all supported resource types.
     

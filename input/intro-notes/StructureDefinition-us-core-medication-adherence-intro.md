@@ -1,4 +1,4 @@
-{% include new_page.md %}
+
 
 **Profile Specific Implementation Guidance:**
 

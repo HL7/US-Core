@@ -113,17 +113,22 @@ The functionality of the Provenance resource discussed above. The table below li
 The elements and target resources listed in bold asterisked text indicate that they are *Must Support* or *Additional USCDI Requirements*.
 The following US Core Profiles were omitted because they are typically not associated with individual authorship:
 
-- US Core Encounter
-- US Core Location
-- US Core Organization
-- US Core Practitioner
-- US Core PractitionerRole
-- US Core RelatedPerson
-- US Core Medication
-- US Core Provenance
-- US Core CareTeam
-- US Core Coverage
-- US Core Specimen
+<div class="bg-success" markdown="1">
+
+- US Core CareTeam Profile
+- US Core Coverage Profile
+- US Core Encounter Profile
+- US Core Implantable Device Profile
+- US Core Location Profile
+- US Core Medication Profile
+- US Core Organization Profile
+- US Core Patient Profile
+- US Core Practitioner Profile
+- US Core PractitionerRole Profile
+- US Core Provenance Profile
+- US Core RelatedPerson Profile
+- US Core Specimen Profile
+</div><!-- new-content -->
  
 This table is also available as a [csv](tables/provenance-elements.csv) or [excel](tables/provenance-elements.xlsx) file:
 

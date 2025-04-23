@@ -26,7 +26,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. abatement date (in other words, date of resolution or remission)
 1. a date when recorded*
 
-*see guidance below
+<div class="bg-success" markdown="1">
+
+{% include additional-requirements-intro.md type="Condition" plural="false" %}
+
+1. a recorder*
+</div><!-- new-content -->
 
 **Profile Specific Implementation Guidance:**
 
@@ -42,5 +47,6 @@ The following data elements must always be present ([Mandatory] definition) or m
     * A Server **SHALL** support `Condition.recordedDate`.
     * A Server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A Server may support both, which means they support all three dates.
     * The Client application **SHALL** support all three elements.
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

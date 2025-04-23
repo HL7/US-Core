@@ -60,7 +60,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 41. **Triaged:** (Clarification) Clarify MedicationRequest Profile Specific Implementation Guidance: [FHIR-49039](https://jira.hl7.org/browse/FHIR-49039) See Changes [Here](StructureDefinition-us-core-medicationrequest.html)
 42. **Triaged:** (Correction) Inconsistent individual level provenance documentation [FHIR-49064](https://jira.hl7.org/browse/FHIR-49064) See Changes [Here]()
 43. **Triaged:** (Correction) Screening Assessment profile is inconsistent in wording [FHIR-49065](https://jira.hl7.org/browse/FHIR-49065) See Changes [Here]()
-44. **Triaged:** (Correction) Individual Level Provenance inconsistencies [FHIR-49066](https://jira.hl7.org/browse/FHIR-49066) See Changes [Here]()
+44. **Applied:** (Correction) Corrected MS target for MedicationRequest.requester and .reportedReference data elements in Individual Level Provenance Table [FHIR-49066](https://jira.hl7.org/browse/FHIR-49066) See Changes [Here](basic-provenance.html#individual-level-provenance)
 45. **Applied:** (Correction) Plural vs singular wording for provenance elements [FHIR-49067](https://jira.hl7.org/browse/FHIR-49067) See Changes [Here](StructureDefinition-us-core-immunization.html)
 46. **Applied:** (Correction) Typo "service should happen" instead of "serviceSHOULDhappen" [FHIR-49068](https://jira.hl7.org/browse/FHIR-49068) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
 47. **Triaged:** (Clarification) Clarify ServiceRequest.code content [FHIR-49069](https://jira.hl7.org/browse/FHIR-49069) See Changes [Here]()
@@ -84,7 +84,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 65. **Triaged:** () Context of Use  [FHIR-49200](https://jira.hl7.org/browse/FHIR-49200) See Changes [Here](StructureDefinition-us-core-authentication-time.html)
 66. **Triaged:** () Address differences between ADI Document and Document Resource to require new profile [FHIR-49208](https://jira.hl7.org/browse/FHIR-49208) See Changes [Here](StructureDefinition-us-core-adi-documentreference-mappings.html)
 67. **Triaged:** (Enhancement) Add a cross reference table in chapter 1 showing which version of USCore relates to each version of USCDI [FHIR-49219](https://jira.hl7.org/browse/FHIR-49219) See Changes [Here](index.html)
-68. **Triaged:** (Enhancement) Correct Allergy & Condition provenance author assignments [FHIR-49221](https://jira.hl7.org/browse/FHIR-49221) See Changes [Here](basic-provenance.html)
+68. **Applied:** (Enhancement) Added and corrected individual provenance elements [FHIR-49221](https://jira.hl7.org/browse/FHIR-49221) See the summary of changes in the [What's New](#whats-new-in-version-800-of-us-core) section above.
 69. **Triaged:** () Remove slicing from authenticationTime Extension [FHIR-49232](https://jira.hl7.org/browse/FHIR-49232) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 70. **Triaged:** () Align US Core and C-CDA Race and Ethnicity Value Set Concepts [FHIR-49234](https://jira.hl7.org/browse/FHIR-49234) See Changes [Here](StructureDefinition-us-core-patient.html)
 71. **Triaged:** () Clarify the difference between ADI DocumentReference and other DocumentReference [FHIR-49249](https://jira.hl7.org/browse/FHIR-49249) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
@@ -154,7 +154,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 135. **Applied:** (Enhancement) Created a new "Looking Ahead" menu tab  [FHIR-50154](https://jira.hl7.org/browse/FHIR-50154) See Changes [Here](looking-ahead.html)
 136. **Applied:** (Enhancement) Added "Patient Data Feed" subscription guidance page to US Core [FHIR-50155](https://jira.hl7.org/browse/FHIR-50155) See Changes [Here](patient-data-feed.html)
 137. **Resolved - change required:** (Enhancement) Value sets should not include inactive codes unless specific to historical queries [FHIR-50156](https://jira.hl7.org/browse/FHIR-50156) See Changes [Here](254067)
-138. **Resolved - change required:** (Correction) Add missing profiles to ""omitted Profile list"" for individual level provenance [FHIR-50163](https://jira.hl7.org/browse/FHIR-50163) See Changes [Here](254077)
+138. **Applied** (Correction) Added missing profiles to "omitted" Profile list for individual level provenance [FHIR-50163](https://jira.hl7.org/browse/FHIR-50163) See Changes [Here](basic-provenance.html#individual-level-provenance)
 139. **Applied:** (Correction) Changes to comply with Executive Order 14168 [FHIR-50177](https://jira.hl7.org/browse/FHIR-50177) See the summary of changes in the [What's New](#whats-new-in-version-800-of-us-core) section above.
 140. **Triaged:** (Clarification) Remove MS flag for Practitioner in MedicationDispense Profile [FHIR-50239](https://jira.hl7.org/browse/FHIR-50239) See Changes [Here](256387)
 141. **Triaged:** () Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](256476)

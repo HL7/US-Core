@@ -1,4 +1,4 @@
-{% include new_page.md %}
+
 
 **Example Usage Scenarios:**
 
@@ -43,6 +43,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include DAR-exception.md %}
 - \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
-- \*Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. The certifying Server system is not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.
+- \*Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. <span class="bg-success" markdown="1">Servers are </span><!-- new-content --> not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.
   
 {% include link-list.md %}

@@ -1,6 +1,7 @@
 
 <!-- This liquid script creates context specific text for each pages author and author role implementer guidance using input data from input/data/provenance-elements.csv with the following columns:
 - Row
+- Is_New: boolean to support highlighting new content
 - Is_Source : boolean flag if is provenance source element
 - Observation_grouping: tag for grouping profiles together like ADI or vitals
 - polled_vendors: boolean flag if vendors surveyed on their use of the provenance source element for this profile
@@ -46,7 +47,7 @@
 {% for item in site.data.provenance-elements -%}
   {% if item.Is_Source == "TRUE" -%}
   {% if item.Path == page.path -%}
-- {% if item.isNew %}<span class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}*The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}*The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.isNew %}</span><!-- new-content -->{% endif %}
+- {% if item.Is_New %}<span class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}*The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}*The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New %}</span><!-- new-content -->{% endif %}
        {% break -%}
     {% endif -%}
     {% endif -%}

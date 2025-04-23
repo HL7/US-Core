@@ -1,4 +1,4 @@
-{% include new_page.md %}
+
 
 **Example Usage Scenarios:**
 
@@ -25,6 +25,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a time indicating when the preference was made
 <!-- 3. who reported the preference -->
 1. treatment intervention preference value
+
+<div class="bg-success" markdown="1">
+
+{% include additional-requirements-intro.md type="Observation" plural="false" %}
+
+1. a performer*
+</div><!-- new-content -->
+
+*see guidance below
   
 **Profile Specific Implementation Guidance:**
 
@@ -32,5 +41,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include conditional-goals-guidance.md %}
 {% include additional-codings.md example1=', for example, the more specific LOINC, "75779-9 (Thoughts on cardiopulmonary resuscitation (CPR) [Reported])"  '%}
   - See the existing [Intervention Preferences at End of Life Grouping] for more specific concepts representing an individual's treatment intervention preferences
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

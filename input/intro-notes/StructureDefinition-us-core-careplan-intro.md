@@ -22,7 +22,14 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a narrative summary of the patient assessment and plan of treatment*
 
-\*see guidance below
+<div class="bg-success" markdown="1">
+
+{% include additional-requirements-intro.md type="CarePlan" plural="false" %}
+
+1. a contributor*
+</div><!-- new-content -->
+
+*see guidance below
 
 **Profile Specific Implementation Guidance:**
 * \*The original Assessment and Plan design in the CarePlan was to support the "Assessment and Plan" from a narrative Progress Note. Systems have advanced significantly since the introduction of this requirement in 2015. Relaxing this to 0..1 allows more sophisticated systems to discretely encode a CarePlan instead of providing the narrative portion.
@@ -31,5 +38,6 @@ The following data elements must always be present ([Mandatory] definition) or m
     - US Core Condition **SHOULD** be present in `CarePlan.addresses`
     - Assessment and Plan **MAY** be included as narrative in `CarePlan.text`
 * As an alternative to the US Core CarePlan, Assessment and Plan of Treatment may be included in various types of [Clinical Notes], such as Progress Notes, History & Physical (H&P), Discharge Summaries, etc.
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

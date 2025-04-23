@@ -1,4 +1,4 @@
-{% include new_page.md %}
+
 
 **Example Usage Scenarios:**
 
@@ -28,6 +28,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 6. abatement date (in other words, date of resolution or remission)
 7. a date when recorded*
 
+<div class="bg-success" markdown="1">
+
+{% include additional-requirements-intro.md type="Condition" plural="false" %}
+
+1. a recorder*
+</div><!-- new-content -->
+
 *see guidance below
 
 **Profile Specific Implementation Guidance:**
@@ -38,22 +45,16 @@ The following data elements must always be present ([Mandatory] definition) or m
   - USCDI's applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
-
-
 * \*The category of "problem-list-item" or "health-concern" is required, and, at a minimum, Servers **SHALL** support, a category of "sdoh", **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
   * If the category is "problem-list-item", `Condition.clinicalStatus` **SHOULD** be present.
-
-
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
     * Although all three are marked as Must Support, the Server is not required to support all.
   * A Server **SHALL** support `Condition.recordedDate`.
     * A Server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A Server may support both, which means they support all 3 locations.
-    * The Client application **SHALL** support all three elements.
-
+    * The Client application **SHALL** support all three elements
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New problems and health concerns
   - Changes in the clinical status or verifications status of problems or health concerns
-
-
+{% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}
