@@ -1,5 +1,12 @@
 resourceType: StructureDefinition
 id: us-core-observation-sexual-orientation
+#=== mark page as informative profile ====
+
+extension:
+  - url: >-
+      http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: informative
+#============================
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation
 version: 3.1.1
 name: USCoreObservationSexualOrientationProfile
