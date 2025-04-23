@@ -1,10 +1,12 @@
-# Patient Data Feed: Additional Resources
+<!-- # Patient Data Feed: Additional Resources -->
+This page is new content for US Core Version 8.0.0
+{:.new-content}
 
-## 1. Overview
+### Overview
 
 This page outlines additional resources that may be supported by Servers implementing the Patient Data Feed. These resources are not required for the current implementation but are considered valuable for a more comprehensive patient data feed. Servers may support any subset of these resources and filters based on their capabilities and use cases.
 
-## 2. Optional Resources Table
+### Optional Resources Table
 
 The following table outlines additional resources that Servers may support for the Patient Data Feed:
 
@@ -111,7 +113,7 @@ The following table outlines additional resources that Servers may support for t
   </tbody>
 </table>
 
-## 3. Guidance for feed-event Trigger Implementation
+### Guidance for feed-event Trigger Implementation
 
 When implementing the `feed-event` trigger for these optional resources, Servers should consider the following guidance:
 
@@ -198,8 +200,8 @@ When implementing the `feed-event` trigger for these optional resources, Servers
 
 This guidance illustrates how the `feed-event` trigger might be applied to the additional resources. Implementers will document specific criteria for when `feed-event` notifications are sent based on their system's capabilities and clinical relevance.
 
-## 4. Future Enhancements
+### Future Enhancements
 
-As the FHIR community continues to develop and standardize subscription-related features, this list of additional resources may be updated, and resources may graduate from this list to the [Required Resources Table 1](spec.md#table1).
+As the FHIR community continues to develop and standardize subscription-related features, this list of additional resources may be updated, and resources may graduate from this list to the [Required Resources Table 1].
 
 Implementers are encouraged to provide feedback on their experiences with these additional resources to help shape future versions of this specification to align with real-world experience.

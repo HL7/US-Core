@@ -354,4 +354,4 @@
 [Additional Resources]: patient-data-feed-additional-resources.html
 [Subscriptions R5 Backport Implementation guide]: https://hl7.org/fhir/uv/subscriptions-backport/index.html
 [filter-criteria extension]: https://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition-backport-filter-criteria.html
-
+[Required Resources Table 1]: patient-data-feed.html#resources-filters-and-triggers

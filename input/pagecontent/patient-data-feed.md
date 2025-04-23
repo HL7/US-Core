@@ -1,6 +1,8 @@
-# Patient Data Feed: Subscriptions
+<!-- # Patient Data Feed: Subscriptions -->
+**This page is new content for US Core Version 8.0.0**
+{:.new-content}
 
-## Overview
+### Overview
 
 The Patient Data Feed is an optional feature for servers implementing US Core. It allows clients to receive FHIR Subscription Notifications when events related to US Core content occur.
 
@@ -11,7 +13,7 @@ Servers can start simple. A minimal implementation might support a few key US Co
 
 This specification defines a canonical topic URL, subscription filters, triggers, and conformance requirements for the Patient Data Feed. It builds on FHIR R4 definitions from the [Subscriptions R5 Backport Implementation guide].
 
-## Canonical Topic URL
+### Canonical Topic URL
 
 The canonical topic URL for the Patient Data Feed is:
 
@@ -19,7 +21,7 @@ The canonical topic URL for the Patient Data Feed is:
 
 Clients use this topic URL when creating Subscriptions to indicate they are requesting the Patient Data Feed.
 
-## Resources, Filters, and Triggers
+### Resources, Filters, and Triggers
 
 The table below defines a minimal set of required resources, their US Core search parameters, and the standardized triggering events for the Patient Feed. 
 
@@ -66,9 +68,9 @@ The [Additional Resources] page provides guidance for supporting additional reso
 
 > **Note**: Servers can support a limited subset of profiles for these resources. See the [Conformance Requirements](#additional-conformance-requirements) for details.
 
-## Triggering Events and Notifications
+### Triggering Events and Notifications
 
-### Definition of feed-event Trigger
+#### Definition of feed-event Trigger
 
 The `feed-event` trigger can be implemented in two ways:
 
@@ -86,7 +88,7 @@ Servers SHALL implement at least one of these approaches and document which one(
 > 1. A `feed-event` will not necessarily fire for every FHIR-visible change. Implementation flexibility allows servers to define the specific events that will appear as updates.
 > 2. Servers MAY overlay their own more specific event codes onto this generic trigger. They can be included in notifications and used for more granular filtering via the `trigger` parameter, providing clients with richer context about the nature of updates.
 
-### Profile-Specific Mapping for "feed-event" trigger
+#### Profile-Specific Mapping for "feed-event" trigger
 
 This section documents a minimum set of events to expose via the "feed-event" trigger. Based on this guidance, servers will publish detailed documentation of their trigger functionality.
 
@@ -110,7 +112,7 @@ This section documents a minimum set of events to expose via the "feed-event" tr
     * An existing report has been updated, amended, or corrected
     * The report's status has changed (e.g., preliminary to final, or any status to entered-in-error)
 
-### Conformance Requirements for Triggering Events
+#### Conformance Requirements for Triggering Events
 
 For each supported resource type:
 - Servers SHALL support the Required-Support Triggers as specified in Table 1
@@ -189,7 +191,7 @@ Example of a Parameters resource for a notification with multiple triggers, incl
 }
 ```
 
-## Subscription Filters and Requests
+### Subscription Filters and Requests
 
 Servers SHALL allow clients to create Subscriptions according to the [Subscriptions R5 Backport Implementation guide]. This includes supporting filter criteria via the [filter-criteria extension] for each resource when notifications are requested.
 
@@ -197,7 +199,7 @@ For each supported resource type, servers SHALL support the Required-Support Fil
 
 Servers SHALL support Subscriptions with zero or more supported filters in any filter-criteria extension.
 
-### Example Subscription Request
+#### Example Subscription Request
 
 The following example Subscription request demonstrates filters based on patient, category, and trigger event.
 
@@ -244,7 +246,7 @@ The following example Subscription request demonstrates filters based on patient
 }
 ```
 
-### Handling Multiple Resource Types and Filters
+#### Handling Multiple Resource Types and Filters
 
 1. Clients MAY include multiple resource types by supplying multiple filter-criteria extensions in a Subscription request; Servers SHALL process all filter-criteria extensions provided by the Client.
 
@@ -268,14 +270,14 @@ Examples of potential adjustments:
 - A server that does not support CareTeam resources might remove the Client's `CareTeam` filter-criteria extension entirely.
 - A server that only supports notifications for laboratory observations might add `category=laboratory` to the Client's `Observation` filter-criteria extension if it wasn't already present.
 
-## Additional Conformance Requirements
+### Additional Conformance Requirements
 
-### General
+#### General
 
 1. Support for the Patient Data Feed is optional for servers implementing US Core.
 2. Servers that support the Patient Data Feed SHALL implement the following requirements.
 
-### Resource Support
+#### Resource Support
 
 1. Servers SHALL support at least one resource type from the list in Table 1.
 2. Servers MAY support additional resource types described on the [Additional Resources] page.
@@ -286,17 +288,17 @@ Examples of potential adjustments:
    - US Core Laboratory Result Observation Profile
 4. Servers MAY enable subscriptions for a limited set of profiles on supported resources by adjusting any necessary filters (e.g., `category` or `type`; see Section 5.2 for details on adjustments).
 
-### Filter Support
+#### Filter Support
 
 1. Servers MAY support filters beyond those listed in Table 1 for each resource type.
 2. Servers SHOULD align any additional filters with existing search parameter names when applicable.
 
-### Delivery (Channel and Payload Support)
+#### Delivery (Channel and Payload Support)
 1. Servers SHALL support the `rest-hook` channel type for notification delivery.
 2. Servers SHALL support the `empty` and `id-only` payload types for notifications.
 3. Servers MAY support additional channel types and payload types.
 
-### Documentation and Error Handling
+#### Documentation and Error Handling
 1. Servers SHALL clearly document the following in their developer-facing documentation:
    - Supported resources, filters, and triggers
    - Supported channel types
@@ -310,9 +312,9 @@ Examples of potential adjustments:
 2. Clients SHALL review server documentation to understand the circumstances under which `feed-event` notifications are triggered, as these may correspond to a subset of changes to data as visible over the FHIR REST API.
 3. Servers SHOULD provide clear error messages in `OperationOutcome.issue.details` when rejecting subscription requests due to unsupported features.
 
-## Additional Considerations
+### Additional Considerations
 
-### Performance Optimization
+#### Performance Optimization
 
 Servers implementing the Patient Data Feed should consider the following performance optimizations:
 
@@ -320,11 +322,11 @@ Servers implementing the Patient Data Feed should consider the following perform
 
 2. Event Batching: For subscriptions with high update frequencies, servers can implement batching strategies to group multiple events into a single notification bundle.
 
-### Security Considerations
+#### Security Considerations
 
 While detailed security implementations are beyond the scope of this specification, servers must maintain the same level of access control and security for subscription notifications as they do for direct REST API access. Key considerations include authentication, authorization, encryption in transit (https), and audit logging. Implementers are encouraged to refer to the [US Core Security] page and relevant security best practices for additional guidance.
 
-## Future Work
+### Future Work
 
 Standardizing how to model and publish topics for discovery is ongoing work in the FHIR community. US Core's Patient Data Feed does not yet address the standardization of the SubscriptionTopic resource itself. Instead, it focuses on standardizing the functionality of the `patient-data-feed` topic and the expectations of Subscription management, allowing for interoperability based on the canonical URL, supported resources, filters, and triggers.
 

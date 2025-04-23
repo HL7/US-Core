@@ -150,11 +150,31 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 131. **Submitted:** () US Core Lab result profile should not be a Must Support target profile for DiagnosticReport.result in Report and Note profile [FHIR-49906](https://jira.hl7.org/browse/FHIR-49906) See Changes [Here]()
 132. **Submitted:** () Revert change to Condition profile .code element additional binding strength [FHIR-49985](https://jira.hl7.org/browse/FHIR-49985) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
 133. **Submitted:** () Remove ICD-9 from additional bound value set in US Core Condition profiles [FHIR-49986](https://jira.hl7.org/browse/FHIR-49986) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
+1. **Triaged:** (Correction) US Core detailed ethnicity expansion error [FHIR-46638](https://jira.hl7.org/browse/FHIR-46638) See Changes [Here](237270)
+134. **Triaged:** (Correction) bad link - gives error page [FHIR-49089](https://jira.hl7.org/browse/FHIR-49089) See Changes [Here](250365)
+135. **Triaged:** (Correction) Hyperlink discrepancy [FHIR-49335](https://jira.hl7.org/browse/FHIR-49335) See Changes [Here](250864)
+136. **Triaged:** (Correction) Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](250865)
+137. **Triaged:** (Correction) Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](250866)
+138. **Resolved - change required:** (Enhancement) Add Best Practices Guidance for Granular Scopes [FHIR-50002](https://jira.hl7.org/browse/FHIR-50002) See Changes [Here](253849)
+139. **Resolved - change required:** (Clarification) Add introduction to Change log to clarify how to use. [FHIR-50089](https://jira.hl7.org/browse/FHIR-50089) See Changes [Here](253964)
+140. **Triaged:** () Comment on differentiation of Medicare Parts [FHIR-50106](https://jira.hl7.org/browse/FHIR-50106) See Changes [Here](253986)
+141. **Triaged:** () This code system needs to have an OID defined, VS needs to be in THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](254041)
+142. **Triaged:** (Clarification) Value sets referenced by US Core need to be updated at least yearly [FHIR-50153](https://jira.hl7.org/browse/FHIR-50153) See Changes [Here](254064)
+143. **Applied:** (Enhancement) Created a new "Looking Ahead" menu tab  [FHIR-50154](https://jira.hl7.org/browse/FHIR-50154) See Changes [Here](looking-ahead.html)
+144. **Applied:** (Enhancement) Added "Patient Data Feed" subscription guidance page to US Core [FHIR-50155](https://jira.hl7.org/browse/FHIR-50155) See Changes [Here](patient-data-feed.html)
+145. **Resolved - change required:** (Enhancement) Value sets should not include inactive codes unless specific to historical queries [FHIR-50156](https://jira.hl7.org/browse/FHIR-50156) See Changes [Here](254067)
+146. **Resolved - change required:** (Correction) Add missing profiles to ""omitted Profile list"" for individual level provenance [FHIR-50163](https://jira.hl7.org/browse/FHIR-50163) See Changes [Here](254077)
+147. **Resolved - change required:** (Correction) EO Change Proposal [FHIR-50177](https://jira.hl7.org/browse/FHIR-50177) See Changes [Here](254112)
+148. **Triaged:** (Clarification) Remove MS flag for Practitioner in MedicationDispense Profile [FHIR-50239](https://jira.hl7.org/browse/FHIR-50239) See Changes [Here](256387)
+149. **Triaged:** () Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](256476)
+150. **Triaged:** (Enhancement) Add section on slicing on the Must Support page  [FHIR-50286](https://jira.hl7.org/browse/FHIR-50286) See Changes [Here](256480)
+151. **Triaged:** () Encounter Diagnosis FHIR Resource Dates (e.g. AbatementDate) inherited requirements from Problems and Health Concerns [FHIR-50288](https://jira.hl7.org/browse/FHIR-50288) See Changes [Here](256483)
+
 
 
 
 ### Version = 8.0.0 - ballot
-- url: <>
+- url: <https://hl7.org/fhir/us/core/2025Jan/>
 - Based on FHIR version : 4.0.1
 
 
