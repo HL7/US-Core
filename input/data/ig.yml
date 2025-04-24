@@ -405,16 +405,16 @@ definition:
     name: Docref Example 2
     exampleBoolean: true
   - reference:
-      reference: DocumentReference/adi-intubation
-    description: This is a an example of ADI-DNI (PDF) for the *US Core ADI DocumentReference
-      Profile*
-    name: DocumentReference ADI-DNI (PDF)
+      reference: DocumentReference/adi-dnr
+    description: This is a an example of an DNR (Do Not Resuscitate) PDF attachment
+      for the *US Core ADI DocumentReference Profile*
+    name: DocumentReference DNR
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
   - reference:
       reference: DocumentReference/living-will
-    description: This is a an example of Living Will (PDF) for the *US Core ADI DocumentReference
-      Profile*
-    name: DocumentReference Living Will (PDF)
+    description: This is a an example of Living Will PDF attachment for the *US Core
+      ADI DocumentReference Profile*
+    name: DocumentReference Living Will
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
   - reference:
       reference: DocumentReference/polst
@@ -1507,10 +1507,10 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
       reference: StructureDefinition/us-core-adi-documentreference
-    description: The US Core ADI DocumentReference Profile inherits from the FHIR
-      [DocumentReference](https://hl7.org/fhir/R4/documentreference.html) resource;
-      refer to it for scope and usage definitions. This profile and the [US Core Observation
-      ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html)
+    description: The US Core Advance Directive Information (ADI) DocumentReference
+      Profile inherits from the FHIR [DocumentReference](https://hl7.org/fhir/R4/documentreference.html)
+      resource; refer to it for scope and usage definitions. This profile and the
+      [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html)
       meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)
       *Advance Directive Observation* Data Element requirements. It sets minimum expectations
       for searching and fetching patient Advance Directive Information (ADI) documents
@@ -2084,23 +2084,23 @@ definition:
     name: US Core Non Laboratory Codes
   - reference:
       reference: StructureDefinition/us-core-observation-adi-documentation
-    description: The US Core Observation ADI Documentation Profile inherits from the
-      FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer
-      to it for scope and usage definitions. This profile and the [US Core Observation
-      ADI DocumentationReference Profile](StructureDefinition-us-core-adi-documentreference.html)
+    description: The US Core Observation Advance Directive Information (ADI) Documentation
+      Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html)
+      resource; refer to it for scope and usage definitions. This profile and the
+      [US Core Observation ADI DocumentationReference Profile](StructureDefinition-us-core-adi-documentreference.html)
       meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)
       *Advance Directive Observation* Data Element requirements. It is used to communicate
-      whether a person has advance directive information and, if one or more documents
-      exist, their location. Examples of advance healthcare directive documents include
-      physician order for life sustaining treatment (POLST), do not resuscitate order
-      (DNR), and medical power of attorney. To communicate the type of advance directive
-      document, the author, the verifier, and other properties, see the US Core ADI
-      DocumentReference Profile. This profile sets minimum expectations for the Observation
-      resource to record, search, and fetch findings about the presence of a patient's
-      advance directives. It specifies which core elements, extensions,  vocabularies,
-      and value sets **SHALL** be present in the resource and constrains how the elements
-      are used. Providing the floor for standards development for specific use cases
-      promotes interoperability and adoption.
+      whether a person has advance directive information (ADI) and, if one or more
+      documents exist, their location. Examples of advance healthcare directive documents
+      include physician order for life sustaining treatment (POLST), do not resuscitate
+      order (DNR), and medical power of attorney. To communicate the type of advance
+      directive document, the author, the verifier, and other properties, see the
+      US Core ADI DocumentReference Profile. This profile sets minimum expectations
+      for the Observation resource to record, search, and fetch findings about the
+      presence of a patient's advance directives. It specifies which core elements,
+      extensions,  vocabularies, and value sets **SHALL** be present in the resource
+      and constrains how the elements are used. Providing the floor for standards
+      development for specific use cases promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Observation ADI Documentation Profile
   - reference:

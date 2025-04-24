@@ -94,7 +94,9 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 73. **Triaged:** () Update Observation.derivedFrom examples for Observation Screening Assessment Profile [FHIR-49289](https://jira.hl7.org/browse/FHIR-49289) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
 74. **Triaged:** (Correction) should use CVX code set instead of VSAC value set [FHIR-49292](https://jira.hl7.org/browse/FHIR-49292) See Changes [Here](StructureDefinition-us-core-immunization.html#profile)
 75. **Applied:** (Correction) Correct CVX vaccine codes link [FHIR-49293](https://jira.hl7.org/browse/FHIR-49293) See Changes [Here](StructureDefinition-us-core-immunization.html#profile)
-76. **Triaged:** (Enhancement) Define the Acronym 'ADI' in all pages where it is used [FHIR-49299](https://jira.hl7.org/browse/FHIR-49299) See Changes [Here]()
+76. **Applied:** (Enhancement) Define the Acronym 'ADI' in all pages where it is used [FHIR-49299](https://jira.hl7.org/browse/FHIR-49299) See Changes:
+   - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
+   - [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html)
 77. **Applied:** (Correction) Fix typo "HSLOC" instead of "HLSOC" [FHIR-49301](https://jira.hl7.org/browse/FHIR-49301) See Changes [Here](ValueSet-us-core-location-type.html)
 78. **Triaged:** (Clarification) it would be helpful to have a short statement narrative of this historical information within the new profile. [FHIR-49305](https://jira.hl7.org/browse/FHIR-49305) See Changes [Here](index.html)
 79. **Resolved - change required:** (Correction) Corrections to typos [FHIR-49306](https://jira.hl7.org/browse/FHIR-49306) See Changes [Here]()
@@ -121,9 +123,9 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 100. **Triaged:** (Correction) Medication Route of Admin terminology binding is missing NCI concepts [FHIR-49403](https://jira.hl7.org/browse/FHIR-49403) See Changes [Here](StructureDefinition-us-core-medicationrequest.html)
 101. **Applied:** (Correction) Change number of common clinical notes to 10 [FHIR-49413](https://jira.hl7.org/browse/FHIR-49413) See Changes [Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 102. **Applied:** (Correction) Correction to Observation ADI Documentation Profile Introduction [FHIR-49414](https://jira.hl7.org/browse/FHIR-49414) See Changes [Here](StructureDefinition-us-core-observation-adi-documentation.html)
-103. **Triaged:** (Clarification) Clarify guidance for .value element of Observation ADI Documentation Profile [FHIR-49415](https://jira.hl7.org/browse/FHIR-49415) See Changes [Here](StructureDefinition-us-core-observation-adi-documentation.html#mandatory-and-must-support-data-elements)
+103. **Applied:** (Clarification) Clarify guidance for the Observation ADI Documentation Profile Observation.value element [FHIR-49415](https://jira.hl7.org/browse/FHIR-49415) See Changes [Here](StructureDefinition-us-core-observation-adi-documentation.html#mandatory-and-must-support-data-elements)
 104. **Resolved - change required:** (Enhancement) Update link for ""Advance Healthcare Directive Categories Grouper"" value set [FHIR-49419](https://jira.hl7.org/browse/FHIR-49419) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
-105. **Triaged:** () Consider privacy implications of guidance for external content referenced by ADI documentReference [FHIR-49424](https://jira.hl7.org/browse/FHIR-49424) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
+105. **Applied:** (Clarification) Update guidance if endpoint is outside the FHIR base URL [FHIR-49424](https://jira.hl7.org/browse/FHIR-49424) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
 106. **Applied:** (Correction) Remove duplicate listing and add US Core RelatedPerson Profile to listing to USCDI table [FHIR-49432](https://jira.hl7.org/browse/FHIR-49432) See Changes [Here](uscdi.html#uscdi)
 107. **Triaged:** () Consider including guidance about pronouns in the ""profile specific implementation guidance"" section [FHIR-49435](https://jira.hl7.org/browse/FHIR-49435) See Changes [Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 108. **Triaged:** () Fixed codes in observation profiles are not included in the bound value set [FHIR-49444](https://jira.hl7.org/browse/FHIR-49444) See Changes [Here](StructureDefinition-us-core-observation-adi-documentation.html#profile)
@@ -131,7 +133,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 110. **Triaged:** () Laboratory Orders need Test Name (code is insufficient) for CLIA and accreditationCompliance [FHIR-49609](https://jira.hl7.org/browse/FHIR-49609) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
 111. **Triaged:** (Correction) correct line 81 in terminology  [FHIR-49610](https://jira.hl7.org/browse/FHIR-49610) See Changes [Here](terminology.html)
 112. **Triaged:** () Align category slices with other work on category slices for clinical-documents as distinct from clinical-notes [FHIR-49612](https://jira.hl7.org/browse/FHIR-49612) See Changes [Here]()
-113. **Triaged:** () Value Set Problems for US Core ADI DocumentReference [FHIR-49615](https://jira.hl7.org/browse/FHIR-49615) See Changes [Here]()
+113. **Applied:** (Clarification) Change binding for US Core ADI DocumentReference  and .type [FHIR-49615](https://jira.hl7.org/browse/FHIR-49615) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 114. **Triaged:** (Correction) Clean up examples for FHIR ADI DocumentReference Profile [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here]()
 115. **Triaged:** () Laboratory Test Report (FHIR Observations and Diagnostic Report) Issues [FHIR-49623](https://jira.hl7.org/browse/FHIR-49623) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html)
 116. **Triaged:** () US Core FHIR Lab Observation Updates needed [FHIR-49630](https://jira.hl7.org/browse/FHIR-49630) See Changes [Here](StructureDefinition-us-core-observation-lab.html)
@@ -162,8 +164,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 141. **Triaged:** () Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](256476)
 142. **Triaged:** (Enhancement) Add section on slicing on the Must Support page  [FHIR-50286](https://jira.hl7.org/browse/FHIR-50286) See Changes [Here](256480)
 143. **Triaged:** () Encounter Diagnosis FHIR Resource Dates (e.g. AbatementDate) inherited requirements from Problems and Health Concerns [FHIR-50288](https://jira.hl7.org/browse/FHIR-50288) See Changes [Here](256483)
-
-
+144. **Pre-Applied:** (Correction) Remove gender based search requirements [FHIR-50380](https://jira.hl7.org/browse/FHIR-50288) See Changes [Here](StructureDefinition-us-core-patient.html#notes)
 
 
 ### Version = 8.0.0 - ballot

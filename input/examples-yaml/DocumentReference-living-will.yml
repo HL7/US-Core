@@ -3,9 +3,9 @@ id: living-will
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: DocumentReference Living Will (PDF)
+    valueString: DocumentReference Living Will
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a an example of Living Will (PDF) for the *US Core ADI
+    valueMarkdown: This is a an example of Living Will PDF attachment for the *US Core ADI
       DocumentReference Profile*
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
@@ -25,21 +25,21 @@ type:
 category:
 - coding:
   - system: http://loinc.org
-    code: 86533-7
-    display: Patient Living will
-  text: Patient Living will
+    code: 42348-3
+    display: Advance directives
+  text: Advance Directives
 subject:
   reference: Patient/example
 date: 2024-10-08T19:48:54.316108-07:00
 author:
 - reference: Patient/example
-  display: Example
+  display: Amy V. Shaw
 authenticator:
   # extension:
   # - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
   #   valueDateTime: 2024-10-08T19:48:54.316108-07:00
-  reference: Practitioner/practitioner-1
-  display: Practitioner-1
+- reference: Patient/example
+  display: Amy V. Shaw
 content:
 - attachment:
     contentType: application/pdf

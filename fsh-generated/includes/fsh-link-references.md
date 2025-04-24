@@ -45,7 +45,7 @@
 [discharge-summary]: DocumentReference-discharge-summary.html
 [docref-example-1]: Bundle-docref-example-1.html
 [docref-example-2]: Bundle-docref-example-2.html
-[adi-intubation]: DocumentReference-adi-intubation.html
+[adi-dnr]: DocumentReference-adi-dnr.html
 [living-will]: DocumentReference-living-will.html
 [polst]: DocumentReference-polst.html
 [bone-density-report]: DiagnosticReport-bone-density-report.html

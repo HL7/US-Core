@@ -5,11 +5,11 @@
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "DocumentReference Living Will (PDF)"
+                "valueString": "DocumentReference Living Will"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a an example of Living Will (PDF) for the *US Core ADI DocumentReference Profile*"
+                "valueMarkdown": "This is a an example of Living Will PDF attachment for the *US Core ADI DocumentReference Profile*"
             }
         ],
         "profile": [
@@ -44,11 +44,11 @@
             "coding": [
                 {
                     "system": "http://loinc.org",
-                    "code": "86533-7",
-                    "display": "Patient Living will"
+                    "code": "42348-3",
+                    "display": "Advance directives"
                 }
             ],
-            "text": "Patient Living will"
+            "text": "Advance Directives"
         }
     ],
     "subject": {
@@ -58,13 +58,15 @@
     "author": [
         {
             "reference": "Patient/example",
-            "display": "Example"
+            "display": "Amy V. Shaw"
         }
     ],
-    "authenticator": {
-        "reference": "Practitioner/practitioner-1",
-        "display": "Practitioner-1"
-    },
+    "authenticator": [
+        {
+            "reference": "Patient/example",
+            "display": "Amy V. Shaw"
+        }
+    ],
     "content": [
         {
             "attachment": {

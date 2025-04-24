@@ -23,12 +23,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a category code of "observation-adi-documentation"
 3. when this verified observation was made available
 4. one or more performers of the observation*
-5. a "yes/no/unknown" value confirming or refuting the code
+5. <span class="bg-success" markdown="1">a value*</span><!-- new-content -->
 
 *See guidance below
 
 **Profile Specific Implementation Guidance:**
 
+- <span class="bg-success" markdown="1">*The `Observation.value` element uses codes for "yes, "no," and "unknown" to answer the question posed by the fixed `Observation.code` - whether one or more advance directives are present.</span><!-- new-content -->
 - \* If the system asserts the patient has ADI documents and the references to the (electronic) documents are known, it **SHOULD** reference them in the [Supporting Info Extension] using the [US Core ADI DocumentReference Profile] to exchange the ADI documents and their properties.
   - If the system asserts the patient has ADI documents, but the location of the  documents is unknown, there would be no reference.
 - \* An `Observation.performer` of type Practitioner or Organization typically makes the observation, and an `Observation.performer` of Patient or RelatedPerson usually supplies the information (for example, a next of kin who answers questions about the patient's advance directives). Systems may use the standard [Performer function Extension] to distinguish the type of involvement of the performer in the Observation resource.
