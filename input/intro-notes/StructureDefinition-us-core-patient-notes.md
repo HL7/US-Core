@@ -47,16 +47,6 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and name ([how to search by date] and [how to search by string])
 
-1. **SHALL** support searching using the combination of the **[`gender`](SearchParameter-us-core-patient-gender.html)** and **[`name`](SearchParameter-us-core-patient-name.html)** search parameters:
-
-    `GET [base]/Patient?gender={system|}[code]&name=[string]`
-
-    Example:
-    
-      1. GET [base]/Patient?name=Shaw&amp;gender=female
-
-    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified gender and name ([how to search by string] and [how to search by token])
-
 
 #### Optional Search Parameters:
 
@@ -81,18 +71,5 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/Patient?family=Shaw&amp;death-date=2022-07-22
 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified death-date and family ([how to search by date] and [how to search by string])
-
-1. **SHOULD** support searching using the combination of the **[`family`](SearchParameter-us-core-patient-family.html)** and **[`gender`](SearchParameter-us-core-patient-gender.html)** search parameters:
-
-    `GET [base]/Patient?family=[string]&gender={system|}[code]`
-
-    Example:
-    
-      1. GET [base]/Patient?family=Shaw&amp;gender=female
-
-    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified family and gender ([how to search by string] and [how to search by token])
-
-
-
 
 {% include link-list.md %}

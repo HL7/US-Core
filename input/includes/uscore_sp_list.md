@@ -107,7 +107,6 @@
 - [birthdate](SearchParameter-us-core-patient-birthdate.html)
 - [death-date](SearchParameter-us-core-patient-death-date.html)
 - [family](SearchParameter-us-core-patient-family.html)
-- [gender](SearchParameter-us-core-patient-gender.html)
 - [given](SearchParameter-us-core-patient-given.html)
 - [identifier](SearchParameter-us-core-patient-identifier.html)
 - [name](SearchParameter-us-core-patient-name.html)

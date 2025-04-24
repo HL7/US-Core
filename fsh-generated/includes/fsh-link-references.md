@@ -394,7 +394,6 @@
 [USCorePatientBirthdate]: SearchParameter-us-core-patient-birthdate.html
 [USCorePatientDeathDate]: SearchParameter-us-core-patient-death-date.html
 [USCorePatientFamily]: SearchParameter-us-core-patient-family.html
-[USCorePatientGender]: SearchParameter-us-core-patient-gender.html
 [USCorePatientGiven]: SearchParameter-us-core-patient-given.html
 [USCorePatientId]: SearchParameter-us-core-patient-id.html
 [USCorePatientIdentifier]: SearchParameter-us-core-patient-identifier.html
