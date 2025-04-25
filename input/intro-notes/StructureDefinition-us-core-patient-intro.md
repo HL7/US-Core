@@ -55,8 +55,8 @@ The following data elements must always be present ([Mandatory] definition) or m
   - *Suffix* is represented using the `Patient.name.suffix` element.
   - *Previous Address* is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.
   - Servers can use the [US Core Interpreter Needed Extension] on the US Core Patient or [US Core Encounter Profiles] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.
-     - When multiple languages are represented, systems **MAY** designate the patient's *Preferred Language* in the `Communication.preferred` element or by using the FHIR standard [Patient Proficiency Extension] and infer a patient's language service needs from it.
-  - The [Patient example] demonstrates how these elements are represente
+     - <span class="bg-success" markdown="1">Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred element`.</span><!-- new-content -->
+  - The [Patient example] demonstrates how these elements are represented
 - The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** follow it as the standard style guide for Patient addresses.  
    - Consult the style guide for details about the format for the Address datatypes elements, especially `Patient.address.line` and `Patient.address.city`.
    - Note: historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.

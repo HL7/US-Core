@@ -400,9 +400,10 @@ differential:
   - id: Patient.communication.language
     path: Patient.communication.language
     mustSupport: true
+    # update to THO VS for V8
     binding:
       strength: extensible
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/simple-language
+      valueSet: http://terminology.hl7.org/ValueSet/Languages
     mapping:
     - identity: argonaut-dq-dstu2
       map: Patient.communication.language

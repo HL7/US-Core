@@ -51,8 +51,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 
 - \*Servers can use the US Core Interpreter Needed Extension on the US Core Patient or [US Core Encounter Profiles] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.
-  - System can communicate the patient's language preferences in the `Patient.language` element and the optional [Patient Proficiency Extension](https://hl7.org/fhir/extensions/StructureDefinition-patient-proficiency.html) and infer a patient's language service needs from it.
-
+  - <span class="bg-success" markdown="1">Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred element`.</span><!-- new-content -->
 
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New encounters/visits

@@ -89,7 +89,6 @@
 [HVS-panel-example-88121-9]: Observation-HVS-panel-example-88121-9.html
 [imm-1]: Immunization-imm-1.html
 [jugular-vein-distension]: Observation-jugular-vein-distension.html
-[LanguageCodesWithLanguageAndOptionallyARegionModifier]: ValueSet-simple-language.html
 [length]: Observation-length.html
 [cbc-leukocytes]: Observation-cbc-leukocytes.html
 [example-serum-lipemic]: Specimen-example-serum-lipemic.html
