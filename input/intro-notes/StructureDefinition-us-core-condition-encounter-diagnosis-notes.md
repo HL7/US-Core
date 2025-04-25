@@ -1,1 +1,1 @@
-{% include_relative StructureDefinition-us-core-condition-notes.md %}
+ {% include condition-quickstart.md category="encounter-diagnosis" code="http://snomed.info/sct\|39065001"  %}

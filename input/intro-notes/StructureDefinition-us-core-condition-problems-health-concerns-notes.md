@@ -1,1 +1,1 @@
-{% include_relative StructureDefinition-us-core-condition-notes.md %}
+ {% include condition-quickstart.md category="problem-list-item" code="http://snomed.info/sct\|51868009"  %}
