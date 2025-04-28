@@ -150,7 +150,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 118. **Submitted:** () Reconsider the Value Set binding for Practitioner.qualification.code [FHIR-49812](https://jira.hl7.org/browse/FHIR-49812) See Changes [Here]()
 119. **Triaged:** () Fix this Value Set Definition [FHIR-49877](https://jira.hl7.org/browse/FHIR-49877) See Changes [Here]()
 120. **Triaged:** () PractitionerRole.specialty is misaligned with DocumentReference.practiceSetting [FHIR-49880](https://jira.hl7.org/browse/FHIR-49880) See Changes [Here]()
-121. **Submitted:** () US Core Lab result profile should not be a Must Support target profile for DiagnosticReport.result in Report and Note profile [FHIR-49906](https://jira.hl7.org/browse/FHIR-49906) See Changes [Here]()
+121. **Applied:** (Enhancement) Remove US Core Laboratory Result Observation Profile as a Must Support target for the US Core DiagnosticReport Profile for Report and Note Exchange [FHIR-49906](https://jira.hl7.org/browse/FHIR-49906) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 122. **Submitted:** () Revert change to Condition profile .code element additional binding strength [FHIR-49985](https://jira.hl7.org/browse/FHIR-49985) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
 123. **Submitted:** () Remove ICD-9 from additional bound value set in US Core Condition profiles [FHIR-49986](https://jira.hl7.org/browse/FHIR-49986) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
 124. **Triaged:** (Correction) US Core detailed ethnicity expansion error [FHIR-46638](https://jira.hl7.org/browse/FHIR-46638) See Changes [Here](237270)

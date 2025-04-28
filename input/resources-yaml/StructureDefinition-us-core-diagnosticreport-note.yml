@@ -170,8 +170,8 @@ differential:
     type:
     - code: Reference
       targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
       - http://hl7.org/fhir/StructureDefinition/Observation
       _targetProfile:
       - extension:
@@ -179,7 +179,7 @@ differential:
           valueBoolean: true
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
+          valueBoolean: false
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
