@@ -357,3 +357,4 @@
 [Required Resources Table 1]: patient-data-feed.html#resources-filters-and-triggers
 [HL7 ValueSet of Format Codes for use with Document Sharing]: https://terminology.hl7.org/6.2.0/ValueSet-v3-HL7FormatCodes.html
 [CLIA/USCDI/HL7 Elements Crossmapping Table]: https://confluence.hl7.org/spaces/OO/pages/256515226/US+-+CLIA+Elements+mapping+to+HL7+data+elements
+[Considerations for Scope Consent]: https://www.hl7.org/fhir/smart-app-launch/best-practices.html#considerations-for-scope-consent

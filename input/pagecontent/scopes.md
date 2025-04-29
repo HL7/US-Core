@@ -26,13 +26,13 @@ US Core Server **SHALL** support token introspection defined by the SMART App La
 
 ### SMART Scopes
 
-SMART's scopes, defined in Version 2.0.0 of the [SMART App Launch] implementation guide, allow access permissions to be delegated to a Client application. The US Core API requires Servers to support [resource level scopes] and [granular scopes], allowing access to specific data about a single patient. US Core's required scopes (**SHALL**) are based on community-based consensus that the scope meets a system requirement, clinical need, or federal regulation. Similarly, US Core's recommended scopes (**SHOULD**) rely on community-based consensus that the scope meets a system requirement or clinical need as a best practice. 
+SMART's scopes, defined in Version 2.0.0 of the [SMART App Launch] implementation guide, allow access permissions to be delegated to a Client application. <span class="bg-success" markdown="1">To allow access to specific data about a single patient, the US Core API requires Servers to support [resource level scopes] and "[granular scopes]", the finer-grained scopes using search parameters.</span><!-- new-content -->  US Core's required scopes (**SHALL**) are based on community-based consensus that the scope meets a system requirement, clinical need, or federal regulation. Similarly, US Core's recommended scopes (**SHOULD**) rely on community-based consensus that the scope meets a system requirement or clinical need as a best practice. 
 
-The US Core required scopes listed below are named in the [HTI-1 final rule], which requires support for the Condition and Observation category scopes. (Note that although mentioned in HTI-1 final rule, there is no "Clinical Test" category for Observation in US Core.) The recommended granular scope listed below is of particular interest to patients and health systems. Implementations meeting US EHR certification requirements must support all US Core's required scopes. Other systems only need to support scopes for the US Core APIs they support. 
+The US Core required scopes listed below are named in the [HTI-1 final rule], which requires support for the Condition and Observation category scopes. (Note that although mentioned in HTI-1 final rule, there is no "Clinical Test" category for Observation in US Core.) The recommended granular scopes listed below are of particular interest to patients and health systems. Implementations meeting US EHR certification requirements must support all US Core's required scopes. Other systems only need to support scopes for the US Core APIs they support. 
 
 Each US Core Profile page includes a "Quick Start" section summarizing each profile's supported search transactions and scopes. Servers **MAY** support other scopes in addition to those listed below and in the Quick Start sections. US Core Clients should follow the [principle of least privilege] and access only the necessary resources. In other words, if a Client needs only vital sign observations, it should request access only to Observations with a category of "vital-signs". Note that a granular scope grants access to all resources matching that granular scope *regardless of whether other categories* are present.
 
-##### Scopes Format
+#### Scopes Format
  SMART App Launch Version 2.0.0 introduced a scope syntax of: `<patient|user|system> / <fhir-resource>. <c | r | u | d |s> [?param=value]`
 
 For example, to limit read and search access to a specific patient's laboratory observations but not other observations, the Server grants the following patient-specific scope:
@@ -43,14 +43,18 @@ This example uses a `patient/` prefix, but implementers may support `system/` an
 
 #### US Core Scopes
 
-The table below summarizes the US Core scope requirements (**SHALL**) and best practice recommendations (**SHOULD**) for resource-level and granular scopes. This information can be found for each US Core Profile in the profile page's "Quick Start" section.
+The table below summarizes the US Core scope requirements (**SHALL**) and best practice recommendations (**SHOULD**) for resource-level adn granular scopes. This information can be found for each US Core Profile in the profile page's "Quick Start" section.
 
  For "User-Facing Applications", a system's support for patient-level (`patient`) or user-level (`user`) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](#capability-sets) above).  For example, if a Server lists `permission-patient` and `permission-user` in its capabilities, it **SHALL** support both patient-level and user-level required scopes and **SHOULD** support both patient-level and user-level recommended best-practice scopes.
 
  For "Backend-Services", System-level scopes (`system`) describe data that a Client system is directly authorized to access. Systems that support system-level (`system`) scopes **SHALL** support the required US Core scopes and **SHOULD** support the recommended US Core scopes.
 
-##### The Following Resource Level Scopes **SHALL** Be Supported
+<div class="bg-success" markdown="1">
 
+##### Scopes For Requesting FHIR Resources By Type
+
+The following scopes that correspond directly to FHIR resource types **SHALL** be supported
+</div><!-- new-content -->
 
 {% include resource-scopes-table.md conformance="SHALL" crud='rs'%}
 
@@ -71,7 +75,7 @@ The table below summarizes the US Core scope requirements (**SHALL**) and best p
 </tbody>
 </table>
 
-##### The Following Resource Level Scopes **MAY** Be Supported
+<span class="bg-success" markdown="1">The following scopes that correspond directly to FHIR resource types **MAY** be supported</span><!-- new-content -->
 
 {% include resource-scopes-table.md conformance="MAY" crud='rs' %}
 
@@ -92,7 +96,12 @@ The table below summarizes the US Core scope requirements (**SHALL**) and best p
 </tbody>
 </table>
 
-##### The Following Granular Scopes **SHALL** Be Supported
+<div class="bg-success" markdown="1">
+
+##### Granular Scopes For Requesting FHIR Resources
+
+The following *granular* scopes **SHALL** be supported
+</div><!-- new-content -->
 
 {% include granular-scopes-table.md conformance="SHALL" crud='rs' %}
 
@@ -113,8 +122,7 @@ The table below summarizes the US Core scope requirements (**SHALL**) and best p
 </tbody>
 </table>
 
-
-##### The Following Granular Scopes **SHOULD** Be Supported
+The following *granular* scopes **SHOULD** be supported
 
 {% include granular-scopes-table.md conformance="SHOULD" crud ='rs' %}
 
@@ -134,6 +142,31 @@ The table below summarizes the US Core scope requirements (**SHALL**) and best p
 {% endfor %}
 </tbody>
 </table>
+
+<div class="bg-success" markdown="1">
+
+###### Best Practices
+
+End users often select all the scopes presented if given a "select all" option.  Therefore, client provisioning is key to empowering patients with scopes and avoiding unnecessary access. This page reflects best practices when implementing Granular Scopes. See also [Considerations for Scope Consent] in the SMART App Launch Implementation Guide.
+
+**Best practices for server developers include**
+
+- Use published US Core granular scopes whenever possible.
+- Systems that add custom (i.e., non-US Core) granular scopes must not duplicate existing US Core scopes.
+- When using granular scopes, ensure that all data supplied in the Resource has a granular scope that can be used to access it.
+- Document all the scopes they provide on their published list of SMART on FHIR capabilities and offline documentation.
+- Display Considerations
+  - Display a summary of the requested scopes in clear, concise language that the user can understand.
+  - Groupings and text displayed to patients do not need to match the Granular Scopes listed in US Core.
+  - Systems may provide the user an option to see more detail on the access provided by a US Core Granular Scope (for example, a detailed view button)
+- Client access requirements may evolve. Servers should allow clients to update their original provisioning request to add or subtract scopes
+
+**Best practices for app developers include**
+
+- Read and understand what granular scopes are available for a system as documented in its SMART on FHIR capabilities and offline documentation.
+- Limit the requested scopes to the available granular scopes.
+- Request the appropriate level of access for your use case and only request the necessary scopes. (For example, a pharmacy app may not need access to all observations.)
+</div><!-- new-content -->
 
 ### Servers SHALL support the following metadata in their `/.well-known/smart-configuration`
 
@@ -156,7 +189,7 @@ The SMART App Launch guide requires the following JSON file metadata:
 US Core requires following additional metadata:
 
 - `scopes_supported`: Array of scopes a Client may request.
-    - The Server **SHALL** list all the required US Core Scopes from the table above for the US Core Profiles they support in the `scopes_supported` array; additional scopes **MAY** be supported (so Clients should not consider this array an exhaustive list). 
+    - <span class="bg-success" markdown="1">The Server **SHALL** list all the required US Core Scopes for the US Core Profiles they support in the `scopes_supported` array; additional scopes **MAY** be supported (so Clients should not consider this array an exhaustive list).</span><!-- new-content --> 
 
     - Servers **MAY** limit Clients' scopes to those configured at registration time. Servers **SHALL** allow users to select a subset of the requested scopes at the approval time. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.
 - `introspection_endpoint`: The URL to a Server's introspection endpoint, which can be used to validate a token. 
