@@ -11,7 +11,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Specimen Must Have:**
 
-1. a specimen code
+1. a specimen <span class="bg-success" markdown="1">type</span><!-- new-content --> code
 
   **Each Specimen Must Support:**
 

@@ -5,11 +5,11 @@
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "ServiceRequest Example"
+                "valueString": "ServiceRequest Food Pantry Referral Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a service request example for the *US Core ServiceRequest Profile Profile*."
+                "valueMarkdown": "This is a food pantry referral request example using the *US Core ServiceRequest Profile*."
             }
         ],
         "profile": [
@@ -44,7 +44,8 @@
                 "display": "Assistance with application for food pantry program",
                 "version": "http://snomed.info/sct/731000124108"
             }
-        ]
+        ],
+        "text": "Food Pantry Referral"
     },
     "subject": {
         "reference": "Patient/example"

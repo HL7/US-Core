@@ -43,6 +43,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
   - New laboratory reports
   - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).
+- <span class="bg-success" markdown="1">The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.</span><!-- new-content -->
 
 
 

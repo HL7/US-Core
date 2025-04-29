@@ -29,6 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="ServiceRequest" %}
 
+1. <span class="bg-success" markdown="1">the name of the test, procedure, or service to be performed</span><!-- new-content -->
 1. a reason or indication for referral or consultation*
 
 \*see guidance below

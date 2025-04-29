@@ -52,6 +52,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   
    [The Argonauts 2023 SMART Imaging Access](https://confluence.hl7.org/display/AP/SMART+Imaging+Access) project is testing an approach to access imaging studies using a single authorization flow
    {: .stu-note}
+- <span class="bg-success" markdown="1">The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.</span><!-- new-content -->
 
 
 {% include link-list.md %}

@@ -68,6 +68,17 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Observation.code
+
+# ======== added for USCore V8 =================
+  - id: Observation.code.text
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.code.text
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: The name of the test that was performed."
+# ======== added for USCore V8 =================
+
   - id: Observation.value[x]
     path: Observation.value[x]
     short: Result Value
