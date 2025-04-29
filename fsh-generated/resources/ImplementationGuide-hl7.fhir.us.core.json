@@ -336,6 +336,14 @@
       },
       {
         "reference": {
+          "reference": "DiagnosticReport/metabolic-panel"
+        },
+        "description": "This is a basic metabolic panel (BMP) example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Basic Metabolic Panel Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+      },
+      {
+        "reference": {
           "reference": "Observation/blood-pressure"
         },
         "description": "This is a blood pressure example for the *Vitalsigns Profile*.",
@@ -949,14 +957,6 @@
         "description": "This is a \"self-prescribed\" tylenol example for the *MedicationRequest Profile*.",
         "name": "MedicationRequest Self Tylenol Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/metabolic-panel"
-        },
-        "description": "This is a metabolic panel example for the *US Core DiagnosticReport Lab Profile*.",
-        "name": "Metabolic Panel Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
       },
       {
         "reference": {
@@ -1696,11 +1696,11 @@
       },
       {
         "reference": {
-          "reference": "Observation/serum-total-bilirubin"
+          "reference": "ServiceRequest/bmp"
         },
-        "description": "This is a serum total bilirubin example for the *US Core Observation Lab Profile*.",
-        "name": "Serum Total Bilirubin Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        "description": "This is an example requesting a Laboratory Order (Basic Metabolic Panel) for a patient using the *US Core ServiceRequest Profile*.",
+        "name": "ServiceRequest BMP Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
       },
       {
         "reference": {

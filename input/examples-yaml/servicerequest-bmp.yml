@@ -1,0 +1,47 @@
+# create an HL7 FHIR Service Request example for US Core using input/examples-yaml/servicerequest-cbc.yml as a template with the 
+# following changes 
+#   - code: 24321-2
+#     display: Basic metabolic 2000 panel - Serum or Plasma
+#     system: http://loinc.org
+#   text: Basic Metabolic Panel (BMP)
+# reasonCode is icd-10 code "Z00.00"
+resourceType: ServiceRequest
+id: bmp
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: ServiceRequest BMP Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is an example requesting a Laboratory Order (Basic Metabolic Panel) for a patient using the *US Core ServiceRequest Profile*.
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+status: active
+intent: order
+category:
+- coding:
+  - system: http://snomed.info/sct
+    version: http://snomed.info/sct/731000124108
+    code: '108252007'
+    display: Laboratory procedure (procedure)
+  text: Laboratory Order
+code:
+  coding:
+  - code: 24321-2
+    display: Basic metabolic 2000 panel - Serum or Plasma
+    system: http://loinc.org
+  text: Basic Metabolic Panel (BMP)
+subject:
+  reference: Patient/example
+  display: Amy Shaw
+encounter:
+  reference: Encounter/example-1
+  display: Office Visit
+authoredOn: '2024-10-13T10:59:38-08:00'
+requester:
+  reference: Practitioner/practitioner-1
+reasonCode:
+  - coding:
+    - system: http://hl7.org/fhir/sid/icd-10-cm
+      code: 'Z00.00'
+      display: Encounter for general adult medical examination without abnormal findings
+    text: General adult medical examination

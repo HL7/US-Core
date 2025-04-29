@@ -13,11 +13,12 @@
     "code": {
         "coding": [
             {
-                "code": "24323-8",
-                "display": "Comprehensive metabolic 2000 panel - Serum or Plasma",
+                "code": "24321-2",
+                "display": "Basic metabolic 2000 panel - Serum or Plasma",
                 "system": "http://loinc.org"
             }
-        ]
+        ],
+        "text": "Basic Metabolic Panel (BMP)"
     },
     "effectiveDateTime": "2005-07-04",
     "id": "metabolic-panel",
@@ -26,11 +27,11 @@
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Metabolic Panel Example"
+                "valueString": "Basic Metabolic Panel Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a metabolic panel example for the *US Core DiagnosticReport Lab Profile*."
+                "valueMarkdown": "This is a basic metabolic panel (BMP) example for the *US Core DiagnosticReport Lab Profile*."
             }
         ],
         "profile": [
@@ -46,10 +47,6 @@
     ],
     "resourceType": "DiagnosticReport",
     "result": [
-        {
-            "display": "TOTAL BILIRUBIN",
-            "reference": "Observation/serum-total-bilirubin"
-        },
         {
             "display": "SODIUM",
             "reference": "Observation/serum-sodium"
@@ -91,5 +88,11 @@
     "encounter": {
         "reference": "Encounter/example-1",
         "display": "Office Visit"
-    }
+    },
+    "basedOn": [
+        {
+            "reference": "ServiceRequest/bmp",
+            "display": "Basic Metabolic Panel (BMP) Order"
+        }
+    ]
 }

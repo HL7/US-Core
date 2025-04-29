@@ -23,6 +23,7 @@
 [AUDIT-C-item-example-75626-2]: Observation-AUDIT-C-item-example-75626-2.html
 [AUDIT-C-panel-example-72109-2]: Observation-AUDIT-C-panel-example-72109-2.html
 [average-blood-pressure]: Observation-average-blood-pressure.html
+[metabolic-panel]: DiagnosticReport-metabolic-panel.html
 [blood-pressure]: Observation-blood-pressure.html
 [bmi]: Observation-bmi.html
 [bp-data-absent]: Observation-bp-data-absent.html
@@ -100,7 +101,6 @@
 [medicationrequest-contained-oral-axid]: MedicationRequest-medicationrequest-contained-oral-axid.html
 [medicationrequest-referenced-oral-axid]: MedicationRequest-medicationrequest-referenced-oral-axid.html
 [self-tylenol]: MedicationRequest-self-tylenol.html
-[metabolic-panel]: DiagnosticReport-metabolic-panel.html
 [missing-coded-data-example]: CareTeam-missing-coded-data-example.html
 [satO2-fiO2]: Observation-satO2-fiO2.html
 [observation-occupation]: Observation-observation-occupation.html
@@ -193,7 +193,7 @@
 [serum-potassium]: Observation-serum-potassium.html
 [serum-sodium]: Observation-serum-sodium.html
 [specimen-example-serum]: Specimen-specimen-example-serum.html
-[serum-total-bilirubin]: Observation-serum-total-bilirubin.html
+[bmp]: ServiceRequest-bmp.html
 [cbc]: ServiceRequest-cbc.html
 [chest-xray]: ServiceRequest-chest-xray.html
 [ekg]: ServiceRequest-ekg.html
