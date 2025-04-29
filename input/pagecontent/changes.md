@@ -144,7 +144,17 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 112. **Applied:** (Clarification) Clarify how to categorize CDA documents[FHIR-49612](https://jira.hl7.org/browse/FHIR-49612) See Changes [Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 113. **Applied:** (Clarification) Change binding for US Core ADI DocumentReference  and .type [FHIR-49615](https://jira.hl7.org/browse/FHIR-49615) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 114. **Triaged:** () Laboratory Test Report (FHIR Observations and Diagnostic Report) Issues [FHIR-49623](https://jira.hl7.org/browse/FHIR-49623) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html)
-115. **Triaged:** () US Core FHIR Lab Observation Updates needed [FHIR-49630](https://jira.hl7.org/browse/FHIR-49630) See Changes [Here](StructureDefinition-us-core-observation-lab.html)
+115. **Applied:** (Enhancement) Add CLIA/USCDI/HL7 Elements Mapping Table and update CBC examples to include specimen. [FHIR-49630](https://jira.hl7.org/browse/FHIR-49630) See Changes Here:
+     - [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
+     - [Erythrocytes Example]](Observation-cbc-erythrosyte.html)
+     - [Hematocrit Example](Observation-cbc-hematocrit.html)
+     - [Hemoglobin Example](Observation-cbc-hemoglobin.html)
+     - [Leukocytes Example](Observation-cbc-leukocyte.html)
+     - [MCH Example](Observation-cbc-mch.html)
+     - [MCHC Example](Observation-cbc-mchc.html)
+     - [MCV Example](Observation-cbc-pcv.html)
+     - [Platelets Example](Observation-cbc-platelets.html)
+
 116. **Triaged:** (Correction) Expansion of ValueSet us-core-laboratory-test-codes yields no concepts [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](ValueSet-us-core-laboratory-test-codes.html)
 117. **Triaged:** () Update Image and typo on Figure 2: US Core DocumentReference.category [FHIR-49702](https://jira.hl7.org/browse/FHIR-49702) See Changes [Here](general-requirements.html)
 118. **Submitted:** () Reconsider the Value Set binding for Practitioner.qualification.code [FHIR-49812](https://jira.hl7.org/browse/FHIR-49812) See Changes [Here]()

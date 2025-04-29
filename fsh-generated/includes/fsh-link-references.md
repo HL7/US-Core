@@ -216,6 +216,7 @@
 [TAPS]: QuestionnaireResponse-TAPS.html
 [treatment-intervention-preference]: Observation-treatment-intervention-preference.html
 [udi-1]: Device-udi-1.html
+[specimen-example-urine]: Specimen-specimen-example-urine.html
 [urobilinogen]: Observation-urobilinogen.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
 [USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html
@@ -425,5 +426,6 @@
 [USCoreSpecimenPatient]: SearchParameter-us-core-specimen-patient.html
 [UspsTwoLetterAlphabeticCodes]: ValueSet-us-core-usps-state.html
 [weight]: Observation-weight.html
+[specimen-example-whole-blood]: Specimen-specimen-example-whole-blood.html
 [xray-chest-findings]: Observation-xray-chest-findings.html
 [xray-chest-impression]: Observation-xray-chest-impression.html
