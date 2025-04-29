@@ -24,7 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 * [US Core Encounter Profile] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
 {% include encounter-location.md%}
-* *The ONC U.S. Core Data for Interoperability (USCDI) applicable terminology requirements for Encounter Location is the National Healthcare Safety Network (NHSN) [Healthcare Facility Patient Care Location (HSLOC)] and SNOMED CT location type codes. This profile's Location.type value set is based on HSLOC and the ServiceDeliveryLocationRoleType codes inherited from the base resource. However, implementers may extend the binding to use SNOMED CT codes when an existing concept does not exist or as a translation to an existing code.
+* <span class="bg-success" markdown="1">*There are four bindings for `Location.type` to meet multiple industry needs for identifying service locations. In addition to the extensibly bound Service Delivery Location Role Type codes which is inherited from the base resource, Healthcare Service Location Codes (HSLOC) and SNOMED-CT Healthcare Facility Type codes meet the USCDI applicable vocabulary standard, and the NUBC Place of Service (POS) codes meet the Health Insurance Portability and Accountability Act of 1996 (HIPAA) requirements for billing and Payers.</span><!-- new-content -->
 * *{% include should-project-us.md element="Location.address" %}
 
 {% include link-list.md %}

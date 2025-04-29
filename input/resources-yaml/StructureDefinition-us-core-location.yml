@@ -36,14 +36,74 @@ differential:
     mapping:
     - identity: servd
       map: ./PrimaryAddress and ./OtherAddresses
+
+# ====  for USCDI 5 and V 8 add in Additional Bindings ===========================================
+
+
   - id: Location.type
     path: Location.type
     short: Category of service or resource available in a location.
     mustSupport: true
     binding:
       strength: extensible
-      # description: ☞☞☞Base on HSLOC and ServiceDeliveryLocationRoleType☜☜☜'
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-location-type
+      # description: ☞☞☞Extensible binding inherited from FHIR R4 `Location.type`☜☜☜
+      valueSet: http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
+
+# ====== New R5 additional Binding Element Here for HSLOC:  USCDI APPLICABLE VOCABULARY STANDARD ====
+
+      extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+        extension:
+        - url: purpose
+          valueCode: extensible
+        - url: valueSet
+          valueCanonical: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275
+        - url: documentation
+          valueMarkdown: Meets the USCDI applicable vocabulary standard Healthcare Service Location Codes(HSLOC).
+        - url: shortDoco
+          valueString: Healthcare Service Location Codes (HSLOC)
+
+# ====== New R5 additional Binding Element Here for c80-facilitycodes: USCDI APPLICABLE VOCABULARY STANDARD ====
+
+      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+        extension:
+        - url: purpose
+          valueCode: extensible
+        - url: valueSet
+          valueCanonical: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.26
+        - url: documentation
+          valueMarkdown: SNOMED-CT Healthcare Facility Type codes meets the USCDI applicable vocabulary standard for SNOMED-CT.
+        - url: shortDoco
+          valueString: SNOMED-CT Healthcare Facility Type codes
+
+# ====== New R5 additional Binding Element Here for Place of Service (POS) ====
+
+      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+        extension:
+        - url: purpose
+          valueCode: extensible
+        - url: valueSet
+          valueCanonical: https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets #https://www.nubc.org/ValueSet/TypeOfBill #TODO confirm URI
+        - url: documentation
+          valueMarkdown:  NUBC Place of Service (POS) codes meet the Health Insurance Portability and Accountability Act of 1996 (HIPAA) (POS Memorandum 2003).
+        - url: shortDoco
+          valueString: NUBC Place of Service (POS) codes
+
+
+  - id: Location.type.coding
+    path: Location.type.coding
+    min: 1
+    mustSupport: true
+  - id: Location.type.coding.system
+    path: Location.type.coding.system
+    min: 1
+    mustSupport: true
+  - id: Location.type.coding.code
+    path: Location.type.coding.code
+    min: 1
+    mustSupport: true
+# =============================================================================
+
   - id: Location.telecom
     path: Location.telecom
     mustSupport: true
