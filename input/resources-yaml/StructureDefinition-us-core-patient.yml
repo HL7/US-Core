@@ -331,7 +331,7 @@ differential:
     path: Patient.address.line
     example:
     - 
-        label: General
+        label: US Core
         valueString: '49 MEADOW ST'
     mustSupport: true
     mapping:
@@ -341,7 +341,7 @@ differential:
     path: Patient.address.city
     example:
     - 
-        label: General
+        label: US Core
         valueString: 'EVERYTOWN'
     mustSupport: true
     mapping:
@@ -351,7 +351,7 @@ differential:
     path: Patient.address.state
     example:
     - 
-        label: General
+        label: US Core
         valueString: 'OK'
     mustSupport: true
     binding:
@@ -368,7 +368,7 @@ differential:
     - Zip Code
     example:
     - 
-        label: General
+        label: US Core
         valueString: '74047'
     mustSupport: true
     mapping:
