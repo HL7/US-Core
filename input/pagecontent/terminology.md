@@ -74,6 +74,8 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
     An example of this is shown in the screenshots below.  
 
+    <span class="bg-success" markdown="1">When viewing a ValueSet in the VSAC UI, the Code System OIDs and VSAC Code System names are displayed for each code. However, these code system identifiers **SHOULD NOT** be used. The FHIR URIs code systems are defined as part of FHIR and **SHOULD** be used instead. Unfortunately, the FHIR URI for the code system is not shown. As a convenience for the reader, a [VSAC to FHIR Code System Mapping Table] is provided, which maps the VSAC Code System names to the corresponding FHIR URI. For more information, see this [documentation](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacname-fhirname-fhirtitle.html) describing the relationships between the VSAC value set name, FHIR value set name, and FHIR value set title and how to access VSAC's FHIR API.:</span><!-- new-content -->
+
   - To fetch the FHIR ValueSet resource (in other words, the value set definition), use:
 
        `GET https://cts.nlm.nih.gov/fhir/ValueSet/[VSAC OID]`
@@ -84,6 +86,7 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
 For more information, refer to the [FHIR Terminology Service for VSAC Resources](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html)
 
+##### Example
 
 For example, the [US Core Smoking Status Observation Profile] `valueCodeableConcept` element has a preferred binding to the Smoking Status value set. To access it in VSAC, click on the link to `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`:
 
