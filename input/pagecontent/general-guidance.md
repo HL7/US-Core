@@ -6,6 +6,9 @@ The search expectations and US Core Profiles have been developed and tested usin
 
 FHIR resource elements of the [Reference] datatype reference other FHIR resources. For all references, US Core Responders **SHOULD** return resources that conform to a US Core profile if a US Core profile exists for the resource type. In some cases, US Core profiles explicitly constrain these references to point to the relevant US Core profile because the element is typically a *Must Support* or *Additional USCDI Requirements* element. For example, `CareTeam.subject` in [US Core CareTeam Profile] references the [US Core Patient Profile]. In other cases, referencing elements point to the base FHIR resource because they are not a *Must Support* or *Additional USCDI Requirements* element and, therefore, are unconstrained by US Core. (This is an editorial decision to simplify and improve the readability of the Profile rendering in this guide.) For example, although US Core does not constrain `Condition.asserter`, its reference to Patient or Practitioner **SHOULD** be a valid [US Core Patient Profile] or [US Core Practitioner Profile].
 
+### Operations
+
+[FHIR RESTful operations] define a list of parameters and their definitions. If the operation parameter is a resource, it **SHOULD** conform to a US Core Profiles whenever possible.  However, Use Core Profiles are designed for the FHIR RESTful read and search API and may not fit the operation parameter scope.
 
 ### Contained Resources
 

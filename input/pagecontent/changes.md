@@ -30,11 +30,11 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 
 1.  **Applied:** (Clarification) Discourage use of  ICD-10-CM header codes. [FHIR-48742](https://jira.hl7.org/browse/FHIR-48742) See Changes Here:
     - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
-    - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
+    - [US Core Condition Problems and Health Concerns Profile]git statu(StructureDefinition-us-core-condition-problems-health-concerns.html)
 2.  **Applied:** (Correction) Remove additional USCDI tag from Element [FHIR-48754](https://jira.hl7.org/browse/FHIR-48754) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
-3.  **Triaged:** (Clarification) Add guidance on reference to Observation target  [FHIR-48756](https://jira.hl7.org/browse/FHIR-48756) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
-4.  **Triaged:** (Clarification) Add conformance rule about using US Core profiles with Operations [FHIR-48822](https://jira.hl7.org/browse/FHIR-48822) See Changes [Here](general-requirements.html)
-5.  **Resolved - change required:** (Enhancement) Change Screening Assessment Profile category:screening-assessment to Add'l USCDI [FHIR-48849](https://jira.hl7.org/browse/FHIR-48849) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
+3.  **Applied:** (Clarification) Add guidance on reference to Observation target  [FHIR-48756](https://jira.hl7.org/browse/FHIR-48756) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
+4.  **Applied:** (Clarification) Add conformance rule about using US Core profiles with Operations [FHIR-48822](https://jira.hl7.org/browse/FHIR-48822) See Changes [Here](general-guidance.html)
+5.  **Applied:** (Enhancement) Change Screening Assessment Profile category:screening-assessment to Add'l USCDI [FHIR-48849](https://jira.hl7.org/browse/FHIR-48849) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
 6.  **Resolved - change required:** (Enhancement) Change Problems category to Add'l USCDI [FHIR-48850](https://jira.hl7.org/browse/FHIR-48850) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 7.  **Triaged:** (Clarification) Remove or Update STU Note regarding the Argonauts 2023 SMART Imaging Access project  [FHIR-48851](https://jira.hl7.org/browse/FHIR-48851) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 8.  **Applied:** (Correction)  Typo "PractitionerRole" instead of "PracitionRole" [FHIR-48866](https://jira.hl7.org/browse/FHIR-48866) See Changes [Here](CapabilityStatement-us-core-server.html#healthcareservice)

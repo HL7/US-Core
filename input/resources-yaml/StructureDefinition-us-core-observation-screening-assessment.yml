@@ -49,6 +49,9 @@ differential:
       - system: http://terminology.hl7.org/CodeSystem/observation-category
         code: survey
     mustSupport: true
+
+#======== US Core 8 change to add'l USCDI ==========
+
   - id: Observation.category:screening-assessment
     path: Observation.category
     sliceName: screening-assessment
@@ -68,6 +71,9 @@ differential:
 #=============== new valueset here that excludes "survey " =================
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-maximum-category
 #================================================================
+
+#======== US Core 8 change to add'l USCDI ==========
+
   - id: Observation.code
     path: Observation.code
     mustSupport: true
