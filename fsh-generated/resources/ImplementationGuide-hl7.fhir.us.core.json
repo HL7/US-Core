@@ -448,22 +448,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/detailed-ethnicity"
-        },
-        "description": "The codes for the concepts \"Unknown\", \"Asked but no answer\", \"other\", and the 41 [CDC ethnicity codes](https://www.cdc.gov/phin/php/vocabulary) that are grouped under one of the 2 OMB ethnicity category codes.",
-        "exampleBoolean": false,
-        "name": "Detailed ethnicity"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/detailed-race"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 900+ [CDC Race codes](https://www.cdc.gov/phin/php/vocabulary) that are grouped under one of the 5 OMB race category codes.",
-        "exampleBoolean": false,
-        "name": "Detailed Race"
-      },
-      {
-        "reference": {
           "reference": "Device/udi-2"
         },
         "description": "This is a Device defib example for the *US Core Implantable Device Profile*.",
@@ -1005,22 +989,6 @@
         "description": "This is a OFC percentile example for the *Head Occipital Frontal Circumference Percentile Profile*.",
         "name": "OFC Percentile Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/omb-ethnicity-category"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', and the ethnicity categories - 'Hispanic or Latino' and 'Not Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
-        "exampleBoolean": false,
-        "name": "OMB Ethnicity Categories"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/omb-race-category"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but Unknown', 'Other Race'* and\nthe codes for the five race categories - 'American Indian' or 'Alaska Native',\n'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific\nIslander', and 'White' - as defined by the [OMB Standards for Maintaining,\nCollecting, and Presenting Federal Data on Race and Ethnicity, Statistical\nPolicy Directive No. 15, as revised, October 30,\n1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)\n\n\\* The use of 'Other Race' is discouraged for statistical analysis.",
-        "exampleBoolean": false,
-        "name": "OMB Race Categories"
       },
       {
         "reference": {

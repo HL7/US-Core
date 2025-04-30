@@ -37,8 +37,6 @@
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
 [coverage-example]: Coverage-coverage-example.html
 [deceased-example]: Patient-deceased-example.html
-[DetailedEthnicity]: ValueSet-detailed-ethnicity.html
-[DetailedRace]: ValueSet-detailed-race.html
 [udi-2]: Device-udi-2.html
 [udi-3]: Device-udi-3.html
 [cardiology-report]: DiagnosticReport-cardiology-report.html
@@ -107,8 +105,6 @@
 [observation-occupation-industry-unknown]: Observation-observation-occupation-industry-unknown.html
 [observation-occupation-unknown]: Observation-observation-occupation-unknown.html
 [ofc-percentile]: Observation-ofc-percentile.html
-[OmbEthnicityCategories]: ValueSet-omb-ethnicity-category.html
-[OmbRaceCategories]: ValueSet-omb-race-category.html
 [example-organization-2]: Organization-example-organization-2.html
 [acme-lab]: Organization-acme-lab.html
 [acme-payer]: Organization-acme-payer.html

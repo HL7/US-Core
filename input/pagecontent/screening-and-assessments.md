@@ -58,8 +58,7 @@ Local policies guide what is appropriate for the problem list and what is approp
 Every Server that supports the USDCI Data Class "Health Status/Assessments":
 
 -  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].  
--  When a *Simple Observation* or *Problem or Health Concern* is recorded based on a structured screening and assessment (see below), the *US Core Simple Observation Profile* **SHOULD** reference it using the `derivedFrom` element and the *US Core Condition Problems and Health Concerns Profile* using the `evidence.detail` element,
-
+   -  <span class="bg-success" markdown="1">The US Core Simple Observation Profile's `Observation.derivedFrom` element **SHOULD** reference the Structured Screening and Assessment upon which clinical judgment observations are made (see below). Likewise, the US Core Condition Profile's `Condition.evidence.detail` element **SHOULD** reference the Structured Screening and Assessment which assist in diagnosing problems or health concerns.</span><!-- new-content -->
 
 #### Structured Screening and Assessments
 

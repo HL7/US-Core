@@ -48,7 +48,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include DAR-exception.md %}
 {% include provenance-author-bullet-generator.md %}
     - \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
-- \*Although 'Observation.derivedFrom' target profiles [Observation] and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. <span class="bg-success" markdown="1">Servers are </span><!-- new-content --> not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.
+- \*Although 'Observation.derivedFrom' target profiles <span class="bg-success" markdown="1">[US Core Observation Screening Assessment Profile]</span><!-- new-content --> and [US Core QuestionnaireResponse Profile] are labeled *Must Support*. <span class="bg-success" markdown="1">Servers are </span><!-- new-content --> not required to support both, but **SHALL** support at least one. The Client application **SHALL** support both.
     - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
 {% include link-list.md %}
