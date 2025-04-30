@@ -121,22 +121,45 @@
             },
             {
                 "id": "Condition.category:screening-assessment",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.category",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: USCDI Health Status/Assessments Data Class",
                 "sliceName": "screening-assessment",
-                "short": "USCDI Health Status/Assessments Data Class",
                 "definition": "Categories that a provider may use in their workflow to classify that this Condition is related to a USCDI Health Status/Assessments Data Class.",
                 "requirements": "Used for filtering condition",
-                "mustSupport": true,
+                "mustSupport": false,
                 "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
-                            "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category"
-                        }
-                    ],
                     "strength": "required",
                     "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category",
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+                            "extension": [
+                                {
+                                    "url": "purpose",
+                                    "valueCode": "minimum"
+                                },
+                                {
+                                    "url": "valueSet",
+                                    "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category"
+                                },
+                                {
+                                    "url": "documentation",
+                                    "valueMarkdown": "codes that any conformant certifying system SHALL support to help identify the type of USCDI Health Status Assessment data class' data elements being reported."
+                                },
+                                {
+                                    "url": "shortDoco",
+                                    "valueString": "USCDI Health Status/Assessments Data Elements"
+                                }
+                            ]
+                        }
+                    ]
                 }
             },
             {

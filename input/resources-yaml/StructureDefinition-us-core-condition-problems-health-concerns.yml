@@ -88,31 +88,49 @@ differential:
         Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
 
+#======== US Core 8 change to add'l USCDI ==========
 # ================= new minimum valueset binding in v8 =====================
   - id: Condition.category:screening-assessment
+
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.category
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: USCDI Health Status/Assessments Data Class"
     sliceName: screening-assessment
-    short: USCDI Health Status/Assessments Data Class
     definition: Categories that a provider may use in their workflow to classify that
       this Condition is related to a USCDI Health Status/Assessments Data Class.
     requirements: Used for filtering condition
-    mustSupport: true
+    mustSupport: false
     binding:
 
-#=============== minimum binding extension here =================
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet
-        valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
+# #=============== minimum binding extension here =================
+#       extension:
+#       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet
+#         valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
 
 #================================================================
 
       strength: required
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
-#=============== new valueset here that same as simple =================
+#=============== new valueset here that id the ame as simple =================
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
+# ====== New R5 additional Binding Element Here for Place of Service (POS) ====
+      extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+        extension:
+        - url: purpose
+          valueCode: minimum
+        - url: valueSet
+          valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category
+        - url: documentation
+          valueMarkdown: codes that any conformant certifying system SHALL support to help identify the type of USCDI Health Status Assessment data class' data elements being reported.
+        - url: shortDoco
+          valueString: USCDI Health Status/Assessments Data Elements
 #===============================================================
-
+#======== US Core 8 change to add'l USCDI ==========
 # ===========================================================
   - id: Condition.code
     path: Condition.code
