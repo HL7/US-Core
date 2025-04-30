@@ -134,6 +134,11 @@ pages:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
+    relationship-with-other-igs.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+
 
   profiles-and-extensions.md:
     extension:
@@ -317,6 +322,7 @@ menu:
       Basic Provenance: basic-provenance.html
       Screening and Assessments: screening-and-assessments.html
       Changes Between Versions: changes-between-versions.html
+      Relationship With Other IGs: relationship-with-other-igs.html
 
   FHIR Artifacts: #artifact.html
       Profiles: profiles-and-extensions.html#profiles
