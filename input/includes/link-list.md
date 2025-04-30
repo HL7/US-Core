@@ -359,3 +359,4 @@
 [CLIA/USCDI/HL7 Elements Crossmapping Table]: https://confluence.hl7.org/spaces/OO/pages/256515226/US+-+CLIA+Elements+mapping+to+HL7+data+elements
 [Considerations for Scope Consent]: https://www.hl7.org/fhir/smart-app-launch/best-practices.html#considerations-for-scope-consent
 [VSAC's FHIR Server Capability Statement]: https://cts.nlm.nih.gov/fhir/metadata
+[Get All Active Medications]: medication-list.html#get-all-active-medications

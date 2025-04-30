@@ -51,17 +51,16 @@ This IG focuses on access to a patient's medications. Therefore, it is essential
 
 **Requirements to access "all medications" and "all *active* medications" for a patient:**
 
-A MedicationRequest resource query:
+<div class="bg-success" markdown="1">
 
-  1. **SHALL** be all that is required.
-     1. See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
-  1. **SHALL** include all MedicationRequest resources with an `intent` = "order" representing authorized medication orders directly derived from the system's orders.
-  1. **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with an `intent` = "plan" representing *reported* medications
-     1. **SHALL** use the `reported[x]` element to indicate that the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
-     1. When recording "self-prescribed" medication, **SHOULD** use the `requester` element to indicate the Patient or RelatedPerson as the prescriber.
-
-1. The `encounter` element **SHOULD** be supported. Searching by context (i.e., for a given inpatient encounter) will return all medications ordered during that encounter, including medications administered in hospital and prescribed or discharge medications intended to be taken at home.
-1. The `category` and `encounter`  elements **MAY** be used together to get the intersection of medications for a given encounter (i.e., the context) that were administered during as an inpatient (i.e., the category).
+1. A MedicationRequest resource query **SHALL** be all that is required to access "all medications" or "all active medications" for a patient. (In other words, no other medication resource type needs to be fetched)
+1. The query result **SHALL** include all MedicationRequest resources with a `MedicationRequest.intent` = "order" representing authorized medication orders directly derived from the system's orders.
+1. The query result **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with a `MedicationRequest.intent` = "plan" representing reported medications.
+1. Servers **SHALL** use the `MedicationRequest.reported[x]` element to indicate that the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
+1. When recording "self-prescribed" medication, Servers **SHOULD** use the `MedicationRequest.requester` element to indicate the Patient or RelatedPerson is the prescriber.
+1. Servers **SHOULD** support the encounter search parameter. Searching by encounter will return all medications ordered during that encounter, including medications administered in the hospital and prescribed or discharge medications intended to be taken at home.
+1. Servers **MAY** support the search parameters `category` and `encounter`. This search will return all medications ordered during an encounter for a given `MedicationRequest.category` such as "inpatient".
+</div><!-- new-content -->
 
 #### Get All Medications
 

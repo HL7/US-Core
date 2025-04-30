@@ -46,10 +46,10 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 11. ](https://jira.hl7.org/browse/FHIR-49009) See Changes [Here](ValueSet-us-core-provenance-participant-type.html)
 12. **Applied:** (Correction) Typo "content.attachment.url/data" instead of "content.url/data" [FHIR-49023](https://jira.hl7.org/browse/FHIR-49023) See Changes Here:
        - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html)
-       - [US Core ADI DocumentReference Profile ](StructureDefinition-us-core-adi-documentreference.html)
+       - [US Core ADI DocumentReferencepig - Profile ](StructureDefinition-us-core-adi-documentreference.html)
 13. **Applied:** (Correction) Add Provenance Author and Author Role to USCDI Table [FHIR-49024](https://jira.hl7.org/browse/FHIR-49024) See Changes [Here](uscdi.html)
-14. **Triaged:** (Clarification) Clarify A MedicationRequest resource query [FHIR-49038](https://jira.hl7.org/browse/FHIR-49038) See Changes [Here](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
-15. **Triaged:** (Clarification) Clarify MedicationRequest Profile Specific Implementation Guidance: [FHIR-49039](https://jira.hl7.org/browse/FHIR-49039) See Changes [Here](StructureDefinition-us-core-medicationrequest.html)
+14. **Applied:** (Clarification) Clarify the guidance using a MedicationRequest query to access "all medications" or "all active medications". [FHIR-49038](https://jira.hl7.org/browse/FHIR-49038) See Changes [Here](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
+15. **Applied:** (Clarification) Clarify MedicationRequest Profile Specific Implementation Guidance on fetching active medications: [FHIR-49039](https://jira.hl7.org/browse/FHIR-49039) See Changes [Here](StructureDefinition-us-core-medicationrequest.htmll#mandatory-and-must-support-data-elements)
 16. **Applied:** (Correction) Add author provenance documentation to all profiles listed Individual Level Provenance table.[FHIR-49064](https://jira.hl7.org/browse/FHIR-49064) For example, see Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
 17. **Applied:** (Correction) Define the use of use the term "certifying Server system" and remove it from US Core Observation Screening Assessment Profile. [FHIR-49065](https://jira.hl7.org/browse/FHIR-49065) See Changes Here:
       - [US Core Observation Screening Assessment Profile](StructureDefinition-us-core-observation-screening-assessment.html) 
@@ -59,7 +59,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 20. **Applied:** (Correction) Typo "service should happen" instead of "serviceSHOULDhappen" [FHIR-49068](https://jira.hl7.org/browse/FHIR-49068) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
 21. **Applied:** (Clarification) Clarify narrative section on ServiceRequest.code content [FHIR-49069](https://jira.hl7.org/browse/FHIR-49069) See Changes [Here](StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements
 22. **Applied:** (Correction) typo "and" instead of "amd" [FHIR-49087](https://jira.hl7.org/browse/FHIR-49087) See Changes [Here](index.html#home)
-23. **Triaged:** (Correction) bad link - gives error page [FHIR-49089](https://jira.hl7.org/browse/FHIR-49089) See Changes [Here](index.html#home)
+23. **Applied:** (Correction) Fix link [FHIR-49089](https://jira.hl7.org/browse/FHIR-49089) See Changes [Here](https://hl7.org/fhir/us/core/STU7/changes.html#the-january-2024-ballot)
 24. **Applied:** (Correction) typo "RESTful" instead of "RESTfUl" [FHIR-49090](https://jira.hl7.org/browse/FHIR-49090) See Changes [Here](general-requirements.html#us-core-conformance-artifacts)
 25. **Applied:** (Correction) Correct figure label [FHIR-49095](https://jira.hl7.org/browse/FHIR-49095) See Changes [Here](must-support.html#key-elements-table-view)
 26. **Applied:** (Correction) Add missing word "support" [FHIR-49098](https://jira.hl7.org/browse/FHIR-49098) See Changes [Here](must-support.html#must-support---complex-elements)

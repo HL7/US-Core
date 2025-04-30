@@ -45,6 +45,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient's medications, including over-the-counter (OTC) medications and other substances taken for medical and recreational use.
+  * <span class="bg-success" markdown="1">Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidanc. It is always best practice to confirm this list with the patient or caregiver.</span><!-- new-content -->
   * When recording "self-prescribed" medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.
 
 {% include representing-meds.md %}
@@ -58,7 +59,6 @@ The following data elements must always be present ([Mandatory] definition) or m
          - Servers **SHALL** support *at least one* target resource in `MedicationRequest.reasonReference`. Clients SHALL support all target resources in `MedicationRequest.reasonReference`.
          - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps Client applications identify duplicates.
-* Servers **SHALL** follow the guidance on the [Medication List] page and return all `active` medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 - \*  This profile uses the [US Core Medication Adherence Extension] to report medication adherence. This extension communicates whether a medication has been consumed according to instructions.
 
 
