@@ -14,10 +14,7 @@ The USCDI version links to its respective ONC Standards Bulletin, which provides
 
 Our yearly road map is outlined in the figure below:
 
-
-
 {% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
-
 
 ### FHIR Version Support
 

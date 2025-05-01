@@ -26,6 +26,8 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 7.  **Terminology** () US Core detailed ethnicity expansion error [FHIR-46638](https://jira.hl7.org/browse/FHIR-46638) See Changes [Here](ValueSet-detailed-ethnicity.html)
 8.  **Publishing:** () Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) See Changes [Here](history.html)
 9.  **Publishing:** (Enhancement) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876)
+10.  **Publishing:** () Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
+11. **Publishing:** () Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](StructureDefinition-us-core-observation-lab.html#terminology-bindings-differential)
 
 ---
 
@@ -93,13 +95,10 @@ The ballot-related comments resulted in over 100 changes to this specification, 
        - [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html)
 46. **Applied:** (Correction) Fix typo "HSLOC" instead of "HLSOC" [FHIR-49301](https://jira.hl7.org/browse/FHIR-49301) See Changes [Here](ValueSet-us-core-location-type.html)
 47. **Applied:** (Clarification) Add version lineage to the US Core Observation Screening Assessment Profile's introduction. [FHIR-49305](https://jira.hl7.org/browse/FHIR-49305) See Changes [Here](index.html)
-48. **Resolved - change required:** (Correction) Corrections to typos [FHIR-49306](https://jira.hl7.org/browse/FHIR-49306) See Changes [Here]()
-49. **Resolved - change required:** (Correction) Fix typo 'Advance Directives' instead 'Advanced Directives' [FHIR-49307](https://jira.hl7.org/browse/FHIR-49307) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+48. **Applied:** (Correction) Corrections to typos [FHIR-49306](https://jira.hl7.org/browse/FHIR-49306)
+49. **Applied:** (Correction) Fix typo 'Advance Directives' instead  of 'Advanced Directives' [FHIR-49307](https://jira.hl7.org/browse/FHIR-49307) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 50. **Applied:** (Enhancement) Add Observation.code.text as an *Additional USCDI* element  [FHIR-49308](https://jira.hl7.org/browse/FHIR-49308) See Changes [Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.code)
-51. **Triaged:** (Enhancement) US Core CarePlan should not require category of 'assess-plan' [FHIR-49309](https://jira.hl7.org/browse/FHIR-49309) See Changes [Here]()
-52. **Triaged:** () Hyperlink discrepancy [FHIR-49335](https://jira.hl7.org/browse/FHIR-49335) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
-53. **Triaged:** () Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
-54. **Triaged:** () Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](StructureDefinition-us-core-observation-lab.html#terminology-bindings-differential)
+51. **Applied:** (Enhancement) Change the slice for category 'assess-plan' from 1..1 Must Support to 0..1 Must Support. [FHIR-49309](https://jira.hl7.org/browse/FHIR-49309) See Changes [Here](StructureDefinition-us-core-careplan.html)
 55. **Resolved - change required:** (Clarification) Cardinality does not match element definition [FHIR-49338](https://jira.hl7.org/browse/FHIR-49338) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#profile)
 56. **Triaged:** (Enhancement) Please add a ""Plain Language Summary about this Guide"" to the home page [FHIR-49367](https://jira.hl7.org/browse/FHIR-49367) See Changes [Here](index.html)
 57. **Resolved - change required:** (Correction) Typo in US Core Yearly Updates diagram [FHIR-49376](https://jira.hl7.org/browse/FHIR-49376) See Changes [Here](future-of-US-core.html)

@@ -13,14 +13,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each CarePlan Must Have:**
 
 1. a status
-1. an intent
-1. a category code of "assess-plan"
-1. a patient
+1. a category
+2. an intent
+3. a patient
 
 
 **Each CarePlan Must Support:**
 
 1. a narrative summary of the patient assessment and plan of treatment*
+1. <span class="bg-success" markdown="1">a category code of "assess-plan"</span><!-- new-content -->
 
 <div class="bg-success" markdown="1">
 
