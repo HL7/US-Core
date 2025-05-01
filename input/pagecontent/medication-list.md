@@ -1,5 +1,5 @@
 
-The guidance below addresses how a patient or a provider can access a patient's active, historical, and future (planned) medications list. This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information prescribed in the ONC U.S. Core Data for Interoperability (USCDI).
+The guidance below addresses how a patient or a provider can access a patient's active, historical, and future (planned) medications list. This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information prescribed in the ASTP U.S. Core Data for Interoperability (USCDI).
 This section provides specific guidance on accessing "all medications" and "all active medications" for a patient using a query on *MedicationRequest*. Note that a query on *MedicationStatement* was required in prior versions of this guide. Because of underlying changes in the FHIR Release 4 pharmacy resources, this guide doesn't require the use of *MedicationStatement* since an "active" medication list can be obtained using only MedicationRequest.[^1]
 
 ### Background on the FHIR Medications resources

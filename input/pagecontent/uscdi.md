@@ -23,7 +23,7 @@ The US Core Profiles were initially designed to meet the 2015 Edition certificat
 {% include uscdi-uscore-version-table.md %}
 
 
-ONC's USCDI and FHIR US Core are complementary initiatives, with USCDI defining high-level data requirements and FHIR US Core providing detailed FHIR-based profiles for meeting those requirements. Mapping between them is necessary for achieving interoperability and consistency in healthcare data exchange within the United States. However, to make USCDI implementable in FHIR, an interpretation of USCDI is necessary. For information about what US Core Profile elements and US Core transactions are in scope for ONC Health IT Certification, see the US Core [Conformance] pages.
+ASTP's USCDI and FHIR US Core are complementary initiatives, with USCDI defining high-level data requirements and FHIR US Core providing detailed FHIR-based profiles for meeting those requirements. Mapping between them is necessary for achieving interoperability and consistency in healthcare data exchange within the United States. However, to make USCDI implementable in FHIR, an interpretation of USCDI is necessary. For information about what US Core Profile elements and US Core transactions are in scope for ASTP Health IT Certification, see the US Core [Conformance] pages.
 
 Note that:
 -  USCDI Data Classes and Element names may differ from the FHIR US Core resource names and element names.

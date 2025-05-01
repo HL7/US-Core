@@ -169,7 +169,7 @@
 [Normative]: {{site.data.fhir.path}}versions.html#maturity
 [Nurse Note (34746-8)]: https://loinc.org/34746-8.html
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
-[ONC Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
+[ASTP Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents
 [Observation Category Codes]: {{site.data.fhir.path}}valueset-observation-category.html
 [Observation Grouping]: {{site.data.fhir.path}}observation.html#obsgrouping
@@ -363,3 +363,4 @@
 [International Patient Access (IPA)]: https://hl7.org/fhir/uv/ipa/
 [International Patient Summary (IPS)]: https://hl7.org/fhir/uv/ips/STU1.1/
 [Race & Ethnicity - CDC(CDCREC)]: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
+[Assistant Secretary for Technology Policy (ASTP)]: https://www.healthit.gov/topic/about-astp

@@ -8,7 +8,7 @@ The US Core FHIR Profiles are designed to be the base set of requirements for FH
 Yearly US Core updates reflect [U.S. Core Data for Interoperability (USCDI)] changes and requests from the US Realm FHIR community.
 
 The following table shows the relationship between each USCDI and US Core Version.
-The USCDI version links to its respective ONC Standards Bulletin, which provides background and the new data classes and elements for the version.
+The USCDI version links to its respective ASTP/ONC Standards Bulletin, which provides background and the new data classes and elements for the version.
 
 {% include uscdi-uscore-version-table.md %}
 
@@ -53,7 +53,7 @@ The US Core Implantable Device Profile is intended only for implantable devices.
 The US Core design assumes that access to the Active Medication List is through searching MedicationRequest. (See: https://build.fhir.org/ig/HL7/US-Core/medication-list-guidance.html.)  The orders (MedicationRequest) capture all the medications and whether they have been fulfilled. Medication Administration can be used as well, but systems will need to be careful to link to the appropriate MedicationRequest. Future versions of US Core may test and add MedicationAdministration.
 
 #### Searching for Multiple Patients
-Searching for multiple patients has been called out in the ONC Health IT Certification Program. Defining capabilities for multiple patient access would focus on querying real-time data for a user-facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
+Searching for multiple patients has been called out in the ASTP Health IT Certification Program. Defining capabilities for multiple patient access would focus on querying real-time data for a user-facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
 
 - with recent lab results  
 - currently in the Emergency Department

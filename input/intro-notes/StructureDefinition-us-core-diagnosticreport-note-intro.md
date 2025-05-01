@@ -47,7 +47,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access to the images.
 
    * The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).
-   * The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view DICOM studies, series, and SOP instances referenced in the [ImagingStudy] resource.
+   * The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view <span class="bg-success" markdown="1">DICOM (Digital Imaging and Communications in Medicine) studies, series, and SOP (Service-Object Pair) instances</span><!-- new-content --> referenced in the [ImagingStudy] resource.
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifier` element to access the source images from external sources.
 
 - <span class="bg-success" markdown="1">The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.</span><!-- new-content -->

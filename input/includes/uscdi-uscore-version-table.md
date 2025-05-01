@@ -1,5 +1,5 @@
 <!-- The following table shows the relationship between each USCDI and US Core Version.
-The USCDI version links to its respective ONC Standards Bulletin, which provides background and the new data classes and elements for the version. -->
+The USCDI version links to its respective ASTP Standards Bulletin, which provides background and the new data classes and elements for the version. -->
 
 | USCDI Version | US Core Version | 
 |:---:|:---|

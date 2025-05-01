@@ -7,7 +7,7 @@ With each major version of FHIR, the core data models have changed.  The FHIR co
 
 US Core undergoes annual updates with new guidance, requirements, profiles, and changes to existing content. The [Directory of published versions] lists the publication history with links to each version of US Core.  The [Change Log] documents the changes across the versions of US Core. The [Argonaut Data Query] guide was published separately and is not included in the directory or change log.
 
-Work is underway to identify corrections in subsequent versions as "patches" to prior versions for ONC Certification.
+Work is underway to identify corrections in subsequent versions as "patches" to prior versions for ASTP Certification.
 
 ### Cross Version Comparisons
 

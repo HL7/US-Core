@@ -10,4 +10,4 @@ for example
 
 **Additional USCDI Requirements:**
 
-{% if include.plural %}These [Additional USCDI Requirements] elements are{% else %}This [Additional USCDI Requirements] element is{% endif %} not Mandatory or Must Support but {% if include.plural %}are{% else %}is{% endif %} required for ONC Health IT certification testing and {% if include.plural %}are{% else %}is{% endif %} included in the formal definition of the profile and the {{include.type}} examples.
+{% if include.plural %}These [Additional USCDI Requirements] elements are{% else %}This [Additional USCDI Requirements] element is{% endif %} not Mandatory or Must Support but {% if include.plural %}are{% else %}is{% endif %} required for ASTP Health IT certification testing and {% if include.plural %}are{% else %}is{% endif %} included in the formal definition of the profile and the {{include.type}} examples.
