@@ -1,6 +1,12 @@
 {
     "resourceType": "StructureDefinition",
     "id": "us-core-care-experience-preference",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 2
+        }
+    ],
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference",
     "name": "USCoreCareExperiencePreferenceProfile",
     "title": "US Core Care Experience Preference Profile",
@@ -39,7 +45,12 @@
                     ],
                     "rules": "open"
                 },
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "strength": "preferred",
+                    "description": "FHIR and US Core codes for high level observation categories.",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
+                }
             },
             {
                 "id": "Observation.category:us-core",
@@ -55,7 +66,12 @@
                         }
                     ]
                 },
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "strength": "preferred",
+                    "description": "FHIR and US Core codes for high level observation categories.",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
+                }
             },
             {
                 "id": "Observation.code",

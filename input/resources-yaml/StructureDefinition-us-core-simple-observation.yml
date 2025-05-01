@@ -29,6 +29,11 @@ differential:
       rules: open
     min: 1
     mustSupport: true
+    binding:
+      strength: preferred
+      description: FHIR and US Core codes for high level observation categories.
+      valueSet: >-
+        http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
   - id: Observation.category:us-core
 
   # ==============  minimum binding for sdoh category in v8 ===================

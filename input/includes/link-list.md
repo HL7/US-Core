@@ -364,3 +364,4 @@
 [International Patient Summary (IPS)]: https://hl7.org/fhir/uv/ips/STU1.1/
 [Race & Ethnicity - CDC(CDCREC)]: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
 [Assistant Secretary for Technology Policy (ASTP)]: https://www.healthit.gov/topic/about-astp
+[FHIR Maturity Level]: {{site.data.fhir.path}}versions.html#maturity

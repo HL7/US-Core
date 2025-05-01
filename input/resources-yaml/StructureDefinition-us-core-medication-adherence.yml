@@ -1,5 +1,11 @@
 resourceType: StructureDefinition
 id: us-core-medication-adherence
+#============= Remove when version 8 named in regs ====================
+extension:
+- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+  valueInteger: 2
+#======================================================================
+
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
 name: USCoreMedicationAdherenceExtension
 title: US Core Medication Adherence Extension

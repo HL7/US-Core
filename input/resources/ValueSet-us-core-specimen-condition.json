@@ -1,6 +1,12 @@
 {
     "resourceType": "ValueSet",
     "id": "us-core-specimen-condition",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 2
+        }
+    ],
     "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-specimen-condition",
     "name": "USCoreSpecimenCondition",
     "title": "US Core Specimen Condition",

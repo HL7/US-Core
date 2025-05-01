@@ -1,6 +1,12 @@
 {
     "resourceType": "StructureDefinition",
     "id": "us-core-authentication-time",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 2
+        }
+    ],
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time",
     "name": "USCoreAuthenticationTimeExtension",
     "title": "US Core Authentication Time Extension",

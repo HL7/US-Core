@@ -1,6 +1,12 @@
 {
     "resourceType": "StructureDefinition",
     "id": "us-core-observation-adi-documentation",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 2
+        }
+    ],
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation",
     "name": "USCoreObservationADIDocumentationProfile",
     "title": "US Core Observation ADI Documentation Profile",
@@ -89,7 +95,12 @@
                     ],
                     "rules": "open"
                 },
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "strength": "preferred",
+                    "description": "FHIR and US Core codes for high level observation categories.",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
+                }
             },
             {
                 "id": "Observation.category:us-core",
@@ -105,7 +116,12 @@
                         }
                     ]
                 },
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "strength": "preferred",
+                    "description": "FHIR and US Core codes for high level observation categories.",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
+                }
             },
             {
                 "id": "Observation.code",

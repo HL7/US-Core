@@ -1,5 +1,10 @@
 resourceType: StructureDefinition
 id: us-core-care-experience-preference
+#============= Remove when version 8 named in regs ====================
+extension:
+- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+  valueInteger: 2
+#======================================================================
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference
 name: USCoreCareExperiencePreferenceProfile
 title: US Core Care Experience Preference Profile
@@ -31,6 +36,11 @@ differential:
         path: $this
       rules: open
     mustSupport: true
+    binding:
+      strength: preferred
+      description: FHIR and US Core codes for high level observation categories.
+      valueSet: >-
+        http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
   - id: Observation.category:us-core
     path: Observation.category
     sliceName: us-core
@@ -41,6 +51,11 @@ differential:
       - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
         code: care-experience-preference
     mustSupport: true
+    binding:
+      strength: preferred
+      description: FHIR and US Core codes for high level observation categories.
+      valueSet: >-
+        http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
   - id: Observation.code
     path: Observation.code
     short: Care experience preferences code

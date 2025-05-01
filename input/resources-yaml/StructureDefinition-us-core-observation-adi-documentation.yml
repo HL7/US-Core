@@ -1,5 +1,10 @@
 resourceType: StructureDefinition
 id: us-core-observation-adi-documentation
+#============= Remove when version 8 named in regs ====================
+extension:
+- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+  valueInteger: 2
+#======================================================================
 url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation"
 name: USCoreObservationADIDocumentationProfile
 title: US Core Observation ADI Documentation Profile
@@ -70,6 +75,11 @@ differential:
             path: $this
         rules: open
       mustSupport: true
+      binding:
+        strength: preferred
+        description: FHIR and US Core codes for high level observation categories.
+        valueSet: >-
+          http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
     - id: "Observation.category:us-core"
       path: Observation.category
       sliceName: us-core
@@ -80,6 +90,11 @@ differential:
           - system: "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
             code: observation-adi-documentation
       mustSupport: true
+      binding:
+        strength: preferred
+        description: FHIR and US Core codes for high level observation categories.
+        valueSet: >-
+          http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
     - id: Observation.code
       path: Observation.code
       short: Observation ADI Documentation code

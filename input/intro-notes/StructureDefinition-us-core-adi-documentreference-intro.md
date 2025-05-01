@@ -39,7 +39,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-- In addition to the [Advance Healthcare Directive Categories Grouper](http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.25) value set, other category schemes may be used to facilitate the sharing of health documents.
+- In addition to the <span class="bg-success" markdown="1">[Advance Directive Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion)</span><!-- new-content --> value set, other category schemes may be used to facilitate the sharing of health documents.
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> or the content as inline base64 encoded data using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.data`</span><!-- new-content -->.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The Client application **SHALL** support both elements.
