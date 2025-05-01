@@ -37,7 +37,7 @@ In addition, the following data elements must be supported if the data is presen
     |UDI HRF string|`Device.udiCarrier.carrierHRF`|
     |DI|`Device.udiCarrier.deviceIdentifier`|
     |manufacture date (UDI-PI element)|`Device.manufactureDate`|
-    |expiration dat (UDI-PI elemente|`Device.expirationDate`|
+    |expiration date (UDI-PI elemente|`Device.expirationDate`|
     |lot number (UDI-PI element)|`Device.lotNumber`|
     |serial number (UDI-PI element)|`Device.serialNumber`|
     |distinct identifier (UDI-PI element)|`Device.distinctIdentifier`|

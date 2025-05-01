@@ -35,7 +35,7 @@ The HL7 Basic Provenance Informative implementation guide outlines four use case
 
 #### Clinical Information Reconciliation and Incorporation
 
-[[Clinical Information Reconciliation and
+[Clinical Information Reconciliation and
 Incorporation (CIRI)] allows clinicians to reconcile and incorporate patient
 health information sent in from external sources to maintain a more accurate
 and up-to-date patient records. Consolidated Clinical Document Architecture

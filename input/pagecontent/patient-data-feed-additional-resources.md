@@ -205,3 +205,5 @@ This guidance illustrates how the `feed-event` trigger might be applied to the a
 As the FHIR community continues to develop and standardize subscription-related features, this list of additional resources may be updated, and resources may graduate from this list to the [Required Resources Table 1].
 
 Implementers are encouraged to provide feedback on their experiences with these additional resources to help shape future versions of this specification to align with real-world experience.
+
+{% include link-list.md %}

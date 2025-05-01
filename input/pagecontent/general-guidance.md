@@ -274,7 +274,7 @@ Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` s
 {
 "resourceType": "CapabilityStatement",
     ...
-    "rest": {
+    "rest": [
       {
         "mode": "Server",
         ...
@@ -297,9 +297,13 @@ Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` s
                   },
                   ...
                 ]
+              ...  
             }
-        ]
-    }
+            ...
+          ]
+         ... 
+       }
+    ]
 }
 ~~~
 
