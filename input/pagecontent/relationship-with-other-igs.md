@@ -15,8 +15,8 @@ Other international and national standards were reviewed and considered during t
 
 Implementation Guide |Relationship
 ---|---
-[International Patient Access](https://hl7.org/fhir/uv/ipa/STU1/)|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of US Core. US Core was is compatible with IPA, e.g. US Core conformant data can be accessed by an IPA conformant client.
-[International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/STU1.1/)|This IG describes specify how to represent in HL7 FHIR the International Patient Summary (IPS). An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care. The formal review between this IG and US Core is not current.
+[International Patient Access]|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of US Core. US Core was is compatible with IPA, e.g. US Core conformant data can be accessed by an IPA conformant client.
+[International Patient Summary Implementation Guide]|This IG describes specify how to represent in HL7 FHIR the International Patient Summary (IPS). An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care. The formal review between this IG and US Core is not current.
 {:.grid}
 
 #### Comparison With International IGs
@@ -35,50 +35,48 @@ As part of profile comparison, the requirements, constraints, and standards spec
 
 ![No equivalent profile](minus_symbol.svg.png) **No equivalent profile**: No equivalent profile for comparison.
 
-| US Core | International Patient Access 1.1.0 |
+| US Core 8.0.0 | International Patient Access 1.1.0 |
 | --- | --- |
-| [US Core AllergyIntolerance](StructureDefinition-au-core-allergyintolerance.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Blood Pressure](StructureDefinition-au-core-bloodpressure.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Body Height](StructureDefinition-au-core-bodyheight.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Body Temperature](StructureDefinition-au-core-bodytemp.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Body Weight](StructureDefinition-au-core-bodyweight.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Condition](StructureDefinition-au-core-condition.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Diagnostic Result Observation](StructureDefinition-au-core-diagnosticresult.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Encounter](StructureDefinition-au-core-encounter.html) | ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core HealthcareService](StructureDefinition-au-core-healthcareservice.html) | ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Heart Rate](StructureDefinition-au-core-heartrate.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Immunization](StructureDefinition-au-core-immunization.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Location](StructureDefinition-au-core-location.html) | ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Medication](StructureDefinition-au-core-medication.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) | ![Additional requirements](orange_checkmark.svg.png) |
-| [US Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html) | ![Additional requirements](orange_checkmark.svg.png) |
-| [US Core Organization](StructureDefinition-au-core-organization.html) | ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Pathology Result Observation](StructureDefinition-au-core-diagnosticresult-path.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Patient](StructureDefinition-au-core-patient.html) | ![Additional requirements](orange_checkmark.svg.png) |
-| [US Core Practitioner](StructureDefinition-au-core-practitioner.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core PractitionerRole](StructureDefinition-au-core-practitionerrole.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Procedure](StructureDefinition-au-core-procedure.html) | ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core RelatedPerson](StructureDefinition-au-core-relatedperson.html) | ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Respiration Rate](StructureDefinition-au-core-resprate.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Smoking Status](StructureDefinition-au-core-smokingstatus.html) | ![Compliant](green_checkmark.svg.png) |
-| [US Core Waist Circumference](StructureDefinition-au-core-waistcircum.html) | ![Compliant](green_checkmark.svg.png) |
+| [US Core AllergyIntolerance Profile] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Blood Pressure] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Body Height] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Body Temperature] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Body Weight] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Condition] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Diagnostic Result Observation] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Encounter] | ![No equivalent profile](minus_symbol.svg.png) |
+| [US Core HealthcareService] | ![No equivalent profile](minus_symbol.svg.png) |
+| [US Core Heart Rate] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Immunization] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Location] | ![No equivalent profile](minus_symbol.svg.png) |
+| [US Core Medication] | ![Compliant](green_checkmark.svg.png) |
+| [US Core MedicationRequest] | ![Additional requirements](orange_checkmark.svg.png) |
+| [US Core MedicationStatement] | ![Additional requirements](orange_checkmark.svg.png) |
+| [US Core Organization] | ![No equivalent profile](minus_symbol.svg.png) |
+| [US Core Pathology Result Observation] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Patient Profile] | ![Additional requirements](orange_checkmark.svg.png) |
+| [US Core Practitioner] | ![Compliant](green_checkmark.svg.png) |
+| [US Core PractitionerRole] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Procedure] | ![No equivalent profile](minus_symbol.svg.png) |
+| [US Core RelatedPerson] | ![No equivalent profile](minus_symbol.svg.png) |
+| [US Core Respiration Rate] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Smoking Status] | ![Compliant](green_checkmark.svg.png) |
+| [US Core Waist Circumference] | ![Compliant](green_checkmark.svg.png) |
 {:.grid}
 
-#### International Patient Access
-[International Patient Access 1.1.0](https://hl7.org/fhir/uv/ipa/STU1.1/) describes how an application acting on behalf of a patient can access patient information from a clinical records system using a FHIR-based API.
 
 ##### Additional requirements
 The following IPA profile(s) contain additional requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 | US Core | International Patient Access 1.1.0 | Element | Additional requirements |
 | --- | --- | --- | --- |
-| [US Core MedicationRequest](StructureDefinition-au-core-medicationrequest.html) | [IPA-MedicationRequest](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationrequest.html) | MedicationRequest.reported[x] | Element flagged as *Must Support* in IPA. |
-| [US Core MedicationStatement](StructureDefinition-au-core-medicationstatement.html) | [IPA-MedicationStatement](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationstatement.html) | MedicationStatement.statusReason | Element flagged as *Must Support* in IPA. |
+| [US Core MedicationRequest Profile] | [IPA-MedicationRequest](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationrequest.html) | MedicationRequest.reported[x] | Element flagged as *Must Support* in IPA. |
+| [US Core MedicationStatement Profile ] | [IPA-MedicationStatement](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationstatement.html) | MedicationStatement.statusReason | Element flagged as *Must Support* in IPA. |
 | | | MedicationStatement.context | Element flagged as *Must Support* in IPA. |
 | | | MedicationStatement.informationSource | Element flagged as *Must Support* in IPA. |
-| [US Core Patient](StructureDefinition-au-core-patient.html) | [IPA-Patient](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-patient.html) | Patient.identifier | IPA requires all identifiers to have system, type or assigner (ipa-pat-1). |
-| | | Patient.identifier.value | Element flagged as *Must Support* in IPA. |
+| [US Core Patient Profile] | [IPA-Patient](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-patient.html) | Patient.identifier | IPA requires all identifiers to have system, type or assigner (ipa-pat-1). |
 | | | Patient.name.text | Element SHOULD be present (ipa-pat-3). |
+| | | Patient.gender | Element flagged as *Must Support* in IPA. |
 | | | Patient.active | Element flagged as *Must Support* in IPA. |
 | | | Patient.link | Element flagged as *Must Support* in IPA. |
 {:.grid}

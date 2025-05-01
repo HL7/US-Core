@@ -360,3 +360,5 @@
 [Considerations for Scope Consent]: https://www.hl7.org/fhir/smart-app-launch/best-practices.html#considerations-for-scope-consent
 [VSAC's FHIR Server Capability Statement]: https://cts.nlm.nih.gov/fhir/metadata
 [Get All Active Medications]: medication-list.html#get-all-active-medications
+[International Patient Access]: https://hl7.org/fhir/uv/ipa/
+[International Patient Summary Implementation Guide]: https://hl7.org/fhir/uv/ips/STU1.1/
