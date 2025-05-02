@@ -12,25 +12,21 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Condition Must Have:**
 
-<!-- 1. a status of the condition* -->
 1. a category code of 'encounter-diagnosis'
-1. a code that identifies the condition*
-1. a patient
+2. a code that identifies the condition*
+3. a patient
 
 **Each Condition Must Support:**
 
-1. a clinical status of the condition (e.g., active or resolved)
-1. a verification status
 1. an encounter
-1. a date of diagnosis*
-1. abatement date (in other words, date of resolution or remission)
-1. a date when recorded*
+2. <span class="bg-success" markdown="1">date record was first recorded</span><!-- new-content -->
 
 <div class="bg-success" markdown="1">
 
 {% include additional-requirements-intro.md type="Condition" plural="false" %}
 
 1. a recorder*
+
 </div><!-- new-content -->
 
 **Profile Specific Implementation Guidance:**
@@ -42,11 +38,6 @@ The following data elements must always be present ([Mandatory] definition) or m
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. <span class="bg-success" markdown="1">When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used as the primary code for current encounter diagnoses..</span><!-- new-content -->
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`. An example search is shown in the [Quick Start](#search) section below.
-* \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
-    * Although all three are marked as Must Support, the Server is not required to support all.
-    * A Server **SHALL** support `Condition.recordedDate`.
-    * A Server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A Server may support both, which means they support all three dates.
-    * The Client application **SHALL** support all three elements.
 {% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}

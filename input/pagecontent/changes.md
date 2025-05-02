@@ -171,13 +171,16 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 86.  **Applied:** (Clarification) Value sets referenced by US Core reviewed annually [FHIR-50153](https://jira.hl7.org/browse/FHIR-50153)
 87.  **Applied:** (Enhancement) Created a new "Looking Ahead" menu tab  [FHIR-50154](https://jira.hl7.org/browse/FHIR-50154) See Changes [Here](looking-ahead.html)
 88.  **Applied:** (Enhancement) Added "Patient Data Feed" subscription guidance page to US Core [FHIR-50155](https://jira.hl7.org/browse/FHIR-50155) See Changes [Here](patient-data-feed.html)
-89.  **Resolved - change required:** (Enhancement) Value sets should not include inactive codes unless specific to historical queries [FHIR-50156](https://jira.hl7.org/browse/FHIR-50156) See Changes [Here](254067)
+89.  **Applied** (Enhancement) Add guidance on inactive codes to the Terminology page [FHIR-50156](https://jira.hl7.org/browse/FHIR-50156) See Changes [Here](terminology.html)
 90.  **Applied** (Correction) Added missing profiles to "omitted" Profile list for individual level provenance [FHIR-50163](https://jira.hl7.org/browse/FHIR-50163) See Changes [Here](basic-provenance.html#individual-level-provenance)
 91.  **Applied:** (Correction) Changes to comply with Executive Order 14168 [FHIR-50177](https://jira.hl7.org/browse/FHIR-50177) See the summary of changes in the [What's New](#whats-new-in-version-800-of-us-core) section above.
 92.  **Applied:** (Clarification) Remove MS flag for Practitioner in MedicationDispense Profile [FHIR-50239](https://jira.hl7.org/browse/FHIR-50239) See Changes [Here](StructureDefinition-us-core-medicationdispense.html)
-93.  **Triaged:** () Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](256476)
+93.  **Applied:** (Enhancement) Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](StructureDefinition-us-core-coverage.html)
 94.  **Triaged:** (Enhancement) Add section on slicing on the Must Support page  [FHIR-50286](https://jira.hl7.org/browse/FHIR-50286) See Changes [Here](256480)
-95.  **Triaged:** () Encounter Diagnosis FHIR Resource Dates (e.g. AbatementDate) inherited requirements from Problems and Health Concerns [FHIR-50288](https://jira.hl7.org/browse/FHIR-50288) See Changes [Here](256483)
+95.  **Applied:** (Enhancement) Remove clinical Dates and statuses from the US Core Condition Encounter Diagnosis Profile [FHIR-50288](https://jira.hl7.org/browse/FHIR-50288) See Changes Here
+     - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
+     - [Encounter Diagnosis Example 1](Condition-encounter-diagnosis-example1.html)
+     - [Encounter Diagnosis Example 2](Condition-encounter-diagnosis-example2.html)
 96.  **Applied:** (Correction) Remove gender based search requirements [FHIR-50380](https://jira.hl7.org/browse/FHIR-50230) See Changes [Here](StructureDefinition-us-core-patient.html#notes)
 97.  **Applied:** (Correction) Add copyright statements to Questionnaire examples [FHIR-50380](https://jira.hl7.org/browse/FHIR-50230) See Changes Here:
      - [Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example](Questionnaire-AUDIT-C.html)

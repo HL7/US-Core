@@ -16,32 +16,6 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
         ]
     },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
-            "valueDateTime": "2016-08-10"
-        }
-    ],
-    "clinicalStatus": {
-        "coding": [
-            {
-                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                "code": "resolved",
-                "display": "Resolved"
-            }
-        ],
-        "text": "Resolved"
-    },
-    "verificationStatus": {
-        "coding": [
-            {
-                "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-                "code": "confirmed",
-                "display": "Confirmed"
-            }
-        ],
-        "text": "Confirmed"
-    },
     "category": [
         {
             "coding": [
@@ -61,9 +35,14 @@
                 "code": "442311008",
                 "display": "Liveborn born in hospital",
                 "version": "http://snomed.info/sct/731000124108"
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                "code": "Z38.00",
+                "display": "Single liveborn infant, delivered vaginally, born in hospital"
             }
         ],
-        "text": "Single liveborn, born in hospital"
+        "text": "Single live birth, born in hospital"
     },
     "subject": {
         "reference": "Patient/example",
@@ -72,8 +51,6 @@
     "encounter": {
         "reference": "Encounter/delivery"
     },
-    "onsetDateTime": "2016-08-10",
-    "abatementDateTime": "2016-08-10",
     "recordedDate": "2016-08-10T07:15:07-08:00",
     "recorder": {
         "reference": "Practitioner/practitioner-1",

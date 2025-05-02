@@ -27,52 +27,6 @@
                 ]
             },
             {
-                "id": "Condition.extension:assertedDate",
-                "path": "Condition.extension",
-                "sliceName": "assertedDate",
-                "short": "Date the condition was first asserted",
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/StructureDefinition/condition-assertedDate"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.clinicalStatus",
-                "path": "Condition.clinicalStatus",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Condition.clinicalStatus"
-                    }
-                ]
-            },
-            {
-                "id": "Condition.verificationStatus",
-                "path": "Condition.verificationStatus",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Condition.verificationStatus"
-                    }
-                ]
-            },
-            {
                 "id": "Condition.category",
                 "path": "Condition.category",
                 "slicing": {
@@ -198,62 +152,6 @@
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
                         ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.onset[x]",
-                "path": "Condition.onset[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Age"
-                    },
-                    {
-                        "code": "Period"
-                    },
-                    {
-                        "code": "Range"
-                    },
-                    {
-                        "code": "string"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.abatement[x]",
-                "path": "Condition.abatement[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Age"
-                    },
-                    {
-                        "code": "Period"
-                    },
-                    {
-                        "code": "Range"
-                    },
-                    {
-                        "code": "string"
                     }
                 ],
                 "mustSupport": true
