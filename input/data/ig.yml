@@ -1659,6 +1659,14 @@ definition:
     exampleBoolean: false
     name: US Core Condition Codes
   - reference:
+      reference: ValueSet/us-core-condition-code-current
+    description: This valueset is defined the same as the [US Core Condition Codes](ValueSet-us-core-condition-code.html)
+      value set except it excludes ICD-9-CM codes. It us used for encoding newly recorded,
+      non-legacy problem list items, health concerns and diagnosis using SNOMED CT
+      and ICD-10-CM per USCDI requirements.
+    exampleBoolean: false
+    name: US Core Condition Codes Current
+  - reference:
       reference: StructureDefinition/us-core-condition-encounter-diagnosis
     description: The US Core Condition Encounter Diagnosis Profile inherits from the
       FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to

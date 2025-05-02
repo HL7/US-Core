@@ -1,0 +1,57 @@
+{
+    "resourceType": "ValueSet",
+    "id": "us-core-condition-code-current",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current",
+    "name": "USCoreConditionCodesCurrent",
+    "title": "US Core Condition Codes Current",
+    "status": "active",
+    "experimental": false,
+    "date": "2025-05-01",
+    "description": "This valueset is defined the same as the [US Core Condition Codes](ValueSet-us-core-condition-code.html) value set except it excludes ICD-9-CM codes. It us used for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis using SNOMED CT and ICD-10-CM per USCDI requirements.",
+    "copyright": "1. This value set includes content from SNOMED CT, which is copyright \u00a9 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.\n2. ICD-10 is copyrighted by the World Health Organization (WHO) which owns and publishes the classification. See https://www.who.int/classifications/icd/en. WHO has authorized the development of an adaptation of ICD-9 and ICD-10 to ICD-9-CM to ICD-10-CM for use in the United States for U.S. government purposes.",
+    "compose": {
+        "include": [
+            {
+                "system": "http://snomed.info/sct",
+                "concept": [
+                    {
+                        "code": "160245001"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "filter": [
+                    {
+                        "property": "concept",
+                        "op": "is-a",
+                        "value": "404684003"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "filter": [
+                    {
+                        "property": "concept",
+                        "op": "is-a",
+                        "value": "243796009"
+                    }
+                ]
+            },
+            {
+                "system": "http://snomed.info/sct",
+                "filter": [
+                    {
+                        "property": "concept",
+                        "op": "is-a",
+                        "value": "272379006"
+                    }
+                ]
+            },
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            }
+        ]
+    }
+}

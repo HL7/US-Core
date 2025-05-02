@@ -104,15 +104,15 @@ For example, the [US Core AllergyIntolerance Profile] `clinicalStatus` element h
 
 #### Required Bindings When Slicing by ValueSets
 
-Because of the  FHIR conformance rule:
+<div class="bg-success" markdown="1">
+ If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements. ([Terminology Binding Extensible])
 
-> If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements. ([Terminology Binding Extensible])
+FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. To enforce this constraint, the ValueSet binding must be required to ensure that the slicing logic is unambiguous, consistent, and valid.  When the slicing is "open" and the defined slice has a minimum cardinality of one, the slice with a code from the value set is mandatory.  However, When the slicing is "open" and the defined slice has a minimum cardinality of zero, other slices with other codes are allowed when no suitable code exists in the defined slices. This is functionally equivalent to an Extensible Binding described below. Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources. The example in Figure 2 below illustrates this structure for the repeating `DocumentReference.category` element:
 
-FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in Figure 2 below illustrates this structure for the repeating `DocumentReference.category` element:
-
-- This structure allows 0..\* concept(s) from the *required* ValueSet.
-- By being 0..\*, this structure permits Servers to send concepts not in the required ValueSet.
-
+- The category element requires at least one and allows multiple DocumentReference categories.
+- The defined category:uscore "slice" element allows zero to many concepts from the required ValueSet, US Core DocumentReference Category.
+- Servers can use a category code outside the required ValueSet when it does not contain a suitable concept
+</div><!-- new-content -->
 
   {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 2: US Core DocumentReference.category" %}
 
@@ -143,7 +143,7 @@ For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueS
 The "current" binding corresponds to the US Core's interpretation of extensible bindings US Core version 6.1.0 and earlier.
 </div><!-- stu-note -->
 
-  {% include img.html img="Must_Support_Condition_code.png" caption="Figure 4: US Core Condition.code" %}
+  {% include img.html img="Must_Support_Condition_code.png" caption="Figure 4: US Core Condition Problems and Health Concerns.code" %}
 
 
 

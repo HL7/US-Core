@@ -146,9 +146,12 @@ differential:
         - url: purpose
           valueCode: current
         - url: valueSet
-          valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
+          valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current
         - url: documentation
-          valueMarkdown: US Core uses the current additional binding from FHIR R5 for this coded element for more flexibility when exchanging legacy and text-only data.
+          valueMarkdown: US Core uses the current additional binding for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis
+        - url: shortDoco
+          valueString: Required for new records
+          
 
 
 # ====== New R5 additional Binding Element Here ====

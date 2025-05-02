@@ -52,7 +52,7 @@ This Guide is divided into several pages, which are listed at the top of each pa
 - [Security]\: This page documents the general security requirements and recommendations for actors.
 - [Examples]\: This page lists all the examples used in this guide. {% include nonnormative-example-boilerplate.md -%}
 - [Downloads]\: This page provides links to downloadable artifacts.
-- [Change Log]\: This page documents the changes across the versions of US Core
+- [Change Log]\: This page documents the changes across the versions of US Core. <span class="bg-success" markdown="1">It is a vital resource for implementers, developers, and stakeholders to understand the guide’s progression.</span><!-- new-content -->
 
 ### US Core Actors
 

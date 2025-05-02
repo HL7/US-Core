@@ -234,6 +234,7 @@
 [USCoreClinicalResultObservationCategory]: ValueSet-us-core-clinical-result-observation-category.html
 [USCoreConditionCategoryExtensionCodes]: CodeSystem-condition-category.html
 [USCoreConditionCodes]: ValueSet-us-core-condition-code.html
+[USCoreConditionCodesCurrent]: ValueSet-us-core-condition-code-current.html
 [USCoreConditionEncounterDiagnosisProfile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
 [USCoreConditionProblemsHealthConcernsProfile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreCoverageProfile]: StructureDefinition-us-core-coverage.html
