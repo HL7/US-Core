@@ -166,7 +166,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 * US Core Responders **SHALL** be capable of providing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 * US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
-{% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 10: US Core AllergyIntolerance.patient" %}
+{% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 9: US Core AllergyIntolerance.patient" %}
 
 When a Reference type element is labeled as *Must Support*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported. When a Reference type element labeled as *Additional USCDI*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported by Certifying Systems.
 
@@ -177,7 +177,7 @@ For example, the US Core DocumentReference Profile `DocumentReference.author` is
 
 Systems can support other references, but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 9: US Core DocumentReference.author" %}
+{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 10: US Core DocumentReference.author" %}
 
 The tables below list the *Must Support* target US Core Profiles and FHIR Resources for each US Core Profile.
 
@@ -247,9 +247,26 @@ For example:
 * [US Core MedicationRequest Profile] can represent that information is from a secondary source using a boolean flag in `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`. 
    *  Although both are marked as *Must Support*, the Server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The Client application **SHALL** support both elements.
-
+7
 {% include img.html img="Must_Support_MedicationRequest.reported.png" caption="Figure 13: US Core `MedicationRequest.reported[x]`" %}
 
+<div class="bg-success" markdown="1">
 
+#### Must Support - Slices
+
+[Slices](profiling.html#slicing) may be defined for any repeating elements (elements that may occur more than once in an instance) by putting constraints on one or more of the repeating elements ("slices"). See Figure 14 below for how that is represented in the guide.
+
+The element that defines the slicing discriminator ('slicer") may define constraints that apply across all slices for the following element properties: max, type (code, profile, targetProfile, aggregation, and versioning), fixed[x], pattern[x], minValue[x], maxValue[x], maxLength, constraints, required and extensible bindings (including additional bindings), mustHaveValue, and valueAlternatives. However, the slicer's Must Support property *only* defines the element level *Must Support/Additional USCDI* property. In other words, the slicer's *Must Support/Additional USCDI* is not inherited by the slices, and each slice must be explicitly tagged with the *Must Support/Additional USCDI* property to define that slice's conformance strength. If no *Must Support/Additional USCDI* property is defined for the slice, then support for that slice's definition is optional. 
+
+For example, the US Core Organization Profile `Organization.identifier` element is a Must Support slicer element and defines three slices, "NPI", "CLIA", and "NAIC". Only the "NPI" slice is labeled as a Must Support element. When claiming conformance to this profile:
+
+- US Core Responders **SHALL** be capable of providing an `Organization.identifier` that conforms to the slicer constraints and the "NPI" slice's constraints. (note that in this case, these conformance requirements are the same -  by conforming to the NPI" slice's constraints, the slicer constraints are met as well).
+- US Core Requestors **SHALL** be capable of processing an `Organization.identifier` that conforms to slicer constraints and the "NPI" slice's constraints.
+- Systems **MAY** support the "CLIA" and "NAIC" slices, but this is not a requirement for US Core.
+- 
+{% include img.html img="Must_Support_Organization_identifier.png" caption="Figure 14: US Core Organization.identifier" %}
+
+Note that if a slice is labeled as *Must Support/Additional USCDI* and the slicer element is not labeled as *Must Support/Additional USCDI*, then if the server/certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core.
+</div><!-- new-content -->
 
 {% include link-list.md %}

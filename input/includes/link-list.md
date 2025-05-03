@@ -365,3 +365,8 @@
 [Race & Ethnicity - CDC(CDCREC)]: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
 [Assistant Secretary for Technology Policy (ASTP)]: https://www.healthit.gov/topic/about-astp
 [FHIR Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
+[model definition]: https://cql.hl7.org/07-physicalrepresentation.html#data-model-references
+[Using CQL With FHIR]: https://hl7.org/fhir/uv/cql/index.html
+[Clinical Quality Language (CQL)]: http://cql.hl7.org
+[Common CQL Assets for FHIR (US-Based)]: https://hl7.org/fhir/us/cql/2025May/index.html
+[Using ModelInfo]: https://hl7.org/fhir/uv/cql/using-modelinfo.html

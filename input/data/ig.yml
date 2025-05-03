@@ -2510,6 +2510,36 @@ definition:
     exampleBoolean: false
     name: US Core USCDI Requirement Extension
   - reference:
+      reference: Library/uscore-3.1.1-model-definition
+    description: Model definition for US Core Version 3.1.1 Model
+    name: US Core Version 3.1.1 Model Definition
+    exampleBoolean: true
+  - reference:
+      reference: Library/uscore-4.0.0-model-definition
+    description: Model definition for US Core Version 4.0.0 Model
+    name: US Core Version 4.0.0 Model Definition
+    exampleBoolean: true
+  - reference:
+      reference: Library/uscore-5.0.1-model-definition
+    description: Model definition for US Core Version 5.0.1 Model
+    name: US Core Version 5.0.1 Model Definition
+    exampleBoolean: true
+  - reference:
+      reference: Library/uscore-6.1.0-model-definition
+    description: Model definition for US Core Version 6.1.0 Model
+    name: US Core Version 6.1.0 Model Definition
+    exampleBoolean: true
+  - reference:
+      reference: Library/uscore-7.0.0-model-definition
+    description: Model definition for US Core Version 7.0.0 Model
+    name: US Core Version 7.0.0 Model Definition
+    exampleBoolean: true
+  - reference:
+      reference: Library/uscore-8.0.0-model-definition
+    description: Model definition for US Core Version 8.0.0 Model
+    name: US Core Version 8.0.0 Model Definition
+    exampleBoolean: true
+  - reference:
       reference: StructureDefinition/us-core-vital-signs
     description: This profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html)  and
       defines *additional* constraints on the Observation resource to represent vital  signs
