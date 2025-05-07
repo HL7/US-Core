@@ -15,7 +15,7 @@ The following search parameters, search parameter combinations SHALL be supporte
     *Implementation Notes:* 
      - Fetches a bundle of all resources of a particular type for the specified patient ([how to search by reference]) and any corresponding Provenance resources.
      - The "inline" search result parameter `_revinclude` will return the last Provenance for the version named in the reference. To return all the Provenance resources associated with a resource irrespective of its version, search against Provenance using the `target` search parameter.
-     - See the [AllergyIntolerance Provenance Example1] Bundle.
+     - See the [AllergyIntolerance Provenance Example 1] Bundle.
 
 
 2. **SHALL** support searching for a particular instance of a US Core Profile resource type [listed above](#prov-white-list) and all its Provenance resources using combination of the `_id` and the **[`_revinclude`]** search parameters:
@@ -29,6 +29,6 @@ The following search parameters, search parameter combinations SHALL be supporte
     *Implementation Notes:*
       - Fetches a Bundle of a resource of a particular type (within the Clients authorization scope) and any corresponding Provenance resources. ([how to search by token])
       - The "inline" search result parameter `_revinclude` will return the last Provenance for the version named in the reference. To return all the Provenance resources associated with a resource irrespective of its version, search against Provenance using the `target` search parameter.
-      - See the [AllergyIntolerance Provenance Example2] Bundle.
+      - See the [AllergyIntolerance Provenance Example 2] Bundle.
 
 {% include link-list.md %}

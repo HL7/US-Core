@@ -254,7 +254,7 @@ For example:
 
 #### Must Support - Slices
 
-[Slices](profiling.html#slicing) may be defined for any repeating elements (elements that may occur more than once in an instance) by putting constraints on one or more of the repeating elements ("slices"). See Figure 14 below for how that is represented in the guide.
+FHIR profiles use [slicing] to define repeating elements (elements that may occur more than once in an instance) by putting constraints on one or more of the repeating elements ("slices"). See Figure 14 below for how that is represented in the guide.
 
 The element that defines the slicing discriminator ('slicer") may define constraints that apply across all slices for the following element properties: max, type (code, profile, targetProfile, aggregation, and versioning), fixed[x], pattern[x], minValue[x], maxValue[x], maxLength, constraints, required and extensible bindings (including additional bindings), mustHaveValue, and valueAlternatives. However, the slicer's Must Support property *only* defines the element level *Must Support/Additional USCDI* property. In other words, the slicer's *Must Support/Additional USCDI* is not inherited by the slices, and each slice must be explicitly tagged with the *Must Support/Additional USCDI* property to define that slice's conformance strength. If no *Must Support/Additional USCDI* property is defined for the slice, then support for that slice's definition is optional. 
 
