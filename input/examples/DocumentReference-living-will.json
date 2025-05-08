@@ -45,7 +45,7 @@
                 {
                     "system": "http://loinc.org",
                     "code": "42348-3",
-                    "display": "Advance directives"
+                    "display": "Advance healthcare directives"
                 }
             ],
             "text": "Advance Directives"
@@ -61,12 +61,10 @@
             "display": "Amy V. Shaw"
         }
     ],
-    "authenticator": [
-        {
-            "reference": "Patient/example",
-            "display": "Amy V. Shaw"
-        }
-    ],
+    "authenticator": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Practitioner-1"
+    },
     "content": [
         {
             "attachment": {

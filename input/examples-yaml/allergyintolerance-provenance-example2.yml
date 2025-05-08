@@ -11,9 +11,9 @@ type: searchset
 total: 1
 link:
 - relation: self
-  url: http://example.org/AllergyIntolerance?_id=79613&_revinclude=Provenance:target
+  url: http://example.org/fhir/AllergyIntolerance?_id=79613&_revinclude=Provenance:target
 entry:
-- fullUrl: http://example.org/AllergyIntolerance/79613
+- fullUrl: http://example.org/fhir/AllergyIntolerance/79613
   resource:
     resourceType: AllergyIntolerance
     id: '79613'
@@ -55,7 +55,7 @@ entry:
       onset: '2017-06-09'
   search:
     mode: match
-- fullUrl: http://example.org/Provenance/79614
+- fullUrl: http://example.org/fhir/Provenance/79614
   resource:
     resourceType: Provenance
     id: '79614'

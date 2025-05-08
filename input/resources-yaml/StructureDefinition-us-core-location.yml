@@ -54,6 +54,8 @@ differential:
       extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
+        - url: key
+          valueId: uscore-hsloc
         - url: purpose
           valueCode: extensible
         - url: valueSet
@@ -67,6 +69,8 @@ differential:
 
       - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
+        - url: key
+          valueId: uscore-snomedct
         - url: purpose
           valueCode: extensible
         - url: valueSet
@@ -80,6 +84,8 @@ differential:
 
       - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
+        - url: key
+          valueId: uscore-pos
         - url: purpose
           valueCode: extensible
         - url: valueSet

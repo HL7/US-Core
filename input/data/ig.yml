@@ -66,7 +66,7 @@ dependsOn:
   uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads
   version: 0.12.0
 - packageId: hl7.fhir.uv.extensions.r4
-  version: 5.1.0
+  version: 5.2.0
   uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
   id: hl7_fhir_uv_extensions_r4
 definition:
@@ -145,19 +145,17 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/ADI-example
-    description: 'This is a Observation example for the USCDI5 ADI Observation Data
+    description: This is a Observation example for the USCDI5 ADI Observation Data
       Element to show whether and location of a patient has an advance directive using
-      a new code = "45473-6" - (Advance directive/living will completed) and and value
-      of "Yes"/"No"/"Unknown" (TODO: pick a convenient value set  LOINC answer list
-      ll50-6, Snomed, hl7 (https://terminology.hl7.org/ValueSet-yes-no-unknown-not-asked.html))'
+      code 45473-6 (Advance healthcare directive completed) and a SNOMED CT value
+      of "Yes" with Supporting info Extensions linking the to the documents
     name: ADI Observation Presence ADI Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
   - reference:
       reference: Observation/no-ADI-example
-    description: 'This is a Observation example for the USCDI5 ADI Observation Data
-      Element to show whether a patient has an advance directive using a new code
-      = "45473-6" - (Advance directive/living will completed) and and value of "Yes"/"No"/"Unknown"
-      (TODO: pick a convenient value set  LOINC answer list ll50-6, Snomed, hl7 (https://terminology.hl7.org/ValueSet-yes-no-unknown-not-asked.html))'
+    description: This is a Observation example for the USCDI5 ADI Observation Data
+      Element to show whether a patient has an advance directive using code 45473-6
+      (Advance healthcare directive completed). and a SNOMED CT value of "No".
     name: ADI Observation Presence No ADI Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
   - reference:

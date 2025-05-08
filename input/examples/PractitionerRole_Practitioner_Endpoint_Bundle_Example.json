@@ -6,7 +6,7 @@
     "link": [
         {
             "relation": "self",
-            "url": "http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole?_id=PractitionerRole-1&_include=PractitionerRole%3Apractitioner&_include=PractitionerRole%3Aendpoint"
+            "url": "http://example.org/fhir/PractitionerRole?_id=PractitionerRole-1&_include=PractitionerRole%3Apractitioner&_include=PractitionerRole%3Aendpoint"
         }
     ],
     "entry": [
@@ -154,7 +154,7 @@
                                     ],
                                     "text": "Michigan Medical License"
                                 },
-                                "system": "http://example.org/michigan.gov/fhir/medical-license",
+                                "system": "http://example.org/fhir/michigan.gov/fhir/medical-license",
                                 "value": "LARA-1011",
                                 "assigner": {
                                     "display": "State of Michigan"
@@ -164,7 +164,7 @@
                         "code": {
                             "coding": [
                                 {
-                                    "system": "http://example.org/michigan.gov/lara/license-type",
+                                    "system": "http://example.org/fhir/michigan.gov/lara/license-type",
                                     "code": "4305",
                                     "display": "Medical Doctor"
                                 }

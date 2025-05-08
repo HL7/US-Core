@@ -18,12 +18,12 @@
     "link": [
         {
             "relation": "self",
-            "url": "http://example.org/DocumentReference/$docref?patient=123&start=2019-01-01&end=2019-01-01&type=http://terminology.hl7.org/CodeSystem/c80-doc-typecodes|18842-5,http://terminology.hl7.org/CodeSystem/c80-doc-typecodes|28570-0&ondemand=true"
+            "url": "http://example.org/fhir/DocumentReference/$docref?patient=123&start=2019-01-01&end=2019-01-01&type=http://terminology.hl7.org/CodeSystem/c80-doc-typecodes|18842-5,http://terminology.hl7.org/CodeSystem/c80-doc-typecodes|28570-0&ondemand=true"
         }
     ],
     "entry": [
         {
-            "fullUrl": "http://example.org/DocumentReference/procedure-note123",
+            "fullUrl": "http://example.org/fhir/DocumentReference/procedure-note123",
             "resource": {
                 "resourceType": "DocumentReference",
                 "id": "procedure-note123",
@@ -77,7 +77,7 @@
                     {
                         "attachment": {
                             "contentType": "application/pdf",
-                            "url": "/Binary/procedure-note123.pdf"
+                            "url": "http://example.org/fhir/Binary/procedure-note123.pdf"
                         }
                     }
                 ],
@@ -93,7 +93,7 @@
             }
         },
         {
-            "fullUrl": "http://example.org/DocumentReference/procedure-note456",
+            "fullUrl": "http://example.org/fhir/DocumentReference/procedure-note456",
             "resource": {
                 "resourceType": "DocumentReference",
                 "id": "procedure-note456",
@@ -141,7 +141,7 @@
                     {
                         "attachment": {
                             "contentType": "application/pdf",
-                            "url": "/Binary/procedure-note456.pdf"
+                            "url": "http://example.org/fhir/Binary/procedure-note456.pdf"
                         }
                     }
                 ],
@@ -157,7 +157,7 @@
             }
         },
         {
-            "fullUrl": "http://example.org/DocumentReference/discharge",
+            "fullUrl": "http://example.org/fhir/DocumentReference/discharge",
             "resource": {
                 "resourceType": "DocumentReference",
                 "id": "discharge",
@@ -205,7 +205,7 @@
                     {
                         "attachment": {
                             "contentType": "application/pdf",
-                            "url": "/Binary/discharge-summary789.pdf"
+                            "url": "http://example.org/fhir/Binary/discharge-summary789.pdf"
                         }
                     }
                 ],

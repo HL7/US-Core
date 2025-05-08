@@ -7,7 +7,7 @@ meta:
             valueString: ADI Observation Presence No ADI Example
         - 
             url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
-            valueMarkdown: 'This is a Observation example for the USCDI5 ADI Observation Data Element to show whether a patient has an advance directive using a new code = "45473-6" - (Advance directive/living will completed) and and value of "Yes"/"No"/"Unknown" (TODO: pick a convenient value set  LOINC answer list ll50-6, Snomed, hl7 (https://terminology.hl7.org/ValueSet-yes-no-unknown-not-asked.html))'
+            valueMarkdown: 'This is a Observation example for the USCDI5 ADI Observation Data Element to show whether a patient has an advance directive using code 45473-6 (Advance healthcare directive completed). and a SNOMED CT value of "No".'
     profile:
         - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation'
 status: final
@@ -24,7 +24,7 @@ code:
         - 
             system: 'http://loinc.org'
             code: 45473-6
-            display: Advance directive/living will completed
+            display: Advance healthcare directive completed
 subject:
     reference: Patient/example
 effectiveDateTime: '2024-05-16T01:06:06.393Z'

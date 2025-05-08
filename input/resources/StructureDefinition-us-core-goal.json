@@ -52,6 +52,10 @@
                             "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
                             "extension": [
                                 {
+                                    "url": "key",
+                                    "valueId": "gravity-sdoh-goals"
+                                },
+                                {
                                     "url": "purpose",
                                     "valueCode": "preferred"
                                 },

@@ -86,6 +86,8 @@ differential:
       extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
+        - url: key
+          valueId: us-core-condition-code-current
         - url: purpose
           valueCode: current
         - url: valueSet

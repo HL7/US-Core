@@ -117,10 +117,12 @@ differential:
         Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
 #=============== new valueset here that id the ame as simple =================
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
-# ====== New R5 additional Binding Element Here for Place of Service (POS) ====
+# ====== New R5 additional Binding Element Here for Screeing and Asessment Categories ====
       extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
+        - url: key
+          valueId: us-core-screening-assessment-observation-category
         - url: purpose
           valueCode: minimum
         - url: valueSet
@@ -143,6 +145,8 @@ differential:
       extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
+        - url: key
+          valueId: us-core-condition-code-current
         - url: purpose
           valueCode: current
         - url: valueSet
@@ -152,9 +156,7 @@ differential:
         - url: shortDoco
           valueString: Required for new records
           
-
-
-# ====== New R5 additional Binding Element Here ====
+# ========================================================= 
 
       strength: preferred
       description: Valueset to describe the actual problem experienced by the patient
