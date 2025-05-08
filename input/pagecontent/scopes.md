@@ -1,8 +1,5 @@
 
-This page is updated content for version 7.0.0
-
-
- SMART App Launch Implementation Guide Release 2.0.0 describes a set of foundational patterns based on OAuth 2.0 for Client applications to authorize, authenticate, and integrate with FHIR-based data systems. This page documents the SMART on FHIR obligations and capabilities for US Core Servers supporting User-Facing Applications and Backend Services. 
+<span class="bg-success" markdown="1"> The [SMART App Launch] implementation guide describes </span><!-- new-content -->a set of foundational patterns based on OAuth 2.0 for Client applications to authorize, authenticate, and integrate with FHIR-based data systems. This page documents the SMART on FHIR obligations and capabilities for US Core Servers supporting User-Facing Applications and Backend Services. 
 
 ### *Capability Sets* for US Core Servers Supporting User-Facing Applications and Backend Services
 {: #capability-sets}
@@ -26,7 +23,7 @@ US Core Server **SHALL** support token introspection defined by the SMART App La
 
 ### SMART Scopes
 
-SMART's scopes, defined in Version 2.0.0 of the [SMART App Launch] implementation guide, allow access permissions to be delegated to a Client application. <span class="bg-success" markdown="1">To allow access to specific data about a single patient, the US Core API requires Servers to support [resource level scopes] and "[granular scopes]", the finer-grained scopes using search parameters.</span><!-- new-content -->  US Core's required scopes (**SHALL**) are based on community-based consensus that the scope meets a system requirement, clinical need, or federal regulation. Similarly, US Core's recommended scopes (**SHOULD**) rely on community-based consensus that the scope meets a system requirement or clinical need as a best practice. 
+SMART's scopes, <span class="bg-success" markdown="1">defined in Version 2.0.0 and later</span><!-- new-content --> of the SMART App Launch implementation guide, allow access permissions to be delegated to a Client application. <span class="bg-success" markdown="1">To allow access to specific data about a single patient, the US Core API requires Servers to support [resource level scopes] and "[granular scopes]", the finer-grained scopes using search parameters.</span><!-- new-content -->  US Core's required scopes (**SHALL**) are based on community-based consensus that the scope meets a system requirement, clinical need, or federal regulation. Similarly, US Core's recommended scopes (**SHOULD**) rely on community-based consensus that the scope meets a system requirement or clinical need as a best practice. 
 
 The US Core required scopes listed below are named in the [HTI-1 final rule], which requires support for the Condition and Observation category scopes. (Note that although mentioned in HTI-1 final rule, there is no "Clinical Test" category for Observation in US Core.) The recommended granular scopes listed below are of particular interest to patients and health systems. Implementations meeting US EHR certification requirements must support all US Core's required scopes. Other systems only need to support scopes for the US Core APIs they support. 
 
@@ -147,7 +144,7 @@ The following *granular* scopes **SHOULD** be supported
 
 ###### Best Practices
 
-End users often select all the scopes presented if given a "select all" option.  Therefore, client provisioning is key to empowering patients with scopes and avoiding unnecessary access. This page reflects best practices when implementing Granular Scopes. See also [Considerations for Scope Consent] in the SMART App Launch Implementation Guide.
+End users often select all the scopes presented if given a "select all" option.  Therefore, client provisioning is key to empowering patients with scopes and avoiding unnecessary access. This page reflects best practices when implementing Granular Scopes. See also [Considerations for Scope Consent] in the SMART App Launch implementation guide.
 
 **Best practices for server developers include**
 
@@ -197,7 +194,7 @@ US Core requires following additional metadata:
 
 #### Example `.well-known/smart-configuration` File
 
-This example `.well-known/smart-configuration` file shows all the required and recommended metadata listed in SMART App Launch for a certified system supporting User-Facing Applications and Backend Services. The Server lists all the required and recommended US Core scopes for both `patient/`, `user/`, and  `system/` in the `scopes_supported` metadata array.  See the [SMART App Launch] Implementation Guide for more examples and details.
+This example `.well-known/smart-configuration` file shows all the required and recommended metadata listed in SMART App Launch for a certified system supporting User-Facing Applications and Backend Services. The Server lists all the required and recommended US Core scopes for both `patient/`, `user/`, and  `system/` in the `scopes_supported` metadata array.  See the SMART App Launch implementation guide for more examples and details.
 
 ~~~http
 HTTP/1.1 200 OK

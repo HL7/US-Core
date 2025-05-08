@@ -50,7 +50,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include representing-meds.md %}
 {% include provenance-author-bullet-generator.md %}
-* The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or a reference using `MedicationRequest.reportedReference`.
+* The MedicationRequest resource can represent that information is from a secondary source using either <span class="bg-success" markdown="1">the flag `MedicationRequest.reportedBoolean`</span><!-- new-content --> or a reference using `MedicationRequest.reportedReference`.
    *  Although both are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The Client application **SHALL** support both elements.
 - \*The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
