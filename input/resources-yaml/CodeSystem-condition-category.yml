@@ -19,16 +19,16 @@ property:
     experimental, deprecated, retired
   type: code
 concept:
-- extension:
-  - url: http://hl7.org/fhir/StructureDefinition/codesystem-replacedby
-    valueCoding:
-      system: http://terminology.hl7.org/CodeSystem/condition-category
-      code: problem-list-item
-      display: Problem List Item
-  code: problem
+# - extension:
+#   - url: http://hl7.org/fhir/StructureDefinition/codesystem-replacedby
+#     valueCoding:
+#       system: http://terminology.hl7.org/CodeSystem/condition-category
+#       code: problem-list-item
+#       display: Problem List Item
+- code: problem
   display: Problem
-  definition: "The patients problems as identified by the provider(s). Items on the
-    provider's problem list"
+  definition: The patients problems as identified by the provider(s). Items on the
+    provider's problem list. Note that this code has been deprecated and is replaced by the http://terminology.hl7.org/CodeSystem/condition-category concept "problem-list-item".
   property:
   - code: status
     valueCode: deprecated
