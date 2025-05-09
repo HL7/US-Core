@@ -33,7 +33,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 - Use the status code: `not-done` to represent that an immunization was *not* given.
-- Based upon the ASTP U.S. Core Data for Interoperability (USCDI) requirements, [CVX vaccine codes]<sup>1</sup> are required, and the [NDC vaccine codes] **SHOULD** be supported as <span class="bg-success" markdown="1">an additional binding.</span><!-- new-content -->
+- Based upon the ASTP U.S. Core Data for Interoperability (USCDI) requirements, [CVX vaccine codes]<sup>1</sup> are required, and the [NDC vaccine codes] **SHOULD** be supported as <span class="bg-success" markdown="1">an additional code.</span><!-- new-content -->
     - <span class="bg-success" markdown="1">NDC codes are defined by manufacturer, and CVX codes, which are much less granular, are often limited to a single product made by a single manufacturer.</span><!-- new-content -->
     - The preferred code system identifiers are `http://hl7.org/fhir/sid/cvx` for CVX and `http://hl7.org/fhir/sid/ndc` for NDC vaccine codes. Note that the `vaccineCode` binding link in the formal definition and the CDC links below use the associated OID as the code system identifiers.
     - Be aware that there is a *10-digit (with dashes)* NDC format displayed on drug packaging and an *11-digit (no dashes)* NDC format for billing and prescribing (for example, "49281-121-65" and "49281012165"). Normalization may be required to avoid validation errors and warnings.
