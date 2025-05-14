@@ -45,7 +45,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient's medications, including over-the-counter (OTC) medications and other substances taken for medical and recreational use.
-  * <span class="bg-success" markdown="1">Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidanc. It is always best practice to confirm this list with the patient or caregiver.</span><!-- new-content -->
+  * <span class="bg-success" markdown="1">Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidance. It is always best practice to confirm this list with the patient or caregiver.</span><!-- new-content -->
   * When recording "self-prescribed" medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.
 
 {% include representing-meds.md %}
