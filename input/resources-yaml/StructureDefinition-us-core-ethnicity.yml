@@ -93,7 +93,7 @@ differential:
     - code: Coding
     binding:
       strength: required
-      valueSet: https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.3
+      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.3
   - id: Extension.extension:detailed
     path: Extension.extension
     sliceName: detailed
@@ -122,7 +122,7 @@ differential:
     - code: Coding
     binding:
       strength: required
-      valueSet: https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.1
+      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.1
   - id: Extension.extension:text
     path: Extension.extension
     sliceName: text

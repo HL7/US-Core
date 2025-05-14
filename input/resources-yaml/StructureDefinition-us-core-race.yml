@@ -97,7 +97,7 @@ differential:
       description: The 5 race category codes according to the [OMB Standards for Maintaining,
         Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical
         Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).
-      valueSet: https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.2.575
+      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.2.575
   - id: Extension.extension:detailed
     path: Extension.extension
     sliceName: detailed
@@ -126,7 +126,7 @@ differential:
     - code: Coding
     binding:
       strength: required
-      valueSet: https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.25
+      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.25
   - id: Extension.extension:text
     path: Extension.extension
     sliceName: text
