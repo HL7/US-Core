@@ -78,7 +78,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 25. **Applied:** (Correction) Add missing word "support" [FHIR-49098](https://jira.hl7.org/browse/FHIR-49098) See Changes [Here](must-support.html#must-support---complex-elements)
 26. **Applied:** (Correction) Add missing word "and" [FHIR-49099](https://jira.hl7.org/browse/FHIR-49099) See Changes [Here](must-support.html#must-support-targets-for-us-core-profiles)
 27. **Applied:** (Correction) Update Specimen code to specimen type code in narrative [FHIR-49100](https://jira.hl7.org/browse/FHIR-49100) See Changes [Here](StructureDefinition-us-core-specimen.html#mandatory-and-must-support-data-elements)
-28. **Applied:** (Clarification) Clarify how an order is linked to the DiagnosticReport [FHIR-49101](https://jira.hl7.org/browse/FHIR-49101) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#mandatory-and-must-support-data-elements)
+28. **Applied:** (Clarification) Clarify how an order is linked to the DiagnosticReport [FHIR-49101](https://jira.hl7.org/browse/FHIR-49101) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#mandatory-and-must-support-data-elements) and [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 29. **Applied:** (Clarification) Clarify reporting specimen type best practice. [FHIR-49102](https://jira.hl7.org/browse/FHIR-49102) See Changes [Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
 30. **Applied:** (Enhancement) Add guidance that other identifiers like NCSBN can be used. [FHIR-49122](https://jira.hl7.org/browse/FHIR-49122) See Changes [Here](StructureDefinition-us-core-practitioner.html#mandatory-and-must-support-data-elements)
 31. **Applied:** (Enhancement) Clarify US Core's relationship with IPA [FHIR-49123](https://jira.hl7.org/browse/FHIR-49123) See Changes [Here](relationship-with-other-igs.html)
@@ -104,7 +104,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 44. **Applied:** (Enhancement) Define the Acronym 'ADI' in all pages where it is used [FHIR-49299](https://jira.hl7.org/browse/FHIR-49299) See Changes:
        - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
        - [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html)
-46. **Applied:** (Clarification) Add version lineage to the US Core Observation Screening Assessment Profile's introduction. [FHIR-49305](https://jira.hl7.org/browse/FHIR-49305) See Changes [Here](index.html)
+46. **Applied:** (Clarification) Add version lineage to the US Core Observation Screening Assessment Profile's introduction. [FHIR-49305](https://jira.hl7.org/browse/FHIR-49305) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
 47. **Applied:** (Correction) Corrections to typos [FHIR-49306](https://jira.hl7.org/browse/FHIR-49306)
 48. **Applied:** (Correction) Fix typo 'Advance Directives' instead  of 'Advanced Directives' [FHIR-49307](https://jira.hl7.org/browse/FHIR-49307) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 49. **Applied:** (Enhancement) Add Observation.code.text as an *Additional USCDI* element  [FHIR-49308](https://jira.hl7.org/browse/FHIR-49308) See Changes [Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.code)
