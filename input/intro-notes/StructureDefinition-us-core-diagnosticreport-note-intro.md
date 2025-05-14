@@ -49,6 +49,7 @@ The following data elements must always be present ([Mandatory] definition) or m
    * The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).
    * The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view <span class="bg-success" markdown="1">DICOM (Digital Imaging and Communications in Medicine) studies, series, and SOP (Service-Object Pair) instances</span><!-- new-content --> referenced in the [ImagingStudy] resource.
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifier` element to access the source images from external sources.
+   * The [Argonaut SMART Imaging Access project](https://confluence.hl7.org/spaces/AP/pages/161060067/SMART+Imaging+Access) defined an approach to access imaging studies using a single authorization flow.
 
 - <span class="bg-success" markdown="1">The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.</span><!-- new-content -->
 
