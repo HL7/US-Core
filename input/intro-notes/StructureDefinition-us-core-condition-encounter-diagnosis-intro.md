@@ -35,7 +35,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 * \*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.
   - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.
   - USCDI's applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM.
-    - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. <span class="bg-success" markdown="1">When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used as the primary code for current encounter diagnoses..</span><!-- new-content -->
+    - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes. <span class="bg-success" markdown="1">When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used as the primary code for current encounter diagnoses.</span><!-- new-content -->
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`. An example search is shown in the [Quick Start](#search) section below.
 {% include provenance-author-bullet-generator.md %}
