@@ -169,7 +169,7 @@
 [US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [US Core FHIR RESTful Search API]: general-requirements.html#fhir-restful-search-api-requirements
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
-[US Core Roadmap]: {{site.data.fhir.path}}us-core-roadmap.html
+[US Core Roadmap]: us-core-roadmap.html#us-core-roadmap
 [US Core SMART Scopes]: scopes.html#smart-scopes
 [US Core Security]: security.html
 [US Realm Steering Committee (USRSC)]: https://confluence.hl7.org/display/USR/US+Realm+Steering+Committee
