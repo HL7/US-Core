@@ -45,8 +45,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 - Notes for *Race*, *Ethnicity*, *Date of Death*, *Name to Use*, *Previous Name*, *Suffix*, *Previous Address*, *Interpreter Needed*, and *Preferred Language* USCDI Data Elements: 
-  - <span class="bg-success" markdown="1">The Complex Extensions for Race and Ethnicity allow for one or more codes of which: [Must Support] at least one category code from the OMB Race and Ethnicity Category Value Sets that draw from the [Race & Ethnicity - CDC(CDCREC)] code system.</span><!-- new-content -->
-    - <span class="bg-success" markdown="1">**MAY** include additional codes from the detailed ethnicity and detailed race value sets drawn from the [Race & Ethnicity - CDC(CDCREC)] code system</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">The Complex Extensions for Race and Ethnicity allow for one or more codes of which: [Must Support] at least one category code from the OMB Race and Ethnicity Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)] code system.</span><!-- new-content -->
+    - <span class="bg-success" markdown="1">**MAY** include additional codes from the detailed ethnicity and detailed race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)] code system</span><!-- new-content -->
     - **SHALL** include a text description
   - *Date of Death* is communicated using the `Patient.deceasedDateTime` element.
     - Although `Patient.deceased[x]` is marked as 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜, Certifying Systems are not required to support both, but **SHALL** support at least `Patient.deceasedDateTime`
