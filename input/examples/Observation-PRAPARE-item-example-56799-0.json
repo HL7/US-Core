@@ -1,65 +1,55 @@
 {
-    "category": [
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "code": "sdoh",
-                    "display": "SDOH",
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
-                }
-            ]
-        },
-        {
-            "coding": [
-                {
-                    "code": "survey",
-                    "display": "Survey",
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
-                }
-            ]
+          "code": "sdoh",
+          "display": "SDOH",
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
         }
-    ],
-    "code": {
-        "coding": [
-            {
-                "code": "56799-0",
-                "display": "Address",
-                "system": "http://loinc.org"
-            }
-        ],
-        "text": "Address"
+      ]
     },
-    "derivedFrom": [
+    {
+      "coding": [
         {
-            "reference": "QuestionnaireResponse/prapare-example"
+          "code": "survey",
+          "display": "Survey",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
         }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "56799-0",
+        "display": "Address",
+        "system": "http://loinc.org"
+      }
     ],
-    "effectiveDateTime": "2022-03-28T18:30:40-07:00",
-    "id": "PRAPARE-item-example-56799-0",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Prapare Item Example 56799-0"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a Prapare Item Example 56799-0 (Address) for the *US Core Observation Screening Assessment Profile*"
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-        ]
-    },
-    "performer": [
-        {
-            "reference": "Patient/example"
-        }
-    ],
-    "resourceType": "Observation",
-    "status": "final",
-    "subject": {
-        "reference": "Patient/example"
-    },
-    "valueString": "Broadway"
+    "text": "Address"
+  },
+  "derivedFrom": [
+    {
+      "reference": "QuestionnaireResponse/prapare-example"
+    }
+  ],
+  "effectiveDateTime": "2022-03-28T18:30:40-07:00",
+  "id": "PRAPARE-item-example-56799-0",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|8.0.0"
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Patient/example"
+    }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "valueString": "Broadway"
 }

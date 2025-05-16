@@ -1,69 +1,59 @@
 {
-    "resourceType": "ServiceRequest",
-    "id": "ekg",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "ServiceRequest EKG Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is an example requesting a Clinical Test Order (EKG panel) for a patient using the *US Core ServiceRequest Profile Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-        ]
-    },
-    "status": "active",
-    "intent": "order",
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/731000124108",
-                    "code": "386053000",
-                    "display": "Evaluation procedure (procedure)"
-                }
-            ],
-            "text": "Clinical Test Order"
-        }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "45033-8",
-                "display": "Cardiovascular physiologic and EKG assessment panel"
-            }
-        ],
-        "text": "Cardiovascular physiologic and EKG assessment panel"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "encounter": {
-        "reference": "Encounter/example-1",
-        "display": "office visit"
-    },
-    "authoredOn": "2024-10-13T10:59:38-08:00",
-    "requester": {
-        "reference": "Practitioner/practitioner-1"
-    },
-    "reasonCode": [
-        {
-            "coding": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/731000124108",
-                    "code": "698247007",
-                    "display": "Cardiac arrhythmia (disorder)"
-                }
-            ],
-            "text": "Cardiac arrhythmia"
-        }
+  "resourceType": "ServiceRequest",
+  "id": "ekg",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|8.0.0"
     ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "386053000",
+          "display": "Evaluation procedure (procedure)"
+        }
+      ],
+      "text": "Clinical Test Order"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "45033-8",
+        "display": "Cardiovascular physiologic and EKG assessment panel"
+      }
+    ],
+    "text": "Cardiovascular physiologic and EKG assessment panel"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "encounter": {
+    "reference": "Encounter/example-1",
+    "display": "office visit"
+  },
+  "authoredOn": "2024-10-13T10:59:38-08:00",
+  "requester": {
+    "reference": "Practitioner/practitioner-1"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "698247007",
+          "display": "Cardiac arrhythmia (disorder)"
+        }
+      ],
+      "text": "Cardiac arrhythmia"
+    }
+  ]
 }

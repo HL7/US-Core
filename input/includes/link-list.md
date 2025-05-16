@@ -31,7 +31,6 @@
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Certifying Systems]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
-[Changes Between Versions]: {{site.data.fhir.path}}changes.html
 [Clinical Laboratory Improvement Amendments (CLIA)]: http://www.cdc.gov/clia/
 [Clinician Access for EHR Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#clinician-access-for-standalone
 [Coded Elements]: general-requirements.html#using-codes-in-us-core-profiles
