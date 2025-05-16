@@ -169,6 +169,7 @@
 [US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [US Core FHIR RESTful Search API]: general-requirements.html#fhir-restful-search-api-requirements
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
+[US Core Organization Profile]: StructureDefinition-us-core-organization.html
 [US Core Roadmap]: us-core-roadmap.html#us-core-roadmap
 [US Core SMART Scopes]: scopes.html#smart-scopes
 [US Core Security]: security.html
