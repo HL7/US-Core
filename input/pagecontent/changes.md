@@ -179,8 +179,8 @@ The ballot-related comments resulted in over 100 changes to this specification, 
      - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
      - [Encounter Diagnosis Example 1](Condition-encounter-diagnosis-example1.html)
      - [Encounter Diagnosis Example 2](Condition-encounter-diagnosis-example2.html)
-93. **Applied:** (Correction) Remove gender based search requirements [FHIR-50380](https://jira.hl7.org/browse/FHIR-50230) See Changes [Here](StructureDefinition-us-core-patient.html#notes)
-94. **Applied:** (Correction) Add copyright statements to Questionnaire examples [FHIR-50380](https://jira.hl7.org/browse/FHIR-50230) See Changes Here:
+93. **Applied:** (Correction) Remove gender based search requirements [FHIR-50380](https://jira.hl7.org/browse/FHIR-50380) See Changes [Here](StructureDefinition-us-core-patient.html#notes)
+94. **Applied:** (Correction) Add copyright statements to Questionnaire examples [FHIR-50399](https://jira.hl7.org/browse/FHIR-50399) See Changes Here:
      - [Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example](Questionnaire-AUDIT-C.html)
      - [Exercise Vital Sign Questionnaire Example](Questionnaire-exercise-vital-sign.html)
      - [Questionnaire Hunger Vital Sign (HVS) Example](Questionnaire-hunger-vital-sign-example.html)
