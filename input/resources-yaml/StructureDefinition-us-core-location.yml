@@ -150,7 +150,7 @@ differential:
     binding:
       strength: extensible
       description: Two letter USPS alphabetic codes.
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
+      valueSet: http://terminology.hl7.org/ValueSet/usps-state
     mapping:
     - identity: servd
       map: ./Sites

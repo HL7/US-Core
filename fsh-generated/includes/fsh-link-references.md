@@ -426,7 +426,6 @@
 [USCoreServicerequestStatus]: SearchParameter-us-core-servicerequest-status.html
 [USCoreSpecimenId]: SearchParameter-us-core-specimen-id.html
 [USCoreSpecimenPatient]: SearchParameter-us-core-specimen-patient.html
-[UspsTwoLetterAlphabeticCodes]: ValueSet-us-core-usps-state.html
 [weight]: Observation-weight.html
 [specimen-example-whole-blood]: Specimen-specimen-example-whole-blood.html
 [xray-chest-findings]: Observation-xray-chest-findings.html
