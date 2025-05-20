@@ -25,24 +25,6 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 
 **Tracker Status**: **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
 
-(outstanding open trackers)
-
-1. **Publishing:** (Clarification) Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) See Changes [Here](http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-body-weight.html)
-2. **Publishing:** (Enhancement) Add link in history page to approved pages [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
-3. **Publishing:** (Correction) Override built-in examples for address elements [FHIR-43054](https://jira.hl7.org/browse/FHIR-43054) See Changes [Here](StructureDefinition-us-core-patient.html)
-4. **Terminology:** (Enhancement) Seems like observation-category CodeSystem needs to be extended to include a concept for care-experience-preference [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541) See Changes [Here]()
-5. **Publishing:** (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) See Changes [Here](https://hl7.org/fhir/us/core/changes.html)
-6.  **Resolved - change required:** (Correction) NAIC Code Number Identifier system not registered in THO [FHIR-46185](https://jira.hl7.org/browse/FHIR-46185) See Changes [Here](StructureDefinition-us-core-organization-definitions.html#diff_Organization.identifier:NAIC)
-7.  **Publishing:** () Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
-8.  **Publishing:** (Enhancement) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876)
-9.   **Publishing:** () Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
-10. **Publishing:** () Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](StructureDefinition-us-core-observation-lab.html#terminology-bindings-differential)
-11. **Terminology:** (Correction) correct line 81 in terminology  [FHIR-49610](https://jira.hl7.org/browse/FHIR-49610) See Changes [Here](terminology.html)
-12. **Terminology/Publishing:** (Correction) Expansion of ValueSet us-core-laboratory-test-codes yields no concepts [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](ValueSet-us-core-laboratory-test-codes.html)
-13. **Terminology:** () This code system needs to have an OID defined, VS needs to be in THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](254041)
-
----
-
 1. **Applied:** (Clarification) Discourage use of  ICD-10-CM header codes. [FHIR-48742](https://jira.hl7.org/browse/FHIR-48742) See Changes Here:
     - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
     - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
@@ -187,11 +169,12 @@ The ballot-related comments resulted in over 100 changes to this specification, 
      - [Questionnaire PHQ-9 Example](Questionnaire-phq-9-example.html)
      - [Questionnaire PRAPARE Example](Questionnaire-prapare-example.html)
      - [Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example](Questionnaire-TAPS.html)
-1. **Applied:** (Correction) Update the term "translation" to "additional coding" [FHIR-50796](https://jira.hl7.org/browse/FHIR-50796) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
-1. **Applied:** (Clarification) Improve Language on Immunization.lotNumber for matching [FHIR-50795](https://jira.hl7.org/browse/FHIR-50795) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
-1. **Applied:** (Correction) Improve Language on boolean flag [FHIR-50794](https://jira.hl7.org/browse/FHIR-50794) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html)
-1. **Applied:** (Correction) Improve Language: Change Name to Code [FHIR-50793](https://jira.hl7.org/browse/FHIR-50793) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
-1. **Applied:** (Clarification) Update SMART Launch dependency to version 2.2.0 [FHIR-50787](https://jira.hl7.org/browse/FHIR-50787) See Changes [Here](scopes.html)
+95. **Applied:** (Correction) Update the term "translation" to "additional coding" [FHIR-50796](https://jira.hl7.org/browse/FHIR-50796) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
+96.  **Applied:** (Clarification) Improve Language on Immunization.lotNumber for matching [FHIR-50795](https://jira.hl7.org/browse/FHIR-50795) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
+97. **Applied:** (Correction) Improve Language on boolean flag [FHIR-50794](https://jira.hl7.org/browse/FHIR-50794) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html)
+98. **Applied:** (Correction) Improve Language: Change Name to Code [FHIR-50793](https://jira.hl7.org/browse/FHIR-50793) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
+99. **Applied:** (Clarification) Update SMART Launch dependency to version 2.2.0 [FHIR-50787](https://jira.hl7.org/browse/FHIR-50787) See Changes [Here](scopes.html)
+100. **Applied** (Enhancement) Move USPS codesystem to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](http://terminology.hl7.org/ValueSet/usps-state)
 
 
 ### Version = 8.0.0 - ballot
