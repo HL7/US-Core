@@ -1219,11 +1219,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Status for Smoking Status Observation - XML Representation]: ValueSet-us-core-observation-smoking-status-status.xml.html
 [US Core Status for Smoking Status Observation - JSON Representation]: ValueSet-us-core-observation-smoking-status-status.json.html
 [US Core Status for Smoking Status Observation - TTL Representation]: ValueSet-us-core-observation-smoking-status-status.ttl.html
-[USPS Two Letter Alphabetic Codes]: ValueSet-us-core-usps-state.html
-[USPS Two Letter Alphabetic Codes - Testing]: ValueSet-us-core-usps-state-testing.html
-[USPS Two Letter Alphabetic Codes - XML Representation]: ValueSet-us-core-usps-state.xml.html
-[USPS Two Letter Alphabetic Codes - JSON Representation]: ValueSet-us-core-usps-state.json.html
-[USPS Two Letter Alphabetic Codes - TTL Representation]: ValueSet-us-core-usps-state.ttl.html
 [US Core CarePlan Category Extension Codes]: CodeSystem-careplan-category.html
 [US Core CarePlan Category Extension Codes - Testing]: CodeSystem-careplan-category-testing.html
 [US Core CarePlan Category Extension Codes - XML Representation]: CodeSystem-careplan-category.xml.html
