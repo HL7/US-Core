@@ -180,7 +180,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 
 The application of the following trackers are pending and will not be completed before publication
 
-1. **Resolved - change required:** (Enhancement) Create a tracker to THO to add codes from US Core Category to the Observation Category Codesystem [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541)
+1. **Resolved - change required:** (Enhancement) Add codes from US Core Category to the Observation Category Codesystem [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541)
 2. **Resolved - change required:** (Correction) NAIC Code Number Identifier system not registered in THO [FHIR-46185](https://jira.hl7.org/browse/FHIR-46185)
 3. **Resolved - change required:** (Correction) Change USEncounterDischargeDisposition from http://terminology.hl7.org/CodeSystem/nubc-UB92 to https://www.nubc.org/CodeSystem/PatDischargeStatus [FHIR-49610](https://jira.hl7.org/browse/FHIR-49610)
 4. **Publishing:** (Enhancement) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876)
@@ -189,7 +189,7 @@ The application of the following trackers are pending and will not be completed 
 The following trackers have been identified as publishing issues and we are working with HL7 publishing to resolve them.
 
 1. **Publishing:** (Clarification) Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)
-2. **Publishing:** (Correction) Override built-in examples for address elements [FHIR-43054](https://jira.hl7.org/browse/FHIR-43054
+2. **Publishing:** (Correction) Override built-in examples for address elements [FHIR-43054](https://jira.hl7.org/browse/FHIR-43054)
 3. **Publishing:** (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065)
 4. **Publishing:** (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749)
 5. **Publishing:** (Correction) Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336), [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337)

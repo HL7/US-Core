@@ -13,7 +13,7 @@
 
   - For the USCDI Patient Demographics/Information data class:
     - The [US Core Patient Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-patient.html) `Patient.name.use` *Additional USCDI* element supports the USCDI Name to Use data element.
-    - To support the USCDI Pronouns data element, we added the FHIR standard [Individual Pronouns Extension] to the [US Core Patient Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-patient.html)  as an *Additional USCDI* element.
+    - To support the USCDI Pronouns data element, we added the FHIR standard [Individual Pronouns Extension](http://hl7.org/fhir/StructureDefinition/individual-pronouns) to the [US Core Patient Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-patient.html)  as an *Additional USCDI* element.
     - To support the USCDI Interpreter -Needed data element, we added the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-interpreter-needed.html) to the [US Core Patient Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-patient.html) and [US Core Encounter Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-encounter.html) as *Additional USCDI* elements. (Note that the version 5.1.0 FHIR standard [Patient Interpreter Required](https://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-interpreterRequired.html) extension does not meet the USCDI terminology requirement or the multiple context needed. Change request [FHIR-47587](https://jira.hl7.org/browse/FHIR-47587) was submitted to address these limitations.)
   
   - For the USCDI Observation data class:

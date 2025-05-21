@@ -260,3 +260,5 @@
 [Using CQL With FHIR]: https://hl7.org/fhir/uv/cql/index.html
 [Clinical Quality Language (CQL)]: http://cql.hl7.org
 [Common CQL Assets for FHIR (US-Based)]: https://hl7.org/fhir/us/cql/2025May/index.html
+[HL7 V2]: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
+[FHIRPath]: {{site.data.fhir.path}}fhirpath.html

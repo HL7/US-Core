@@ -277,7 +277,7 @@ Note that when the patient is *implicit* in the context of some implementations 
 
 Currently, most EHRs permit queries that provide a single patient resource id but do not support the comma-separated query or a query where the patient parameter is omitted, as described in the standard FHIR REST API. Instead, a user-facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system-level query to access large volumes of information on a group of individuals. It can also be used to identify and query against an unknown population, such as when looking for population-based research data or population-level queries for public health surveillance.
 
-However, neither specification defines how a user-facing provider app can seek real-time "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core].
+However, neither specification defines how a user-facing provider app can seek real-time "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [US Core Roadmap].
 
 
 

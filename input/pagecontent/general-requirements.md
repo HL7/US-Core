@@ -162,19 +162,19 @@ Example of <span class="bg-success" markdown="1">additional codings</span><!-- n
             "code": "29463-7",
             "display": "Body Weight"
           },
-    //NOTE: this is a translation to a more specific concept
+    //NOTE: this is a additional codingto a more specific concept
          {
             "system": "http://loinc.org",
             "code": "3141-9",
             "display": "Body Weight Measured"
           },
-    //NOTE: this is a translation to a different code system (Snomed CT)
+    //NOTE: this is a additional codingto a different code system (Snomed CT)
          {
             "system": "http://snomed.info/sct",
             "code": "364589006",
             "display": "Body Weight"
           }
-    //NOTE: this is a translation to a locally defined code
+    //NOTE: this is a additional codingto a locally defined code
          {
             "system": "http://AcmeHealthCare.org",
             "code": "BWT",
@@ -185,7 +185,7 @@ Example of <span class="bg-success" markdown="1">additional codings</span><!-- n
       },
 ~~~
 
-Example of translation of CVX vaccine code to NDC code.
+Example of additional codingof CVX vaccine code to NDC code.
 
 ~~~
     "vaccineCode": {

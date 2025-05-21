@@ -99,7 +99,7 @@
                 "path": "DiagnosticReport.code",
                 "short": "US Core Laboratory Report Order Code",
                 "definition": "The test, panel or battery that was ordered.",
-                "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
+                "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as an additional coding from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC additional coding.   Systems SHALL be capable of sending the local code if one exists.",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",

@@ -6,7 +6,7 @@
 - [Basic Provenance]
 - [Social Determinants of Health (SDOH)]
 - [Changes Between Versions]
-- [Future of US Core]
-   - [Writing Vital Signs]
+- [Relationship With Other IGs]
+
 
 {% include link-list.md %}

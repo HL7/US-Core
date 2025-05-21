@@ -4,6 +4,7 @@
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
 [Appointment]: {{site.data.fhir.path}}appointment.html
 [AppointmentResponse]: {{site.data.fhir.path}}appointmentresponse.html
+[Binary]: {{site.data.fhir.path}}binary.html
 [AuditEvent]: {{site.data.fhir.path}}auditevent.html
 [Basic]: {{site.data.fhir.path}}basic.html
 [BiologicallyDerivedProduct]: {{site.data.fhir.path}}biologicallyderivedproduct.html

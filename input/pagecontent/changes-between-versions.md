@@ -1,7 +1,7 @@
 
 ### Introduction
 
-With each major version of FHIR, the core data models have changed.  The FHIR core specification provides a [base resource differential] to help implementers navigate version changes.  However, there are additional considerations for the user and developer experience when transitioning from [FHIR Version DSTU2] to FHIR R4.   Similarly, US Core undergoes annual updates, which are documented on the [Future of US Core] page. Each update to a new version of US Core changes the US Core Profiles and conformance expectations. The following guidance on this page is provided to ensure a smoother upgrade path. It reflects non-normative best practices established at the time of publication.
+With each major version of FHIR, the core data models have changed.  The FHIR core specification provides a [base resource differential] to help implementers navigate version changes.  However, there are additional considerations for the user and developer experience when transitioning from [FHIR Version DSTU2] to FHIR R4.   Similarly, US Core undergoes annual updates, which are documented on the [US Core Roadmap] page. Each update to a new version of US Core changes the US Core Profiles and conformance expectations. The following guidance on this page is provided to ensure a smoother upgrade path. It reflects non-normative best practices established at the time of publication.
 
 ### Versioning of US Core
 

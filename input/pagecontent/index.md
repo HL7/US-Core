@@ -42,7 +42,6 @@ This Guide is divided into several pages, which are listed at the top of each pa
   - [Basic Provenance]\: This page provides implementers with important definitions to create and share the Provenance Resource.
   - [Screening and Assessments]\: This page documents how US Core Profiles are used to represent screenings and assessments for patient health status
   - [Changes Between Versions]\: This page considers the user and developer experience when transitioning between versions of US Core and documents the changes between versions.
-  - [Future of US Core]\: This page outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles and Extensions]\: This page lists the US Core Profiles and Extensions defined in this guide to exchange quality data.
     - Each US Core Profile page includes a narrative description that lists all the [Mandatory] and [Must Support] data elements, profile-specific implementation guidance, and formal definitions. A "Quick Start" guide summarizes the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it also may cover un-profiled elements to aid with implementation and certification.
@@ -53,6 +52,10 @@ This Guide is divided into several pages, which are listed at the top of each pa
 - [Examples]\: This page lists all the examples used in this guide. {% include nonnormative-example-boilerplate.md -%}
 - [Downloads]\: This page provides links to downloadable artifacts.
 - [Change Log]\: This page documents the changes across the versions of US Core. <span class="bg-success" markdown="1">It is a vital resource for implementers, developers, and stakeholders to understand the guide’s progression.</span><!-- new-content -->
+- <span class="bg-success" markdown="1">[Looking Ahead]\: These pages provide a preview of the future direction of US Core</span><!-- new-content -->
+   - <span class="bg-success" markdown="1">[US Core Roadmap]\: This page outlines the approach to adding new content to US Core.</span><!-- new-content -->
+   - <span class="bg-success" markdown="1">[Writing Vital Signs]\: This page documents how to write vital sign Observation using patient- and provider-facing apps.</span><!-- new-content -->
+   - <span class="bg-success" markdown="1">[Patient Data Feed]\: This page documents how to use FHIR Subscriptions to be notified when events related to US Core content occur.</span><!-- new-content -->
 
 ### US Core Actors
 
