@@ -80,7 +80,7 @@ A Server that certifies to the [21st Century Cures Act for accessing patient dat
     - Declare support for the US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.
       - the US Core Profile's official or "canonical" URL is located on each US Core Profile page.
     - Declare support for the US Core Profile's FHIR RESTful transactions.
-      - The restful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.
+      - The FHIR RESTful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.
  
 
     Example CapabilityStatement snippet for a Server conforming to the US Core Patient Profile:
@@ -150,9 +150,9 @@ The "current" binding corresponds to the US Core's interpretation of extensible 
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
 
-Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called "translations". They may be equivalent to or narrower in meaning than the standard concept code.
+Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. <span class="bg-success" markdown="1">These alternate codes are called "additional codings".</span><!-- new-content --> They may be equivalent to or narrower in meaning than the standard concept code.
 
-Example of multiple translations for Body Weight concept code.
+Example of <span class="bg-success" markdown="1">additional codings</span><!-- new-content --> for Body Weight concept code.
 
 ~~~
     "code": {

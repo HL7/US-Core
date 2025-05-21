@@ -17,8 +17,6 @@ The table below summarizes the different profiles and resource types between Arg
 
 Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
 
-Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
-
 - [Comparison with version 7.0.0](comparison-v7.0.0/index.html)
 - [Comparison with version 6.1.0](comparison-v6.1.0/index.html)
 - [Comparison with version 5.0.1](comparison-v5.0.1/index.html)

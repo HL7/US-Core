@@ -88,7 +88,7 @@ All US Core FHIR conformance and terminology artifacts are assigned a [FHIR Matu
 
 ### US Core FHIR RESTful interactions
 
-For systems that support the US Core Profile content structure and the RESTful interactions defined for a resource, the requirements are formally defined in the US Core CapabilityStatements. In addition, each profile page has a *Quick Start* Section that documents the required FHIR RESTful search and read operations. These sections demonstrate how to access a patient's clinical and administrative data:
+For systems that support the US Core Profile content structure and the RESTful interactions defined for a resource, the requirements are formally defined in the US Core CapabilityStatements. In addition, each profile page has a *Quick Start* Section that documents the required <span class="bg-success" markdown="1">FHIR RESTful</span><!-- new-content --> search and read operations. These sections demonstrate how to access a patient's clinical and administrative data:
 
 {% include img-med.html img="basic_fhir_restful_interaction.svg" caption="Example of a simple FHIR RESTful Search Transaction" %}
 

@@ -92,7 +92,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 49. **Applied:** (Enhancement) Add Observation.code.text as an *Additional USCDI* element  [FHIR-49308](https://jira.hl7.org/browse/FHIR-49308) See Changes [Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.code)
 50. **Applied:** (Enhancement) Change the slice for category 'assess-plan' from 1..1 Must Support to 0..1 Must Support. [FHIR-49309](https://jira.hl7.org/browse/FHIR-49309) See Changes [Here](StructureDefinition-us-core-careplan.html)
 51. **Applied:** (Clarification) Cardinality does not match element definition [FHIR-49338](https://jira.hl7.org/browse/FHIR-49338) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#profile)
-52. **Resolved - change required:** (Enhancement) Please add a ""Plain Language Summary about this Guide"" to the home page [FHIR-49367](https://jira.hl7.org/browse/FHIR-49367) See Changes [Here](index.html)
+52. **Applied** (Enhancement) Add "Plain Language" summary to the home page [FHIR-49367](https://jira.hl7.org/browse/FHIR-49367) See Changes [Here](index.html)
 53. **Applied** (Correction)Fix Typo in US Core Yearly Updates diagram [FHIR-49376](https://jira.hl7.org/browse/FHIR-49376) See Changes [Here](us-core-roadmap.html)
 54. **Applied:** (Clarification) Update the preferred language recommendation [FHIR-49391](https://jira.hl7.org/browse/FHIR-49391) See Changes Here:
      - [US Core Patient Profile](StructureDefinition-us-core-patient.html)
@@ -176,25 +176,23 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 99. **Applied:** (Clarification) Update SMART Launch dependency to version 2.2.0 [FHIR-50787](https://jira.hl7.org/browse/FHIR-50787) See Changes [Here](scopes.html)
 100. **Applied** (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](http://terminology.hl7.org/ValueSet/usps-state)
 101. **Applied:** (Correction) Expand US Core Laboratory Test Codes value set [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](ValueSet-us-core-laboratory-test-codes.html)
+102. **Applied:** (Enhancement) Add links in history page to approved patches [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
 
 The application of the following trackers are pending and will not be completed before publication
 
 1. **Resolved - change required:** (Enhancement) Create a tracker to THO to add codes from US Core Category to the Observation Category Codesystem [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541)
 2. **Resolved - change required:** (Correction) NAIC Code Number Identifier system not registered in THO [FHIR-46185](https://jira.hl7.org/browse/FHIR-46185)
 3. **Resolved - change required:** (Correction) Change USEncounterDischargeDisposition from http://terminology.hl7.org/CodeSystem/nubc-UB92 to https://www.nubc.org/CodeSystem/PatDischargeStatus [FHIR-49610](https://jira.hl7.org/browse/FHIR-49610)
+4. **Publishing:** (Enhancement) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876)
+
 
 The following trackers have been identified as publishing issues and we are working with HL7 publishing to resolve them.
 
 1. **Publishing:** (Clarification) Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)
 2. **Publishing:** (Correction) Override built-in examples for address elements [FHIR-43054](https://jira.hl7.org/browse/FHIR-43054
-3. **Publishing:** (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) See Changes Here:
-   - [Change Log](https://hl7.org/fhir/us/core/2025Jan/changes.html)
-   - [History Page](https://hl7.org/fhir/us/core/history.html)
-4. **Publishing:** (Enhancement) Add link in history page to approved pages [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950)
-5.  **Publishing:** (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749)
-6.  **Publishing:** (Enhancement) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876)
-7.   **Publishing:** (Correction) Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) 
-8.   **Publishing:** (Correction) Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337)
+3. **Publishing:** (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065)
+4. **Publishing:** (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749)
+5. **Publishing:** (Correction) Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336), [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337)
 
 ### Version = 8.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2025Jan/>

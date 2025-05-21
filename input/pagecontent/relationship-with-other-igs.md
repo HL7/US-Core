@@ -1,3 +1,8 @@
+{% capture NO %}<span style="color:red; font-size:1.5em">&#10008;</span>{% endcapture %}
+{% capture NA %}<span style="colorb:black; font-size:1.5em">&#9940;</span>{% endcapture %}
+{% capture OK %}<span style="color:green; font-size:1.5em">&#10004;</span>{% endcapture %}
+{% capture MAYBE %}<span style="color:orange; font-size:1.5em">&#10004;</span>{% endcapture %}
+
 US Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient facing systems​ providing:
 
 - An exchange Standard for [U.S. Core Data for Interoperability (USCDI)] and comments and requests from the US Realm FHIR community. 
@@ -27,70 +32,70 @@ As part of profile comparison, the requirements, constraints, and standards spec
 
 **Legend:**
 
-![Compliant](green_checkmark.svg.png) **Compliant**: A US Core compliant resource meets all requirements of the compared profile.
+{{OK}} **Compliant**: A US Core compliant resource meets all requirements of the compared profile.
 
-![Additional requirements](orange_checkmark.svg.png) **Additional requirements**: A US Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Where additional requirements are identified, more information is provided in the sections below.
+{{MAYBE}} **Additional requirements**: A US Core compliant resource is compatible, but additional changes may be needed to meet all requirements of the compared profile. Where additional requirements are identified, more information is provided in the sections below.
 
-![Incompatible](cross_red_circle.svg.png) **Incompatible**: A US Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
+{{NO}} **Incompatible**: A US Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
-![No equivalent profile](minus_symbol.svg.png) **No equivalent profile**: No equivalent profile for comparison.
+{{NA}} **No equivalent profile**: No equivalent profile for comparison.
 
 | US Core 8.0.0 | International Patient Access 1.1.0 |
-| --- | --- |
-| [US Core ADI DocumentReference Profile]| ![Additional requirements](orange_checkmark.svg.png) |
-| [US Core AllergyIntolerance Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Average Blood Pressure Profile]|![Additional requirements](orange_checkmark.svg.png)  |
-| [US Core BMI Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Blood Pressure Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Body Height Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Body Temperature Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Body Weight Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Care Experience Preference Profile]|![Additional requirements](orange_checkmark.svg.png)  |
-| [US Core CarePlan Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core CareTeam Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Condition Encounter Diagnosis Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Condition Problems and Health Concerns Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Coverage Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core DiagnosticReport Profile for Laboratory Results Reporting]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core DiagnosticReport Profile for Report and Note Exchange]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core DocumentReference Profile]| ![Additional requirements](orange_checkmark.svg.png)  |
-| [US Core Encounter Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Goal Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Head Circumference Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Heart Rate Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Immunization Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Implantable Device Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Laboratory Result Observation Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Location Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Medication Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core MedicationDispense Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core MedicationRequest Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Observation ADI Documentation Profile]| ![Additional requirements](orange_checkmark.svg.png)  |
-| [US Core Observation Clinical Result Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Observation Occupation Profile]| ![Additional requirements](orange_checkmark.svg.png) |
-| [US Core Observation Pregnancy Intent Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Observation Pregnancy Status Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Observation Screening Assessment Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Observation Sexual Orientation Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Organization Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Patient Profile]| ![Additional requirements](orange_checkmark.svg.png)  |
-| [US Core Pediatric BMI for Age Observation Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Pediatric Head Occipital Frontal Circumference Percentile Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Pediatric Weight for Height Observation Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Practitioner Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core PractitionerRole Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core Procedure Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Provenance Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Pulse Oximetry Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core QuestionnaireResponse Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core RelatedPerson Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Respiratory Rate Profile]| ![Compliant](green_checkmark.svg.png) |
-| [US Core ServiceRequest Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Simple Observation Profile]|![Additional requirements](orange_checkmark.svg.png) |
-| [US Core Smoking Status Observation Profile]|![Additional requirements](orange_checkmark.svg.png)  |
-| [US Core Specimen Profile]| ![No equivalent profile](minus_symbol.svg.png) |
-| [US Core Treatment Intervention Preference Profile]| ![Additional requirements](orange_checkmark.svg.png) |
-| [US Core Vital Signs Profile]| ![Compliant](green_checkmark.svg.png) |
+| --- | :---: |
+| [US Core ADI DocumentReference Profile]| {{MAYBE}} |
+| [US Core AllergyIntolerance Profile]| {{OK}} |
+| [US Core Average Blood Pressure Profile]|{{MAYBE}}  |
+| [US Core BMI Profile]| {{OK}} |
+| [US Core Blood Pressure Profile]| {{OK}} |
+| [US Core Body Height Profile]| {{OK}} |
+| [US Core Body Temperature Profile]| {{OK}} |
+| [US Core Body Weight Profile]| {{OK}} |
+| [US Core Care Experience Preference Profile]|{{MAYBE}}  |
+| [US Core CarePlan Profile]| {{NA}} |
+| [US Core CareTeam Profile]| {{NA}} |
+| [US Core Condition Encounter Diagnosis Profile]| {{OK}} |
+| [US Core Condition Problems and Health Concerns Profile]| {{OK}} |
+| [US Core Coverage Profile]| {{NA}} |
+| [US Core DiagnosticReport Profile for Laboratory Results Reporting]| {{NA}} |
+| [US Core DiagnosticReport Profile for Report and Note Exchange]| {{NA}} |
+| [US Core DocumentReference Profile]| {{MAYBE}}  |
+| [US Core Encounter Profile]| {{NA}} |
+| [US Core Goal Profile]| {{NA}} |
+| [US Core Head Circumference Profile]| {{OK}} |
+| [US Core Heart Rate Profile]| {{OK}} |
+| [US Core Immunization Profile]| {{OK}} |
+| [US Core Implantable Device Profile]| {{NA}} |
+| [US Core Laboratory Result Observation Profile]| {{OK}} |
+| [US Core Location Profile]| {{NA}} |
+| [US Core Medication Profile]| {{OK}} |
+| [US Core MedicationDispense Profile]| {{NA}} |
+| [US Core MedicationRequest Profile]| {{OK}} |
+| [US Core Observation ADI Documentation Profile]| {{MAYBE}}  |
+| [US Core Observation Clinical Result Profile]| {{OK}} |
+| [US Core Observation Occupation Profile]| {{MAYBE}} |
+| [US Core Observation Pregnancy Intent Profile]| {{OK}} |
+| [US Core Observation Pregnancy Status Profile]| {{OK}} |
+| [US Core Observation Screening Assessment Profile]| {{OK}} |
+| [US Core Observation Sexual Orientation Profile]| {{OK}} |
+| [US Core Organization Profile]| {{NA}} |
+| [US Core Patient Profile]| {{MAYBE}}  |
+| [US Core Pediatric BMI for Age Observation Profile]| {{OK}} |
+| [US Core Pediatric Head Occipital Frontal Circumference Percentile Profile]| {{OK}} |
+| [US Core Pediatric Weight for Height Observation Profile]| {{OK}} |
+| [US Core Practitioner Profile]| {{OK}} |
+| [US Core PractitionerRole Profile]| {{OK}} |
+| [US Core Procedure Profile]| {{NA}} |
+| [US Core Provenance Profile]| {{NA}} |
+| [US Core Pulse Oximetry Profile]| {{OK}} |
+| [US Core QuestionnaireResponse Profile]| {{NA}} |
+| [US Core RelatedPerson Profile]| {{NA}} |
+| [US Core Respiratory Rate Profile]| {{OK}} |
+| [US Core ServiceRequest Profile]| {{NA}} |
+| [US Core Simple Observation Profile]|{{MAYBE}} |
+| [US Core Smoking Status Observation Profile]|{{MAYBE}}  |
+| [US Core Specimen Profile]| {{NA}} |
+| [US Core Treatment Intervention Preference Profile]| {{MAYBE}} |
+| [US Core Vital Signs Profile]| {{OK}} |
 {:.grid}
 
 
