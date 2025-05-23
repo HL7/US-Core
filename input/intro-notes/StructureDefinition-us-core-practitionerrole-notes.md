@@ -28,7 +28,7 @@ The following search parameters and search parameter combinations SHALL be suppo
       1. GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi\|97860456&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
       1. GET [base]/PractitionerRole?practitioner.name=Henry&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
 
-    *Implementation Notes:* Fetches a bundle containing  PractitionerRole resources matching the chained parameter practitioner.name or practitioner.identifier.**SHOULD** support the _include for PractionerRole.practitioner and PractitionerRole.endpoint. ([how to search by reference])
+    *Implementation Notes:* Fetches a bundle containing  PractitionerRole resources matching the chained parameter practitioner.name or practitioner.identifier.**SHOULD** support the _include for PractitionerRole.practitioner and PractitionerRole.endpoint. ([how to search by reference])
 
 
 

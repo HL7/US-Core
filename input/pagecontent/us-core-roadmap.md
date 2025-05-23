@@ -21,7 +21,7 @@ Our yearly road map is outlined in the figure below:
 US Core has been based on [FHIR Version R4] since US Core version 3.0.0. FHIR Version R4 was released on Dec 27, 2018, and was the first version with [Normative] content. HL7's [US Realm Steering Committee (USRSC)] directs US Realm activities, including this guide. In January 2024, the USRSC decided that the next version of FHIR that US Core will be based on will be the upcoming FHIR Version R6. As of the publication date, there is no timeline for this update. When we update to FHIR Version R6, these breaking updates to US Core are under consideration.
 
 - Addition of MedicationStatement
-- Mandate supporting PractionerRole
+- Mandate supporting PractitionerRole
 
 
 ### Growth Path of US Core
