@@ -113,7 +113,7 @@ The functionality of the Provenance resource discussed above. The table below li
 The elements and target resources listed in bold asterisked text indicate that they are *Must Support* or *Additional USCDI Requirements*.
 The following US Core Profiles were omitted because they are typically not associated with individual authorship:
 
-<div class="bg-success" markdown="1">
+
 
 - US Core CareTeam Profile
 - US Core Coverage Profile
@@ -128,7 +128,7 @@ The following US Core Profiles were omitted because they are typically not assoc
 - US Core Provenance Profile
 - US Core RelatedPerson Profile
 - US Core Specimen Profile
-</div><!-- new-content -->
+
  
 This table is also available as a [csv](tables/provenance-elements.csv) or [excel](tables/provenance-elements.xlsx) file:
 

@@ -45,12 +45,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient's medications, including over-the-counter (OTC) medications and other substances taken for medical and recreational use.
-  * <span class="bg-success" markdown="1">Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidance. It is always best practice to confirm this list with the patient or caregiver.</span><!-- new-content -->
+  * Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidance. It is always best practice to confirm this list with the patient or caregiver.
   * When recording "self-prescribed" medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.
 
 {% include representing-meds.md %}
 {% include provenance-author-bullet-generator.md %}
-* The MedicationRequest resource can represent that information is from a secondary source using either <span class="bg-success" markdown="1">the flag `MedicationRequest.reportedBoolean`</span><!-- new-content --> or a reference using `MedicationRequest.reportedReference`.
+* The MedicationRequest resource can represent that information is from a secondary source using either the flag `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`.
    *  Although both are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The Client application **SHALL** support both elements.
 - \*The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.

@@ -26,7 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-* <span class="bg-success" markdown="1">This profile is no longer a USCDI requirement. Implementers can look to the FHIR specification and other implementation guides for usage.</span><!-- new-content -->
+* This profile is no longer a USCDI requirement. Implementers can look to the FHIR specification and other implementation guides for usage.
 * Additional codes that translate or map to the Observation code (e.g., local codes) are allowed.
 
 

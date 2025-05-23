@@ -4,7 +4,7 @@ This table is updated with the Jupyter script : /Users/ehaas/Documents/Python/Ju
 
 
 
- 'IsNew' - new element for highlighting
+ 'Is_New' - new element for highlighting
 'AddlUSCDI:  USCDI DE
 'Profile': Profile name using markdown link brackets
 'FHIRElement': FHIR element that is add'l USCDI

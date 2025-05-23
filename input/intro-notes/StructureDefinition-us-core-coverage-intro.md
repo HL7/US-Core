@@ -24,7 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. health insurance coverage type (e.g., Medicare)
 2. coverage start or end date
 3. health insurance group
-4. <span class="bg-success" markdown="1">health insurance plan</span><!-- new-content -->
+4. health insurance plan
 
 
 **Profile Specific Implementation Guidance:**

@@ -1,5 +1,5 @@
 {% capture NO %}<span style="color:red; font-size:1.5em">&#10008;</span>{% endcapture %}
-{% capture NA %}<span style="colorb:black; font-size:1.5em">&#9940;</span>{% endcapture %}
+{% capture NA %}<span font-size:1.5em">&#9940;</span>{% endcapture %}
 {% capture OK %}<span style="color:green; font-size:1.5em">&#10004;</span>{% endcapture %}
 {% capture MAYBE %}<span style="color:orange; font-size:1.5em">&#10133;</span>{% endcapture %}
 

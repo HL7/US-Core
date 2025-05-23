@@ -37,22 +37,22 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 - See [Clinical Notes]
-- The `DocumentReference.type` binding Must Support, at a minimum, the <span class="bg-success" markdown="1">[10 Common Clinical Notes]</span><!-- new-content --> and may extend to the whole [US Core DocumentReference Type Value Set]
+- The `DocumentReference.type` binding Must Support, at a minimum, the [10 Common Clinical Notes] and may extend to the whole [US Core DocumentReference Type Value Set]
 - In addition to the [US Core DocumentReference Category] value set, other category schemes such as the LOINC-based [Document Class Value Set] and [IHE XDSclassCode] may be used to facilitate the sharing of health documents.
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
-<div class="bg-success" markdown="1">
+
 
 - For C-CDA Clinical Documents
   - The format code in `DocumentReference.content.format` is "urn:hl7-org:sdwg:ccda-structuredBody:2.1".
   - For other CDA documents, Servers SHOULD select the appropriate format code from the [HL7 ValueSet of Format Codes for use with Document Sharing](https://terminology.hl7.org/6.2.0/ValueSet-v3-HL7FormatCodes.html).
-</div><!-- new-content -->
 
-- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> or the content as inline base64 encoded data using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.data`</span><!-- new-content -->.
+
+- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or the content as inline base64 encoded data using `DocumentReference.content.attachment.data`.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The Client application **SHALL** support both elements.
-    -  The <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint).
-        - <span class="bg-success" markdown="1">If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server. This reduces complexity for the client and improves the user experience.</span><!-- new-content -->
+    -  The `DocumentReference.content.attachment.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint).
+        - If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server. This reduces complexity for the client and improves the user experience.
     -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`. 
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.

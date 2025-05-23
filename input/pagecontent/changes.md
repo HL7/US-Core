@@ -1,4 +1,4 @@
-<div class="bg-success" markdown="1">
+
 The **US Core Implementation Guide Change Log** captures updates, enhancements, clarifications, and corrections across multiple versions, reflecting community feedback, ballot processes, and alignment with evolving USCDI standards.
 
 ### How to Review Updates Between Versions
@@ -6,7 +6,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 1. **Review Version Summaries**: Start with the “What’s New” section for each version including intermediate ballot versions to get a summary of important updates to the guide (e.g., new profiles in v8.0.0 supporting USCDI v5).
 1. **Examine Detailed Changes**: Review the “Changes” section for each version for a complete list of a changes to the guide. Click the Jira Tracker (e.g., FHIR-123) links to see the underlying issue and resolution, and click on the  “See Changes Here” links to view modified content directly in the guide.
 1. **Compare Across Versions**: For a deeper analysis, refer to the [Changes Between Versions] page for detailed FHIR artifact comparisons.
-</div><!-- new-content -->
+
 
 ### Version = 8.0.0 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8/>

@@ -20,11 +20,11 @@
 # - USCoreTreatmentInterventionPreferenceValueSet
 # - USCoreClinicalNoteType
 # - USCoreLocationType
-- USCoreSpecimenCondition
+# - USCoreSpecimenCondition
 # - USCoreScreeningAssessmentObservationCategory
 # - USCoreScreeningAssessmentObservationMaximumCategory
 # - USCoreSimpleObservationCategory
-- USCoreConditionCodesCurrent
+# - USCoreConditionCodesCurrent
 
 
 # CodeSystems
@@ -37,42 +37,42 @@
 
 
 # Profiles
-- USCoreAllergyIntolerance
-- USCoreConditionEncounterDiagnosisProfile
-- USCoreConditionProblemsHealthConcernsProfile
+# - USCoreAllergyIntolerance
+# - USCoreConditionEncounterDiagnosisProfile
+# - USCoreConditionProblemsHealthConcernsProfile
 # - USCoreQuestionnaireResponseProfile
 # - USCoreObservationSurveyProfile
 # - USCoreObservationSDOHAssessment
-- USCoreObservationOccupationProfile
+# - USCoreObservationOccupationProfile
 # - USCoreObservationPregnancyStatusProfile
 # - USCoreObservationPregnancyIntentProfile
-- USCoreCoverageProfile
+# - USCoreCoverageProfile
 # - USCoreSpecimenProfile
-- USCoreMedicationDispenseProfile
-- USCoreObservationScreeningAssessmentProfile
-- USCoreSimpleObservationProfile
+# - USCoreMedicationDispenseProfile
+# - USCoreObservationScreeningAssessmentProfile
+# - USCoreSimpleObservationProfile
 # - USCoreObservationClinicalResultProfile
-- USCoreAverageBloodPressureProfile
-- USCoreMedicationRequestProfile
+# - USCoreAverageBloodPressureProfile
+# - USCoreMedicationRequestProfile
 # - USCoreLocationProfile
 # - USCoreEncounterProfile
 # - USCoreImmunizationProfile
-- USCoreDiagnosticReportProfileLaboratoryReporting
-- USCoreDiagnosticReportProfileNoteExchange
+# - USCoreDiagnosticReportProfileLaboratoryReporting
+# - USCoreDiagnosticReportProfileNoteExchange
 # - USCoreDocumentReferenceProfile
 # - USCoreProcedureProfile
-- USCoreServiceRequestProfile
-- USCoreTreatmentInterventionPreferenceProfile
-- USCoreCareExperiencePreferenceProfile
-- USCoreLaboratoryResultObservationProfile
-- USCoreCarePlanProfile
+# - USCoreServiceRequestProfile
+# - USCoreTreatmentInterventionPreferenceProfile
+# - USCoreCareExperiencePreferenceProfile
+# - USCoreLaboratoryResultObservationProfile
+# - USCoreCarePlanProfile
 # - USCoreCareTeamProfile
 # - USCoreGoalProfile
-- USCoreObservationSexualOrientationProfile
+# - USCoreObservationSexualOrientationProfile
 # - USCoreSmokingStatusProfile
-- USCorePatientProfile
-- USCoreObservationADIDocumentationProfile
-- USCoreADIDocumentReferenceProfile
+# - USCorePatientProfile
+# - USCoreObservationADIDocumentationProfile
+# - USCoreADIDocumentReferenceProfile
 # - USCoreVitalSignsProfile
 # - USCoreSexExtension
 
@@ -84,21 +84,21 @@
 # - USCoreTribalAffiliationExtension
 # - USCoreSexForClinicalUse
 # - USCoreJurisdictionExtension
-- USCoreSexExtension
-- USCoreBirthSexExtension
-- USCoreGenderIdentityExtension
+# - USCoreSexExtension
+# - USCoreBirthSexExtension
+# - USCoreGenderIdentityExtension
 # - USCoreMedicationAdherenceExtension
 # - USCDIRequirement
 # - USCoreAuthenticationTimeExtension
 # - USCoreInterpreterRequiredExtension
-- USCoreRaceExtension
-- USCoreEthnicityExtension
+# - USCoreRaceExtension
+# - USCoreEthnicityExtension
 
 # OperationDefinition
 
 # Examples
-- Encounter Diagnosis Example 1
-- Encounter Diagnosis Example 2
+# - Encounter Diagnosis Example 1
+# - Encounter Diagnosis Example 2
 # - Chest Xray Example
 # - Xray Chest Findings Example
 # - Xray Chest Impression Example
@@ -108,7 +108,7 @@
 # - 10 minute Apgar Reflex Irritability Example
 # - 10 minute Apgar Respiratory effort Example
 # - 10 Minute Apgar Score Panel Example
-- 10 Minute Apgar Score Example
+# - 10 Minute Apgar Score Example
 # - Ahc-Hrsn Item Example 44250-9
 # - Ahc-Hrsn Item Example 44255-8
 # - Ahc-Hrsn Item Example 68516-4
@@ -169,11 +169,11 @@
 # - Pregnancy Status Example
 # - Coverage Example
 # - Lipemic Serum Specimen Example
-- Medication Dispense Example
-# # - Self Pay Coverage Example
-- Condition Duodenal Ulcer Example
-- SDOH Problem/Health Concern Example
-- Health Concern Example
+# - Medication Dispense Example
+# - Self Pay Coverage Example
+# - Condition Duodenal Ulcer Example
+# - SDOH Problem/Health Concern Example
+# - Health Concern Example
 # - MedicationRequest Coded Oral Axid Example
 # - MedicationRequest Contained Oral Axid Example
 # - MedicationRequest Referenced Oral Axid Example
@@ -208,41 +208,41 @@
 # - 'Discharge Summary Example'
 # - 'Docref Example 1'
 # - 'Docref Example 2'
-- At Home In Vitro Test Example
-- AllergyIntolerance Non-pharmacologic Agent Example
-- AllergyIntolerance Example
+# - At Home In Vitro Test Example
+# - AllergyIntolerance Non-pharmacologic Agent Example
+# - AllergyIntolerance Example
 # - Average Blood Pressure Example
 # - Hospital Location
 # - Procedure Defibrillator Implant Example
 # - At Home In Vitro Test Example
-- CBC Example
-- Metabolic Panel Example
-- ServiceRequest BMP Example
+# - CBC Example
+# - Metabolic Panel Example
+# - ServiceRequest BMP Example
 # - Encounter 1 Example
 # - HL7East Example
 # - Rehab Example
 # - ServiceRequest for Rehab Example
-- ServiceRequest Food Pantry Referral Example
-- ServiceRequest CBC Example
-- ServiceRequest Chest XRay Example
-- ServiceRequest EKG Example
-- Serum BUN Example
-- Serum Calcium Example
-- Serum Chloride Example
-- Serum CO2 Example
-- Serum Creatinine Example
-- Serum Glucose Example
-- Serum Potassium Example
-- Serum Sodium Example
-- Serum Total Bilirubin Example
-- Leukocytes Example
-- MCH Example
-- MCHC Example
-- MCV Example
-- Hematocrit Example
-- Hemoglobin Example
-- Erythrocytes Example
-- Platelets Example
+# - ServiceRequest Food Pantry Referral Example
+# - ServiceRequest CBC Example
+# - ServiceRequest Chest XRay Example
+# - ServiceRequest EKG Example
+# - Serum BUN Example
+# - Serum Calcium Example
+# - Serum Chloride Example
+# - Serum CO2 Example
+# - Serum Creatinine Example
+# - Serum Glucose Example
+# - Serum Potassium Example
+# - Serum Sodium Example
+# - Serum Total Bilirubin Example
+# - Leukocytes Example
+# - MCH Example
+# - MCHC Example
+# - MCV Example
+# - Hematocrit Example
+# - Hemoglobin Example
+# - Erythrocytes Example
+# - Platelets Example
 # - Care Experience Preference Example
 # - Treatment Intervention Preference Example
 # - Alcohol Use Status Example
@@ -273,15 +273,15 @@
 # - Sexual Orientation Observation Example
 # - 2 Packs a Day Smoker 
 # - Immunization Example 1
-- Patient Example
-- Patient Infant Example
-- Deceased Patient Example
-- Patient Child Example
+# - Patient Example
+# - Patient Infant Example
+# - Deceased Patient Example
+# - Patient Child Example
 # - ADI Observation Presence ADI Example
 # - ADI Observation Presence No ADI Example
-- DocumentReference DNR
-- DocumentReference Living Will
-- DocumentReference POLST
+# - DocumentReference DNR
+# - DocumentReference Living Will
+# - DocumentReference POLST
 # - Length Example
 # - Heart Rate Example
 # - OFC Percentile Example
@@ -297,13 +297,13 @@
 # - Temperature Example
 # - BMI Example
 # - BP Data Absent Example
-- Colonoscopy Example
-- Urine Specimen Example
-- Whole Blood Specimen Example
-- Urobilinogen Example
-- US Core Version 3.1.1 Model Definition
-- US Core Version 4.0.0 Model Definition
-- US Core Version 5.0.1 Model Definition
-- US Core Version 6.1.0 Model Definition
-- US Core Version 7.0.0 Model Definition
-- US Core Version 8.0.0 Model Definition
+# - Colonoscopy Example
+# - Urine Specimen Example
+# - Whole Blood Specimen Example
+# - Urobilinogen Example
+# - US Core Version 3.1.1 Model Definition
+# - US Core Version 4.0.0 Model Definition
+# - US Core Version 5.0.1 Model Definition
+# - US Core Version 6.1.0 Model Definition
+# - US Core Version 7.0.0 Model Definition
+# - US Core Version 8.0.0 Model Definition

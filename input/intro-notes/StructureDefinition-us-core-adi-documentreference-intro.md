@@ -12,10 +12,10 @@ The following are example usage scenarios for the US Core ADI DocumentReference 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
 **Each DocumentReference Must Have:**
-<span class="bg-success" markdown="1"></span><!-- new-content -->
+
 1. a status
-2. a code describing the type of ADI document (for example, <span class="bg-success" markdown="1"></span>Advance<!-- new-content --> Directive for intubation)
-3. an ADI document category (for example, <span class="bg-success" markdown="1"></span>Advance<!-- new-content --> Directives)
+2. a code describing the type of ADI document (for example, </span>Advance<!-- new-content --> Directive for intubation)
+3. an ADI document category (for example, </span>Advance<!-- new-content --> Directives)
 4. a patient
 5. document referenced (content)
 6. the MIME type (i.e., contentType) of the document
@@ -39,12 +39,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-- In addition to the <span class="bg-success" markdown="1">[Advance Directive Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion)</span><!-- new-content --> value set, other category schemes may be used to facilitate the sharing of health documents.
-- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> or the content as inline base64 encoded data using <span class="bg-success" markdown="1">`DocumentReference.content.attachment.data`</span><!-- new-content -->.
+- In addition to the [Advance Directive Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion) value set, other category schemes may be used to facilitate the sharing of health documents.
+- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or the content as inline base64 encoded data using `DocumentReference.content.attachment.data`.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The Client application **SHALL** support both elements.
-    -  The <span class="bg-success" markdown="1">`DocumentReference.content.attachment.url`</span><!-- new-content --> may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint).
-        - <span class="bg-success" markdown="1">If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server. This reduces complexity for the client and improves the user experience.</span><!-- new-content -->
+    -  The `DocumentReference.content.attachment.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint).
+        - If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server. This reduces complexity for the client and improves the user experience.
     -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`. 
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.

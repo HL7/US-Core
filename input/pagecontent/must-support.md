@@ -47,9 +47,9 @@ The table below lists the *Additional USCDI Requirements* and their correspondin
 
 {% include additional-uscdi-tabler.md %}
 
-#### Communicating Additional USCDI Requirements <span class="bg-success" markdown="1">for Certifying Systems</span><!-- new-content -->
+#### Communicating Additional USCDI Requirements for Certifying Systems
 
-<span class="bg-success" markdown="1"> Throughout the rest of the specification, the term "Certifying System" will be used consistently to refer to such systems seeking ASTP certification, distinguishing them from other implementers (e.g., non-certifying systems) that may treat Additional USCDI Requirements as optional.</span><!-- new-content -->  To communicate when *Additional USCDI Requirements* elements are in a US Core profile:
+ Throughout the rest of the specification, the term "Certifying System" will be used consistently to refer to such systems seeking ASTP certification, distinguishing them from other implementers (e.g., non-certifying systems) that may treat Additional USCDI Requirements as optional.  To communicate when *Additional USCDI Requirements* elements are in a US Core profile:
 
 1. The profiles page includes an "Additional USCDI Requirements" listing the elements under the "Mandatory and *Must Support* Data Elements" section. 
 2. The computable [US Core USCDI Requirement Extension] is added to each element in the profile's [StructureDefinition].
@@ -250,7 +250,7 @@ For example:
 7
 {% include img.html img="Must_Support_MedicationRequest.reported.png" caption="Figure 13: US Core `MedicationRequest.reported[x]`" %}
 
-<div class="bg-success" markdown="1">
+
 
 #### Must Support - Slices
 
@@ -266,6 +266,6 @@ For example, the [US Core Organization Profile] `Organization.identifier` elemen
 {% include img.html img="Must_Support_Organization_identifier.png" caption="Figure 14: US Core Organization.identifier" %}
 
 Note that if a slice is labeled as *Must Support/Additional USCDI* and the slicer element is not labeled as *Must Support/Additional USCDI*, then if the server/certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core.
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

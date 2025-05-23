@@ -3,7 +3,7 @@ This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part 
 
 ### Value Sets
 
-Most value sets used in this guide are defined in the base FHIR specification, [HL7 Terminology (THO)], or Value Set Authority Center (VSAC)]. <span class="bg-success" markdown="1">However, US Core also defines several value sets and they are listed below.</span><!-- new-content -->
+Most value sets used in this guide are defined in the base FHIR specification, [HL7 Terminology (THO)], or Value Set Authority Center (VSAC)]. However, US Core also defines several value sets and they are listed below.
 
 Value sets in US Core and C-CDA may retain inactive codes. These codes may be useful for historical queries but are not recommended for new data. Implementers should note that some code systems exclude inactive codes from current expansions; if needed, these codes may be accessible through prior expansions via terminology services. HL7 recommends validators allow non-active codes with note on their status.
 {:.bg-info}
@@ -77,7 +77,7 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
     An example of this is shown in the screenshots below.  
 
-    <span class="bg-success" markdown="1">When viewing a ValueSet in the VSAC UI, the Code System OIDs and VSAC Code System names are displayed for each code. However, these code system identifiers **SHOULD NOT** be used. The FHIR URIs code systems are defined as part of FHIR and **SHOULD** be used instead. Unfortunately, the FHIR URI for the code system is not shown. As a convenience for the reader, a [VSAC to FHIR Code System Mapping Table] is provided, which maps the VSAC Code System names to the corresponding FHIR URI. For more information, see this [documentation](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacname-fhirname-fhirtitle.html) describing the relationships between the VSAC value set name, FHIR value set name, and FHIR value set title and how to access VSAC's FHIR API.</span><!-- new-content -->
+    When viewing a ValueSet in the VSAC UI, the Code System OIDs and VSAC Code System names are displayed for each code. However, these code system identifiers **SHOULD NOT** be used. The FHIR URIs code systems are defined as part of FHIR and **SHOULD** be used instead. Unfortunately, the FHIR URI for the code system is not shown. As a convenience for the reader, a [VSAC to FHIR Code System Mapping Table] is provided, which maps the VSAC Code System names to the corresponding FHIR URI. For more information, see this [documentation](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacname-fhirname-fhirtitle.html) describing the relationships between the VSAC value set name, FHIR value set name, and FHIR value set title and how to access VSAC's FHIR API.
 
   - To fetch the FHIR ValueSet resource (in other words, the value set definition), use:
 

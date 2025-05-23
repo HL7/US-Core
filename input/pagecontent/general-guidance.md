@@ -60,7 +60,7 @@ In situations where the specific piece of data is hidden for security or privacy
 
   For more details, see [Using SNOMED CT with FHIR]. 
 
-<div class="bg-success" markdown="1">
+
 
 ### Using CQL With US Core
 
@@ -76,7 +76,7 @@ In situations where the specific piece of data is hidden for security or privacy
 Note that US Core Model Definitions are also available in the [Common CQL Assets for FHIR (US-Based)] implementation guide at <https://hl7.org/fhir/us/cql/2025May/Library-USCore-ModelInfo.html>
 
 For more information about using IG-specific model information with CQL and how these libraries were constructed, refer to the [Using CQL With FHIR] Implementation Guide.
-</div><!-- new-content -->
+
 
 ###  Using UCUM codes in the [Quantity] datatype
 

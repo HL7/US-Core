@@ -22,12 +22,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a verification status
 2. a reaction manifestation
 
-<div class="bg-success" markdown="1">
+
 
 {% include additional-requirements-intro.md type="AllergyIntolerance" plural="false" %}
 
 1. a recorder*
-</div><!-- new-content -->
+
 
 *see guidance below
 

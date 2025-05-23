@@ -21,14 +21,14 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each CarePlan Must Support:**
 
 1. a narrative summary of the patient assessment and plan of treatment*
-1. <span class="bg-success" markdown="1">a category code of "assess-plan"</span><!-- new-content -->
+1. a category code of "assess-plan"
 
-<div class="bg-success" markdown="1">
+
 
 {% include additional-requirements-intro.md type="CarePlan" plural="false" %}
 
 1. a contributor*
-</div><!-- new-content -->
+
 
 *see guidance below
 

@@ -104,15 +104,12 @@ For example, the [US Core AllergyIntolerance Profile] `clinicalStatus` element h
 
 #### Required Bindings When Slicing by ValueSets
 
-<div class="bg-success" markdown="1">
- If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements. ([Terminology Binding Extensible])
-
 FHIR profiles use [slicing] when a coded element is a repeating elements and a particular ValueSet is desired for at least one of the repeats. To enforce this constraint, the ValueSet binding must be required to ensure that the slicing logic is unambiguous, consistent, and valid.  When the slicing is "open" and the defined slice has a minimum cardinality of one, the slice with a code from the value set is mandatory.  However, When the slicing is "open" and the defined slice has a minimum cardinality of zero, other slices with other codes are allowed when no suitable code exists in the defined slices. This is functionally equivalent to an Extensible Binding described below. Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources. The example in Figure 2 below illustrates this structure for the repeating `DocumentReference.category` element:
 
 - The category element requires at least one and allows multiple DocumentReference categories.
 - The defined category:uscore "slice" element allows zero to many concepts from the required ValueSet, US Core DocumentReference Category.
 - Servers can use a category code outside the required ValueSet when it does not contain a suitable concept
-</div><!-- new-content -->
+
 
   {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 2: US Core DocumentReference.category" %}
 
@@ -150,9 +147,9 @@ The "current" binding corresponds to the US Core's interpretation of extensible 
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
 
-Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. <span class="bg-success" markdown="1">These alternate codes are called "additional codings".</span><!-- new-content --> They may be equivalent to or narrower in meaning than the standard concept code.
+Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called "additional codings". They may be equivalent to or narrower in meaning than the standard concept code.
 
-Example of <span class="bg-success" markdown="1">additional codings</span><!-- new-content --> for Body Weight concept code.
+Example of additional codings for Body Weight concept code.
 
 ~~~
     "code": {
