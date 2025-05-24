@@ -49,7 +49,7 @@ function fhirTableRowCollapse(table, id) {
 
 function findElementFromFocus(src, name) {
   e = src;
-  while (e && e.tagName != name) {
+  while (e && (e.tagName != name || e.getAttribute("fhir") != "generated-heirarchy")) {
     e = e.parentNode;
   }
   return e;

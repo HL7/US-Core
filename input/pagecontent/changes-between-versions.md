@@ -22,7 +22,7 @@ Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir
 - [Comparison with version 5.0.1](comparison-v5.0.1/index.html)
 - [Comparison with version 4.0.0](comparison-v4.0.0/index.html)
 - [Comparison with version 3.1.1](comparison-v3.1.1/index.html)
-- [(Partial) Comparison with Argonaut Data Query IG](comparison-argo/index.html)   <!--  using the FHIR validator to compare and the script /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/Validator_Tools/IG-Profile_Comparer.ipynb with the source file input/images-source/ArgoDQ-USCore-ProfileMap.csv. See the script file for instructions -->
+- [(Partial) Comparison with Argonaut Data Query IG](comparison-argo/index.html)   <!--  using the FHIR validator to compare and the script /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/Validator_Tools/IG-Profile_Comparer.ipynb with the source file input/images-source/ArgoDQ-USCore-ProfileMap.csv. See the script file for instructions note that only the comparison files are used the union and intersection files are discarded. There many bad links that need to be replaced with the text using the regex find '<a href="\?\?.*?>(.*?)</a>' and replace with '$1'-->
 
 ### Endpoint Discoverability
 
