@@ -103,7 +103,9 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 58. **Applied:** (Enhancement) Move Patient Communication Language valueset to [HL7 Terminology (THO)]. [FHIR-49397](https://jira.hl7.org/browse/FHIR-49397) See Changes [Here](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)
 59. **Applied:** (Correction)Changed ONC to ASTP where appropriate [FHIR-49399](https://jira.hl7.org/browse/FHIR-49399)
 60. **Applied:** (Correction) Add and apply guidance on [FHIR Maturity Level]. [FHIR-49400](https://jira.hl7.org/browse/FHIR-49400) See Changes [Here](index.html#us-core-profile-maturity)
-61. **Applied:** (Clarification) Update US Core Location Type Value Set to meet industry use cases [FHIR-49401](https://jira.hl7.org/browse/FHIR-49401) See Changes [Here](StructureDefinition-us-core-location.html)
+61. **Applied:** (Clarification) Update US Core Location Type Value Set to meet industry use cases [FHIR-49401](https://jira.hl7.org/browse/FHIR-49401) and [FHIR-50937](https://jira.hl7.org/browse/FHIR-50937) See Changes
+    -  [US Core Location Profile](StructureDefinition-us-core-location.html)
+    -  [Healthcare Service Location Type Combined](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.31/expansion)
 62. **Applied:** (Clarification) Spell out/define SOP in diagnostic report imaging study context  [FHIR-49402](https://jira.hl7.org/browse/FHIR-49402) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 63. **Applied:** (Correction) Update Medication Route of Admin terminology binding [FHIR-49403](https://jira.hl7.org/browse/FHIR-49403) See Changes [Here](StructureDefinition-us-core-medicationrequest.html)
 64. **Applied:** (Correction) Change number of common clinical notes to 10 [FHIR-49413](https://jira.hl7.org/browse/FHIR-49413) See Changes [Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
@@ -173,7 +175,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 96.  **Applied:** (Clarification) Improve Language on Immunization.lotNumber for matching [FHIR-50795](https://jira.hl7.org/browse/FHIR-50795) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
 97. **Applied:** (Correction) Improve Language on boolean flag [FHIR-50794](https://jira.hl7.org/browse/FHIR-50794) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html)
 98. **Applied:** (Correction) Improve Language: Change Name to Code [FHIR-50793](https://jira.hl7.org/browse/FHIR-50793) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
-99. **Applied:** (Clarification) Update SMART Launch dependency to version 2.2.0 [FHIR-50787](https://jira.hl7.org/browse/FHIR-50787) See Changes [Here](scopes.html)
+99.  **Applied:** (Clarification) Update SMART Launch dependency to version 2.2.0 [FHIR-50787](https://jira.hl7.org/browse/FHIR-50787) See Changes [Here](scopes.html)
 100. **Applied** (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](http://terminology.hl7.org/ValueSet/usps-state)
 101. **Applied:** (Correction) Expand US Core Laboratory Test Codes value set [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](ValueSet-us-core-laboratory-test-codes.html)
 102. **Applied:** (Enhancement) Add links in history page to approved patches [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
@@ -299,7 +301,7 @@ html#additional-uscdi-requirements)
     - [US Core Specimen Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-specimen.html)
     - [US Core Specimen Condition ValueSet](https://hl7.org/fhir/us/core/2025Jan/ValueSet-us-core-specimen-condition.html)
     - [Lipemic Serum Specimen Example](https://hl7.org/fhir/us/core/2025Jan/Specimen-example-serum-lipemic.html)
-24. **Applied:** (Clarification) Remove Meta.lastUpdated STU comments [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542)
+24. **Applied:** (Clarification) Remove `.meta.lastUpdated` STU comments [FHIR-48542](https://jira.hl7.org/browse/FHIR-48542)
 25. **Applied:** (Correction) Update link to UDI Specification [FHIR-48688](https://jira.hl7.org/browse/FHIR-48688) See Changes [Here](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-implantable-device.html)
 26. **Applied:** (Correction) add MS=False flag to QuestionnaireResponse.authored target [FHIR-48847](https://jira.hl7.org/browse/FHIR-48847) See Changes [Here](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-questionnaireresponse.profile.json.html)
 27. **Applied:** (Correction) add MS=False flags to Procedure.basedOn targets [FHIR-48848](https://jira.hl7.org/browse/FHIR-48848) See Changes [Here](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-procedure.profile.json.html)
@@ -335,7 +337,7 @@ The changes in this annual update to US Core have been reviewed and commented up
 Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 7.0.0 version of US Core and each previous major release on [Changes Between Versions] page. Below is an overview of significant changes between Version 7.0.0 and Version 7.0.0-ballot of US Core.
 
 - [SMART on FHIR Obligations and Capabilities](https://hl7.org/fhir/us/core/STU7/scopes.html): We rewrote the SMART scopes guidance page to clarify the granular scope requirement in [HTI-1 final rule](https://www.federalregister.gov/documents/2023/04/18/2023-07229/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and), and expanded the guidance to include SMART on FHIR capabilities, token introspection, and `/.well-known/smart-configuration`.
-- {: #last-updated }`Meta.lastUpdated` and `_lastUpdated`: We added the `Meta.lastUpdated` element as Must Support and recommend using the `_lastUpdated` search parameter for the US Core Profiles listed below. The General Guidance page documents how to use them to represent and search for resources whose content has changed. We also updated the guidance on the deletion of records.
+- {: #last-updated }`meta.lastUpdated` and `_lastUpdated`: We added the `meta.lastUpdated` element as Must Support and recommend using the `_lastUpdated` search parameter for the US Core Profiles listed below. The General Guidance page documents how to use them to represent and search for resources whose content has changed. We also updated the guidance on the deletion of records.
   - [US Core Laboratory Result Observation Profile](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-lab.html)
   - [US Core DiagnosticReport Profile for Laboratory Results Reporting](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-diagnosticreport-lab.html)
   - [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-condition-problems-health-concerns.html)

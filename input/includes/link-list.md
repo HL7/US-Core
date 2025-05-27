@@ -182,7 +182,7 @@
 [Well-Known Uniform Resource Identifiers (URIs)]: https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known
 [`Accept-Language`]: https://www.ietf.org/rfc/rfc2616.txt
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
-[`Meta.lastUpdated`]: {{site.data.fhir.path}}resource.html#Meta
+[Resource.meta.lastUpdated]: {{site.data.fhir.path}}resource.html#Meta
 [`Questionnaire.useContext`]: {{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.useContext
 [`_include`]: {{site.data.fhir.path}}search.html#include
 [`_lastUpdated`]: {{site.data.fhir.path}}search.html#lastUpdated

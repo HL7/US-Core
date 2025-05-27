@@ -65,7 +65,7 @@
                             "extension": [
                                 {
                                     "url": "key",
-                                    "valueId": "uscore-hsloc"
+                                    "valueId": "uscore-uscdi"
                                 },
                                 {
                                     "url": "purpose",
@@ -73,40 +73,15 @@
                                 },
                                 {
                                     "url": "valueSet",
-                                    "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275"
+                                    "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.31"
                                 },
                                 {
                                     "url": "documentation",
-                                    "valueMarkdown": "Meets the USCDI applicable vocabulary standard Healthcare Service Location Codes(HSLOC)."
+                                    "valueMarkdown": "Meets the USCDI applicable vocabulary standard Healthcare Service Location Codes(HSLOC) and SNOMED-CT."
                                 },
                                 {
                                     "url": "shortDoco",
-                                    "valueString": "Healthcare Service Location Codes (HSLOC)"
-                                }
-                            ]
-                        },
-                        {
-                            "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
-                            "extension": [
-                                {
-                                    "url": "key",
-                                    "valueId": "uscore-snomedct"
-                                },
-                                {
-                                    "url": "purpose",
-                                    "valueCode": "extensible"
-                                },
-                                {
-                                    "url": "valueSet",
-                                    "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.26"
-                                },
-                                {
-                                    "url": "documentation",
-                                    "valueMarkdown": "SNOMED-CT Healthcare Facility Type codes meets the USCDI applicable vocabulary standard for SNOMED-CT."
-                                },
-                                {
-                                    "url": "shortDoco",
-                                    "valueString": "SNOMED-CT Healthcare Facility Type codes"
+                                    "valueString": "Healthcare Service Location Codes (HSLOC)/SNOMED-CT Healthcare Facility Type codes"
                                 }
                             ]
                         },

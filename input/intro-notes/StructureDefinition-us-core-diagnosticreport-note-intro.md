@@ -51,7 +51,7 @@ The following data elements must always be present ([Mandatory] definition) or m
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifier` element to access the source images from external sources.
    * The [Argonaut SMART Imaging Access project](https://confluence.hl7.org/spaces/AP/pages/161060067/SMART+Imaging+Access) defined an approach to access imaging studies using a single authorization flow.
 
-- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.
+- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.
 
 
 {% include link-list.md %}

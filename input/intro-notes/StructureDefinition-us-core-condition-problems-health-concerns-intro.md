@@ -53,7 +53,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   * A Server **SHALL** support `Condition.recordedDate`.
     * A Server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A Server may support both, which means they support all 3 locations.
     * The Client application **SHALL** support all three elements
-- \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `Meta.lastUpdated` **SHOULD** reflect:
+- \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New problems and health concerns
   - Changes in the clinical status or verifications status of problems or health concerns
 {% include provenance-author-bullet-generator.md %}

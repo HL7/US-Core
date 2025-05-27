@@ -283,7 +283,7 @@ However, neither specification defines how a user-facing provider app can seek r
 
 ### Searching Using lastUpdated
 
-Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles and **SHOULD** populate [`Meta.lastUpdated`] for US Core Profiles as accurately as possible. Servers **SHALL** document in `CapabilityStatement.rest.resource.searchParam.documentation` the types of changes that can be detected using the `_lastUpdated` search parameter (see example snippet below).
+Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles and **SHOULD** populate [Resource.meta.lastUpdated] for US Core Profiles as accurately as possible. Servers **SHALL** document in `CapabilityStatement.rest.resource.searchParam.documentation` the types of changes that can be detected using the `_lastUpdated` search parameter (see example snippet below).
 
 Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile 
 
@@ -326,14 +326,14 @@ Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` s
 
 <div class="stu-note" markdown="1">
 
-Many Servers are unable to accurately populate the `Meta.lastUpdated` element. 
+Many Servers are unable to accurately populate the `.meta.lastUpdated` element. 
 
 **Note to Clients:**
-- Updates to `Meta.lastUpdated` may not reflect a change in the resource and resource updates may not result in updates to `Meta.lastUpdated`.
+- Updates to `.meta.lastUpdated` may not reflect a change in the resource and resource updates may not result in updates to `.meta.lastUpdated`.
 - `_lastUpdated` search results may not reflect changes Clients can access and all updates to a resource may not be returned using the `_lastUpdated` search. (in other words, false negatives and false positives `_lastUpdated` search results are possible).
-- Updates to `Meta.lastUpdated` may reflect changes a Client can not access. (for example, the Client may not be authorized to see the changed data).
-- Supporting `Meta.lastUpdated` in a resource does not imply support for searches using the `_lastUpdated` search parameter.
-- Support for searches using the `_lastUpdated` search parameter does not require Servers to support `Meta.lastUpdated`; Servers can use an alternative method to track changes to an instance.
+- Updates to `.meta.lastUpdated` may reflect changes a Client can not access. (for example, the Client may not be authorized to see the changed data).
+- Supporting `.meta.lastUpdated` in a resource does not imply support for searches using the `_lastUpdated` search parameter.
+- Support for searches using the `_lastUpdated` search parameter does not require Servers to support `.meta.lastUpdated`; Servers can use an alternative method to track changes to an instance.
 
 **Note to Servers:**
 - Updating the timestamp too frequently is better than missing updates.

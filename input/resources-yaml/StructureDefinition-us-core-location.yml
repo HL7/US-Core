@@ -49,36 +49,21 @@ differential:
       # description: ☞☞☞Extensible binding inherited from FHIR R4 `Location.type`☜☜☜
       valueSet: http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
 
-# ====== New R5 additional Binding Element Here for HSLOC:  USCDI APPLICABLE VOCABULARY STANDARD ====
+# ====== New R5 additional Binding Element Here for HSLOC and c80-facilitycodes: USCDI APPLICABLE VOCABULARY STANDARD ====
 
       extension:
       - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
         - url: key
-          valueId: uscore-hsloc
+          valueId: uscore-uscdi
         - url: purpose
           valueCode: extensible
         - url: valueSet
-          valueCanonical: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.20275
+          valueCanonical: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.31
         - url: documentation
-          valueMarkdown: Meets the USCDI applicable vocabulary standard Healthcare Service Location Codes(HSLOC).
+          valueMarkdown: Meets the USCDI applicable vocabulary standard Healthcare Service Location Codes(HSLOC) and SNOMED-CT.
         - url: shortDoco
-          valueString: Healthcare Service Location Codes (HSLOC)
-
-# ====== New R5 additional Binding Element Here for c80-facilitycodes: USCDI APPLICABLE VOCABULARY STANDARD ====
-
-      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
-        extension:
-        - url: key
-          valueId: uscore-snomedct
-        - url: purpose
-          valueCode: extensible
-        - url: valueSet
-          valueCanonical: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.26
-        - url: documentation
-          valueMarkdown: SNOMED-CT Healthcare Facility Type codes meets the USCDI applicable vocabulary standard for SNOMED-CT.
-        - url: shortDoco
-          valueString: SNOMED-CT Healthcare Facility Type codes
+          valueString: Healthcare Service Location Codes (HSLOC)/SNOMED-CT Healthcare Facility Type codes
 
 # ====== New R5 additional Binding Element Here for Place of Service (POS) ====
 
