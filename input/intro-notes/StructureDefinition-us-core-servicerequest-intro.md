@@ -45,7 +45,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   |Imaging Order|[363679005 Imaging (procedure)]|
   |Clinical Test Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
   |Procedure Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]| 
-  {:.grid}
+  {:.grid #servicerequest-categorycodes}
 
 - The `ServiceRequest.code` is bound to US Core Procedure Codes, a broadly defined value set that accommodates many healthcare domains. However, implementers **SHOULD** constrain the value set to a subset for a particular domain. The table below identifies additional value set bindings for the USCDI Laboratory Order, Imaging Order, and Clinical Test Order Data Elements. Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context. For example, laboratory orders are [extensibly] bound to the [LOINC Common Laboratory Orders Value Set]. Note that the USCDI Class Procedure Order Data Element has no additional binding.
 
@@ -54,7 +54,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   |Laboratory Order|[LOINC Common Laboratory Orders Value Set]|"extensible"|The LOINC Common Laboratory Orders Value Set is a ‘starter set’ for mapping commonly used laboratory orders. It does not attempt to include all possible laboratory order codes. For additional information on LOINC Common Laboratory Orders Value Set, refer to [www.loinc.org/usage/orders].|
   |Imaging Order|[LOINC Radiology Codes]|"preferred"|The LOINC Radiology Codes include all imaging codes minus concepts that are deprecated or discouraged.|
   |Clinical Test Order|[LOINC Clinical Test Codes]|"candidate"|LOINC Clinical Test Codes include non-laboratory and non-imaging clinical test codes that represent clinical tests.|
-  {:.grid}
+  {: #myTable .grid}
 
 - *Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements. Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`. Depending on the procedure being documented, a Server will select the appropriate Profile to use.
    - Although both `ServiceRequest.reasonCode` and `ServiceRequest.reasonReference` are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements. The certifying Client application **SHALL** support both elements.

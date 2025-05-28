@@ -48,7 +48,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 - This Profile is not dependent on any specific protocol. Information about the protocol used **SHOULD** be supplied in either:
   - `Observation.note.text` (for example, "Average blood pressure is calculated from 12 measurements taken by the patient over three days.")
   - The standard FHIR extension <http://hl7.org/fhir/StructureDefinition/workflow-adheresTo>
-- Information about the number of measurements used to determine the average **SHOULD** be supplied as an `Observation.component` using the SNOMED CT code "246432004 | Number of occurrences (qualifier value)". The example shows how this component can be used.
+- Information about the number of measurements used to determine the average **SHOULD** be supplied as an `Observation.component` using the SNOMED CT code "246432004 \| Number of occurrences (qualifier value)". The example shows how this component can be used.
 - The observation **MAY** use an [extension] defined by other profiles such as [Vital Signs with Qualifying Elements: Average Blood Pressure Profile].
 
 {% include link-list.md %}
