@@ -11,7 +11,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
     valueCode: cgp  # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    valueCode: trial-use
+    valueCode: draft
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
     valueInteger: 3
 definition:
@@ -47,14 +47,17 @@ jurisdiction: 'urn:iso:std:iso:3166#US'
 copyright: >-
   Used by permission of HL7 International, all rights reserved Creative Commons License
 description: >-
+  *FHIR R6 PROTOTYPE GUIDE FOR REVIEW*
+  
   The US Core Implementation Guide is based on FHIR Version R4 and defines the minimum conformance requirements for accessing patient data. The Argonaut pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC U.S. Core Data for Interoperability (USCDI) v1 provided the requirements for this guide. The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by DAF-Research, QI-Core, and CIMI. Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2024-10-09
-version: '8.0.0'
-fhirVersion: 4.0.1
+date: 2025-05-29
+version: '8.0.0-R6preview'
+# =============== latest version of FHIR ============
+fhirVersion: 6.0.0-ballot3
 dependencies:
   hl7.fhir.uv.smart-app-launch: 2.2.0
   us.nlm.vsac:
@@ -246,6 +249,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
+
+  
   version-comparison-master: 7.0.0
   version-comparison:
     - 7.0.0
@@ -302,7 +307,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   auto-oid-root: 2.16.840.1.113883.4.642.40.2
 copyrightyear: '2025+'
 # releaselabel: CI Build
-releaselabel: STU 8
+releaselabel: STU 8 R6 Preview
 # releaselabel: STU 8 Ballot
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
