@@ -97,13 +97,14 @@ differential:
     mustSupport: true
   - id: Observation.effective[x]
     path: Observation.effective[x]
-    short: Often just a dateTime for Vital Signs
-    type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: dateTime
-    - code: Period
+    # limited to just dateTime in R6-Ballot3
+    # short: Often just a dateTime for Vital Signs
+    # type:
+    # - extension:
+    #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #     valueBoolean: true
+    #   code: dateTime
+    # - code: Period
     mustSupport: true
 
 # ============= new for USCDI 5 =================
