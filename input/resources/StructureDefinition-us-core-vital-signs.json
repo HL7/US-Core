@@ -160,48 +160,6 @@
                 "id": "Observation.value[x]",
                 "path": "Observation.value[x]",
                 "short": "Vital Signs Value",
-                "definition": "Vital Signs value are typically recorded using the Quantity data type.",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "Quantity"
-                    },
-                    {
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "code": "string"
-                    },
-                    {
-                        "code": "boolean"
-                    },
-                    {
-                        "code": "integer"
-                    },
-                    {
-                        "code": "Range"
-                    },
-                    {
-                        "code": "Ratio"
-                    },
-                    {
-                        "code": "SampledData"
-                    },
-                    {
-                        "code": "time"
-                    },
-                    {
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Period"
-                    }
-                ],
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -236,48 +194,6 @@
                 "id": "Observation.component.value[x]",
                 "path": "Observation.component.value[x]",
                 "short": "Vital Sign Component Value",
-                "definition": "Vital Signs value are typically recorded using the Quantity data type. For supporting observations such as cuff size could use other datatypes such as CodeableConcept.",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "Quantity"
-                    },
-                    {
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "code": "string"
-                    },
-                    {
-                        "code": "boolean"
-                    },
-                    {
-                        "code": "integer"
-                    },
-                    {
-                        "code": "Range"
-                    },
-                    {
-                        "code": "Ratio"
-                    },
-                    {
-                        "code": "SampledData"
-                    },
-                    {
-                        "code": "time"
-                    },
-                    {
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Period"
-                    }
-                ],
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
