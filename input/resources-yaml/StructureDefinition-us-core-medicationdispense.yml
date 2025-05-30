@@ -28,8 +28,8 @@ differential:
   # Type changed to CodeableReference in R6
   # - id: MedicationDispense.medication[x]
   #   path: MedicationDispense.medication[x]
-  - id: MedicationDispense.medication[x]
-    path: MedicationDispense.medication[x]
+  - id: MedicationDispense.medication
+    path: MedicationDispense.medication
     type:
   #   - code: CodeableConcept
   #   - code: Reference
