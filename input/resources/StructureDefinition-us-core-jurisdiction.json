@@ -97,7 +97,7 @@
         },
         {
             "type": "element",
-            "expression": "Group.characteristic.value[x].identifier"
+            "expression": "Group.characteristic.value[x]"
         },
         {
             "type": "element",
@@ -197,7 +197,7 @@
         },
         {
             "type": "element",
-            "expression": "Substance.ingredient.substance[x].identifier"
+            "expression": "Substance.ingredient.substance[x]"
         },
         {
             "type": "element",
@@ -285,7 +285,7 @@
         },
         {
             "type": "element",
-            "expression": "Specimen.container.additive[x].identifier"
+            "expression": "Specimen.container.additive[x]"
         },
         {
             "type": "element",
@@ -373,15 +373,15 @@
         },
         {
             "type": "element",
-            "expression": "Claim.supportingInfo.value[x].identifier"
+            "expression": "Claim.supportingInfo.value[x]"
         },
         {
             "type": "element",
-            "expression": "Claim.diagnosis.diagnosis[x].identifier"
+            "expression": "Claim.diagnosis.diagnosis[x]"
         },
         {
             "type": "element",
-            "expression": "Claim.procedure.procedure[x].identifier"
+            "expression": "Claim.procedure.procedure[x]"
         },
         {
             "type": "element",
@@ -401,11 +401,11 @@
         },
         {
             "type": "element",
-            "expression": "Claim.accident.location[x].identifier"
+            "expression": "Claim.accident.location[x]"
         },
         {
             "type": "element",
-            "expression": "Claim.item.location[x].identifier"
+            "expression": "Claim.item.location[x]"
         },
         {
             "type": "element",
@@ -449,7 +449,7 @@
         },
         {
             "type": "element",
-            "expression": "Invoice.lineItem.chargeItem[x].identifier"
+            "expression": "Invoice.lineItem.chargeItem[x]"
         },
         {
             "type": "element",
@@ -481,7 +481,7 @@
         },
         {
             "type": "element",
-            "expression": "Contract.topic[x].identifier"
+            "expression": "Contract.topic[x]"
         },
         {
             "type": "element",
@@ -493,7 +493,7 @@
         },
         {
             "type": "element",
-            "expression": "Contract.term.topic[x].identifier"
+            "expression": "Contract.term.topic[x]"
         },
         {
             "type": "element",
@@ -509,7 +509,7 @@
         },
         {
             "type": "element",
-            "expression": "Contract.term.offer.answer.value[x].identifier"
+            "expression": "Contract.term.offer.answer.value[x]"
         },
         {
             "type": "element",
@@ -521,7 +521,7 @@
         },
         {
             "type": "element",
-            "expression": "Contract.term.asset.valuedItem.entity[x].identifier"
+            "expression": "Contract.term.asset.valuedItem.entity[x]"
         },
         {
             "type": "element",
@@ -569,19 +569,19 @@
         },
         {
             "type": "element",
-            "expression": "Contract.friendly.content[x].identifier"
+            "expression": "Contract.friendly.content[x]"
         },
         {
             "type": "element",
-            "expression": "Contract.legal.content[x].identifier"
+            "expression": "Contract.legal.content[x]"
         },
         {
             "type": "element",
-            "expression": "Contract.rule.content[x].identifier"
+            "expression": "Contract.rule.content[x]"
         },
         {
             "type": "element",
-            "expression": "Contract.legallyBinding[x].identifier"
+            "expression": "Contract.legallyBinding[x]"
         },
         {
             "type": "element",
@@ -645,15 +645,15 @@
         },
         {
             "type": "element",
-            "expression": "ExplanationOfBenefit.supportingInfo.value[x].identifier"
+            "expression": "ExplanationOfBenefit.supportingInfo.value[x]"
         },
         {
             "type": "element",
-            "expression": "ExplanationOfBenefit.diagnosis.diagnosis[x].identifier"
+            "expression": "ExplanationOfBenefit.diagnosis.diagnosis[x]"
         },
         {
             "type": "element",
-            "expression": "ExplanationOfBenefit.procedure.procedure[x].identifier"
+            "expression": "ExplanationOfBenefit.procedure.procedure[x]"
         },
         {
             "type": "element",
@@ -665,11 +665,11 @@
         },
         {
             "type": "element",
-            "expression": "ExplanationOfBenefit.accident.location[x].identifier"
+            "expression": "ExplanationOfBenefit.accident.location[x]"
         },
         {
             "type": "element",
-            "expression": "ExplanationOfBenefit.item.location[x].identifier"
+            "expression": "ExplanationOfBenefit.item.location[x]"
         },
         {
             "type": "element",
@@ -693,7 +693,7 @@
         },
         {
             "type": "element",
-            "expression": "ExplanationOfBenefit.addItem.location[x].identifier"
+            "expression": "ExplanationOfBenefit.addItem.location[x]"
         },
         {
             "type": "element",
@@ -769,7 +769,7 @@
         },
         {
             "type": "element",
-            "expression": "Consent.source[x].identifier"
+            "expression": "Consent.source[x]"
         },
         {
             "type": "element",

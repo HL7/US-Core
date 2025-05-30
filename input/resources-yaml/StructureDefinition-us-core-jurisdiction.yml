@@ -55,7 +55,7 @@ context:
 - type: element  
   expression: Group.managingEntity.identifier
 - type: element  
-  expression: Group.characteristic.value[x].identifier
+  expression: Group.characteristic.value[x]
 - type: element  
   expression: Group.member.entity.identifier
 - type: element  
@@ -105,7 +105,7 @@ context:
 - type: element  
   expression: Substance.instance.identifier
 - type: element  
-  expression: Substance.ingredient.substance[x].identifier
+  expression: Substance.ingredient.substance[x]
 - type: element  
   expression: BiologicallyDerivedProduct.identifier
 - type: element  
@@ -149,7 +149,7 @@ context:
 - type: element  
   expression: Specimen.container.identifier
 - type: element  
-  expression: Specimen.container.additive[x].identifier
+  expression: Specimen.container.additive[x]
 - type: element  
   expression: BodyStructure.identifier
 - type: element  
@@ -193,11 +193,11 @@ context:
 - type: element  
   expression: Claim.careTeam.provider.identifier
 - type: element  
-  expression: Claim.supportingInfo.value[x].identifier
+  expression: Claim.supportingInfo.value[x]
 - type: element  
-  expression: Claim.diagnosis.diagnosis[x].identifier
+  expression: Claim.diagnosis.diagnosis[x]
 - type: element  
-  expression: Claim.procedure.procedure[x].identifier
+  expression: Claim.procedure.procedure[x]
 - type: element  
   expression: Claim.procedure.udi.identifier
 - type: element  
@@ -207,9 +207,9 @@ context:
 - type: element  
   expression: Claim.insurance.claimResponse.identifier
 - type: element  
-  expression: Claim.accident.location[x].identifier
+  expression: Claim.accident.location[x]
 - type: element  
-  expression: Claim.item.location[x].identifier
+  expression: Claim.item.location[x]
 - type: element  
   expression: Claim.item.udi.identifier
 - type: element  
@@ -231,7 +231,7 @@ context:
 - type: element  
   expression: Invoice.account.identifier
 - type: element  
-  expression: Invoice.lineItem.chargeItem[x].identifier
+  expression: Invoice.lineItem.chargeItem[x]
 - type: element  
   expression: Contract.identifier
 - type: element  
@@ -247,13 +247,13 @@ context:
 - type: element  
   expression: Contract.author.identifier
 - type: element  
-  expression: Contract.topic[x].identifier
+  expression: Contract.topic[x]
 - type: element  
   expression: Contract.contentDefinition.publisher.identifier
 - type: element  
   expression: Contract.term.identifier
 - type: element  
-  expression: Contract.term.topic[x].identifier
+  expression: Contract.term.topic[x]
 - type: element  
   expression: Contract.term.offer.identifier
 - type: element  
@@ -261,13 +261,13 @@ context:
 - type: element  
   expression: Contract.term.offer.topic.identifier
 - type: element  
-  expression: Contract.term.offer.answer.value[x].identifier
+  expression: Contract.term.offer.answer.value[x]
 - type: element  
   expression: Contract.term.asset.typeReference.identifier
 - type: element  
   expression: Contract.term.asset.context.reference.identifier
 - type: element  
-  expression: Contract.term.asset.valuedItem.entity[x].identifier
+  expression: Contract.term.asset.valuedItem.entity[x]
 - type: element  
   expression: Contract.term.asset.valuedItem.identifier
 - type: element  
@@ -291,13 +291,13 @@ context:
 - type: element  
   expression: Contract.signer.party.identifier
 - type: element  
-  expression: Contract.friendly.content[x].identifier
+  expression: Contract.friendly.content[x]
 - type: element  
-  expression: Contract.legal.content[x].identifier
+  expression: Contract.legal.content[x]
 - type: element  
-  expression: Contract.rule.content[x].identifier
+  expression: Contract.rule.content[x]
 - type: element  
-  expression: Contract.legallyBinding[x].identifier
+  expression: Contract.legallyBinding[x]
 - type: element  
   expression: ExplanationOfBenefit.identifier
 - type: element  
@@ -329,19 +329,19 @@ context:
 - type: element  
   expression: ExplanationOfBenefit.careTeam.provider.identifier
 - type: element  
-  expression: ExplanationOfBenefit.supportingInfo.value[x].identifier
+  expression: ExplanationOfBenefit.supportingInfo.value[x]
 - type: element  
-  expression: ExplanationOfBenefit.diagnosis.diagnosis[x].identifier
+  expression: ExplanationOfBenefit.diagnosis.diagnosis[x]
 - type: element  
-  expression: ExplanationOfBenefit.procedure.procedure[x].identifier
+  expression: ExplanationOfBenefit.procedure.procedure[x]
 - type: element  
   expression: ExplanationOfBenefit.procedure.udi.identifier
 - type: element  
   expression: ExplanationOfBenefit.insurance.coverage.identifier
 - type: element  
-  expression: ExplanationOfBenefit.accident.location[x].identifier
+  expression: ExplanationOfBenefit.accident.location[x]
 - type: element  
-  expression: ExplanationOfBenefit.item.location[x].identifier
+  expression: ExplanationOfBenefit.item.location[x]
 - type: element  
   expression: ExplanationOfBenefit.item.udi.identifier
 - type: element  
@@ -353,7 +353,7 @@ context:
 - type: element  
   expression: ExplanationOfBenefit.addItem.provider.identifier
 - type: element  
-  expression: ExplanationOfBenefit.addItem.location[x].identifier
+  expression: ExplanationOfBenefit.addItem.location[x]
 - type: element  
   expression: ExplanationOfBenefit.payment.identifier
 - type: element  
@@ -391,7 +391,7 @@ context:
 - type: element  
   expression: Consent.organization.identifier
 - type: element  
-  expression: Consent.source[x].identifier
+  expression: Consent.source[x]
 - type: element  
   expression: Consent.verification.verifiedWith.identifier
 - type: element  

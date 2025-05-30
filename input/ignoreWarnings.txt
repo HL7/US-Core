@@ -151,8 +151,6 @@ This element does not match any known slice defined in the profile http://hl7.or
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|8.0.0
 A definition for CodeSystem 'http://example.org/fhir/michigan.gov/lara/license-type' could not be found, so the code cannot be validated
 
-URL value 'http://mihin.org/fhir/cks' does not resolve
-
 # 28. === In this example, representing the concept clearly with human-readable annotations {pack-years} is not misleading. It clearly illustrates how to use the Observation with the code and demonstrates a clinical need outweighing concerns about using annotations. ===
 
 WARNING: Observation/pack-years-example: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {pack-years} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
@@ -173,7 +171,7 @@ The element Observation.component.value[x] has a binding, and has multiple types
 
 # 32. ==== A US Direct Address for secure messaging in healthcare typically follows a format similar to an email address. for example `john.doe@direct.myhealthcareprovider.org`. Although this URL will not resolve, it represents a legitimate example of the direct address in the `endpoint.address` field. ===
 
-WARNING: Organization/saint-luke-w-endpoint: Organization.contained[0]/*Endpoint/75*/.address: URL value 'mailto:Interoperability@DirectAddress.com' does not resolve
+WARNING: Organization/saint-luke-w-endpoint: Organization.contained[0]/*Endpoint/75*/.address: No definition could be found for URL value 'mailto:Interoperability@DirectAddress.com'
 
 # 33. === To comply with Executive Order 14168, the following changes were made: 1)Removed USCDI mapping, guidance, and examples for the US Core Observation Sexual Orientation Profile  2) Removed the US Core Birth Sex Extension, guidance, and examples from the US Core Patient Profile 3) Deprecated the US Core Gender Identity Extension and removed it from the US Core Profile, USCDI mapping, guidance, and examples. Although the profiles and extensions will remain in this version of US Core to allow for backward compatibility - no examples will be supplied. ===
 
