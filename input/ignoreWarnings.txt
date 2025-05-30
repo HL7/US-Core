@@ -119,8 +119,6 @@ WARNING: ValueSet.where(id = 'us-core-condition-code'): Error from https://tx.fh
 
 # 20. === HL7 Terminology (THO) defines the ServiceDeliveryLocationRoleType and HealthcareServiceLocation value sets that compose this ValueSet. However, no codes are displayed in the HL7 Terminology for HealthcareServiceLocation value set, which is composed of NHSN Healthcare Facility Patient Care Location (HSLOC) and CMS Place of Service Codes (POS) codes. These codes are available at:ServiceDeliveryLocationRoleType: https://terminology.hl7.org/6.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html,HSLOC: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest,POS: https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets===
 
-WARNING: ValueSet.where(id = 'us-core-location-type'): Unable to expand included value set 'http://terminology.hl7.org/ValueSet/v3-HealthcareServiceLocation', but no error (and Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set)
-
 # 21. === The following code system is not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues. These codes were checked manually (updated text from 7.0.0)===
 
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition.coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' could not be found, so the code cannot be validated
