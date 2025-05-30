@@ -131,11 +131,15 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: MedicationOrder.status
-  - id: MedicationRequest.medication[x]
-    path: MedicationRequest.medication[x]
+ # Type changed to CodeableReference in R6
+  # - id: MedicationDispense.medication[x]
+  #   path: MedicationDispense.medication[x]
+  - id: MedicationDispense.medication[x]
+    path: MedicationDispense.medication[x]
     type:
-    - code: CodeableConcept
-    - code: Reference
+  #   - code: CodeableConcept
+  #   - code: Reference
+    - code: CodeableReference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
     mustSupport: true

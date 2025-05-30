@@ -39,10 +39,7 @@
                 "path": "MedicationDispense.medication[x]",
                 "type": [
                     {
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "code": "Reference",
+                        "code": "CodeableReference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
                         ]

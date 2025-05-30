@@ -25,11 +25,15 @@ differential:
     condition:
     - us-core-20
     mustSupport: true
+  # Type changed to CodeableReference in R6
+  # - id: MedicationDispense.medication[x]
+  #   path: MedicationDispense.medication[x]
   - id: MedicationDispense.medication[x]
     path: MedicationDispense.medication[x]
     type:
-    - code: CodeableConcept
-    - code: Reference
+  #   - code: CodeableConcept
+  #   - code: Reference
+    - code: CodeableReference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
     mustSupport: true
