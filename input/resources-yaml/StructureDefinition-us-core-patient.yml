@@ -3,8 +3,8 @@ id: us-core-patient
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 name: USCorePatientProfile
 title: US Core Patient Profile
-status: active
-experimental: false
+status: draft
+experimental: true
 date: 2025-04-22
 description: 'The US Core Patient Profile inherits from the FHIR [Patient](https://hl7.org/fhir/R4/patient.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Patient Demographics/Information* Data Class. It sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
 fhirVersion: 4.0.1

@@ -3,7 +3,7 @@ id: us-core-provenance
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
 name: USCoreProvenance
 title: US Core Provenance Profile
-status: active
+status: draft
 date: 2023-10-17
 description: 'The US Core Provenance Profile inherits from the FHIR [Provenance](https://hl7.org/fhir/R4/provenance.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Provenance resource to record, search, and fetch provenance information associated with a record. It covers the minimal (basic) information to support lineage of information. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used.   Before reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page, which documents several key use cases, specifically, the organization responsible for the most recent action on the resource.'
 fhirVersion: 4.0.1

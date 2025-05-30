@@ -4,8 +4,8 @@ url: http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height
 version: 3.1.1
 name: USCorePediatricWeightForHeightObservationProfile
 title: US Core Pediatric Weight for Height Observation Profile
-status: active
-experimental: false
+status: draft
+experimental: true
 date: 2023-10-17
 description: US Core Pediatric Weight for Height Observation Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric weight-for-length per age and sex observations in FHIR with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons

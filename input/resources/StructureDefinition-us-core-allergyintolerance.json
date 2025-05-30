@@ -4,8 +4,8 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance",
     "name": "USCoreAllergyIntolerance",
     "title": "US Core AllergyIntolerance Profile",
-    "status": "active",
-    "experimental": false,
+    "status": "draft",
+    "experimental": true,
     "date": "2023-10-17",
     "description": "The US Core AllergyIntolerance Profile inherits from the FHIR [AllergyIntolerance](https://hl7.org/fhir/R4/allergyintolerance.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "fhirVersion": "4.0.1",
@@ -107,11 +107,20 @@
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
                             "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
                         ],
                         "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
                             {
                                 "extension": [
                                     {
@@ -161,6 +170,11 @@
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
                 }
+            },
+            {
+                "id": "AllergyIntolerance.reaction.manifestation.concept",
+                "path": "AllergyIntolerance.reaction.manifestation.concept",
+                "mustSupport": true
             }
         ]
     }

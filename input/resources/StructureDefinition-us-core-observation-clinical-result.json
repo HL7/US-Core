@@ -4,7 +4,7 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result",
     "name": "USCoreObservationClinicalResultProfile",
     "title": "US Core Observation Clinical Result Profile",
-    "status": "active",
+    "status": "draft",
     "date": "2023-10-17",
     "description": "The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.\n\nThe US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
