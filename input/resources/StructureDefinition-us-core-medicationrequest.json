@@ -142,32 +142,23 @@
                 }
             },
             {
-                "id": "MedicationRequest.reported[x]",
-                "path": "MedicationRequest.reported[x]",
+                "id": "MedicationRequest.reported",
+                "path": "MedicationRequest.reported",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.informationSource",
+                "path": "MedicationRequest.informationSource",
                 "type": [
                     {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "boolean"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+                            "http://hl7.org/fhir/StructureDefinition/Group"
                         ],
                         "_targetProfile": [
                             {
@@ -209,17 +200,19 @@
                                         "valueBoolean": false
                                     }
                                 ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
                             }
                         ]
                     }
                 ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "MedicationOrder.status"
-                    }
-                ]
+                "mustSupport": true
             },
             {
                 "id": "MedicationDispense.medication",

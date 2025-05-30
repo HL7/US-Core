@@ -77,6 +77,7 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: MedicationOrder.status
+
   - id: MedicationRequest.category
     path: MedicationRequest.category
     slicing:
@@ -85,6 +86,7 @@ differential:
         path: $this
       rules: open
     mustSupport: true
+
   - id: MedicationRequest.category:us-core
     path: MedicationRequest.category
     sliceName: us-core
@@ -94,23 +96,57 @@ differential:
       description: The type of medication order. Note that other codes are permitted,
         see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/ValueSet/medicationrequest-category
-  - id: MedicationRequest.reported[x]
-    path: MedicationRequest.reported[x]
+# Boolean onnly in R6
+  # - id: MedicationRequest.reported[x]
+  #   path: MedicationRequest.reported[x]
+  - id: MedicationRequest.reported
+    path: MedicationRequest.reported
+    # type:
+    # - extension:
+    #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #     valueBoolean: true
+    #   code: boolean
+    # - extension:
+    #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #     valueBoolean: true
+    #   code: Reference
+    #   targetProfile:
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+    #   _targetProfile:
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: true
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    mustSupport: true
+
+
+# new element in R6 move Replaces MedicationRequest.reportedReference
+  - id: MedicationRequest.informationSource
+    path: MedicationRequest.informationSource
     type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: boolean
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: Reference
+    - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+      - http://hl7.org/fhir/StructureDefinition/Group
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -127,11 +163,12 @@ differential:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
     mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: MedicationOrder.status
- # Type changed to CodeableReference in R6
+
+# Type changed to CodeableReference in R6
   # - id: MedicationDispense.medication[x]
   #   path: MedicationDispense.medication[x]
   - id: MedicationDispense.medication
