@@ -19,9 +19,14 @@ type:
       - system: 'http://terminology.hl7.org/CodeSystem/v3-RoleCode'
         code: HOSP
         display: Hospital
-      - system: 'https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html'
-        code: 1120-5
-        display: Medical Clinic
+      - system: http://snomed.info/sct
+        code: '22232009'
+        display: Hospital 
+        version: http://snomed.info/sct/731000124108
+      # - system: 'https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html'
+      #   code: 1120-5
+      #   display: Medical Clinic
+
     text: Hospital
 telecom:
 - system: phone
