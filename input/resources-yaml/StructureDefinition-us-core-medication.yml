@@ -1,7 +1,7 @@
 resourceType: StructureDefinition
 id: us-core-medication
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
-version: 3.1.1
+
 name: USCoreMedicationProfile
 title: US Core Medication Profile
 status: draft
@@ -18,7 +18,7 @@ jurisdiction:
   - system: urn:iso:std:iso:3166
     code: US
     display: United States of America
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Medication

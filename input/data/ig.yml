@@ -8,10 +8,10 @@ extension:
 - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
   valueInteger: 3
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 8.0.0-R6preview
+version: 8.0.0-R6
 name: USCore
 title: US Core Implementation Guide
-status: active
+status: draft
 date: '2025-05-29'
 publisher: HL7 International / Cross-Group Projects
 contact:
@@ -2669,7 +2669,7 @@ definition:
   - code:
       code: releaselabel
       system: http://hl7.org/fhir/tools/CodeSystem/ig-parameters
-    value: STU 8 R6 Preview
+    value: R6 Prototype
   - code:
       code: path-resource
       system: http://hl7.org/fhir/guide-parameter-code

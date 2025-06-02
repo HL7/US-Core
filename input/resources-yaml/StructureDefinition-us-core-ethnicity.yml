@@ -1,7 +1,7 @@
 resourceType: StructureDefinition
 id: us-core-ethnicity
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
-version: 3.1.1
+
 name: USCoreEthnicityExtension
 title: US Core Ethnicity Extension
 status: draft
@@ -24,7 +24,7 @@ jurisdiction:
     code: US
     display: United States of America
 purpose: Complies with 2015 Edition Common Clinical Data Set for patient race.
-fhirVersion: 4.0.1
+
 kind: complex-type
 abstract: false
 context:

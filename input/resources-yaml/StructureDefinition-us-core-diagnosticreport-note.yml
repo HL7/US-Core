@@ -6,7 +6,7 @@ title: US Core DiagnosticReport Profile for Report and Note Exchange
 status: draft
 date: 2023-10-17
 description: 'The US Core DiagnosticReport Profile for Report and Note Exchange inherits from the FHIR [DiagnosticReport](https://hl7.org/fhir/R4/diagnosticreport.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the DiagnosticReport resource. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. Before reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of the US Core DiagnosticReport Profile for Report and Note exchange and the US Core DocumentReference Profile.'
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: DiagnosticReport

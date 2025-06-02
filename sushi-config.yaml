@@ -6,7 +6,7 @@ id: hl7.fhir.us.core
 canonical: 'http://hl7.org/fhir/us/core'
 name: USCore
 title: US Core Implementation Guide
-status: active
+status: draft
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
     valueCode: cgp  # <<< The value must be the code for the workgroup
@@ -55,7 +55,7 @@ description: >-
 
 license: CC0-1.0
 date: 2025-05-29
-version: '8.0.0-R6preview'
+version: '8.0.0-R6'
 # =============== latest version of FHIR ============
 fhirVersion: 6.0.0-ballot3
 dependencies:
@@ -307,7 +307,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   auto-oid-root: 2.16.840.1.113883.4.642.40.2
 copyrightyear: '2025+'
 # releaselabel: CI Build
-releaselabel: STU 8 R6 Preview
+releaselabel: R6 Prototype
 # releaselabel: STU 8 Ballot
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

@@ -1,7 +1,7 @@
 resourceType: StructureDefinition
 id: us-core-vital-signs
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
-version: 3.2.0
+
 name: USCoreVitalSignsProfile
 title: US Core Vital Signs Profile
 status: draft
@@ -10,7 +10,7 @@ date: 2023-10-17
 description: This profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html)  and defines *additional* constraints on the Observation resource to represent vital  signs observations. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.  This US Core profiles that are derived from this profile  are listed below.
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
   License
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Observation
