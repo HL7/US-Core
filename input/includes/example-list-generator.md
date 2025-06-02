@@ -1,6 +1,6 @@
 {% assign my_types = "" %}
 {% for p in site.data.ig.definition.resource %}
-  {%- if p.exampleBoolean or p.exampleCanonical -%}
+  {%- if p.isExample -%}
 
     {% assign my_types =  my_types | append: "," | append: p.reference.reference | split: '/' | first %}
 
@@ -14,7 +14,7 @@
 ### {{i}}
 <ul>
   {%- for p in site.data.ig.definition.resource -%}
-      {%- if p.exampleBoolean or p.exampleCanonical -%}
+      {%- if p.isExample -%}
         {%- assign type =  p.reference.reference | split: '/' | first -%}
             {%- if type == i %}
 

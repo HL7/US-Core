@@ -1,3 +1,5 @@
+[example]: AllergyIntolerance-example.html
+[non-pharmacologic-agent-example]: AllergyIntolerance-non-pharmacologic-agent-example.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
 [USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html
 [USCoreAuthenticationTimeExtension]: StructureDefinition-us-core-authentication-time.html
