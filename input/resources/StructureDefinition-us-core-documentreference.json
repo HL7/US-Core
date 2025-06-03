@@ -222,8 +222,7 @@
                         "key": "us-core-6",
                         "severity": "error",
                         "human": "DocumentReference.content.attachment.url or DocumentReference.content.attachment.data or both SHALL be present.",
-                        "expression": "url.exists() or data.exists()",
-                        "xpath": "f:url or f:content"
+                        "expression": "url.exists() or data.exists()"
                     }
                 ],
                 "mustSupport": true

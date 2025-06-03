@@ -53,7 +53,7 @@ differential:
       severity: error
       human: NPI must be 10 digits
       expression: value.matches('^[0-9]{10}$')
-      xpath: f:value/f:matches(value,/^[0-9]{10}$/)
+      
     - key: us-core-17
       severity: error
       human: NPI check digit must be valid (Luhn algorithm check)
@@ -77,7 +77,7 @@ differential:
       severity: error
       human: CLIA number must be 10 digits with a letter "D" in third position
       expression: value.matches('^[0-9]{2}D[0-9]{7}$')
-      xpath: f:value/f:matches(value,/^[0-9]{2}D[0-9]{7}$/)
+      
     mustSupport: false
   - id: Organization.identifier:NAIC
     path: Organization.identifier
@@ -93,7 +93,7 @@ differential:
       severity: error
       human: NAIC must be 5 digits
       expression: value.matches('^[0-9]{5}$')
-      xpath: f:value/f:matches(value,/^[0-9]{5}$/)
+      
     mustSupport: false
   - id: Organization.active
     path: Organization.active

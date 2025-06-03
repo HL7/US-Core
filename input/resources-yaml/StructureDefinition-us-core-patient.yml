@@ -190,9 +190,6 @@ differential:
       human: At least name.given and/or name.family are present or, if neither is
         available, the Data Absent Reason Extension is present.
       expression: (family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()
-      xpath: (/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'
-        and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason')
-        and (/f:family or /f:given))
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
@@ -400,9 +397,11 @@ differential:
   - id: Patient.communication.language
     path: Patient.communication.language
     mustSupport: true
+    
     # update to THO VS for V8
+    # Change Binding Strength in R6 
     binding:
-      strength: extensible
+      strength: required #extensible
       valueSet: http://terminology.hl7.org/ValueSet/Languages
     mapping:
     - identity: argonaut-dq-dstu2

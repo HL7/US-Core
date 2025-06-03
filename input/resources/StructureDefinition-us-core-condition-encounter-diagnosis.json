@@ -27,6 +27,21 @@
                 ]
             },
             {
+                "id": "Condition.clinicalStatus",
+                "path": "Condition.clinicalStatus",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Condition.clinicalStatus"
+                    }
+                ]
+            },
+            {
                 "id": "Condition.category",
                 "path": "Condition.category",
                 "slicing": {

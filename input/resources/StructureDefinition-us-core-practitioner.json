@@ -79,8 +79,7 @@
                         "key": "us-core-16",
                         "severity": "error",
                         "human": "NPI must be 10 digits",
-                        "expression": "value.matches('^[0-9]{10}$')",
-                        "xpath": "f:value/f:matches(value,/^[0-9]{10}$/)"
+                        "expression": "value.matches('^[0-9]{10}$')"
                     },
                     {
                         "key": "us-core-17",

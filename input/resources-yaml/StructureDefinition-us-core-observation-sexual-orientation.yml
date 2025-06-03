@@ -42,8 +42,6 @@ differential:
         or a data absent reason must be present
       expression: (component.empty() and hasMember.empty()) implies (dataAbsentReason.exists()
         or value.exists())
-      xpath: exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.),
-        'value')]) or exists(f:dataAbsentReason)
     mustSupport: false
     mapping:
     - identity: argonaut-dq-dstu2

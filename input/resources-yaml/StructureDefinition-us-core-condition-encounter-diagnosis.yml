@@ -32,15 +32,18 @@ differential:
   #     profile:
   #     - http://hl7.org/fhir/StructureDefinition/condition-assertedDate
   #   mustSupport: true
-  # - id: Condition.clinicalStatus
-  #   path: Condition.clinicalStatus
-  #   mustSupport: true
-  #   binding:
-  #     strength: required
-  #     valueSet: http://hl7.org/fhir/ValueSet/condition-clinical
-  #   mapping:
-  #   - identity: argonaut-dq-dstu2
-  #     map: Condition.clinicalStatus
+
+# Min Cardinality changed from 0 to 1 in R6
+
+  - id: Condition.clinicalStatus
+    path: Condition.clinicalStatus
+    mustSupport: true
+    binding:
+      strength: required
+      valueSet: http://hl7.org/fhir/ValueSet/condition-clinical
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Condition.clinicalStatus
   # - id: Condition.verificationStatus
   #   path: Condition.verificationStatus
   #   mustSupport: true

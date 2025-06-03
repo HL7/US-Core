@@ -39,7 +39,7 @@ differential:
         or a data absent reason must be present
       expression: (component.empty() and hasMember.empty()) implies (dataAbsentReason.exists()
         or value.exists())
-      xpath: exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.),
+      
         'value')]) or exists(f:dataAbsentReason)
     mustSupport: false
   - id: Observation.status
@@ -127,7 +127,7 @@ differential:
       severity: error
       human: Datetime must be at least to day.
       expression: $this is dateTime implies $this.toString().length() >= 10
-      xpath: f:matches(effectiveDateTime,/\d{4}\d{2}\d{2}(T\d{2}:\d{2}:\d{2}(\.\d{3})?(Z|[-+]\d{2}:\d{2})?)?$/)
+      
     mustSupport: true
 
 # ============= new for USCDI 5 =================
@@ -200,7 +200,7 @@ differential:
       severity: error
       human: SHALL use UCUM for coded quantity units.
       expression: ofType(Quantity).system.empty() or ofType(Quantity).system = 'http://unitsofmeasure.org'
-      xpath: not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
+      
     mustSupport: true
   - id: Observation.dataAbsentReason
     path: Observation.dataAbsentReason

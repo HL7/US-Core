@@ -23,8 +23,7 @@
                         "key": "us-core-15",
                         "severity": "error",
                         "human": "Member Id in Coverage.identifier or Coverage.subscriberId SHALL be present",
-                        "expression": "identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203' and code='MB').exists() or subscriberId.exists()",
-                        "xpath": "f:identifier or f:subscriberId"
+                        "expression": "identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203' and code='MB').exists() or subscriberId.exists()"
                     }
                 ]
             },

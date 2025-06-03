@@ -199,8 +199,7 @@
                         "key": "us-core-6",
                         "severity": "error",
                         "human": "At least name.given and/or name.family are present or, if neither is available, the Data Absent Reason Extension is present.",
-                        "expression": "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
-                        "xpath": "(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:family or /f:given))"
+                        "expression": "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
                     }
                 ],
                 "mustSupport": true,
@@ -510,7 +509,7 @@
                 "path": "Patient.communication.language",
                 "mustSupport": true,
                 "binding": {
-                    "strength": "extensible",
+                    "strength": "required",
                     "valueSet": "http://terminology.hl7.org/ValueSet/Languages"
                 },
                 "mapping": [

@@ -1,5 +1,14 @@
 [example]: AllergyIntolerance-example.html
 [non-pharmacologic-agent-example]: AllergyIntolerance-non-pharmacologic-agent-example.html
+[condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
+[deceased-example]: Patient-deceased-example.html
+[encounter-diagnosis-example1]: Condition-encounter-diagnosis-example1.html
+[encounter-diagnosis-example2]: Condition-encounter-diagnosis-example2.html
+[health-concern-example]: Condition-health-concern-example.html
+[child-example]: Patient-child-example.html
+[example]: Patient-example.html
+[infant-example]: Patient-infant-example.html
+[condition-SDOH-example]: Condition-condition-SDOH-example.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
 [USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html
 [USCoreAuthenticationTimeExtension]: StructureDefinition-us-core-authentication-time.html

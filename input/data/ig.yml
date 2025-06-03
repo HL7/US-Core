@@ -114,6 +114,77 @@ definition:
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
   - reference:
+      reference: Condition/condition-duodenal-ulcer
+    description: This example of a US Core Condition Problems and Health Concerns
+      Profile illustrates its use to capture information about a patient's active
+      duodenal ulcer with a category of 'problem-list-item'.
+    name: Condition Duodenal Ulcer Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+  - reference:
+      reference: Patient/deceased-example
+    description: This is a deceased patient example for the *US Core Patient Profile*.
+    name: Deceased Patient Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - reference:
+      reference: Condition/encounter-diagnosis-example1
+    description: This example of a US Core Condition Encounter Diagnosis Profile illustrates
+      its use to capture information about a patient's encounter diagnosis.
+    name: Encounter Diagnosis Example 1
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
+  - reference:
+      reference: Condition/encounter-diagnosis-example2
+    description: This example of a US Core Condition Encounter Diagnosis Profile illustrates
+      its use to capture information about a patient's encounter diagnosis.
+    name: Encounter Diagnosis Example 2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
+  - reference:
+      reference: Condition/health-concern-example
+    description: This example of a US Core Condition Problems and Health Concerns
+      Profile illustrates its use to capture information about a patient's health
+      concern.
+    name: Health Concern Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+  - reference:
+      reference: Patient/child-example
+    description: This is a patient child example for the *US Core Patient Profile*.
+    name: Patient Child Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - reference:
+      reference: Patient/example
+    description: This is a patient example for the *US Core Patient Profile*.
+    name: Patient Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - reference:
+      reference: Patient/infant-example
+    description: This is a patient infant example for the *US Core Patient Profile*.
+    name: Patient Infant Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - reference:
+      reference: Condition/condition-SDOH-example
+    description: This example of a US Core Condition Problems and Health Concerns
+      Profile illustrates its use to capture information about a patient's SDOH Problem/Health
+      Concern.
+    name: SDOH Problem/Health Concern Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+  - reference:
       reference: StructureDefinition/us-core-adi-documentreference
     description: The US Core Advance Directive Information (ADI) DocumentReference
       Profile inherits from the FHIR [DocumentReference](https://hl7.org/fhir/R4/documentreference.html)

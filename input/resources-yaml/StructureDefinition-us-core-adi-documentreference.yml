@@ -218,7 +218,7 @@ differential:
       human: DocumentReference.content.attachment.url or DocumentReference.content.attachment.data
         or both SHALL be present.
       expression: url.exists() or data.exists()
-      xpath: f:url or f:content
+      
     mustSupport: true
   - id: DocumentReference.content.attachment.contentType
     path: DocumentReference.content.attachment.contentType
