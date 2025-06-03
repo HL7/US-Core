@@ -132,6 +132,15 @@
                     },
                     {
                         "code": "Period"
+                    },
+                    {
+                        "code": "Attachment"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+                        ]
                     }
                 ],
                 "condition": [
@@ -178,7 +187,26 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen",
+                            "http://hl7.org/fhir/StructureDefinition/Group"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],

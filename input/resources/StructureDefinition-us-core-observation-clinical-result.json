@@ -5,6 +5,7 @@
     "name": "USCoreObservationClinicalResultProfile",
     "title": "US Core Observation Clinical Result Profile",
     "status": "draft",
+    "experimental": true,
     "date": "2023-10-17",
     "description": "The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.\n\nThe US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
     "kind": "resource",
@@ -22,7 +23,7 @@
                         "key": "us-core-2",
                         "severity": "error",
                         "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
-                        "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())\n'value')]) or exists(f:dataAbsentReason)"
+                        "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"
                     }
                 ],
                 "mustSupport": false
@@ -81,7 +82,14 @@
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
                             "http://hl7.org/fhir/StructureDefinition/Group",
                             "http://hl7.org/fhir/StructureDefinition/Device",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
+                            "http://hl7.org/fhir/StructureDefinition/Substance",
+                            "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
+                            "http://hl7.org/fhir/StructureDefinition/NutritionProduct"
                         ],
                         "_targetProfile": [
                             {
@@ -89,6 +97,62 @@
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -304,6 +368,15 @@
                     },
                     {
                         "code": "Period"
+                    },
+                    {
+                        "code": "Attachment"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+                        ]
                     }
                 ],
                 "condition": [

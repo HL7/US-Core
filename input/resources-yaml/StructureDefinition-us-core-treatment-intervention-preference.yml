@@ -162,4 +162,13 @@ differential:
     - code: time
     - code: dateTime
     - code: Period
+
+
+# Added Choice Datatypes in R6
+    - code: Attachment
+    - code: Reference
+      targetProfile:
+        - 'http://hl7.org/fhir/StructureDefinition/MolecularSequence'
+
+
     mustSupport: true

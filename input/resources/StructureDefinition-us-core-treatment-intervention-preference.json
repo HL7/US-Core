@@ -275,6 +275,15 @@
                     },
                     {
                         "code": "Period"
+                    },
+                    {
+                        "code": "Attachment"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+                        ]
                     }
                 ],
                 "mustSupport": true

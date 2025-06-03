@@ -5,6 +5,7 @@
     "name": "USCoreObservationScreeningAssessmentProfile",
     "title": "US Core Observation Screening Assessment Profile",
     "status": "draft",
+    "experimental": true,
     "date": "2024-11-16",
     "description": "The US Core Observation Screening Assessment Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. Beginning with US Core Version 6.0.0, this profile supersedes the US Core Observation Survey Profile (see the [Changes Between Versions](changes-between-versions.html) page for a summary of cross-version comparisons of US Core Profiles).  This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Health Status Assessments* Data Class. It sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select \"check all that apply\" type questions. This profile specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. Before reviewing this profile, implementers are encouraged to read the Screening and Assessments guidance page, which documents the process of recording responses and capturing assertions/determinations resulting from surveys and questionnaires.",
     "kind": "resource",
@@ -131,7 +132,14 @@
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
                             "http://hl7.org/fhir/StructureDefinition/Group",
                             "http://hl7.org/fhir/StructureDefinition/Device",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
+                            "http://hl7.org/fhir/StructureDefinition/Substance",
+                            "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
+                            "http://hl7.org/fhir/StructureDefinition/NutritionProduct"
                         ],
                         "_targetProfile": [
                             {
@@ -139,6 +147,62 @@
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -342,6 +406,15 @@
                     },
                     {
                         "code": "Period"
+                    },
+                    {
+                        "code": "Attachment"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+                        ]
                     }
                 ],
                 "condition": [

@@ -5,6 +5,7 @@
     "name": "USCoreSimpleObservationProfile",
     "title": "US Core Simple Observation Profile",
     "status": "draft",
+    "experimental": true,
     "date": "2024-11-16",
     "description": "The US Core Simple Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This US Core FHIR Profile captures any \"simple\" observations not covered by other US Core Observation profiles. It represents any observation not classified as vital signs, laboratory,  imaging, or other specific observation types. This profile sets minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about patient health status or other general observations. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "kind": "resource",
@@ -88,7 +89,14 @@
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
                             "http://hl7.org/fhir/StructureDefinition/Group",
                             "http://hl7.org/fhir/StructureDefinition/Device",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
+                            "http://hl7.org/fhir/StructureDefinition/Substance",
+                            "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
+                            "http://hl7.org/fhir/StructureDefinition/NutritionProduct"
                         ],
                         "_targetProfile": [
                             {
@@ -96,6 +104,62 @@
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -292,6 +356,15 @@
                     },
                     {
                         "code": "Period"
+                    },
+                    {
+                        "code": "Attachment"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+                        ]
                     }
                 ],
                 "mustSupport": true
