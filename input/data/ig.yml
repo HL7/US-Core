@@ -97,6 +97,116 @@ definition:
     valueCode: hl7.fhir.us.core#3.1.1
   resource:
   - reference:
+      reference: Observation/10-minute-apgar-color
+    description: This example of a US Core Survey Observation Profile illustrates
+      its use to directly capture individual surveys assessment items as an observations.
+      It is not derived from a FHIR QuestionnaireResponse.
+    name: 10 minute Apgar Color Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/10-minute-apgar-heart-rate
+    description: This example of a US Core Survey Observation Profile illustrates
+      its use to directly capture individual surveys assessment items as an observations.
+      It is not derived from a FHIR QuestionnaireResponse.
+    name: 10 minute Apgar Heart Rate Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/10-minute-apgar-muscle-tone
+    description: This example of a US Core Survey Observation Profile illustrates
+      its use to directly capture individual surveys assessment items as an observations.
+      It is not derived from a FHIR QuestionnaireResponse.
+    name: 10 minute Apgar Muscle Tone Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/10-minute-apgar-reflex-irritability
+    description: This example of a US Core Survey Observation Profile illustrates
+      its use to directly capture individual surveys assessment items as an observations.
+      It is not derived from a FHIR QuestionnaireResponse..
+    name: 10 minute Apgar Reflex Irritability Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/10-minute-apgar-respiratory-effort
+    description: This example of a US Core Survey Observation Profile illustrates
+      its use to directly capture individual surveys assessment items as an observations.
+      It is not derived from a FHIR QuestionnaireResponse.
+    name: 10 minute Apgar Respiratory effort Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/10-minute-apgar-score
+    description: This example of a US Core Survey Observation Profile illustrates
+      its use to directly capture individual surveys assessment items as an observations.
+      It is not derived from a FHIR QuestionnaireResponse.
+    name: 10 Minute Apgar Score Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/10-minute-apgar-score-panel
+    description: This example of a US Core Survey Observation Profile illustrates
+      its use to directly capture surveys assessments as a panel of observations.
+      It is not derived from a FHIR QuestionnaireResponse.
+    name: 10 Minute Apgar Score Panel Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/ADI-example
+    description: This is a Observation example for the USCDI5 ADI Observation Data
+      Element to show whether and location of a patient has an advance directive using
+      code 45473-6 (Advance healthcare directive completed) and a SNOMED CT value
+      of "Yes" with Supporting info Extensions linking the to the documents
+    name: ADI Observation Presence ADI Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
+  - reference:
+      reference: Observation/no-ADI-example
+    description: This is a Observation example for the USCDI5 ADI Observation Data
+      Element to show whether a patient has an advance directive using code 45473-6
+      (Advance healthcare directive completed). and a SNOMED CT value of "No".
+    name: ADI Observation Presence No ADI Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
+  - reference:
+      reference: Observation/AHC-HRSN-item-example-68517-2
+    description: This AHC HRSN Item Example 68517-2 (How many times in the past 12
+      months have you had 5 or more drinks in a day (males) or 4 or more drinks in
+      a day (females)?) is an example of the *US Core Observation Screening and Assessment
+      Profile* and is referenced by the *ServiceRequest for Rehab Example*
+    name: Ahc-Hrsn Item Observation Example 68517-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/alcohol-use-status
+    description: This is an alcohol-use-status example for the *Simple Observation
+      Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html)
+      guidance using Simple Observations.
+    name: Alcohol Use Status Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/alcoholic-drinks-per-day
+    description: This is an Alcoholic Drinks Per Day example for the *Simple Observation
+      Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html)
+      guidance using Simple Observations.
+    name: Alcoholic Drinks Per Day Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
       reference: AllergyIntolerance/example
     description: This is a allergyintolerance example for the *US Core AllergyIntolerance
       Profile*.
@@ -114,6 +224,112 @@ definition:
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
   - reference:
+      reference: Observation/at-home-in-vitro-test
+    description: This is an At home in vitro test example for the *US Core Observation
+      Lab Profile*, with a coded result value.
+    name: At Home In Vitro Test Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/AUDIT-C-item-example-68517-2
+    description: This is a Audit-C Item Example 68517-2 (How many times in the past
+      year have you have X or more drinks in a day?) for the *US Core Observation
+      Screening Assessment Profile*
+    name: Audit-C Item Example 68517-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/AUDIT-C-item-example-68519-8
+    description: This is a Audit-C Item Example 68519-8 (How many standard drinks
+      containing alcohol do you have on a typical day?) for the *US Core Observation
+      Screening Assessment Profile*
+    name: Audit-C Item Example 68519-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/AUDIT-C-item-example-68520-6
+    description: This is a Audit-C Item Example 68520-6 (How often do you have 6 or
+      more drinks on 1 occasion?) for the *US Core Observation Screening Assessment
+      Profile*
+    name: Audit-C Item Example 68520-6
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/AUDIT-C-item-example-75626-2
+    description: This is a Audit-C Item Example 75626-2 (Total score [AUDIT-C]) for
+      the *US Core Observation Screening Assessment Profile*
+    name: Audit-C Item Example 75626-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/AUDIT-C-panel-example-72109-2
+    description: This is a Audit-C Panel Example 72109-2 (Alcohol Use Disorder Identification
+      Test - Consumption [AUDIT-C]) for the *US Core Observation Screening Assessment
+      Profile*
+    name: Audit-C Panel Example 72109-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/average-blood-pressure
+    description: This is an average blood pressure example for the *US Core Average
+      Blood Pressure Profile*.
+    name: Average Blood Pressure Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure
+  - reference:
+      reference: Observation/blood-pressure
+    description: This is a blood pressure example for the *Vitalsigns Profile*.
+    name: Blood Pressure Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
+  - reference:
+      reference: Observation/bmi
+    description: This is a BMI example for the *Vitalsigns Profile*.
+    name: BMI Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi
+  - reference:
+      reference: Observation/bp-data-absent
+    description: This is a bp data absent example for the *Vitalsigns Profile* showing
+      how to reprsesent blood pressure with a missing diastolic measurement.
+    name: BP Data Absent Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
+  - reference:
+      reference: Observation/capillary-refill-time-nail-bed
+    description: This is a Capillary refill Time Nail Bed Example for the *Clinical
+      Test Result Observation Profile*.
+    name: Capillary refill Time Nail Bed Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/care-experience-preference
+    description: This is an care experience preference example for the *Care Experience
+      Profile*.  It is based on the *US Core Simple Observation Profile*.
+    name: Care Experience Preference Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference
+  - reference:
+      reference: Observation/pack-years-example
+    description: This example for the *US Core Smokingstatus Profile* shows a Quantitative
+      result.
+    name: Cigarette Pack-Years Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
+  - reference:
       reference: Condition/condition-duodenal-ulcer
     description: This example of a US Core Condition Problems and Health Concerns
       Profile illustrates its use to capture information about a patient's active
@@ -129,6 +345,70 @@ definition:
     isExample: true
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - reference:
+      reference: Observation/dxa-femur-l-armass-bmd
+    description: This is a DXA Femur-L ArMass BMD Example for the *Imaging Result
+      Observation Profile*.
+    name: DXA Femur-L ArMass BMD Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/dxa-femur-l-t-score-bmd
+    description: This is a DXA Femur-L T-score BMD Example for the *Clinical Test
+      Result Observation Profile*.
+    name: DXA Femur-L T-score BMD Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/dxa-femur-l-z-score-bmd
+    description: This is a DXA Femur-L Z-score BMD Example for the *Imaging Result
+      Observation Profile*.
+    name: DXA Femur-L Z-score BMD Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/dxa-hip-l-armass-bmd
+    description: This is a DXA Hip-L ArMass BMD Example for the *Imaging Result Observation
+      Profile*.
+    name: DXA Hip-L ArMass BMD Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/dxa-hip-l-t-score-bmd
+    description: This is a DXA Hip-L T-score BMD Example for the *Imaging Result Observation
+      Profile*.
+    name: DXA Hip-L T-score BMD Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/dxa-hip-l-z-score-bmd
+    description: This is a DXA Hip-L Z-score BMD Example for the *Imaging Result Observation
+      Profile*.
+    name: DXA Hip-L Z-score BMD Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/ekg-impression
+    description: This is a EKG impression Example for the *Clinical Test Result Observation
+      Profile*.
+    name: EKG impression Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/ekg-lead
+    description: This is a EKG lead Example for the *Clinical Test Result Observation
+      Profile*.
+    name: EKG lead Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Condition/encounter-diagnosis-example1
     description: This example of a US Core Condition Encounter Diagnosis Profile illustrates
@@ -146,6 +426,66 @@ definition:
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
   - reference:
+      reference: Observation/cbc-erythrocytes
+    description: This is a erythrocytes example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Erythrocytes Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/EVS-item-example-68516-4
+    description: This is a Evs Item Example 68516-4 (On those days that you engage
+      in moderate to strenuous exercise, how many minutes, on average, do you exercise?)
+      for the *US Core Observation Screening Assessment Profile*
+    name: Evs Item Example 68516-4
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/EVS-item-example-89555-7
+    description: This is a Evs Item Example 89555-7 (How many D per W did you engage
+      in moderate to strenuous physical activity in the last 30D) for the *US Core
+      Observation Screening Assessment Profile*
+    name: Evs Item Example 89555-7
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/EVS-panel-example-89574-8
+    description: This is a Evs Panel Example 89574-8 (Exercise Vital Sign (EVS)) for
+      the *US Core Observation Screening Assessment Profile*
+    name: Evs Panel Example 89574-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/exercise-per-day
+    description: This is an minutes exercise per day example for the *Simple Observation
+      Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html)
+      guidance using Simple Observations.
+    name: Exercise Per Day Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/exercise-per-week
+    description: This is a days exercise per week example for the *Simple Observation
+      Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html)
+      guidance using Simple Observations.
+    name: Exercise Per Week Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/head-circumference
+    description: This is a head circumference example for the *US Core Head Circumference
+      Profile*.
+    name: Head Circumference Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference
+  - reference:
       reference: Condition/health-concern-example
     description: This example of a US Core Condition Problems and Health Concerns
       Profile illustrates its use to capture information about a patient's health
@@ -154,6 +494,184 @@ definition:
     isExample: true
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+  - reference:
+      reference: Observation/heart-rate
+    description: This is a heart rate example for the *Vitalsigns Profile*.
+    name: Heart Rate Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate
+  - reference:
+      reference: Observation/heart-rate-rhythm
+    description: This is a Heart rate rhythm Example for the *Clinical Test Result
+      Observation Profile*.
+    name: Heart rate rhythm Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/height
+    description: This is a height example for the *Vitalsigns Profile*.
+    name: Height Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height
+  - reference:
+      reference: Observation/cbc-hematocrit
+    description: This is a hematocrit example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Hematocrit Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-hemoglobin
+    description: This is a hemoglobin example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Hemoglobin Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/HVS-item-example-88122-7
+    description: This is a HVS Item Example 88122-7 ((I/We) worried whether (my/our)
+      food would run out before (I/we) got money to buy more.) for the *US Core Observation
+      Screening Assessment Profile*
+    name: HVS Item Example 88122-7
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/HVS-item-example-88123-5
+    description: This is a HVS Item Example 88123-5 (The food that (I/we) bought just
+      didn't last, and (I/we) didn't have money to get more.) for the *US Core Observation
+      Screening Assessment Profile*
+    name: HVS Item Example 88123-5
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/HVS-item-example-88124-3
+    description: This is a HVS Item Example 88124-3 (Food insecurity risk) for the
+      *US Core Observation Screening Assessment Profile*
+    name: HVS Item Example 88124-3
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/HVS-panel-example-88121-9
+    description: This is a HVSPanel Example 88121-9 (Hunger Vital Sign [HVS]) for
+      the *US Core Observation Screening Assessment Profile*
+    name: HVSPanel Example 88121-9
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/jugular-vein-distension
+    description: This is a Jugular vein distension Example for the *Clinical Test
+      Result Observation Profile*.
+    name: Jugular vein distension Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/length
+    description: This is a length example for the *Vitalsigns Profile* which shows
+      how body length (typically used for infants) is represented using 8306-3 -*Body
+      height - lying* as an additional observation code.
+    name: Length Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height
+  - reference:
+      reference: Observation/cbc-leukocytes
+    description: This is a Leukocytes example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Leukocytes Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-mch
+    description: This is a MCH example for the *US Core Observation Lab Profile*.
+      It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: MCH Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-mchc
+    description: This is a MCHC example for the *US Core Observation Lab Profile*.
+      It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: MCHC Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-mcv
+    description: This is a MCV example for the *US Core Observation Lab Profile*.
+      It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: MCV Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/satO2-fiO2
+    description: This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry
+      Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental
+      oxygen.
+    name: Observation SatO2 FiO2 Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
+  - reference:
+      reference: Observation/observation-occupation
+    description: This example of the *US Core Observation Occupation Profile*  documents
+      a nursing assistant's work type.
+    name: Occupation Observation Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation
+  - reference:
+      reference: Observation/observation-occupation-industry-unknown
+    description: This example of the *US Core Observation Occupation Profile*  represents
+      a situation where the occupation is known, but the industry is not.
+    name: 'Occupation Observation Example: Industry Unknown'
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation
+  - reference:
+      reference: Observation/observation-occupation-unknown
+    description: This example of the *US Core Observation Occupation Profile*  represents
+      a situation where the industry is known, but the occupation is not.
+    name: 'Occupation Observation Example: Unknown Occupation'
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation
+  - reference:
+      reference: Observation/ofc-percentile
+    description: This is a OFC percentile example for the *Head Occipital Frontal
+      Circumference Percentile Profile*.
+    name: OFC Percentile Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
+  - reference:
+      reference: Observation/oxygen-saturation
+    description: This is a typical oxygen saturation example for the *US Core Pulse
+      Oximetry Profile* on room air where no oxygen concentration is recorded.
+    name: Oxygen Saturation Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
+  - reference:
+      reference: Observation/p-r-interval-ekg-lead
+    description: This is a P-R interval {EKG lead} Example for the *Clinical Test
+      Result Observation Profile*.
+    name: P-R interval {EKG lead} Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Patient/child-example
     description: This is a patient child example for the *US Core Patient Profile*.
@@ -176,6 +694,429 @@ definition:
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   - reference:
+      reference: Observation/pediatric-bmi-example
+    description: This is a pediatric BMI example for the *Pediatric BMI For Age Profile*.
+    name: Pediatric BMI Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age
+  - reference:
+      reference: Observation/pediatric-wt-example
+    description: This is a pediatric wt example for the *Pediatric Weight For Height
+      Profile*.
+    name: Pediatric Wt Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height
+  - reference:
+      reference: Observation/PHQ9-item-example-44250-9
+    description: This is a PHQ9 Item Example 44250-9 (Little interest or pleasure
+      in doing things in last 2 weeks) for the *US Core Observation Screening Assessment
+      Profile*
+    name: PHQ9 Item Example 44250-9
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44251-7
+    description: This is a PHQ9 Item Example 44251-7 (Poor appetite or overeating)
+      for the *US Core Observation Screening Assessment Profile*
+    name: PHQ9 Item Example 44251-7
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44252-5
+    description: This is a PHQ9 Item Example 44252-5 (Trouble concentrating on things,
+      such as reading the newspaper or watching television) for the *US Core Observation
+      Screening Assessment Profile*
+    name: PHQ9 Item Example 44252-5
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44253-3
+    description: This is a PHQ9 Item Example 44253-3 (Moving or speaking so slowly
+      that other people could have noticed. Or the opposite-being so fidgety or restless
+      that you have been moving around a lot more than usual) for the *US Core Observation
+      Screening Assessment Profile*
+    name: PHQ9 Item Example 44253-3
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44254-1
+    description: This is a PHQ9 Item Example 44254-1 (Feeling tired or having little
+      energy) for the *US Core Observation Screening Assessment Profile*
+    name: PHQ9 Item Example 44254-1
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44255-8
+    description: This is a PHQ9 Item Example 44255-8 (Feeling down, depressed, or
+      hopeless in last 2 weeks) for the *US Core Observation Screening Assessment
+      Profile*
+    name: PHQ9 Item Example 44255-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44258-2
+    description: This is a PHQ9 Item Example 44258-2 (Feeling bad about yourself-or
+      that you are a failure or have let yourself or your family down) for the *US
+      Core Observation Screening Assessment Profile*
+    name: PHQ9 Item Example 44258-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44259-0
+    description: This is a PHQ9 Item Example 44259-0 (Trouble falling or staying asleep,
+      or sleeping too much) for the *US Core Observation Screening Assessment Profile*
+    name: PHQ9 Item Example 44259-0
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44260-8
+    description: This is a PHQ9 Item Example 44260-8 (Thoughts that you would be better
+      off dead, or of hurting yourself in some way) for the *US Core Observation Screening
+      Assessment Profile*
+    name: PHQ9 Item Example 44260-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-44261-6
+    description: This is a PHQ9 Item Example 44261-6 (Patient Health Questionnaire
+      9 item (PHQ-9) total score [Reported]) for the *US Core Observation Screening
+      Assessment Profile*
+    name: PHQ9 Item Example 44261-6
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-item-example-69722-7
+    description: This is a PHQ9 Item Example 69722-7 (How difficult have these problems
+      made it for you to do your work, take care of things at home, or get along with
+      other people?) for the *US Core Observation Screening Assessment Profile*
+    name: PHQ9 Item Example 69722-7
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PHQ9-panel-example-44249-1
+    description: This is a PHQ9 Panel Example 44249-1 (PHQ-9 quick depression assessment
+      panel [Reported.PHQ]) for the *US Core Observation Screening Assessment Profile*
+    name: PHQ9 Panel Example 44249-1
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/cbc-platelets
+    description: This is a Platelets example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Platelets Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/PRAPARE-item-example-54899-0
+    description: This is a Prapare Item Example 54899-0 (Preferred language) for the
+      *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 54899-0
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-56051-6
+    description: This is a Prapare Item Example 56051-6 (Do you consider yourself
+      Hispanic/Latino?) for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 56051-6
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-56799-0
+    description: This is a Prapare Item Example 56799-0 (Address) for the *US Core
+      Observation Screening Assessment Profile*
+    name: Prapare Item Example 56799-0
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-63512-8
+    description: This is a Prapare Item Example 63512-8 (How many people are living
+      or staying at this address?) for the *US Core Observation Screening Assessment
+      Profile*
+    name: Prapare Item Example 63512-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-63586-2
+    description: This is a Prapare Item Example 63586-2 (What was your best estimate
+      of the total income of all family members from all sources, before taxes, in
+      last year?) for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 63586-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-67875-5
+    description: This is a Prapare Item Example 67875-5 (Employment status current)
+      for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 67875-5
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-71802-3
+    description: This is a Prapare Item Example 71802-3 (Housing status) for the *US
+      Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 71802-3
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-76437-3
+    description: This is a Prapare Item Example 76437-3 (Primary insurance) for the
+      *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 76437-3
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-76501-6
+    description: This is a Prapare Item Example 76501-6 (Within the last year, have
+      you been afraid of your partner or ex-partner?) for the *US Core Observation
+      Screening Assessment Profile*
+    name: Prapare Item Example 76501-6
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-82589-3
+    description: This is a Prapare Item Example 82589-3 (Highest level of educ) for
+      the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 82589-3
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93026-3
+    description: This is a Prapare Item Example 93026-3 (Do you feel physically and
+      emotionally safe where you currently live?) for the *US Core Observation Screening
+      Assessment Profile*
+    name: Prapare Item Example 93026-3
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93027-1
+    description: This is a Prapare Item Example 93027-1 (Are you a refugee?) for the
+      *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 93027-1
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93028-9
+    description: This is a Prapare Item Example 93028-9 (In the past year, have you
+      spent more than 2 nights in a row in a jail, prison, detention center, or juvenile
+      correctional facility?) for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 93028-9
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93029-7
+    description: 'This is a Prapare Item Example 93029-7 (How often do you see or
+      talk to people that you care about and feel close to (For example: talking to
+      friends on the phone, visiting friends or family, going to church or club meetings)?)
+      for the *US Core Observation Screening Assessment Profile*'
+    name: Prapare Item Example 93029-7
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93030-5
+    description: This is a Prapare Item Example 93030-5 (Has lack of transportation
+      kept you from medical appointments, meetings, work, or from getting things needed
+      for daily living?) for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 93030-5
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93033-9
+    description: This is a Prapare Item Example 93033-9 (Are you worried about losing
+      your housing?) for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 93033-9
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93034-7
+    description: This is a Prapare Item Example 93034-7 (Have you been discharged
+      from the armed forces of the United States?) for the *US Core Observation Screening
+      Assessment Profile*
+    name: Prapare Item Example 93034-7
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93035-4
+    description: This is a Prapare Item Example 93035-4 (At any point in the past
+      2 years, has season or migrant farm work been your or your family's main source
+      of income?) for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 93035-4
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-item-example-93038-8
+    description: This is a Prapare Item Example 93038-8 (Stress is when someone feels
+      tense, nervous, anxious or can't sleep at night because their mind is troubled.
+      How stressed are you?) for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Item Example 93038-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-multiselect-item-example-32624-9-answer0
+    description: This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race)
+      for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Multiselect-Item Example 32624-9-Answer0
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-multiselect-item-example-32624-9-answer1
+    description: This is a Prapare Multiselect-Item Example 32624-9-Answer1 (Race)
+      for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Multiselect-Item Example 32624-9-Answer1
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-multiselect-item-example-93031-3-answer0
+    description: This is a Prapare Multiselect-Item Example 93031-3-Answer0 (In the
+      past year, have you or any family members you live with been unable to get any
+      of the following when it was really needed?) for the *US Core Observation Screening
+      Assessment Profile*
+    name: Prapare Multiselect-Item Example 93031-3-Answer0
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-multiselect-item-example-93031-3-answer1
+    description: This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the
+      past year, have you or any family members you live with been unable to get any
+      of the following when it was really needed?) for the *US Core Observation Screening
+      Assessment Profile*
+    name: Prapare Multiselect-Item Example 93031-3-Answer1
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-panel-example-93025-5
+    description: This is a Prapare Panel Example 93025-5 (Protocol for Responding
+      to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]) for the
+      *US Core Observation Screening Assessment Profile*
+    name: Prapare Panel Example 93025-5
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-panel-example-93039-6
+    description: This is a Prapare Panel Example 93039-6 (Optional additional questions)
+      for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Panel Example 93039-6
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-panel-example-93040-4
+    description: This is a Prapare Panel Example 93040-4 (Social and emotional health)
+      for the *US Core Observation Screening Assessment Profile*
+    name: Prapare Panel Example 93040-4
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-panel-example-93041-2
+    description: This is a Prapare Panel Example 93041-2 (Money and resources) for
+      the *US Core Observation Screening Assessment Profile*
+    name: Prapare Panel Example 93041-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-panel-example-93042-0
+    description: This is a Prapare Panel Example 93042-0 (Family and home) for the
+      *US Core Observation Screening Assessment Profile*
+    name: Prapare Panel Example 93042-0
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/PRAPARE-panel-example-93043-8
+    description: This is a Prapare Panel Example 93043-8 (Personal characteristics)
+      for the *US Core Observation Screening Assessment Profile*
+    name: PRAPARE Panel Example 93043-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/pregnancy-intent
+    description: This is a pregnancy intent example for the *US Core Observation Pregnancy
+      Intent Profile*.
+    name: Pregnancy Intent Observation Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent
+  - reference:
+      reference: Observation/pregnancy-status
+    description: This is a pregnancy status example for the *US Core Observation Pregnancy
+      Status Profile*.
+    name: Pregnancy Status Observation Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus
+  - reference:
+      reference: Observation/pulse-intensity-palpation
+    description: This is a Pulse intensity Palpation Example for the *Clinical Test
+      Result Observation Profile*.
+    name: Pulse intensity Palpation Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/q-t-interval-ekg-lead
+    description: This is a Q-T interval {EKG lead} Example for the *Clinical Test
+      Result Observation Profile*.
+    name: Q-T interval {EKG lead} Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/qrs-dur-ekg-lead
+    description: This is a QRS dur {EKG lead} Example for the *Clinical Test Result
+      Observation Profile*.
+    name: QRS dur {EKG lead} Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/respiratory-rate
+    description: This is a respiratory rate example for the *Vitalsigns Profile*.
+    name: Respiratory Rate Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate
+  - reference:
       reference: Condition/condition-SDOH-example
     description: This example of a US Core Condition Problems and Health Concerns
       Profile illustrates its use to capture information about a patient's SDOH Problem/Health
@@ -184,6 +1125,195 @@ definition:
     isExample: true
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+  - reference:
+      reference: Observation/serum-bun
+    description: This is a BUN example for the *US Core Observation Lab Profile*.
+    name: Serum BUN Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-calcium
+    description: This is a serum calcium example for the *US Core Observation Lab
+      Profile*.
+    name: Serum Calcium Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-chloride
+    description: This is a serum chloride example for the *US Core Observation Lab
+      Profile*.
+    name: Serum Chloride Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-co2
+    description: This is a serum CO2 example for the *US Core Observation Lab Profile*.
+    name: Serum CO2 Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-creatinine
+    description: This is a serum creatinine example for the *US Core Observation Lab
+      Profile*.
+    name: Serum Creatinine Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-glucose
+    description: This is a serum glucose example for the *US Core Observation Lab
+      Profile*.
+    name: Serum Glucose Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-potassium
+    description: This is a serum potassium example for the *US Core Observation Lab
+      Profile*.
+    name: Serum Potassium Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-sodium
+    description: This is a serum sodium example for the *US Core Observation Lab Profile*.
+    name: Serum Sodium Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/simple-observation-cognitive-status
+    description: This *US Core Simple Observation Profile* is a cognitive status determination
+      which is not based on any formal assessment tool or survey. (This example is
+      adapted from the [PACIO Cognitive Status Implementation Guide ver 1.0.0](https://build.fhir.org/ig/HL7/PACIO-CognitiveStatus/).)
+    name: Simple Observation Cognitive Status Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/simple-observation-disability-status
+    description: This *US Core Simple Observation Profile* is a degree of depression
+      severity determination which is based on the results of a PHQ-9 (Patient Health
+      Questionnaire-9) screening.
+    name: Simple Observation Disability Status Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/simple-observation-functional-status
+    description: This *US Core Simple Observation Profile* is a functional status
+      determination which is not based on any formal assessment tool or survey.
+    name: Simple Observation Functional Status Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/simple-observation-sdoh
+    description: This *US Core Simple Observation Profile* is a SDOH determination
+      which is not based on any formal assessment tool or survey.
+    name: Simple Observation SDOH Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/some-day-smoker
+    description: This example for the *US Core Smokingstatus Profile* shows a coded
+      result.
+    name: Some Day Smoker Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
+  - reference:
+      reference: Observation/substance-use-status
+    description: This is an Substance-use-status example for the *Simple Observation
+      Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html)
+      guidance using Simple Observations.
+    name: Substance Use Status Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
+      reference: Observation/TAPS-item-example-75889-6
+    description: This is a Taps Item Example 75889-6 (How often have you had four
+      or more drinks in one day during the past year [Reported]) for the *US Core
+      Observation Screening Assessment Profile*
+    name: Taps Item Example 75889-6
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/TAPS-item-example-88037-7
+    description: This is a Taps Item Example 88037-7 (How often have you had five
+      or more drinks in one day during the past year [Reported]) for the *US Core
+      Observation Screening Assessment Profile*
+    name: Taps Item Example 88037-7
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/TAPS-item-example-96842-0
+    description: This is a Taps Item Example 96842-0 (How often have you used any
+      tobacco product in past 12 months) for the *US Core Observation Screening Assessment
+      Profile*
+    name: Taps Item Example 96842-0
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/TAPS-item-example-96843-8
+    description: This is a Taps Item Example 96843-8 (How often have you used illegal
+      or recreational drugs in past 12 months) for the *US Core Observation Screening
+      Assessment Profile*
+    name: Taps Item Example 96843-8
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/TAPS-item-example-96844-6
+    description: This is a Taps Item Example 96844-6 (How often have you used any
+      prescription medications just for the feeling, more than prescribed or that
+      were not prescribed for you in past 12 months [TAPS]) for the *US Core Observation
+      Screening Assessment Profile*
+    name: Taps Item Example 96844-6
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/TAPS-panel-example-96841-2
+    description: This is a Taps Panel Example 96841-2 (Tobacco, Alcohol, Prescription
+      medications, and other Substance use screen [TAPS]) for the *US Core Observation
+      Screening Assessment Profile*
+    name: Taps Panel Example 96841-2
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
+      reference: Observation/temperature
+    description: This is a temperature example for the *Vitalsigns Profile*.
+    name: Temperature Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature
+  - reference:
+      reference: Observation/treatment-intervention-preference
+    description: This is an intervention preference example for the *Treatment Intervention
+      Profile*.  It is based on the *US Core Simple Observation Profile*.
+    name: Treatment Intervention Preference Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference
+  - reference:
+      reference: Observation/urobilinogen
+    description: This is a urobilinogen example for the *US Core Observation Lab Profile*.
+    name: Urobilinogen Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
       reference: StructureDefinition/us-core-adi-documentreference
     description: The US Core Advance Directive Information (ADI) DocumentReference
@@ -2508,6 +3638,29 @@ definition:
       \ **SHOULD** use the standard FHIR SearchParameter.\n"
     name: USCoreSpecimenPatient
     isExample: false
+  - reference:
+      reference: Observation/weight
+    description: This is a weight example for the *Vitalsigns Profile*.
+    name: Weight Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight
+  - reference:
+      reference: Observation/xray-chest-findings
+    description: This example of a US Core Observation Clinical Result Profile illustrates
+      its use to capture information about a patient's radiology study findings.
+    name: Xray Chest Findings Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/xray-chest-impression
+    description: This example of a US Core Observation Clinical Result Profile illustrates
+      its use to capture information about a patient's radiology study impression.
+    name: Xray Chest Impression Example
+    isExample: true
+    profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   page:
     title: Table of Contents
     generation: html

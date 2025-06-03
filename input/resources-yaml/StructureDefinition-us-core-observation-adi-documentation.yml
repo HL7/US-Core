@@ -121,6 +121,7 @@ differential:
       path: Observation.performer
       # short: Who reviewed and verified the observation
       comment: An `Observation.performer` of type Practitioner or Organization typically made the Observation, and an `Observation.performer` of Patient or RelatedPerson usually is the source of information (for example, a next of kin who answers questions about the patient's advance directives) Systems may use the standard [Performer function Extension ](http://hl7.org/fhir/StructureDefinition/event-performerFunction) to distinguish the type of involvement of the performer in the Observation.
+      
       type:
         - code: Reference
           targetProfile:
@@ -130,6 +131,8 @@ differential:
             - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
             - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
             - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+            # Added Target References in R6  
+            - "http://hl7.org/fhir/StructureDefinition/HealthcareService"
           _targetProfile:
             - extension:
                 - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
@@ -149,6 +152,10 @@ differential:
             - extension:
                 - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
                   valueBoolean: false
+            - extension:
+                - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+                  valueBoolean: false
+
       mustSupport: true
     - id: "Observation.value[x]"
       path: "Observation.value[x]"

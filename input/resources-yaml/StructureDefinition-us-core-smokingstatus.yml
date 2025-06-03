@@ -100,6 +100,7 @@ differential:
 # ============= new for USCDI 5 =================
     - id: Observation.performer
       path: Observation.performer
+      
       type:
         - code: Reference
           targetProfile:
@@ -109,6 +110,8 @@ differential:
             - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
             - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
             - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+            # Added Target References in R6  
+            - "http://hl7.org/fhir/StructureDefinition/HealthcareService"
           _targetProfile:
             - extension:
                 - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
@@ -128,6 +131,10 @@ differential:
             - extension:
                 - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
                   valueBoolean: false
+            - extension:
+                - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+                  valueBoolean: false
+
       mustSupport: true
 # =================================================
 

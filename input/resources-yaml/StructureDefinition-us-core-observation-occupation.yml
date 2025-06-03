@@ -72,6 +72,7 @@ differential:
       valueBoolean: true
     short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
       \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: Who is responsible for the observation"
+      
     type:
       - code: Reference
         targetProfile:
@@ -81,10 +82,12 @@ differential:
           - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
           - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
           - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+          # Added Target References in R6  
+          - "http://hl7.org/fhir/StructureDefinition/HealthcareService"
         _targetProfile:
           - extension:
               - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-                valueBoolean: false
+                valueBoolean: true
           - extension:
               - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
                 valueBoolean: false
@@ -100,6 +103,10 @@ differential:
           - extension:
               - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
                 valueBoolean: false
+          - extension:
+              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+                valueBoolean: false
+
 # =================================================
 
 
