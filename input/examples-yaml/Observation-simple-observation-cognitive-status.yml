@@ -1,0 +1,32 @@
+resourceType: Observation
+id: simple-observation-cognitive-status
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Simple Observation Cognitive Status Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This *US Core Simple Observation Profile* is a cognitive status
+      determination which is not based on any formal assessment tool or survey. (This
+      example is adapted from the [PACIO Cognitive Status Implementation Guide ver
+      1.0.0](https://build.fhir.org/ig/HL7/PACIO-CognitiveStatus/).)
+status: final
+category:
+- coding:
+  - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+    code: cognitive-status
+    display: Cognitive Status
+code:
+  coding:
+  - system: http://loinc.org
+    code: 11332-4
+    display: History of Cognitive Function Narrative
+subject:
+  reference: Patient/example
+effectiveDateTime: '2022-11-27T19:22:02Z'
+performer:
+- reference: Practitioner/practitioner-1
+valueString: Alert and oriented x 3. She is independent in household finances, social
+  and community activities, coherent and appropriate communication. Appropriate attire
+  for location and weather.
