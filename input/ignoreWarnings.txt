@@ -11,12 +11,7 @@ ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attem
 
 # 02. ==== Since the ValueSet's grammar-based definition leads to an infinite set, it cannot be expanded and leads to the following error ===
 
-ERROR: ValueSet.where(id = 'simple-language'): Error from http://tx.fhir.org/r4: Language valuesets cannot be expanded as they are based on a grammar
-
 # 03. === Based upon FHIR-I's guidance on backporting CodeableReference dataype in R4 implementations, using the FHIR R5-based Sex Parameters for Clinical Use Extension is correct. The publication valiidation tool needs to updated to validate it correctly.  See this Chat: https://chat.fhir.org/#narrow/channel/179166-implementers/topic/UV.20Extension.20Sex.20Parameter.20for.20clinical.20use.20broken.20for.20R4.3F ===
-
-ERROR: Patient/example: Patient.extension[5].extension[1]: Extension.extension:supportingInfo.extension: max allowed = 0, but found 3 (from http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse|5.2.0)
-ERROR: Patient/example: Patient.extension[5].extension[1]: Extension.extension:supportingInfo.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse|5.2.0)
 
 # 04. === Because CPT does not recognize the "is-a" filter, the publication validator does not recognize it. See this Chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Clarify.20why.20terminology.20server.20is.20yielding.20this.20error  The publication and VSAC team is clarifying with CPT whether this filter is allowed.
 
