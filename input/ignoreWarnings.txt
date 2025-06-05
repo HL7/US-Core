@@ -97,7 +97,6 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A 
 # 18. ===  The following code system and value set are in FHIR Core/THO and not under the direct control of US Core editors ===
 
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
-Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-class|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
@@ -164,8 +163,6 @@ The element Observation.component.value[x] has a binding, and has multiple types
 
 # 32. ==== A US Direct Address for secure messaging in healthcare typically follows a format similar to an email address. for example `john.doe@direct.myhealthcareprovider.org`. Although this URL will not resolve, it represents a legitimate example of the direct address in the `endpoint.address` field. ===
 
-WARNING: Organization/saint-luke-w-endpoint: Organization.contained[0]/*Endpoint/75*/.address: No definition could be found for URL value 'mailto:Interoperability@DirectAddress.com'
-
 # 33. === To comply with Executive Order 14168, the following changes were made: 1)Removed USCDI mapping, guidance, and examples for the US Core Observation Sexual Orientation Profile  2) Removed the US Core Birth Sex Extension, guidance, and examples from the US Core Patient Profile 3) Deprecated the US Core Gender Identity Extension and removed it from the US Core Profile, USCDI mapping, guidance, and examples. Although the profiles and extensions will remain in this version of US Core to allow for backward compatibility - no examples will be supplied. ===
 
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex'): The Implementation Guide contains no examples for this extension
@@ -206,3 +203,7 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/observation-category'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.0.0', found versions: 1.0.0, 1.0.1. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/observation-category' to 'http://terminology.hl7.org/CodeSystem/observation-category|1.0.0'
 There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/condition-category'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.0.0', found versions: 1.0.0, 1.0.1. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/condition-category' to 'http://terminology.hl7.org/CodeSystem/condition-category|1.0.0'
 There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/provenance-participant-type'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.1.0', found versions: 1.0.0, 1.1.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/provenance-participant-type' to 'http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.1.0'
+
+# 39 === US Core reference the most recent published version of SDC. Ballot versions are released for public review and feedback during the HL7 balloting process and not intended for real-world implementation in production systems.
+
+The ImplementationGuide uses package hl7.fhir.uv.sdc#3.0.0 released on 2022-03-08, but the most recent appropriate version is 4.0.0-ballot. This reference is getting old and the more recent version should be considered
