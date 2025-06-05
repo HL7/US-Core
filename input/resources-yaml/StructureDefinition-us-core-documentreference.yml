@@ -63,16 +63,47 @@ differential:
         of categories supported for fetching and storing clinical notes. Note that
         other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category
+
   - id: DocumentReference.subject
     path: DocumentReference.subject
     min: 1
+
+# Added Target References in R6
+# Remove Target References in R6
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-      - http://hl7.org/fhir/StructureDefinition/Practitioner
-      - http://hl7.org/fhir/StructureDefinition/Group
-      - http://hl7.org/fhir/StructureDefinition/Device
+ # Added Target References in R6
+      - http://hl7.org/fhir/StructureDefinition/Resource
+      # Remove Target References in R6    
+      # - http://hl7.org/fhir/StructureDefinition/Practitioner
+      # - http://hl7.org/fhir/StructureDefinition/Group
+      # - http://hl7.org/fhir/StructureDefinition/Device
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      # - extension:
+      #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+      #     valueBoolean: false
+      # - extension:
+      #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+      #     valueBoolean: false
+    mustSupport: true
+
+ # New Element in R6 Replaces Document.context.encounter
+  - id: DocumentReference.context
+    path: DocumentReference.context
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter 
+      - http://hl7.org/fhir/StructureDefinition/Appointment
+      - http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -83,13 +114,24 @@ differential:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
     mustSupport: true
+  # - id: DocumentReference.context.encounter
+  #   path: DocumentReference.context.encounter
+  #   max: '1'
+  #   type:
+  #   - code: Reference
+  #     targetProfile:
+  #     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  #   mustSupport: true
+
+  - id: DocumentReference.period
+    path: DocumentReference.period
+    mustSupport: true
+
   - id: DocumentReference.date
     path: DocumentReference.date
     mustSupport: true
+  
   - id: DocumentReference.author
     path: DocumentReference.author
     type:
@@ -101,6 +143,9 @@ differential:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
       - http://hl7.org/fhir/StructureDefinition/Device
+# Added Target References in R6
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+      - http://hl7.org/fhir/StructureDefinition/Group
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -120,7 +165,14 @@ differential:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
     mustSupport: true
+    
   - id: DocumentReference.content
     path: DocumentReference.content
     mustSupport: true
@@ -151,23 +203,28 @@ differential:
     condition:
     - us-core-6
     mustSupport: true
-  - id: DocumentReference.content.format
-    path: DocumentReference.content.format
+
+ # New Element in R6 Replaces DocumentReference.content.format
+  - id: DocumentReference.content.profile
+    path: DocumentReference.content.profile
     mustSupport: true
+
+  - id: DocumentReference.content.profile.value[x]
+    path: DocumentReference.content.profile.value[x]
+    type:
+    - extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+        valueBoolean: true
+      code: Coding
+    - extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+        valueBoolean: true
+      code: uri
+    - extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+        valueBoolean: true
+      code: canonical
     binding:
       strength: extensible
       valueSet: http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes|2.1.0
-  - id: DocumentReference.context
-    path: DocumentReference.context
-    mustSupport: true
-  - id: DocumentReference.context.encounter
-    path: DocumentReference.context.encounter
-    max: '1'
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-    mustSupport: true
-  - id: DocumentReference.context.period
-    path: DocumentReference.context.period
     mustSupport: true

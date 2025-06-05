@@ -27,6 +27,10 @@
 [pack-years-example]: Observation-pack-years-example.html
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
 [deceased-example]: Patient-deceased-example.html
+[discharge-summary]: DocumentReference-discharge-summary.html
+[adi-dnr]: DocumentReference-adi-dnr.html
+[living-will]: DocumentReference-living-will.html
+[polst]: DocumentReference-polst.html
 [dxa-femur-l-armass-bmd]: Observation-dxa-femur-l-armass-bmd.html
 [dxa-femur-l-t-score-bmd]: Observation-dxa-femur-l-t-score-bmd.html
 [dxa-femur-l-z-score-bmd]: Observation-dxa-femur-l-z-score-bmd.html
@@ -37,6 +41,7 @@
 [ekg-lead]: Observation-ekg-lead.html
 [encounter-diagnosis-example1]: Condition-encounter-diagnosis-example1.html
 [encounter-diagnosis-example2]: Condition-encounter-diagnosis-example2.html
+[episode-summary]: DocumentReference-episode-summary.html
 [cbc-erythrocytes]: Observation-cbc-erythrocytes.html
 [EVS-item-example-68516-4]: Observation-EVS-item-example-68516-4.html
 [EVS-item-example-89555-7]: Observation-EVS-item-example-89555-7.html

@@ -455,6 +455,50 @@
       },
       {
         "reference": {
+          "reference": "DocumentReference/discharge-summary"
+        },
+        "description": "This is a discharge summary example for the *US Core DocumentReference*. It is used in the [Write Note Example](StructureDefinition-us-core-documentreference.html#mandatory-operation).",
+        "name": "Discharge Summary Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/adi-dnr"
+        },
+        "description": "This is a an example of an DNR (Do Not Resuscitate) PDF attachment for the *US Core ADI DocumentReference Profile*",
+        "name": "DocumentReference DNR",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/living-will"
+        },
+        "description": "This is a an example of Living Will PDF attachment for the *US Core ADI DocumentReference Profile*",
+        "name": "DocumentReference Living Will",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/polst"
+        },
+        "description": "This is a an example of POLST (PDF) for the *US Core ADI DocumentReference Profile*",
+        "name": "DocumentReference POLST (PDF)",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference"
+        ]
+      },
+      {
+        "reference": {
           "reference": "Observation/dxa-femur-l-armass-bmd"
         },
         "description": "This is a DXA Femur-L ArMass BMD Example for the *Imaging Result Observation Profile*.",
@@ -561,6 +605,17 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/episode-summary"
+        },
+        "description": "This is a episode summary example for the *US Core DocumentReference Profile*.",
+        "name": "Episode Summary Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
         ]
       },
       {
