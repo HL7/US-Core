@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -74,3 +74,5 @@ In addition, the following data elements must be supported if the data is presen
     - distinct identifier
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

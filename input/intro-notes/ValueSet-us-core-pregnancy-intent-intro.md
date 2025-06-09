@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 This value set uses SMOMED CT codes, which are available in VSAC. LOINC also provides an example list [LL4053-6](https://loinc.org/LL4053-6) for the code 86645-9 (Pregnancy intention in the next year - Reported) used in the US Core Observation Pregnancy Intent Profile. The table below provides implementers with a concept mapping between these codes.
 
 |SNOMED CT|SNOMED CT Preferred Name|LOINC Answer ID|Answer
@@ -10,3 +10,4 @@ This value set uses SMOMED CT codes, which are available in VSAC. LOINC also pro
 {:.grid}
 
 {% include link-list.md %}
+</div><!-- grayed-out -->

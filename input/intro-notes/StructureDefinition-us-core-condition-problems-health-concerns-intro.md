@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 
 **Example Usage Scenarios:**
 
@@ -59,3 +59,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include provenance-author-bullet-generator.md %}
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

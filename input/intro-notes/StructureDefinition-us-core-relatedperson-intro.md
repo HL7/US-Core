@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 
 **Example Usage Scenarios:**
 
@@ -32,3 +32,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - \*{% include should-project-us.md element="RelatedPerson.address" %}
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

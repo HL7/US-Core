@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 <div markdown="1" class="stu-note">
 
 [HL7 Terminology (THO)] defines the *ServiceDeliveryLocationRoleType* and *HealthcareServiceLocation* value sets that compose this ValueSet. however, no codes are displayed in HL7 Terminology for *HealthcareServiceLocation* value set which is composed of *NHSN Healthcare Facility Patient Care Location (HSLOC)* and *CMS Place of Service Codes (POS)* codes. These codes are available at:
@@ -10,3 +10,4 @@
 </div>
 
 {% include link-list.md %}
+</div><!-- grayed-out -->

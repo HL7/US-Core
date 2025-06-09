@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 
 **Example Usage Scenarios:**
 
@@ -52,3 +52,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - The observation **MAY** use an [extension] defined by other profiles such as [Vital Signs with Qualifying Elements: Average Blood Pressure Profile].
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

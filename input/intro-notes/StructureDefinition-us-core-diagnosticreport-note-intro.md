@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -55,3 +55,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

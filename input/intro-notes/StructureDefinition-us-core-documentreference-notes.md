@@ -1,1 +1,2 @@
-{% include documentreference-quickstart.md system="http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category" category="clinical-note" code="http://loinc.org\|18842-5" %}
+{% include grayed-out.html %}{% include documentreference-quickstart.md system="http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category" category="clinical-note" code="http://loinc.org\|18842-5" %}
+</div><!-- grayed-out -->

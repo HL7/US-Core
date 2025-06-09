@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 
 **Profile Specific Implementation Guidance:**
 
@@ -19,3 +19,4 @@ This Complex Extension is made up of three sub-extensions:
 
 
 {% include link-list.md %}
+</div><!-- grayed-out -->

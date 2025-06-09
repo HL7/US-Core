@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 
 **Example Usage Scenarios:**
 
@@ -37,3 +37,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - The [US Core Pregnancy Intent Codes] value set includes SNOMED CT codes and the HL7 V3 code for the concept "unknown". These codes have historically been used to communicate a patient's intent regarding pregnancy.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

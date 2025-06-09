@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -39,3 +39,5 @@ The following are example usage scenarios for this profile:
 
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

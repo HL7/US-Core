@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -37,3 +37,5 @@ Servers that support *only* the US Core Practitioner Profile and do not support 
 - \*{% include should-project-us.md element= "Practitioner.address" %}
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

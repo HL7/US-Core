@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -40,3 +40,5 @@ In order to access care team member's names, identifiers, locations, and contact
   * Servers that support only US Core Practitioner Profile and do not support the US Core PractitionerRole Profile **SHALL** provide implementation-specific guidance on how to access a provider's location and contact information using only the Practitioner resource.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

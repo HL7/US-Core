@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 <div markdown="1" class="stu-note">
 
 The [Value Set Authority Center (VSAC)] defines the *Detailed Ethnicity* and *Other or unknown or refused to answer* value sets that compose this ValueSet. However, these codes do not display correctly in this guide.  They are available at the links displayed in the Logical Definition (CLD) section below.  The Race and Ethnicity codes have been developed internally within the CDC and are available at:
@@ -8,3 +8,4 @@ The [Value Set Authority Center (VSAC)] defines the *Detailed Ethnicity* and *Ot
 </div>
 
 {% include link-list.md %}
+</div><!-- grayed-out -->

@@ -1,4 +1,4 @@
-{% assign code1 = include.code1 | default: "8867-4" | prepend: "http://loinc.org\|" %} <!-- heart rate LOINC -->
+{% include grayed-out.html %}{% assign code1 = include.code1 | default: "8867-4" | prepend: "http://loinc.org\|" %} <!-- heart rate LOINC -->
 {% assign code2 = include.code2 | default: "9279-1" | prepend: "http://loinc.org\|" %} <!-- resp rate LOINC -->
 {% assign code3 = include.code3 | default: "85354-9" | prepend: "http://loinc.org\|" %} <!-- bp LOINC -->
 
@@ -85,3 +85,4 @@ The following search parameter combinations **SHOULD** be supported:
 
 
 {% include link-list.md %}
+</div><!-- grayed-out -->

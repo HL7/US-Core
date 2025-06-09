@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -26,3 +26,5 @@ The following are example usage scenarios for this profile:
 - See the [US Core Pediatric BMI for Age Observation Profile] for representing pediatric BMI measurements as a percentile based upon growth chart tables.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

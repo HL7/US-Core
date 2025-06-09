@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core DocumentReference profile. See the [Clinical Notes] section for additional details on using this profile for Clinical Notes:
@@ -58,3 +58,5 @@ The following data elements must always be present ([Mandatory] definition) or m
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

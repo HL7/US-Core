@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 
 **Example Usage Scenarios:**
 
@@ -52,3 +52,5 @@ The following data elements must always be present ([Mandatory] definition) or m
     - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

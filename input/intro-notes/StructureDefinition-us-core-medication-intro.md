@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 Queries on Medication resources are expected to be within the context of a MedicationRequest resource query. The following are
@@ -22,3 +22,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 * When the medication is compounded and is a list of ingredients, the code is still present and may contain only the text.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

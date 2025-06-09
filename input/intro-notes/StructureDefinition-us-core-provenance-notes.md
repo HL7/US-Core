@@ -1,4 +1,4 @@
-{% include quickstart-intro.md %}
+{% include grayed-out.html %}{% include quickstart-intro.md %}
 
 #### Mandatory Search Parameters:
 
@@ -32,3 +32,5 @@ The following search parameters, search parameter combinations SHALL be supporte
       - See the [AllergyIntolerance Provenance Example 2] Bundle.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

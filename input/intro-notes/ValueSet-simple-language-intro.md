@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 <div markdown="1" class="stu-note">
 
 The publication tooling cannot expand the language value set because they are based on a grammar.  To aid in the reader's understanding, sample codes are shown below:
@@ -30,3 +30,4 @@ The publication tooling cannot expand the language value set because they are ba
 For a more complete list of both 2 and 3-letter examples, see [https://www.loc.gov/standards/iso639-2/php/code_list.php](https://www.loc.gov/standards/iso639-2/php/code_list.php)
 
 </div>
+</div><!-- grayed-out -->

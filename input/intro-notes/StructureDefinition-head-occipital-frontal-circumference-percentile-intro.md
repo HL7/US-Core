@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -27,3 +27,5 @@ The following are example usage scenarios for this profile:
 - To represent the raw OFC measurements, use the [US Core Head Circumference Profile].
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->
