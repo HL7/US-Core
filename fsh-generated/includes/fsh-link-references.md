@@ -173,6 +173,7 @@
 [USCoreConditionEncounterDiagnosisProfile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
 [USCoreConditionProblemsHealthConcernsProfile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreCoverageProfile]: StructureDefinition-us-core-coverage.html
+[USCoreDeviceAssociationProfile]: StructureDefinition-us-core-deviceassociation.html
 [USCoreDiagnosticReportCategory]: ValueSet-us-core-diagnosticreport-category.html
 [USCoreDiagnosticReportProfileLaboratoryReporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [USCoreDiagnosticReportProfileNoteExchange]: StructureDefinition-us-core-diagnosticreport-note.html

@@ -1611,6 +1611,19 @@ definition:
     name: US Core Coverage Profile
     isExample: false
   - reference:
+      reference: StructureDefinition/us-core-deviceassociation
+    description: The US Core Device Association Profile inherits from the FHIR [DeviceAssociation](https://hl7.org/fhir/R6/deviceassociation.html)
+      resource; refer to it for scope and usage definitions. This profile meets the
+      requirements of the U.S. Core Data for Interoperability (USCDI) by providing
+      the association between an implantable device and a patient. It sets minimum
+      expectations for the DeviceAssociation resource to record, search, and fetch
+      association information for implantable devices. It specifies which core elements,
+      extensions, vocabularies, and value sets **SHALL** be present in the resource
+      and constrains how the elements are used. Providing the floor for standards
+      development for specific use cases promotes interoperability and adoption.
+    name: US Core Device Association Profile
+    isExample: false
+  - reference:
       reference: ValueSet/us-core-diagnosticreport-category
     description: The US Core Diagnostic Report Category Value Set is a 'starter set'
       of categories supported for fetching and Diagnostic Reports and notes.
@@ -1807,15 +1820,17 @@ definition:
     isExample: false
   - reference:
       reference: StructureDefinition/us-core-implantable-device
-    description: The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R4/device.html)
+    description: The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R6/device.html)
       resource; refer to it for scope and usage definitions. This profile meets the
-      requirements of the U.S. Core Data for Interoperability (USCDI) *Unique Device  Identifier
-      - Implantable* Data Element. It sets minimum expectations for the Device resource
-      to record, search, and fetch UDI information associated with a patient's implantable
-      device(s). It specifies which core elements, extensions,  vocabularies, and
-      value sets **SHALL** be present in the resource and constrains how the elements
-      are used. Providing the floor for standards development for specific use cases
-      promotes interoperability and adoption.
+      requirements of the U.S. Core Data for Interoperability (USCDI) *Unique Device
+      Identifier - Implantable* Data Element. It sets minimum expectations for the
+      Device resource to record, search, and fetch UDI information associated with
+      a patient's implantable device(s). It specifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present in the resource and constrains
+      how the elements are used. Providing the floor for standards development for
+      specific use cases promotes interoperability and adoption. Note that in FHIR
+      R6, the association to the patient is captured using the DeviceAssociation resource
+      with status 'implanted' and subject referencing the Patient.
     name: US Core Implantable Device Profile
     isExample: false
   - reference:
