@@ -27,6 +27,8 @@
 [pack-years-example]: Observation-pack-years-example.html
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
 [deceased-example]: Patient-deceased-example.html
+[udi-2]: Bundle-udi-2.html
+[udi-3]: Bundle-udi-3.html
 [discharge-summary]: DocumentReference-discharge-summary.html
 [adi-dnr]: DocumentReference-adi-dnr.html
 [living-will]: DocumentReference-living-will.html
@@ -148,6 +150,7 @@
 [TAPS-panel-example-96841-2]: Observation-TAPS-panel-example-96841-2.html
 [temperature]: Observation-temperature.html
 [treatment-intervention-preference]: Observation-treatment-intervention-preference.html
+[udi-1]: Bundle-udi-1.html
 [urobilinogen]: Observation-urobilinogen.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
 [USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html

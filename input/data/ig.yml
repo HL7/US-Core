@@ -346,6 +346,18 @@ definition:
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   - reference:
+      reference: Bundle/udi-2
+    description: This is a Device defib example for the *US Core Implantable Device
+      Profile*.
+    name: Device Defib Example
+    isExample: true
+  - reference:
+      reference: Bundle/udi-3
+    description: This is a Device knee example for the *US Core Implantable Device
+      Profile*.
+    name: Device Knee Example
+    isExample: true
+  - reference:
       reference: DocumentReference/discharge-summary
     description: This is a discharge summary example for the *US Core DocumentReference*.
       It is used in the [Write Note Example](StructureDefinition-us-core-documentreference.html#mandatory-operation).
@@ -1347,6 +1359,11 @@ definition:
     isExample: true
     profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference
+  - reference:
+      reference: Bundle/udi-1
+    description: This is a UDI 1 example for the *US Core Implantable Device Profile*.
+    name: UDI 1 Example
+    isExample: true
   - reference:
       reference: Observation/urobilinogen
     description: This is a urobilinogen example for the *US Core Observation Lab Profile*.

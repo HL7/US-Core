@@ -28,9 +28,11 @@ differential:
     mustSupport: true
   - id: DeviceAssociation.relationship
     path: DeviceAssociation.relationship
+    short: "CONSIDER RELATIONSHIP AS MS ELEMENT WITH MIN BINDING TO 'PATIENT' ?"
     mustSupport: true
   - id: DeviceAssociation.status
     path: DeviceAssociation.status
+    short: "STATUS CODES HAVE PROBLEMS SEE TRACKERS?"
     min: 1
     mustSupport: true
   - id: DeviceAssociation.subject
