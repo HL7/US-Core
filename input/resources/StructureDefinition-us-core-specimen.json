@@ -53,7 +53,9 @@
                             "http://hl7.org/fhir/StructureDefinition/Group",
                             "http://hl7.org/fhir/StructureDefinition/Device",
                             "http://hl7.org/fhir/StructureDefinition/Substance",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+                            "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct",
+                            "http://hl7.org/fhir/StructureDefinition/NutritionProduct"
                         ],
                         "_targetProfile": [
                             {
@@ -61,6 +63,22 @@
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
                                     }
                                 ]
                             },

@@ -603,6 +603,39 @@
       },
       {
         "reference": {
+          "reference": "Encounter/example-1"
+        },
+        "description": "This is a encounter 1 example for the *US Core Encounter Profile*.",
+        "name": "Encounter 1 Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Encounter/1036"
+        },
+        "description": "This is a encounter 1036 example for the *Encounter Profile*.",
+        "name": "Encounter 1036 Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Encounter/delivery"
+        },
+        "description": "This is a patient delivery encounter example for the *Encounter Profile*.",
+        "name": "Encounter Delivery Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+        ]
+      },
+      {
+        "reference": {
           "reference": "Condition/encounter-diagnosis-example1"
         },
         "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
@@ -852,6 +885,17 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Specimen/example-serum-lipemic"
+        },
+        "description": "This is a serum specimen example for the *US Core Specimen Profile*. It demonstrates the use of the USCDI requirements for specimen condition using SNOMED CT codes",
+        "name": "Lipemic Serum Specimen Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
         ]
       },
       {
@@ -1160,6 +1204,39 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-1"
+        },
+        "description": "This is a practitioner 1 example for the *US Core Practitioner Profile*.",
+        "name": "Practitioner 1 Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-2"
+        },
+        "description": "This is a practitioner 2 example for the *US Core Practitioner Profile*.",
+        "name": "Practitioner 2 Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-pharmacist"
+        },
+        "description": "This is a pharmacist example using the *US Core Practitioner Profile*.",
+        "name": "Practitioner Pharmacist Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
         ]
       },
       {
@@ -1505,6 +1582,17 @@
       },
       {
         "reference": {
+          "reference": "Procedure/defib-implant"
+        },
+        "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code'.",
+        "name": "Procedure Defibrillator Implant Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+        ]
+      },
+      {
+        "reference": {
           "reference": "Observation/pulse-intensity-palpation"
         },
         "description": "This is a Pulse intensity Palpation Example for the *Clinical Test Result Observation Profile*.",
@@ -1534,6 +1622,17 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Procedure/rehab"
+        },
+        "description": "This is a rehab example for the *US Core Procedure Profile*.",
+        "name": "Rehab Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
         ]
       },
       {
@@ -1644,6 +1743,17 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Specimen/specimen-example-serum"
+        },
+        "description": "This is a serum specimen example for the *US Core Specimen Profile*.",
+        "name": "Serum Specimen Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
         ]
       },
       {
@@ -1807,6 +1917,17 @@
         "description": "This is a UDI 1 example for the *US Core Implantable Device Profile*.",
         "name": "UDI 1 Example",
         "isExample": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/specimen-example-urine"
+        },
+        "description": "This is a urine specimen example for the *US Core Specimen Profile*.",
+        "name": "Urine Specimen Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
+        ]
       },
       {
         "reference": {
@@ -3468,6 +3589,17 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
+        ]
+      },
+      {
+        "reference": {
+          "reference": "Specimen/specimen-example-whole-blood"
+        },
+        "description": "This is a whole blood specimen example for the *US Core Specimen Profile*.",
+        "name": "Whole Blood Specimen Example",
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
         ]
       },
       {

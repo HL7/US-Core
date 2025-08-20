@@ -41,6 +41,9 @@
 [dxa-hip-l-z-score-bmd]: Observation-dxa-hip-l-z-score-bmd.html
 [ekg-impression]: Observation-ekg-impression.html
 [ekg-lead]: Observation-ekg-lead.html
+[example-1]: Encounter-example-1.html
+[1036]: Encounter-1036.html
+[delivery]: Encounter-delivery.html
 [encounter-diagnosis-example1]: Condition-encounter-diagnosis-example1.html
 [encounter-diagnosis-example2]: Condition-encounter-diagnosis-example2.html
 [episode-summary]: DocumentReference-episode-summary.html
@@ -64,6 +67,7 @@
 [jugular-vein-distension]: Observation-jugular-vein-distension.html
 [length]: Observation-length.html
 [cbc-leukocytes]: Observation-cbc-leukocytes.html
+[example-serum-lipemic]: Specimen-example-serum-lipemic.html
 [cbc-mch]: Observation-cbc-mch.html
 [cbc-mchc]: Observation-cbc-mchc.html
 [cbc-mcv]: Observation-cbc-mcv.html
@@ -92,6 +96,9 @@
 [PHQ9-item-example-69722-7]: Observation-PHQ9-item-example-69722-7.html
 [PHQ9-panel-example-44249-1]: Observation-PHQ9-panel-example-44249-1.html
 [cbc-platelets]: Observation-cbc-platelets.html
+[practitioner-1]: Practitioner-practitioner-1.html
+[practitioner-2]: Practitioner-practitioner-2.html
+[practitioner-pharmacist]: Practitioner-practitioner-pharmacist.html
 [PRAPARE-item-example-54899-0]: Observation-PRAPARE-item-example-54899-0.html
 [PRAPARE-item-example-56051-6]: Observation-PRAPARE-item-example-56051-6.html
 [PRAPARE-item-example-56799-0]: Observation-PRAPARE-item-example-56799-0.html
@@ -123,9 +130,11 @@
 [PRAPARE-panel-example-93043-8]: Observation-PRAPARE-panel-example-93043-8.html
 [pregnancy-intent]: Observation-pregnancy-intent.html
 [pregnancy-status]: Observation-pregnancy-status.html
+[defib-implant]: Procedure-defib-implant.html
 [pulse-intensity-palpation]: Observation-pulse-intensity-palpation.html
 [q-t-interval-ekg-lead]: Observation-q-t-interval-ekg-lead.html
 [qrs-dur-ekg-lead]: Observation-qrs-dur-ekg-lead.html
+[rehab]: Procedure-rehab.html
 [respiratory-rate]: Observation-respiratory-rate.html
 [condition-SDOH-example]: Condition-condition-SDOH-example.html
 [serum-bun]: Observation-serum-bun.html
@@ -136,6 +145,7 @@
 [serum-glucose]: Observation-serum-glucose.html
 [serum-potassium]: Observation-serum-potassium.html
 [serum-sodium]: Observation-serum-sodium.html
+[specimen-example-serum]: Specimen-specimen-example-serum.html
 [simple-observation-cognitive-status]: Observation-simple-observation-cognitive-status.html
 [simple-observation-disability-status]: Observation-simple-observation-disability-status.html
 [simple-observation-functional-status]: Observation-simple-observation-functional-status.html
@@ -151,6 +161,7 @@
 [temperature]: Observation-temperature.html
 [treatment-intervention-preference]: Observation-treatment-intervention-preference.html
 [udi-1]: Bundle-udi-1.html
+[specimen-example-urine]: Specimen-specimen-example-urine.html
 [urobilinogen]: Observation-urobilinogen.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
 [USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html
@@ -358,5 +369,6 @@
 [USCoreSpecimenId]: SearchParameter-us-core-specimen-id.html
 [USCoreSpecimenPatient]: SearchParameter-us-core-specimen-patient.html
 [weight]: Observation-weight.html
+[specimen-example-whole-blood]: Specimen-specimen-example-whole-blood.html
 [xray-chest-findings]: Observation-xray-chest-findings.html
 [xray-chest-impression]: Observation-xray-chest-impression.html

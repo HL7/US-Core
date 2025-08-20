@@ -23,8 +23,8 @@
                     {
                         "key": "us-core-7",
                         "severity": "error",
-                        "human": "Performed SHALL be present if the status is 'completed' or 'in-progress'",
-                        "expression": "(status='completed' or status='in-progress') implies performed.exists()"
+                        "human": "Occurrence SHALL be present if the status is 'completed' or 'in-progress'",
+                        "expression": "(status='completed' or status='in-progress') implies occurrence.exists()"
                     }
                 ],
                 "mustSupport": false,
@@ -50,9 +50,18 @@
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
                         ],
                         "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
                             {
                                 "extension": [
                                     {
@@ -140,7 +149,11 @@
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/Group"
+                            "http://hl7.org/fhir/StructureDefinition/Group",
+                            "http://hl7.org/fhir/StructureDefinition/Device",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
                         ],
                         "_targetProfile": [
                             {
@@ -148,6 +161,38 @@
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -185,8 +230,8 @@
                 "mustSupport": true
             },
             {
-                "id": "Procedure.performed[x]",
-                "path": "Procedure.performed[x]",
+                "id": "Procedure.occurrence[x]",
+                "path": "Procedure.occurrence[x]",
                 "type": [
                     {
                         "extension": [
@@ -251,7 +296,9 @@
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
-                            "http://hl7.org/fhir/StructureDefinition/Device"
+                            "http://hl7.org/fhir/StructureDefinition/Device",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
+                            "http://hl7.org/fhir/StructureDefinition/HealthcareService"
                         ],
                         "_targetProfile": [
                             {
@@ -301,36 +348,41 @@
                                         "valueBoolean": false
                                     }
                                 ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
                             }
                         ]
                     }
                 ]
             },
             {
-                "id": "Procedure.reasonCode",
+                "id": "Procedure.reason",
                 "extension": [
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
                     }
                 ],
-                "path": "Procedure.reasonCode",
+                "path": "Procedure.reason",
                 "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Coded reason procedure performed",
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
                 }
-            },
-            {
-                "id": "Procedure.reasonReference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Procedure.reasonReference",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: US Core Profile justifying the reason procedure performed"
             }
         ]
     }

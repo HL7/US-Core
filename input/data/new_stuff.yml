@@ -37,46 +37,47 @@
 
 
 # Profiles
-- USCoreImplantableDeviceProfile
-- USCoreDeviceAssociationProfile
+- USCoreADIDocumentReferenceProfile
 - USCoreAllergyIntolerance
+# - USCoreAverageBloodPressureProfile
+# - USCoreCareExperiencePreferenceProfile
+# - USCoreCarePlanProfile
+# - USCoreCareTeamProfile
 - USCoreConditionEncounterDiagnosisProfile
 - USCoreConditionProblemsHealthConcernsProfile
-# - USCoreQuestionnaireResponseProfile
-# - USCoreObservationSurveyProfile
-# - USCoreObservationSDOHAssessment
-# - USCoreObservationOccupationProfile
-# - USCoreObservationPregnancyStatusProfile
-# - USCoreObservationPregnancyIntentProfile
 # - USCoreCoverageProfile
-# - USCoreSpecimenProfile
-# - USCoreMedicationDispenseProfile
-# - USCoreObservationScreeningAssessmentProfile
-# - USCoreSimpleObservationProfile
-- USCoreObservationClinicalResultProfile
-# - USCoreAverageBloodPressureProfile
-# - USCoreMedicationRequestProfile
-# - USCoreLocationProfile
-# - USCoreEncounterProfile
-# - USCoreImmunizationProfile
+- USCoreDeviceAssociationProfile
 # - USCoreDiagnosticReportProfileLaboratoryReporting
 # - USCoreDiagnosticReportProfileNoteExchange
 - USCoreDocumentReferenceProfile
-# - USCoreProcedureProfile
-# - USCoreServiceRequestProfile
-# - USCoreTreatmentInterventionPreferenceProfile
-# - USCoreCareExperiencePreferenceProfile
-- USCoreLaboratoryResultObservationProfile
-# - USCoreCarePlanProfile
-# - USCoreCareTeamProfile
+- USCoreEncounterProfile
 # - USCoreGoalProfile
-# - USCoreObservationSexualOrientationProfile
-# - USCoreSmokingStatusProfile
-- USCorePatientProfile
+# - USCoreImmunizationProfile
+- USCoreImplantableDeviceProfile
+- USCoreLaboratoryResultObservationProfile
+# - USCoreLocationProfile
+# - USCoreMedicationDispenseProfile
+# - USCoreMedicationRequestProfile
 - USCoreObservationADIDocumentationProfile
-- USCoreADIDocumentReferenceProfile
-# - USCoreVitalSignsProfile
+- USCoreObservationClinicalResultProfile
+# - USCoreObservationOccupationProfile
+# - USCoreObservationPregnancyIntentProfile
+# - USCoreObservationPregnancyStatusProfile
+# - USCoreObservationScreeningAssessmentProfile
+# - USCoreObservationSDOHAssessment
+# - USCoreObservationSexualOrientationProfile
+# - USCoreObservationSurveyProfile
+- USCorePatientProfile
+- USCorePractitionerProfile
+- USCoreProcedureProfile
+# - USCoreQuestionnaireResponseProfile
+# - USCoreServiceRequestProfile
 # - USCoreSexExtension
+# - USCoreSimpleObservationProfile
+# - USCoreSmokingStatusProfile
+- USCoreSpecimenProfile
+# - USCoreTreatmentInterventionPreferenceProfile
+# - USCoreVitalSignsProfile
 
 
 
@@ -300,8 +301,8 @@
 # - BMI Example
 # - BP Data Absent Example
 # - Colonoscopy Example
-# - Urine Specimen Example
-# - Whole Blood Specimen Example
+- Urine Specimen Example
+- Whole Blood Specimen Example
 # - Urobilinogen Example
 # - US Core Version 3.1.1 Model Definition
 # - US Core Version 4.0.0 Model Definition

@@ -21,8 +21,8 @@ differential:
     constraint:
     - key: us-core-7
       severity: error
-      human: Performed SHALL be present if the status is 'completed' or 'in-progress'
-      expression: (status='completed' or status='in-progress') implies performed.exists()
+      human: Occurrence SHALL be present if the status is 'completed' or 'in-progress'
+      expression: (status='completed' or status='in-progress') implies occurrence.exists()
     mustSupport: false
     mapping:
     - identity: argonaut-dq-dstu2
@@ -39,7 +39,12 @@ differential:
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+          # Added Target Type Organization reference in R6
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest 
       _targetProfile:
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
           - extension:
             - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
               valueBoolean: false
@@ -94,6 +99,12 @@ differential:
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       - http://hl7.org/fhir/StructureDefinition/Group
+      # Added Target References in R6
+      - http://hl7.org/fhir/StructureDefinition/Device
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -101,7 +112,18 @@ differential:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
-
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
 
     mustSupport: true
     mapping:
@@ -115,8 +137,10 @@ differential:
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     mustSupport: true
-  - id: Procedure.performed[x]
-    path: Procedure.performed[x]
+
+### element name change in R6
+  - id: Procedure.occurrence[x]
+    path: Procedure.occurrence[x]
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -159,6 +183,9 @@ differential:
           - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
           - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'
           - 'http://hl7.org/fhir/StructureDefinition/Device'
+      # Added Target Type Organization reference in R6
+          - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
+          - http://hl7.org/fhir/StructureDefinition/HealthcareService
         _targetProfile:
           - extension:
             - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -178,24 +205,34 @@ differential:
           - extension:
             - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
               valueBoolean: false
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
+          - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: false
 
 # ====================================================================
-
-  - id: Procedure.reasonCode
+# Type changed to CodeableReference in R6
+### element name change in R6
+  - id: Procedure.reason
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    path: Procedure.reasonCode
+    path: Procedure.reason
     short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
       \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: Coded reason procedure performed"
     binding:
       strength: extensible
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
-  - id: Procedure.reasonReference
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Procedure.reasonReference
-    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
-      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: US Core Profile justifying
-      the reason procedure performed"
+
+# Type changed to CodeableReference in R6
+### element name change in R6      
+  # - id: Procedure.reasonReference
+  #   extension:
+  #   - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+  #     valueBoolean: true
+  #   path: Procedure.reasonReference
+  #   short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+  #     \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: US Core Profile justifying
+  #     the reason procedure performed"

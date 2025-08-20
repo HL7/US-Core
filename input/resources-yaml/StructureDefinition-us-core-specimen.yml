@@ -43,10 +43,19 @@ differential:
       - http://hl7.org/fhir/StructureDefinition/Device
       - http://hl7.org/fhir/StructureDefinition/Substance
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+# Added Target References in R6
+      - http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct
+      - http://hl7.org/fhir/StructureDefinition/NutritionProduct
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
@@ -67,6 +76,8 @@ differential:
     path: Specimen.collection
     short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
       \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: Collection details"
+  
+  # Type changed to CodeableReference in R6
   - id: Specimen.collection.bodySite
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -79,6 +90,8 @@ differential:
     binding:
       strength: extensible
       valueSet: http://hl7.org/fhir/ValueSet/body-site
+# =========================================
+
   - id: Specimen.condition
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
