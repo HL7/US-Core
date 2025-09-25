@@ -1,15 +1,12 @@
-<!-- {% raw %} <div class="note-to-balloters" markdown="1">
+ <div class="note-to-balloters" markdown="1">
 
-**The January 2025 ballot addresses the following**
+**The January 2026 ballot addresses the following**
 
-{% include whats-new/v8.md %}
+{% include whats-new/v9-ballot.md %}
+</div> 
 
-</div> {% endraw %} -->
-
-<!-- {% raw %} 
 Where possible, new and updated pre-publishing content is highlighted with green text and background- **This highlighting will be removed prior to publication.**
 {:.new-content}
- {% endraw %} -->
 
 
 Key updates and detailed changes between this and prior versions are available on the US Core [Change Log] and [Changes Between Versions] pages.

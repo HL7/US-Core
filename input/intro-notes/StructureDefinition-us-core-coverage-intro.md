@@ -35,20 +35,20 @@ The following data elements must always be present ([Mandatory] definition) or m
   - `Coverage.status` alone may not indicate whether an individual is covered. The `Coverage.period` needs to be considered as well. For example, the coverage may be expired with a status of "active", or conversely, it may be "canceled" but still have covered claims.
   - The absence of a Coverage resource instance may mean the patient has no coverage or the healthcare provider may not know it.
   - A `coverage.type` of "81" (Self-pay) **MAY** be used to imply that the patient has no coverage or that an individual or organization other than an insurer is taking responsibility for payment for a portion of the health care costs.
+  
+<div class="bg-success" markdown="1">
 
-- The hierarchical nature of the `Coverage.type` code system "Payer" (also known as the US Public Health Data Consortium Source of Payment Codes) may be unclear in the expansion, and some codes may be inappropriate for the use case. Implementers should refer to the [PHDSC Payer Type Committee User's Guide] for the Source of Payment Typology when selecting codes.
+- The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.
 
-  - To differentiate Medicare Parts A, B, C, and D systems can use the following codes:
+  - To differentiate between Medicare Parts A, B, C, and D systems can use the following codes.
 
     Medicare Plan | SOP Code (Description)| Comment
     |---|---|---|
-    Part A and B |121 (Medicare Fee For Service)| Part A and B.  Part A alone cannot be represented (see "Note to Balloters" below). Part B alone does not need to be represented because Part B enrollment requires enrollment in Part A
+    Part A and B |121 (Medicare Fee For Service)| Part A alone cannot be represented and systems **SHOULD** use the X12 concept for Medicare Part A *as a code translation* to the SOP code "121" (see [Using multiple codes with CodeableConcept Datatype]).<br/> Part B alone does not need to be represented because Part B enrollment requires enrollment in Part A
     Part C (Medicare Advantage Plan)|111 (Medicare HMO)<br />112 (Medicare PPO)<br />113 (Medicare POS) | These are the most common types of Medicare Advantage Plans 
     Part D|122 (Medicare Drug Benefit)|
     {: .grid}
-
-    The US Core team requested a stand-alone code for Medicare Part A from [NAHDO](https://www.nahdo.org/sopt). If this request is not approved,  systems **SHOULD** use the X12 concept for Medicare Part A *as a code translation* to the SOP code "121" (see [Using multiple codes with CodeableConcept Datatype]).
-    {: .note-to-balloters}
+</div><!-- new-content -->
 
 - If Insurers issue unique member IDs for dependents, then the *memberId* `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
 

@@ -7,6 +7,71 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 1. **Examine Detailed Changes**: Review the “Changes” section for each version for a complete list of a changes to the guide. Click the Jira Tracker (e.g., FHIR-123) links to see the underlying issue and resolution, and click on the  “See Changes Here” links to view modified content directly in the guide.
 1. **Compare Across Versions**: For a deeper analysis, refer to the [Changes Between Versions] page for detailed FHIR artifact comparisons.
 
+### Version = 9.0.0 - ballot
+- url: <https://hl7.org/fhir/us/core/2026Jan/>
+- Based on FHIR version : 4.0.1
+
+#### The January 2026 Ballot
+
+The January 2026 ballot addresses the following:
+
+{% include whats-new/v9-ballot.md %}
+
+#### Changes:
+
+- Implementers submitted over 50 trackers since the publication of US Core ver 8.0.0. We have addressed them and applied over 40 changes listed below:
+
+**Tracker Status**: **Change Impact** **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
+
+1. **Triaged:** Non-substantive (Clarification) US Core Coverage Profile [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122) See Changes [Here](StructureDefinition-us-core-coverage.html)
+2. **Resolved - change required:** Non-substantive (Clarification) US Core Location Type Value Set missing HSLOC Guidance [FHIR-49401](https://jira.hl7.org/browse/FHIR-49401) See Changes [Here](ValueSet-us-core-location-type.html)
+3. **Resolved - change required:** Non-substantive (Correction) correct line 81 in terminology  [FHIR-49610](https://jira.hl7.org/browse/FHIR-49610) See Changes [Here](terminology.html)
+4. **Resolved - change required:** Non-substantive (Enhancement) Relax US@ address requirements [FHIR-51159](https://jira.hl7.org/browse/FHIR-51159) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+5. **Triaged:** Non-substantive (Clarification) Update client expectations for preserving resource IDs between versions [FHIR-51756](https://jira.hl7.org/browse/FHIR-51756) See Changes [Here](changes-between-versions.html#no-guarantee-that-resource-ids-are-preserved)
+6. **Triaged:** Non-substantive (Clarification) Update guidance on Authorization Across Versions Sections [FHIR-51757](https://jira.hl7.org/browse/FHIR-51757) See Changes [Here](changes-between-versions.html#authorization-across-versions)
+7. **Triaged:** Non-substantive (Clarification) Add specification for non-US addresses [FHIR-51791](https://jira.hl7.org/browse/FHIR-51791) See Changes [Here](/StructureDefinition-us-core-practitioner.html)
+8. **Triaged:** Non-substantive (Enhancement) Call attention and link to USCDI level 1, 2 Data elements [FHIR-52492](https://jira.hl7.org/browse/FHIR-52492) See Changes [Here](uscdi.html)
+9. **Triaged:** Non-substantive (Clarification) clarify $docref operation behavior, following opportunity for implementer input [FHIR-52869](https://jira.hl7.org/browse/FHIR-52869) See Changes [Here](OperationDefinition-docref.html)
+10. **Resolved - change required:** Compatible, substantive (Enhancement) Seems like observation-category CodeSystem needs to be extended to include a concept for care-experience-preference [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541) See Changes [Here]()
+11. **Resolved - change required:** Compatible, substantive (Correction) NAIC Code Number Identifier system not registered in THO [FHIR-46185](https://jira.hl7.org/browse/FHIR-46185) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-organization-definitions.html#diff_Organization.identifier:NAIC)
+12. **Resolved - change required:** Compatible, substantive (Clarification) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876) See Changes [Here](https://www.hl7.org/fhir/us/core/search-parameters-and-operations.html#search-parameters)
+13. **Resolved - change required:** Compatible, substantive (Enhancement) Create and bind to Grouped set in Location.type to ease extensible binding requirments [FHIR-50937](https://jira.hl7.org/browse/FHIR-50937) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-location.html)
+14. **Triaged:** Compatible, substantive (Correction) Medication Adherence Value Set - Proposed Changes [FHIR-52822](https://jira.hl7.org/browse/FHIR-52822) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medication-adherence.html)
+15. **Submitted:** Compatible, substantive (Enhancement) Slice the PractitionerRole.specialty element to optionally also include SNOMED CT specialty codes [FHIR-52843](https://jira.hl7.org/browse/FHIR-52843) See Changes [Here]()
+16. **Triaged:** Compatible, substantive (Enhancement) Add USCDI v6 Data Elements to US Core [FHIR-52965](https://jira.hl7.org/browse/FHIR-52965) See Changes [Here](uscdi.html)
+17. **Resolved - change required:** Non-compatible (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) See Changes [Here](changes.html)
+18. **Triaged:** Non-compatible (Correction) Constrain subject to only patient [FHIR-51032](https://jira.hl7.org/browse/FHIR-51032) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+19. **Triaged:**  () US Core Coverage.Type Code Link Update  [FHIR-44124](https://jira.hl7.org/browse/FHIR-44124) See Changes [Here](StructureDefinition-us-core-coverage.html)
+20. **Triaged:**  () US Core Terminology Reference List # 62 [FHIR-44138](https://jira.hl7.org/browse/FHIR-44138) See Changes [Here](terminology.html)
+21. **Triaged:**  () Missing Medication Administration [FHIR-44146](https://jira.hl7.org/browse/FHIR-44146) See Changes [Here]()
+22. **Resolved - change required:**  (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) See Changes [Here](history.html)
+23. **Resolved - change required:**  () US Core Variance Request for Contained PractitionerRole in Da Vinci CDex. [FHIR-46779](https://jira.hl7.org/browse/FHIR-46779) See Changes [Here](http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitionerrole.html)
+24. **Resolved - change required:**  () Permit Encounter.participant of PracRole to minimize derivative IG complexity [FHIR-48531](https://jira.hl7.org/browse/FHIR-48531) See Changes [Here](/StructureDefinition-us-core-encounter.html)
+25. **Triaged:**  () Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
+26. **Triaged:**  () Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](StructureDefinition-us-core-observation-lab.html#terminology-bindings-differential)
+27. **Triaged:**  () Clean up examples for FHIR ADI DocumentReference Profile [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here]()
+28. **Triaged:**  () This code system needs to have an OID defined, VS needs to be in THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here]()
+29. **Triaged:**  () Create Version History Menu Item [FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](changes.html)
+30. **Triaged:**  () Update formatting in Quick Start to make it easier to read [FHIR-50397](https://jira.hl7.org/browse/FHIR-50397) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
+31. **Triaged:**  () Consider Using additional bindings instead of grouped valuesets [FHIR-50464](https://jira.hl7.org/browse/FHIR-50464) See Changes [Here](StructureDefinition-us-core-location.html)
+32. **Triaged:**  () Request inclusion of NutritionIntake FHIR resource into QI-Core [FHIR-50570](https://jira.hl7.org/browse/FHIR-50570) See Changes [Here]()
+33. **Triaged:**  () Need to slice PractitionerRole.specialty [FHIR-50779](https://jira.hl7.org/browse/FHIR-50779) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-practitionerrole.html)
+34. **Triaged:**  () Additional Guidance for the appropriate NDC code to use from the NDC vaccine linker [FHIR-50798](https://jira.hl7.org/browse/FHIR-50798) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html#mandatory-and-must-support-data-elements)
+35. **Triaged:**  () The HCPCS code system URI is invalid [FHIR-50807](https://jira.hl7.org/browse/FHIR-50807) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-procedure-code.html)
+36. **Triaged:**  () merge US Core Provenance Type CodeSystem with FHIR Provenance Type CodeSystem [FHIR-50927](https://jira.hl7.org/browse/FHIR-50927) See Changes [Here](CodeSystem-us-core-provenance-participant-type.html)
+37. **Triaged:**  () Make the Resource Specific Guidance Sections an h3 header element [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition-encounter-diagnosis.html#mandatory-and-must-support-data-elements)
+38. **Resolved - change required:**  (Correction) Fix Link -  CDC Race and Ethnicity Code Set Version 1.0 [FHIR-51137](https://jira.hl7.org/browse/FHIR-51137) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-race.html)
+39. **Submitted:**  (Enhancement) Slice PractitionerRole.specialty to also permit binding to concepts from the ""practice setting"" value set [FHIR-51217](https://jira.hl7.org/browse/FHIR-51217) See Changes [Here]()
+40. **Resolved - change required:**  (Correction) Misspelling - US Core Laboratory Result Observation Profile [FHIR-51254](https://jira.hl7.org/browse/FHIR-51254) See Changes [Here](/StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
+41. **Submitted:**  () profile MedicationAdministration in US Core [FHIR-51255](https://jira.hl7.org/browse/FHIR-51255) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/us-core-roadmap.html#medicationadministration)
+42. **Resolved - change required:**  (Correction) Typo in SMART well-known example [FHIR-51363](https://jira.hl7.org/browse/FHIR-51363) See Changes [Here](/scopes.html#example-well-knownsmart-configuration-file)
+43. **Triaged:**  () Request for patch on 3.1.1 Organization identifier cardinality [FHIR-51489](https://jira.hl7.org/browse/FHIR-51489) See Changes [Here]()
+44. **Submitted:**  () Remove databAbsent reason requirements from Simple Observation profile [FHIR-51493](https://jira.hl7.org/browse/FHIR-51493) See Changes [Here](/StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
+45. **Triaged:**  () Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)
+46. **Resolved - change required:**  (Correction) remove span tags  [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+47. **Submitted:**  () Update profile to support attestors for ADI use cases [FHIR-52273](https://jira.hl7.org/browse/FHIR-52273) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+48. **Submitted:**  () Add OrganizationAffiliation Resource Profile and clarify use of specialty element [FHIR-52844](https://jira.hl7.org/browse/FHIR-52844) See Changes [Here]()
+
 
 ### Version = 8.0.0 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8/>
@@ -26,158 +91,158 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 **Tracker Status**: **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
 
 1. **Applied:** (Clarification) Discourage use of  ICD-10-CM header codes. [FHIR-48742](https://jira.hl7.org/browse/FHIR-48742) See Changes Here:
-    - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
-    - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
-2. **Applied:** (Correction) Remove additional USCDI tag from Element [FHIR-48754](https://jira.hl7.org/browse/FHIR-48754) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
-3. **Applied:** (Clarification) Add guidance on reference to Observation target  [FHIR-48756](https://jira.hl7.org/browse/FHIR-48756) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
-4. **Applied:** (Clarification) Add conformance rule about using US Core profiles with Operations [FHIR-48822](https://jira.hl7.org/browse/FHIR-48822) See Changes [Here](general-guidance.html)
-5. **Applied:** (Enhancement) Change Screening Assessment Profile category:screening-assessment to Add'l USCDI [FHIR-48849](https://jira.hl7.org/browse/FHIR-48849) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
-6. **Applied:** (Enhancement) Change Problems category to Add'l USCDI [FHIR-48850](https://jira.hl7.org/browse/FHIR-48850) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
-7. **Applied:** (Clarification) Remove STU Note regarding the Argonauts 2023 SMART Imaging Access project [FHIR-48851](https://jira.hl7.org/browse/FHIR-48851) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html)
-8. **Applied:** (Correction)  Typo "PractitionerRole" instead of "PracitionRole" [FHIR-48866](https://jira.hl7.org/browse/FHIR-48866) See Changes [Here](CapabilityStatement-us-core-server.html#healthcareservice)
-9. **Applied:** (Clarification) Document how to find code systems for value sets in VSAC [FHIR-48889](https://jira.hl7.org/browse/FHIR-48889) See Changes Here: 
-     - [Terminology](terminology.html#the-value-set-authority-center-vsac)
-     - [VSAC to FHIR Code System Mapping Table](vsacname-fhiruri-map.html)
-10. **Applied** (Correction) Update THO code system link [FHIR-49009](https://jira.hl7.org/browse/FHIR-49009) See Changes [Here](ValueSet-us-core-provenance-participant-type.html)
+    - [US Core Condition Encounter Diagnosis Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html)
+    - [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html)
+2. **Applied:** (Correction) Remove additional USCDI tag from Element [FHIR-48754](https://jira.hl7.org/browse/FHIR-48754) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)
+3. **Applied:** (Clarification) Add guidance on reference to Observation target  [FHIR-48756](https://jira.hl7.org/browse/FHIR-48756) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)
+4. **Applied:** (Clarification) Add conformance rule about using US Core profiles with Operations [FHIR-48822](https://jira.hl7.org/browse/FHIR-48822) See Changes [Here](https://hl7.org/fhir/us/core/STU8/general-guidance.html)
+5. **Applied:** (Enhancement) Change Screening Assessment Profile category:screening-assessment to Add'l USCDI [FHIR-48849](https://jira.hl7.org/browse/FHIR-48849) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)
+6. **Applied:** (Enhancement) Change Problems category to Add'l USCDI [FHIR-48850](https://jira.hl7.org/browse/FHIR-48850) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html)
+7. **Applied:** (Clarification) Remove STU Note regarding the Argonauts 2023 SMART Imaging Access project [FHIR-48851](https://jira.hl7.org/browse/FHIR-48851) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html)
+8. **Applied:** (Correction)  Typo "PractitionerRole" instead of "PracitionRole" [FHIR-48866](https://jira.hl7.org/browse/FHIR-48866) See Changes [Here](https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-server.html#healthcareservice)
+9. **Applied:** (Clarification) Document how to find code systems for value sets in VSAC [FHIR-48889](https://jira.hl7.org/browse/FHIR-48889) See Changes Here:
+     - [Terminology](https://hl7.org/fhir/us/core/STU8/terminology.html#the-value-set-authority-center-vsac)
+     - [VSAC to FHIR Code System Mapping Table](https://hl7.org/fhir/us/core/STU8/vsacname-fhiruri-map.html)
+10. **Applied** (Correction) Update THO code system link [FHIR-49009](https://jira.hl7.org/browse/FHIR-49009) See Changes [Here](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-provenance-participant-type.html)
 11. **Applied:** (Correction) Typo "content.attachment.url/data" instead of "content.url/data" [FHIR-49023](https://jira.hl7.org/browse/FHIR-49023) See Changes Here:
-       - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html)
-       - [US Core ADI DocumentReference - Profile ](StructureDefinition-us-core-adi-documentreference.html)
-12. **Applied:** (Correction) Add Provenance Author and Author Role to USCDI Table [FHIR-49024](https://jira.hl7.org/browse/FHIR-49024) See Changes [Here](uscdi.html)
-13. **Applied:** (Clarification) Clarify the guidance using a MedicationRequest query to access "all medications" or "all active medications". [FHIR-49038](https://jira.hl7.org/browse/FHIR-49038) See Changes [Here](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
-14. **Applied:** (Clarification) Clarify MedicationRequest Profile Specific Implementation Guidance on fetching active medications: [FHIR-49039](https://jira.hl7.org/browse/FHIR-49039) See Changes [Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
-15. **Applied:** (Correction) Add author provenance documentation to all profiles listed Individual Level Provenance table.[FHIR-49064](https://jira.hl7.org/browse/FHIR-49064) For example, see Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
+       - [US Core DocumentReference Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html)
+       - [US Core ADI DocumentReference - Profile ](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-adi-documentreference.html)
+12. **Applied:** (Correction) Add Provenance Author and Author Role to USCDI Table [FHIR-49024](https://jira.hl7.org/browse/FHIR-49024) See Changes [Here](https://hl7.org/fhir/us/core/STU8/uscdi.html)
+13. **Applied:** (Clarification) Clarify the guidance using a MedicationRequest query to access "all medications" or "all active medications". [FHIR-49038](https://jira.hl7.org/browse/FHIR-49038) See Changes [Here](https://hl7.org/fhir/us/core/STU8/medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
+14. **Applied:** (Clarification) Clarify MedicationRequest Profile Specific Implementation Guidance on fetching active medications: [FHIR-49039](https://jira.hl7.org/browse/FHIR-49039) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
+15. **Applied:** (Correction) Add author provenance documentation to all profiles listed Individual Level Provenance table.[FHIR-49064](https://jira.hl7.org/browse/FHIR-49064) For example, see Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)
 16. **Applied:** (Correction) Define the use of use the term "certifying Server system" and remove it from US Core Observation Screening Assessment Profile. [FHIR-49065](https://jira.hl7.org/browse/FHIR-49065) See Changes Here:
-      - [US Core Observation Screening Assessment Profile](StructureDefinition-us-core-observation-screening-assessment.html) 
-      - [Additional USCDI Requirements](must-support.html#additional-uscdi-requirements) 
-17. **Applied:** (Correction) Corrected MS target for MedicationRequest.requester and .reportedReference data elements in Individual Level Provenance Table [FHIR-49066](https://jira.hl7.org/browse/FHIR-49066) See Changes [Here](basic-provenance.html#individual-level-provenance)
-18. **Applied:** (Correction) Plural vs singular wording for provenance elements [FHIR-49067](https://jira.hl7.org/browse/FHIR-49067) See Changes [Here](StructureDefinition-us-core-immunization.html)
-19. **Applied:** (Correction) Typo "service should happen" instead of "serviceSHOULDhappen" [FHIR-49068](https://jira.hl7.org/browse/FHIR-49068) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
-20. **Applied:** (Clarification) Clarify narrative section on ServiceRequest.code content [FHIR-49069](https://jira.hl7.org/browse/FHIR-49069) See Changes [Here](StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
-21. **Applied:** (Correction) typo "and" instead of "amd" [FHIR-49087](https://jira.hl7.org/browse/FHIR-49087) See Changes [Here](index.html#home)
+      - [US Core Observation Screening Assessment Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)
+      - [Additional USCDI Requirements](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements)
+17. **Applied:** (Correction) Corrected MS target for MedicationRequest.requester and .reportedReference data elements in Individual Level Provenance Table [FHIR-49066](https://jira.hl7.org/browse/FHIR-49066) See Changes [Here](https://hl7.org/fhir/us/core/STU8/basic-provenance.html#individual-level-provenance)
+18. **Applied:** (Correction) Plural vs singular wording for provenance elements [FHIR-49067](https://jira.hl7.org/browse/FHIR-49067) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-immunization.html)
+19. **Applied:** (Correction) Typo "service should happen" instead of "serviceSHOULDhappen" [FHIR-49068](https://jira.hl7.org/browse/FHIR-49068) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html)
+20. **Applied:** (Clarification) Clarify narrative section on ServiceRequest.code content [FHIR-49069](https://jira.hl7.org/browse/FHIR-49069) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
+21. **Applied:** (Correction) typo "and" instead of "amd" [FHIR-49087](https://jira.hl7.org/browse/FHIR-49087) See Changes [Here](https://hl7.org/fhir/us/core/STU8/index.html#home)
 22. **Applied:** (Correction) Fix link [FHIR-49089](https://jira.hl7.org/browse/FHIR-49089) See Changes [Here](https://hl7.org/fhir/us/core/STU7/changes.html#the-january-2024-ballot)
-23. **Applied:** (Correction) typo "RESTful" instead of "RESTfUl" [FHIR-49090](https://jira.hl7.org/browse/FHIR-49090) See Changes [Here](general-requirements.html#us-core-conformance-artifacts)
-24. **Applied:** (Correction) Correct figure label [FHIR-49095](https://jira.hl7.org/browse/FHIR-49095) See Changes [Here](must-support.html#key-elements-table-view)
-25. **Applied:** (Correction) Add missing word "support" [FHIR-49098](https://jira.hl7.org/browse/FHIR-49098) See Changes [Here](must-support.html#must-support---complex-elements)
-26. **Applied:** (Correction) Add missing word "and" [FHIR-49099](https://jira.hl7.org/browse/FHIR-49099) See Changes [Here](must-support.html#must-support-targets-for-us-core-profiles)
-27. **Applied:** (Correction) Update Specimen code to specimen type code in narrative [FHIR-49100](https://jira.hl7.org/browse/FHIR-49100) See Changes [Here](StructureDefinition-us-core-specimen.html#mandatory-and-must-support-data-elements)
-28. **Applied:** (Clarification) Clarify how an order is linked to the DiagnosticReport [FHIR-49101](https://jira.hl7.org/browse/FHIR-49101) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#mandatory-and-must-support-data-elements) and [Here](StructureDefinition-us-core-diagnosticreport-note.html)
-29. **Applied:** (Clarification) Clarify reporting specimen type best practice. [FHIR-49102](https://jira.hl7.org/browse/FHIR-49102) See Changes [Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
-30. **Applied:** (Enhancement) Add guidance that other identifiers like NCSBN can be used. [FHIR-49122](https://jira.hl7.org/browse/FHIR-49122) See Changes [Here](StructureDefinition-us-core-practitioner.html#mandatory-and-must-support-data-elements)
-31. **Applied:** (Enhancement) Clarify US Core's relationship with IPA [FHIR-49123](https://jira.hl7.org/browse/FHIR-49123) See Changes [Here](relationship-with-other-igs.html)
+23. **Applied:** (Correction) typo "RESTful" instead of "RESTfUl" [FHIR-49090](https://jira.hl7.org/browse/FHIR-49090) See Changes [Here](https://hl7.org/fhir/us/core/STU8/general-requirements.html#us-core-conformance-artifacts)
+24. **Applied:** (Correction) Correct figure label [FHIR-49095](https://jira.hl7.org/browse/FHIR-49095) See Changes [Here](https://hl7.org/fhir/us/core/STU8/must-support.html#key-elements-table-view)
+25. **Applied:** (Correction) Add missing word "support" [FHIR-49098](https://jira.hl7.org/browse/FHIR-49098) See Changes [Here](https://hl7.org/fhir/us/core/STU8/must-support.html#must-support---complex-elements)
+26. **Applied:** (Correction) Add missing word "and" [FHIR-49099](https://jira.hl7.org/browse/FHIR-49099) See Changes [Here](https://hl7.org/fhir/us/core/STU8/must-support.html#must-support-targets-for-us-core-profiles)
+27. **Applied:** (Correction) Update Specimen code to specimen type code in narrative [FHIR-49100](https://jira.hl7.org/browse/FHIR-49100) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-specimen.html#mandatory-and-must-support-data-elements)
+28. **Applied:** (Clarification) Clarify how an order is linked to the DiagnosticReport [FHIR-49101](https://jira.hl7.org/browse/FHIR-49101) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-lab.html#mandatory-and-must-support-data-elements) and [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html)
+29. **Applied:** (Clarification) Clarify reporting specimen type best practice. [FHIR-49102](https://jira.hl7.org/browse/FHIR-49102) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
+30. **Applied:** (Enhancement) Add guidance that other identifiers like NCSBN can be used. [FHIR-49122](https://jira.hl7.org/browse/FHIR-49122) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html#mandatory-and-must-support-data-elements)
+31. **Applied:** (Enhancement) Clarify US Core's relationship with IPA [FHIR-49123](https://jira.hl7.org/browse/FHIR-49123) See Changes [Here](https://hl7.org/fhir/us/core/STU8/relationship-with-other-igs.html)
 32. **Applied:** (Enhancement) Add asked-declined to Race and Ethnicity Value Sets [FHIR-49134](https://jira.hl7.org/browse/FHIR-49134) (See Terminology Changes Listed in introduction above)
-33. **Applied:** (Correction) Add ADI DocumentReference and Observation ADI Document to CapabilityStatements [FHIR-49162](https://jira.hl7.org/browse/FHIR-49162) See Changes [Here](CapabilityStatement-us-core-server.html)
-34. **Applied:** (Correction) Observation should be US Core Observation Screening Assessment Profile  [FHIR-49163](https://jira.hl7.org/browse/FHIR-49163) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
-35. **Applied:** (Correction) Remove Duplicate Specific Implementation Guidance: [FHIR-49164](https://jira.hl7.org/browse/FHIR-49164) See Changes [Here](StructureDefinition-us-core-simple-observation.html)
-36. **Applied:** (Clarification) Language for linking to Assessment Profile is confusing [FHIR-49197](https://jira.hl7.org/browse/FHIR-49197) See Changes [Here](screening-and-assessments.html#clinical-judgments)
-37. **Applied:** (Enhancement) Reference and link to the USCDI page from the Home Page. [FHIR-49219](https://jira.hl7.org/browse/FHIR-49219) See Changes [Here](index.html#background)
-38. **Applied:** (Enhancement) Added and corrected individual provenance elements [FHIR-49221](https://jira.hl7.org/browse/FHIR-49221) See the summary of changes in the [What's New](#whats-new-in-version-800-of-us-core) section above.
+33. **Applied:** (Correction) Add ADI DocumentReference and Observation ADI Document to CapabilityStatements [FHIR-49162](https://jira.hl7.org/browse/FHIR-49162) See Changes [Here](https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-server.html)
+34. **Applied:** (Correction) Observation should be US Core Observation Screening Assessment Profile  [FHIR-49163](https://jira.hl7.org/browse/FHIR-49163) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)
+35. **Applied:** (Correction) Remove Duplicate Specific Implementation Guidance: [FHIR-49164](https://jira.hl7.org/browse/FHIR-49164) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html)
+36. **Applied:** (Clarification) Language for linking to Assessment Profile is confusing [FHIR-49197](https://jira.hl7.org/browse/FHIR-49197) See Changes [Here](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#clinical-judgments)
+37. **Applied:** (Enhancement) Reference and link to the USCDI page from the Home Page. [FHIR-49219](https://jira.hl7.org/browse/FHIR-49219) See Changes [Here](https://hl7.org/fhir/us/core/STU8/index.html#background)
+38. **Applied:** (Enhancement) Added and corrected individual provenance elements [FHIR-49221](https://jira.hl7.org/browse/FHIR-49221) See the summary of changes in the [What's New](https://hl7.org/fhir/us/core/STU8/#whats-new-in-version-800-of-us-core) section above.
 39. **Applied:** (Clarfication) Align US Core and C-CDA Race and Ethnicity Value Set Concepts [FHIR-49234](https://jira.hl7.org/browse/FHIR-49234) (See Terminology Changes Listed in introduction above)
 40. **Applied:** (Clarification) Updated the QuickStarts for DocumentReference, Condition,  and DocumentReference profile to use profile-specific examples and language. [FHIR-49250](https://jira.hl7.org/browse/FHIR-49250) See Changes Here:
-      - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
-      - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html)
-      - [US Core DiagnosticReport Profile for Laboratory Results Reporting](StructureDefinition-us-core-diagnosticreport-lab.html)
-      - [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html)
-      - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
-      - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
-  
-41. **Applied:** (Correction) Update Observation.derivedFrom examples for Observation Screening Assessment Profile [FHIR-49289](https://jira.hl7.org/browse/FHIR-49289) See Changes [Here](Observation-10-minute-apgar-score-panel.html)
+      - [US Core ADI DocumentReference Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-adi-documentreference.html)
+      - [US Core DocumentReference Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html)
+      - [US Core DiagnosticReport Profile for Laboratory Results Reporting](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-lab.html)
+      - [US Core DiagnosticReport Profile for Report and Note Exchange](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html)
+      - [US Core Condition Encounter Diagnosis Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html)
+      - [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html)
+
+41. **Applied:** (Correction) Update Observation.derivedFrom examples for Observation Screening Assessment Profile [FHIR-49289](https://jira.hl7.org/browse/FHIR-49289) See Changes [Here](https://hl7.org/fhir/us/core/STU8/Observation-10-minute-apgar-score-panel.html)
 42. **Applied:** (Correction) Update the VSAC [CVX Vaccines Administered Vaccine Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion) value set [FHIR-49292](https://jira.hl7.org/browse/FHIR-49292)(StructureDefinition-us-core-immunization.html#profile)
-43. **Applied:** (Correction) Correct CVX vaccine codes link [FHIR-49293](https://jira.hl7.org/browse/FHIR-49293) See Changes [Here](StructureDefinition-us-core-immunization.html#profile)
+43. **Applied:** (Correction) Correct CVX vaccine codes link [FHIR-49293](https://jira.hl7.org/browse/FHIR-49293) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-immunization.html#profile)
 44. **Applied:** (Enhancement) Define the Acronym 'ADI' in all pages where it is used [FHIR-49299](https://jira.hl7.org/browse/FHIR-49299) See Changes:
-       - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
-       - [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html)
-46. **Applied:** (Clarification) Add version lineage to the US Core Observation Screening Assessment Profile's introduction. [FHIR-49305](https://jira.hl7.org/browse/FHIR-49305) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
+       - [US Core ADI DocumentReference Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-adi-documentreference.html)
+       - [US Core Observation ADI Documentation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-adi-documentation.html)
+46. **Applied:** (Clarification) Add version lineage to the US Core Observation Screening Assessment Profile's introduction. [FHIR-49305](https://jira.hl7.org/browse/FHIR-49305) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)
 47. **Applied:** (Correction) Corrections to typos [FHIR-49306](https://jira.hl7.org/browse/FHIR-49306)
-48. **Applied:** (Correction) Fix typo 'Advance Directives' instead  of 'Advanced Directives' [FHIR-49307](https://jira.hl7.org/browse/FHIR-49307) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
-49. **Applied:** (Enhancement) Add Observation.code.text as an *Additional USCDI* element  [FHIR-49308](https://jira.hl7.org/browse/FHIR-49308) See Changes [Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.code)
-50. **Applied:** (Enhancement) Change the slice for category 'assess-plan' from 1..1 Must Support to 0..1 Must Support. [FHIR-49309](https://jira.hl7.org/browse/FHIR-49309) See Changes [Here](StructureDefinition-us-core-careplan.html)
-51. **Applied:** (Clarification) Cardinality does not match element definition [FHIR-49338](https://jira.hl7.org/browse/FHIR-49338) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#profile)
-52. **Applied** (Enhancement) Add "Plain Language" summary to the home page [FHIR-49367](https://jira.hl7.org/browse/FHIR-49367) See Changes [Here](index.html)
-53. **Applied** (Correction)Fix Typo in US Core Yearly Updates diagram [FHIR-49376](https://jira.hl7.org/browse/FHIR-49376) See Changes [Here](us-core-roadmap.html)
+48. **Applied:** (Correction) Fix typo 'Advance Directives' instead  of 'Advanced Directives' [FHIR-49307](https://jira.hl7.org/browse/FHIR-49307) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-adi-documentreference.html)
+49. **Applied:** (Enhancement) Add Observation.code.text as an *Additional USCDI* element  [FHIR-49308](https://jira.hl7.org/browse/FHIR-49308) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-lab-definitions.html#Observation.code)
+50. **Applied:** (Enhancement) Change the slice for category 'assess-plan' from 1..1 Must Support to 0..1 Must Support. [FHIR-49309](https://jira.hl7.org/browse/FHIR-49309) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-careplan.html)
+51. **Applied:** (Clarification) Cardinality does not match element definition [FHIR-49338](https://jira.hl7.org/browse/FHIR-49338) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-lab.html#profile)
+52. **Applied** (Enhancement) Add "Plain Language" summary to the home page [FHIR-49367](https://jira.hl7.org/browse/FHIR-49367) See Changes [Here](https://hl7.org/fhir/us/core/STU8/index.html)
+53. **Applied** (Correction)Fix Typo in US Core Yearly Updates diagram [FHIR-49376](https://jira.hl7.org/browse/FHIR-49376) See Changes [Here](https://hl7.org/fhir/us/core/STU8/us-core-roadmap.html)
 54. **Applied:** (Clarification) Update the preferred language recommendation [FHIR-49391](https://jira.hl7.org/browse/FHIR-49391) See Changes Here:
-     - [US Core Patient Profile](StructureDefinition-us-core-patient.html)
-     - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html)
-55. **Applied** (Clarification) Clarify reference to race and ethnicity category codes  [FHIR-49392](https://jira.hl7.org/browse/FHIR-49392) See Changes [Here](StructureDefinition-us-core-patient.html)
-56. **Applied:** (Clarification) Clarify reference to CDCREC [FHIR-49393](https://jira.hl7.org/browse/FHIR-49393) See Changes [Here](StructureDefinition-us-core-patient.html)
+     - [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)
+     - [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html)
+55. **Applied** (Clarification) Clarify reference to race and ethnicity category codes  [FHIR-49392](https://jira.hl7.org/browse/FHIR-49392) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)
+56. **Applied:** (Clarification) Clarify reference to CDCREC [FHIR-49393](https://jira.hl7.org/browse/FHIR-49393) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)
 57. **Applied:** (Correction) Update [SOP Payer Type](https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion) value set.[FHIR-49395](https://jira.hl7.org/browse/FHIR-49395)
 58. **Applied:** (Enhancement) Move Patient Communication Language valueset to [HL7 Terminology (THO)]. [FHIR-49397](https://jira.hl7.org/browse/FHIR-49397) See Changes [Here](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)
 59. **Applied:** (Correction)Changed ONC to ASTP where appropriate [FHIR-49399](https://jira.hl7.org/browse/FHIR-49399)
-60. **Applied:** (Correction) Add and apply guidance on [FHIR Maturity Level]. [FHIR-49400](https://jira.hl7.org/browse/FHIR-49400) See Changes [Here](index.html#us-core-profile-maturity)
+60. **Applied:** (Correction) Add and apply guidance on [FHIR Maturity Level]. [FHIR-49400](https://jira.hl7.org/browse/FHIR-49400) See Changes [Here](https://hl7.org/fhir/us/core/STU8/index.html#us-core-profile-maturity)
 61. **Applied:** (Clarification) Update US Core Location Type Value Set to meet industry use cases [FHIR-49401](https://jira.hl7.org/browse/FHIR-49401) and [FHIR-50937](https://jira.hl7.org/browse/FHIR-50937) See Changes
-    -  [US Core Location Profile](StructureDefinition-us-core-location.html)
+    -  [US Core Location Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-location.html)
     -  [Healthcare Service Location Type Combined](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.31/expansion)
-62. **Applied:** (Clarification) Spell out/define SOP in diagnostic report imaging study context  [FHIR-49402](https://jira.hl7.org/browse/FHIR-49402) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html)
-63. **Applied:** (Correction) Update Medication Route of Admin terminology binding [FHIR-49403](https://jira.hl7.org/browse/FHIR-49403) See Changes [Here](StructureDefinition-us-core-medicationrequest.html)
-64. **Applied:** (Correction) Change number of common clinical notes to 10 [FHIR-49413](https://jira.hl7.org/browse/FHIR-49413) See Changes [Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
-65. **Applied:** (Correction) Correction to Observation ADI Documentation Profile Introduction [FHIR-49414](https://jira.hl7.org/browse/FHIR-49414) See Changes [Here](StructureDefinition-us-core-observation-adi-documentation.html)
-66. **Applied:** (Clarification) Clarify guidance for the Observation ADI Documentation Profile Observation.value element [FHIR-49415](https://jira.hl7.org/browse/FHIR-49415) See Changes [Here](StructureDefinition-us-core-observation-adi-documentation.html#mandatory-and-must-support-data-elements)
-67. **Applied:** (Enhancement) Update to human readable VSAC link [FHIR-49419](https://jira.hl7.org/browse/FHIR-49419) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
-68. **Applied:** (Clarification) Update guidance if endpoint is outside the FHIR base URL [FHIR-49424](https://jira.hl7.org/browse/FHIR-49424) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
-69. **Applied:** (Correction) Remove duplicate listing and add US Core RelatedPerson Profile to listing to USCDI table [FHIR-49432](https://jira.hl7.org/browse/FHIR-49432) See Changes [Here](uscdi.html#uscdi)
+62. **Applied:** (Clarification) Spell out/define SOP in diagnostic report imaging study context  [FHIR-49402](https://jira.hl7.org/browse/FHIR-49402) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html)
+63. **Applied:** (Correction) Update Medication Route of Admin terminology binding [FHIR-49403](https://jira.hl7.org/browse/FHIR-49403) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationrequest.html)
+64. **Applied:** (Correction) Change number of common clinical notes to 10 [FHIR-49413](https://jira.hl7.org/browse/FHIR-49413) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
+65. **Applied:** (Correction) Correction to Observation ADI Documentation Profile Introduction [FHIR-49414](https://jira.hl7.org/browse/FHIR-49414) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-adi-documentation.html)
+66. **Applied:** (Clarification) Clarify guidance for the Observation ADI Documentation Profile Observation.value element [FHIR-49415](https://jira.hl7.org/browse/FHIR-49415) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-adi-documentation.html#mandatory-and-must-support-data-elements)
+67. **Applied:** (Enhancement) Update to human readable VSAC link [FHIR-49419](https://jira.hl7.org/browse/FHIR-49419) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
+68. **Applied:** (Clarification) Update guidance if endpoint is outside the FHIR base URL [FHIR-49424](https://jira.hl7.org/browse/FHIR-49424) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
+69. **Applied:** (Correction) Remove duplicate listing and add US Core RelatedPerson Profile to listing to USCDI table [FHIR-49432](https://jira.hl7.org/browse/FHIR-49432) See Changes [Here](https://hl7.org/fhir/us/core/STU8/uscdi.html#uscdi)
 70. **Applied:** (Correction) Add same bindings to category "slicer" and "sliced" category elements in observation profiles. [FHIR-49444](https://jira.hl7.org/browse/FHIR-49444) See Changes Here:
-     - [US Core Treatment Intervention Profile](StructureDefinition-us-core-treatment-intervention-preference.html#profile)
-     - [US Core Care Experience Profile](StructureDefinition-us-core-care-experience-preference.html#profile)
-     - [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html#profile)
-     - [US Core Simple Observation](StructureDefinition-us-core-simple-observation.html#profile)
-71. **Applied:** (Enhancement) Add guidance about using CQL and provide model definitions.[FHIR-49477](https://jira.hl7.org/browse/FHIR-49477) See Changes [Here](general-guidance.html#using-cql-with-us-core)
+     - [US Core Treatment Intervention Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-treatment-intervention-preference.html#profile)
+     - [US Core Care Experience Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-care-experience-preference.html#profile)
+     - [US Core Observation ADI Documentation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-adi-documentation.html#profile)
+     - [US Core Simple Observation](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html#profile)
+71. **Applied:** (Enhancement) Add guidance about using CQL and provide model definitions.[FHIR-49477](https://jira.hl7.org/browse/FHIR-49477) See Changes [Here](https://hl7.org/fhir/us/core/STU8/general-guidance.html#using-cql-with-us-core)
 72. **Applied:** (Enhancement) Add ServiceRequest.code.text as an *Additional USCDI* element [FHIR-49609](https://jira.hl7.org/browse/FHIR-49609) See Changes Here:
-     - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html)
-     - [ServiceRequest Food Pantry Referral Example](ServiceRequest-foodpantry-referral.html)
-73. **Applied:** (Clarification) Clarify how to categorize CDA documents[FHIR-49612](https://jira.hl7.org/browse/FHIR-49612) See Changes [Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
-74. **Applied:** (Clarification) Change binding for US Core ADI DocumentReference  and .type [FHIR-49615](https://jira.hl7.org/browse/FHIR-49615) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+     - [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html)
+     - [ServiceRequest Food Pantry Referral Example](https://hl7.org/fhir/us/core/STU8/ServiceRequest-foodpantry-referral.html)
+73. **Applied:** (Clarification) Clarify how to categorize CDA documents[FHIR-49612](https://jira.hl7.org/browse/FHIR-49612) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
+74. **Applied:** (Clarification) Change binding for US Core ADI DocumentReference  and .type [FHIR-49615](https://jira.hl7.org/browse/FHIR-49615) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-adi-documentreference.html)
 75. **Applied:** (Enhancement) Add CLIA/USCDI/HL7 elements mapping table and update metabolic panel example to include order. [FHIR-49623](https://jira.hl7.org/browse/FHIR-49623) See Changes Here:
-      - [US Core DiagnosticReport Profile for Laboratory Results Reporting](StructureDefinition-us-core-diagnosticreport-lab.html)
-      - [Basic Metabolic Panel Example](DiagnosticReport-metabolic-panel.html)
-      - [ServiceRequest BMP Example](ServiceRequest-bmp.html)
+      - [US Core DiagnosticReport Profile for Laboratory Results Reporting](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-lab.html)
+      - [Basic Metabolic Panel Example](https://hl7.org/fhir/us/core/STU8/DiagnosticReport-metabolic-panel.html)
+      - [ServiceRequest BMP Example](https://hl7.org/fhir/us/core/STU8/ServiceRequest-bmp.html)
 76. **Applied:** (Enhancement) Add CLIA/USCDI/HL7 elements mapping table and update CBC examples to include specimen. [FHIR-49630](https://jira.hl7.org/browse/FHIR-49630) See Changes Here:
-     - [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
-     - [Urine Specimen Example](Specimen-specimen-example-urine.html)
-     - [Whole Blood Specimen Example](Specimen-specimen-example-whole-blood.html)
-     - [Erythrocytes Example](Observation-cbc-erythrocytes.html)
-     - [Hematocrit Example](Observation-cbc-hematocrit.html)
-     - [Hemoglobin Example](Observation-cbc-hemoglobin.html)
-     - [Leukocytes Example](Observation-cbc-leukocytes.html)
-     - [MCH Example](Observation-cbc-mch.html)
-     - [MCHC Example](Observation-cbc-mchc.html)
-     - [MCV Example](Observation-cbc-mcv.html)
-     - [Platelets Example](Observation-cbc-platelets.html)
-77. **Applied:** (Correction) Update Image and typo on Figure 2: US Core DocumentReference.category [FHIR-49702](https://jira.hl7.org/browse/FHIR-49702) See Changes [Here](general-requirements.html#required-bindings-when-slicing-by-valuesets)
-78. **Applied:** (Enhancement) Remove US Core Laboratory Result Observation Profile as a Must Support target for the US Core DiagnosticReport Profile for Report and Note Exchange [FHIR-49906](https://jira.hl7.org/browse/FHIR-49906) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html)
-79. **Applied:** (Correction) Correct the additional binding purpose code "current" rendering [FHIR-49985](https://jira.hl7.org/browse/FHIR-49985) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
+     - [US Core Laboratory Result Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
+     - [Urine Specimen Example](https://hl7.org/fhir/us/core/STU8/Specimen-specimen-example-urine.html)
+     - [Whole Blood Specimen Example](https://hl7.org/fhir/us/core/STU8/Specimen-specimen-example-whole-blood.html)
+     - [Erythrocytes Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-erythrocytes.html)
+     - [Hematocrit Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-hematocrit.html)
+     - [Hemoglobin Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-hemoglobin.html)
+     - [Leukocytes Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-leukocytes.html)
+     - [MCH Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-mch.html)
+     - [MCHC Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-mchc.html)
+     - [MCV Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-mcv.html)
+     - [Platelets Example](https://hl7.org/fhir/us/core/STU8/Observation-cbc-platelets.html)
+77. **Applied:** (Correction) Update Image and typo on Figure 2: US Core DocumentReference.category [FHIR-49702](https://jira.hl7.org/browse/FHIR-49702) See Changes [Here](https://hl7.org/fhir/us/core/STU8/general-requirements.html#required-bindings-when-slicing-by-valuesets)
+78. **Applied:** (Enhancement) Remove US Core Laboratory Result Observation Profile as a Must Support target for the US Core DiagnosticReport Profile for Report and Note Exchange [FHIR-49906](https://jira.hl7.org/browse/FHIR-49906) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html)
+79. **Applied:** (Correction) Correct the additional binding purpose code "current" rendering [FHIR-49985](https://jira.hl7.org/browse/FHIR-49985) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html)
 80. **Applied:** (Clarification) Remove ICD-9 from additional bound value set in US Core Condition profiles [FHIR-49986](https://jira.hl7.org/browse/FHIR-49986) See Changes Here
-      - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
-      - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
-      - [US Core Condition Codes Current](ValueSet-us-core-condition-code-current.html)
-81. **Applied:** (Enhancement) Add Best Practices Guidance for Granular Scopes [FHIR-50002](https://jira.hl7.org/browse/FHIR-50002) See Changes [Here](scopes.html)
-82. **Applied:** (Clarification) Add introduction to Change log to clarify how to use. [FHIR-50089](https://jira.hl7.org/browse/FHIR-50089) See Changes [Here](changes.html)
+      - [US Core Condition Encounter Diagnosis Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html)
+      - [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html)
+      - [US Core Condition Codes Current](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-condition-code-current.html)
+81. **Applied:** (Enhancement) Add Best Practices Guidance for Granular Scopes [FHIR-50002](https://jira.hl7.org/browse/FHIR-50002) See Changes [Here](https://hl7.org/fhir/us/core/STU8/scopes.html)
+82. **Applied:** (Clarification) Add introduction to Change log to clarify how to use. [FHIR-50089](https://jira.hl7.org/browse/FHIR-50089) See Changes [Here](https://hl7.org/fhir/us/core/STU8/changes.html)
 83. **Applied:** (Clarification) Value sets referenced by US Core reviewed annually [FHIR-50153](https://jira.hl7.org/browse/FHIR-50153)
-84. **Applied:** (Enhancement) Created a new "Looking Ahead" menu tab  [FHIR-50154](https://jira.hl7.org/browse/FHIR-50154) See Changes [Here](looking-ahead.html)
-85. **Applied:** (Enhancement) Added "Patient Data Feed" subscription guidance page to US Core [FHIR-50155](https://jira.hl7.org/browse/FHIR-50155) See Changes [Here](patient-data-feed.html)
-86. **Applied** (Enhancement) Add guidance on inactive codes to the Terminology page [FHIR-50156](https://jira.hl7.org/browse/FHIR-50156) See Changes [Here](terminology.html)
-87. **Applied** (Correction) Added missing profiles to "omitted" Profile list for individual level provenance [FHIR-50163](https://jira.hl7.org/browse/FHIR-50163) See Changes [Here](basic-provenance.html#individual-level-provenance)
-88. **Applied:** (Correction) Changes to comply with Executive Order 14168 [FHIR-50177](https://jira.hl7.org/browse/FHIR-50177) See the summary of changes in the [What's New](#whats-new-in-version-800-of-us-core) section above.
-89. **Applied:** (Clarification) Remove MS flag for Practitioner in MedicationDispense Profile [FHIR-50239](https://jira.hl7.org/browse/FHIR-50239) See Changes [Here](StructureDefinition-us-core-medicationdispense.html)
-90. **Applied:** (Enhancement) Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](StructureDefinition-us-core-coverage.html)
-91. **Applied:** (Enhancement) Add section on slicing on the Must Support page  [FHIR-50286](https://jira.hl7.org/browse/FHIR-50286) See Changes [Here](must-support.html#must-support---slices)
+84. **Applied:** (Enhancement) Created a new "Looking Ahead" menu tab  [FHIR-50154](https://jira.hl7.org/browse/FHIR-50154) See Changes [Here](https://hl7.org/fhir/us/core/STU8/looking-ahead.html)
+85. **Applied:** (Enhancement) Added "Patient Data Feed" subscription guidance page to US Core [FHIR-50155](https://jira.hl7.org/browse/FHIR-50155) See Changes [Here](https://hl7.org/fhir/us/core/STU8/patient-data-feed.html)
+86. **Applied** (Enhancement) Add guidance on inactive codes to the Terminology page [FHIR-50156](https://jira.hl7.org/browse/FHIR-50156) See Changes [Here](https://hl7.org/fhir/us/core/STU8/terminology.html)
+87. **Applied** (Correction) Added missing profiles to "omitted" Profile list for individual level provenance [FHIR-50163](https://jira.hl7.org/browse/FHIR-50163) See Changes [Here](https://hl7.org/fhir/us/core/STU8/basic-provenance.html#individual-level-provenance)
+88. **Applied:** (Correction) Changes to comply with Executive Order 14168 [FHIR-50177](https://jira.hl7.org/browse/FHIR-50177) See the summary of changes in the [What's New](https://hl7.org/fhir/us/core/STU8/#whats-new-in-version-800-of-us-core) section above.
+89. **Applied:** (Clarification) Remove MS flag for Practitioner in MedicationDispense Profile [FHIR-50239](https://jira.hl7.org/browse/FHIR-50239) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-medicationdispense.html)
+90. **Applied:** (Enhancement) Align Group Number/Name with USCDI Group Identifier [FHIR-50283](https://jira.hl7.org/browse/FHIR-50283) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-coverage.html)
+91. **Applied:** (Enhancement) Add section on slicing on the Must Support page  [FHIR-50286](https://jira.hl7.org/browse/FHIR-50286) See Changes [Here](https://hl7.org/fhir/us/core/STU8/must-support.html#must-support---slices)
 92. **Applied:** (Enhancement) Remove clinical Dates and statuses from the US Core Condition Encounter Diagnosis Profile [FHIR-50288](https://jira.hl7.org/browse/FHIR-50288) See Changes Here
-     - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
-     - [Encounter Diagnosis Example 1](Condition-encounter-diagnosis-example1.html)
-     - [Encounter Diagnosis Example 2](Condition-encounter-diagnosis-example2.html)
-93. **Applied:** (Correction) Remove gender based search requirements [FHIR-50380](https://jira.hl7.org/browse/FHIR-50380) See Changes [Here](StructureDefinition-us-core-patient.html#notes)
+     - [US Core Condition Encounter Diagnosis Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html)
+     - [Encounter Diagnosis Example 1](https://hl7.org/fhir/us/core/STU8/Condition-encounter-diagnosis-example1.html)
+     - [Encounter Diagnosis Example 2](https://hl7.org/fhir/us/core/STU8/Condition-encounter-diagnosis-example2.html)
+93. **Applied:** (Correction) Remove gender based search requirements [FHIR-50380](https://jira.hl7.org/browse/FHIR-50380) See Changes [Here](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html#notes)
 94. **Applied:** (Correction) Add copyright statements to Questionnaire examples [FHIR-50399](https://jira.hl7.org/browse/FHIR-50399) See Changes Here:
-     - [Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example](Questionnaire-AUDIT-C.html)
-     - [Exercise Vital Sign Questionnaire Example](Questionnaire-exercise-vital-sign.html)
-     - [Questionnaire Hunger Vital Sign (HVS) Example](Questionnaire-hunger-vital-sign-example.html)
-     - [Questionnaire PHQ-9 Example](Questionnaire-phq-9-example.html)
-     - [Questionnaire PRAPARE Example](Questionnaire-prapare-example.html)
-     - [Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example](Questionnaire-TAPS.html)
+     - [Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example](https://hl7.org/fhir/us/core/STU8/Questionnaire-AUDIT-C.html)
+     - [Exercise Vital Sign Questionnaire Example](https://hl7.org/fhir/us/core/STU8/Questionnaire-exercise-vital-sign.html)
+     - [Questionnaire Hunger Vital Sign (HVS) Example](https://hl7.org/fhir/us/core/STU8/Questionnaire-hunger-vital-sign-example.html)
+     - [Questionnaire PHQ-9 Example](https://hl7.org/fhir/us/core/STU8/Questionnaire-phq-9-example.html)
+     - [Questionnaire PRAPARE Example](https://hl7.org/fhir/us/core/STU8/Questionnaire-prapare-example.html)
+     - [Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example](https://hl7.org/fhir/us/core/STU8/Questionnaire-TAPS.html)
 95. **Applied:** (Correction) Update the term "translation" to "additional coding" [FHIR-50796](https://jira.hl7.org/browse/FHIR-50796) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
 96.  **Applied:** (Clarification) Improve Language on Immunization.lotNumber for matching [FHIR-50795](https://jira.hl7.org/browse/FHIR-50795) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
 97. **Applied:** (Correction) Improve Language on boolean flag [FHIR-50794](https://jira.hl7.org/browse/FHIR-50794) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html)
 98. **Applied:** (Correction) Improve Language: Change Name to Code [FHIR-50793](https://jira.hl7.org/browse/FHIR-50793) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
-99.  **Applied:** (Clarification) Update SMART Launch dependency to version 2.2.0 [FHIR-50787](https://jira.hl7.org/browse/FHIR-50787) See Changes [Here](scopes.html)
+99.  **Applied:** (Clarification) Update SMART Launch dependency to version 2.2.0 [FHIR-50787](https://jira.hl7.org/browse/FHIR-50787) See Changes [Here](https://hl7.org/fhir/us/core/STU8/scopes.html)
 100. **Applied** (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](http://terminology.hl7.org/ValueSet/USPS-State)
-101. **Applied:** (Correction) Expand US Core Laboratory Test Codes value set [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](ValueSet-us-core-laboratory-test-codes.html)
+101. **Applied:** (Correction) Expand US Core Laboratory Test Codes value set [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-laboratory-test-codes.html)
 102. **Applied:** (Enhancement) Add links in history page to approved patches [FHIR-49642](https://jira.hl7.org/browse/FHIR-49642) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
 
 The application of the following trackers are pending and will not be completed before publication
@@ -433,7 +498,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
    - [US Core Birth Sex Extension](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-birthsex.html)
    - [US Core Observation Sexual Orientation Profile](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-observation-sexual-orientation.html)
 61. **Applied:** (Enhancement) Add non-binary to gender identity value set [FHIR-44132](https://jira.hl7.org/browse/FHIR-44132) See Changes [Here](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.32/expansion)
-62. **Applied:** (Correction) Correct reference to USCDI Average Blood Pressure element from "data class" to "data element" in change log [FHIR-44405](https://jira.hl7.org/browse/FHIR-44405) See Changes [Here](https://hl7.org/fhir/us/core/STU7/changes.html#the-january-2024-ballot) 
+62. **Applied:** (Correction) Correct reference to USCDI Average Blood Pressure element from "data class" to "data element" in change log [FHIR-44405](https://jira.hl7.org/browse/FHIR-44405) See Changes [Here](https://hl7.org/fhir/us/core/STU7/changes.html#the-january-2024-ballot)
 63. **Applied:** (Correction) bold text "SHALL NOT" [FHIR-44507](https://jira.hl7.org/browse/FHIR-44507) See Changes [Here](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-documentreference.html)
 64. **Applied:** (Enhancement) Continue US Core and C-CDA value set alignment initiatives [FHIR-44522](https://jira.hl7.org/browse/FHIR-44522) The Value sets are listed [above](#vsac-7-0-0)
 65. **Applied:** (Clarification) Update Treatment Intervention Observation.code to LOINC [FHIR-44019](https://jira.hl7.org/browse/FHIR-44019) and [FHIR-44539](https://jira.hl7.org/browse/FHIR-44539) See Changes [Here](https://hl7.org/fhir/us/core/STU7/StructureDefinition-us-core-treatment-intervention-preference.html)
@@ -483,11 +548,11 @@ The following trackers have been identified as publishing issues and we are work
 This ballot addresses the following:
 
 - We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v4] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2023:
-  
+
   - For the USCDI Allergies and Intolerances Substance (Non-Medication) data element, no change was needed for the [US Core AllergyIntolerance Profile] because the existing `code` element binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) already includes "Non-pharmacologic agent"
-  
+
   - For the USCDI Encounter Identifier data element, no changes were needed because the [US Core Encounter Profile] already supports `Encounter.identifier` as a *Must Support* element.
-  
+
   - For the USCDI Facility Information data class and elements, the [US Core Location Profile] already supports Facility Name and has been updated to support Facility Identifier and Type.  The [US Core Immunization Profile] has been updated to reference the US Core Location resource directly as a *Must Support* element, and the following US Core Profiles have been updated to *indirectly* reference the location/facility via [US Core Encounter Profile] as a *Must Support* element:
     - [US Core DiagnosticReport Profile for Laboratory Results Reporting](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-diagnosticreport-lab.html)
     - [US Core Immunization Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-immunization.html)
@@ -495,14 +560,14 @@ This ballot addresses the following:
     - [US Core Observation Clinical Result Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-observation-clinical-result.html)
     - [US Core Procedure Profile](https://hl7.org/fhir/us/core/2024Jan/profiles-and-extensions.html#procedure)
     - [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-servicerequest.html)
-  
+
   - For the USCDI Time of Procedure data element, no changes were needed because:
     - the [US Core Procedure Profile](https://hl7.org/fhir/us/core/2024Jan/profiles-and-extensions.html#procedure) already supports `Procedure.performed[x]` as a *Must Support* element.
     - the [US Core DiagnosticReport Profile for Report and Note Exchange](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-diagnosticreport-note.html) already supports `DiagnosticReport.performed[x]` as a *Must Support* element.
     - the [US Core Immunization Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-immunization.html) already supports `Immunization.occurrence[x]` as a *Must Support* element.
-  
+
   - For the USCDI Average Blood Pressure data element, the new [US Core Average Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-average-blood-pressure.html) has been added to US Core. It is based on the [US Core Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-blood-pressure.html) and uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
-  
+
   - For the USCDI Medications data class and elements, the [US Core MedicationRequest Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-medicationrequest.html) already supports Medication Instructions and has been updated to support Medication Adherence as an *Additional USCDI Requirement* using the new [US Core Medication Adherence Extension].
 
   - For the USCDI Laboratory data class and elements, the [US Core Laboratory Result Observation Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-observation-lab.html) already supports Result Unit of Measure data element for using UCUM for coded quantity units and has been updated to support Result Reference Range and Result Interpretation as *Must Support* elements. The [US Core Specimen Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-specimen.html) has been updated to support Specimen Identifier as a *Must Support* element, and Specimen Source Site and Specimen Condition Acceptability as *Additional USCDI Requirements*.
@@ -520,24 +585,24 @@ This ballot addresses the following:
 
 
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA]. The following value sets have been moved:
-  
+
    |Pre 7.0.0-Ballot US Core ValueSet|7.0.0-Ballot VSAC ValueSet|
    |---|---|
    [US Core Sexual Orientation](https://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-sexual-orientation.html)|[Sexual Orientation](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.11/expansion)
    {:.grid}
 
-- Added Procedure.reasonCode and Procedure.reasonReference as *Additional USCDI Requirements* to meet the USCDI Data Element,Reason for Referral when a ServiceRequest is not used to request a procedure. See these changes: 
+- Added Procedure.reasonCode and Procedure.reasonReference as *Additional USCDI Requirements* to meet the USCDI Data Element,Reason for Referral when a ServiceRequest is not used to request a procedure. See these changes:
    - [US Core Procedure](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-procedure.html)
    - [US Core ServiceRequest](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-servicerequest.html)
    - [Procedure Example](https://hl7.org/fhir/us/core/2024Jan/Procedure-defib-implant.html)
    - [USCDI](https://hl7.org/fhir/us/core/2024Jan/uscdi.html)
 
 - Scopes: To meet the ONC’s granular scope requirement in [HTI-1 proposed rule](https://www.federalregister.gov/d/2023-07229/p-991+), we added required support for granular scopes as defined in Version 2.0.0 of [SMART App Launch] and moved the SMART scopes guidance from Future of US Core to a [Conformance Page](https://hl7.org/fhir/us/core/2024Jan/scopes.html) and updated requirements for each profile.
-  
+
 - FHIR Write: Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page. See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/future-of-US-core.html#record-or-update-data) and [Here](https://hl7.org/fhir/us/core/2024Jan/fhir-write.html)
-  
+
 - Based on the feedback from the US Core variance request process, we updated several profiles to permit implementers can references to other `subject` entities as defined in the base standard.  This is in addition to the Must Support reference to US Core Patient. We are interested in comments on what the impact on client applications will be. For an example of this change [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-observation-clinical-result.html#profile))
-  
+
 - Implementers submitted over 60 trackers since the publication of US Core ver 6.0.0 and 6.1.0 We have addressed them and applied over 50 changes listed below:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
@@ -565,7 +630,7 @@ This ballot addresses the following:
 6. **APPLIED:** Update profile + interaction requirements [FHIR-42789](https://jira.hl7.org/browse/FHIR-42789) and [FHIR-42847](https://jira.hl7.org/browse/FHIR-42847) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/general-requirements.html#conforming-to-us-core)
 7. **APPLIED:** Provide guidance on NAHDO SOP codes for Medicare Part A,B,C,and D [FHIR-42793](https://jira.hl7.org/browse/FHIR-42793) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-coverage.html#mandatory-and-must-support-data-elements)
 8. **APPLIED:** Correct description of Occupation Profile [FHIR-42867](https://jira.hl7.org/browse/FHIR-42867) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-observation-occupation.html)
-9. **APPLIED:** Move the SMART scopes guidance from Future of US Core to a Conformance Page [FHIR-42864](https://jira.hl7.org/browse/FHIR-42864) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/scopes.html) and [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters) 
+9. **APPLIED:** Move the SMART scopes guidance from Future of US Core to a Conformance Page [FHIR-42864](https://jira.hl7.org/browse/FHIR-42864) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/scopes.html) and [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters)
 10. **APPLIED:** Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page [FHIR-42863](https://jira.hl7.org/browse/FHIR-42863) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/future-of-US-core.html#record-or-update-data) and [Here](https://hl7.org/fhir/us/core/2024Jan/fhir-write.html)
 11. **APPLIED:** Migrate US Core Terminology to VSAC [FHIR-42846](https://jira.hl7.org/browse/FHIR-42846) See this version's introduction
 12. **APPLIED:**  Clarify note in Search Parameters and Operations page [FHIR-42783](https://jira.hl7.org/browse/FHIR-42783) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/search-parameters-and-operations.html)
@@ -639,17 +704,17 @@ To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; dat
 The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2023 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 6.0.0 of US Core:
 
- 
+
 Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 6.0.0 version of US Core and each previous major release on [Changes Between Versions] page. This section provides an overview of the significant changes in Version 6.0.0 of US Core.
 
 - New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v3] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022. [This table](https://hl7.org/fhir/us/core/STU6/uscdi.html) summarizes the USCDI Data Classes and Data Elements and the corresponding US Core Profile(s).
   - The *new* [US Core Coverage Profile] represent and access data related to an individual's health insurance coverage for health care.
-  - The profiles from version 5.0.1 have been renamed and re-scoped in this version to accommodate the USCDI Health Status/Assessments Data Classes.  
+  - The profiles from version 5.0.1 have been renamed and re-scoped in this version to accommodate the USCDI Health Status/Assessments Data Classes.
     -  The [US Core Observation Screening Assessment Profile] replaces the *US Core Observation Survey Profile* and *US Core Observation SDOH Assessment Profile*, and the [US Core Simple Observation Profile] replaces the *US Core Observation Social History Profile*.  See the Cross Version Comparisons Table on the [Changes Between Versions] page for a summary of profile revisions between versions.
     - The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments], reflecting its expanded coverage of Health Status/Assessments Data Elements including: *Functional Status*, *Disability Status*, and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
   - The *new* [US Core Observation Pregnancy Status Profile] and [US Core Observation Pregnancy Intent Profile] have been added to communicate pregnancy status.
   - The [US Core Laboratory Result Observation Profile] supports the result status and terminology requirements for coded and numeric results.
-  - The *new* [US Core Specimen Profile] has been added to support Specimen Type.  
+  - The *new* [US Core Specimen Profile] has been added to support Specimen Type.
   - The [US Core MedicationRequest Profile] was updated to support Dose, Dose Unit of Measure, Indication,.
   - The *new* [US Core MedicationDispense Profile] has been added to support Fill Status.
   - Updated Patient Demographics/Information:
@@ -678,12 +743,12 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
-1. **Applied:** Remove html entities from examples [FHIR-37474](https://jira.hl7.org/browse/FHIR-37474) 
+1. **Applied:** Remove html entities from examples [FHIR-37474](https://jira.hl7.org/browse/FHIR-37474)
 2. **Applied:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-condition-encounter-diagnosis.html#mandatory-search-parameters)
 3. **Applied:** Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be "1" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) See Changes [Here](https://hl7.org/fhir/us/core/STU6/ValueSet-us-core-laboratory-test-codes.html)
 4. **Applied:** Additional guidance for accessing imaging studies [FHIR-38808](https://jira.hl7.org/browse/FHIR-38808) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-diagnosticreport-note.html#mandatory-and-must-support-data-elements)
 5. **Applied:** Allow multiple NPIs for Organizations and Practitioners [FHIR-39382](https://jira.hl7.org/browse/FHIR-39382) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-practitioner.html#profile)
-6. **Applied:** Keep QuestionnaireResponse and Update Screening and Assessments page [FHIR-39495](https://jira.hl7.org/browse/FHIR-39495) See Changes: 
+6. **Applied:** Keep QuestionnaireResponse and Update Screening and Assessments page [FHIR-39495](https://jira.hl7.org/browse/FHIR-39495) See Changes:
    - [Here](https://hl7.org/fhir/us/core/STU6/screening-and-assessments.html)
    - [Here](https://hl7.org/fhir/us/core/STU6/Questionnaire-phq-9-example.html)
    - [Here](https://hl7.org/fhir/us/core/STU6/Questionnaire-prapare-example.html)
@@ -782,7 +847,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 95. **Applied:** Improve Screening Assessment Observation.hasMember short description [FHIR-40085](https://jira.hl7.org/browse/FHIR-40085) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-observation-screening-assessment.html)
 96. **Applied** Update the “bindings when slicing by value sets” figure  [FHIR-40086](https://jira.hl7.org/browse/FHIR-40086) See Changes [Here](https://hl7.org/fhir/us/core/STU6/general-requirements.html#required-bindings-when-slicing-by-valuesets)
 97. **Applied:** Update Condition category slices to align with Observation/ServiceRequest[FHIR-40087](https://jira.hl7.org/browse/FHIR-40087) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-condition-problems-health-concerns.html)
-98. **Applied:** Add guidance to the Procedure profile to express sdoh category [FHIR-40088](https://jira.hl7.org/browse/FHIR-40088) See Changes [Here](https://hl7.org/fhir/us/core/STU6/screening-and-assessments.html) and 
+98. **Applied:** Add guidance to the Procedure profile to express sdoh category [FHIR-40088](https://jira.hl7.org/browse/FHIR-40088) See Changes [Here](https://hl7.org/fhir/us/core/STU6/screening-and-assessments.html) and
 99. **Applied:** Improve language as to the expectations of clinicalStatus when category is problem list [FHIR-40089](https://jira.hl7.org/browse/FHIR-40089) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-condition-problems-health-concerns.html)
 100. **Applied:** Align with FHIR DS4P IG [FHIR-40090](https://jira.hl7.org/browse/FHIR-40090) See Changes [Here](https://hl7.org/fhir/us/core/STU6/general-guidance.html#suppressed-data)
 101. **Applied:** Remove AHC HRSN screening tool examples [FHIR-40091](https://jira.hl7.org/browse/FHIR-40091)
@@ -848,12 +913,12 @@ This ballot addresses the following:
   - **Applied**: [Health Insurance Information](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
   - **Applied**: The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](https://hl7.org/fhir/us/core/2023Jan/screening-and-assessments.html), reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use [US Core Observation Screening Assessment Profile] and the [US Core Simple Observation Profile] to represent and access health status and assessments, including: *Functional Status*, *Disability Status*, and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
   - **Applied**: [US Core Observation Pregnancy Status Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-observation-pregnancystatus.html) and [US Core Observation Pregnancy Intent Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-observation-pregnancyintent.html) have been added to specifically address pregnancy status.
-  - **Applied**: **Laboratory:** The [US Core Laboratory Observation Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-observation-lab.html) already supports the result status and terminology requirements for coded and numeric results. The [US Core Specimen Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-specimen.html) has been added to support Specimen Type.  
+  - **Applied**: **Laboratory:** The [US Core Laboratory Observation Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-observation-lab.html) already supports the result status and terminology requirements for coded and numeric results. The [US Core Specimen Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-specimen.html) has been added to support Specimen Type.
   - **Applied**: **Medications:** Updates to the [US Core MedicationRequest Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-medicationrequest.html) to support Dose, Dose Unit of Measure, Indication and the [US Core MedicationDispense Profile](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-medicationdispense.html) has been added to support Fill Status.
   - **Applied**: **Patient Demographics/Information**
       - Date of Death [See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-patient.html)
-      - Tribal Affiliation [See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-patient.html) 
-      - Sex (for clinical use)[See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-sex-for-clinical-use.html) 
+      - Tribal Affiliation [See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-patient.html)
+      - Sex (for clinical use)[See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-sex-for-clinical-use.html)
         - Note that the [US Core BirthSex Extension](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-birthsex.html) will not be deprecated.
       - Related Person's Name and Related Person's Relationship [See](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-relatedperson.html)
       - Occupation and Occupation Industry [See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-observation-occupation.html)
@@ -1197,7 +1262,7 @@ This Ballot addresses the following issues:
   Due external dependencies and publication tooling limitations, the application of these resolutions have been deferred.
 
   **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
-  
+
   1. **Resolved - change required**: US Core Pulse Oximetry Profile nonconformant UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) -  Awaiting FHIR-4b updates to update base FHIR Vitals Profile, STU Note Present
   2. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) - Coordination with VSAC and IG publishing team to Correct and align Code System OIDS between FHIR, CCDA, and VSAC, Note To Balloters Present
   3. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) - Coordination with IG publishing team to Correct - Note To Balloters present

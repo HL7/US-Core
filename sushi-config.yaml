@@ -17,6 +17,10 @@ extension:
 definition:
   extension:
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+      valueCode: hl7.fhir.us.core#8.0.0
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+      valueCode: hl7.fhir.us.core#8.0.0-ballot
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
       valueCode: hl7.fhir.us.core#7.0.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
       valueCode: hl7.fhir.us.core#7.0.0-ballot
@@ -52,8 +56,8 @@ description: >-
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2024-10-09
-version: '8.0.0'
+date: 2025-09-24
+version: '9.0.0-ballot'
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.smart-app-launch: 2.2.0
@@ -175,7 +179,7 @@ pages:
   # version-history.md:
   #   extension:
   #   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-  #     valueCode: informative 
+  #     valueCode: informative
   #   changes-between-versions.md:
   #     extension:
   #     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -188,7 +192,7 @@ pages:
   looking-ahead.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-      valueCode: informative 
+      valueCode: informative
     us-core-roadmap.md:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -205,7 +209,7 @@ pages:
       patient-data-feed-additional-resources.md:
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-          valueCode: informative  
+          valueCode: informative
   ImplementationGuide-hl7.fhir.us.core.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -246,8 +250,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
-  version-comparison-master: 7.0.0
+  version-comparison-master: 8.0.0
   version-comparison:
+    - 8.0.0
     - 7.0.0
     - 6.1.0
     - 5.0.1
@@ -291,8 +296,12 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - comparison-argo/sd-argo-ethnicity-us-core-ethnicity.html
     - comparison-argo/vs-narrative-status-us-core-narrative-status.html
 
-  ipa-comparison: 
+  ipa-comparison:
     - '{current}'
+
+  ips-comparison:
+    - '{current}'
+
   logging:
     - tx #tx: Messages describing the use of the terminology server (for debugging)
     - html #html: Log when validating an html page (troubleshooting only - leave off)
@@ -302,8 +311,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   auto-oid-root: 2.16.840.1.113883.4.642.40.2
 copyrightyear: '2025+'
 # releaselabel: CI Build
-releaselabel: STU 8
-# releaselabel: STU 8 Ballot
+releaselabel: STU 9 Ballot
+# releaselabel: STU 8
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │

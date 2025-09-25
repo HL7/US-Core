@@ -1,5 +1,5 @@
 
- The [SMART App Launch] implementation guide describes a set of foundational patterns based on OAuth 2.0 for Client applications to authorize, authenticate, and integrate with FHIR-based data systems. This page documents the SMART on FHIR obligations and capabilities for US Core Servers supporting User-Facing Applications and Backend Services. 
+ The [SMART App Launch] implementation guide describes a set of foundational patterns based on OAuth 2.0 for Client applications to authorize, authenticate, and integrate with FHIR-based data systems. This page documents the SMART on FHIR obligations and capabilities for US Core Servers supporting User-Facing Applications and Backend Services.
 
 ### *Capability Sets* for US Core Servers Supporting User-Facing Applications and Backend Services
 {: #capability-sets}
@@ -23,9 +23,9 @@ US Core Server **SHALL** support token introspection defined by the SMART App La
 
 ### SMART Scopes
 
-SMART's scopes, defined in Version 2.0.0 and later of the SMART App Launch implementation guide, allow access permissions to be delegated to a Client application. To allow access to specific data about a single patient, the US Core API requires Servers to support [resource level scopes] and "[granular scopes]", the finer-grained scopes using search parameters.  US Core's required scopes (**SHALL**) are based on community-based consensus that the scope meets a system requirement, clinical need, or federal regulation. Similarly, US Core's recommended scopes (**SHOULD**) rely on community-based consensus that the scope meets a system requirement or clinical need as a best practice. 
+SMART's scopes, defined in Version 2.0.0 and later of the SMART App Launch implementation guide, allow access permissions to be delegated to a Client application. To allow access to specific data about a single patient, the US Core API requires Servers to support [resource level scopes] and "[granular scopes]", the finer-grained scopes using search parameters.  US Core's required scopes (**SHALL**) are based on community-based consensus that the scope meets a system requirement, clinical need, or federal regulation. Similarly, US Core's recommended scopes (**SHOULD**) rely on community-based consensus that the scope meets a system requirement or clinical need as a best practice.
 
-The US Core required scopes listed below are named in the [HTI-1 final rule], which requires support for the Condition and Observation category scopes. (Note that although mentioned in HTI-1 final rule, there is no "Clinical Test" category for Observation in US Core.) The recommended granular scopes listed below are of particular interest to patients and health systems. Implementations meeting US EHR certification requirements must support all US Core's required scopes. Other systems only need to support scopes for the US Core APIs they support. 
+The US Core required scopes listed below are named in the [HTI-1 final rule], which requires support for the Condition and Observation category scopes. (Note that although mentioned in HTI-1 final rule, there is no "Clinical Test" category for Observation in US Core.) The recommended granular scopes listed below are of particular interest to patients and health systems. Implementations meeting US EHR certification requirements must support all US Core's required scopes. Other systems only need to support scopes for the US Core APIs they support.
 
 Each US Core Profile page includes a "Quick Start" section summarizing each profile's supported search transactions and scopes. Servers **MAY** support other scopes in addition to those listed below and in the Quick Start sections. US Core Clients should follow the [principle of least privilege] and access only the necessary resources. In other words, if a Client needs only vital sign observations, it should request access only to Observations with a category of "vital-signs". Note that a granular scope grants access to all resources matching that granular scope *regardless of whether other categories* are present.
 
@@ -186,10 +186,10 @@ The SMART App Launch guide requires the following JSON file metadata:
 US Core requires following additional metadata:
 
 - `scopes_supported`: Array of scopes a Client may request.
-    - The Server **SHALL** list all the required US Core Scopes for the US Core Profiles they support in the `scopes_supported` array; additional scopes **MAY** be supported (so Clients should not consider this array an exhaustive list). 
+    - The Server **SHALL** list all the required US Core Scopes for the US Core Profiles they support in the `scopes_supported` array; additional scopes **MAY** be supported (so Clients should not consider this array an exhaustive list).
 
     - Servers **MAY** limit Clients' scopes to those configured at registration time. Servers **SHALL** allow users to select a subset of the requested scopes at the approval time. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.
-- `introspection_endpoint`: The URL to a Server's introspection endpoint, which can be used to validate a token. 
+- `introspection_endpoint`: The URL to a Server's introspection endpoint, which can be used to validate a token.
   - Servers **SHALL** document this endpoint in the file
 
 #### Example `.well-known/smart-configuration` File
@@ -211,12 +211,12 @@ Content-Type: application/json
   "authorization_endpoint": "https://ehr.example.com/auth/authorize",
   "token_endpoint": "https://ehr.example.com/auth/token",
   "token_endpoint_auth_methods_supported": [
-    "Client_secret_basic",
+    "client_secret_basic",
     "private_key_jwt"
   ],
   "grant_types_supported": [
     "authorization_code",
-    "Client_credentials"
+    "client_credentials"
   ],
   "registration_endpoint": "https://ehr.example.com/auth/register",
   "scopes_supported": [
@@ -246,13 +246,13 @@ Content-Type: application/json
     "permission-patient",
     "permission-user",
     "permission-v2",
-    "Client-public",
-    "Client-confidential-symmetric",
-    "Client-confidential-asymmetric",
+    "client-public",
+    "client-confidential-symmetric",
+    "client-confidential-asymmetric",
     "context-ehr-patient",
     "sso-openid-connect"
   ]
 }
 ~~~
- 
+
 {% include link-list.md %}

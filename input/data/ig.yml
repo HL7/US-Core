@@ -8,11 +8,11 @@ extension:
 - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
   valueInteger: 3
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 8.0.0
+version: 9.0.0-ballot
 name: USCore
 title: US Core Implementation Guide
 status: active
-date: '2024-10-09'
+date: '2025-09-24'
 publisher: HL7 International / Cross-Group Projects
 contact:
 - name: HL7 International / Cross-Group Projects
@@ -71,6 +71,10 @@ dependsOn:
   id: hl7_fhir_uv_extensions_r4
 definition:
   extension:
+  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    valueCode: hl7.fhir.us.core#8.0.0
+  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    valueCode: hl7.fhir.us.core#8.0.0-ballot
   - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
     valueCode: hl7.fhir.us.core#7.0.0
   - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
@@ -2321,11 +2325,11 @@ definition:
       reference: StructureDefinition/us-core-race
     description: "Concepts classifying the person into a named category of humans\
       \ sharing common history, traits, geographical origin or nationality.  The race\
-      \ codes used to represent these concepts are based upon the [CDC Race and Ethnicity\
-      \ Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3)\
-      \ which includes over 900 concepts for representing race and ethnicity of which\
-      \ 921 reference race.  The race concepts are grouped by and pre-mapped to the\
-      \ 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n\
+      \ codes used to represent these concepts are based upon the [Race & Ethnicity\
+      \ - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238)\
+      \ code system which includes over 900 concepts for representing race and ethnicity\
+      \ of which 921 reference race.  The race concepts are grouped by and pre-mapped\
+      \ to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n\
       \ - Black or African American\n - Native Hawaiian or Other Pacific Islander\n\
       \ - White."
     exampleBoolean: false
@@ -4037,7 +4041,7 @@ definition:
   - code: copyrightyear
     value: 2025+
   - code: releaselabel
-    value: STU 8
+    value: STU 9 Ballot
   - code: path-resource
     value: input/resources
   - code: path-resource
@@ -4075,7 +4079,9 @@ definition:
   - code: no-narrative
     value: Bundle/docref-example-2
   - code: version-comparison-master
-    value: 7.0.0
+    value: 8.0.0
+  - code: version-comparison
+    value: 8.0.0
   - code: version-comparison
     value: 7.0.0
   - code: version-comparison
@@ -4159,6 +4165,8 @@ definition:
   - code: html-exempt
     value: comparison-argo/vs-narrative-status-us-core-narrative-status.html
   - code: ipa-comparison
+    value: '{current}'
+  - code: ips-comparison
     value: '{current}'
   - code: logging
     value: tx
