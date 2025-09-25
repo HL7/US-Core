@@ -32,7 +32,9 @@ The following are example usage scenarios for this profile:
 
 \* see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - For USCDI, systems are required to use SNOMED CT for coded results if the SCT code exists.
 - The [CLIA/USCDI/HL7 Elements Crossmapping Table] provides a crosswalk of [Clinical Laboratory Improvement Amendments (CLIA)] data elements to corresponding FHIR fields, terminology standards, and naming conventions used in HL7 CDA and HL7 V2 standards. Implementers can use this mapping to help comply with CLIA requirements when using the US Core Laboratory Result Observation Profile.
@@ -42,6 +44,5 @@ The following are example usage scenarios for this profile:
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New laboratory observations
   - Changes in the status of laboratory observations, including events that trigger the same status (e.g., amended → amended).
-
 
 {% include link-list.md %}

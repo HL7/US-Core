@@ -8,7 +8,6 @@ The following are example usage scenarios for this profile:
 -   Query for a specific Radiology note (e.g., 84178-3 Interventional Radiology Note)
 -   Query for a category of reports (e.g., all Cardiology reports)
 
-
 ### Mandatory and Must Support Data Elements
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
@@ -36,7 +35,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 \* see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - See [Clinical Notes]
 - The `DiagnosticReport.category` binding Must Support, at a minimum, the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.
@@ -52,6 +53,5 @@ The following data elements must always be present ([Mandatory] definition) or m
    * The [Argonaut SMART Imaging Access project](https://confluence.hl7.org/spaces/AP/pages/161060067/SMART+Imaging+Access) defined an approach to access imaging studies using a single authorization flow.
 
 - The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.
-
 
 {% include link-list.md %}

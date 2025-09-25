@@ -1,7 +1,8 @@
 
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
 
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 This Complex Extension is made up of three sub-extensions:
 
@@ -16,6 +17,5 @@ This Complex Extension is made up of three sub-extensions:
 
 2. A required date asserting when the information was provided
 3. A Must Support information source code with an [example binding] to the *Medication Adherence ValueSet* - a "starter" set of informant role codes.
-
 
 {% include link-list.md %}

@@ -9,9 +9,7 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
-
 
 **Each Observation Must Have:**
 
@@ -26,16 +24,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 <!-- 3. who reported the preference -->
 1. treatment intervention preference value
 
-
-
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
 1. a performer*
 
-
 *see guidance below
   
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - Treatment intervention preferences expressed by a patient may be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.
 {% include conditional-goals-guidance.md %}

@@ -26,10 +26,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. health insurance group
 4. health insurance plan
 
+### Profile Specific Implementation Guidance
 
-**Profile Specific Implementation Guidance:**
-
-
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - There is no single way to indicate that the patient has no coverage using the Coverage resource:
   - `Coverage.status` alone may not indicate whether an individual is covered. The `Coverage.period` needs to be considered as well. For example, the coverage may be expired with a status of "active", or conversely, it may be "canceled" but still have covered claims.

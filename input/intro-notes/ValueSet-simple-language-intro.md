@@ -3,7 +3,6 @@
 
 The publication tooling cannot expand the language value set because they are based on a grammar.  To aid in the reader's understanding, sample codes are shown below:
 
-
 **Examples of 2-character codes for common languages**
 
 |ISO 639-1 Code|English name of Language|

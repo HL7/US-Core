@@ -22,17 +22,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a verification status
 2. a reaction manifestation
 
-
-
 {% include additional-requirements-intro.md type="AllergyIntolerance" plural="false" %}
 
 1. a recorder*
 
-
 *see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
 
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * \* The `AllergyIntolerance.clinicalStatus` element has the following constraints: **SHALL** be present if verification status is not "entered-in-error" and **SHALL NOT** be present if verification Status is "entered-in-error".
 * *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile with the appropriate negation code in `AllergyIntolerence.code` and the appropriate verification status in `AllergyIntolerance.verificationStatus`.

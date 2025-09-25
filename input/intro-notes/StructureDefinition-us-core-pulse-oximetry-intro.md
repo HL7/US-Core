@@ -23,7 +23,9 @@ In addition to the Mandatory and Must Support data elements in the [US Core Vita
 
 \*see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}

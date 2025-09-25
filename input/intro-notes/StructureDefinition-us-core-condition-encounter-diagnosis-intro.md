@@ -21,15 +21,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. an encounter
 2. date record was first recorded
 
-
-
 {% include additional-requirements-intro.md type="Condition" plural="false" %}
 
 1. a recorder*
 
+### Profile Specific Implementation Guidance
 
-
-**Profile Specific Implementation Guidance:**
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * For Problems and Health Concerns, use the [US Core Condition Problems and Health Concerns Profile].
 * \*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.

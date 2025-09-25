@@ -27,7 +27,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 *See guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - *The `Observation.value` element uses codes for "yes, "no", and "unknown" to answer the question posed by the fixed `Observation.code` - whether one or more advance directives are present.
 - \* If the system asserts the patient has ADI documents and the references to the (electronic) documents are known, it **SHOULD** reference them in the [Supporting Info Extension] using the [US Core ADI DocumentReference Profile] to exchange the ADI documents and their properties.

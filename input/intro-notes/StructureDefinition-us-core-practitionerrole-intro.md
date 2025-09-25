@@ -13,7 +13,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. Contact information
 1. A communication endpoint
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * At least one of the following elements must be present:
     - `PractitionerRole.practitioner`
@@ -23,7 +25,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 * Due to implementer feedback, some US Core Profiles reference the [PractitionerRole] resource instead of the US Core PractitionerRole Profile. However, the US Core PractitionerRole Profile **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].
 * A [Direct address] can be represented in the `telecom` element using the [US Core Direct email Extension] or in a referenced [Endpoint] as a "direct-project" endpoint connection type.
-
 
 * When selecting role codes
   * implementers **SHOULD** choose the code that reflects the specific duties performed within that role rather than the specialty unless the individual's professional specialization characterizes the role.

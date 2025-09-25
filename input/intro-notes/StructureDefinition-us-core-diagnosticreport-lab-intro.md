@@ -32,7 +32,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 \* see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - The [CLIA/USCDI/HL7 Elements Crossmapping Table] provides a crosswalk of [Clinical Laboratory Improvement Amendments (CLIA)] data elements to corresponding FHIR fields, terminology standards, and naming conventions used in HL7 CDA and HL7 V2 standards. Implementers can use this mapping to help comply with CLIA requirements when using the US Core Laboratory Result Observation Profile.
 * Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed. For example:
@@ -44,7 +46,5 @@ The following data elements must always be present ([Mandatory] definition) or m
   - New laboratory reports
   - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).
 - The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.
-
-
 
 {% include link-list.md %}

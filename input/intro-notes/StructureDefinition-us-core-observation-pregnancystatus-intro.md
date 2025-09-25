@@ -23,14 +23,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a category code of "social-history"
 
-
-
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
 1. a performer*
 
+### Profile Specific Implementation Guidance
 
-**Profile Specific Implementation Guidance:**
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - To represent the patient's  *intent* to become pregnant, use the [US Core Observation Pregnancy Intent Profile].
 {% include provenance-author-bullet-generator.md %}

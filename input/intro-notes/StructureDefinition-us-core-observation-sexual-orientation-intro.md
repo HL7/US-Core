@@ -17,17 +17,16 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a fixed code for sexual orientation
 1. a patient
 
-
 **Each Observation Must Support:**
 
 1. a time indicating when the observation was made
 2. a sexual orientation value
 
+### Profile Specific Implementation Guidance
 
-**Profile Specific Implementation Guidance:**
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * This profile is no longer a USCDI requirement. Implementers can look to the FHIR specification and other implementation guides for usage.
 * Additional codes that translate or map to the Observation code (e.g., local codes) are allowed.
-
 
 {% include link-list.md %}

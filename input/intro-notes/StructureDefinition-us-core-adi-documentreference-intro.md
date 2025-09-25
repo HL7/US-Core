@@ -37,7 +37,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 *see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - In addition to the [Advance Directive Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion) value set, other category schemes may be used to facilitate the sharing of health documents.
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or the content as inline base64 encoded data using `DocumentReference.content.attachment.data`.

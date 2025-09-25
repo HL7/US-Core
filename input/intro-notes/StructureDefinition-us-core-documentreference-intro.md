@@ -34,7 +34,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a document category limited to [The US Core DocumentReferences Type Value Set], which currently consists of a single value, "clinical note."
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - See [Clinical Notes]
 - The `DocumentReference.type` binding Must Support, at a minimum, the [10 Common Clinical Notes] and may extend to the whole [US Core DocumentReference Type Value Set]
@@ -42,11 +44,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
 
-
 - For C-CDA Clinical Documents
   - The format code in `DocumentReference.content.format` is "urn:hl7-org:sdwg:ccda-structuredBody:2.1".
   - For other CDA documents, Servers SHOULD select the appropriate format code from the [HL7 ValueSet of Format Codes for use with Document Sharing](https://terminology.hl7.org/6.2.0/ValueSet-v3-HL7FormatCodes.html).
-
 
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or the content as inline base64 encoded data using `DocumentReference.content.attachment.data`.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.

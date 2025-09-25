@@ -18,7 +18,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a patient
 2. a date the vaccine was administered
 
-
 **Each Immunization Must Support:**
 
 1. a statusReason if the vaccine wasn't given
@@ -30,7 +29,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 *see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - Use the status code: `not-done` to represent that an immunization was *not* given.
 - Based upon the ASTP U.S. Core Data for Interoperability (USCDI) requirements, [CVX vaccine codes]<sup>1</sup> are required, and the [NDC vaccine codes] **SHOULD** be supported as an additional code.

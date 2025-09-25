@@ -9,9 +9,7 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
-
 
 **Each Observation Must Have:**
 
@@ -32,7 +30,9 @@ The following data elements must always be present ([Mandatory] definition) or m
   
 *see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - The category "vital-signs" aligns with the USCDI Data Class and Elements and provides a convenient and consistent grouping of the clinical concepts. Implementers can group them differently based on their clinical needs.
 - The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:

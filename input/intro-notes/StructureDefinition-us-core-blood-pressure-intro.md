@@ -22,7 +22,9 @@ The following are example usage scenarios for this profile:
 1. a result value for systolic blood pressure
 2. a result value for diastolic blood pressure
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 - The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:
@@ -36,6 +38,5 @@ The following are example usage scenarios for this profile:
   - the `Observation.value[x]` element **SHOULD** be omitted
   - an Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
   - *All Server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
-
 
 {% include link-list.md %}

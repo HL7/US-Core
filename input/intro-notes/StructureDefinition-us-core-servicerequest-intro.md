@@ -7,7 +7,6 @@ The following are example usage scenarios for this profile:
 -   Query for a specific service offered to a patient, such as a referral to a support program.
 -   Query for a category of service request (e.g., all cardiology requests)
 
-
 ### Mandatory and Must Support Data Elements
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
@@ -34,7 +33,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 \*see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - For more information on exchanging Social Determinants of Health (SDOH) service requests, See the [Screening and Assessments] guidance page.
 - The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes], and other category codes can be used. API consumers can query by category when accessing patient information. For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table below. For example, laboratory orders would have the category code "108252007" (Laboratory procedure).
@@ -62,7 +63,5 @@ The following data elements must always be present ([Mandatory] definition) or m
        - Servers **SHALL** support *at least one* target resource in `ServiceRequest.reasonReference`. Clients **SHALL** support all target resources.
        - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
 {% include provenance-author-bullet-generator.md %}
-
-
 
 {% include link-list.md %}

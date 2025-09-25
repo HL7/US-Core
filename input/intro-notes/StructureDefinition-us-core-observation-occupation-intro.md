@@ -25,17 +25,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. a code for the job history industry
 4. the industry code or text
 
-
-
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
 1. a performer*
 
-
 *see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
 
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 {% include additional-codings.md %}
 - For the current job, omit `observation.effectivePeriod.end` to indicate it is ongoing.
@@ -43,6 +41,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - In the [Quick Start](#notes) section below, you can find instructions on searching for Occupations (Jobs) by `patient`, `date`, and other core search parameters. Refer to the FHIR [search] specification for more advanced queries using Observation.
 - Refer to the [Occupational Data for Health (ODH)] FHIR IG  to convey additional details; data elements, such as Employer; or different topics, such as Usual (Longest-Held) Work.
 {% include provenance-author-bullet-generator.md %}
-
 
 {% include link-list.md %}

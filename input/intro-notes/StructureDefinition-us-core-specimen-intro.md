@@ -26,7 +26,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 \* see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 *  Since the binding is [extensible] when a code is unavailable, just text is allowed.
 *  \*Although both `Specimen.identifier` and `Specimen.accessionIdentifier` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.

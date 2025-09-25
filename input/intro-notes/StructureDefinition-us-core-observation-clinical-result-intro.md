@@ -8,7 +8,6 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile-specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
 **Each Observation Must Have:**
@@ -29,13 +28,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 \* see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - See the [US Core Laboratory Result Observation Profile] to represent laboratory test results.
 {% include observation_guidance_1.md category="procedure, exam or laboratory" recommendation="Servers **SHOULD** use the base FHIR [Observation Category Codes]." %}
 - For a *starter set* of example clinical test LOINC codes, see [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter].
 {% include provenance-author-bullet-generator.md %}
-
-
 
 {% include link-list.md %}

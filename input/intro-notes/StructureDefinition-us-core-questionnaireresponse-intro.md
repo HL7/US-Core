@@ -26,7 +26,9 @@ The following are example usage scenarios for this profile:
 
 *see guidance below
 
-**Profile Specific Implementation Guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - The SDC profile (from which this profile is derived) focuses on the constraints appropriate to capturing the "answer(s)" to a FHIR [Questionnaire] and demands that the Questionnaire's canonical URL be specified. If the QuestionnaireResponse is based on a non-FHIR form:
   1. Construct a FHIR Questionnaire representing *at least* the relevant metadata (in other words, the questions may be omitted).

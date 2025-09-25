@@ -11,7 +11,6 @@ profile. See the [Medication List] section for guidance on accessing a patient's
 
 ### Mandatory and Must Support Data Elements
 
-
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
 
 **Each MedicationRequest Must Have:**
@@ -41,8 +40,9 @@ The following data elements must always be present ([Mandatory] definition) or m
  
 \* see guidance below
 
+### Profile Specific Implementation Guidance
 
-**Profile Specific Implementation Guidance:**
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * See the [Medication List] section for guidance on accessing a patient's medications, including over-the-counter (OTC) medications and other substances taken for medical and recreational use.
   * Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidance. It is always best practice to confirm this list with the patient or caregiver.
@@ -60,7 +60,5 @@ The following data elements must always be present ([Mandatory] definition) or m
          - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps Client applications identify duplicates.
 - \*  This profile uses the [US Core Medication Adherence Extension] to report medication adherence. This extension communicates whether a medication has been consumed according to instructions.
-
-
 
 {% include link-list.md %}
