@@ -46,16 +46,12 @@ The January 2026 ballot addresses the following:
 22. **Triaged:** Non-substantive (Correction) Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
 23. **Triaged:** Non-substantive (Correction) Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](StructureDefinition-us-core-observation-lab.html#terminology-bindings-differential)4
 24. **Triaged:**  () Clean up examples for FHIR ADI DocumentReference Profile [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here]()
-25. **Pre Applied:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes:
-  - [US Core Patient Profile](StructureDefinition-us-core-patient.html)
-  - [Externally Published code systems](terminology.html#externally-published-code-systems)
+25. **Pre Applied:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](StructureDefinition-us-core-patient.html)
 26. **Triaged:**  Non-substantive (Enhancement) Create Version History Menu Item [FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](changes.html)
 27. **Triaged:**  Non-substantive (Enhancement) Update formatting in Quick Start to make it easier to read [FHIR-50397](https://jira.hl7.org/browse/FHIR-50397) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
 28. **Triaged:**  Compatible, substantive (Enhancement) Consider Using additional bindings instead of grouped valuesets [FHIR-50464](https://jira.hl7.org/browse/FHIR-50464) See Changes [Here](StructureDefinition-us-core-location.html)
 29. **Triaged:**  () Additional Guidance for the appropriate NDC code to use from the NDC vaccine linker [FHIR-50798](https://jira.hl7.org/browse/FHIR-50798) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html#mandatory-and-must-support-data-elements)
-30. **Pre Applied:** Non-compatible (Correction) Correct HCPCS code system URI [FHIR-50807](https://jira.hl7.org/browse/FHIR-50807) See Changes:
-  - [US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
-  - [Externally Published code systems](terminology.html#externally-published-code-systems)
+30. **Pre Applied:** Non-compatible (Correction) Correct HCPCS code system URI [FHIR-50807](https://jira.hl7.org/browse/FHIR-50807) See Changes [Here](ValueSet-us-core-procedure-code.html)
 31. **Triaged:**  () merge US Core Provenance Type CodeSystem with FHIR Provenance Type CodeSystem [FHIR-50927](https://jira.hl7.org/browse/FHIR-50927) See Changes [Here](CodeSystem-us-core-provenance-participant-type.html)
 32. **Pre-Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
 33. **Resolved - change required:** Non-substantive (Correction) Fix Link to Race & Ethnicity - CDC (CDCREC) code system [FHIR-51137](https://jira.hl7.org/browse/FHIR-51137) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-race.html)
@@ -63,7 +59,8 @@ The January 2026 ballot addresses the following:
 35. **Resolved - change required:** Non-substantive (Correction) Typo in SMART well-known example [FHIR-51363](https://jira.hl7.org/browse/FHIR-51363) See Changes [Here](scopes.html#example-well-knownsmart-configuration-file)
 36. **Submitted:**  () Remove databAbsent reason requirements from Simple Observation profile [FHIR-51493](https://jira.hl7.org/browse/FHIR-51493) See Changes [Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
 37. **Triaged:**  () Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)
-38. **Resolved - change required:** Non-substantive (Correction) remove span tags  [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+38. **Resolved - change required:** Non-substantive (Correction) Remove span tags  [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+39. **Resolved - change required:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
 
 
 ### Version = 8.0.0 (Meets USCDI v5 Requirements)
