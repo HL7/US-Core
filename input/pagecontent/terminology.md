@@ -21,7 +21,7 @@ Value sets in US Core and C-CDA may retain inactive codes. These codes may be us
 
 #### Value Sets Used in US Core
 
-The following table lists all the Value sets used in US Core and where they can be found. This information is also available as a [csv](tables/valueset-ref-all-list.csv) or [excel](tables/valueset-ref-all-list.xlsx) file. 
+The following table lists all the Value sets used in US Core and where they can be found. This information is also available as a [csv](tables/valueset-ref-all-list.csv) or [excel](tables/valueset-ref-all-list.xlsx) file.
 
 {% include valueset-ref-all-table-generator.html %}
 
@@ -46,17 +46,15 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 |URI|Source|Comment|OID (for non-FHIR systems)|
 |---|---|---|---|
-|`https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets`|[CMS](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)|*Healthcare Common Procedure Coding System (HCPCS) Level II alphanumeric codes*|2.16.840.1.113883.6.285|
 |`http://www.cms.gov/Medicare/Coding/ICD10`|[CMS](http://www.cms.gov/Medicare/Coding/ICD10/)|*International Classification of Diseases, 10th Revision, Procedure Coding System (ICD-10-PCS)* -  See [ICD-10 PCS Codes](http://www.icd10data.com/icd10pcs) for online access to codes for general information purposes. |2.16.840.1.113883.6.4|
 |`http://www.ada.org/cdt`|[ADA](http://www.ada.org/en/publications/cdt)|*Code on Dental Procedures and Nomenclature*|2.16.840.1.113883.6.13|
-|`https://www.usps.com`|[USPS](http://pe.usps.com/text/pub28/28apb.htm)|*United States Postal Service Two–Letter State and Possession Abbreviations*|2.16.840.1.113883.6.92|
 {:.grid}
 
 
 
 #### Code System Used in US Core
 
-The following table lists all the CodeSystems used in US Core and where they can be found. This information is also available as a [csv](tables/codesystem-ref-all-list.csv) or [excel](tables/codesystem-ref-all-list.xlsx) file. 
+The following table lists all the CodeSystems used in US Core and where they can be found. This information is also available as a [csv](tables/codesystem-ref-all-list.csv) or [excel](tables/codesystem-ref-all-list.xlsx) file.
 
 {% include codesystem-ref-all-table-generator.html %}
 
@@ -70,12 +68,12 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
 
   -  VSAC requires login using your own *UMLS API Key* to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html). (See the screenshots below)
-  - The value sets in VSAC are specified using a VSAC value set OID.  
+  - The value sets in VSAC are specified using a VSAC value set OID.
   - To view the value set expansion in the VSAC user interface, use:
 
       `GET https://vsac.nlm.nih.gov/ValueSet/[VSAC OID]/expansion`
 
-    An example of this is shown in the screenshots below.  
+    An example of this is shown in the screenshots below.
 
     When viewing a ValueSet in the VSAC UI, the Code System OIDs and VSAC Code System names are displayed for each code. However, these code system identifiers **SHOULD NOT** be used. The FHIR URIs code systems are defined as part of FHIR and **SHOULD** be used instead. Unfortunately, the FHIR URI for the code system is not shown. As a convenience for the reader, a [VSAC to FHIR Code System Mapping Table] is provided, which maps the VSAC Code System names to the corresponding FHIR URI. For more information, see this [documentation](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacname-fhirname-fhirtitle.html) describing the relationships between the VSAC value set name, FHIR value set name, and FHIR value set title and how to access VSAC's FHIR API.
 
