@@ -39,14 +39,13 @@ This section provides detailed implementation guidance for the US Core Profile t
   -  a string
   -  a code
   -  a "qualifier" confirming or refuting a statement about findings in code. For example:
-      **code**: Transport too expensive (SNOMED CT: 160695008)  
+      **code**: Transport too expensive (SNOMED CT: 160695008)
       **value**: true
 
 - \*At a minimum, Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
 
     {% include obs_cat_guidance.md category="sdoh, functional-status, or social history"%}
 
-{% include DAR-exception.md %}
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
   - \*Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
 {% include provenance-author-bullet-generator.md %}
