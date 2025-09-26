@@ -9,7 +9,7 @@ profile:
 
 ### Mandatory and Must Support Data Elements
 
-The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
 **Each Immunization Must Have:**
 
@@ -35,10 +35,11 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - Use the status code: `not-done` to represent that an immunization was *not* given.
 - Based upon the ASTP U.S. Core Data for Interoperability (USCDI) requirements, [CVX vaccine codes]<sup>1</sup> are required, and the [NDC vaccine codes] **SHOULD** be supported as an additional code.
-    - NDC codes are defined by manufacturer, and CVX codes, which are much less granular, are often limited to a single product made by a single manufacturer.
+    - NDC codes are defined by the manufacturer, and CVX codes, which are much less granular, are often limited to a single product made by a single manufacturer.
+    - <span class="bg-success" markdown="1">In most cases, there are separate NDCs for the Unit of Use (primary) and Unit of Sale (secondary) packaging of a vaccine, but only the Unit of Use NDC codes should be used since they represent the product that is administered.</span><!-- new-content -->
     - The preferred code system identifiers are `http://hl7.org/fhir/sid/cvx` for CVX and `http://hl7.org/fhir/sid/ndc` for NDC vaccine codes. Note that the `vaccineCode` binding link in the formal definition and the CDC links below use the associated OID as the code system identifiers.
     - Be aware that there is a *10-digit (with dashes)* NDC format displayed on drug packaging and an *11-digit (no dashes)* NDC format for billing and prescribing (for example, "49281-121-65" and "49281012165"). Normalization may be required to avoid validation errors and warnings.
-    - The CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using the CVX and 11-digit NDC codes based on this table.
+    - The CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers <span class="bg-success" markdown="1">(note that both the Unit of Use and Unit of Sale NDC are mapped to CVX codes). The [Immunization Example 1](Immunization-imm-1.html) uses both CVX and the 11-digit NDC Unit of Use code based on this table.</span><!-- new-content -->
  - *There is no guarantee that vaccine lot numbers are globally unique, and they are not recommended for matching or de-duplication across systems unless used with other data elements such as a vaccine product code, manufacturer code, or date of administration.  Implementers **MAY** communicate the `Immunization.manufacturer` to ensure global uniqueness to lot numbers.
 {% include provenance-author-bullet-generator.md %}
 
