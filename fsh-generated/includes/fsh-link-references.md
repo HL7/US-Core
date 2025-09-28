@@ -212,6 +212,7 @@
 [TAPS]: QuestionnaireResponse-TAPS.html
 [treatment-intervention-preference]: Observation-treatment-intervention-preference.html
 [udi-1]: Device-udi-1.html
+[careplan-ulcer-example]: CarePlan-careplan-ulcer-example.html
 [specimen-example-urine]: Specimen-specimen-example-urine.html
 [urobilinogen]: Observation-urobilinogen.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html

@@ -45,7 +45,7 @@ The January 2026 ballot addresses the following:
 21. **Resolved - change required:** Non-substantive (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) See Changes [Here](history.html)
 22. **Triaged:** Non-substantive (Correction) Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
 23. **Triaged:** Non-substantive (Correction) Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](StructureDefinition-us-core-observation-lab.html#terminology-bindings-differential)4
-24. **Triaged:**  () Clean up examples for FHIR ADI DocumentReference Profile [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here]()
+24. **Triaged:**  Non-compatible (Enhancement) Clean up examples for FHIR ADI DocumentReference Profile [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here]()
 25. **Pre Applied:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](StructureDefinition-us-core-patient.html)
 26. **Triaged:**  Non-substantive (Enhancement) Create Version History Menu Item [FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](changes.html)
 27. **Triaged:**  Non-substantive (Enhancement) Update formatting in Quick Start to make it easier to read [FHIR-50397](https://jira.hl7.org/browse/FHIR-50397) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)

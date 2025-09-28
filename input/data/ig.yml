@@ -1449,6 +1449,11 @@ definition:
     name: UDI 1 Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
   - reference:
+      reference: CarePlan/careplan-ulcer-example
+    description: This is an Ulcer CarePlan example for the *US Core CarePlan Profile*.
+    name: Ulcer CarePlan Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
+  - reference:
       reference: Specimen/specimen-example-urine
     description: This is a urine specimen example for the *US Core Specimen Profile*.
     name: Urine Specimen Example

@@ -1,11 +1,27 @@
 resourceType: CodeSystem
+
+#=== Deprecate code system ====
+
+extension:
+  - url: >-
+      http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: deprecated
+    _valueCode:
+      extension:
+        - url: >-
+            http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason
+          valueMarkdown: >-
+            This code system is no longer required and is deprecated. The concept "assess-plan" can be replicated as a local code.
+
+#============================
+
 id: careplan-category
 url: http://hl7.org/fhir/us/core/CodeSystem/careplan-category
 name: USCoreCarePlanCategoryExtensionCodes
 title: US Core CarePlan Category Extension Codes
 status: active
 experimental: false
-date: 2022-09-29T14:59:24-07:00
+date: 2025-09-27
 description: Set of codes that are needed for implementation of the US-Core CarePlan
   Profile. These codes are used as extensions to the FHIR ValueSet.
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons

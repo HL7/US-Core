@@ -68,44 +68,53 @@ differential:
     - identity: argonaut-dq-dstu2
       map: NA (new element in STU3)
 
-      
+
   - id: CarePlan.category
     path: CarePlan.category
-    slicing:
-      discriminator:
-      - type: value
-        path: $this
-      rules: open
+     # =========== remove in US Core 9 ===========
+    # slicing:
+    #   discriminator:
+    #   - type: value
+    #     path: $this
+    #   rules: open
+      # =========== remove in US Core 9 ===========
     definition: Type of plan.
     requirements: Identifies what "kind" of plan this is to support differentiation
       between multiple co-existing plans; e.g., "Home health", "psychiatric", "asthma",
       "disease management", "wellness plan", etc.
-    min: 1
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: CarePlan.category
-
-
-  # =========== make min = 0 in US Core 8 ===========
-  - id: CarePlan.category:AssessPlan
-    path: CarePlan.category
-    sliceName: AssessPlan
-    definition: Type of plan.
-    requirements: Identifies what "kind" of plan this is to support differentiation
-      between multiple co-existing plans; e.g., "Home health", "psychiatric", "asthma",
-      "disease management", "wellness plan", etc.
+    # =========== make min = 0 in US Core 9 ===========
     min: 0
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: http://hl7.org/fhir/us/core/CodeSystem/careplan-category
-        code: assess-plan
+    # =========== make min = 0 in US Core 9 ===========
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: CarePlan.category
- # =========== make min = 0 in US Core 8 ===========
+  # ===========  example binding strength to preferred in US Core 9 ===========
+    binding:
+      strength: preferred
+      valueSet: http://hl7.org/fhir/ValueSet/care-plan-category
+
+  # ===========  example binding strength to preferred in US Core 9 ===========
+
+  # =========== remove in US Core 9 ===========
+  # - id: CarePlan.category:AssessPlan
+  #   path: CarePlan.category
+  #   sliceName: AssessPlan
+  #   definition: Type of plan.
+  #   requirements: Identifies what "kind" of plan this is to support differentiation
+  #     between multiple co-existing plans; e.g., "Home health", "psychiatric", "asthma",
+  #     "disease management", "wellness plan", etc.
+  #   min: 0
+  #   max: '1'
+  #   patternCodeableConcept:
+  #     coding:
+  #     - system: http://hl7.org/fhir/us/core/CodeSystem/careplan-category
+  #       code: assess-plan
+  #   mustSupport: true
+  #   mapping:
+  #   - identity: argonaut-dq-dstu2
+  #     map: CarePlan.category
+ # =========== make remove in US Core 9  ===========
 
   - id: CarePlan.subject
     path: CarePlan.subject
@@ -168,3 +177,17 @@ differential:
             - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
               valueBoolean: false
     #=================== new for USCDI 5 ====================================
+
+    #====Add CarePlan.addresses as a new  Additional USCDI element in US Core 9====
+  - id: CarePlan.addresses
+    extension:
+      - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+        valueBoolean: true
+    path: CarePlan.addresses
+    short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Health issues this plan addresses"
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+    mustSupport: false
+    #====Add CarePlan.addresses as a new Additional USCDI element in US Core 9====
