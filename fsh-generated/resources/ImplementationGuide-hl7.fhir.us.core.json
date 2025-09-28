@@ -392,6 +392,14 @@
       },
       {
         "reference": {
+          "reference": "CarePlan/careplan-ulcer-example"
+        },
+        "description": "This is an Ulcer CarePlan example for the *US Core CarePlan Profile*.",
+        "name": "CarePlan Ulcer Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
+      },
+      {
+        "reference": {
           "reference": "CareTeam/example"
         },
         "description": "This is a careteam example for the *US Core CareTeam Profile*.",
@@ -429,6 +437,14 @@
         "description": "This is a colonoscopy example for the *US Core CarePlan Profile*.",
         "name": "Colonoscopy Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-duodenal-ulcer-res"
+        },
+        "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's resolved duodenal ulcer with a category of 'problem-list-item'.",
+        "name": "Condition Duodenal Resolved Ulcer Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
       },
       {
         "reference": {
@@ -1853,14 +1869,6 @@
         "description": "This is a UDI 1 example for the *US Core Implantable Device Profile*.",
         "name": "UDI 1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/careplan-ulcer-example"
-        },
-        "description": "This is an Ulcer CarePlan example for the *US Core CarePlan Profile*.",
-        "name": "Ulcer CarePlan Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
       },
       {
         "reference": {

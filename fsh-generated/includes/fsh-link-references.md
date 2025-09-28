@@ -29,11 +29,13 @@
 [bp-data-absent]: Observation-bp-data-absent.html
 [capillary-refill-time-nail-bed]: Observation-capillary-refill-time-nail-bed.html
 [care-experience-preference]: Observation-care-experience-preference.html
+[careplan-ulcer-example]: CarePlan-careplan-ulcer-example.html
 [example]: CareTeam-example.html
 [cbc]: DiagnosticReport-cbc.html
 [chest-xray]: Media-chest-xray.html
 [pack-years-example]: Observation-pack-years-example.html
 [colonoscopy]: CarePlan-colonoscopy.html
+[condition-duodenal-ulcer-res]: Condition-condition-duodenal-ulcer-res.html
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
 [coverage-example]: Coverage-coverage-example.html
 [deceased-example]: Patient-deceased-example.html
@@ -212,7 +214,6 @@
 [TAPS]: QuestionnaireResponse-TAPS.html
 [treatment-intervention-preference]: Observation-treatment-intervention-preference.html
 [udi-1]: Device-udi-1.html
-[careplan-ulcer-example]: CarePlan-careplan-ulcer-example.html
 [specimen-example-urine]: Specimen-specimen-example-urine.html
 [urobilinogen]: Observation-urobilinogen.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html

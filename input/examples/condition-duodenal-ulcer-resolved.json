@@ -1,6 +1,6 @@
 {
     "resourceType": "Condition",
-    "id": "condition-duodenal-ulcer",
+    "id": "condition-duodenal-ulcer-res",
     "meta": {
         "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
@@ -8,11 +8,11 @@
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Condition Duodenal Ulcer Example"
+                "valueString": "Condition Duodenal Resolved Ulcer Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's active duodenal ulcer with a category of 'problem-list-item'."
+                "valueMarkdown": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's resolved duodenal ulcer with a category of 'problem-list-item'."
             }
         ],
         "lastUpdated": "2016-08-10T07:15:07-08:00"
@@ -27,11 +27,11 @@
         "coding": [
             {
                 "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                "code": "active",
-                "display": "Active"
+                "code": "resolved",
+                "display": "Resolved"
             }
         ],
-        "text": "Active"
+        "text": "Resolved"
     },
     "verificationStatus": {
         "coding": [
@@ -71,7 +71,8 @@
         "display": "Amy V. Shaw"
     },
     "onsetDateTime": "2016-08-10",
-    "recordedDate": "2016-08-10T07:15:07-08:00",
+    "abatementDateTime": "2016-08-17",
+    "recordedDate": "2016-08-17T07:15:07-08:00",
     "recorder": {
         "reference": "Practitioner/practitioner-1",
         "display": "Dr Ronald Bone"
