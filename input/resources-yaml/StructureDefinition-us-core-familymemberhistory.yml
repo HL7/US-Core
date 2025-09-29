@@ -1,8 +1,8 @@
+# new in USCore 9
 resourceType: StructureDefinition
 id: us-core-familymemberhistory
 
 url: 'http://hl7.org/fhir/us/mcc/StructureDefinition/us-core-familymemberhistory'
-version: 1.0.0
 name: USCoreFamilyMemberHistoryProfile
 title: US Core FamilyMemberHistory Profile
 status: active
@@ -30,13 +30,17 @@ differential:
         rules: open
 
     - id: FamilyMemberHistory.extension:recorder
+      extension:
+      - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+        valueBoolean: true
       path: FamilyMemberHistory.extension
+      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Who recorded family member's health history"
       sliceName: recorder
       type:
         - code: Extension
           profile:
             - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder'
-      mustSupport: true
+      mustSupport: false
 
     - id: FamilyMemberHistory.status
       path: FamilyMemberHistory.status

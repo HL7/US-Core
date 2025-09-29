@@ -1855,10 +1855,10 @@ definition:
     name: US Core FamilyMemberHistory Profile
   - reference:
       reference: StructureDefinition/us-core-familymemberhistory-recorder
-    description: Individual who recorded the record and takes responsibility for its
-      content.  Because the recorder takes responsibility for accurately recording
-      information in the record, the recorder is the most recent author. The recorder
-      might or might not be the asserter.
+    description: Individual who recorded the family member's health history and takes
+      responsibility for its content. Because the recorder takes responsibility for
+      accurately recording information in the record, the recorder is the most recent
+      author. The recorder might or might not be the asserter.
     exampleBoolean: false
     name: US Core FamilyMemberHistory Recorder Extension
   - reference:
@@ -2428,7 +2428,7 @@ definition:
       this capability statement should meet the ASTP 2015 Common Clinical Data Set
       (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application
       Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for
-      Interoperability (USCDI) Version 6 July 2026](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).
+      Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).
     exampleBoolean: false
     name: US Core Server CapabilityStatement
   - reference:

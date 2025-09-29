@@ -2,7 +2,6 @@
     "resourceType": "StructureDefinition",
     "id": "us-core-familymemberhistory",
     "url": "http://hl7.org/fhir/us/mcc/StructureDefinition/us-core-familymemberhistory",
-    "version": "1.0.0",
     "name": "USCoreFamilyMemberHistoryProfile",
     "title": "US Core FamilyMemberHistory Profile",
     "status": "active",
@@ -34,7 +33,14 @@
             },
             {
                 "id": "FamilyMemberHistory.extension:recorder",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "FamilyMemberHistory.extension",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Who recorded family member's health history",
                 "sliceName": "recorder",
                 "type": [
                     {
@@ -44,7 +50,7 @@
                         ]
                     }
                 ],
-                "mustSupport": true
+                "mustSupport": false
             },
             {
                 "id": "FamilyMemberHistory.status",
