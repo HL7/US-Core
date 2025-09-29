@@ -2428,7 +2428,7 @@ definition:
       this capability statement should meet the ASTP 2015 Common Clinical Data Set
       (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application
       Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for
-      Interoperability (USCDI) Version 5 July 2024](https://www.healthit.gov/isp/sites/isp/files/2024-07/USCDI-Version-5-July-2024-Final.pdf).
+      Interoperability (USCDI) Version 6 July 2026](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).
     exampleBoolean: false
     name: US Core Server CapabilityStatement
   - reference:
@@ -3141,6 +3141,30 @@ definition:
       code.
     exampleBoolean: false
     name: USCoreEthnicity
+  - reference:
+      reference: SearchParameter/us-core-familymemberhistory-code
+    description: "**A search by a condition code**  \nNOTE: This SearchParameter is\
+      \ defined only to document Server and Client expectations. Its definition is\
+      \ derived from the standard FHIR SearchParameter and it uses the [Conformance\
+      \ expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      It **SHALL NOT** be used as a search parameter for search. Servers and Clients\
+      \ **SHOULD** use the standard FHIR SearchParameter.\n"
+    exampleBoolean: false
+    name: USCoreFamilymemberhistoryCode
+  - reference:
+      reference: SearchParameter/us-core-familymemberhistory-patient
+    description: "**The identity of a subject to list family member history items\
+      \ for**  \nNOTE: This SearchParameter is defined only to document Server and\
+      \ Client expectations. Its definition is derived from the standard FHIR SearchParameter\
+      \ and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation)\
+      \ to define additional expectations for the following SearchParameter elements:\n\
+      - `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\n\
+      It **SHALL NOT** be used as a search parameter for search. Servers and Clients\
+      \ **SHOULD** use the standard FHIR SearchParameter.\n"
+    exampleBoolean: false
+    name: USCoreFamilymemberhistoryPatient
   - reference:
       reference: SearchParameter/us-core-goal-description
     description: "**The code or text describing the goal**\n**NOTE**: This US Core\

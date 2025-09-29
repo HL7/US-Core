@@ -370,6 +370,8 @@
 [USCoreEncounterStatus]: SearchParameter-us-core-encounter-status.html
 [USCoreEncounterType]: SearchParameter-us-core-encounter-type.html
 [USCoreEthnicity]: SearchParameter-us-core-ethnicity.html
+[USCoreFamilymemberhistoryCode]: SearchParameter-us-core-familymemberhistory-code.html
+[USCoreFamilymemberhistoryPatient]: SearchParameter-us-core-familymemberhistory-patient.html
 [USCoreGoalDescription]: SearchParameter-us-core-goal-description.html
 [USCoreGoalLifecycleStatus]: SearchParameter-us-core-goal-lifecycle-status.html
 [USCoreGoalPatient]: SearchParameter-us-core-goal-patient.html
