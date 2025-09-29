@@ -578,6 +578,12 @@ definition:
     name: Exercise Vital Sign QuestionnaireResponse Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
   - reference:
+      reference: FamilyMemberHistory/familymemberhistory-example
+    description: This is a an example of FamilyMemberHistory for the *US Core FamilyMemberHistory
+      Profile*
+    name: FamilyMemberHistory Example
+    exampleCanonical: http://hl7.org/fhir/us/mcc/StructureDefinition/us-core-familymemberhistory
+  - reference:
       reference: Goal/goal-1
     description: This is a goal 1 example for the *US Core Goal Profile* and demonstrates
       use free text for Goal.description.
@@ -1835,6 +1841,26 @@ definition:
       for the FHIR Questionnaire is used.
     exampleBoolean: false
     name: US Core Extension Questionnaire URI
+  - reference:
+      reference: StructureDefinition/us-core-familymemberhistory
+    description: The US Core FamilyMemberHistory Profile inherits from the FHIR [FamilyMemberHistory](https://hl7.org/fhir/R4/familymemberhistory.html)
+      resource; refer to it for scope and usage definitions. This profile sets minimum
+      expectations for the FamilyMemberHistory resource to record, search, and retrieve
+      basic clinical information about a family member's health history that is relevant
+      to a patient's care. It specifies which core elements, extensions, vocabularies,
+      and value sets **SHALL** be present and constrains how the elements are used.
+      Providing the floor for standards development for specific use cases promotes
+      interoperability and adoption.
+    exampleBoolean: false
+    name: US Core FamilyMemberHistory Profile
+  - reference:
+      reference: StructureDefinition/us-core-familymemberhistory-recorder
+    description: Individual who recorded the record and takes responsibility for its
+      content.  Because the recorder takes responsibility for accurately recording
+      information in the record, the recorder is the most recent author. The recorder
+      might or might not be the asserter.
+    exampleBoolean: false
+    name: US Core FamilyMemberHistory Recorder Extension
   - reference:
       reference: OperationDefinition/docref
     description: "This operation is used to return all the references to documents\

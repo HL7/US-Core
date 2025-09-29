@@ -73,6 +73,7 @@
 [exercise-per-week]: Observation-exercise-per-week.html
 [exercise-vital-sign]: Questionnaire-exercise-vital-sign.html
 [exercise-vital-sign]: QuestionnaireResponse-exercise-vital-sign.html
+[familymemberhistory-example]: FamilyMemberHistory-familymemberhistory-example.html
 [goal-1]: Goal-goal-1.html
 [goal-sdoh-2]: Goal-goal-sdoh-2.html
 [head-circumference]: Observation-head-circumference.html
@@ -251,6 +252,8 @@
 [USCoreEncounterProfile]: StructureDefinition-us-core-encounter.html
 [USCoreEthnicityExtension]: StructureDefinition-us-core-ethnicity.html
 [USCoreExtensionQuestionnaireUri]: StructureDefinition-us-core-extension-questionnaire-uri.html
+[USCoreFamilyMemberHistoryProfile]: StructureDefinition-us-core-familymemberhistory.html
+[USCoreFamilyMemberHistoryRecorderExtension]: StructureDefinition-us-core-familymemberhistory-recorder.html
 [USCoreFetchDocumentReference]: OperationDefinition-docref.html
 [USCoreGenderIdentityExtension]: StructureDefinition-us-core-genderIdentity.html
 [USCoreGoalCodes]: ValueSet-us-core-goal-description.html

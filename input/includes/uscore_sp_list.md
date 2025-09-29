@@ -61,6 +61,10 @@
 - [status](SearchParameter-us-core-encounter-status.html)
 - [type](SearchParameter-us-core-encounter-type.html)
 
+##### FamilyMemberHistory
+- {:.new-content}[code](SearchParameter-us-core-familymemberhistory-code.html)
+- {:.new-content}[patient](SearchParameter-us-core-familymemberhistory-patient.html)
+
 ##### Goal
 - [lifecycle-status](SearchParameter-us-core-goal-lifecycle-status.html)
 - [patient](SearchParameter-us-core-goal-patient.html)

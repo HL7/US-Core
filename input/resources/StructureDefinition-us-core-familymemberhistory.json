@@ -1,0 +1,96 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-familymemberhistory",
+    "url": "http://hl7.org/fhir/us/mcc/StructureDefinition/us-core-familymemberhistory",
+    "version": "1.0.0",
+    "name": "USCoreFamilyMemberHistoryProfile",
+    "title": "US Core FamilyMemberHistory Profile",
+    "status": "active",
+    "date": "2025-09-28",
+    "description": "The US Core FamilyMemberHistory Profile inherits from the FHIR [FamilyMemberHistory](https://hl7.org/fhir/R4/familymemberhistory.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the FamilyMemberHistory resource to record, search, and retrieve basic clinical information about a family member's health history that is relevant to a patient's care. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+    "kind": "resource",
+    "abstract": false,
+    "type": "FamilyMemberHistory",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "FamilyMemberHistory",
+                "path": "FamilyMemberHistory"
+            },
+            {
+                "id": "FamilyMemberHistory.extension",
+                "path": "FamilyMemberHistory.extension",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "FamilyMemberHistory.extension:recorder",
+                "path": "FamilyMemberHistory.extension",
+                "sliceName": "recorder",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "FamilyMemberHistory.status",
+                "path": "FamilyMemberHistory.status",
+                "mustSupport": true
+            },
+            {
+                "id": "FamilyMemberHistory.patient",
+                "path": "FamilyMemberHistory.patient",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "FamilyMemberHistory.relationship",
+                "path": "FamilyMemberHistory.relationship",
+                "binding": {
+                    "strength": "extensible",
+                    "description": "Characterization of the familial relationship between two people.",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.19579"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "FamilyMemberHistory.condition",
+                "path": "FamilyMemberHistory.condition",
+                "min": 0,
+                "max": "*",
+                "mustSupport": true
+            },
+            {
+                "id": "FamilyMemberHistory.condition.code",
+                "path": "FamilyMemberHistory.condition.code",
+                "binding": {
+                    "strength": "extensible",
+                    "description": "Value set to describe the actual problem experienced by the patient",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
+                },
+                "mustSupport": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-familymemberhistory-recorder",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 2
+        }
+    ],
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder",
+    "name": "USCoreFamilyMemberHistoryRecorderExtension",
+    "title": "US Core FamilyMemberHistory Recorder Extension",
+    "status": "active",
+    "date": "2025-09-28",
+    "description": "Individual who recorded the record and takes responsibility for its content.  Because the recorder takes responsibility for accurately recording information in the record, the recorder is the most recent author. The recorder might or might not be the asserter.",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "FamilyMemberHistory"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "Whether the individual needs an interpreter",
+                "definition": "This individual needs an interpreter to communicate healthcare information.",
+                "comment": "Individual who recorded the record and takes responsibility for its content.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "max": "0"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}
