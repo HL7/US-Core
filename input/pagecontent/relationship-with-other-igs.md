@@ -5,10 +5,10 @@
 
 US Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient facing systems​ providing:
 
-- An exchange Standard for [U.S. Core Data for Interoperability (USCDI)] and comments and requests from the US Realm FHIR community. 
-- A set of conformance requirements that enforce a set of 'minimum requirements' on FHIR resources to create the US Core Profiles specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions. 
+- An exchange Standard for [U.S. Core Data for Interoperability (USCDI)] and comments and requests from the US Realm FHIR community.
+- A set of conformance requirements that enforce a set of 'minimum requirements' on FHIR resources to create the US Core Profiles specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.
 - For use by US stakeholders when implementing FHIR to provide a common implementation and to be built upon when creating further US Realm specific profiles and implementation guides for specific use cases.
-   
+
 
 The context of US Core within the set of US Realm HL7 FHIR standards is shown in the figure below.
 
@@ -64,7 +64,7 @@ As part of profile comparison, the requirements, constraints, and standards spec
 | [US Core Head Circumference Profile]| {{OK}} |
 | [US Core Heart Rate Profile]| {{OK}} |
 | [US Core Immunization Profile]| {{OK}} |
-| [US Core Implantable Device Profile]| {{NA}} |
+| [US Core Device Profile]| {{NA}} |
 | [US Core Laboratory Result Observation Profile]| {{OK}} |
 | [US Core Location Profile]| {{NA}} |
 | [US Core Medication Profile]| {{OK}} |
@@ -105,7 +105,7 @@ The following US Core resource are compatible to the IPA profiles, but the IPA p
 
 
 1. [US Core ADI DocumentReference Profile]
-     
+
    Additional requirements for [IPA DocumentReference](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-documentreference):
 
     - `DocumentReference.content.attachment.contentType`	Element minimum cardinalities differ: '1' vs '0'
@@ -122,7 +122,7 @@ The following US Core resource are compatible to the IPA profiles, but the IPA p
 
 1. [US Core Average Blood Pressure Profile]
 
-   Additional requirements for [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation) 
+   Additional requirements for [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation)
 
    - `Observation.value[x]` Elements differ in definition for mustSupport: 'true' vs 'false'
    - `Observation.value[x]` Element maximum cardinalities differ: '1' vs '0'
@@ -159,6 +159,6 @@ IPA does not include requirements for Suppressed Data.
 
 ##### Additional profiles
 This version of US Core has no equivalent profile for the following IPA profiles:
-- [IPA-MedicationStatement](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationstatement.html) 
+- [IPA-MedicationStatement](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationstatement.html)
 
 {% include link-list.md %}

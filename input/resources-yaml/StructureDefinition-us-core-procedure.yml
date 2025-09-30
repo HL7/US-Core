@@ -134,7 +134,7 @@ differential:
       map: Procedure.performed[x]
 
 # =========== New for USCDI 5 Provenance Author  ==================
-  
+
   - id: Procedure.performer
     path: Procedure.performer
     extension:
@@ -158,7 +158,7 @@ differential:
           - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization'
           - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
           - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'
-          - 'http://hl7.org/fhir/StructureDefinition/Device'
+          - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-device'
         _targetProfile:
           - extension:
             - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support

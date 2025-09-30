@@ -2,12 +2,12 @@ resourceType: Device
 id: udi-2
 meta:
   profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Device Defib Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Device defib example for the *US Core Implantable Device
+    valueMarkdown: This is a Device defib example for the *US Core Device
       Profile*.
 udiCarrier:
 - deviceIdentifier: '99863313444316'

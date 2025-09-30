@@ -46,22 +46,19 @@ Past Balloters, STU commenters, and Accelerator Project teams submitted the foll
 #### Additional pilot Testing of UDI elements
 In the January ballot 2019, we tested this process with the FDA, requesting that US Core include all the parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components.
 
-#### [Device]
-The US Core Implantable Device Profile is intended only for implantable devices. Please submit your successful implementation of a general non-implantable Device Profile (for example, software or crutches) for consideration in a future update of US Core.
-
 #### [MedicationAdministration]
 The US Core design assumes that access to the Active Medication List is through searching MedicationRequest. (See: https://build.fhir.org/ig/HL7/US-Core/medication-list-guidance.html.)  The orders (MedicationRequest) capture all the medications and whether they have been fulfilled. Medication Administration can be used as well, but systems will need to be careful to link to the appropriate MedicationRequest. Future versions of US Core may test and add MedicationAdministration.
 
 #### Searching for Multiple Patients
 Searching for multiple patients has been called out in the ASTP Health IT Certification Program. Defining capabilities for multiple patient access would focus on querying real-time data for a user-facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
 
-- with recent lab results  
+- with recent lab results
 - currently in the Emergency Department
 - with an Allergy to X
 - being seen by a provider for the day
 
 #### Timezones and Time Offsets
-Clients face challenges displaying the source data's times and timezone regardless of the end user's current timezone. A solution is to define requirements and best practices for servers to preserve and represent time offsets and time zones.  
+Clients face challenges displaying the source data's times and timezone regardless of the end user's current timezone. A solution is to define requirements and best practices for servers to preserve and represent time offsets and time zones.
 
 >A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
 

@@ -368,16 +368,19 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   - reference:
       reference: Device/udi-2
-    description: This is a Device defib example for the *US Core Implantable Device
-      Profile*.
+    description: This is a Device defib example for the *US Core Device Profile*.
     name: Device Defib Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
+  - reference:
+      reference: Device/udi-4
+    description: This is an infusion pump example for the *US Core Device Profile*.
+    name: Device Infusion Pump Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
   - reference:
       reference: Device/udi-3
-    description: This is a Device knee example for the *US Core Implantable Device
-      Profile*.
+    description: This is a Device knee example for the *US Core Device Profile*.
     name: Device Knee Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
   - reference:
       reference: DiagnosticReport/cardiology-report
     description: This is a DiagnosticReport cardiology report example for the *US
@@ -1463,9 +1466,9 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference
   - reference:
       reference: Device/udi-1
-    description: This is a UDI 1 example for the *US Core Implantable Device Profile*.
+    description: This is a UDI 1 example for the *US Core Device Profile*.
     name: UDI 1 Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
   - reference:
       reference: Specimen/specimen-example-urine
     description: This is a urine specimen example for the *US Core Specimen Profile*.
@@ -1733,6 +1736,20 @@ definition:
     exampleBoolean: false
     name: US Core Coverage Profile
   - reference:
+      reference: StructureDefinition/us-core-device
+    description: The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R4/device.html)
+      resource; refer to it for scope and usage definitions. It sets minimum expectations
+      for the Device resource to record, search, and fetch medical and non-medical
+      devices (for example, software or crutches). This profile meets the requirements
+      of the U.S. Core Data for Interoperability (USCDI) *Medical Device* Data Class,
+      including FDA Unique Device Identification (UDI) information associated with
+      a patient's medical device(s). It specifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present in the resource and constrains
+      how the elements are used and provides the floor for standards development for
+      specific use cases promotes interoperability and adoption.
+    exampleBoolean: false
+    name: US Core Device Profile
+  - reference:
       reference: ValueSet/us-core-diagnosticreport-category
     description: The US Core Diagnostic Report Category Value Set is a 'starter set'
       of categories supported for fetching and Diagnostic Reports and notes.
@@ -1947,19 +1964,6 @@ definition:
       promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Immunization Profile
-  - reference:
-      reference: StructureDefinition/us-core-implantable-device
-    description: The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R4/device.html)
-      resource; refer to it for scope and usage definitions. This profile meets the
-      requirements of the U.S. Core Data for Interoperability (USCDI) *Unique Device  Identifier
-      - Implantable* Data Element. It sets minimum expectations for the Device resource
-      to record, search, and fetch UDI information associated with a patient's implantable
-      device(s). It specifies which core elements, extensions,  vocabularies, and
-      value sets **SHALL** be present in the resource and constrains how the elements
-      are used. Providing the floor for standards development for specific use cases
-      promotes interoperability and adoption.
-    exampleBoolean: false
-    name: US Core Implantable Device Profile
   - reference:
       reference: StructureDefinition/us-core-interpreter-needed
     description: This extension indicates the individual's need for an interpreter

@@ -2,12 +2,12 @@ resourceType: Device
 id: udi-1
 meta:
   profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: UDI 1 Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a UDI 1 example for the *US Core Implantable Device Profile*.
+    valueMarkdown: This is a UDI 1 example for the *US Core Device Profile*.
 udiCarrier:
 - deviceIdentifier: 09504000059118
   carrierHRF: (01)09504000059118(17)141120(10)7654321D(21)10987654d321

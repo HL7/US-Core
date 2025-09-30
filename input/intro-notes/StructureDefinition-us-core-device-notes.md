@@ -4,12 +4,12 @@
 
 #### Mandatory Search Parameters:
 
-1. **SHALL** support searching for all devices for a patient, including implantable devices using the **[`patient`](SearchParameter-us-core-device-patient.html)** search parameter:
+1. **SHALL** support searching for all devices for a patient using the **[`patient`](SearchParameter-us-core-device-patient.html)** search parameter:
 
     `GET [base]/Device?patient={Type/}[id]`
 
     Example:
-    
+
       1. GET [base]/Device?patient=1137192
 
     *Implementation Notes:* Fetches a bundle of all Device resources for the specified patient ([how to search by reference])
@@ -24,7 +24,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Device?patient={Type/}[id]&type={system|}[code]`
 
     Example:
-    
+
       1. GET [base]/Device?patient=1316024&amp;type=http://snomed.info/sct\|468063009
 
     *Implementation Notes:* Fetches a bundle of all Device resources for the specified patient and type.  ([how to search by reference] and [how to search by token])
@@ -35,7 +35,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Device?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/Device?patient=1316024&amp;status=active
 
     *Implementation Notes:* Fetches a bundle of all Device resources for the specified patient and status ([how to search by reference] and [how to search by token])

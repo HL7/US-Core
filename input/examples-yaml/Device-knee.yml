@@ -4,12 +4,12 @@ meta:
   versionId: '2'
   lastUpdated: '2019-04-11T16:21:48.921+00:00'
   profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Device Knee Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Device knee example for the *US Core Implantable Device
+    valueMarkdown: This is a Device knee example for the *US Core Device
       Profile*.
 udiCarrier:
 - deviceIdentifier: '987979879879'
@@ -17,7 +17,7 @@ udiCarrier:
   entryType: rfid
 status: active
 manufacturer: ACME Biomedical
-manufactureDate: '2015-10-15'
+manufactureDate: '2019-10-15'
 expirationDate: '2022-01-01'
 lotNumber: M320
 serialNumber: AC221

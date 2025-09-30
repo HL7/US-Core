@@ -1,14 +1,14 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-implantable-device",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device",
+    "id": "us-core-device",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
     "version": "3.2.0",
-    "name": "USCoreImplantableDeviceProfile",
-    "title": "US Core Implantable Device Profile",
+    "name": "USCoreDeviceProfile",
+    "title": "US Core Device Profile",
     "status": "active",
     "experimental": false,
     "date": "2023-10-17",
-    "description": "The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R4/device.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Unique Device  Identifier - Implantable* Data Element. It sets minimum expectations for the Device resource to record, search, and fetch UDI information associated with a patient's implantable device(s). It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+    "description": "The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R4/device.html) resource; refer to it for scope and usage definitions. It sets minimum expectations for the Device resource to record, search, and fetch medical and non-medical devices (for example, software or crutches). This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Medical Device* Data Class, including FDA Unique Device Identification (UDI) information associated with a patient's medical device(s). It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used and provides the floor for standards development for specific use cases promotes interoperability and adoption.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -31,10 +31,17 @@
             },
             {
                 "id": "Device.udiCarrier",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.udiCarrier",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Unique Device Identifier (UDI) Barcode string",
                 "comment": "Some devices may not have UDI information (for example. historical data or patient reported data).",
                 "max": "1",
-                "mustSupport": true,
+                "mustSupport": false,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
@@ -71,8 +78,15 @@
             },
             {
                 "id": "Device.distinctIdentifier",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.distinctIdentifier",
-                "mustSupport": true,
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: The distinct identification string",
+                "mustSupport": false,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
@@ -82,8 +96,15 @@
             },
             {
                 "id": "Device.manufactureDate",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.manufactureDate",
-                "mustSupport": true,
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Date when the device was made",
+                "mustSupport": false,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
@@ -93,8 +114,15 @@
             },
             {
                 "id": "Device.expirationDate",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.expirationDate",
-                "mustSupport": true,
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Date and time of expiry of this device (if applicable)",
+                "mustSupport": false,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
@@ -104,8 +132,15 @@
             },
             {
                 "id": "Device.lotNumber",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.lotNumber",
-                "mustSupport": true,
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Lot number of manufacture",
+                "mustSupport": false,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
@@ -115,8 +150,15 @@
             },
             {
                 "id": "Device.serialNumber",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.serialNumber",
-                "mustSupport": true,
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Serial number assigned by the manufacturer",
+                "mustSupport": false,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
@@ -144,7 +186,6 @@
             {
                 "id": "Device.patient",
                 "path": "Device.patient",
-                "min": 1,
                 "type": [
                     {
                         "code": "Reference",

@@ -40,6 +40,7 @@
 [coverage-example]: Coverage-coverage-example.html
 [deceased-example]: Patient-deceased-example.html
 [udi-2]: Device-udi-2.html
+[udi-4]: Device-udi-4.html
 [udi-3]: Device-udi-3.html
 [cardiology-report]: DiagnosticReport-cardiology-report.html
 [chest-xray-report]: DiagnosticReport-chest-xray-report.html
@@ -241,6 +242,7 @@
 [USCoreConditionEncounterDiagnosisProfile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
 [USCoreConditionProblemsHealthConcernsProfile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreCoverageProfile]: StructureDefinition-us-core-coverage.html
+[USCoreDeviceProfile]: StructureDefinition-us-core-device.html
 [USCoreDiagnosticReportCategory]: ValueSet-us-core-diagnosticreport-category.html
 [USCoreDiagnosticReportProfileLaboratoryReporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [USCoreDiagnosticReportProfileNoteExchange]: StructureDefinition-us-core-diagnosticreport-note.html
@@ -261,7 +263,6 @@
 [USCoreHeadCircumferenceProfile]: StructureDefinition-us-core-head-circumference.html
 [USCoreHeartRateProfile]: StructureDefinition-us-core-heart-rate.html
 [USCoreImmunizationProfile]: StructureDefinition-us-core-immunization.html
-[USCoreImplantableDeviceProfile]: StructureDefinition-us-core-implantable-device.html
 [USCoreInterpreterNeededExtension]: StructureDefinition-us-core-interpreter-needed.html
 [USCoreJurisdictionExtension]: StructureDefinition-us-core-jurisdiction.html
 [USCoreLaboratoryResultObservationProfile]: StructureDefinition-us-core-observation-lab.html

@@ -771,14 +771,14 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Immunization Profile - XML Representation]: StructureDefinition-us-core-immunization.profile.xml.html
 [US Core Immunization Profile - JSON Representation]: StructureDefinition-us-core-immunization.profile.json.html
 [US Core Immunization Profile - TTL Representation]: StructureDefinition-us-core-immunization.profile.ttl.html
-[US Core Implantable Device Profile]: StructureDefinition-us-core-implantable-device.html
-[US Core Implantable Device Profile - Definitions]: StructureDefinition-us-core-implantable-device-definitions.html
-[US Core Implantable Device Profile - Mappings]: StructureDefinition-us-core-implantable-device-mappings.html
-[US Core Implantable Device Profile - Testing]: StructureDefinition-us-core-implantable-device-testing.html
-[US Core Implantable Device Profile - Examples]: StructureDefinition-us-core-implantable-device-examples.html
-[US Core Implantable Device Profile - XML Representation]: StructureDefinition-us-core-implantable-device.profile.xml.html
-[US Core Implantable Device Profile - JSON Representation]: StructureDefinition-us-core-implantable-device.profile.json.html
-[US Core Implantable Device Profile - TTL Representation]: StructureDefinition-us-core-implantable-device.profile.ttl.html
+[US Core Device Profile]: StructureDefinition-us-core-device.html
+[US Core Device Profile - Definitions]: StructureDefinition-us-core-device-definitions.html
+[US Core Device Profile - Mappings]: StructureDefinition-us-core-device-mappings.html
+[US Core Device Profile - Testing]: StructureDefinition-us-core-device-testing.html
+[US Core Device Profile - Examples]: StructureDefinition-us-core-device-examples.html
+[US Core Device Profile - XML Representation]: StructureDefinition-us-core-device.profile.xml.html
+[US Core Device Profile - JSON Representation]: StructureDefinition-us-core-device.profile.json.html
+[US Core Device Profile - TTL Representation]: StructureDefinition-us-core-device.profile.ttl.html
 [US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
 [US Core Laboratory Result Observation Profile - Definitions]: StructureDefinition-us-core-observation-lab-definitions.html
 [US Core Laboratory Result Observation Profile - Mappings]: StructureDefinition-us-core-observation-lab-mappings.html

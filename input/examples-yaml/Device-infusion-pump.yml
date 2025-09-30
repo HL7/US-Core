@@ -1,0 +1,33 @@
+resourceType: Device
+id: udi-4
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Device Infusion Pump Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is an infusion pump example for the *US Core Device
+      Profile*.
+status: active
+type:
+  coding:
+    - system: http://snomed.info/sct
+      code: 433296005
+      display: Infusion pump for intravenous fluids (physical object)
+  text: Intravenous Infusion Pump
+manufacturer: ExampleMed Inc.
+modelNumber: IP-2000
+serialNumber: IP2000-123456
+patient:
+  reference: Patient/example
+  display: Amy Shaw
+deviceName:
+  - name: ExampleMed IP-2000
+    type: manufacturer-name
+udiCarrier:
+  - deviceIdentifier: 00812345678901
+    carrierHRF: (01)00812345678901(11)240115(10)LOT789XYZ(21)IP2000-123456
+    entryType: barcode
+manufactureDate: 2024-01-15
+lotNumber: LOT789XYZ

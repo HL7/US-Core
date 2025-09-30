@@ -91,7 +91,7 @@ Since no clinical content is changed in the HIE redistribution, the best scenari
 - `Provenance.agent.type` = transmitter
   - `Provenance.agent.who` set to the HIE organization
 
- The timestamp and pointer (i.e., target) to the appropriate Resource are required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always had the Author and Author Organizations available. Participants in the development of this guide reported that the Author information provided to HIEs needs to be more consistent and reliable.  
+ The timestamp and pointer (i.e., target) to the appropriate Resource are required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always had the Author and Author Organizations available. Participants in the development of this guide reported that the Author information provided to HIEs needs to be more consistent and reliable.
 
 
 #### HIE Transformation
@@ -118,7 +118,7 @@ The following US Core Profiles were omitted because they are typically not assoc
 - US Core CareTeam Profile
 - US Core Coverage Profile
 - US Core Encounter Profile
-- US Core Implantable Device Profile
+- US Core Device Profile
 - US Core Location Profile
 - US Core Medication Profile
 - US Core Organization Profile
@@ -129,7 +129,7 @@ The following US Core Profiles were omitted because they are typically not assoc
 - US Core RelatedPerson Profile
 - US Core Specimen Profile
 
- 
+
 This table is also available as a [csv](tables/provenance-elements.csv) or [excel](tables/provenance-elements.xlsx) file:
 
 {% include provenance-source-table-generator.md %}
