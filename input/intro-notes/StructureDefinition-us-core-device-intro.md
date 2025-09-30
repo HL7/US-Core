@@ -42,7 +42,7 @@ Identification Number(DIN))
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 <div class="bg-success" markdown="1">
 
-- Because this profile aligns with the USCDI Medical Devices Data Class, it supports the exchange of UDI information when available (for example, implantable devices or non-implantable devices, such as ventilators). However, systems are not expected to record UDI data for every use case or device.
+- Because this profile aligns with the USCDI Medical Devices Data Class, it supports the exchange of UDI information when available (for example, implantable devices or non-implantable medical devices, such as ventilators). However, systems are not expected to record and UDI data for every use case or device.
 - \*`Device.patient`'s minimum cardinality of zero supports use cases where devices may be tracked independently of a patient.
 
 #### UDI  Specific Implementation Guidance

@@ -1,0 +1,81 @@
+{
+    "resourceType": "ServiceRequest",
+    "id": "servicerequest-pmo-example1",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "ServiceRequest DNR Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is an example DNR request using the *US Core PMO ServiceRequest Profile*."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pmo-servicerequest"
+        ]
+    },
+    "status": "active",
+    "intent": "directive",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "100822-6",
+                    "display": "Cardiopulmonary resuscitation orders"
+                }
+            ],
+            "text": "Cardiopulmonary resuscitation orders"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "LA33471-6",
+                "display": "No CPR: Do Not Attempt Resuscitation"
+            }
+        ],
+        "text": "No CPR: Do Not Attempt Resuscitation"
+    },
+    "orderDetail": [
+        {
+            "text": "Patient has explicitly declined CPR per advance directive discussion"
+        }
+    ],
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Granny Smith"
+    },
+    "encounter": {
+        "reference": "Encounter/example"
+    },
+    "occurrencePeriod": {
+        "start": "2025-08-26"
+    },
+    "authoredOn": "2025-08-26",
+    "requester": {
+        "reference": "Practitioner/example",
+        "display": "Dr. Jane Doe"
+    },
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": 422650009,
+                    "display": "Terminal illness"
+                }
+            ],
+            "text": "Terminal illness"
+        }
+    ],
+    "reasonReference": [
+        {
+            "reference": "DocumentReference/example",
+            "display": "US Core ADI DocumentReference for POLST"
+        }
+    ]
+}

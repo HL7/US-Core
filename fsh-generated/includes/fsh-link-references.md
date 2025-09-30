@@ -39,9 +39,9 @@
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
 [coverage-example]: Coverage-coverage-example.html
 [deceased-example]: Patient-deceased-example.html
-[udi-2]: Device-udi-2.html
 [udi-4]: Device-udi-4.html
 [udi-3]: Device-udi-3.html
+[udi-5]: Device-udi-5.html
 [cardiology-report]: DiagnosticReport-cardiology-report.html
 [chest-xray-report]: DiagnosticReport-chest-xray-report.html
 [discharge-summary]: DocumentReference-discharge-summary.html
@@ -196,6 +196,7 @@
 [bmp]: ServiceRequest-bmp.html
 [cbc]: ServiceRequest-cbc.html
 [chest-xray]: ServiceRequest-chest-xray.html
+[servicerequest-pmo-example1]: ServiceRequest-servicerequest-pmo-example1.html
 [ekg]: ServiceRequest-ekg.html
 [foodpantry-referral]: ServiceRequest-foodpantry-referral.html
 [rehab]: ServiceRequest-rehab.html
@@ -215,7 +216,6 @@
 [TAPS]: Questionnaire-TAPS.html
 [TAPS]: QuestionnaireResponse-TAPS.html
 [treatment-intervention-preference]: Observation-treatment-intervention-preference.html
-[udi-1]: Device-udi-1.html
 [specimen-example-urine]: Specimen-specimen-example-urine.html
 [urobilinogen]: Observation-urobilinogen.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
@@ -286,6 +286,7 @@
 [USCorePediatricBMIforAgeObservationProfile]: StructureDefinition-pediatric-bmi-for-age.html
 [USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
+[USCorePMOServiceRequestProfile]: StructureDefinition-us-core-pmo-servicerequest.html
 [USCorePractitionerProfile]: StructureDefinition-us-core-practitioner.html
 [USCorePractitionerRoleProfile]: StructureDefinition-us-core-practitionerrole.html
 [USCoreProblemOrHealthConcern]: ValueSet-us-core-problem-or-health-concern.html

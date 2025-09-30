@@ -6,7 +6,7 @@ The following are example usage scenarios for the US Core ADI DocumentReference 
 
 -   Query for all ADI documents belonging to a Patient
 -   Query for a specific ADI Document type (e.g., POLST or Living Will)
-  
+
 ### Mandatory and Must Support Data Elements
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
@@ -40,14 +40,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
-
+- <span class="bg-success" markdown="1">This profile and the [US Core Observation ADI Documentation Profile] meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Advance Directive Observation* Data Element requirements.</span><!-- new-content -->
+- <span class="bg-success" markdown="1">This profile can communicate the contents of a Plan of Medical Orders (PMO) document, such as POLST, MOLST, or other state-specific forms. It is referenced by the [US Core PMO Service Request Profile], which represents an order based on the PMO document. PMO documents, typically stored as scanned images in EMRs/EHRs, follow the patient across care settings. Together, these profiles satisfy the USCDI's *PMO Order* Data Element requirements.</span><!-- new-content -->
 - In addition to the [Advance Directive Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion) value set, other category schemes may be used to facilitate the sharing of health documents.
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or the content as inline base64 encoded data using `DocumentReference.content.attachment.data`.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The Client application **SHALL** support both elements.
     -  The `DocumentReference.content.attachment.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint).
         - If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server. This reduces complexity for the client and improves the user experience.
-    -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`. 
+    -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`.
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 {% include provenance-author-bullet-generator.md %}

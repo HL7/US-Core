@@ -6,7 +6,7 @@ meta:
     valueString: ServiceRequest EKG Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is an example requesting a Clinical Test Order (EKG panel) for a patient
-      using the *US Core ServiceRequest Profile Profile*.
+      using the *US Core ServiceRequest Profile*.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
 status: active
@@ -23,7 +23,7 @@ category:
 
 code:
   coding:
-      - 
+      -
           system: 'http://loinc.org'
           code: 45033-8
           display: Cardiovascular physiologic and EKG assessment panel

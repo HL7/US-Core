@@ -7,13 +7,14 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Device Infusion Pump Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is an infusion pump example for the *US Core Device
-      Profile*.
+    valueMarkdown: This Device example for the *US Core Device
+      Profile* illustrates its use for medical devices with UDI information.
 status: active
 type:
   coding:
     - system: http://snomed.info/sct
       code: 433296005
+      version: http://snomed.info/sct/731000124108
       display: Infusion pump for intravenous fluids (physical object)
   text: Intravenous Infusion Pump
 manufacturer: ExampleMed Inc.

@@ -1,6 +1,6 @@
 {
     "resourceType": "Device",
-    "id": "udi-2",
+    "id": "udi-5",
     "meta": {
         "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
@@ -8,30 +8,21 @@
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Device Defib Example"
+                "valueString": "Device Walker Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a Device defib example for the *US Core Device Profile*."
+                "valueMarkdown": "This Device example for the *US Core Device Profile* illustrates its use for devices that lack UDI information."
             }
         ]
     },
-    "udiCarrier": [
-        {
-            "deviceIdentifier": "99863313444316",
-            "carrierHRF": "(01)99863313444316(17)220101(10)M320(21)AC221",
-            "entryType": "rfid"
-        }
-    ],
     "status": "active",
     "manufacturer": "ACME Biomedical",
-    "expirationDate": "2022-01-01",
-    "lotNumber": "M320",
-    "serialNumber": "AC221",
+    "serialNumber": "AC22112345",
     "deviceName": [
         {
-            "name": "ACME Defibrillator Analyzer, with Transcutaneous Pacemaker Input",
-            "type": "udi-label-name"
+            "name": "ACME basics folding walker",
+            "type": "manufacturer-name"
         }
     ],
     "modelNumber": "1.0",
@@ -39,15 +30,15 @@
         "coding": [
             {
                 "system": "http://snomed.info/sct",
-                "code": "19257004",
-                "display": "Defibrillator, device",
+                "code": "467068002",
+                "display": "Basic walking frame, foldable (physical object)",
                 "version": "http://snomed.info/sct/731000124108"
             }
         ],
-        "text": "Implant"
+        "text": "Walker"
     },
     "patient": {
         "reference": "Patient/example",
-        "display": "Amy Shaw"
+        "display": "Amy V. Shaw"
     }
 }
