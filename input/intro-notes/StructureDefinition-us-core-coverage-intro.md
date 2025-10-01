@@ -41,9 +41,9 @@ This section provides detailed implementation guidance for the US Core Profile t
 
   - To differentiate between Medicare Parts A, B, C, and D systems can use the following codes.
 
-    Medicare Plan | SOP Code (Description)| Comment
+    Medicare Plan | SOPT Code (Description)| Comment
     |---|---|---|
-    Part A and B |121 (Medicare Fee For Service)| Because Medicare Part A cannot be represented with an SOP code, systems SHOULD use the X12 concept for Medicare Part A as a code translation to the SOP code "121" (see [Using multiple codes with CodeableConcept Datatype]).
+    Part A and B |121 (Medicare Fee For Service)| Because Medicare Part A cannot be represented with an SOPT code, systems SHOULD use the X12 concept for Medicare Part A as a code translation to the SOPT code "121" (see [Using multiple codes with CodeableConcept Datatype]).
     Part C (Medicare Advantage Plan)|111 (Medicare HMO)<br />112 (Medicare PPO)<br />113 (Medicare POS) | These are the most common types of Medicare Advantage Plans
     Part D|122 (Medicare Drug Benefit)|
     {: .grid}

@@ -64,6 +64,7 @@ The January 2026 ballot addresses the following:
 37. **Resolved - change required:** Non-substantive (Correction) Remove span tags  [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 38. **Pre Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
 39. **Pre Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](basic-provenance.html#author-and-author-role-data-elements)
+40. **Pre Applied:** Non-substantive (Correction) Correct. the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
 
 
 ### Version = 8.0.0 (Meets USCDI v5 Requirements)
