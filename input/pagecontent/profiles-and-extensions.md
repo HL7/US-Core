@@ -17,7 +17,8 @@ The following [Extensions] have been defined as part of the US Core Implementati
  <!-- string parameters passed in from the page used to define the extension for each section -->
  <!-- In future, made need to convert to data file as csv if gets bigger -->
 {% assign ig_only = "USCDIRequirement" %}
-{% assign realm_only = "USCoreDirectEmailExtension,USCoreJurisdictionExtension,USCoreBirthSexExtension,USCoreGenderIdentityExtension" %}
+{% assign realm_only = "USCoreDirectEmailExtension,USCoreJurisdictionExtension,USCoreBirthSexExtension" %}
+{% assign deprecated_only = "USCoreGenderIdentityExtension,USCoreSexExtension" %}
 
 #### US Core Profile Extensions
 The following extensions are used in US Core Profiles.
@@ -33,6 +34,15 @@ The following extensions are not used in any US Core Profile. They are provided 
 The following extensions are only used in the US Core Implementation Guide to create US Core Profiles. They are used in the context of StructureDefinition elements.
 
 {% include ext-list-generator.md use="ig" %}
+
+<div class="bg-success" markdown="1">
+
+#### Deprecated US Realm Specific Extension
+
+The following extensions are not used in any US Core Profile and are *deprecated*. They **SHOULD NOT** be used for new or revised content. They are retained for historical/backward compatibility purposes.
+
+{% include ext-list-generator.md use="deprecated" %}
+</div><!-- new-content -->
 
 
 {% include link-list.md %}

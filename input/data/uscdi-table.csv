@@ -99,7 +99,7 @@
 ,Patient Demographics,US Core Patient Profile,Previous Name,Patient,,,Patient.name.use,,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Middle Name (including middle initial),Patient,,,Patient.name.given,,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Suffix,Patient,,,Patient.name.suffix,,,,,,,,,,
-,Patient Demographics,US Core Patient Profile | US Core Sex Extension,Sex,Patient,US Core Sex Extension,,Patient.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex'),,,,,,,,,,
+,Patient Demographics,US Core Patient Profile | US Core Individual Sex Extension,Sex,Patient,US Core Individual Sex Extension,,Patient.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex'),,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Date of Birth,Patient,,,Patient.birthDate,,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile,Date of Death,Patient,,,Patient.deceased[x],,,,,,,,,,
 ,Patient Demographics,US Core Patient Profile | US Core Race Extension,Race,Patient,US Core Race Extension,,Patient.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'),,,,,,,,,,

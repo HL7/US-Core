@@ -8,11 +8,11 @@ extension:
 - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
   valueInteger: 3
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 8.0.0
+version: 8.0.1
 name: USCore
 title: US Core Implementation Guide
 status: active
-date: '2024-10-09'
+date: '2025-09-30'
 publisher: HL7 International / Cross-Group Projects
 contact:
 - name: HL7 International / Cross-Group Projects
@@ -1919,6 +1919,15 @@ definition:
     exampleBoolean: false
     name: US Core Implantable Device Profile
   - reference:
+      reference: StructureDefinition/us-core-individual-sex
+    description: 'USCDI includes a data element for Sex, intended to support the exchange
+      of a recorded sex value. This extension aligns with the USCDI definition of
+      Sex: "Documentation of a specific instance of sex." It enables systems to share
+      the sex value as it was documented in a particular context.  Systems choosing
+      to record sources of information should use the [Provenance resource](element-level-provenance.html).'
+    exampleBoolean: false
+    name: US Core Individual Sex Extension
+  - reference:
       reference: StructureDefinition/us-core-interpreter-needed
     description: This extension indicates the individual's need for an interpreter
       to communicate healthcare information in a language other than the default language
@@ -2406,11 +2415,16 @@ definition:
     name: US Core ServiceRequest Profile
   - reference:
       reference: StructureDefinition/us-core-sex
-    description: 'USCDI includes a data element for Sex, intended to support the exchange
-      of a recorded sex value. This extension aligns with the USCDI definition of
-      Sex: "Documentation of a specific instance of sex." It enables systems to share
-      the sex value as it was documented in a particular context.  Systems choosing
-      to record sources of information should use the [Provenance resource](element-level-provenance.html).'
+    description: "The Sex Extension is used to reflect the documentation of a person's\
+      \ sex. Systems choosing to record sources of information should use the [Provenance\
+      \ resource](basic-provenance.html#element-level-provenance).\n \nUSCDI includes\
+      \ a data element for sex, intended to support the exchange of a sex value that\
+      \ is not characterized as sex assigned at birth or birth sex. This Sex extension\
+      \ supports USCDI. Sex assigned at birth or birth sex can be recorded using the\
+      \ more specific [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
+      Future versions of this extension may be informed by the content of the HL7\
+      \ Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may\
+      \ include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender))."
     exampleBoolean: false
     name: US Core Sex Extension
   - reference:

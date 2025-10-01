@@ -1,62 +1,72 @@
 {
-  "resourceType": "Procedure",
-  "id": "defib-implant",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|8.0.0"
-    ]
-  },
-  "identifier": [
-    {
-      "system": "urn:ietf:rfc:3986",
-      "value": "urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff"
-    }
-  ],
-  "status": "completed",
-  "code": {
-    "coding": [
-      {
-        "system": "http://www.ama-assn.org/go/cpt",
-        "code": "33249"
-      }
-    ],
-    "text": "Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber"
-  },
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "encounter": {
-    "reference": "Encounter/example-1",
-    "display": "Office Visit"
-  },
-  "performedPeriod": {
-    "start": "2019-03-26T12:55:26-07:00",
-    "end": "2019-03-26T13:25:26-07:00"
-  },
-  "performer": [
-    {
-      "actor": {
-        "reference": "Practitioner/practitioner-1"
-      }
-    }
-  ],
-  "reasonCode": [
-    {
-      "coding": [
+    "resourceType": "Procedure",
+    "id": "defib-implant",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Procedure Defibrillator Implant Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code'."
+            }
+        ]
+    },
+    "identifier": [
         {
-          "system": "http://hl7.org/fhir/sid/icd-10-cm",
-          "code": "I49.01",
-          "display": "Ventricular fibrillation"
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff"
         }
-      ],
-      "text": "Ventricular fibrillation"
-    }
-  ],
-  "focalDevice": [
-    {
-      "manipulated": {
-        "reference": "Device/udi-2"
-      }
-    }
-  ]
+    ],
+    "status": "completed",
+    "code": {
+        "coding": [
+            {
+                "system": "http://www.ama-assn.org/go/cpt",
+                "code": "33249"
+            }
+        ],
+        "text": "Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber"
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "encounter": {
+        "reference": "Encounter/example-1",
+        "display": "Office Visit"
+    },
+    "performedPeriod": {
+        "start": "2019-03-26T12:55:26-07:00",
+        "end": "2019-03-26T13:25:26-07:00"
+    },
+    "performer": [
+        {
+            "actor": {
+                "reference": "Practitioner/practitioner-1"
+            }
+        }
+    ],
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "I49.01",
+                    "display": "Ventricular fibrillation"
+                }
+            ],
+            "text": "Ventricular fibrillation"
+        }
+    ],
+    "focalDevice": [
+        {
+            "manipulated": {
+                "reference": "Device/udi-2"
+            }
+        }
+    ]
 }
