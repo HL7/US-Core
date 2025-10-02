@@ -17,9 +17,21 @@ This technical update US Core have been reviewed and commented upon by the publi
 
 {% include whats-new/v8.0.1.md %}
 
-#### Changes:
+#### Changes (Tentative List)
 
-The ballot-related comments resulted in over 100 changes to this specification, which are listed below:
+FHIR-52997: .recorder element rows missing targets
+FHIR-52125: remove span tags
+FHIR-51363: Typo in SMART well-known example
+FHIR-51254: Misspelling - US Core Laboratory Result Observation Profile
+FHIR-51137: Fix Link - CDC Race and Ethnicity Code Set Version 1.0
+FHIR-53029: Correct definition of additional USCDI ServiceRequest element
+FHIR-52980: Remove Externally Published code systems section and table
+FHIR-51493: Remove dataAbsent reason requirements from Simple Observation profile
+FHIR-50807: The HCPCS code system URI is invalid
+FHIR-49610: correct line 81 in terminology
+FHIR-46185: NAIC Code Number Identifier system not registered in THO
+FHIR-44138: US Core Terminology Reference List # 62
+FHIR-44124: US Core Coverage.Type Code Link Update
 
 ### Version = 8.0.0 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8/>
