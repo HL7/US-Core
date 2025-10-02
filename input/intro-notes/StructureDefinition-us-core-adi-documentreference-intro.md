@@ -6,7 +6,7 @@ The following are example usage scenarios for the US Core ADI DocumentReference 
 
 -   Query for all ADI documents belonging to a Patient
 -   Query for a specific ADI Document type (e.g., POLST or Living Will)
-  
+
 ### Mandatory and Must Support Data Elements
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
@@ -14,8 +14,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each DocumentReference Must Have:**
 
 1. a status
-2. a code describing the type of ADI document (for example, </span>Advance<!-- new-content --> Directive for intubation)
-3. an ADI document category (for example, </span>Advance<!-- new-content --> Directives)
+2. a code describing the type of ADI document (for example, Advance Directive for intubation)
+3. an ADI document category (for example, Advance Directives)
 4. a patient
 5. document referenced (content)
 6. the MIME type (i.e., contentType) of the document
@@ -45,7 +45,7 @@ The following data elements must always be present ([Mandatory] definition) or m
     -  The Client application **SHALL** support both elements.
     -  The `DocumentReference.content.attachment.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint).
         - If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server. This reduces complexity for the client and improves the user experience.
-    -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`. 
+    -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`.
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 {% include provenance-author-bullet-generator.md %}

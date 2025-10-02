@@ -29,7 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="ServiceRequest" %}
 
-1. the code for the test, procedure, or service to be performed
+1. plain text representation of what is being requested
 1. a reason or indication for referral or consultation*
 
 \*see guidance below
@@ -44,7 +44,7 @@ The following data elements must always be present ([Mandatory] definition) or m
   |Laboratory Order| [108252007 Laboratory procedure (procedure)]|
   |Imaging Order|[363679005 Imaging (procedure)]|
   |Clinical Test Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
-  |Procedure Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]| 
+  |Procedure Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
   {:.grid #servicerequest-categorycodes}
 
 - The `ServiceRequest.code` is bound to US Core Procedure Codes, a broadly defined value set that accommodates many healthcare domains. However, implementers **SHOULD** constrain the value set to a subset for a particular domain. The table below identifies additional value set bindings for the USCDI Laboratory Order, Imaging Order, and Clinical Test Order Data Elements. Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context. For example, laboratory orders are [extensibly] bound to the [LOINC Common Laboratory Orders Value Set]. Note that the USCDI Class Procedure Order Data Element has no additional binding.
