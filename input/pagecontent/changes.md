@@ -28,7 +28,7 @@ FHIR-53029: Correct definition of additional USCDI ServiceRequest element
 FHIR-52980: Remove Externally Published code systems section and table
 FHIR-51493: Remove dataAbsent reason requirements from Simple Observation profile
 FHIR-50807: The HCPCS code system URI is invalid
-FHIR-49610: correct line 81 in terminology
+FHIR-49610: correct line 81 in terminologypig -
 FHIR-46185: NAIC Code Number Identifier system not registered in THO
 FHIR-44138: US Core Terminology Reference List # 62
 FHIR-44124: US Core Coverage.Type Code Link Update
