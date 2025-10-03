@@ -24,7 +24,7 @@ ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attem
 # ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.54 not found by validator
 # The valueSet reference http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.54 on element Specimen.type could not be resolved
 
-                                            
+
 # 02. === US Core Goal Description Binding is extensible, which allows for text only, and guidance on using free text for `Goal.description` is provided.  ===
 
 
@@ -101,23 +101,26 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-cla
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
+Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.31.0
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.1.0', found versions: 3.0.0, 3.1.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse' to 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse|3.1.0'
 
 # 19. ==== The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked, and the identifiers are correct (updated text from 7.0.0) ===========
 
-WARNING: Observation/observation-occupation: Observation.value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
-WARNING: Observation/observation-occupation: Observation.component[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
-WARNING: Observation/observation-occupation-industry-unknown: Observation.value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
-WARNING: Observation/observation-occupation-unknown: Observation.component[0].value.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
-WARNING: ValueSet.where(id = 'us-core-condition-code'): Error from https://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd9cm
+Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
+Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
+The value set references CodeSystem 'http://terminology.hl7.org/CodeSystem/icd9cm' which has status 'not-present'
+The value set references CodeSystem 'http://www.ada.org/cdt' which has status 'not-present'
+The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
 
 # 20. === HL7 Terminology (THO) defines the ServiceDeliveryLocationRoleType and HealthcareServiceLocation value sets that compose this ValueSet. However, no codes are displayed in the HL7 Terminology for HealthcareServiceLocation value set, which is composed of NHSN Healthcare Facility Patient Care Location (HSLOC) and CMS Place of Service Codes (POS) codes. These codes are available at:ServiceDeliveryLocationRoleType: https://terminology.hl7.org/6.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html,HSLOC: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest,POS: https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets===
 
 # 21. === The following code system is not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues. These codes were checked manually (updated text from 7.0.0)===
 
-WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition.coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' could not be found, so the code cannot be validated
-WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set 'http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition|3.0.0' because the code system http://terminology.hl7.org/CodeSystem/nubc-UB92 was not found
-WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition|3.0.0' because the code system http://terminology.hl7.org/CodeSystem/nubc-UB92 was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' could not be found, so the code cannot be validated
+Unable to check whether the code is in the value set 'http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition|3.0.0' because the code system http://terminology.hl7.org/CodeSystem/nubc-UB92 was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition|3.0.0' because the code system http://terminology.hl7.org/CodeSystem/nubc-UB92 was not found
 
 # 22. ====FHIR R4 http://hl7.org/fhir/ValueSet/formatcodes is in error which has been corrected in the FHIR R5. The guide is referencing the "HL7 ValueSet of Format Codes for use with Document Sharing" that is used in R5 (updated text from 7.0.0) ===
 
@@ -135,12 +138,12 @@ The value set expansion is too large, and only a subset has been displayed
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# 27. === These Examples demonstrate the use of additional Codes or Identifiers not defined in US Core profiles  Updated from 8.0.0-ballot ===
+# 27. === These Examples demonstrate the use of additional Codes or Identifiers not defined in US Core profiles  Updated from 8.0.0 ===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|8.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|8.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|8.0.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|8.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|8.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|8.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|8.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|8.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 A definition for CodeSystem 'http://example.org/fhir/michigan.gov/lara/license-type' could not be found, so the code cannot be validated
 
 # 28. === In this example, representing the concept clearly with human-readable annotations {pack-years} is not misleading. It clearly illustrates how to use the Observation with the code and demonstrates a clinical need outweighing concerns about using annotations. ===
@@ -163,11 +166,12 @@ The element Observation.component.value[x] has a binding, and has multiple types
 
 # 32. ==== A US Direct Address for secure messaging in healthcare typically follows a format similar to an email address. for example `john.doe@direct.myhealthcareprovider.org`. Although this URL will not resolve, it represents a legitimate example of the direct address in the `endpoint.address` field. ===
 
-# 33. === To comply with Executive Order 14168, the following changes were made: 1)Removed USCDI mapping, guidance, and examples for the US Core Observation Sexual Orientation Profile  2) Removed the US Core Birth Sex Extension, guidance, and examples from the US Core Patient Profile 3) Deprecated the US Core Gender Identity Extension and removed it from the US Core Profile, USCDI mapping, guidance, and examples. Although the profiles and extensions will remain in this version of US Core to allow for backward compatibility - no examples will be supplied. ===
+# 33. === To comply with Executive Order 14168, the following changes were made: 1)Removed USCDI mapping, guidance, and examples for the US Core Observation Sexual Orientation Profile  2) Removed the US Core Birth Sex Extension, guidance, and examples from the US Core Patient Profile 3) Deprecated the US Core Gender Identity and US Core Sex Extensions and removed them from the US Core Profile, USCDI mapping, guidance, and examples. Although the profiles and extensions will remain in this version of US Core to allow for backward compatibility - no examples will be supplied. ===
 
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex'): The Implementation Guide contains no examples for this extension
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation'): The Implementation Guide contains no examples for this profile
 WARNING: StructureDefinition/us-core-genderIdentity: StructureDefinition: The resource status 'active' and the standards status 'deprecated' are not consistent
+WARNING: StructureDefinition/us-core-sex: StructureDefinition: The resource status 'active' and the standards status 'deprecated' are not consistent
 
 # 34. === US Core provides IG-specific guidance on interpreting Must Support for slices at `~/must-support.html#must-support---slices`. Where we state: "...the slicer's Must Support property only defines the element level Must Support/Additional USCDI property. In other words, the slicer's Must Support/Additional USCDI is not inherited by the slices, and each slice must be explicitly tagged with the Must Support/Additional USCDI property to define that slice's conformance strength. If no Must Support/Additional USCDI property is defined for the slice, this lengthy chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Slices.20not.20inheriting.20preferred.20bindings.20from.20root/with/514257770 and the resulting tracker FHIR-50391. ===
 
@@ -182,8 +186,8 @@ The slice 'us-core' on path 'Observation.category' is not marked as 'must-suppor
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.2.0 is deprecated
-The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
-The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note Replaced by [[[http://hl7.org/fhir/StructureDefinition/itemWeight]]]
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note: 'Replaced by [[[http://hl7.org/fhir/StructureDefinition/itemWeight]]]'
 
 # 36. === These Extension StructureDefinitions were examined, and there are no substantive changes between versions and thus no reason to specify a version ===
 
@@ -200,8 +204,8 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 
 # 38. === The differences between these code system versions have been evaluated, and there no differences or there are non breaking changes (forward compatible)
 
-There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/observation-category'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.0.0', found versions: 1.0.0, 1.0.1. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/observation-category' to 'http://terminology.hl7.org/CodeSystem/observation-category|1.0.0'
-There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/condition-category'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.0.0', found versions: 1.0.0, 1.0.1. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/condition-category' to 'http://terminology.hl7.org/CodeSystem/condition-category|1.0.0'
+There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/observation-category'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.0.1', found versions: 1.0.0, 1.0.1. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/observation-category' to 'http://terminology.hl7.org/CodeSystem/observation-category|1.0.1'
+There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/condition-category'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.0.1', found versions: 1.0.0, 1.0.1. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/condition-category' to 'http://terminology.hl7.org/CodeSystem/condition-category|1.0.1'
 There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/provenance-participant-type'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '1.1.0', found versions: 1.0.0, 1.1.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/CodeSystem/provenance-participant-type' to 'http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.1.0'
 
 # 39 === US Core reference the most recent published version of SDC. Ballot versions are released for public review and feedback during the HL7 balloting process and not intended for real-world implementation in production systems.
