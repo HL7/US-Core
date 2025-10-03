@@ -13,7 +13,7 @@
 
 ### Cross Version Analysis
 
-<!-- {% raw %} {% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}} {% endraw %} -->
+{% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}}
 
 ### IG Dependencies
 
