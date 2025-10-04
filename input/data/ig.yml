@@ -2330,8 +2330,8 @@ definition:
       reference: StructureDefinition/us-core-race
     description: "Concepts classifying the person into a named category of humans\
       \ sharing common history, traits, geographical origin or nationality.  The race\
-      \ codes used to represent these concepts are based upon the [CDC Race and Ethnicity\
-      \ Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3)\
+      \ codes used to represent these concepts are based upon the [Race & Ethnicity\
+      \ - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238)\
       \ which includes over 900 concepts for representing race and ethnicity of which\
       \ 921 reference race.  The race concepts are grouped by and pre-mapped to the\
       \ 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n\
@@ -2417,11 +2417,11 @@ definition:
       reference: StructureDefinition/us-core-sex
     description: "The Sex Extension is used to reflect the documentation of a person's\
       \ sex. Systems choosing to record sources of information should use the [Provenance\
-      \ resource](basic-provenance.html#element-level-provenance).\n \nUSCDI includes\
-      \ a data element for sex, intended to support the exchange of a sex value that\
-      \ is not characterized as sex assigned at birth or birth sex. This Sex extension\
-      \ supports USCDI. Sex assigned at birth or birth sex can be recorded using the\
-      \ more specific [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
+      \ resource](element-level-provenance.html).\n \nUSCDI includes a data element\
+      \ for sex, intended to support the exchange of a sex value that is not characterized\
+      \ as sex assigned at birth or birth sex. This Sex extension supports USCDI.\
+      \ Sex assigned at birth or birth sex can be recorded using the more specific\
+      \ [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
       Future versions of this extension may be informed by the content of the HL7\
       \ Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may\
       \ include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender))."

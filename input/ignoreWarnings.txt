@@ -96,6 +96,7 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A 
 
 # 18. ===  The following code system and value set are in FHIR Core/THO and not under the direct control of US Core editors ===
 
+Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-class|1.0.0
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
@@ -109,7 +110,9 @@ There are multiple different potential matches for the url 'http://terminology.h
 Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
 Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
+Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
+
 The value set references CodeSystem 'http://terminology.hl7.org/CodeSystem/icd9cm' which has status 'not-present'
 The value set references CodeSystem 'http://www.ada.org/cdt' which has status 'not-present'
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
@@ -182,12 +185,15 @@ The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-suppor
 The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 The slice 'us-core' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 
-# 35. ==== These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider adopting the recommended replacement in a future release. ====
+# 35. ==== These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider updating and/or adopting the recommended replacement in a future release. ====
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.2.0 is deprecated
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
 The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note: 'Replaced by [[[http://hl7.org/fhir/StructureDefinition/itemWeight]]]'
+The concept 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is deprecated and its use should be reviewed
+The concept 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is deprecated and its use should be reviewed
+
 
 # 36. === These Extension StructureDefinitions were examined, and there are no substantive changes between versions and thus no reason to specify a version ===
 
@@ -211,3 +217,9 @@ There are multiple different potential matches for the url 'http://terminology.h
 # 39 === US Core reference the most recent published version of SDC. Ballot versions are released for public review and feedback during the HL7 balloting process and not intended for real-world implementation in production systems.
 
 The ImplementationGuide uses package hl7.fhir.uv.sdc#3.0.0 released on 2022-03-08, but the most recent appropriate version is 4.0.0-ballot. This reference is getting old and the more recent version should be considered
+
+# 40 === Similar to the base FHIR specification the Guide states in the introductory paragraph of the Conformance section's General Requirmenets page "The conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in FHIR Conformance Rules, and these conventions are strictly adhered to throughout the guide. ===
+
+The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
+The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
+
