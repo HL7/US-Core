@@ -17,13 +17,15 @@ This technical update US Core have been reviewed and commented upon by the publi
 
 {% include whats-new/v8.0.1.md %}
 
-#### Changes (Tentative List)
+#### Changes
 
  - We have applied the changes listed below:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-1. **Applied:** Non-substantive (Correction) Fix Link to Race & Ethnicity - CDC (CDCREC) code system [FHIR-51137](https://jira.hl7.org/browse/FHIR-51137) See Changes [Here](StructureDefinition-us-core-race.html)
+1. **Applied:** Non-substantive (Correction) Fix Link to Race & Ethnicity - CDC (CDCREC) code system [FHIR-51137](https://jira.hl7.org/browse/FHIR-51137) See Changes:
+   - [US Core Race Extension](StructureDefinition-us-core-race.html)
+   - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 2. **Applied:** Non-substantive (Correction) Typo in US Core Laboratory Result Observation Profile [FHIR-51254](https://jira.hl7.org/browse/FHIR-51254) See Changes [Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
 3. **Applied:** Non-substantive (Correction) Typo in SMART well-known example [FHIR-51363](https://jira.hl7.org/browse/FHIR-51363) See Changes [Here](scopes.html#example-well-knownsmart-configuration-file)
 4. **Applied:** Non-substantive (Correction) Remove span tags [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)

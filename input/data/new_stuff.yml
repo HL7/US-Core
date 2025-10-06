@@ -61,10 +61,10 @@
 # - USCoreDiagnosticReportProfileNoteExchange
 # - USCoreDocumentReferenceProfile
 # - USCoreProcedureProfile
-# - USCoreServiceRequestProfile
+- USCoreServiceRequestProfile
 # - USCoreTreatmentInterventionPreferenceProfile
 # - USCoreCareExperiencePreferenceProfile
-# - USCoreLaboratoryResultObservationProfile
+- USCoreLaboratoryResultObservationProfile
 # - USCoreCarePlanProfile
 # - USCoreCareTeamProfile
 # - USCoreGoalProfile
@@ -72,10 +72,9 @@
 # - USCoreSmokingStatusProfile
 # - USCorePatientProfile
 # - USCoreObservationADIDocumentationProfile
-# - USCoreADIDocumentReferenceProfile
+- USCoreADIDocumentReferenceProfile
 # - USCoreVitalSignsProfile
-- USCoreSexExtension
-- USCoreIndividualSexExtension
+
 
 
 
@@ -92,8 +91,10 @@
 # - USCDIRequirement
 # - USCoreAuthenticationTimeExtension
 # - USCoreInterpreterRequiredExtension
-# - USCoreRaceExtension
-# - USCoreEthnicityExtension
+- USCoreRaceExtension
+- USCoreEthnicityExtension
+- USCoreSexExtension
+- USCoreIndividualSexExtension
 
 # OperationDefinition
 

@@ -37,7 +37,7 @@ The following are example usage scenarios for this profile:
 - For USCDI, systems are required to use SNOMED CT for coded results if the SCT code exists.
 - The [CLIA/USCDI/HL7 Elements Crossmapping Table] provides a crosswalk of [Clinical Laboratory Improvement Amendments (CLIA)] data elements to corresponding FHIR fields, terminology standards, and naming conventions used in HL7 CDA and HL7 V2 standards. Implementers can use this mapping to help comply with CLIA requirements when using the US Core Laboratory Result Observation Profile.
 {% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
-- \*This profile inherits the invariant "us-core-3" from the US Core Observation Clinical Result Profile that requires UCUM to be used as a unit type for `Observation.valueQuantity.code`.
+- \*This profile inherits the invariant "us-core-3" from the US Core Observation Clinical Result Profile that requires UCUM to be used as a unit type for<span class="bg-success" markdown="1"> `Observation.valueQuantity.code`.</span><!-- new-content -->
 -  *Even when the specimen type is already implied by the LOINC code used in `Observation.code` (e.g., a LOINC code for Blood Glucose), the `Observation.specimen` element **SHOULD** also be populated with the referenced Specimen resource to explicitly communicate the collected specimen type. The type of specimen **SHOULD** not conflict with the LOINC code.
 - \* See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New laboratory observations

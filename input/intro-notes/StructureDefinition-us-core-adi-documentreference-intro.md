@@ -14,8 +14,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each DocumentReference Must Have:**
 
 1. a status
-2. a code describing the type of ADI document (for example, Advance Directive for intubation)
-3. an ADI document category (for example, Advance Directives)
+2. <span class="bg-success" markdown="1">a code describing the type of ADI document (for example, Advance Directive for intubation)</span><!-- new-content -->
+3. <span class="bg-success" markdown="1">an ADI document category (for example, Advance Directives)</span><!-- new-content -->
 4. a patient
 5. document referenced (content)
 6. the MIME type (i.e., contentType) of the document
