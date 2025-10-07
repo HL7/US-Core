@@ -33,7 +33,7 @@ This technical update US Core have been reviewed and commented upon by the publi
 6. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
 7. **Applied:** Compatible, substantive (Correction) Rename The USCore sex extension [FHIR-53047](https://jira.hl7.org/browse/FHIR-53047) See Changes Listed in introduction above.
 
-### Version = 8.0.0 (Meets USCDI v5 Requirements)
+### Version = 8.0.0
 - url: <https://hl7.org/fhir/us/core/STU8/>
 - Based on FHIR version: 4.0.1
 
