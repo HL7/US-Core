@@ -19,7 +19,7 @@ This technical update US Core have been reviewed and commented upon by the publi
 
 #### Changes
 
- - We have applied the changes listed below:
+ - This technical update US Core has 7 changes which are listed below.
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
