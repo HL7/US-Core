@@ -1,5 +1,5 @@
 
 <div markdown="1">
-{% include list-capabilitystatements.xhtml %}
+{% include list-capabilitystatements-en.xhtml %}
 <div>
 <br />

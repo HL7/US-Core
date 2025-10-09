@@ -603,39 +603,6 @@
       },
       {
         "reference": {
-          "reference": "Encounter/example-1"
-        },
-        "description": "This is a encounter 1 example for the *US Core Encounter Profile*.",
-        "name": "Encounter 1 Example",
-        "isExample": true,
-        "profile": [
-          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-        ]
-      },
-      {
-        "reference": {
-          "reference": "Encounter/1036"
-        },
-        "description": "This is a encounter 1036 example for the *Encounter Profile*.",
-        "name": "Encounter 1036 Example",
-        "isExample": true,
-        "profile": [
-          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-        ]
-      },
-      {
-        "reference": {
-          "reference": "Encounter/delivery"
-        },
-        "description": "This is a patient delivery encounter example for the *Encounter Profile*.",
-        "name": "Encounter Delivery Example",
-        "isExample": true,
-        "profile": [
-          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-        ]
-      },
-      {
-        "reference": {
           "reference": "Condition/encounter-diagnosis-example1"
         },
         "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
@@ -1622,17 +1589,6 @@
         "isExample": true,
         "profile": [
           "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-        ]
-      },
-      {
-        "reference": {
-          "reference": "Procedure/rehab"
-        },
-        "description": "This is a rehab example for the *US Core Procedure Profile*.",
-        "name": "Rehab Example",
-        "isExample": true,
-        "profile": [
-          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
         ]
       },
       {
