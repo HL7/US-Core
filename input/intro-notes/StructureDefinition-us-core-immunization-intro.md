@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-Core Immunization
@@ -32,3 +32,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
     - CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using the CVX and 11-digit NDC codes based on this table.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

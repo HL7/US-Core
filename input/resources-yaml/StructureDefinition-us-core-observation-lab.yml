@@ -3,10 +3,11 @@ id: us-core-observation-lab
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 name: USCoreLaboratoryResultObservationProfile
 title: US Core Laboratory Result Observation Profile
-status: active
-experimental: false
-date: 2022-11-19
-description: "The US Core Laboratory Result Observation Profile is based upon the
+status: draft
+experimental: true
+date: 2023-10-17
+description:
+  "The US Core Laboratory Result Observation Profile is based upon the
   US Core Observation Clinical Result Profile and, along with the US Core DiagnosticReport
   Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability
   (USCDI) Laboratory requirements. Laboratory results are grouped and summarized using
@@ -18,9 +19,9 @@ description: "The US Core Laboratory Result Observation Profile is based upon th
   to record, search, and fetch laboratory test results associated with a patient to
   promote interoperability and adoption through common implementation. It identifies
   which core elements, extensions, vocabularies, and value sets SHALL be present in
-  the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development
-  for specific use cases."
-fhirVersion: 4.0.1
+  the resource and constrains the way the elements are used when using this profile.
+  It provides the floor for standards development for specific use cases."
+
 kind: resource
 abstract: false
 type: Observation
@@ -28,93 +29,153 @@ baseDefinition: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observat
 derivation: constraint
 differential:
   element:
-  - id: Observation.category:us-core
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Observation.category
-    sliceName: us-core
-    short: (USCDI) Classification of  type of observation
-    min: 1
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: http://terminology.hl7.org/CodeSystem/observation-category
-        code: laboratory
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Observation.category
-  - id: Observation.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Observation.code
-    short: (USCDI) Laboratory Test Name
-    mustSupport: true
-    binding:
-      strength: extensible
-      description: Laboratory LOINC Codes
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Observation.code
-  - id: Observation.value[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Observation.value[x]
-    short: (USCDI) Result Value
-    definition: The Laboratory result value.  If a coded value,  the valueCodeableConcept.code
-      **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults)
-      if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected
-      from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html)
-      that defines all UCUM codes is in the FHIR specification.
-    type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: Quantity
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: CodeableConcept
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: string
-    - code: boolean
-    - code: integer
-    - code: Range
-    - code: Ratio
-    - code: SampledData
-    - code: time
-    - code: dateTime
-    - code: Period
-    condition:
-    - us-core-4
-    constraint:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice
-        valueBoolean: true
-      key: us-core-4
-      severity: warning
-      human: SHOULD use Snomed CT for coded Results
-      expression: value.ofType(CodeableConcept).coding.system.empty() or value.ofType(CodeableConcept).coding.system
-        = 'http://snomed.info/sct'
-      xpath: not(exists(f:valueCodeableConcept/f:coding/f:system) ) or f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Observation.value[x]
-  - id: Observation.specimen
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Observation.specimen
-    short: (USCDI) Specimen used for this observation
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
-    mustSupport: true
+    # ==== added lastUpdated to the mustSupport list ====
+
+    # - id: Observation.meta
+    #   path: Observation.meta
+    #   mustSupport: true
+    # - id: Observation.meta.lastUpdated
+    #   path: Observation.meta.lastUpdated
+    #   short: When the resource last changed
+    #   mustSupport: true
+
+    # ==== added lastUpdated to the mustSupport list ====
+
+    - id: Observation.category:us-core
+      path: Observation.category
+      sliceName: us-core
+      min: 1
+      max: "1"
+      patternCodeableConcept:
+        coding:
+          - system: http://terminology.hl7.org/CodeSystem/observation-category
+            code: laboratory
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Observation.category
+    - id: Observation.code
+      path: Observation.code
+      short: Laboratory Test Name
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: Laboratory LOINC Codes
+        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Observation.code
+
+    # ======== added for USCore V8 =================
+    # - id: Observation.code.text
+    #   extension:
+    #     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+    #       valueBoolean: true
+    #   path: Observation.code.text
+    #   short:
+    #     "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+    #     \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: The name of the test that was performed."
+    # ======== added for USCore V8 =================
+
+    - id: Observation.value[x]
+      path: Observation.value[x]
+      short: Result Value
+      definition:
+        The Laboratory result value.  If a coded value,  the valueCodeableConcept.code
+        **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults)
+        if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected
+        from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html)
+        that defines all UCUM codes is in the FHIR specification.
+      type:
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: Quantity
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: CodeableConcept
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: string
+        - code: boolean
+        - code: integer
+        - code: Range
+        - code: Ratio
+        - code: SampledData
+        - code: time
+        - code: dateTime
+        - code: Period
+
+        # Added Choice Datatypes in R6
+        - code: Attachment
+        - code: Reference
+          targetProfile:
+            - "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+
+      condition:
+        - us-core-4
+      constraint:
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice
+              valueBoolean: true
+          key: us-core-4
+          severity: warning
+          human: SHOULD use Snomed CT for coded Results
+          expression:
+            ofType(CodeableConcept).coding.system.empty() or (ofType(CodeableConcept).coding.system
+            contains 'http://snomed.info/sct')
+
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Observation.value[x]
+
+
+    # - id: Observation.interpretation
+    #   path: Observation.interpretation
+    #   short: Result interpretation
+    #   comment:
+    #     Categorical assessment of a laboratory value, often in relation to a
+    #     test's reference range. Examples include but are not limited to high, low, critical,
+    #     and normal.
+    #   mustSupport: true
+    #   binding:
+    #     strength: extensible
+    #     description: Observation Interpretation Codes
+    #     valueSet: http://hl7.org/fhir/ValueSet/observation-interpretation
+
+
+    - id: Observation.specimen
+      path: Observation.specimen
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
+            # Added Target References in R6
+            - http://hl7.org/fhir/StructureDefinition/Group
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
+
+    # - id: Observation.referenceRange
+    #   path: Observation.referenceRange
+    #   short: Result reference range
+    #   comment:
+    #     Upper and lower limit of test values expected for a designated population
+    #     of individuals. Reference range values may differ by patient characteristics,
+    #     laboratory test manufacturer and laboratory test performer.
+    #   condition:
+    #     - us-core-22
+    #   constraint:
+    #     - key: us-core-22
+    #       severity: error
+    #       human: SHALL use UCUM for coded quantity units.
+    #       expression: (low.system.empty() or low.system = 'http://unitsofmeasure.org') and (high.system.empty() or high.system = 'http://unitsofmeasure.org')
+    #   mustSupport: true

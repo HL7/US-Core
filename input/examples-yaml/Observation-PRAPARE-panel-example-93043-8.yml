@@ -1,3 +1,15 @@
+resourceType: Observation
+id: PRAPARE-panel-example-93043-8
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: PRAPARE Panel Example 93043-8
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Prapare Panel Example 93043-8 (Personal characteristics)
+      for the *US Core Observation Screening Assessment Profile*
+status: final
 category:
 - coding:
   - code: sdoh
@@ -13,9 +25,11 @@ code:
     display: Personal characteristics [PRAPARE]
     system: http://loinc.org
   text: Personal characteristics
-derivedFrom:
-- reference: QuestionnaireResponse/prapare-example
+subject:
+  reference: Patient/example
 effectiveDateTime: '2022-03-28T18:30:40-07:00'
+performer:
+- reference: Patient/example
 hasMember:
 - reference: Observation/PRAPARE-item-example-56051-6
 - reference: Observation/PRAPARE-multiselect-item-example-32624-9-answer0
@@ -23,19 +37,5 @@ hasMember:
 - reference: Observation/PRAPARE-item-example-93035-4
 - reference: Observation/PRAPARE-item-example-93034-7
 - reference: Observation/PRAPARE-item-example-54899-0
-id: PRAPARE-panel-example-93043-8
-meta:
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: PRAPARE Panel Example 93043-8
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Prapare Panel Example 93043-8 (Personal characteristics)
-      for the *US Core Observation Screening Assessment Profile*
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-performer:
-- reference: Patient/example
-resourceType: Observation
-status: final
-subject:
-  reference: Patient/example
+derivedFrom:
+- reference: QuestionnaireResponse/prapare-example

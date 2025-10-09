@@ -3,12 +3,12 @@ id: us-core-organization
 url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization'
 name: USCoreOrganizationProfile
 title: US Core Organization Profile
-status: active
-experimental: false
+status: draft
+experimental: true
 date: '2022-04-20'
 description: >-
   This profile sets minimum expectations for the Organization resource to searching for and fetching an Organization associated with a patient or provider to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Organization
@@ -52,7 +52,7 @@ differential:
 
       condition:
         - us-core-16
-        - us-core-17       
+        - us-core-17
       constraint:
         - key: us-core-16
           severity: error
@@ -66,7 +66,7 @@ differential:
           expression: '(((select(value.substring(0,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger()) + 24)mod 10=0)'
 
       mustSupport: true
-      
+
     - id: 'Organization.identifier:CLIA'
       path: Organization.identifier
       sliceName: CLIA
@@ -95,7 +95,7 @@ differential:
       patternIdentifier:
         system: 'urn:oid:2.16.840.1.113883.6.300'
       condition:
-        - us-core-19       
+        - us-core-19
       constraint:
         - key: us-core-19
           severity: error

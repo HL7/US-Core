@@ -1,13 +1,5 @@
 resourceType: Patient
 id: child-example
-meta:
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Patient Child Example
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a patient child example for the *US Core Patient Profile*.
 extension:
 - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
   extension:
@@ -27,13 +19,20 @@ extension:
       display: Not Hispanic or Latino
   - url: text
     valueString: Not Hispanic or Latino
-
-- url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
-  valueCode: M
-
 - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex
-  valueCode: '248153007'
-
+  valueCoding:
+    system: http://snomed.info/sct
+    version: http://snomed.info/sct/731000124108
+    code: '248153007'
+    display: Male (finding)
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Patient Child Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a patient child example for the *US Core Patient Profile*.
 identifier:
 - use: usual
   type:
@@ -42,7 +41,7 @@ identifier:
       code: MR
       display: Medical Record Number
     text: Medical Record Number
-  system: http://hospital.smarthealthit.org
+  system: http://example.org/patient/identifiers
   value: '1032704'
 active: true
 name:
@@ -53,12 +52,11 @@ telecom:
 - system: phone
   value: 555-555-5555
   use: home
-gender: male
 birthDate: '2016-01-15'
 address:
 - line:
-  - 49 Meadow St
-  city: Mounds
+  - 49 MEADOW ST
+  city: MOUNDS
   state: OK
   postalCode: '74047'
   country: US

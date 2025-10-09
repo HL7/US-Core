@@ -3,9 +3,9 @@ id: us-core-condition-encounter-diagnosis
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
 name: USCoreConditionEncounterDiagnosisProfile
 title: US Core Condition Encounter Diagnosis Profile
-status: active
-experimental: false
-date: 2022-04-20
+status: draft
+experimental: true
+date: 2025-10-08
 description: The US Core Condition Encounter Diagnosis Profile is based upon the core
   FHIR Condition Resource and meets the U.S. Core Data for Interoperability (USCDI)
   v2 *Encounter Diagnosis* requirements. In version 5.0.0, The US Core Condition
@@ -51,7 +51,7 @@ differential:
       valueBoolean: true
     path: Condition.clinicalStatus
     short: (USCDI) active | recurrence | relapse | inactive | remission
-      | resolved
+      | resolved | unknown
     mustSupport: true
     binding:
       strength: required

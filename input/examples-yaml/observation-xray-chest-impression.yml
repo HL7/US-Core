@@ -1,14 +1,14 @@
 resourceType: Observation
 id: xray-chest-impression
 meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Xray Chest Impression Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This example of a US Core Observation Clinical Result Profile illustrates
       its use to capture information about a patient's radiology study impression.
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
 status: final
 category:
 - coding:
@@ -27,5 +27,8 @@ subject:
   display: Amy Shaw
 encounter:
   display: ER Visit
-effectiveDateTime: '2019-02-03T19:43:30.000Z'
+effectiveDateTime: 2019-02-03T19:43:30+00:00
+performer:
+- reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
 valueString: No acute abnormality

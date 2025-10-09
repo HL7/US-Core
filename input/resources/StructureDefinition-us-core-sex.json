@@ -4,10 +4,9 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
     "name": "USCoreSexExtension",
     "title": "US Core Sex Extension",
-    "status": "active",
-    "date": "2023-05-15",
-    "description": "The Sex Extension is used to reflect the documentation of a person's sex. Systems choosing to record sources of information should use the [Provenance resource](basic-provenance.html#element-level-provenance).\n \nUSCDI v3 includes a data element for sex, intended to support the exchange of a sex value that is not characterized as sex assigned at birth or birth sex. This Sex extension supports USCDI v3. Sex assigned at birth or birth sex can be recorded using the more specific [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex).\nFuture versions of this extension may be informed by the content of the HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender)).",
-    "fhirVersion": "4.0.1",
+    "status": "draft",
+    "date": "2025-04-22",
+    "description": "USCDI includes a data element for Sex, intended to support the exchange of a recorded sex value. This extension aligns with the USCDI definition of Sex: \"Documentation of a specific instance of sex.\" It enables systems to share the sex value as it was documented in a particular context.  Systems choosing to record sources of information should use the [Provenance resource](element-level-provenance.html).",
     "kind": "complex-type",
     "abstract": false,
     "context": [
@@ -41,13 +40,13 @@
                 "max": "1",
                 "type": [
                     {
-                        "code": "code"
+                        "code": "Coding"
                     }
                 ],
                 "binding": {
-                    "strength": "required",
-                    "description": "Concepts limited to Male, Female, Patient Sex Unknown, asked-declined.",
-                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.3"
+                    "strength": "extensible",
+                    "description": "Federal Administrative Sex",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.121"
                 }
             }
         ]

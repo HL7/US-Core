@@ -2,12 +2,12 @@
     "resourceType": "StructureDefinition",
     "id": "us-core-medicationrequest",
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
-    "version": "3.1.1",
     "name": "USCoreMedicationRequestProfile",
     "title": "US Core MedicationRequest Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-06-26",
+    "status": "draft",
+    "experimental": true,
+    "date": "2023-10-17",
+    "description": "The US Core MedicationRequest Profile inherits from the FHIR [MedicationRequest](https://hl7.org/fhir/R4/medicationrequest.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)  *Medications* Data Class. This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication prescriptions or orders. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "publisher": "HL7 US Realm Steering Committee",
     "contact": [
         {
@@ -19,7 +19,6 @@
             ]
         }
     ],
-    "description": "The US Core Medication Request Profile is based upon the core FHIR MedicationRequest Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Medications* requirements. The MedicationRequest resource can be used to record a patient's medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
     "jurisdiction": [
         {
             "coding": [
@@ -31,7 +30,6 @@
             ]
         }
     ],
-    "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
     "type": "MedicationRequest",
@@ -42,8 +40,6 @@
             {
                 "id": "MedicationRequest",
                 "path": "MedicationRequest",
-                "definition": "\\-",
-                "comment": "\\-",
                 "constraint": [
                     {
                         "key": "us-core-21",
@@ -62,14 +58,7 @@
             },
             {
                 "id": "MedicationRequest.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.status",
-                "short": "(USCDI) active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -85,14 +74,7 @@
             },
             {
                 "id": "MedicationRequest.intent",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.intent",
-                "short": "(USCDI) proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option",
                 "condition": [
                     "us-core-21"
                 ],
@@ -111,77 +93,47 @@
             },
             {
                 "id": "MedicationRequest.category",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.category",
                 "slicing": {
                     "discriminator": [
                         {
-                            "type": "pattern",
+                            "type": "value",
                             "path": "$this"
                         }
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI) Type of medication usage",
                 "mustSupport": true
             },
             {
                 "id": "MedicationRequest.category:us-core",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.category",
                 "sliceName": "us-core",
-                "short": "(USCDI) Type of medication usage",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
-                    "description": "The type of medication order. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
+                    "description": "The type of medication order. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
                     "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-category"
                 }
             },
             {
-                "id": "MedicationRequest.reported[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "MedicationRequest.reported[x]",
-                "short": "(USCDI) Reported rather than primary record",
+                "id": "MedicationRequest.reported",
+                "path": "MedicationRequest.reported",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.informationSource",
+                "path": "MedicationRequest.informationSource",
                 "type": [
                     {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "boolean"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+                            "http://hl7.org/fhir/StructureDefinition/Group"
                         ],
                         "_targetProfile": [
                             {
@@ -223,34 +175,26 @@
                                         "valueBoolean": false
                                     }
                                 ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
                             }
                         ]
                     }
                 ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "MedicationOrder.status"
-                    }
-                ]
+                "mustSupport": true
             },
             {
-                "id": "MedicationRequest.medication[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "MedicationRequest.medication[x]",
-                "short": "(USCDI) Medication to be taken",
+                "id": "MedicationDispense.medication",
+                "path": "MedicationDispense.medication",
                 "type": [
                     {
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "code": "Reference",
+                        "code": "CodeableReference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
                         ]
@@ -270,19 +214,31 @@
             },
             {
                 "id": "MedicationRequest.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.subject",
-                "short": "(USCDI) Who or group medication request is for",
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/StructureDefinition/Group"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
@@ -296,14 +252,7 @@
             },
             {
                 "id": "MedicationRequest.encounter",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.encounter",
-                "short": "(USCDI) Encounter created as part of encounter/admission/stay",
                 "type": [
                     {
                         "code": "Reference",
@@ -322,14 +271,7 @@
             },
             {
                 "id": "MedicationRequest.authoredOn",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.authoredOn",
-                "short": "(USCDI) When request was initially authored",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -340,14 +282,7 @@
             },
             {
                 "id": "MedicationRequest.requester",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.requester",
-                "short": "(USCDI) Who/What requested the Request",
                 "type": [
                     {
                         "code": "Reference",
@@ -431,7 +366,7 @@
                     }
                 ],
                 "path": "MedicationRequest.reasonCode",
-                "short": "(USCDI) Reason or indication for ordering or not ordering the medication",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Reason or indication for ordering or not ordering the medication",
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
@@ -446,66 +381,32 @@
                     }
                 ],
                 "path": "MedicationRequest.reasonReference",
-                "short": "(USCDI) US Core Condition or Observation that supports the prescription"
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: US Core Condition or Observation that supports the prescription"
             },
             {
                 "id": "MedicationRequest.dosageInstruction",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dosageInstruction",
-                "short": "(USCDI) How the medication should be taken",
                 "mustSupport": true
             },
             {
                 "id": "MedicationRequest.dosageInstruction.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dosageInstruction.text",
-                "short": "(USCDI) Free text dosage instructions e.g. SIG",
                 "mustSupport": true
             },
             {
                 "id": "MedicationRequest.dosageInstruction.timing",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dosageInstruction.timing",
-                "short": "(USCDI) When medication should be administered",
                 "mustSupport": true
             },
             {
                 "id": "MedicationRequest.dosageInstruction.doseAndRate",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dosageInstruction.doseAndRate",
-                "short": "(USCDI) Amount of medication administered",
                 "mustSupport": true
             },
             {
                 "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
-                "short": "(USCDI) Amount of medication per dose",
+                "short": "Amount of medication per dose",
                 "type": [
                     {
                         "extension": [
@@ -514,7 +415,10 @@
                                 "valueBoolean": true
                             }
                         ],
-                        "code": "Quantity"
+                        "code": "Quantity",
+                        "profile": [
+                            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+                        ]
                     },
                     {
                         "code": "Range"
@@ -534,38 +438,17 @@
             },
             {
                 "id": "MedicationRequest.dispenseRequest",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dispenseRequest",
-                "short": "(USCDI) Medication supply authorization",
                 "mustSupport": true
             },
             {
                 "id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-                "short": "(USCDI) Number of refills authorized",
                 "mustSupport": true
             },
             {
                 "id": "MedicationRequest.dispenseRequest.quantity",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationRequest.dispenseRequest.quantity",
-                "short": "(USCDI) Amount of medication to supply per dispense",
                 "mustSupport": true
             }
         ]

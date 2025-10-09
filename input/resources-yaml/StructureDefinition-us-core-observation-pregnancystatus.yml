@@ -3,8 +3,8 @@ id: us-core-observation-pregnancystatus
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus
 name: USCoreObservationPregnancyStatusProfile
 title: US Core Observation Pregnancy Status Profile
-status: active
-experimental: false
+status: draft
+experimental: true
 date: 2022-08-24
 description: The US Core Pregnancy Status Observation Profile is based upon the core
   FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI)
@@ -14,7 +14,7 @@ description: The US Core Pregnancy Status Observation Profile is based upon the 
   common implementation. It identifies which core elements, extensions, vocabularies,
   and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It
   provides the floor for standards development for specific use cases.
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Observation

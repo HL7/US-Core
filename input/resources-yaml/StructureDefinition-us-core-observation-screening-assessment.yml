@@ -3,7 +3,7 @@ id: us-core-observation-screening-assessment
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
 name: USCoreObservationScreeningAssessmentProfile
 title: US Core Observation Screening Assessment Profile
-status: active
+status: draft
 date: 2022-04-20
 description: The US Core Observation Screening Assessment Profile meets the requirements
   of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability
@@ -16,7 +16,7 @@ description: The US Core Observation Screening Assessment Profile meets the requ
   It identifies which core elements, extensions, vocabularies, and value sets **SHALL**
   be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards
   development for specific use cases.
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Observation

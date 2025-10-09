@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -31,3 +31,5 @@ The following are example usage scenarios for this profile:
 {% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

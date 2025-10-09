@@ -3,8 +3,8 @@ id: us-core-coverage
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage
 name: USCoreCoverageProfile
 title: US Core Coverage Profile
-status: active
-experimental: false
+status: draft
+experimental: true
 date: 2022-09-24
 description: The US Core Coverage Profile is based upon the core FHIR Coverage Resource
   and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance
@@ -14,7 +14,7 @@ description: The US Core Coverage Profile is based upon the core FHIR Coverage R
   for health care". It identifies which core elements, extensions, vocabularies, and
   value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides
   the floor for standards development for specific use cases.
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Coverage
@@ -66,7 +66,7 @@ differential:
     patternCodeableConcept:
       coding:
         - system: 'http://terminology.hl7.org/CodeSystem/v2-0203'
-          code: MB    
+          code: MB
     mustSupport: true
   - id: Coverage.status
     extension:

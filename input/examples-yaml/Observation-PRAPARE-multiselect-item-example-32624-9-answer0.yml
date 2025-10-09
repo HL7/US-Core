@@ -1,3 +1,15 @@
+resourceType: Observation
+id: PRAPARE-multiselect-item-example-32624-9-answer0
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Prapare Multiselect-Item Example 32624-9-Answer0
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race)
+      for the *US Core Observation Screening Assessment Profile*
+status: final
 category:
 - coding:
   - code: sdoh
@@ -13,28 +25,16 @@ code:
     display: Race
     system: http://loinc.org
   text: Race
-derivedFrom:
-- reference: QuestionnaireResponse/prapare-example
-effectiveDateTime: '2022-03-28T18:30:40-07:00'
-id: PRAPARE-multiselect-item-example-32624-9-answer0
-meta:
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Prapare Multiselect-Item Example 32624-9-Answer0
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race)
-      for the *US Core Observation Screening Assessment Profile*
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-performer:
-- reference: Patient/example
-resourceType: Observation
-status: final
 subject:
   reference: Patient/example
+effectiveDateTime: '2022-03-28T18:30:40-07:00'
+performer:
+- reference: Patient/example
 valueCodeableConcept:
   coding:
   - code: LA4457-3
     display: White
     system: http://loinc.org
   text: White
+derivedFrom:
+- reference: QuestionnaireResponse/prapare-example

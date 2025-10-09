@@ -1,4 +1,4 @@
-{% include new_page.md %}
+{% include grayed-out.html %}{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -33,3 +33,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - If Insurers issue unique member Ids for dependents, then the *memberId* `Coverage.identifier` should be used instead of `Coverage.dependent` to to uniquely refer to the dependent with respect to their insurance.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

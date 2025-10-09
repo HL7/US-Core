@@ -1,6 +1,8 @@
 resourceType: Observation
 id: 10-minute-apgar-respiratory-effort
 meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: 10 minute Apgar Respiratory effort Example
@@ -8,8 +10,6 @@ meta:
     valueMarkdown: This example of a US Core Survey Observation Profile illustrates
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse.
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
 status: final
 category:
 - coding:
@@ -23,6 +23,12 @@ code:
     code: 32405-3
     display: 10 minute Apgar Respiratory effort
   text: Apgar respiratory effort score
+subject:
+  reference: Patient/infant-example
+effectiveDateTime: '2016-05-18T22:33:22Z'
+performer:
+- reference: Practitioner/practitioner-1
+  display: Ronald Bone
 valueCodeableConcept:
   coding:
   - extension:
@@ -32,9 +38,3 @@ valueCodeableConcept:
     code: LA6727-7
     display: Good, strong cry; normal rate and effort of breathing
   text: 2. Good, strong cry; normal rate and effort of breathing
-subject:
-  reference: Patient/infant-example
-effectiveDateTime: '2016-05-18T22:33:22Z'
-performer:
-- reference: Practitioner/practitioner-1
-  display: Ronald Bone

@@ -1,3 +1,15 @@
+resourceType: Observation
+id: HVS-panel-example-88121-9
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: HVSPanel Example 88121-9
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a HVSPanel Example 88121-9 (Hunger Vital Sign [HVS]) for
+      the *US Core Observation Screening Assessment Profile*
+status: final
 category:
 - coding:
   - code: sdoh
@@ -13,26 +25,17 @@ code:
     display: Hunger Vital Sign [HVS]
     system: http://loinc.org
   text: Hunger Vital Sign [HVS]
-derivedFrom:
-- reference: QuestionnaireResponse/hunger-vital-sign-example
+subject:
+  reference: Patient/example
 effectiveDateTime: '2020-09-10T21:56:54.671000+00:00'
+performer:
+- reference: Patient/example
+valueQuantity:
+  value: 2
+  unit: score
 hasMember:
 - reference: Observation/HVS-item-example-88122-7
 - reference: Observation/HVS-item-example-88123-5
 - reference: Observation/HVS-item-example-88124-3
-id: HVS-panel-example-88121-9
-meta:
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Hvs Panel Example 88121-9
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for
-      the *US Core Observation Screening Assessment Profile*
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-performer:
-- reference: Patient/example
-resourceType: Observation
-status: final
-subject:
-  reference: Patient/example
+derivedFrom:
+- reference: QuestionnaireResponse/hunger-vital-sign-example

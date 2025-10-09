@@ -4,12 +4,11 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure",
     "name": "USCoreProcedureProfile",
     "title": "US Core Procedure Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2022-04-20",
+    "status": "draft",
+    "experimental": true,
+    "date": "2023-10-17",
     "publisher": "HL7 US Realm Steering Committee",
-    "description": "The US Core Procedure Profile is based upon the core FHIR Procedure Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 'Procedures' requirements. This profile sets minimum expectations for the Procedure resource to record, search, and fetch procedures associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
-    "fhirVersion": "4.0.1",
+    "description": "The US Core Procedure Profile inherits from the FHIR [Procedure](https://hl7.org/fhir/R4/procedure.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Procedures* Data Class. It sets minimum expectations for the Procedure resource to record, search, and fetch procedure information associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "kind": "resource",
     "abstract": false,
     "type": "Procedure",
@@ -20,14 +19,12 @@
             {
                 "id": "Procedure",
                 "path": "Procedure",
-                "definition": "\\-",
-                "comment": "\\-",
                 "constraint": [
                     {
                         "key": "us-core-7",
                         "severity": "error",
-                        "human": "Performed SHALL be present if the status is 'completed' or 'in-progress'",
-                        "expression": "(status='completed' or status='in-progress') implies performed.exists()"
+                        "human": "Occurrence SHALL be present if the status is 'completed' or 'in-progress'",
+                        "expression": "(status='completed' or status='in-progress') implies occurrence.exists()"
                     }
                 ],
                 "mustSupport": false,
@@ -47,13 +44,40 @@
                     }
                 ],
                 "path": "Procedure.basedOn",
-                "short": "(USCDI) A request for this procedure",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: A request for this procedure",
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
@@ -61,14 +85,7 @@
             },
             {
                 "id": "Procedure.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Procedure.status",
-                "short": "(USCDI) preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
                 "condition": [
                     "us-core-7"
                 ],
@@ -86,14 +103,7 @@
             },
             {
                 "id": "Procedure.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Procedure.code",
-                "short": "(USCDI) Identification of the procedure",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -110,14 +120,7 @@
             },
             {
                 "id": "Procedure.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Procedure.subject",
-                "short": "(USCDI) Who the procedure was performed on",
                 "type": [
                     {
                         "code": "Reference",
@@ -135,15 +138,8 @@
                 ]
             },
             {
-                "id": "Procedure.performed[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Procedure.performed[x]",
-                "short": "(USCDI) When the procedure was performed",
+                "id": "Procedure.occurrence[x]",
+                "path": "Procedure.occurrence[x]",
                 "type": [
                     {
                         "extension": [

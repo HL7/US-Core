@@ -1,3 +1,15 @@
+resourceType: Observation
+id: PRAPARE-item-example-93033-9
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Prapare Item Example 93033-9
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Prapare Item Example 93033-9 (Are you worried about losing
+      your housing?) for the *US Core Observation Screening Assessment Profile*
+status: final
 category:
 - coding:
   - code: sdoh
@@ -10,31 +22,19 @@ category:
 code:
   coding:
   - code: 93033-9
-    display: Are you worried about losing your housing?
+    display: Are you worried about losing your housing [PRAPARE]
     system: http://loinc.org
-  text: Are you worried about losing your housing?
-derivedFrom:
-- reference: QuestionnaireResponse/prapare-example
-effectiveDateTime: '2022-03-28T18:30:40-07:00'
-id: PRAPARE-item-example-93033-9
-meta:
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Prapare Item Example 93033-9
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Prapare Item Example 93033-9 (Are you worried about losing
-      your housing?) for the *US Core Observation Screening Assessment Profile*
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-performer:
-- reference: Patient/example
-resourceType: Observation
-status: final
+  text: Are you worried about losing your housing [PRAPARE]
 subject:
   reference: Patient/example
+effectiveDateTime: '2022-03-28T18:30:40-07:00'
+performer:
+- reference: Patient/example
 valueCodeableConcept:
   coding:
   - code: LA30122-8
     display: I choose not to answer this question
     system: http://loinc.org
   text: I choose not to answer this question
+derivedFrom:
+- reference: QuestionnaireResponse/prapare-example

@@ -4,9 +4,10 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense",
     "name": "USCoreMedicationDispenseProfile",
     "title": "US Core MedicationDispense Profile",
-    "status": "active",
-    "date": "2022-09-28",
-    "description": "This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the \"state of a medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
+    "status": "draft",
+    "experimental": true,
+    "date": "2023-10-17",
+    "description": "The US Core MedicationDispense Profile inherits from the FHIR [MedicationDispense](https://hl7.org/fhir/R4/medicationdispense.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the state of a patients medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)  It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "kind": "resource",
     "abstract": false,
     "type": "MedicationDispense",
@@ -28,35 +29,18 @@
             },
             {
                 "id": "MedicationDispense.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.status",
-                "short": "(USCDI) preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown",
                 "condition": [
                     "us-core-20"
                 ],
                 "mustSupport": true
             },
             {
-                "id": "MedicationDispense.medication[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "MedicationDispense.medication[x]",
-                "short": "(USCDI) What medication was supplied",
+                "id": "MedicationDispense.medication",
+                "path": "MedicationDispense.medication",
                 "type": [
                     {
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "code": "Reference",
+                        "code": "CodeableReference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
                         ]
@@ -70,20 +54,32 @@
             },
             {
                 "id": "MedicationDispense.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.subject",
-                "short": "(USCDI) Who the dispense is for",
                 "min": 1,
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/StructureDefinition/Group"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ],
@@ -91,33 +87,19 @@
             },
             {
                 "id": "MedicationDispense.performer",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.performer",
-                "short": "(USCDI) Who performed event",
                 "mustSupport": true
             },
             {
                 "id": "MedicationDispense.performer.actor",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.performer.actor",
-                "short": "(USCDI) Individual who was performing",
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
                             "http://hl7.org/fhir/StructureDefinition/Device"
@@ -143,12 +125,8 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
+                                        "valueBoolean": false
+                                    },
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": false
@@ -178,14 +156,7 @@
             },
             {
                 "id": "MedicationDispense.authorizingPrescription",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.authorizingPrescription",
-                "short": "(USCDI) Medication order that authorizes the dispense",
                 "type": [
                     {
                         "code": "Reference",
@@ -198,14 +169,7 @@
             },
             {
                 "id": "MedicationDispense.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.type",
-                "short": "(USCDI) Trial fill, partial fill, emergency fill, etc.",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -214,19 +178,7 @@
             },
             {
                 "id": "MedicationDispense.quantity",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.quantity",
-                "short": "(USCDI) Amount dispensed",
-                "type": [
-                    {
-                        "code": "Quantity"
-                    }
-                ],
                 "mustSupport": true,
                 "binding": {
                     "extension": [
@@ -241,14 +193,8 @@
             },
             {
                 "id": "MedicationDispense.whenHandedOver",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.whenHandedOver",
-                "short": "(USCDI) When product was given out or mailed",
+                "short": "When product was given out or mailed",
                 "definition": "When the product was given out. For mailed prescriptions, when the label was printed",
                 "condition": [
                     "us-core-20"
@@ -257,62 +203,28 @@
             },
             {
                 "id": "MedicationDispense.dosageInstruction",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.dosageInstruction",
-                "short": "(USCDI) How the medication is to be used by the patient or administered by the caregiver",
                 "mustSupport": true
             },
             {
                 "id": "MedicationDispense.dosageInstruction.text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.dosageInstruction.text",
-                "short": "(USCDI) Free text dosage instructions e.g. SIG",
                 "mustSupport": true
             },
             {
                 "id": "MedicationDispense.dosageInstruction.timing",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.dosageInstruction.timing",
-                "short": "(USCDI) When medication should be administered",
                 "mustSupport": true
             },
             {
                 "id": "MedicationDispense.dosageInstruction.doseAndRate",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.dosageInstruction.doseAndRate",
-                "short": "(USCDI) Amount of medication administered",
                 "mustSupport": true
             },
             {
                 "id": "MedicationDispense.dosageInstruction.doseAndRate.dose[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "MedicationDispense.dosageInstruction.doseAndRate.dose[x]",
-                "short": "(USCDI) Amount of medication per dose",
+                "short": "Amount of medication per dose",
                 "type": [
                     {
                         "extension": [
@@ -321,7 +233,10 @@
                                 "valueBoolean": true
                             }
                         ],
-                        "code": "Quantity"
+                        "code": "Quantity",
+                        "profile": [
+                            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+                        ]
                     },
                     {
                         "code": "Range"

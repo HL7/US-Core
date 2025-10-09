@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-SmokingStatus
@@ -27,3 +27,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - \*The US Core Smoking Status Observation Codes Value Set is a ‘starter set’ of concepts to capture smoking status and is composed of a single code -72166-2 *Tobacco smoking status NHIS*.  The binding on `Observation.code` is [extensible], and all `Observation.value[x]` data types are available to encourage the use of this profile for other smoking questions such as the code - 67741-9 *Smoking tobacco use duration*.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

@@ -4,11 +4,10 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
     "name": "USCorePractitionerProfile",
     "title": "US Core Practitioner Profile",
-    "status": "active",
-    "experimental": false,
+    "status": "draft",
+    "experimental": true,
     "date": "2022-04-20",
-    "description": "This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and other administrative information about an individual practitioner to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
-    "fhirVersion": "4.0.1",
+    "description": "The US Core Practitioner Profile inherits from the FHIR [Practitioner](https://hl7.org/fhir/R4/practitioner.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and administrative information about an individual practitioner. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "kind": "resource",
     "abstract": false,
     "type": "Practitioner",
@@ -19,8 +18,6 @@
             {
                 "id": "Practitioner",
                 "path": "Practitioner",
-                "definition": "\\-",
-                "comment": "\\-",
                 "alias": [
                     "Provider"
                 ],
@@ -32,7 +29,7 @@
                 "slicing": {
                     "discriminator": [
                         {
-                            "type": "pattern",
+                            "type": "value",
                             "path": "$this"
                         }
                     ],
@@ -82,8 +79,7 @@
                         "key": "us-core-16",
                         "severity": "error",
                         "human": "NPI must be 10 digits",
-                        "expression": "value.matches('^[0-9]{10}$')",
-                        "xpath": "f:value/f:matches(value,/^[0-9]{10}$/)"
+                        "expression": "value.matches('^[0-9]{10}$')"
                     },
                     {
                         "key": "us-core-17",
@@ -130,8 +126,8 @@
             {
                 "id": "Practitioner.address",
                 "path": "Practitioner.address",
-                "definition": "Address(es) of the practitioner",
                 "short": "Address(es) of the practitioner",
+                "definition": "Address(es) of the practitioner",
                 "requirements": "\\-",
                 "mustSupport": true
             },
@@ -142,6 +138,12 @@
                 "type": [
                     {
                         "code": "string"
+                    }
+                ],
+                "example": [
+                    {
+                        "label": "US Core",
+                        "valueString": "49 MEADOW ST"
                     }
                 ],
                 "mustSupport": true
@@ -155,6 +157,12 @@
                         "code": "string"
                     }
                 ],
+                "example": [
+                    {
+                        "label": "US Core",
+                        "valueString": "EVERYTOWN"
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -166,11 +174,17 @@
                         "code": "string"
                     }
                 ],
+                "example": [
+                    {
+                        "label": "US Core",
+                        "valueString": "OK"
+                    }
+                ],
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
                     "description": "Two letter USPS alphabetic codes.",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state"
+                    "valueSet": "http://terminology.hl7.org/ValueSet/USPS-State"
                 },
                 "mapping": [
                     {
@@ -187,6 +201,12 @@
                 "type": [
                     {
                         "code": "string"
+                    }
+                ],
+                "example": [
+                    {
+                        "label": "US Core",
+                        "valueString": "74047"
                     }
                 ],
                 "mustSupport": true

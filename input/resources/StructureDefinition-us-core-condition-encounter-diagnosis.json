@@ -4,9 +4,9 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis",
     "name": "USCoreConditionEncounterDiagnosisProfile",
     "title": "US Core Condition Encounter Diagnosis Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2022-04-20",
+    "status": "draft",
+    "experimental": true,
+    "date": "2025-10-08",
     "description": "The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Encounter Diagnosis* requirements. In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile. To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
     "kind": "resource",
     "abstract": false,
@@ -59,7 +59,7 @@
                     }
                 ],
                 "path": "Condition.clinicalStatus",
-                "short": "(USCDI) active | recurrence | relapse | inactive | remission | resolved",
+                "short": "(USCDI) active | recurrence | relapse | inactive | remission | resolved | unknown",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",

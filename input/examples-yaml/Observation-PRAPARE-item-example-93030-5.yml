@@ -1,3 +1,16 @@
+resourceType: Observation
+id: PRAPARE-item-example-93030-5
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Prapare Item Example 93030-5
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Prapare Item Example 93030-5 (Has lack of transportation
+      kept you from medical appointments, meetings, work, or from getting things needed
+      for daily living?) for the *US Core Observation Screening Assessment Profile*
+status: final
 category:
 - coding:
   - code: sdoh
@@ -15,26 +28,11 @@ code:
     system: http://loinc.org
   text: Has lack of transportation kept you from medical appointments, meetings, work,
     or from getting things needed for daily living?
-derivedFrom:
-- reference: QuestionnaireResponse/prapare-example
-effectiveDateTime: '2022-03-28T18:30:40-07:00'
-id: PRAPARE-item-example-93030-5
-meta:
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Prapare Item Example 93030-5
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Prapare Item Example 93030-5 (Has lack of transportation
-      kept you from medical appointments, meetings, work, or from getting things needed
-      for daily living?) for the *US Core Observation Screening Assessment Profile*
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-performer:
-- reference: Patient/example
-resourceType: Observation
-status: final
 subject:
   reference: Patient/example
+effectiveDateTime: '2022-03-28T18:30:40-07:00'
+performer:
+- reference: Patient/example
 valueCodeableConcept:
   coding:
   - code: LA30134-3
@@ -43,3 +41,5 @@ valueCodeableConcept:
     system: http://loinc.org
   text: Yes, it has kept me from non-medical meetings, appointments, work, or from
     getting things that I need
+derivedFrom:
+- reference: QuestionnaireResponse/prapare-example

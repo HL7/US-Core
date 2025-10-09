@@ -4,7 +4,7 @@ url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
 version: 3.1.1
 name: USCoreEthnicityExtension
 title: US Core Ethnicity Extension
-status: active
+status: draft
 date: 2019-05-21T00:00:00-04:00
 publisher: HL7 US Realm Steering Committee
 contact:
@@ -24,7 +24,7 @@ jurisdiction:
     code: US
     display: United States of America
 purpose: Complies with 2015 Edition Common Clinical Data Set for patient race.
-fhirVersion: 4.0.1
+
 kind: complex-type
 abstract: false
 context:
@@ -60,7 +60,7 @@ differential:
     path: Extension.extension
     slicing:
         discriminator:
-            - 
+            -
                 type: value
                 path: url
         rules: open

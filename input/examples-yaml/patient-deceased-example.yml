@@ -1,13 +1,5 @@
 resourceType: Patient
 id: deceased-example
-meta:
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Deceased Patient Example
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a deceased patient example for the *US Core Patient Profile*.
 extension:
 - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
   extension:
@@ -32,6 +24,20 @@ extension:
       display: Not Hispanic or Latino
   - url: text
     valueString: Not Hispanic or Latino
+- url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex
+  valueCoding:
+    system: http://snomed.info/sct
+    version: http://snomed.info/sct/731000124108
+    code: '248152002'
+    display: Female (finding)
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Deceased Patient Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a deceased patient example for the *US Core Patient Profile*.
 identifier:
 - use: usual
   type:
@@ -40,7 +46,7 @@ identifier:
       code: MR
       display: Medical Record Number
     text: Medical Record Number
-  system: http://hospital.smarthealthit.org
+  system: http://example.org/patient/identifiers
   value: '55555555'
 active: true
 name:
@@ -54,13 +60,12 @@ telecom:
   use: home
 - system: email
   value: mary.shaw@example.com
-gender: female
 birthDate: '1937-10-21'
 deceasedDateTime: '2022-07-22'
 address:
 - line:
-  - 49 Meadow St
-  city: Mounds
+  - 49 MEADOW ST
+  city: MOUNDS
   state: OK
   postalCode: '74047'
   country: US

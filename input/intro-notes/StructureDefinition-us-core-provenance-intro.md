@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -36,3 +36,5 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 * Systems that need to know the activity has occurred **SHOULD** populate the activity.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

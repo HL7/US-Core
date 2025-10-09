@@ -3,8 +3,8 @@ id: us-core-immunization
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization
 name: USCoreImmunizationProfile
 title: US Core Immunization Profile
-status: active
-experimental: false
+status: draft
+experimental: true
 date: 2022-04-20
 description: This profile sets minimum expectations for the Immunization resource
   to record, search, and fetch immunization history associated with a patient to promote
@@ -12,7 +12,7 @@ description: This profile sets minimum expectations for the Immunization resourc
   core elements, extensions, vocabularies, and value sets **SHALL** be present in
   the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development
   for specific use cases.
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Immunization

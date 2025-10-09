@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -32,3 +32,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 -  See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Goals
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

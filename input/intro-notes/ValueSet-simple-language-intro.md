@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 <div markdown="1" class="stu-note">
 
 The publication tooling is unable to expand the language value set because they are based on a grammar.  To aid in the reader's understanding, sample codes are shown below:
@@ -31,3 +31,5 @@ For a more complete list of both 2 and 3 letter examples see [https://www.loc.go
 
 </div>
 
+
+</div><!-- grayed-out -->
