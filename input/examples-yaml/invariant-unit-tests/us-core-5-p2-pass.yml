@@ -2,10 +2,10 @@ resourceType: Immunization
 id: imm-1
 meta:
     extension:
-        - 
+        -
             url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
             valueString: Imm 1 Example
-        - 
+        -
             url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
             valueMarkdown: 'This is a imm 1 example for the *US Core Immunization Profile*.'
     profile:
@@ -13,14 +13,14 @@ meta:
 status: completed
 vaccineCode:
     coding:
-        - 
+        -
             system: 'http://hl7.org/fhir/sid/foo'
-            display: 'influenza, high-dose, quadrivalent'
-        - 
+            display: 'iInfluenza, high-dose, quadrivalent, PF'
+        -
             system: 'http://hl7.org/fhir/sid/ndc'
             code: '49281012165'
             display: 'FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65) > .7 mL in 1 SYRINGE, GLASS (49281-121-88) (package)'
-    text: 'influenza, high-dose, quadrivalent'
+    text: 'iInfluenza, high-dose, quadrivalent, PF'
 patient:
     reference: Patient/example
     display: Amy Shaw

@@ -39,6 +39,7 @@
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
 [coverage-example]: Coverage-coverage-example.html
 [deceased-example]: Patient-deceased-example.html
+[udi-2]: Device-udi-2.html
 [udi-4]: Device-udi-4.html
 [udi-3]: Device-udi-3.html
 [udi-5]: Device-udi-5.html

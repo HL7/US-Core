@@ -17,6 +17,7 @@ The table below summarizes the different profiles and resource types between Arg
 
 Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
 
+- [Comparison with version 8.0.1](comparison-v8.0.1/index.html)
 - [Comparison with version 7.0.0](comparison-v7.0.0/index.html)
 - [Comparison with version 6.1.0](comparison-v6.1.0/index.html)
 - [Comparison with version 5.0.1](comparison-v5.0.1/index.html)
@@ -25,7 +26,7 @@ Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir
 - [(Partial) Comparison with Argonaut Data Query IG](comparison-argo/index.html)
 
 <!--  Instructions for creating the Comparison with Argonaut Data Query IG folder
-1. Use the FHIR validator to compare and the script /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/Validator_Tools/IG-Profile_Comparer.ipynb with the source file input/images-source/ArgoDQ-USCore-ProfileMap.csv. 
+1. Use the FHIR validator to compare and the script /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/Validator_Tools/IG-Profile_Comparer.ipynb with the source file input/images-source/ArgoDQ-USCore-ProfileMap.csv.
 2. See the script file for instructions
 3. Note that only the comparison files are used the union and intersection files are discarded.
 4. Need to clean up the generated html files to remove the QA errors
@@ -54,7 +55,7 @@ In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. How
 
 * The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation
   - Exceptions
-    - MedicationStatement may be deprecated, and the data **SHOULD** be mapped to MedicationRequest.  
+    - MedicationStatement may be deprecated, and the data **SHOULD** be mapped to MedicationRequest.
        - See the guidance on the [Medication List] page for how to access a patient's medications
     - Care teams as represented by CarePlan in DSTU2 **SHOULD** be replaced by and the data mapped to CareTeam in R4
 

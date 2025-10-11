@@ -296,11 +296,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - comparison-argo/sd-argo-ethnicity-us-core-ethnicity.html
     - comparison-argo/vs-narrative-status-us-core-narrative-status.html
 
-  # ipa-comparison:
-  #   - '{current}'
+  ipa-comparison:
+    - '{current}'
 
-  # ips-comparison:
-  #   - '{current}'
+  ips-comparison:
+    - '{current}'
 
   logging:
     - tx #tx: Messages describing the use of the terminology server (for debugging)

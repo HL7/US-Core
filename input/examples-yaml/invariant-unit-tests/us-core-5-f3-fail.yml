@@ -2,10 +2,10 @@ resourceType: Immunization
 id: imm-1
 meta:
     extension:
-        - 
+        -
             url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
             valueString: Imm 1 Example
-        - 
+        -
             url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
             valueMarkdown: 'This is a imm 1 example for the *US Core Immunization Profile*.'
     profile:
@@ -13,15 +13,15 @@ meta:
 status: completed
 vaccineCode:
     coding:
-        - 
+        -
             system: 'http://hl7.org/fhir/sid/cvx'
             code: '197'
-            display: 'influenza, high-dose, quadrivalent'
-        - 
+            display: 'iInfluenza, high-dose, quadrivalent, PF'
+        -
             # system: 'http://example.org/fhir/CodeSystem'
             code: 'foo'
             display: 'foo'
-    text: 'influenza, high-dose, quadrivalent'
+    text: 'iInfluenza, high-dose, quadrivalent, PF'
 patient:
     reference: Patient/example
     display: Amy Shaw

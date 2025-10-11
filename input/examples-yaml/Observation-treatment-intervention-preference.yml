@@ -15,7 +15,7 @@ meta:
 # text:
 #   status: additional
 #   div: >-
-#     <div xmlns="http://www.w3.org/1999/xhtml"><p>If I am having significant pain
+#     <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><p>If I am having significant pain
 #     or suffering, <i>I would like my doctors to consult a Supportive and
 #     Palliative Care Team to help treat my physical, emotional and spiritual
 #     discomfort, and to support my family.</i></p></div>
@@ -30,12 +30,12 @@ category:
 code:
   coding:
     -
-      system: 'http://loinc.org'  
+      system: 'http://loinc.org'
 
       code: 75773-2
       display: Goals, preferences, and priorities for medical treatment Narrative - Reported
   text: preferences for medical treatment
-    
+
     # - system: 'http://loinc.org'
     #   code: 75776-5
     #   display: >-
