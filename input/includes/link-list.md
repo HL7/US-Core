@@ -3,8 +3,8 @@
 <!-- IG Pages (Including IG Artifacts -->
 {% include page-link-list.md %}
 [$docref operation]: OperationDefinition-docref.html
-[$expand]: {{site.data.fhir.path}}valueset-operation-expand.html 
-[$expand]: {{site.data.fhir.path}}valueset-operation-expand.html 
+[$expand]: {{site.data.fhir.path}}valueset-operation-expand.html
+[$expand]: {{site.data.fhir.path}}valueset-operation-expand.html
 [(how to search by date)]: {{site.data.fhir.path}}search.html#date
 [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
 [(how to search by token)]: {{site.data.fhir.path}}search.html#token
@@ -36,7 +36,7 @@
 [Coded Elements]: general-requirements.html#using-codes-in-us-core-profiles
 [Communications]: {{site.data.fhir.path}}security.html#http
 [Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
-[Conformance Requirements]: capability-statements.html 
+[Conformance Requirements]: capability-statements.html
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
@@ -70,8 +70,8 @@
 [FHIR Terminology Service for VSAC Resources]: https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html
 [FHIR Terminology]: {{site.data.fhir.path}}terminologies.html
 [FHIR Topic-Based Subscription]: https://hl7.org/fhir/R5/subscriptions.html
-[FHIR Version DSTU2]: http://hl7.org/fhir/DSTU2/index.html 
-[FHIR Version R4]: {{site.data.fhir.path}}index.html 
+[FHIR Version DSTU2]: http://hl7.org/fhir/DSTU2/index.html
+[FHIR Version R4]: {{site.data.fhir.path}}index.html
 [Formal Views]: #profile
 [Gravity Project]: https://hl7.org/gravity
 [Guide to Resources]: {{site.data.fhir.path}}resourceguide.html
@@ -119,7 +119,7 @@
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
 [Pathology Report Narrative (11526-1)]: https://loinc.org/11526-1.html
 [Patient Access for Standalone Apps]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#patient-access-for-standalone-apps
-[Patient Example]: Patient-example.html 
+[Patient Example]: Patient-example.html
 [Performer function Extension]: http://hl7.org/fhir/StructureDefinition/event-performerFunction
 [Physical Activity Alliance]: http://paamovewithus.org/
 [Physical Activity Implementation Guide]: https://hl7.org/fhir/us/physical-activity/
@@ -140,7 +140,7 @@
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/index.html
 [SMART App Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}
 [SNOMED CT]: http://snomed.info/sct
-[SNOMED CT]: http://snomed.info/sct/731000124108 
+[SNOMED CT]: http://snomed.info/sct/731000124108
 [Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
 [Searching Using lastUpdated]: general-guidance.html#searching-using-lastupdated
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
@@ -262,3 +262,4 @@
 [Common CQL Assets for FHIR (US-Based)]: https://hl7.org/fhir/us/cql/2025May/index.html
 [HL7 V2]: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
 [FHIRPath]: {{site.data.fhir.path}}fhirpath.html
+[Cross Version Extension]:{{site.data.fhir.path}}versions.html#extensions
