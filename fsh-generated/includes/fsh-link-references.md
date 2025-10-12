@@ -41,7 +41,6 @@
 [deceased-example]: Patient-deceased-example.html
 [udi-2]: Device-udi-2.html
 [udi-4]: Device-udi-4.html
-[udi-3]: Device-udi-3.html
 [udi-5]: Device-udi-5.html
 [cardiology-report]: DiagnosticReport-cardiology-report.html
 [chest-xray-report]: DiagnosticReport-chest-xray-report.html
@@ -171,6 +170,7 @@
 [pregnancy-intent]: Observation-pregnancy-intent.html
 [pregnancy-status]: Observation-pregnancy-status.html
 [defib-implant]: Procedure-defib-implant.html
+[udi-3]: Device-udi-3.html
 [pulse-intensity-palpation]: Observation-pulse-intensity-palpation.html
 [q-t-interval-ekg-lead]: Observation-q-t-interval-ekg-lead.html
 [qrs-dur-ekg-lead]: Observation-qrs-dur-ekg-lead.html
@@ -264,6 +264,7 @@
 [USCoreHeadCircumferenceProfile]: StructureDefinition-us-core-head-circumference.html
 [USCoreHeartRateProfile]: StructureDefinition-us-core-heart-rate.html
 [USCoreImmunizationProfile]: StructureDefinition-us-core-immunization.html
+[USCoreIndividualSexExtension]: StructureDefinition-us-core-individual-sex.html
 [USCoreInterpreterNeededExtension]: StructureDefinition-us-core-interpreter-needed.html
 [USCoreJurisdictionExtension]: StructureDefinition-us-core-jurisdiction.html
 [USCoreLaboratoryResultObservationProfile]: StructureDefinition-us-core-observation-lab.html

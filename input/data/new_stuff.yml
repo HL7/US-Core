@@ -62,11 +62,13 @@
 # - USCoreDiagnosticReportProfileNoteExchange
 # - USCoreDocumentReferenceProfile
 # - USCoreProcedureProfile
-# - USCoreServiceRequestProfile
+- USCoreServiceRequestProfile
 # - USCoreTreatmentInterventionPreferenceProfile
 # - USCoreCareExperiencePreferenceProfile
 # - USCoreLaboratoryResultObservationProfile
 - USCoreCarePlanProfile
+- USCoreLaboratoryResultObservationProfile
+# - USCoreCarePlanProfile
 # - USCoreCareTeamProfile
 # - USCoreGoalProfile
 # - USCoreObservationSexualOrientationProfile
@@ -92,8 +94,7 @@
 # - USCDIRequirement
 # - USCoreAuthenticationTimeExtension
 # - USCoreInterpreterRequiredExtension
-# - USCoreRaceExtension
-# - USCoreEthnicityExtension
+- USCoreFamilyMemberHistoryRecorderExtension
 
 # OperationDefinition
 

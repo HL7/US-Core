@@ -33,7 +33,10 @@ with the following columns:
 - Target_Resource_8: provenance source element target resource (can be up to 7)
 - vendor_support_Target_Resource_7: boolean flag if vendors surveyed on their use of the provenance source element target resource
 - Comments
+
+TODO. add row highlighting for Is_New==True item
 -  no include parameters:  -->
+
 
 {% assign rows = site.data.provenance-elements %}
 {% for item in rows %}
@@ -50,39 +53,19 @@ with the following columns:
 </thead>
 <tbody>
 {% endif %}
-
 {% if item["Is_Source"] == "TRUE" %}
-
-{% assign targets= '' %}
-{% if item.Target_Resource_1 %}
-  {% if item.Target_Resource_1_is_MS == "TRUE" %}{% assign targets = "<strong>Practitioner**</strong>," %}
-  {% else %}{% assign targets = "Practitioner," %}{% endif %}
-{% endif %}
-{% if item.Target_Resource_2 %}
-  {% if item.Target_Resource_2_is_MS == "TRUE" %}{% assign targets = targets | append: "<strong>Organization**</strong>," %}
-  {% else %}{% assign targets = targets | append: "Organization," %}{% endif %}
-{% endif %}
-{% if item.Target_Resource_3 %}
-  {% if item.Target_Resource_3_is_MS == "TRUE" %}{% assign targets = targets | append: "<strong>PractitionerRole**</strong>," %}
-  {% else %}{% assign targets = targets | append: "PractitionerRole," %}{% endif %}
-{% endif %}
-{% if item.Target_Resource_4 %}
-{% if item.Target_Resource_4_is_MS == "TRUE" %}{% assign targets = targets | append: "<strong>Patient**</strong>," %}
-  {% else %}{% assign targets = targets | append: "Patient," %}{% endif %}
-{% endif %}
-{% if item.Target_Resource_5 %}
-  {% assign targets = targets | append: "RelatedPerson," %}
-{% endif %}
-{% if item.Target_Resource_6 %}
-  {% assign targets = targets | append: "CareTeam," %}
-{% endif %}
-{% if item.Target_Resource_7 %}
-  {% assign targets = targets | append: "Device," %}
-{% endif %}
-{% if item.Target_Resource_7 %}
-  {% assign targets = targets | append: "DeviceMetric," %}
-{% endif %}
-
+  {% assign targets= '' %}
+  {% for i in (1..8) %}
+    {% assign key = "Target_Resource_" | append: i %}
+    {% assign MS_key = "Target_Resource_" | append: i | append: "_is_MS" %}
+    {% assign is_new_key = "Target_Resource_" | append: i | append: "_is_new" %}
+    {% assign target = item[key] %}
+    {% if target %}
+      {% if item[MS_key] == "TRUE" %}{% assign target = target | prepend: "<strong>" | append: "**</strong>" %}{% endif %}
+      {% if item[is_new_key] == "TRUE" %}{% assign target = target | prepend: '<span class="bg-success" markdown="1">' | append: "</span><!-- new-content -->" %}{% endif %}
+      {% assign targets = targets | append: target | append: "," %}
+    {% endif %}
+  {% endfor %}
 <tr>
 <td><a href="{{item.Path}}">{{item.US_Core_Profile}}</a></td>
 <td><code>{% if item.is_MS == "TRUE" %}<strong>{% endif %}{{item.FiveWs_author | append: item.FiveWs_source | append: item.FiveWs_actor}}{% if item.is_MS == "TRUE" %}*</strong>{% endif %}</code></td>

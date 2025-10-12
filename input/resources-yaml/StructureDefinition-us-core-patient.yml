@@ -124,7 +124,7 @@ differential:
     type:
     - code: Extension
       profile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex
     mustSupport: false
 
 # =====================================================================
@@ -330,7 +330,7 @@ differential:
   - id: Patient.address.line
     path: Patient.address.line
     example:
-    - 
+    -
         label: US Core
         valueString: '49 MEADOW ST'
     mustSupport: true
@@ -340,7 +340,7 @@ differential:
   - id: Patient.address.city
     path: Patient.address.city
     example:
-    - 
+    -
         label: US Core
         valueString: 'EVERYTOWN'
     mustSupport: true
@@ -350,7 +350,7 @@ differential:
   - id: Patient.address.state
     path: Patient.address.state
     example:
-    - 
+    -
         label: US Core
         valueString: 'OK'
     mustSupport: true
@@ -367,7 +367,7 @@ differential:
     alias:
     - Zip Code
     example:
-    - 
+    -
         label: US Core
         valueString: '74047'
     mustSupport: true

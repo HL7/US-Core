@@ -3,13 +3,14 @@
 {%- for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd = sd_hash[1] -%}
   {%- if sd.type == "Extension" -%}
-{%- unless ig_only contains sd.name or realm_only contains sd.name -%}
+{%- unless ig_only contains sd.name or realm_only contains sd.name or deprecated_only contains sd.name -%}
     {% assign profile_extensions = profile_extensions | append: "," | append: sd.name %}
 {%- endunless -%}
   {%- endif -%}
 {% endfor %}
 {%- if include.use == "ig" -%}{% assign my_array = ig_only | split: "," %}
 {%- elsif include.use == "realm" -%}{% assign my_array = realm_only | split: "," %}
+{%- elsif include.use == "deprecated" -%}{% assign my_array = deprecated_only | split: "," %}
 {%- else -%}{% assign my_array = profile_extensions | split: "," %} <!-- include.use == "profile" -->
 {%- endif -%}
 {% assign my_array = my_array | sort | uniq %}

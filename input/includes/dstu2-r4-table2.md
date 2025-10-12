@@ -1,5 +1,5 @@
 
-<!--  liquid script for creating a markdown table from a csv file in the input/data folder source file = input/data/dstu2-r4-table.csv  -->
+<!--  liquid script for creating a markdown table from a csv file in the manually edited input/data folder source file = input/data/dstu2-r4-table.csv  -->
 
 {% assign rows = site.data.dstu2-r4-table %}
 {% for row in rows -%}

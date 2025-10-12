@@ -3,7 +3,7 @@
 **The January 2026 ballot addresses the following**
 
 {% include whats-new/v9-ballot.md %}
-</div> 
+</div>
 
 Where possible, new and updated pre-publishing content is highlighted with green text and background- **This highlighting will be removed prior to publication.**
 {:.new-content}

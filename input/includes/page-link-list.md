@@ -1100,6 +1100,13 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Sex Extension - XML Representation]: StructureDefinition-us-core-sex.profile.xml.html
 [US Core Sex Extension - JSON Representation]: StructureDefinition-us-core-sex.profile.json.html
 [US Core Sex Extension - TTL Representation]: StructureDefinition-us-core-sex.profile.ttl.html
+[US Core Individual Sex Extension]: StructureDefinition-us-core-individual-sex.html
+[US Core Individual Sex Extension - Definitions]: StructureDefinition-us-core-individual-sex-definitions.html
+[US Core Individual Sex Extension - Mappings]: StructureDefinition-us-core-individual-sex-mappings.html
+[US Core Individual Sex Extension - Testing]: StructureDefinition-us-core-individual-sex-testing.html
+[US Core Individual Sex Extension - XML Representation]: StructureDefinition-us-core-individual-sex.profile.xml.html
+[US Core Individual Sex Extension - JSON Representation]: StructureDefinition-us-core-individual-sex.profile.json.html
+[US Core Individual Sex Extension - TTL Representation]: StructureDefinition-us-core-individual-sex.profile.ttl.html
 [US Core Tribal Affiliation Extension]: StructureDefinition-us-core-tribal-affiliation.html
 [US Core Tribal Affiliation Extension - Definitions]: StructureDefinition-us-core-tribal-affiliation-definitions.html
 [US Core Tribal Affiliation Extension - Mappings]: StructureDefinition-us-core-tribal-affiliation-mappings.html

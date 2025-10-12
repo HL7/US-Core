@@ -488,14 +488,6 @@
       },
       {
         "reference": {
-          "reference": "Device/udi-3"
-        },
-        "description": "This Device example for the *US Core Device Profile* illustrates its use for implantable devices with UDI information.",
-        "name": "Device Knee Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
-      },
-      {
-        "reference": {
           "reference": "Device/udi-5"
         },
         "description": "This Device example for the *US Core Device Profile* illustrates its use for devices that lack UDI information.",
@@ -850,7 +842,7 @@
         "reference": {
           "reference": "Location/hospital"
         },
-        "description": "This is an example hospital location for the *US Core Location Profile*.",
+        "description": "This is an example hospital location for the *US Core Location Profile* using three coding type, showing  SNOMED CT, HSLOC, and v3-RoleCode concepts.",
         "name": "Hospital Location",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
       },
@@ -1528,6 +1520,14 @@
       },
       {
         "reference": {
+          "reference": "Device/udi-3"
+        },
+        "description": "This Device example for the *US Core Device Profile* illustrates its use for implantable devices with UDI information.",
+        "name": "Prosthetic Knee Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+      },
+      {
+        "reference": {
           "reference": "Observation/pulse-intensity-palpation"
         },
         "description": "This is a Pulse intensity Palpation Example for the *Clinical Test Result Observation Profile*.",
@@ -2186,7 +2186,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-ethnicity"
         },
-        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
+        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories:\n\n   - Hispanic or Latino\n   - Not Hispanic or Latino.",
         "exampleBoolean": false,
         "name": "US Core Ethnicity Extension"
       },
@@ -2269,6 +2269,14 @@
         "description": "The US Core Immunization Profile inherits from the FHIR [Immunization](https://hl7.org/fhir/R4/immunization.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Immunization resource to record, search, and fetch immunization history associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
         "exampleBoolean": false,
         "name": "US Core Immunization Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-individual-sex"
+        },
+        "description": "USCDI includes a data element for Sex, intended to support the exchange of a recorded sex value. This extension aligns with the USCDI definition of Sex: \"Documentation of a specific instance of sex.\" It enables systems to share the sex value as it was documented in a particular context.  Systems choosing to record sources of information should use the [Provenance resource](element-level-provenance.html).",
+        "exampleBoolean": false,
+        "name": "US Core Individual Sex Extension"
       },
       {
         "reference": {
@@ -2546,7 +2554,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-race"
         },
-        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
+        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system. Detailed race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
         "exampleBoolean": false,
         "name": "US Core Race Extension"
       },
@@ -2618,7 +2626,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-sex"
         },
-        "description": "USCDI includes a data element for Sex, intended to support the exchange of a recorded sex value. This extension aligns with the USCDI definition of Sex: \"Documentation of a specific instance of sex.\" It enables systems to share the sex value as it was documented in a particular context.  Systems choosing to record sources of information should use the [Provenance resource](element-level-provenance.html).",
+        "description": "The Sex Extension is used to reflect the documentation of a person's sex. Systems choosing to record sources of information should use the [Provenance resource](element-level-provenance.html).\n \nUSCDI includes a data element for sex, intended to support the exchange of a sex value that is not characterized as sex assigned at birth or birth sex. This Sex extension supports USCDI. Sex assigned at birth or birth sex can be recorded using the more specific [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\nFuture versions of this extension may be informed by the content of the HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender)).",
         "exampleBoolean": false,
         "name": "US Core Sex Extension"
       },

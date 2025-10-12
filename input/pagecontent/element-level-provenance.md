@@ -61,7 +61,7 @@ In the following [US Core Patient Profile] example, the patient demographic data
         },
         {
             "id": "sex",
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex",
             "valueCoding": {
                 "system": "http://snomed.info/sct",
                 "version": "http://snomed.info/sct/731000124108",
@@ -110,7 +110,7 @@ In the following [US Core Patient Profile] example, the patient demographic data
 The following  [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), sex, etc., were collected. Note that the [Target Element] Extension references the element id "race" within the Patient resource:
 
 <!-- {% raw %} {% include examplebutton_default.html example="Provenance-example-targeted-provenance.json" b_title = "Click Here to See an Element Level Provenance Example" %} {% endraw %}
-The ig-publisher does not render version specific examples see chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Version-specific.20examples 
+The ig-publisher does not render version specific examples see chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Version-specific.20examples
 -->
 
 ~~~

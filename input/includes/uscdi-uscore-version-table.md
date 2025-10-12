@@ -1,4 +1,4 @@
-<!-- The following table shows the relationship between each USCDI and US Core Version.
+<!-- The following manually edited table shows the relationship between each USCDI and US Core Version.
 The USCDI version links to its respective ASTP Standards Bulletin, which provides background and the new data classes and elements for the version. -->
 
 | USCDI Version | US Core Version |
@@ -8,7 +8,7 @@ The USCDI version links to its respective ASTP Standards Bulletin, which provide
  | [v2] | 5.0.1 |
  | [v3] | 6.1.0 |
  | [v4] | 7.0.0 |
- | [v5] | 8.0.0 |
+ | [v5] | 8.0.1 |
  | [v6] | 9.0.0 |
 {:.grid}
 

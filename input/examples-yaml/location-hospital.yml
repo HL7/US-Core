@@ -6,7 +6,7 @@ meta:
     valueString: Hospital Location
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is an example hospital location for the *US Core Location
-      Profile*.
+      Profile* using three coding type, showing  SNOMED CT, HSLOC, and v3-RoleCode concepts.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 identifier:
@@ -21,7 +21,7 @@ type:
         display: Hospital
       - system: http://snomed.info/sct
         code: '22232009'
-        display: Hospital 
+        display: Hospital
         version: http://snomed.info/sct/731000124108
       - system: 'https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html'
         code: 1120-5

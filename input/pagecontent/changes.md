@@ -64,8 +64,33 @@ The January 2026 ballot addresses the following:
 40. **Triaged** Substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
 41. **Resolved - change required:** Substantive (Enhancement) Update context for Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-sex.html)
 
+### Version = 8.0.1 (Meets USCDI v5 Requirements)
+- url: <https://hl7.org/fhir/us/core/STU8.0.1/>
+- Based on FHIR version: 4.0.1
 
-### Version = 8.0.0 (Meets USCDI v5 Requirements)
+This technical update US Core have been reviewed and commented upon by the public through the HL7 errata process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments.
+
+#### What's new in Version 8.0.1 of US Core
+
+{% include whats-new/v8.0.1.md %}
+
+#### Changes
+
+ - This technical update US Core has 7 changes which are listed below.
+
+**Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
+
+1. **Applied:** Non-substantive (Correction) Fix Link to Race & Ethnicity - CDC (CDCREC) code system [FHIR-51137](https://jira.hl7.org/browse/FHIR-51137) See Changes:
+   - [US Core Race Extension](StructureDefinition-us-core-race.html)
+   - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
+2. **Applied:** Non-substantive (Correction) Typo in US Core Laboratory Result Observation Profile [FHIR-51254](https://jira.hl7.org/browse/FHIR-51254) See Changes [Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
+3. **Applied:** Non-substantive (Correction) Typo in SMART well-known example [FHIR-51363](https://jira.hl7.org/browse/FHIR-51363) See Changes [Here](scopes.html#example-well-knownsmart-configuration-file)
+4. **Applied:** Non-substantive (Correction) Remove span tags [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+5. **Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](basic-provenance.html#author-and-author-role-data-elements)
+6. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
+7. **Applied:** Compatible, substantive (Correction) Rename The USCore sex extension [FHIR-53047](https://jira.hl7.org/browse/FHIR-53047) See Changes Listed in introduction above.
+
+### Version = 8.0.0
 - url: <https://hl7.org/fhir/us/core/STU8/>
 - Based on FHIR version: 4.0.1
 
