@@ -26,7 +26,7 @@ The January 2026 ballot addresses the following:
 1. **Applied:** Non-substantive (Clarification) Clarify Coverage.type value set usage [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122) See Changes [Here](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
 2. **Resolved - change required:** Non-substantive (Correction) Change binding description in US Core Coverage Profile [FHIR-44124](https://jira.hl7.org/browse/FHIR-44124) See Changes [Here](StructureDefinition-us-core-coverage.html)
 3. **Resolved - change required:** Non-substantive (Correction) correct line 81 in terminology  [FHIR-49610](https://jira.hl7.org/browse/FHIR-49610) See Changes [Here](terminology.html)
-4. **Resolved - change required:** Non-substantive (Enhancement) Relax US@ address requirements [FHIR-51159](https://jira.hl7.org/browse/FHIR-51159) See Changes [Here](StructureDefinition-us-core-patient.html)
+4. **Applied:** Non-substantive (Enhancement) Relax US@ address requirements [FHIR-51159](https://jira.hl7.org/browse/FHIR-51159) See Changes [Here](StructureDefinition-us-core-patient.html)
 5. **Resolved - change required:** Non-substantive (Clarification) Update client expectations for preserving resource IDs between versions [FHIR-51756](https://jira.hl7.org/browse/FHIR-51756) See Changes [Here](changes-between-versions.html#no-guarantee-that-resource-ids-are-preserved)
 6. **Resolved - change required:** Non-substantive (Clarification) Update guidance on Authorization Across Versions Sections [FHIR-51757](https://jira.hl7.org/browse/FHIR-51757) See Changes [Here](changes-between-versions.html#authorization-across-versions)
 8. **Resolved - change required:** Non-substantive (Clarification) Add specification for non-US addresses [FHIR-51791](https://jira.hl7.org/browse/FHIR-51791) See Changes [Here](StructureDefinition-us-core-practitioner.html)
@@ -58,11 +58,14 @@ The January 2026 ballot addresses the following:
 32. **Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
 35. **Applied:** Compatible, substantive (Correction) Remove guidance from US Core Simple Observation Profile [FHIR-51493](https://jira.hl7.org/browse/FHIR-51493) See Changes [Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
 36. **Triaged:**  () Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)
-37. **Resolved - change required:** Non-substantive (Correction) Remove span tags  [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
-38. **Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
-39. **Triaged** Substantive (Enhancement) Add support for Behavioral/Mental Health coverage type [FHIR-52993](https://jira.hl7.org/browse/FHIR-52993) See Changes [Here](StructureDefinition-us-core-coverage.html)
-40. **Triaged** Substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
-41. **Resolved - change required:** Substantive (Enhancement) Update context for Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-sex.html)
+37. **Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
+38. **Triaged** Substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
+39. **Applied:** Substantive (Enhancement) Update context for Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-sex.html)
+40. **Triaged:** Substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html)
+41. **Pre-Applied:** Substantive (Enhancement) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
+   - [US Core Race Extension](StructureDefinition-us-core-race.html)
+   - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
+42. **Triaged:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html#relationship-to-us-core-and-other-igs)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>

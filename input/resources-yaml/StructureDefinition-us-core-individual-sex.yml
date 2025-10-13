@@ -20,6 +20,15 @@ abstract: false
 context:
 - type: element
   expression: Patient
+- type: element
+  expression: RelatedPerson
+- type: element
+  expression: Person
+- type: element
+  expression: Practitioner
+- type: element
+  expression: FamilyMemberHistory
+#=============== updated for Version 8.0.1 ================
 type: Extension
 baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
