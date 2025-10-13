@@ -263,3 +263,6 @@
 [HL7 V2]: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
 [FHIRPath]: {{site.data.fhir.path}}fhirpath.html
 [Cross Version Extension]:{{site.data.fhir.path}}versions.html#extensions
+[Level 1]: (https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#level-1)
+[level 2]: (https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#level-2)
+

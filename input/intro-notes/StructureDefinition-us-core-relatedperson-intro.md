@@ -29,6 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- \*{% include should-project-us.md element="RelatedPerson.address" %}
+- *{% include should-project-us.md type="RelatedPerson" %}
+- *{% include should-3166-subdivision-codes.md type="RelatedPerson" %}
 
 {% include link-list.md %}

@@ -45,9 +45,7 @@ A Server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Cor
 
 ### No Guarantee that Resource IDs are Preserved
 
-In some FHIR Servers, the identifier of the underlying clinical data is not maintained across FHIR versions. Therefore, Client applications must plan on deduplication methods that rely on something other than a common identifier across FHIR versions.
-
-* Servers **SHOULD** maintain a stable common identifier for a resource across versions.
+<span class="bg-success" markdown="1">Servers **SHOULD** maintain a stable common identifier for a resource across versions. When the FHIR resource ID or business identifier of the underlying clinical data is not maintained across FHIR versions, the Client **SHALL** use an alternative method to avoid duplication, such as the guidance provided in the [Interoperable Digital Identity and Patient Matching](https://hl7.org/fhir/us/identity-matching/) Implementation Guide.</span><!-- new-content -->
 
 ### Expectation that FHIR DSTU2 Data is Preserved in FHIR R4
 
@@ -69,9 +67,10 @@ In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. How
 
 ### Authorization Across Versions
 
-- Separate authorization is required
-   - There is no expectation that DSTU2 authorizations will work on R4 endpoints, and reauthorization is required when migrating between versions.
-      - Maintaining the same auth Server for both endpoints so that the refresh token is valid for both DSTU2 and the R4 endpoint may be possible but not in scope.
-- The new endpoint will bring additional/changed resource types and added scopes
+<div class="bg-success" markdown="1">
+
+- To enable the clients to access resources from different version-specific endpoints with the same authorization token, Production Systems **SHOULD** use the same base endpoint (Authorization Endpoint URL) across versions and allow the same authorization token for different version-specific endpoints.
+- The more recent version endpoints will have additional/changed resource types and thus added scopes. For example, US Core may add a DeviceAssociation Profile when updating from FHIR R4 to FHIR R6.
+</div><!-- new-content -->
 
 {% include link-list.md %}

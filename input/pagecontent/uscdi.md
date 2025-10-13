@@ -1,6 +1,6 @@
 <!-- {% raw %} to make the USCDI table
 
-need 
+need
 
 source CSV file = `input/data/uscdi-table.csv`
 markdown page file = `input/pagecontent/uscdi.md`
@@ -18,10 +18,11 @@ icons (png files) = `input/images/<"kebab case" USCDI class names>.png`
 
 
 
-The US Core Profiles were initially designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7) and Application Access – Data Category Request 170.315(g)(8). US Core Editors have updated the guide annually to meet subsequent [U.S. Core Data for Interoperability (USCDI)] requirements: 
+The US Core Profiles were initially designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7) and Application Access – Data Category Request 170.315(g)(8). US Core Editors have updated the guide annually to meet subsequent [U.S. Core Data for Interoperability (USCDI)] requirements:
 
 {% include uscdi-uscore-version-table.md %}
 
+### <span class="bg-success" markdown="1">USCDI and US Core</span><!-- new-content -->
 
 ASTP's USCDI and FHIR US Core are complementary initiatives, with USCDI defining high-level data requirements and FHIR US Core providing detailed FHIR-based profiles for meeting those requirements. Mapping between them is necessary for achieving interoperability and consistency in healthcare data exchange within the United States. However, to make USCDI implementable in FHIR, an interpretation of USCDI is necessary. For information about what US Core Profile elements and US Core transactions are in scope for ASTP Health IT Certification, see the US Core [Conformance] pages.
 
@@ -31,6 +32,15 @@ Note that:
 -  Many US Core Profile elements do not map to a USCDI Data Classes and Element because US Core's usage is broader than certification and because additional US Core elements are required to make FHIR implementable.
 
 Updates to US Core depend upon community input, and we encourage our audience to submit questions and feedback to US Core specifications by clicking on the *Propose a change* link in the footer of every page. In addition, we encourage our audience to request any necessary clarifications to USCDI through the [USCDI ONDEC process] that will help inform future updates to FHIR US Core.
+
+<div class="bg-success" markdown="1">
+
+### Anticipating Future USCDI Versions
+
+The USCDI framework includes Data Classes and Elements which are not yet part of the core USCDI requirements but are under consideration for future inclusion. They are categorized by "Levels" to represent data elements in earlier stages of development and adoption, with [Level 1] indicating potential data elements with limited use cases and [Level 2] reflecting more defined use cases and broader community interest. We encourage implementers and stakeholders to review these emerging data elements and provide feedback through the USCDI ONDEC process to help shape their development and ensure alignment with future FHIR US Core updates.
+</div><!-- new-content -->
+
+### <span class="bg-success" markdown="1">USCDI to US Core Mapping Table</span><!-- new-content -->
 
 The table below defines the relationship between the USCDI Data Classes and Elements and USCore profiles. It lists the US Core Profile used for the corresponding Data Classes and Elements. This information and [FHIRPath] expressions to USCDI Data Classes and Elements are available as a [csv](tables/uscdi-table.csv) or [excel](tables/uscdi-table.xlsx) file:
 
@@ -42,4 +52,4 @@ The table below defines the relationship between the USCDI Data Classes and Elem
 
 
 
-   
+

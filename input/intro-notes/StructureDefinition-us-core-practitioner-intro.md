@@ -8,7 +8,7 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
 **Each Practitioner Must Have:**
 
@@ -34,6 +34,7 @@ Servers that support *only* the US Core Practitioner Profile and do not support 
 
 - It is important to balance the privacy of healthcare workers with the patient's right to access information. Only professional/work contact information about the practitioner **SHOULD** be available to the patient (such as a work address or office telephone number).
 - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server] or a provider directory capability statement.
-- \*{% include should-project-us.md element= "Practitioner.address" %}
+- \*{% include should-project-us.md type="Practitioner" %}
+- \*{% include should-3166-subdivision-codes.md type="Practitioner" %}
 
 {% include link-list.md %}
