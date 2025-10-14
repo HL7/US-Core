@@ -53,7 +53,9 @@ The January 2026 ballot addresses the following:
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 #### Non-substantive
 1.  **Applied:** Non-substantive (Clarification) Clarify Coverage.type value set usage [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122) See Changes [Here](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
-2.  **Resolved - change required:** Non-substantive (Correction) Change binding description in US Core Coverage Profile [FHIR-44124](https://jira.hl7.org/browse/FHIR-44124) See Changes [Here](StructureDefinition-us-core-coverage.html)
+2.  **Applied:** Non-substantive (Correction) Change binding description in US Core Coverage Profile [FHIR-44124](https://jira.hl7.org/browse/FHIR-44124) See Changes:
+    -  [US Core Coverage Profile](StructureDefinition-us-core-coverage.html)
+    -  [Payer Type Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion)
 3.  **Resolved - change required:** Non-substantive (Correction) correct line 81 in terminology  [FHIR-49610](https://jira.hl7.org/browse/FHIR-49610) See Changes [Here](terminology.html)
 4.  **Applied:** Non-substantive (Enhancement) Relax US@ address requirements [FHIR-51159](https://jira.hl7.org/browse/FHIR-51159) See Changes [Here](StructureDefinition-us-core-patient.html)
 5.  **Applied:** Non-substantive (Clarification) Update client expectations for preserving resource IDs between versions [FHIR-51756](https://jira.hl7.org/browse/FHIR-51756) See Changes [Here](changes-between-versions.html#no-guarantee-that-resource-ids-are-preserved)
