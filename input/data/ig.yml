@@ -1892,31 +1892,59 @@ definition:
     name: US Core FamilyMemberHistory Recorder Extension
   - reference:
       reference: OperationDefinition/docref
-    description: "This operation is used to return all the references to documents\
-      \ related to a\npatient. It is invoked on a FHIR Server's DocumentReference\
-      \ endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all\
-      \ DocumentReference instances.\n\nThe operation requires a patient id and takes\
-      \ the optional input parameters:\n- start date\n- end date\n- document type\n\
-      - on-demand\n- profile\n\nand returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html)\
-      \ containing [DocumentReference](http://hl7.org/fhir/documentreference.html)\
-      \ resources for the patient. If the server has stored documents or can create\
-      \ documents for the patient and those documents are available for the user,\
-      \ the server returns the DocumentReference resources associated with documents.\
-      \ This operation's intended use is to provide a way for providers or patients\
-      \ to access their available documents. The document itself can be subsequently\
-      \ retrieved using the link provided  in the `DocumentReference.content.attachment.url\
-      \ element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html)\
-      \ Resource or some other document repository.\n\nThis operation is *different*\
-      \ from a FHIR RESTful query on DocumentReference by patient and type and date\
-      \ range because: \n\n1. It is used to request a server to *generate* a document\
-      \ based on the specified parameters.\n\n1. If no parameters are specified, the\
-      \ server SHALL return a DocumentReference to the patient's current C-CDA CCD.\n\
-      \n1. If the server cannot *generate* a document based on the specified parameters,\
-      \ the operation will return an empty search bundle.\n\nUnless the client indicates\
-      \ they are only interested in 'on-demand' documents using the *on-demand* parameter,\
-      \ the server SHOULD return DocumentReference instances for *existing* documents\
-      \ that meet the request parameters  In this regard, this operation is *similar*\
-      \ to a FHIR RESTful query."
+    description: 'This operation is used to return all the references to documents
+      related to a
+
+      patient. It is invoked on a FHIR Server''s DocumentReference endpoint (e.g.,
+      `[base]/DocumentReference/$docref`) and operates across all DocumentReference
+      instances.
+
+
+      The operation requires a patient id and takes the optional input parameters:
+
+      - start context date
+
+      - end context date
+
+      - document type
+
+      - on-demand
+
+      - profile
+
+
+      and returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html) containing
+      [DocumentReference](http://hl7.org/fhir/documentreference.html) resources for
+      the patient. If the server has stored documents or can create documents for
+      the patient and those documents are available for the user, the server returns
+      the DocumentReference resources associated with documents. This operation''s
+      intended use is to provide a way for providers or patients to access their available
+      documents. The document itself can be subsequently retrieved using the link
+      provided  in the `DocumentReference.content.attachment.url element`. The link
+      could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource
+      or some other document repository.
+
+
+      This operation is *different* from a FHIR RESTful query on DocumentReference
+      by patient and type and period range because:
+
+
+      1. It is used to request a server to *generate* a document based on the specified
+      parameters.
+
+
+      1. If no parameters are specified, the server SHALL return a DocumentReference
+      to the patient''s current C-CDA CCD.
+
+
+      1. If the server cannot *generate* a document based on the specified parameters,
+      the operation will return an empty search bundle.
+
+
+      Unless the client indicates they are only interested in ''on-demand'' documents
+      using the *on-demand* parameter, the server SHOULD return DocumentReference
+      instances for *existing* documents that meet the request parameters  In this
+      regard, this operation is *similar* to a FHIR RESTful query.'
     exampleBoolean: false
     name: US Core Fetch DocumentReference
   - reference:

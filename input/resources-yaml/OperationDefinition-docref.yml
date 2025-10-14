@@ -11,15 +11,15 @@ description: |2-
   patient. It is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances.
 
   The operation requires a patient id and takes the optional input parameters:
-  - start date
-  - end date
+  - start context date
+  - end context date
   - document type
   - on-demand
   - profile
 
   and returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html) containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources for the patient. If the server has stored documents or can create documents for the patient and those documents are available for the user, the server returns the DocumentReference resources associated with documents. This operation's intended use is to provide a way for providers or patients to access their available documents. The document itself can be subsequently retrieved using the link provided  in the `DocumentReference.content.attachment.url element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource or some other document repository.
 
-  This operation is *different* from a FHIR RESTful query on DocumentReference by patient and type and date range because: 
+  This operation is *different* from a FHIR RESTful query on DocumentReference by patient and type and period range because:
 
   1. It is used to request a server to *generate* a document based on the specified parameters.
 
@@ -32,7 +32,7 @@ description: |2-
 code: docref
 
 comment: |2-
-   - It is assumed that the server has identified and secured the context appropriately and can either associate the authorization context with a single patient or determine whether the context has the rights to the nominated patient if there is one. If there is no nominated patient (e.g., the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Specifying the relationship between the context, a user, and patient records is outside the scope of this specification. 
+   - It is assumed that the server has identified and secured the context appropriately and can either associate the authorization context with a single patient or determine whether the context has the rights to the nominated patient if there is one. If there is no nominated patient (e.g., the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Specifying the relationship between the context, a user, and patient records is outside the scope of this specification.
 
    - A server may generate an on-demand document upon returning its DocumentReference during the $docref response or once the client accesses it. This specification places no requirements upon when a server generates an on-demand document and encourages server developers to balance the performance cost of creating unread documents against the response time to retrieve new documents.
 
@@ -57,22 +57,17 @@ parameter:
     min: 0
     max: '1'
     documentation: >-
-      The date range relates to care dates, not record currency dates - e.g., all
-      records relating to care provided in a specific date range. If no start
-      date is provided, all documents before the end date are in scope. The most recent or current document is in scope if
-      neither a start date nor an end date is provided. The client **SHOULD** provide values
-      precise to the second + time offset.
+      The context date range relates to care service dates, not document reference creation dates - e.g., all records relating to care provided in a specific date range. If no start context
+      date is provided, all documents before the end context date are in scope. The most recent or current document is in scope if neither a start date nor an end context date is provided. The client **SHOULD** provide values precise to the second + time offset.
     type: dateTime
   - name: end
     use: in
     min: 0
     max: '1'
     documentation: >-
-      The date range relates to care dates, not record currency dates - e.g., all
-      records relating to care provided in a specific date range. If no end date
-      is provided, all documents after the start date are in scope. The most recent or current document is in scope if
-      neither a start date nor an end date is provided. The client **SHOULD** provide values
-      precise to the second + time offset.
+      The context date range relates to care dates, not document reference creation dates - e.g., all
+      records relating to care provided in a specific date range. If no end context date
+      is provided, all documents after the start context date are in scope. The most recent or current document is in scope if neither a start date nor an end context date is provided. The client **SHOULD** provide values precise to the second + time offset.
     type: dateTime
 
 
