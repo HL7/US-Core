@@ -15,7 +15,7 @@ The following profiles have been defined for this implementation guide.
 The following [Extensions] have been defined as part of the US Core Implementation Guide. A [registry of standard extensions] can be found in the FHIR specification, and additional extensions may be registered on the HL7 FHIR registry at <http://hl7.org/fhir/registry>.
 
  <!-- string parameters passed in from the page used to define the extension for each section -->
- <!-- In future, made need to convert to data file as csv if gets bigger -->
+ <!-- In future, need to convert to data file as csv if gets bigger -->
 {% assign ig_only = "USCDIRequirement" %}
 {% assign realm_only = "USCoreDirectEmailExtension,USCoreJurisdictionExtension,USCoreBirthSexExtension" %}
 {% assign deprecated_only = "USCoreGenderIdentityExtension,USCoreSexExtension" %}
@@ -35,15 +35,11 @@ The following extensions are only used in the US Core Implementation Guide to cr
 
 {% include ext-list-generator.md use="ig" %}
 
-<div class="bg-success" markdown="1">
-
 #### Deprecated US Realm Specific Extension
 
 The following extensions are not used in any US Core Profile and are *deprecated*. They **SHOULD NOT** be used for new or revised content. They are retained for historical/backward compatibility purposes.
 
 {% include ext-list-generator.md use="deprecated" %}
-</div><!-- new-content -->
-
 
 {% include link-list.md %}
 

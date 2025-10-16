@@ -48,7 +48,7 @@ The January 2026 ballot addresses the following:
 13. **Resolved - change required:**  Compatible, substantive (Enhancement) merge US Core Provenance Type CodeSystem with FHIR Provenance Type CodeSystem [FHIR-50927](https://jira.hl7.org/browse/FHIR-50927) See Changes:[Here](CodeSystem-us-core-provenance-participant-type.html)
 14. **Applied:** Compatible, substantive (Correction) Remove guidance from US Core Simple Observation Profile [FHIR-51493](https://jira.hl7.org/browse/FHIR-51493) See Changes [Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
 15. **Triaged** Compatible, substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
-16. **Applied:** Compatible, substantive (Enhancement) Add resources types that can use the Individual Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-sex.html)
+16. **Pre-Applied:** Compatible, substantive (Enhancement) Add resource types that can use the Individual Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-individual-sex.html)
 17. **Triaged:** Compatible, substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html)
 18. **Pre-Applied:** Compatible, substantive (Enhancement) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
     - [US Core Race Extension](StructureDefinition-us-core-race.html)
