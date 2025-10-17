@@ -26,9 +26,13 @@ Implementation Guide |Relationship
 
 #### Comparison With International IGs
 
-The table below summarizes profile only comparison between US Core and the International Patient Access Implementation Guides. This comparison evaluates US Core conformance requirements with the key implementation guides identifying where compliance with US Core satisfies the expectations established by the referenced implementation guide. Compliance in the reverse direction is not guaranteed, i.e. a resource that is compliant with an International Patient Access profile *may not* be compliant with US Core.
+The table below summarizes profile-only comparisons between the US Core and the International Patient Access and International Patient Summary Implementation Guides. This comparison evaluates US Core conformance requirements against the key implementation guides, identifying where compliance with US Core satisfies the expectations established by the referenced implementation guides. Compliance in the reverse direction is not guaranteed; for example, a resource that is compliant with an IPA profile may not be compliant with US Core.
 
-As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, rules on missing or suppressed data. A detailed comparisons with the current version of IPA can be found [here](ipa-comparison-v1.1.0/index.html)
+As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, and rules on missing or suppressed data. Detailed comparisons between the FHIR artifacts in this current 9.0.0-ballot version of US Core and IPA and IPS are provided in the links below:
+
+- [IPA Comparison V1.1.0](ipa-comparison-v1.1.0/index.html)
+- [IPS Comparison V2.0.0](ips-comparison-v2.0.0/index.html)
+
 
 **Legend:**
 
