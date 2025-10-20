@@ -260,13 +260,13 @@ The following US Core resource are compatible to the IPS profiles, but the IPS p
 
 1. [US Core MedicationRequest Profile]
 
-Additional requirements for [IPS MedicationRequest](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips):
+   Additional requirements for [IPS MedicationRequest](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips):
 
-- `MedicationRequest.medication[x].coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-- `MedicationRequest.medication[x].coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-- `MedicationRequest.medication[x].coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-- `MedicationRequest.medication[x].text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-- `MedicationRequest.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+   - `MedicationRequest.medication[x].coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `MedicationRequest.medication[x].coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `MedicationRequest.medication[x].coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `MedicationRequest.medication[x].text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `MedicationRequest.subject.reference` Element minimum cardinalities differ: '1' vs '0'
 
 1. [US Core Observation Pregnancy Status Profile]
 
