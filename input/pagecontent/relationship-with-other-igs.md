@@ -1,5 +1,5 @@
 {% capture NO %}<span style="color:red; font-size:1.5em">&#10008;</span>{% endcapture %}
-{% capture NA %}<span style="font-size:1.5em">&#9940;</span>{% endcapture %}
+{% capture NA %}<span style="font-size:1.5em; font-weight: bold">&mdash;</span>{% endcapture %}
 {% capture OK %}<span style="color:green; font-size:1.5em">&#10004;</span>{% endcapture %}
 {% capture MAYBE %}<span style="color:orange; font-size:1.5em">&#10133;</span>{% endcapture %}
 
@@ -20,19 +20,19 @@ Other international and national standards were reviewed and considered during t
 
 Implementation Guide |Relationship
 ---|---
-[International Patient Access (IPA)]|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of US Core. US Core was is compatible with IPA, e.g. US Core conformant data can be accessed by an IPA conformant client.
-[International Patient Summary (IPS)]|This IG describes specify how to represent in HL7 FHIR the IPS. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. The formal review between this IG and US Core is not current.
+[International Patient Access (IPA)]|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of US Core. US Core is compatible with IPA, e.g. US Core conformant data can be accessed by an IPA conformant client.
+[International Patient Summary (IPS)]|This IG describes specify how to represent in HL7 FHIR the IPS. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. <span class="bg-success" markdown="1">US Core is compatible with IPS, e.g. US Core conformant data can be used to generate a patient summary that is conformant to IPS.</span><!-- new-content -->
 {:.grid}
 
 #### Comparison With International IGs
 
 The table below summarizes comparisons between the US Core profiles and the International Patient Access and International Patient Summary Implementation Guides profiles. This comparison evaluates US Core conformance requirements against the key implementation guides, identifying where compliance with US Core satisfies the expectations established by the referenced implementation guides. Compliance in the reverse direction is not guaranteed; for example, a resource that is compliant with an IPA profile may not be compliant with US Core.
 
-As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, and rules on missing or suppressed data. Detailed comparisons between the FHIR artifacts in this current 9.0.0-ballot version of US Core and IPA and IPS are provided in the links below:
+As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, and rules on missing or suppressed data. Detailed comparisons between the FHIR artifacts in this current 9.0.0-ballot version of US Core and IPA <span class="bg-success" markdown="1">and IPS</span><!-- new-content --> are provided in the links below:
 
 - [IPA Comparison V1.1.0](ipa-comparison-v1.1.0/index.html)
-- [IPS Comparison V2.0.0](ips-comparison-v2.0.0/index.html)
-
+- <span class="bg-success" markdown="1">[IPS Comparison V2.0.0](ips-comparison-v2.0.0/index.html)
+</span><!-- new-content -->
 
 **Legend:**
 
@@ -44,7 +44,7 @@ As part of profile comparison, the requirements, constraints, and standards spec
 
 {{NA}} **No equivalent profile**: No equivalent profile for comparison.
 
-| US Core {{site.data.fhir.igVer}} | International Patient Access 1.1.0 | International Patient Summary 2.0.0
+| US Core {{site.data.fhir.igVer}} | International Patient Access 1.1.0 | <span class="bg-success" markdown="1">International Patient Summary 2.0.0</span><!-- new-content -->
 | --- | :---: | :---: |
 | [US Core ADI DocumentReference Profile]| {{MAYBE}} | {{NA}} |
 | [US Core AllergyIntolerance Profile]| {{OK}} | {{MAYBE}} |
@@ -166,6 +166,8 @@ IPA does not include requirements for Suppressed Data.
 ###### Additional profiles
 This version of US Core has no equivalent profile for the following IPA profiles:
 - [IPA-MedicationStatement](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationstatement.html)
+-
+<div class="bg-success" markdown="1">
 
 ##### Additional IPS requirements
 
@@ -403,5 +405,6 @@ This version of US Core has no equivalent profile for the following IPS profiles
 - [MedicationStatement (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-MedicationStatement-uv-ips.html)
 - [Observation Pregnancy - Expected Delivery Date (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html)
 - [Observation Pregnancy - Outcome (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-Observation-pregnancy-outcome-uv-ips.html)
+</div><!-- new-content -->
 
 {% include link-list.md %}
