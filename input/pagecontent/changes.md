@@ -50,9 +50,7 @@ The January 2026 ballot addresses the following:
 15. **Triaged** Compatible, substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
 16. **Pre-Applied:** Compatible, substantive (Enhancement) Add resource types that can use the Individual Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-individual-sex.html)
 17. **Triaged:** Compatible, substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html)
-18. **Pre-Applied:** Compatible, substantive (Enhancement) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
-    - [US Core Race Extension](StructureDefinition-us-core-race.html)
-    - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
+
 
 #### Non-substantive
 1.  **Applied:** Non-substantive (Clarification) Clarify Coverage.type value set usage [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122) See Changes [Here](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
@@ -78,7 +76,10 @@ The January 2026 ballot addresses the following:
 13. **Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
 14. **Triaged:**  Non-substantive (Clarification) Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)
 15. **Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
-16. **Triaged:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html#relationship-to-us-core-and-other-igs)
+16. **Pre-Applied:** Compatible, Non-substantive (Correction) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
+    - [US Core Race Extension](StructureDefinition-us-core-race.html)
+    - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
+17. **Pre-Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html#relationship-to-us-core-and-other-igs)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>
