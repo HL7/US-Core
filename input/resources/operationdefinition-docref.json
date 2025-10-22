@@ -38,7 +38,7 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "The context date range relates to care service dates, not document reference creation dates - e.g., all records relating to care provided in a specific date range. If no end context date is provided, all documents after the start context date are in scope. The most recent or current document is in scope if neither a start date nor an end context date is provided. The client **SHOULD** provide values precise to the second + time offset.",
+            "documentation": "The context date range relates to care dates, not document reference creation dates - e.g., all records relating to care provided in a specific date range. If no end context date is provided, all documents after the start context date are in scope. The most recent or current document is in scope if neither a start date nor an end context date is provided. The client **SHOULD** provide values precise to the second + time offset.",
             "type": "dateTime"
         },
         {

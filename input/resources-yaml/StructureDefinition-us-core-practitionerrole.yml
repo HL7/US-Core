@@ -62,6 +62,25 @@ differential:
     path: PractitionerRole.specialty
     mustSupport: true
     binding:
+
+# ====== New R5 additional Binding Element Here for US Core V9 ====
+
+      extension:
+      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+        extension:
+        - url: key
+          valueId: us-core-snomedct-specialty
+        - url: purpose
+          valueCode: preferred
+        - url: valueSet
+          valueCanonical: http://hl7.org/fhir/ValueSet/c80-practice-codes
+        - url: documentation
+          valueMarkdown: Support exchanges that use Snomed CT medical specialty codes, such Direct Secure Messaging
+        - url: shortDoco
+          valueString: Support exchanges that use Snomed CT medical specialty codes
+
+# =========================================================
+
       strength: extensible
       valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066
   - id: PractitionerRole.location

@@ -42,7 +42,8 @@ This section provides detailed implementation guidance for the US Core Profile t
 * \*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.
   - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.
   - USCDI's applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.
-    - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.
+    - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.
+    - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
 * \*The category of "problem-list-item" or "health-concern" is required, and, at a minimum, Certifying Systems **SHALL** support, a category of "sdoh", **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
   * If the category is "problem-list-item", `Condition.clinicalStatus` **SHOULD** be present.
