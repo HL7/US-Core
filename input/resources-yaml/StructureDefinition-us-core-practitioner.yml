@@ -46,11 +46,12 @@ differential:
     type:
     - code: string
     mustSupport: true
+
   - id: Practitioner.identifier:NPI
     path: Practitioner.identifier
     sliceName: NPI
     patternIdentifier:
-      system: http://hl7.org/fhir/sid/us-npi
+      system: http://terminology.hl7.org/NamingSystem/NCSBNID
     condition:
     - us-core-16
     - us-core-17
@@ -70,6 +71,26 @@ differential:
         $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this<5,
         $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger()) + 24)mod 10=0)
     mustSupport: true
+
+# ==============  Added in US Core 9 ==================
+
+  - id: Practitioner.identifier:NCSBN
+    path: Practitioner.identifier
+    sliceName: NCSBN
+    patternIdentifier:
+      system: http://hl7.org/fhir/sid/us-ncsbn # FAKE system for NCSBN ID - need to update!!!!
+    condition:
+    - us-core-27
+    constraint:
+    - key: us-core-27
+      severity: error
+      human: NCSBN an eight-digit numeric code with no letters or special characters
+      expression: value.matches('^\d{8}$')
+      xpath: f:value/f:matches(value,/^\d{8}$/)
+    mustSupport: false
+
+# =====================================================
+
   - id: Practitioner.name
     path: Practitioner.name
     min: 1
@@ -102,7 +123,7 @@ differential:
     type:
     - code: string
     example:
-    - 
+    -
         label: US Core
         valueString: '49 MEADOW ST'
     mustSupport: true
@@ -112,7 +133,7 @@ differential:
     type:
     - code: string
     example:
-    - 
+    -
         label: US Core
         valueString: 'EVERYTOWN'
     mustSupport: true
@@ -122,7 +143,7 @@ differential:
     type:
     - code: string
     example:
-    - 
+    -
         label: US Core
         valueString: 'OK'
     mustSupport: true
@@ -140,7 +161,7 @@ differential:
     type:
     - code: string
     example:
-    - 
+    -
         label: US Core
         valueString: '74047'
     mustSupport: true

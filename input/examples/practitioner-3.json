@@ -1,0 +1,65 @@
+{
+    "resourceType": "Practitioner",
+    "id": "practitioner-3",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Practitioner 3 Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a practitioner example for the *US Core Practitioner Profile* with NPI and NCSBN identifiers and a work address and direct email contact"
+            }
+        ]
+    },
+    "identifier": [
+        {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "1245319599"
+        },
+        {
+            "system": "http://hl7.org/fhir/sid/us-ncsbn",
+            "value": "87654321"
+        }
+    ],
+    "name": [
+        {
+            "family": "Nurse",
+            "given": [
+                "Nancy"
+            ],
+            "suffix": [
+                "RN"
+            ],
+            "use": "official"
+        }
+    ],
+    "address": [
+        {
+            "use": "work",
+            "line": [
+                "1080 FIRST COLONIAL RD"
+            ],
+            "city": "VIRGINIA BEACH",
+            "state": "VA",
+            "postalCode": "21454-2406"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "email",
+            "value": "Nurse.Nancy@direct.ExampleMedicalPractice.net",
+            "use": "work",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+                    "valueBoolean": true
+                }
+            ]
+        }
+    ]
+}

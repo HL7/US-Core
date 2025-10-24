@@ -1,3 +1,6 @@
+
+{% include new_page.md %}
+
 <div class="note-to-balloters" markdown="1">
 
 The decision to add the US Core PMO Service Request Profile and to meet the USCDI's PMO Order Data Element definition sparked a healthy debate on whether `ServiceRequest` is necessary for actionable orders or if `DocumentReference` is sufficient for PMO portability and patient access.

@@ -960,6 +960,12 @@ definition:
     name: Practitioner 2 Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
   - reference:
+      reference: Practitioner/practitioner-3
+    description: This is a practitioner example for the *US Core Practitioner Profile*
+      with NPI and NCSBN identifiers and a work address and direct email contact
+    name: Practitioner 3 Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - reference:
       reference: Practitioner/practitioner-pharmacist
     description: This is a pharmacist example using the *US Core Practitioner Profile*.
     name: Practitioner Pharmacist Example

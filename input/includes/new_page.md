@@ -1,10 +1,10 @@
-<!-- 
+<!--
 site.data.structuredefinitions.{SD}.name maps new artifact
-site.data.structuredefinitions.{SD}.path maps to page.path
+site.data.structuredefinitions.{SD}.path maps to page.name
  -->
 {%- for r_hash in site.data.resources -%}
   {%- assign r = r_hash[1] -%}
-      {%- if r.path == page.path -%}
+      {%- if r.path == page.name -%}
        {%- assign r_name = r.name -%}
        {%- break -%}
       {%- endif -%}

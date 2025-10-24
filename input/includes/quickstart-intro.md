@@ -1,10 +1,10 @@
 <!-- This liquid script creates context specific text for each pages quickstart using input data from input/data/scopes.csv -->
 {% assign smart_scope = false %}
 {% for scope in site.data.scopes %}
-  {% if scope.page_path == page.path %}
+  {% if scope.page_name == page.name %}
     {% capture smart_scope %}
 
-      {% assign scope_string = scope | inspect %} 
+      {% assign scope_string = scope | inspect %}
       {% assign conf_verbs = "SHALL,SHOULD,MAY" | split: "," %}
       {% for conf in conf_verbs %}
         {%- if scope_string contains conf %}

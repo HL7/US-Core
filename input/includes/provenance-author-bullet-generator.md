@@ -36,7 +36,7 @@
 {% assign author = '' -%}
 {% for item in rows -%}
   {% if item.Is_Source == "TRUE" -%}
-  {% if item.Path == page.path -%}
+  {% if item.Path == page.name -%}
    {% assign author = author | append: item.FiveWs_author | append: item.FiveWs_source | append: item.FiveWs_actor -%}
    {% assign author = author | append: "," -%}
     {% endif -%}
@@ -46,7 +46,7 @@
 {% assign author_count = author_list | size -%}
 {% for item in site.data.provenance-elements -%}
   {% if item.Is_Source == "TRUE" -%}
-  {% if item.Path == page.path -%}
+  {% if item.Path == page.name -%}
 - {% if item.Is_New %}<span class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}*The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}*The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New %}</span><!-- new-content -->{% endif %}
        {% break -%}
     {% endif -%}

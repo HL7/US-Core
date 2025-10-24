@@ -1,4 +1,6 @@
 
+{% include new_page.md %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core FamilyMemberHistory
@@ -32,7 +34,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - \*USCDI's applicable vocabulary standards for Family Health History are SNOMED CT and ICD-10-CM.
-    - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.
+    - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.
+    - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only.
 {% include provenance-author-bullet-generator.md %}
+
+<div class="note-to-balloters" markdown="1">
+The [US Core FamilyMemberHistory Recorder Extension] is used to record the individual provenance. It will be replaced by the FHIR R6 [Cross Version Extension] when FHIR R6 is published.
+</div><!-- note-to-balloters -->
 
 {% include link-list.md %}

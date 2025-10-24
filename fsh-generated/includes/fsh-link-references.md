@@ -136,6 +136,7 @@
 [cbc-platelets]: Observation-cbc-platelets.html
 [practitioner-1]: Practitioner-practitioner-1.html
 [practitioner-2]: Practitioner-practitioner-2.html
+[practitioner-3]: Practitioner-practitioner-3.html
 [practitioner-pharmacist]: Practitioner-practitioner-pharmacist.html
 [66c8856b-ba11-4876-8aa8-467aad8c11a2]: Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.html
 [PRAPARE-item-example-54899-0]: Observation-PRAPARE-item-example-54899-0.html
