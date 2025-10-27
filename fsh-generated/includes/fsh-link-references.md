@@ -41,6 +41,9 @@
 [dxa-hip-l-z-score-bmd]: Observation-dxa-hip-l-z-score-bmd.html
 [ekg-impression]: Observation-ekg-impression.html
 [ekg-lead]: Observation-ekg-lead.html
+[example-1]: Encounter-example-1.html
+[1036]: Encounter-1036.html
+[delivery]: Encounter-delivery.html
 [encounter-diagnosis-example1]: Condition-encounter-diagnosis-example1.html
 [encounter-diagnosis-example2]: Condition-encounter-diagnosis-example2.html
 [episode-summary]: DocumentReference-episode-summary.html
@@ -131,6 +134,7 @@
 [pulse-intensity-palpation]: Observation-pulse-intensity-palpation.html
 [q-t-interval-ekg-lead]: Observation-q-t-interval-ekg-lead.html
 [qrs-dur-ekg-lead]: Observation-qrs-dur-ekg-lead.html
+[rehab]: Procedure-rehab.html
 [respiratory-rate]: Observation-respiratory-rate.html
 [condition-SDOH-example]: Condition-condition-SDOH-example.html
 [serum-bun]: Observation-serum-bun.html
