@@ -13,7 +13,7 @@ site.data.structuredefinitions.{SD}.path maps to page.name
 {%- assign new = false -%}
 {%- for new_stuff in site.data.new_stuff -%}
     {%- if new_stuff == r_name  -%}
-This page has new content for US Core Version 8.0.0
+This artifact is new for US Core Version {{site.data.ig.version}}
 {:.new-content}
         {%- break -%}
     {%- endif -%}

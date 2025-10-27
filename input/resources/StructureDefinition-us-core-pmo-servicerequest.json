@@ -1,0 +1,232 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-pmo-servicerequest",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pmo-servicerequest",
+    "name": "USCorePMOServiceRequestProfile",
+    "title": "US Core PMO ServiceRequest Profile",
+    "status": "active",
+    "date": "2025-08-26",
+    "description": "The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html) resource; refer to it for scope and usage definitions. This profile is principally intended to represent an order based on a PMO document and references the [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html) to communicate the contents of the PMO document, such as POLST, MOLST, or other state-specific forms. PMO documents follow the patient across care settings and are typically stored as scanned images in EMRs/EHRs. Together, these two profiles satisfy the USCDI's PMO Order Data Element's intent to represent orders based on an individual's PMO. The US Core PMO ServiceRequest Profile establishes minimum expectations for recording, searching, and fetching PMO-related ServiceRequest information, specifying core elements, extensions, vocabularies, and value sets that SHALL be present to promote interoperability.\n",
+    "kind": "resource",
+    "abstract": false,
+    "type": "ServiceRequest",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "ServiceRequest",
+                "path": "ServiceRequest",
+                "mustSupport": false
+            },
+            {
+                "id": "ServiceRequest.status",
+                "path": "ServiceRequest.status",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.intent",
+                "path": "ServiceRequest.intent",
+                "comment": "To allow for the resource life cycle, no constraint on intent for use when documenting derived medical orders. Use \"directive\" when part of a FHIR-based PMO document.",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.category",
+                "path": "ServiceRequest.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.category:us-core-pmo",
+                "path": "ServiceRequest.category",
+                "sliceName": "us-core-pmo",
+                "short": "\ud83e\udd14 Multiple portable medical order categories vs a single \"PMO\" category",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "100822-6 (Cardiopulmonary resuscitation orders) | 100823-4 (Initial portable medical treatment orders) | 100824-2 (Additional portable medical orders or instructions) | 100825-9 (Medically assisted nutrition orders) (from [Portable Medical Order panel codes](https://loinc.org/100821-8))",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-pmo-category-codes"
+                }
+            },
+            {
+                "id": "ServiceRequest.code",
+                "path": "ServiceRequest.code",
+                "comment": "Plain text is often used instead of codes to define what is being requested/ordered and for additional order details.",
+                "min": 1,
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "Portable Medical Order procedure codes",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-pmo-procedure"
+                }
+            },
+            {
+                "id": "ServiceRequest.subject",
+                "path": "ServiceRequest.subject",
+                "short": "limited to Patient",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.encounter",
+                "path": "ServiceRequest.encounter",
+                "comment": "This element is not present when part of a PMO Document.",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.occurrence[x]",
+                "path": "ServiceRequest.occurrence[x]",
+                "short": "Often just a start date",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "Period"
+                    },
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Timing"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.authoredOn",
+                "path": "ServiceRequest.authoredOn",
+                "comment": "Date instantiated (executable) order signed vs date of PMO document. These dates are the same if part of PMO document",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.requester",
+                "path": "ServiceRequest.requester",
+                "short": "Authored only by Practitioner",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.reasonReference",
+                "path": "ServiceRequest.reasonReference",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns",
+                            "http://hl7.org/fhir/StructureDefinition/Observation",
+                            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "short": "US Core ADI DocumentReference Profile or other US Core profiles that support the requested PMO service."
+            }
+        ]
+    }
+}
