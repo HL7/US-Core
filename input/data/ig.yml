@@ -2319,19 +2319,24 @@ definition:
     exampleBoolean: false
     name: US Core Pediatric Weight for Height Observation Profile
   - reference:
+      reference: ValueSet/us-core-pmo-procedure
+    description: Codes for portable medical orders procedures.
+    exampleBoolean: false
+    name: US Core PMO Procedure Codes
+  - reference:
       reference: StructureDefinition/us-core-pmo-servicerequest
     description: 'The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)
-      resource; refer to it for scope and usage definitions. This profile represents
-      an order based on a PMO document and references the [US Core ADI DocumentReference
-      Profile](StructureDefinition-us-core-adi-documentreference.html) to communicate
-      the contents of the PMO document, such as POLST, MOLST, or other state-specific
-      forms. PMO documents follow the patient across care settings and are typically
-      stored as scanned images in EMRs/EHRs. Together, these two profiles satisfy
-      the USCDI''s PMO Order Data Element''s intent to represent orders based on an
-      individual''s PMO. The US Core PMO ServiceRequest Profile establishes minimum
-      expectations for recording, searching, and fetching PMO-related ServiceRequest
-      information, specifying core elements, extensions, vocabularies, and value sets
-      that SHALL be present to promote interoperability.
+      resource; refer to it for scope and usage definitions. This profile is principally
+      intended to represent an order based on a PMO document and references the [US
+      Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
+      to communicate the contents of the PMO document, such as POLST, MOLST, or other
+      state-specific forms. PMO documents follow the patient across care settings
+      and are typically stored as scanned images in EMRs/EHRs. Together, these two
+      profiles satisfy the USCDI''s PMO Order Data Element''s intent to represent
+      orders based on an individual''s PMO. The US Core PMO ServiceRequest Profile
+      establishes minimum expectations for recording, searching, and fetching PMO-related
+      ServiceRequest information, specifying core elements, extensions, vocabularies,
+      and value sets that SHALL be present to promote interoperability.
 
       '
     exampleBoolean: false

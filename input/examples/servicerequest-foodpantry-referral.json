@@ -1,58 +1,48 @@
 {
-    "resourceType": "ServiceRequest",
-    "id": "foodpantry-referral",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "ServiceRequest Food Pantry Referral Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a food pantry referral request example using the *US Core ServiceRequest Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-        ]
-    },
-    "status": "active",
-    "intent": "order",
-    "category": [
+  "resourceType": "ServiceRequest",
+  "id": "foodpantry-referral",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0-ballot"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                    "code": "sdoh",
-                    "display": "SDOH"
-                },
-                {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/731000124108",
-                    "code": "410606002",
-                    "display": "Social service procedure"
-                }
-            ],
-            "text": "Social Determinants Of Health/Social Service Procedure"
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+          "code": "sdoh",
+          "display": "SDOH"
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "410606002",
+          "display": "Social service procedure"
         }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://snomed.info/sct",
-                "code": "467771000124109",
-                "display": "Assistance with application for food pantry program",
-                "version": "http://snomed.info/sct/731000124108"
-            }
-        ],
-        "text": "Food Pantry Referral"
-    },
-    "subject": {
-        "reference": "Patient/example"
-    },
-    "occurrenceDateTime": "2021-11-20",
-    "authoredOn": "2021-11-12T10:59:38-08:00",
-    "requester": {
-        "reference": "Practitioner/practitioner-1"
+      ],
+      "text": "Social Determinants Of Health/Social Service Procedure"
     }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "467771000124109",
+        "display": "Assistance with application for food pantry program",
+        "version": "http://snomed.info/sct/731000124108"
+      }
+    ],
+    "text": "Food Pantry Referral"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "occurrenceDateTime": "2021-11-20",
+  "authoredOn": "2021-11-12T10:59:38-08:00",
+  "requester": {
+    "reference": "Practitioner/practitioner-1"
+  }
 }

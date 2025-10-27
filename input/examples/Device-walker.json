@@ -1,44 +1,34 @@
 {
-    "resourceType": "Device",
-    "id": "udi-5",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Device Walker Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This Device example for the *US Core Device Profile* illustrates its use for devices that lack UDI information."
-            }
-        ]
-    },
-    "status": "active",
-    "manufacturer": "ACME Biomedical",
-    "serialNumber": "AC22112345",
-    "deviceName": [
-        {
-            "name": "ACME basics folding walker",
-            "type": "manufacturer-name"
-        }
-    ],
-    "modelNumber": "1.0",
-    "type": {
-        "coding": [
-            {
-                "system": "http://snomed.info/sct",
-                "code": "467068002",
-                "display": "Basic walking frame, foldable (physical object)",
-                "version": "http://snomed.info/sct/731000124108"
-            }
-        ],
-        "text": "Walker"
-    },
-    "patient": {
-        "reference": "Patient/example",
-        "display": "Amy V. Shaw"
+  "resourceType": "Device",
+  "id": "udi-5",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0-ballot"
+    ]
+  },
+  "status": "active",
+  "manufacturer": "ACME Biomedical",
+  "serialNumber": "AC22112345",
+  "deviceName": [
+    {
+      "name": "ACME basics folding walker",
+      "type": "manufacturer-name"
     }
+  ],
+  "modelNumber": "1.0",
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "467068002",
+        "display": "Basic walking frame, foldable (physical object)",
+        "version": "http://snomed.info/sct/731000124108"
+      }
+    ],
+    "text": "Walker"
+  },
+  "patient": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  }
 }
