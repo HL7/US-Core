@@ -2,7 +2,7 @@
 
 The following operation has been defined for the US Core Implementation Guide. For more information on [FHIR RESTful operations], see the FHIR specification.
 
-  {% include list-simple-operationdefinitions-en.xhtml %}
+  {% include list-simple-operationdefinitions.xhtml %}
 
 <br />
 

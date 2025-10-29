@@ -13,21 +13,21 @@
 
 ### Cross Version Analysis
 
-{% capture cross-version-analysis %}{% include cross-version-analysis-en.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}}
+{% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}{{ cross-version-analysis | remove: '<p>' | remove: '</p>'}}
 
 ### IG Dependencies
 
 This IG Contains the following dependencies on other IGs.
 
-{% include dependency-table-en.xhtml %}
+{% include dependency-table.xhtml %}
 
 ### Global Profiles
 
-{% include globals-table-en.xhtml %}
+{% include globals-table.xhtml %}
 
 ### Copyrights
 
-{% capture ip-statement %}{% include ip-statements-en.xhtml %}{% endcapture %}
+{% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
 
 {{ ip-statement | remove: '<p>' | remove: '</p>'}}
 
