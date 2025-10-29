@@ -1,0 +1,82 @@
+resourceType: Bundle
+id: udi-3
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Device Knee Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Device knee example for the *US Core Implantable Device
+      Profile*.
+type: collection
+entry:
+- fullUrl: http://example.org/fhir/Device/udi-3
+  resource:
+    resourceType: Device
+    id: udi-3
+    meta:
+      versionId: '2'
+      lastUpdated: '2019-04-11T16:21:48.921+00:00'
+      profile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/instance-name
+        valueString: Device Knee Example
+      - url: http://hl7.org/fhir/StructureDefinition/instance-description
+        valueMarkdown: This is a Device knee example for the *US Core Implantable
+          Device Profile*.
+    udiCarrier:
+    - deviceIdentifier: '987979879879'
+      carrierHRF: (01)987979879879(11)191015(17)220101(10)M320(21)AC221
+      entryType: rfid
+      issuer: http://hl7.org/fhir/NamingSystem/gs1-di
+    status: active
+    manufacturer: ACME Biomedical
+    manufactureDate: '2015-10-15'
+    expirationDate: '2022-01-01'
+    lotNumber: M320
+    serialNumber: AC221
+    name:
+    - value: ACME Knee Replacement Device
+      type:
+        coding:
+        - system: http://hl7.org/fhir/device-nametype
+          code: user-friendly-name
+          display: User Friendly name
+    modelNumber: '1.0'
+    type:
+    - coding:
+      - system: http://snomed.info/sct
+        code: '109228008'
+        display: Knee joint prosthesis
+        version: http://snomed.info/sct/731000124108
+      text: Knee joint prosthesis
+- fullUrl: http://example.org/fhir/DeviceAssociation/udi-3
+  resource:
+    resourceType: DeviceAssociation
+    id: udi-3
+    meta:
+      profile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-deviceassociation
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/instance-name
+        valueString: Device Knee Example
+      - url: http://hl7.org/fhir/StructureDefinition/instance-description
+        valueMarkdown: This is a Device knee example for the *US Core Implantable
+          Device Profile*.
+    device:
+      reference: Device/udi-3
+      display: Device/udi-3
+    relationship:
+    - coding:
+      - system: http://hl7.org/fhir/deviceassociation-relationship
+        code: patient
+        display: Patient
+    status:
+      coding:
+      - system: http://hl7.org/fhir/deviceassociation-status
+        code: implanted
+        display: Implanted
+    subject:
+      reference: Patient/example
+    period:
+      start: '2025-10-28'

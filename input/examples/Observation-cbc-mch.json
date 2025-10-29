@@ -1,0 +1,78 @@
+{
+    "resourceType": "Observation",
+    "id": "cbc-mch",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "MCH Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a MCH example for the *US Core Observation Lab Profile*. It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*."
+            }
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "code": "laboratory",
+                    "display": "Laboratory",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                }
+            ],
+            "text": "Laboratory"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "code": "785-6",
+                "display": "MCH [Entitic mass] by Automated count",
+                "system": "http://loinc.org"
+            }
+        ],
+        "text": "MCH"
+    },
+    "subject": {
+        "display": "Amy Shaw",
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2005-07-05",
+    "valueQuantity": {
+        "system": "http://unitsofmeasure.org",
+        "unit": "pg",
+        "value": 30.0
+    },
+    "referenceRange": [
+        {
+            "low": {
+                "code": "pg",
+                "system": "http://unitsofmeasure.org",
+                "unit": "pg",
+                "value": 33.2
+            },
+            "high": {
+                "code": "pg",
+                "system": "http://unitsofmeasure.org",
+                "unit": "pg",
+                "value": 27.5
+            },
+            "type": {
+                "coding": [
+                    {
+                        "code": "normal",
+                        "display": "Normal Range",
+                        "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+                    }
+                ],
+                "text": "Normal Range"
+            }
+        }
+    ]
+}

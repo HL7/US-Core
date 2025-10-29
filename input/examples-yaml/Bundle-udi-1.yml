@@ -1,0 +1,67 @@
+resourceType: Bundle
+id: udi-1
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: UDI 1 Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a UDI 1 example for the *US Core Implantable Device Profile*.
+type: collection
+entry:
+- fullUrl: http://example.org/fhir/Device/udi-1
+  resource:
+    resourceType: Device
+    id: udi-1
+    meta:
+      profile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/instance-name
+        valueString: UDI 1 Example
+      - url: http://hl7.org/fhir/StructureDefinition/instance-description
+        valueMarkdown: This is a UDI 1 example for the *US Core Implantable Device
+          Profile*.
+    udiCarrier:
+    - deviceIdentifier: 09504000059118
+      carrierHRF: (01)09504000059118(17)141120(10)7654321D(21)10987654d321
+      issuer: http://hl7.org/fhir/NamingSystem/gs1-di
+    status: active
+    expirationDate: '2014-11-20'
+    lotNumber: 7654321D
+    serialNumber: 10987654d321
+    type:
+    - coding:
+      - system: http://snomed.info/sct
+        code: '468063009'
+        display: Coated femoral stem prosthesis, modular
+        version: http://snomed.info/sct/731000124108
+- fullUrl: http://example.org/fhir/DeviceAssociation/udi-1
+  resource:
+    resourceType: DeviceAssociation
+    id: udi-1
+    meta:
+      profile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-deviceassociation
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/instance-name
+        valueString: UDI 1 Example
+      - url: http://hl7.org/fhir/StructureDefinition/instance-description
+        valueMarkdown: This is a UDI 1 example for the *US Core Implantable Device
+          Profile*.
+    device:
+      reference: Device/udi-1
+      display: Device/udi-1
+    relationship:
+    - coding:
+      - system: http://hl7.org/fhir/deviceassociation-relationship
+        code: patient
+        display: Patient
+    status:
+      coding:
+      - system: http://hl7.org/fhir/deviceassociation-status
+        code: implanted
+        display: Implanted
+    subject:
+      reference: Patient/example
+    period:
+      start: '2025-10-28'
