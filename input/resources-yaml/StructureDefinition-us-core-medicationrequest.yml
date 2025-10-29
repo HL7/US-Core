@@ -107,27 +107,60 @@ differential:
       description: The type of medication order. Note that other codes are permitted,
         see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/ValueSet/medicationrequest-category
-  - id: MedicationRequest.reported[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: MedicationRequest.reported[x]
-    short: (USCDI) Reported rather than primary record
+
+# === R6 Change Start ===
+  # Boolean onnly in R6
+  # - id: MedicationRequest.reported[x]
+  #   path: MedicationRequest.reported[x]
+  - id: MedicationRequest.reported
+    path: MedicationRequest.reported
+    # type:
+    # - extension:
+    #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #     valueBoolean: true
+    #   code: boolean
+    # - extension:
+    #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #     valueBoolean: true
+    #   code: Reference
+    #   targetProfile:
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+    #   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+    #   _targetProfile:
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: true
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    #   - extension:
+    #     - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+    #       valueBoolean: false
+    mustSupport: true
+# === R6 Change End ====
+
+# ==== R6 Change Start ===
+# new element in R6 move Replaces MedicationRequest.reportedReference
+  - id: MedicationRequest.informationSource
+    path: MedicationRequest.informationSource
     type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: boolean
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: Reference
+    - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+      - http://hl7.org/fhir/StructureDefinition/Group
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -144,19 +177,22 @@ differential:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
     mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: MedicationOrder.status
-  - id: MedicationRequest.medication[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: MedicationRequest.medication[x]
-    short: (USCDI) Medication to be taken
+# ==== R6 Change End ====
+
+# ==== R6 Change Start ====
+# Type changed to CodeableReference in R6
+  # - id: MedicationRequest.medication[x]
+  #   path: MedicationRequest.medication[x]
+  - id: MedicationRequest.medication
+    path: MedicationRequest.medication
     type:
-    - code: CodeableConcept
-    - code: Reference
+  #   - code: CodeableConcept
+  #   - code: Reference
+    - code: CodeableReference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
     mustSupport: true
@@ -166,10 +202,9 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: MedicationOrder.medication[x]
+    # ==== R6 Change End ====
+
   - id: MedicationRequest.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: MedicationRequest.subject
     short: (USCDI) Who or group medication request is for
     type:

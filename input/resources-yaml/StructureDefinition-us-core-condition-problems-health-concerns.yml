@@ -3,8 +3,8 @@ id: us-core-condition-problems-health-concerns
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
 name: USCoreConditionProblemsHealthConcernsProfile
 title: US Core Condition Problems and Health Concerns Profile
-status: active
-experimental: false
+status: draft
+experimental: true
 date: 2022-04-20
 description: The US Core Condition Problems and Health Concerns Profile is based upon
   the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability
@@ -20,7 +20,7 @@ description: The US Core Condition Problems and Health Concerns Profile is based
   which core elements, extensions, vocabularies, and value sets **SHALL** be present
   in the resource when and constrains the way the elements are used using this profile. It provides the floor for standards development
   for specific use cases.
-fhirVersion: 4.0.1
+
 kind: resource
 abstract: false
 type: Condition
@@ -55,7 +55,7 @@ differential:
       valueBoolean: true
     path: Condition.clinicalStatus
     short: (USCDI) active | recurrence | relapse | inactive | remission
-      | resolved
+      | resolved | unknown
     mustSupport: true
     binding:
       strength: required

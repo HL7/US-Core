@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -28,3 +28,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 * Additional codes that translate or map to the Observation code (e.g., local codes) are allowed.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

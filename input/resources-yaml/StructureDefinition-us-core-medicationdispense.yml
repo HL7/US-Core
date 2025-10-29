@@ -37,21 +37,25 @@ differential:
     condition:
       - us-core-20
     mustSupport: true
-  - id: MedicationDispense.medication[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: MedicationDispense.medication[x]
-    short: (USCDI) What medication was supplied
+
+    # === R6 Change Start ===
+  # Type changed to CodeableReference in R6
+  # - id: MedicationDispense.medication[x]
+  #   path: MedicationDispense.medication[x]
+  - id: MedicationDispense.medication
+    path: MedicationDispense.medication
     type:
-    - code: CodeableConcept
-    - code: Reference
+  #   - code: CodeableConcept
+  #   - code: Reference
+    - code: CodeableReference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
     mustSupport: true
     binding:
       strength: extensible
       valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
+    # === R6 Change End ===
+
   - id: MedicationDispense.subject
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

@@ -1,4 +1,4 @@
-{% include quickstart-intro.md %}
+{% include grayed-out.html %}{% include quickstart-intro.md %}
 
 #### Mandatory Search Parameters:
 
@@ -35,3 +35,4 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 
 {% include link-list.md %}
+</div><!-- grayed-out -->

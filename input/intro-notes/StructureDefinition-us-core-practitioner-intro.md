@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -30,3 +30,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server], or a provider directory capability statement.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

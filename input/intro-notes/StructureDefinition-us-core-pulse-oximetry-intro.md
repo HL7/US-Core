@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -33,3 +33,5 @@ In addition to the Mandatory and Must Support data elements in the [US Core Vita
 - A pulse oximetry reading without component inspired oxygen observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component] observations**SHOULD** be used.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

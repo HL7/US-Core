@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -31,3 +31,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
   and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories and the National Association of Insurance Commissioners NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

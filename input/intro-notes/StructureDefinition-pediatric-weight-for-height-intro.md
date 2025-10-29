@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -26,3 +26,5 @@ The following are example usage scenarios for this profile:
 - Information about the growth chart tables used to determine percentiles **SHOULD** be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

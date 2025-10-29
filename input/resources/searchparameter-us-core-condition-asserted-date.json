@@ -37,7 +37,7 @@
     "Condition"
   ],
   "type": "date",
-  "expression": "Condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate').valueDateTime",
+  "expression": "Condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate').value",
   "xpath": "f:Condition/f:extension[@url='http://hl7.org/fhir/StructureDefinition/condition-assertedDate']/f:valueDateTime/@value",
   "xpathUsage": "normal",
   "multipleOr": true,

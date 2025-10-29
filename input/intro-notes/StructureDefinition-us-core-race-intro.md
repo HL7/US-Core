@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 ### Profile specific implementation guidance
 
 - This Complex Extension for race allows one or more race codes of which:
@@ -8,3 +8,5 @@
 - A [`race`]<!--n [`ethnicity`]--><!-- [`gender-identity`]--> search parameter has been defined for this extension.  However, there are no race<!--ethnicity--><!--gender-identity--> search requirements for the client or server.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

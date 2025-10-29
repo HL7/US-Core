@@ -1,4 +1,4 @@
-{% include new_page.md %}
+{% include grayed-out.html %}{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -30,3 +30,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - The [US Core Pregnancy Status Codes] value set includes SNOMED CT codes and the HL7 V3 code for the concept "unknown". These codes have historically been used to communicate the pregnancy status of a patient.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

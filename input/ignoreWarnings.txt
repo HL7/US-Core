@@ -50,7 +50,7 @@ WARNING: SearchParameter/us-core-specimen-id: SearchParameter: The expression 'S
 
 # === US Core Goal Description Binding is extensible which allow for text only and guidance to use free text for Goal.description is given in the US Core Goal Implementation Guidance (1). There are 2 Goal examples, Goal/goal-sdoh-2 uses a code this one does not. ===
 
-No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.1.0)
+No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.1.0-R6)
 
 # === Circular US Core Warnings since this is US Core (4): NONE ===
 
@@ -72,18 +72,18 @@ INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: Code System UR
 
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-WARNING: Encounter/example-1: Encounter.type[0]: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|6.1.0
-WARNING: Procedure/defib-implant: Procedure.code: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|6.1.0
+WARNING: Encounter/example-1: Encounter.type[0]: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|6.1.0-R6
+WARNING: Procedure/defib-implant: Procedure.code: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|6.1.0-R6
 Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
-WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0
+WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0-R6
 
 
 
 
 # === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) NONE===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
 # === Code from extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset (1)===
@@ -93,10 +93,10 @@ None of the codings provided are in the value set 'Practice Setting Code Value S
 
 # === Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles (7)===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.1.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0-R6
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0-R6
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0-R6
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.1.0-R6
 
 
 # === Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example) (2)===
@@ -138,3 +138,34 @@ WARNING: StructureDefinition/us-core-jurisdiction: StructureDefinition.context[0
 # === Using the extension US Core Extension Questionnaire URI  pointing to a pdf form of the Questionnaire for this example ===
 
 No questionnaire is identified, so no validation can be performed against the base questionnaire
+
+# === Using type pattern
+
+The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# === can't find code system
+
+The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
+
+
+# ===
+
+The concept 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is deprecated and its use should be reviewed
+The concept 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is deprecated and its use should be reviewed
+
+# ===
+
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# ===
+
+Best Practice Recommendation: In general, all observations should have a performer
+
+
+# ===
+
+The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
+The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
+Reference to experimental CodeSystem http://hl7.org/fhir/restful-interaction|6.0.0-ballot3
+Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-ballot3
+Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3

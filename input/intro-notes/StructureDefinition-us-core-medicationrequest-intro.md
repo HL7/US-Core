@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-MedicationRequest
@@ -64,3 +64,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 * Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

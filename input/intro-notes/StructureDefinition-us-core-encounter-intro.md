@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -41,3 +41,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
   * If using `Encounter.location.location` it **SHOULD** conform to US Core Location.  However, as a result of implementation feedback, it **MAY**  reference the base FHIR Location resource.  See this guidance on [Referencing US Core Profiles].
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

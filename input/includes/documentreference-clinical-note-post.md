@@ -5,7 +5,7 @@ An example to demonstrate writing a note to the server.
 
 ~~~
 
-{% include_relative DocumentReference-discharge-summary.json %}
+<!-- {% raw %} {% include_relative DocumentReference-discharge-summary.json %} {% endraw %} -->
 
 ~~~~
 

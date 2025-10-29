@@ -1,4 +1,4 @@
-**Example Usage Scenarios:**
+{% include grayed-out.html %}**Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
 
@@ -33,3 +33,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 * As an alternative to the US Core CarePlan, Assessment and Plan of Treatment may be included in various types of [Clinical Notes], such as Progress Notes, History & Physical (H&P), Discharge Summaries, etc.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

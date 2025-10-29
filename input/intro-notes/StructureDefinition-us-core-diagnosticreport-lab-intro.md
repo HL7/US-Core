@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core DiagnosticReport Profile for Laboratory Results Reporting:
@@ -35,3 +35,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 * Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

@@ -1,4 +1,4 @@
-{% include new_page.md %}
+{% include grayed-out.html %}{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -39,3 +39,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - Although both `Reference(US Core Observation  Profile)` or `Reference(US Core QuestionnaireResponse Profile)` are marked as MustSupport for `Observation.derivedFrom`, the server system are not required to support both, but **SHALL** support at least one.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

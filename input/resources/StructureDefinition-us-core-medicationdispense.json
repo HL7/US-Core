@@ -42,21 +42,11 @@
                 "mustSupport": true
             },
             {
-                "id": "MedicationDispense.medication[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "MedicationDispense.medication[x]",
-                "short": "(USCDI) What medication was supplied",
+                "id": "MedicationDispense.medication",
+                "path": "MedicationDispense.medication",
                 "type": [
                     {
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "code": "Reference",
+                        "code": "CodeableReference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
                         ]

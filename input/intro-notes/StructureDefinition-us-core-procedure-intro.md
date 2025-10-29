@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -38,3 +38,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - *The Reason or justification for a referral or consultation is communicated through the [US Core ServiceRequest Profile] which can be linked to the Procedure through the `Procedure.basedOn' element.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

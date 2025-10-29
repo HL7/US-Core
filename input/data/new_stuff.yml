@@ -28,20 +28,47 @@
 
 
 # Profiles
-# - USCoreConditionEncounterDiagnosisProfile
-# - USCoreConditionProblemsHealthConcernsProfile
-# - USCoreQuestionnaireResponseProfile
-# - USCoreObservationSurveyProfile
-# - USCoreObservationSDOHAssessment
-# - USCoreObservationOccupationProfile
-# - USCoreObservationPregnancyStatusProfile
-# - USCoreObservationPregnancyIntentProfile
+# - USCoreADIDocumentReferenceProfile
+- USCoreAllergyIntolerance
+# - USCoreAverageBloodPressureProfile
+# - USCoreCareExperiencePreferenceProfile
+# - USCoreCarePlanProfile
+# - USCoreCareTeamProfile
+- USCoreConditionEncounterDiagnosisProfile
+- USCoreConditionProblemsHealthConcernsProfile
 # - USCoreCoverageProfile
-# - USCoreSpecimenProfile
+- USCoreDeviceAssociationProfile
+# - USCoreDiagnosticReportProfileLaboratoryReporting
+# - USCoreDiagnosticReportProfileNoteExchange
+- USCoreDocumentReferenceProfile
+- USCoreEncounterProfile
+# - USCoreGoalProfile
+# - USCoreImmunizationProfile
+- USCoreImplantableDeviceProfile
+- USCoreLaboratoryResultObservationProfile
+# - USCoreLocationProfile
 # - USCoreMedicationDispenseProfile
+# - USCoreMedicationRequestProfile
+# - USCoreObservationADIDocumentationProfile
+- USCoreObservationClinicalResultProfile
+# - USCoreObservationOccupationProfile
+# - USCoreObservationPregnancyIntentProfile
+# - USCoreObservationPregnancyStatusProfile
 # - USCoreObservationScreeningAssessmentProfile
+# - USCoreObservationSDOHAssessment
+# - USCoreObservationSexualOrientationProfile
+# - USCoreObservationSurveyProfile
+- USCorePatientProfile
+- USCorePractitionerProfile
+- USCoreProcedureProfile
+# - USCoreQuestionnaireResponseProfile
+# - USCoreServiceRequestProfile
+# - USCoreSexExtension
 # - USCoreSimpleObservationProfile
-# - USCoreObservationClinicalResultProfile
+# - USCoreSmokingStatusProfile
+- USCoreSpecimenProfile
+# - USCoreTreatmentInterventionPreferenceProfile
+# - USCoreVitalSignsProfile
 
 
 # Extensions
@@ -49,7 +76,7 @@
 # - USCoreTribalAffiliationExtension
 # - USCoreSexForClinicalUse
 # - USCoreJurisdictionExtension
-# - USCoreSexExtension
+- USCoreSexExtension
 
 # OperationDefinition
 

@@ -1,4 +1,4 @@
-**Example Usage Scenarios:**
+{% include grayed-out.html %}**Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core Specimen profile:
 
@@ -23,3 +23,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 *  in addition to Specimen search criteria, clients may request Specimen resources be included with Observation or DiagnosticReport resource query. An example query is provided in the [Notes](#notes) section below.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

@@ -1,4 +1,4 @@
-{% include quickstart-intro.md %}
+{% include grayed-out.html %}{% include quickstart-intro.md %}
 
 #### Mandatory Search Parameters:
 
@@ -25,3 +25,5 @@ The following search parameters, search parameter combinations SHALL be supporte
       *Implementation Notes:* Fetches a bundle of a resource of a particular type (within the clients authorization scope) and any corresponding Provenance resources. ([how to search by token])
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

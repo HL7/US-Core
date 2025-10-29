@@ -36,6 +36,6 @@ HTTP/1.1 200 OK
 
 ~~~
 
-{% include_relative Bundle-docref-example-1.json %}
+<!-- {% raw %} {% include_relative Bundle-docref-example-1.json %} {% endraw %} -->
 
 ~~~

@@ -1,4 +1,4 @@
-{% include new_page.md %}
+{% include grayed-out.html %}{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -35,3 +35,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - For representing laboratory test results, see the [US Core Laboratory Result Observation Profile].
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

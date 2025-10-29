@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -23,3 +23,5 @@ The following are example usage scenarios for this profile:
 - See the [Screening and Assessments] guidance page for how this profile *along with other Observation Profiles or alternatively QuestionnaireResponse* to is used represent SDOH assessments.
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->

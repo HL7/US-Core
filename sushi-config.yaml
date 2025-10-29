@@ -6,9 +6,47 @@ id: hl7.fhir.us.core
 canonical: 'http://hl7.org/fhir/us/core'
 name: USCore
 title: US Core Implementation Guide
-status: active
+status: draft
+
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
+    valueCode: cgp  # <<< The value must be the code for the workgroup
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
+    valueInteger: 3
+definition:
+  extension:
+    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+    #   valueCode: hl7.fhir.us.core#8.0.0
+    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+    #   valueCode: hl7.fhir.us.core#8.0.0-ballot
+    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+    #   valueCode: hl7.fhir.us.core#7.0.0
+    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    #   valueCode: hl7.fhir.us.core#7.0.0-ballot
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#6.1.0
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#6.0.0
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#6.0.0-ballot
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#5.0.1
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#5.0.0
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#4.1.0
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#4.0.0
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#3.2.0
+    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+      valueCode: hl7.fhir.us.core#3.1.1
+
+
 publisher:
-  name: HL7 International - Cross-Group Projects
+  name: 'HL7 International / Cross-Group Projects'
   url: 'http://www.hl7.org/Special/committees/cgp'
   email: cgp@lists.HL7.org
 jurisdiction: 'urn:iso:std:iso:3166#US'
@@ -20,15 +58,19 @@ description: >-
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2023-06-19
-version: '6.1.0'
-fhirVersion: 4.0.1
+date: 2025-10-28
+version: '6.1.0-R6'
+# fhirVersion: 4.0.1
+# =============== latest version of FHIR ============
+fhirVersion: 6.0.0-ballot3
+
+
 dependencies:
   hl7.fhir.uv.bulkdata: 2.0.0
   hl7.fhir.uv.smart-app-launch: 2.1.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.11.0
+    version: 0.23.0 # <---latest version  0.11.0. <--- 6.1 version
     id: vsac
   hl7.fhir.uv.sdc: 3.0.0
   # hl7.fhir.us.sdoh-clinicalcare: 1.0.0
@@ -37,6 +79,9 @@ dependencies:
     uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
     version: 0.12.0
   ihe.formatcode.fhir: 1.1.0
+
+  hl7.fhir.uv.extensions.r4: 5.2.0 #hl7.fhir.uv.extensions: 5.1.0 #5.1.0-cibuild #5.1.0-ballot1  # <<<< If your WG is not in the older list, you need to add an explicit dependency to the current version of the extensions pack
+
 pages:
   index.md:
     title: Home
@@ -138,8 +183,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - comparison-argo/sd-argo-observationresults-us-core-observation-lab.html
     - comparison-argo/sd-argo-ethnicity-us-core-ethnicity.html
     - comparison-argo/vs-narrative-status-us-core-narrative-status.html
-  # ipa-comparison: 
+  # ipa-comparison:
   #   - '{current}'
+  auto-oid-root: 2.16.840.1.113883.4.642.40.2
+
 copyrightyear: '2023+'
 #releaselabel: CI Build
 releaselabel: STU6

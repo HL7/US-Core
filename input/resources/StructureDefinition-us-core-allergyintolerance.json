@@ -4,11 +4,10 @@
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance",
     "name": "USCoreAllergyIntolerance",
     "title": "US Core AllergyIntolerance Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2022-04-20",
-    "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
-    "fhirVersion": "4.0.1",
+    "status": "draft",
+    "experimental": true,
+    "date": "2025-06-02",
+    "description": "The US Core AllergyIntolerance Profile inherits from the FHIR [AllergyIntolerance](https://hl7.org/fhir/R4/allergyintolerance.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
     "kind": "resource",
     "abstract": false,
     "type": "AllergyIntolerance",
@@ -19,8 +18,6 @@
             {
                 "id": "AllergyIntolerance",
                 "path": "AllergyIntolerance",
-                "definition": "\\-",
-                "comment": "\\-",
                 "mustSupport": false,
                 "mapping": [
                     {
@@ -31,14 +28,7 @@
             },
             {
                 "id": "AllergyIntolerance.clinicalStatus",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "AllergyIntolerance.clinicalStatus",
-                "short": "(USCDI) active | inactive | resolved",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -53,14 +43,7 @@
             },
             {
                 "id": "AllergyIntolerance.verificationStatus",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "AllergyIntolerance.verificationStatus",
-                "short": "(USCDI) unconfirmed | confirmed | refuted | entered-in-error",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -75,14 +58,7 @@
             },
             {
                 "id": "AllergyIntolerance.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "AllergyIntolerance.code",
-                "short": "(USCDI) Code that identifies the allergy or intolerance",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -98,14 +74,7 @@
             },
             {
                 "id": "AllergyIntolerance.patient",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "AllergyIntolerance.patient",
-                "short": "(USCDI) Who the sensitivity is for",
                 "type": [
                     {
                         "code": "Reference",
@@ -124,31 +93,22 @@
             },
             {
                 "id": "AllergyIntolerance.reaction",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "AllergyIntolerance.reaction",
-                "short": "(USCDI) Adverse Reaction Events linked to exposure to substance",
                 "mustSupport": true
             },
             {
                 "id": "AllergyIntolerance.reaction.manifestation",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "AllergyIntolerance.reaction.manifestation",
-                "short": "(USCDI) Clinical symptoms/signs associated with the Event",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
                 }
+            },
+            {
+                "id": "AllergyIntolerance.reaction.manifestation.concept",
+                "path": "AllergyIntolerance.reaction.manifestation.concept",
+                "mustSupport": true
             }
         ]
     }

@@ -1,4 +1,4 @@
-
+{% include grayed-out.html %}
 ### Mandatory and Must Support Data Elements
 
 
@@ -21,3 +21,5 @@ The following data-elements must always be present ([Mandatory] definition) or m
 * As a result of implementation feedback, the US Core Location  and PractitionerRole Profiles are not explicitly referenced in any US Core Profile. However they **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].
 
 {% include link-list.md %}
+
+</div><!-- grayed-out -->
