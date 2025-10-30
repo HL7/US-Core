@@ -1,14 +1,16 @@
+{::options toc_levels="1..5"/}
+
 {% capture NO %}<span style="color:red; font-size:1.5em">&#10008;</span>{% endcapture %}
 {% capture NA %}<span style="font-size:1.5em; font-weight: bold">&mdash;</span>{% endcapture %}
 {% capture OK %}<span style="color:green; font-size:1.5em">&#10004;</span>{% endcapture %}
 {% capture MAYBE %}<span style="color:orange; font-size:1.5em">&#10133;</span>{% endcapture %}
 
+### Scope and Context of US Core
 US Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient facing systems​ providing:
 
 - An exchange Standard for [U.S. Core Data for Interoperability (USCDI)] and comments and requests from the US Realm FHIR community.
 - A set of conformance requirements that enforce a set of 'minimum requirements' on FHIR resources to create the US Core Profiles specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.
 - For use by US stakeholders when implementing FHIR to provide a common implementation and to be built upon when creating further US Realm specific profiles and implementation guides for specific use cases.
-
 
 The context of US Core within the set of US Realm HL7 FHIR standards is shown in the figure below.
 
@@ -166,7 +168,7 @@ IPA does not include requirements for Suppressed Data.
 ###### Additional profiles
 This version of US Core has no equivalent profile for the following IPA profiles:
 - [IPA-MedicationStatement](https://hl7.org/fhir/uv/ipa/STU1.1//StructureDefinition-ipa-medicationstatement.html)
--
+
 <div class="bg-success" markdown="1">
 
 ##### Additional IPS requirements

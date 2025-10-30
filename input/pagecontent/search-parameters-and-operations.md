@@ -4,7 +4,7 @@ The following operation has been defined for the US Core Implementation Guide. F
 
  <span class="bg-success" markdown="1">
 
-{% include list-simple-operationdefinitions-en.xhtml %}
+{% include list-simple-operationdefinitions.xhtml %}
 
  </span><!-- new-content -->
 
