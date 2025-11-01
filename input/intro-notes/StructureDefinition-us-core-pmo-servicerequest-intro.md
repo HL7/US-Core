@@ -60,13 +60,13 @@ This section provides detailed implementation guidance for the US Core Profile t
 - A secondary use for this profile is to represent the medical orders section in a FHIR PMO document, such as defined by the [PACIO Advance Healthcare Directive Interoperability Implementation Guide].
 - *The `ServiceRequest.code` is bound to [Portable Medical Orders – Detailed Categories and Interventions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.35/expansion), which is comprised of code sets for each [Portable Medical Order Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.34/Expansion) found in `ServiceRequest.category:us-core-pmo-category`.
   - For proper context, these codes **SHOULD** be aligned with the appropriate Category as follows:
-
     |PMO Category Code|PMO Code Set|
     |---|---|
     |100822-6 (Cardiopulmonary resuscitation orders)|[Cardiopulmonary Resuscitation Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.28/expansion/Latest)<br /> <br /> [Cardiopulmonary Resuscitation Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.30/expansion/Latest)|
     |100823-4 (Initial portable medical treatment orders)| [Initial Treatment portable medical Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.27/expansion/Latest)|
     |100824-2 (Additional portable medical orders or instructions)|[Additional Portable Medical Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.32/expansion/Latest)|
     |100825-9 (Medically assisted nutrition orders)|[Medically Assisted Nutrition Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.35/expansion/Latest)|
+    {:.grid}
   - When there is no appropriate code to capture the order, plain text can be used here and in the optional `ServiceRequest.orderDetail` element.
 - *The PMO document is referenced in `ServiceRequest.reasonReference`.
   - The document can be in any format the system accepts, such as a structured FHIR or CCDA document, scanned images, or PDF files.
