@@ -664,7 +664,7 @@ This ballot addresses the following:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **APPLIED:** Non-compatible (Enhancement)  Limit context for jurisdiction extension [FHIR-41867](https://jira.hl7.org/browse/FHIR-41867) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-jurisdiction.html)
 
 ##### Compatible, substantive
@@ -688,7 +688,7 @@ This ballot addresses the following:
 8. **APPLIED:** Compatible, substantive (Clarification)  update canonical urls in examples and capability statements to include the version [FHIR-41256](https://jira.hl7.org/browse/FHIR-41256) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/AllergyIntolerance-example.html) and [Here](https://hl7.org/fhir/us/core/2024Jan/CapabilityStatement-us-core-server.json.html)
 9.  **APPLIED:** Compatible, substantive (Enhancement)  Added interpretation to laboratory result examples [FHIR-40297](https://jira.hl7.org/browse/FHIR-40297) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/Observation-cbc-mchc.html)
 
-#### Non-substantive
+##### Non-substantive
 1.  **APPLIED:** Non-substantive (Correction) Update CarePlan text status element's short description to reflect the status values [FHIR-43015](https://jira.hl7.org/browse/FHIR-43015) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-careplan.html#profile)
 2.  **APPLIED:** Non-substantive (Correction) Update Smoking Status status element's short description to reflect the status values [FHIR-43118](https://jira.hl7.org/browse/FHIR-43118) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-smokingstatus.html#profile)
 3.  **APPLIED:** Non-substantive (Correction) Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-observation-screening-assessment.html) and [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-observation-clinical-result.html) and [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-smokingstatus.html)
@@ -755,7 +755,7 @@ To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; dat
 ##### Compatible, substantive
 1. **Applied:** Compatible, substantive (Correction) Add Sex extension necessary to satisfy USCDI v3 [FHIR-41301](https://jira.hl7.org/browse/FHIR-41301) and [FHIR-41352](https://jira.hl7.org/browse/FHIR-41352) See Changes [Here](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-sex.html), [Here](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html), and [Here](https://hl7.org/fhir/us/core/STU6.1/uscdi.html)
 
-#### Non-substantive
+##### Non-substantive
 2. **Applied:** Non-substantive (Correction) Update link to CDC Race and Ethnicity Code Set [FHIR-41277](https://jira.hl7.org/browse/FHIR-41277) See Changes [Here](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-race.html)
 3. **Applied:** Non-substantive (Correction) Typo change `Condition.onsetDate` to `Condition.onsetDateTime`  [FHIR-41239](https://jira.hl7.org/browse/FHIR-41239) See Changes [Here](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html)
 4. **Applied:** Non-substantive (Correction) Clarify US Core USCDI Requirement Extension not intended for implementers [FHIR-41238](https://jira.hl7.org/browse/FHIR-41238) See Changes [Here](https://hl7.org/fhir/us/core/STU6.1/profiles-and-extensions.html)
@@ -809,7 +809,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **Applied:** Non-compatible (Enhancement) Add to the code systems chart [FHIR-40124](https://jira.hl7.org/browse/FHIR-40124) See Changes [Here](https://hl7.org/fhir/us/core/STU6/terminology.html#code-system-uris-used-in-us-core)
 2. **Applied:** Non-compatible (Enhancement) Make Specimen.subject must support [FHIR-40136](https://jira.hl7.org/browse/FHIR-40136) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-specimen.html)
 
@@ -856,7 +856,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 35. **Applied:** Compatible, substantive (Enhancement) List only base profiles for reasonReference. [FHIR-40656](https://jira.hl7.org/browse/FHIR-40656) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-servicerequest.html#profile) and [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-medicationrequest.html#profile)
 36. **Applied:** Compatible, substantive (Enhancement) Remove US Core QuestionnaireResponse Tag Element [FHIR-40742](https://jira.hl7.org/browse/FHIR-40742) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-questionnaireresponse.html) and [Here](https://hl7.org/fhir/us/core/STU6/Questionnaire-prapare-example.html)
 
-#### Non-substantive
+##### Non-substantive
 37. **Applied:** Non-substantive (Correction) Remove html entities from examples [FHIR-37474](https://jira.hl7.org/browse/FHIR-37474)
 38. **Applied:** Non-substantive (Correction) Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be "1" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) See Changes [Here](https://hl7.org/fhir/us/core/STU6/ValueSet-us-core-laboratory-test-codes.html)
 39. **Applied:** Non-substantive (Clarification) Additional guidance for accessing imaging studies [FHIR-38808](https://jira.hl7.org/browse/FHIR-38808) See Changes [Here](https://hl7.org/fhir/us/core/STU6/StructureDefinition-us-core-diagnosticreport-note.html#mandatory-and-must-support-data-elements)
@@ -1001,7 +1001,7 @@ This ballot addresses the following:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **Applied:** Non-compatible (Correction)  Change Immunization.primarySource to must support and update definition [FHIR-37723](https://jira.hl7.org/browse/FHIR-37723) See Changes [Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-immunization.html)
 2. **Applied:** Non-compatible (Enhancement) Update $docref type input to multiple Codings [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) See Changes [Here](https://hl7.org/fhir/us/core/2023Jan/OperationDefinition-docref.html) and See Changes [Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-documentreference.html#mandatory-operation)
 
@@ -1017,7 +1017,7 @@ This ballot addresses the following:
 11. **Applied:** Compatible, substantive (Enhancement) Add USCDI V3 Requirements [FHIR-38702](https://jira.hl7.org/browse/FHIR-38702) See Changes Listed in introduction above.
 12. **Applied:** Compatible, substantive (Enhancement) Add Refill and Quantity to MedRequest [FHIR-39343](https://jira.hl7.org/browse/FHIR-39343) See Changes [Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-medicationrequest.html)
 
-#### Non-substantive
+##### Non-substantive
 13. **Applied:** Non-substantive (Enhancement) Add recommended search combination of patient + status [FHIR-19803](https://jira.hl7.org/browse/FHIR-19803) See Changes [Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-implantable-device.html#notes)
 14. **Applied:** Non-substantive (Enhancement) Consider adding years since quite smoking [FHIR-20131](https://jira.hl7.org/browse/FHIR-20131) See Changes [Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-smokingstatus.html)
 15. **Applied:** Non-substantive (Correction) Update missing data for coded data examples [FHIR-31381](https://jira.hl7.org/browse/FHIR-31381) See Changes [Here](https://hl7.org/fhir/us/core/2023Jan/general-requirements.html#missing-data)
@@ -1073,7 +1073,7 @@ The changes in this errata to version 5.0.0 of US Core have been reviewed by the
 ##### Compatible, substantive
 1. **Applied:** Compatible, substantive (Clarification) Correct misapplied tracker     - for `agent.who` remove MS from reference Practitioner and add to Organization [FHIR-28517](https://jira.hl7.org/browse/FHIR-28517) [See Change Here](https://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-provenance.html)
 
-#### Non-substantive
+##### Non-substantive
 2. **Applied:** Non-substantive (Correction) Typos in Condition Profile URls  [FHIR-37585](https://jira.hl7.org/browse/FHIR-37585) See Changes:
     - [Here](https://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-condition-encounter-diagnosis.html)
     - [Here](https://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-condition-problems-health-concerns.html)
@@ -1116,7 +1116,7 @@ These changes are a result of over 100 January 2022 Ballot related trackers whic
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **Applied:** Non-compatible (Enhancement) Change Clinical Tests Observations category to "clinical-test" and add guidance [FHIR-34555](https://jira.hl7.org/browse/FHIR-34555) See Changes:
     - [Here](https://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-clinical-test.html)
     - [Here](https://hl7.org/fhir/us/core/STU5/ValueSet-us-core-observation-category.html)
@@ -1164,7 +1164,7 @@ These changes are a result of over 100 January 2022 Ballot related trackers whic
 23. **Applied:** Compatible, substantive (Enhancement) Move change log from version history to new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](https://hl7.org/fhir/us/core/STU5/changes.html)
 24. **Applied:** Compatible, substantive (Correction) Change Encounter.reasonReference from 0..1 to 0..* [FHIR-36862](https://jira.hl7.org/browse/FHIR-36862) [See Change Here](https://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-encounter.html)
 
-#### Non-substantive
+##### Non-substantive
 25. **Applied:** Non-substantive (Clarification) Clarify clinicalStatus invariant [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](https://hl7.org/fhir/us/core/STU5/general-requirements.html#missing-data)
 26. **Applied:** Non-substantive (Correction) Fix Ethnicity ValueSet description [FHIR-34488](https://jira.hl7.org/browse/FHIR-34488) [See Change Here](https://hl7.org/fhir/us/core/STU5/ValueSet-omb-ethnicity-category.html)
 27. **Applied:** Non-substantive (Clarification) Remove MS from ServiceRequest.occurrenceDateTime add MS to ServiceRequest.occurrencePeriod [FHIR-34493](https://jira.hl7.org/browse/FHIR-34493) [See Change Here](https://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-servicerequest.html)
@@ -1292,7 +1292,7 @@ This Ballot addresses the following issues:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **Applied:** Non-compatible (Correction) add same Null options to Race and Ethnicity [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) See Change
     - [Here](https://hl7.org/fhir/us/core/2022Jan/ValueSet-omb-ethnicity-category.html)
     - [Here](https://hl7.org/fhir/us/core/2022Jan/ValueSet-detailed-ethnicity.html)
@@ -1320,7 +1320,7 @@ This Ballot addresses the following issues:
     - [Here](https://hl7.org/fhir/us/core/2022Jan/StructureDefinition-us-core-diagnosticreport-lab.html)
     - [Here](https://hl7.org/fhir/us/core/2022Jan/StructureDefinition-us-core-diagnosticreport-note.html)
 
-#### Non-substantive
+##### Non-substantive
 13. **Applied:** Non-substantive (Correction) FIX imm-1.json NDC/CVX codes QA Error [FHIR-30104](https://jira.hl7.org/browse/FHIR-30104) See Change:
     - [Here](https://hl7.org/fhir/us/core/2022Jan/Immunization-imm-1.html)
     - [Here](https://hl7.org/fhir/us/core/2022Jan/StructureDefinition-us-core-immunization.html)
@@ -1402,7 +1402,7 @@ Listed below are the resolved trackers for this version:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **Applied:** Non-compatible (Correction)  Change $docref start and end input parameter types from `date` to `dateTime` ([FHIR-29825](https://jira.hl7.org/browse/FHIR-29825)) [See Change Here](https://hl7.org/fhir/us/core/STU4/OperationDefinition-docref.html)
 2. **Applied:** Non-compatible (Correction) Allergy Intolerance example for UNKNOWN allergy status does not use unknown ([FHIR-30345](https://jira.hl7.org/browse/FHIR-30345)) [See Change Here](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-allergyintolerance.html#mandatory-and-must-support-data-elements)
 3. **Applied:** Non-compatible (Enhancement)  Clarify UDI information. ([FHIR-30672](https://jira.hl7.org/browse/FHIR-30672)) See Changes:
@@ -1428,7 +1428,7 @@ Listed below are the resolved trackers for this version:
 19. **Applied:** Compatible, substantive (Enhancement)  Add LOINC to procedure codes ([FHIR-31514](https://jira.hl7.org/browse/FHIR-31514)) [See Change Here](https://hl7.org/fhir/us/core/STU4/ValueSet-us-core-procedure-code.html)
 20. **Applied:** Compatible, substantive (Enhancement)  Make PractitionerRole.organization must support and add invariant ([FHIR-29680](https://jira.hl7.org/browse/FHIR-29680)) [See Change Here](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-practitionerrole.html)
 
-#### Non-substantive
+##### Non-substantive
 21. **Applied:** Non-substantive (Enhancement) Provide guidance on the population of narrative ([FHIR-29777](https://jira.hl7.org/browse/FHIR-29777)) [See Change Here](https://hl7.org/fhir/us/core/STU4/general-guidance.html#narrative)
 22. **Applied:** Non-substantive (Correction)  The history file markdown rendering of the table ([FHIR-30100](https://jira.hl7.org/browse/FHIR-30100)) [See Change Here](https://hl7.org/fhir/us/core/history.html)
 23. **Applied:** Non-substantive (Correction) footnote rendering     - pre-applied ([FHIR-30101](https://jira.hl7.org/browse/FHIR-30101)) [See Change Here](https://hl7.org/fhir/us/core/STU4/general-guidance.html#guidance-on-limiting-the-number-of-search-results)
@@ -1575,7 +1575,7 @@ listed below are the resolved trackers for this version:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **Applied:** Non-compatible (Correction)  Timing association for smoking status changed from `issued` to `effectiveDateTime` ([FHIR-28090](https://jira.hl7.org/browse/FHIR-28090)) [See Change Here](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-smokingstatus.html)
 2. **Applied:** Non-compatible (Enhancement)  Change bindings from extensible to required for Condition.code value set: US Core Condition Category Codes Procedure.code value set: US Core Procedure Codes ([FHIR-29563](https://jira.hl7.org/browse/FHIR-29563)) See Changes Here:
     - [1 StructureDefinition-us-core-condition-definitions](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-condition.html)
@@ -1623,7 +1623,7 @@ listed below are the resolved trackers for this version:
     - [US Core Provider Specialty (NUCC) --> Healthcare Provider Taxonomy](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-practitionerrole.html)
     - [US Core Vaccine Administered Value Set (CVX) --> CVX Vaccines Administered Vaccine Set](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-immunization.html)
 
-#### Non-substantive
+##### Non-substantive
 34. **Applied:** Non-substantive (Correction)  Update Organization Quick Start Example Search. ([FHIR-29269](https://jira.hl7.org/browse/FHIR-29269)) [See Change Here](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-organization.html#quick-start)
 35. **Applied:** Non-substantive (Correction)  birthsex binding applied to the wrong element in US Core Patient StructuredDefinition/differential ([FHIR-29262](https://jira.hl7.org/browse/FHIR-29262)) [See Change Here](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-patient.profile.json.html)
 36. **Applied:** Non-substantive (Clarification)  Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-pulse-oximetry.html)
@@ -1681,7 +1681,7 @@ listed below are the resolved trackers for this version:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)**
 
-#### Non-compatible
+##### Non-compatible
 1. **Applied:** Non-compatible (Correction)  Corrected [US Core Pulse Oximetry Profile](https://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-pulse-oximetry.html#formal-views-of-profile-content) component.valueQuantity.code and component.valueQuantity.unit min from 0 to 1 to be consistent with the valueQuantity constraints within US Core ([FHIR-27846](https://jira.hl7.org/browse/FHIR-27846))
 2. **Applied:** Non-compatible (Correction)  Correct system URI for [ICD-10 procedure codes](https://hl7.org/fhir/us/core/STU3.1.1/ValueSet-us-core-procedure-icd10pcs.html) ([FHIR-26679](https://jira.hl7.org/browse/FHIR-26679)).
 
@@ -1699,7 +1699,7 @@ listed below are the resolved trackers for this version:
 13. **Applied:** Compatible, substantive (Correction)  Change valueQuantity min from 1 to 0 for [US Core Pediatric BMI for Age Observation Profile](https://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-pediatric-bmi-for-age-definitions.html#Observation.valueQuantity) and [US Core Pediatric Weight for Height Observation Profile](https://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-pediatric-weight-for-height-definitions.html#Observation.valueQuantity) ([FHIR-26363](https://jira.hl7.org/browse/FHIR-26363)).
 14. **Applied:** Compatible, substantive (Correction)  Corrected the wording "should support" to "shall support" in [Clinical Notes Guidance](https://hl7.org/fhir/us/core/STU3.1.1/clinical-notes-guidance.html#clinical-notes) ([FHIR-25455](https://jira.hl7.org/browse/FHIR-25455)).
 
-#### Non-substantive
+##### Non-substantive
 15. **Applied:** Non-substantive (Correction)  Add guidance for representing patient name suffix and previous patient name to the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements) ([FHIR-28129](https://jira.hl7.org/browse/FHIR-28129))
 16. **Applied:** Non-substantive (Correction)  Correct copy/paste error in [Goal Profile](https://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-goal-definitions.html#Goal.lifecycleStatus) ([FHIR-28109](https://jira.hl7.org/browse/FHIR-28109))
 17. **Applied:** Non-substantive (Correction)  Correct [US Core Provider Specialty (NUCC) ValueSet ](https://hl7.org/fhir/us/core/STU3.1.1/ValueSet-us-core-provider-specialty.html) to hide abstract grouping codes ([FHIR-27975](https://jira.hl7.org/browse/FHIR-27975))

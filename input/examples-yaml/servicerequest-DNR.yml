@@ -21,27 +21,27 @@ code:
   coding:
     - system: http://loinc.org
       code: LA33471-6
-      display: "No CPR: Do Not Attempt Resuscitation"
+      display: "No CPR: Do Not Attempt Resuscitation."
   text: "No CPR: Do Not Attempt Resuscitation"
 orderDetail:
   - text: Patient has explicitly declined CPR per advance directive discussion
 subject:
   reference: Patient/example
-  display: Granny Smith
+  display: Amy V. Baxter
 encounter:
-  reference: Encounter/example
+  reference: Encounter/1036
 occurrencePeriod:
   start: 2025-08-26
 authoredOn: 2025-08-26
 requester:
-  reference: Practitioner/example
-  display: Dr. Jane Doe
+  reference: Practitioner/practitioner-1
+  display: Dr. Ronald Bone
 reasonCode:
   - coding:
       - system: http://snomed.info/sct
-        code: 422650009
+        code: '300936002'
         display: Terminal illness
     text: Terminal illness
 reasonReference:
-  - reference: DocumentReference/example
+  - reference: DocumentReference/polst
     display: US Core ADI DocumentReference for POLST

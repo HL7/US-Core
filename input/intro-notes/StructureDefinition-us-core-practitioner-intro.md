@@ -27,7 +27,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- *Other identifiers beyond NPI, such as the National Council of State Boards of Nursing Identifier (NCSBN ID), may be used to uniquely refer to a practitioner when appropriate.
+- *Other identifiers beyond NPI, such as the National Council of State Boards of Nursing Identifier (NCSBNID), may be used to uniquely refer to a practitioner when appropriate.
 - \*The Practitioner and PractitionerRole directly and indirectly communicate the address(es) and contact information of the practitioner.
 Servers that support *only* the US Core Practitioner Profile and do not support the [US Core PractitionerRole Profile] **SHALL** provide implementation-specific guidance on how to access a provider's location and contact information using only the Practitioner resource.
    - Although `Practitioner.address` is marked as Must Support, the Server system is not required to support it if they support the US Core PractitionerRole Profile, but **SHALL** support it if they do not support the US Core PractitionerRole Profile. The Client application **SHALL** support both.
