@@ -16,48 +16,46 @@ extension:
 
 #============================
 
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity
 name: USCoreGenderIdentityExtension
 title: US Core Gender Identity Extension
 status: active
 date: 2025-04-22
-description: This extension represents an individual's sense of being a man, woman,
-  boy, girl, nonbinary, or something else, ascertained by asking them what that identity
-  is.
+description: This extension represents an individual's sense of being a man, woman, boy, girl, nonbinary, or something else, ascertained by asking them what that identity is.
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
 context:
-- type: element
-  expression: Patient
-- type: element
-  expression: RelatedPerson
-- type: element
-  expression: Person
-- type: element
-  expression: Practitioner
+  - type: element
+    expression: Patient
+  - type: element
+    expression: RelatedPerson
+  - type: element
+    expression: Person
+  - type: element
+    expression: Practitioner
 type: Extension
 baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 differential:
   element:
-  - id: Extension
-    path: Extension
-    definition: An individual's personal sense of being a man, woman, boy, girl, nonbinary,
-      or something else.
-    comment: This represents an individual's identity, ascertained by asking them
-      what that identity is.
-    min: 0
-  - id: Extension.url
-    path: Extension.url
-    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity
-  - id: Extension.value[x]
-    path: Extension.value[x]
-    type:
-    - code: CodeableConcept
-    binding:
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName
-        valueString: GenderIdentity
-      strength: extensible
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32
+    - id: Extension
+      path: Extension
+      definition: An individual's personal sense of being a man, woman, boy, girl, nonbinary, or something else.
+      comment: This represents an individual's identity, ascertained by asking them what that identity is.
+      min: 0
+    - id: Extension.url
+      path: Extension.url
+      fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity
+    - id: Extension.value[x]
+      path: Extension.value[x]
+      type:
+        - code: CodeableConcept
+      binding:
+        extension:
+          - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName
+            valueString: GenderIdentity
+        strength: extensible
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32

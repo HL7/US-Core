@@ -8,148 +8,138 @@ status: active
 date: 2023-10-17
 publisher: HL7 US Realm Steering Committee
 contact:
-- telecom:
-  - system: url
-    value: http://www.healthit.gov
-description: "Concepts classifying the person into a named category of humans sharing
-      common history, traits, geographical origin or nationality.  The ethnicity codes
-      used to represent these concepts are based upon the
-      [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238)
-      code system. Detailed ethnicity concepts are grouped by and pre-mapped
-      to the 2 OMB ethnicity categories:\n\n   - Hispanic or Latino\n   - Not Hispanic or Latino."
+  - telecom:
+      - system: url
+        value: http://www.healthit.gov
+description: "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system. Detailed ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories:\n\n   - Hispanic or Latino\n   - Not Hispanic or Latino."
 jurisdiction:
-- coding:
-  - system: urn:iso:std:iso:3166
-    code: US
-    display: United States of America
+  - coding:
+      - system: urn:iso:std:iso:3166
+        code: US
+        display: United States of America
 purpose: Complies with 2015 Edition Common Clinical Data Set for patient race.
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
 context:
-- type: element
-  expression: Patient
-- type: element
-  expression: RelatedPerson
-- type: element
-  expression: Person
-- type: element
-  expression: Practitioner
-- type: element
-  expression: FamilyMemberHistory
+  - type: element
+    expression: Patient
+  - type: element
+    expression: RelatedPerson
+  - type: element
+    expression: Person
+  - type: element
+    expression: Practitioner
+  - type: element
+    expression: FamilyMemberHistory
 type: Extension
 baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 differential:
   element:
-  - id: Extension
-    path: Extension
-    short: US Core ethnicity Extension
-    definition: "Concepts classifying the person into a named category of humans sharing
-      common history, traits, geographical origin or nationality.  The ethnicity codes
-      used to represent these concepts are based upon the
-      [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238)
-      code system. Detailed ethnicity concepts are grouped by and pre-mapped
-      to the 2 OMB ethnicity categories:\n\n   - Hispanic or Latino\n   - Not Hispanic or Latino."
-    min: 0
-    max: '1'
-  - id: Extension.extension
-    path: Extension.extension
-    slicing:
-      discriminator:
-      - type: value
-        path: url
-      rules: open
-    min: 1
-  - id: Extension.extension:ombCategory
-    path: Extension.extension
-    sliceName: ombCategory
-    short: Hispanic or Latino|Not Hispanic or Latino
-    definition: The 2 ethnicity category codes according to the [OMB Standards for
-      Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity,
-      Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).
-    min: 0
-    max: '1'
-    type:
-    - code: Extension
-    mustSupport: true
-    mapping:
-    - identity: iso11179
-      map: /ClinicalDocument/recordTarget/patientRole/patient/ethnicGroupCode
-  - id: Extension.extension:ombCategory.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: ombCategory
-  - id: Extension.extension:ombCategory.value[x]
-    path: Extension.extension.value[x]
-    min: 1
-    max: '1'
-    type:
-    - code: Coding
-    binding:
-      strength: required
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.3
-  - id: Extension.extension:detailed
-    path: Extension.extension
-    sliceName: detailed
-    short: Extended ethnicity codes
-    definition: The 41 CDC ethnicity codes that are grouped under one of the 2 OMB
-      ethnicity category codes.
-    min: 0
-    max: '*'
-    type:
-    - code: Extension
-    mapping:
-    - identity: iso11179
-      map: /ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode
-  - id: Extension.extension:detailed.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: detailed
-  - id: Extension.extension:detailed.value[x]
-    path: Extension.extension.value[x]
-    min: 1
-    max: '1'
-    type:
-    - code: Coding
-    binding:
-      strength: required
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.1
-  - id: Extension.extension:text
-    path: Extension.extension
-    sliceName: text
-    short: ethnicity Text
-    definition: Plain text representation of the ethnicity concept(s).
-    min: 1
-    max: '1'
-    type:
-    - code: Extension
-    mustSupport: true
-  - id: Extension.extension:text.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: text
-  - id: Extension.extension:text.value[x]
-    path: Extension.extension.value[x]
-    min: 1
-    max: '1'
-    type:
-    - code: string
-  - id: Extension.url
-    path: Extension.url
-    min: 1
-    max: '1'
-    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
-  - id: Extension.value[x]
-    path: Extension.value[x]
-    min: 0
-    max: '0'
+    - id: Extension
+      path: Extension
+      short: US Core ethnicity Extension
+      definition: "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system. Detailed ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories:\n\n   - Hispanic or Latino\n   - Not Hispanic or Latino."
+      min: 0
+      max: '1'
+    - id: Extension.extension
+      path: Extension.extension
+      slicing:
+        discriminator:
+          - type: value
+            path: url
+        rules: open
+      min: 1
+    - id: Extension.extension:ombCategory
+      path: Extension.extension
+      sliceName: ombCategory
+      short: Hispanic or Latino|Not Hispanic or Latino
+      definition: The 2 ethnicity category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+      mustSupport: true
+      mapping:
+        - identity: iso11179
+          map: /ClinicalDocument/recordTarget/patientRole/patient/ethnicGroupCode
+    - id: Extension.extension:ombCategory.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: ombCategory
+    - id: Extension.extension:ombCategory.value[x]
+      path: Extension.extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: Coding
+      binding:
+        strength: required
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.3
+    - id: Extension.extension:detailed
+      path: Extension.extension
+      sliceName: detailed
+      short: Extended ethnicity codes
+      definition: The 41 CDC ethnicity codes that are grouped under one of the 2 OMB ethnicity category codes.
+      min: 0
+      max: '*'
+      type:
+        - code: Extension
+      mapping:
+        - identity: iso11179
+          map: /ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode
+    - id: Extension.extension:detailed.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: detailed
+    - id: Extension.extension:detailed.value[x]
+      path: Extension.extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: Coding
+      binding:
+        strength: required
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.4.642.40.2.48.1
+    - id: Extension.extension:text
+      path: Extension.extension
+      sliceName: text
+      short: ethnicity Text
+      definition: Plain text representation of the ethnicity concept(s).
+      min: 1
+      max: '1'
+      type:
+        - code: Extension
+      mustSupport: true
+    - id: Extension.extension:text.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: text
+    - id: Extension.extension:text.value[x]
+      path: Extension.extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: string
+    - id: Extension.url
+      path: Extension.url
+      min: 1
+      max: '1'
+      fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
+    - id: Extension.value[x]
+      path: Extension.value[x]
+      min: 0
+      max: '0'
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 5

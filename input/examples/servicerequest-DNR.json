@@ -13,6 +13,16 @@
       "coding": [
         {
           "system": "http://loinc.org",
+          "code": "93037-0",
+          "display": "Portable medical order form"
+        }
+      ],
+      "text": "PMO derived Cardiopulmonary resuscitation order"
+    },
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
           "code": "100822-6",
           "display": "Cardiopulmonary resuscitation orders"
         }
@@ -25,7 +35,7 @@
       {
         "system": "http://loinc.org",
         "code": "LA33471-6",
-        "display": "No CPR: Do Not Attempt Resuscitation"
+        "display": "No CPR: Do Not Attempt Resuscitation."
       }
     ],
     "text": "No CPR: Do Not Attempt Resuscitation"
@@ -37,25 +47,25 @@
   ],
   "subject": {
     "reference": "Patient/example",
-    "display": "Granny Smith"
+    "display": "Amy V. Baxter"
   },
   "encounter": {
-    "reference": "Encounter/example"
+    "reference": "Encounter/1036"
   },
   "occurrencePeriod": {
     "start": "2025-08-26"
   },
   "authoredOn": "2025-08-26",
   "requester": {
-    "reference": "Practitioner/example",
-    "display": "Dr. Jane Doe"
+    "reference": "Practitioner/practitioner-1",
+    "display": "Dr. Ronald Bone"
   },
   "reasonCode": [
     {
       "coding": [
         {
           "system": "http://snomed.info/sct",
-          "code": "422650009",
+          "code": "300936002",
           "display": "Terminal illness"
         }
       ],
@@ -64,7 +74,7 @@
   ],
   "reasonReference": [
     {
-      "reference": "DocumentReference/example",
+      "reference": "DocumentReference/polst",
       "display": "US Core ADI DocumentReference for POLST"
     }
   ]

@@ -5,99 +5,99 @@ name: USCoreTribalAffiliationExtension
 title: US Core Tribal Affiliation Extension
 status: active
 date: 2023-10-17
-description: This Extension profile represents a tribe or band with which a person
-  associates and, optionally, whether they are enrolled.
+description: This Extension profile represents a tribe or band with which a person associates and, optionally, whether they are enrolled.
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
 context:
-- type: element
-  expression: Patient
-- type: element
-  expression: RelatedPerson
-- type: element
-  expression: Person
-- type: element
-  expression: Practitioner
-- type: element
-  expression: FamilyMemberHistory
+  - type: element
+    expression: Patient
+  - type: element
+    expression: RelatedPerson
+  - type: element
+    expression: Person
+  - type: element
+    expression: Practitioner
+  - type: element
+    expression: FamilyMemberHistory
 type: Extension
 baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 differential:
   element:
-  - id: Extension
-    path: Extension
-    short: Tribal Affiliation Extension
-    definition: A tribe or band with which a person associates whether or not they
-      are an enrolled member.
-    min: 0
-    max: '*'
-  - id: Extension.extension
-    path: Extension.extension
-    slicing:
-      discriminator:
-      - type: value
-        path: url
-      rules: open
-    min: 1
-  - id: Extension.extension:tribalAffiliation
-    path: Extension.extension
-    sliceName: tribalAffiliation
-    short: Affiliated tribe or band name
-    definition: Affiliated tribe or band name
-    min: 1
-    max: '1'
-    type:
-    - code: Extension
-    mustSupport: true
-  - id: Extension.extension:tribalAffiliation.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: tribalAffiliation
-  - id: Extension.extension:tribalAffiliation.value[x]
-    path: Extension.extension.value[x]
-    short: Tribal Entity US
-    min: 1
-    max: '1'
-    type:
-    - code: CodeableConcept
-    binding:
-      strength: extensible
-      description: Tribal Entity recognized by the United States Bureau Of Indian
-        Affairs.
-      valueSet: http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
-  - id: Extension.extension:isEnrolled
-    path: Extension.extension
-    sliceName: isEnrolled
-    short: Enrolled tribe member
-    definition: Whether the individual is an enrolled tribe member
-    min: 0
-    max: '1'
-    type:
-    - code: Extension
-  - id: Extension.extension:isEnrolled.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: isEnrolled
-  - id: Extension.extension:isEnrolled.value[x]
-    path: Extension.extension.value[x]
-    min: 1
-    max: '1'
-    type:
-    - code: boolean
-  - id: Extension.url
-    path: Extension.url
-    min: 1
-    max: '1'
-    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation
-  - id: Extension.value[x]
-    path: Extension.value[x]
-    min: 0
-    max: '0'
+    - id: Extension
+      path: Extension
+      short: Tribal Affiliation Extension
+      definition: A tribe or band with which a person associates whether or not they are an enrolled member.
+      min: 0
+      max: '*'
+    - id: Extension.extension
+      path: Extension.extension
+      slicing:
+        discriminator:
+          - type: value
+            path: url
+        rules: open
+      min: 1
+    - id: Extension.extension:tribalAffiliation
+      path: Extension.extension
+      sliceName: tribalAffiliation
+      short: Affiliated tribe or band name
+      definition: Affiliated tribe or band name
+      min: 1
+      max: '1'
+      type:
+        - code: Extension
+      mustSupport: true
+    - id: Extension.extension:tribalAffiliation.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: tribalAffiliation
+    - id: Extension.extension:tribalAffiliation.value[x]
+      path: Extension.extension.value[x]
+      short: Tribal Entity US
+      min: 1
+      max: '1'
+      type:
+        - code: CodeableConcept
+      binding:
+        strength: extensible
+        description: Tribal Entity recognized by the United States Bureau Of Indian Affairs.
+        valueSet: http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
+    - id: Extension.extension:isEnrolled
+      path: Extension.extension
+      sliceName: isEnrolled
+      short: Enrolled tribe member
+      definition: Whether the individual is an enrolled tribe member
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+    - id: Extension.extension:isEnrolled.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: isEnrolled
+    - id: Extension.extension:isEnrolled.value[x]
+      path: Extension.extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: boolean
+    - id: Extension.url
+      path: Extension.url
+      min: 1
+      max: '1'
+      fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation
+    - id: Extension.value[x]
+      path: Extension.value[x]
+      min: 0
+      max: '0'
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3

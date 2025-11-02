@@ -1,12 +1,12 @@
 resourceType: OperationDefinition
 id: docref
-url: 'http://hl7.org/fhir/us/core/OperationDefinition/docref'
+url: http://hl7.org/fhir/us/core/OperationDefinition/docref
 name: USCoreFetchDocumentReference
 title: US Core Fetch DocumentReference
 status: active
 kind: operation
 date: '2022-11-18'
-description: |2-
+description: |-
   This operation is used to return all the references to documents related to a
   patient. It is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances.
 
@@ -38,7 +38,7 @@ comment: |2-
 
    - See the US Core DocumentReference Profile [Quick Start Section](StructureDefinition-us-core-documentreference.html#quick-start) for example interactions
 resource:
-   -  DocumentReference
+  - DocumentReference
 system: false
 type: true
 instance: false
@@ -84,7 +84,7 @@ parameter:
     type: Coding
     binding:
       strength: required
-      valueSet: 'http://hl7.org/fhir/ValueSet/c80-doc-typecodes'
+      valueSet: http://hl7.org/fhir/ValueSet/c80-doc-typecodes
 
 
   - name: on-demand
@@ -116,3 +116,6 @@ parameter:
       which **SHOULD** conform to the [US Core DocumentReference
       Profiles](StructureDefinition-us-core-documentreference.html)
     type: Bundle
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 5

@@ -5,7 +5,7 @@ name: USCoreRelatedPersonProfile
 title: US Core RelatedPerson Profile
 status: active
 date: 2023-10-17
-description: 'The US Core RelatedPerson Profile inherits from the FHIR [RelatedPerson](https://hl7.org/fhir/R4/relatedperson.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch basic administrative information about persons with a legal or familial relationship to a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
+description: The US Core RelatedPerson Profile inherits from the FHIR [RelatedPerson](https://hl7.org/fhir/R4/relatedperson.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch basic administrative information about persons with a legal or familial relationship to a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -14,47 +14,50 @@ baseDefinition: http://hl7.org/fhir/StructureDefinition/RelatedPerson
 derivation: constraint
 differential:
   element:
-  - id: RelatedPerson
-    path: RelatedPerson
-    constraint:
-    - key: us-core-14
-      severity: error
-      human: Either a name or a relationship SHALL be provided (or both)
-      expression: name.exists() or relationship.exists()
-  - id: RelatedPerson.active
-    path: RelatedPerson.active
-    min: 1
-    mustSupport: true
-  - id: RelatedPerson.patient
-    path: RelatedPerson.patient
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-    mustSupport: true
-  - id: RelatedPerson.relationship
-    path: RelatedPerson.relationship
-    condition:
-    - us-core-14
-    mustSupport: true
+    - id: RelatedPerson
+      path: RelatedPerson
+      constraint:
+        - key: us-core-14
+          severity: error
+          human: Either a name or a relationship SHALL be provided (or both)
+          expression: name.exists() or relationship.exists()
+    - id: RelatedPerson.active
+      path: RelatedPerson.active
+      min: 1
+      mustSupport: true
+    - id: RelatedPerson.patient
+      path: RelatedPerson.patient
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      mustSupport: true
+    - id: RelatedPerson.relationship
+      path: RelatedPerson.relationship
+      condition:
+        - us-core-14
+      mustSupport: true
 
 #============  pre-applied missing binding FHIR-34755============
-    binding:
-      strength: preferred
-      description: >-
-        The nature of the relationship between a patient and the related
-        person.
-      valueSet: 'http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype'
+      binding:
+        strength: preferred
+        description: >-
+          The nature of the relationship between a patient and the related
+          person.
+        valueSet: http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
 #============  pre-applied missing binding ============
 
-  - id: RelatedPerson.name
-    path: RelatedPerson.name
-    condition:
-    - us-core-14
-    mustSupport: true
-  - id: RelatedPerson.telecom
-    path: RelatedPerson.telecom
-    mustSupport: true
-  - id: RelatedPerson.address
-    path: RelatedPerson.address
-    mustSupport: true
+    - id: RelatedPerson.name
+      path: RelatedPerson.name
+      condition:
+        - us-core-14
+      mustSupport: true
+    - id: RelatedPerson.telecom
+      path: RelatedPerson.telecom
+      mustSupport: true
+    - id: RelatedPerson.address
+      path: RelatedPerson.address
+      mustSupport: true
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 4

@@ -8,6 +8,8 @@ extension:
       http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: informative
 #============================
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 5
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 name: USCoreBirthSexExtension
 title: US Core Birth Sex Extension
@@ -18,35 +20,35 @@ fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
 context:
-- type: element
-  expression: Patient
+  - type: element
+    expression: Patient
 type: Extension
 baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 differential:
   element:
-  - id: Extension
-    path: Extension
-    definition: A code classifying the person's sex assigned at birth.
-    comment: This extension aligns with LOINC 76689-9 (Sex assigned at birth).
-    min: 0
-    max: '1'
-    isModifier: false
-    mapping:
-    - identity: rim
-      map: player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender
-    - identity: iso11179
-      map: .patient.administrativeGenderCode
-  - id: Extension.url
-    path: Extension.url
-    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
-  - id: Extension.value[x]
-    path: Extension.value[x]
-    min: 1
-    max: '1'
-    type:
-    - code: code
-    binding:
-      strength: required
-      description: Code for sex assigned at birth
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.24
+    - id: Extension
+      path: Extension
+      definition: A code classifying the person's sex assigned at birth.
+      comment: This extension aligns with LOINC 76689-9 (Sex assigned at birth).
+      min: 0
+      max: '1'
+      isModifier: false
+      mapping:
+        - identity: rim
+          map: player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender
+        - identity: iso11179
+          map: .patient.administrativeGenderCode
+    - id: Extension.url
+      path: Extension.url
+      fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
+    - id: Extension.value[x]
+      path: Extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: code
+      binding:
+        strength: required
+        description: Code for sex assigned at birth
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.24

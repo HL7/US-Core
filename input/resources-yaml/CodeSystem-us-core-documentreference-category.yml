@@ -6,17 +6,16 @@ title: US Core DocumentReferences Category Codes
 status: active
 experimental: false
 date: 2019-05-21
-description: The US Core DocumentReferences Type Code System is a 'starter set' of
-  categories supported for fetching and storing DocumentReference Resources.
-copyright: Used by permission of HL7 International, all rights reserved Creative Commons
-  License
+description: The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources.
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons License
 caseSensitive: true
 valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category
 content: complete
 count: 1
 concept:
-- code: clinical-note
-  display: Clinical Note
-  definition: Part of health record where healthcare professionals record details
-    to document a patient's clinical status or achievements during the course of a
-    hospitalization or over the course of outpatient care ([Wikipedia](https://en.wikipedia.org/wiki/Progress_note))
+  - code: clinical-note
+    display: Clinical Note
+    definition: Part of health record where healthcare professionals record details to document a patient's clinical status or achievements during the course of a hospitalization or over the course of outpatient care ([Wikipedia](https://en.wikipedia.org/wiki/Progress_note))
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3

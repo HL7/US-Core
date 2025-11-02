@@ -589,7 +589,7 @@ definition:
     description: This is a an example of FamilyMemberHistory for the *US Core FamilyMemberHistory
       Profile*
     name: FamilyMemberHistory Example
-    exampleBoolean: true
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory
   - reference:
       reference: Goal/goal-1
     description: This is a goal 1 example for the *US Core Goal Profile* and demonstrates
@@ -2317,11 +2317,6 @@ definition:
       promotes interoperability and adoption.
     exampleBoolean: false
     name: US Core Pediatric Weight for Height Observation Profile
-  - reference:
-      reference: ValueSet/us-core-pmo-procedure
-    description: Codes for portable medical orders procedures.
-    exampleBoolean: false
-    name: US Core PMO Procedure Codes
   - reference:
       reference: StructureDefinition/us-core-pmo-servicerequest
     description: 'The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)

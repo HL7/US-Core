@@ -8,8 +8,7 @@ status: active
 experimental: false
 date: 2023-10-17
 description: US Core Pediatric Weight for Height Observation Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric weight-for-length per age and sex observations in FHIR with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
-copyright: Used by permission of HL7 International, all rights reserved Creative Commons
-  License
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons License
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -18,56 +17,59 @@ baseDefinition: http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-si
 derivation: constraint
 differential:
   element:
-  - id: Observation
-    path: Observation
-    short: US Core Pediatric Weight for Height Observation Profile
-    mustSupport: false
-  - id: Observation.code
-    path: Observation.code
-    short: Weight-for-length per age and sex
-    min: 1
-    max: '1'
-    type:
-    - code: CodeableConcept
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 77606-2
-    mustSupport: true
-  - id: Observation.valueQuantity
-    path: Observation.valueQuantity
-    short: Vital Signs Value
-    min: 0
-    max: '1'
-    mustSupport: true
-  - id: Observation.valueQuantity.value
-    path: Observation.valueQuantity.value
-    min: 1
-    max: '1'
-    type:
-    - code: decimal
-    mustSupport: true
-  - id: Observation.valueQuantity.unit
-    path: Observation.valueQuantity.unit
-    min: 1
-    max: '1'
-    type:
-    - code: string
-    mustSupport: true
-  - id: Observation.valueQuantity.system
-    path: Observation.valueQuantity.system
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: http://unitsofmeasure.org
-    mustSupport: true
-  - id: Observation.valueQuantity.code
-    path: Observation.valueQuantity.code
-    short: Coded responses from the common UCUM units for vital signs value set.
-    min: 1
-    max: '1'
-    type:
-    - code: code
-    fixedCode: '%'
-    mustSupport: true
+    - id: Observation
+      path: Observation
+      short: US Core Pediatric Weight for Height Observation Profile
+      mustSupport: false
+    - id: Observation.code
+      path: Observation.code
+      short: Weight-for-length per age and sex
+      min: 1
+      max: '1'
+      type:
+        - code: CodeableConcept
+      patternCodeableConcept:
+        coding:
+          - system: http://loinc.org
+            code: 77606-2
+      mustSupport: true
+    - id: Observation.valueQuantity
+      path: Observation.valueQuantity
+      short: Vital Signs Value
+      min: 0
+      max: '1'
+      mustSupport: true
+    - id: Observation.valueQuantity.value
+      path: Observation.valueQuantity.value
+      min: 1
+      max: '1'
+      type:
+        - code: decimal
+      mustSupport: true
+    - id: Observation.valueQuantity.unit
+      path: Observation.valueQuantity.unit
+      min: 1
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true
+    - id: Observation.valueQuantity.system
+      path: Observation.valueQuantity.system
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: http://unitsofmeasure.org
+      mustSupport: true
+    - id: Observation.valueQuantity.code
+      path: Observation.valueQuantity.code
+      short: Coded responses from the common UCUM units for vital signs value set.
+      min: 1
+      max: '1'
+      type:
+        - code: code
+      fixedCode: '%'
+      mustSupport: true
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 5

@@ -6,38 +6,39 @@ title: US Core Category
 status: active
 experimental: false
 date: 2022-04-20
-description: Category codes used across US Core Profiles and resource types. They are typically
-  used when there is a need for categorization for searching and finding resources or workflow hints.
-copyright: Used by permission of HL7 International, all rights reserved Creative Commons
-  License
+description: Category codes used across US Core Profiles and resource types. They are typically used when there is a need for categorization for searching and finding resources or workflow hints.
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons License
 caseSensitive: true
 content: complete
 concept:
-- code: sdoh
-  display: SDOH
-  definition: Social Determinants of Health category
+  - code: sdoh
+    display: SDOH
+    definition: Social Determinants of Health category
 
-- code: functional-status
-  display: Functional Status
-  definition: Functional Status category
+  - code: functional-status
+    display: Functional Status
+    definition: Functional Status category
 
-- code: disability-status
-  display: Disability Status
-  definition: Disability Status category
+  - code: disability-status
+    display: Disability Status
+    definition: Disability Status category
 
-- code: cognitive-status
-  display: Cognitive Status
-  definition: Cognitive Status category
+  - code: cognitive-status
+    display: Cognitive Status
+    definition: Cognitive Status category
 
-- code: treatment-intervention-preference
-  display: Treatment Intervention Preference
-  definition: A personal preference for a type of medical intervention (treatment) request under certain conditions.
+  - code: treatment-intervention-preference
+    display: Treatment Intervention Preference
+    definition: A personal preference for a type of medical intervention (treatment) request under certain conditions.
 
-- code: care-experience-preference
-  display: Care Experience Preference
-  definition: Personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care.
+  - code: care-experience-preference
+    display: Care Experience Preference
+    definition: Personal thoughts about something a person feels is relevant to their care experience and may be pertinent when planning their care.
 
-- code: observation-adi-documentation
-  display: Observation ADI Documentation
-  definition: Statement of presence and properties of patient or provider authored documents that record a patient's goals, preferences and priorities should a patient be unable to communicate them to a provider.
+  - code: observation-adi-documentation
+    display: Observation ADI Documentation
+    definition: Statement of presence and properties of patient or provider authored documents that record a patient's goals, preferences and priorities should a patient be unable to communicate them to a provider.
 
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3

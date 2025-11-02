@@ -3,11 +3,11 @@ id: us-core-authentication-time
 
 #============= Remove when version 8 named in regs ====================
 extension:
-- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-  valueInteger: 2
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 #======================================================================
 
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
 #url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
 name: USCoreAuthenticationTimeExtension
 title: US Core Authentication Time Extension
@@ -25,7 +25,7 @@ context:
     expression: DocumentReference
 
 type: Extension
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 
 differential:
@@ -45,9 +45,9 @@ differential:
     - id: Extension.url
       path: Extension.url
       #fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
-      fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time'
-    - id: 'Extension.value[x]'
-      path: 'Extension.value[x]'
+      fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
+    - id: Extension.value[x]
+      path: Extension.value[x]
       min: 1
       type:
         - code: dateTime

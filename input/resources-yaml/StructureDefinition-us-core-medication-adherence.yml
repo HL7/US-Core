@@ -2,8 +2,8 @@ resourceType: StructureDefinition
 id: us-core-medication-adherence
 #============= Remove when version 8 named in regs ====================
 extension:
-- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-  valueInteger: 2
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 #======================================================================
 
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
@@ -18,115 +18,114 @@ fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
 context:
-- type: element
-  expression: MedicationRequest
+  - type: element
+    expression: MedicationRequest
 type: Extension
 baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 differential:
   element:
-  - id: Extension
-    path: Extension
-    definition: Reported adherence to prescribed medication instructions.
-    min: 0
-    max: '*'
-  - id: Extension.extension
-    path: Extension.extension
-    slicing:
-      discriminator:
-      - type: value
-        path: url
-      rules: open
-    min: 2
-  - id: Extension.extension:medicationAdherence
-    path: Extension.extension
-    sliceName: medicationAdherence
-    code:
-    - system: http://loinc.org
-      code: 71799-1
-      display: Adherence to prescribed medication instructions [Reported]
-    short: Medication adherence code
-    definition: >-
-      Code stating whether the patient is consuming medications according to instructions.
-    min: 1
-    max: '1'
-    type:
-    - code: Extension
-    mustSupport: true
-  - id: Extension.extension:medicationAdherence.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: medicationAdherence
-  - id: Extension.extension:medicationAdherence.value[x]
-    path: Extension.extension.value[x]
-    min: 1
-    max: '1'
-    type:
-    - code: CodeableConcept
-    binding:
-      strength: extensible
-      description: This set of values contains terms representing whether a medication has been consumed according to instructions.
+    - id: Extension
+      path: Extension
+      definition: Reported adherence to prescribed medication instructions.
+      min: 0
+      max: '*'
+    - id: Extension.extension
+      path: Extension.extension
+      slicing:
+        discriminator:
+          - type: value
+            path: url
+        rules: open
+      min: 2
+    - id: Extension.extension:medicationAdherence
+      path: Extension.extension
+      sliceName: medicationAdherence
+      code:
+        - system: http://loinc.org
+          code: 71799-1
+          display: Adherence to prescribed medication instructions [Reported]
+      short: Medication adherence code
+      definition: >-
+        Code stating whether the patient is consuming medications according to instructions.
+      min: 1
+      max: '1'
+      type:
+        - code: Extension
+      mustSupport: true
+    - id: Extension.extension:medicationAdherence.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: medicationAdherence
+    - id: Extension.extension:medicationAdherence.value[x]
+      path: Extension.extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: CodeableConcept
+      binding:
+        strength: extensible
+        description: This set of values contains terms representing whether a medication has been consumed according to instructions.
       # valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.59
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.8
-  - id: Extension.extension:dateAsserted
-    path: Extension.extension
-    sliceName: dateAsserted
-    short: When the medication adherence was asserted
-    definition: When the medication adherence was asserted by the information source
-    min: 1
-    max: '1'
-    type:
-    - code: Extension
-    mustSupport: true
-  - id: Extension.extension:dateAsserted.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: dateAsserted
-  - id: Extension.extension:dateAsserted.value[x]
-    path: Extension.extension.value[x]
-    min: 1
-    max: '1'
-    type:
-    - code: dateTime
-  - id: Extension.extension:informationSource
-    path: Extension.extension
-    sliceName: informationSource
-    short: Who provided the information about the medication adherence
-    definition: The person or organization that provided the information about the
-      medication adherence
-    min: 0
-    max: '*'
-    type:
-    - code: Extension
-    mustSupport: true
-  - id: Extension.extension:informationSource.url
-    path: Extension.extension.url
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: informationSource
-  - id: Extension.extension:informationSource.value[x]
-    path: Extension.extension.value[x]
-    min: 1
-    max: '1'
-    type:
-      - code: CodeableConcept
-    binding:
-      strength: example
-      description: The person or organization that provided the information about the medication adherence
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.11
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.8
+    - id: Extension.extension:dateAsserted
+      path: Extension.extension
+      sliceName: dateAsserted
+      short: When the medication adherence was asserted
+      definition: When the medication adherence was asserted by the information source
+      min: 1
+      max: '1'
+      type:
+        - code: Extension
+      mustSupport: true
+    - id: Extension.extension:dateAsserted.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: dateAsserted
+    - id: Extension.extension:dateAsserted.value[x]
+      path: Extension.extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: dateTime
+    - id: Extension.extension:informationSource
+      path: Extension.extension
+      sliceName: informationSource
+      short: Who provided the information about the medication adherence
+      definition: The person or organization that provided the information about the medication adherence
+      min: 0
+      max: '*'
+      type:
+        - code: Extension
+      mustSupport: true
+    - id: Extension.extension:informationSource.url
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: informationSource
+    - id: Extension.extension:informationSource.value[x]
+      path: Extension.extension.value[x]
+      min: 1
+      max: '1'
+      type:
+        - code: CodeableConcept
+      binding:
+        strength: example
+        description: The person or organization that provided the information about the medication adherence
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.11
 
-  - id: Extension.url
-    path: Extension.url
-    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
-  - id: Extension.value[x]
-    path: Extension.value[x]
-    min: 0
-    max: '0'
+    - id: Extension.url
+      path: Extension.url
+      fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
+    - id: Extension.value[x]
+      path: Extension.value[x]
+      min: 0
+      max: '0'

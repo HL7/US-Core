@@ -2,12 +2,12 @@ resourceType: StructureDefinition
 id: us-core-familymemberhistory-recorder
 #============= Remove when version 8 named in regs ====================
 extension:
-- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-  valueInteger: 2
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 #======================================================================
 
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder'
-name:  USCoreFamilyMemberHistoryRecorderExtension
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder
+name: USCoreFamilyMemberHistoryRecorderExtension
 title: US Core FamilyMemberHistory Recorder Extension
 status: active
 date: 2025-09-28
@@ -20,7 +20,7 @@ context:
     expression: FamilyMemberHistory
 
 type: Extension
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 
 differential:
@@ -40,8 +40,8 @@ differential:
     - id: Extension.url
       path: Extension.url
       fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder
-    - id: 'Extension.value[x]'
-      path: 'Extension.value[x]'
+    - id: Extension.value[x]
+      path: Extension.value[x]
       min: 1
       type:
         - code: Reference

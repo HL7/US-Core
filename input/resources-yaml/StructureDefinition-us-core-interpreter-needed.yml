@@ -2,11 +2,11 @@ resourceType: StructureDefinition
 id: us-core-interpreter-needed
 #============= Remove when version 8 named in regs ====================
 extension:
-- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-  valueInteger: 2
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 #======================================================================
 
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed
 name: USCoreInterpreterNeededExtension
 title: US Core Interpreter Needed Extension
 status: active
@@ -26,7 +26,7 @@ context:
     expression: Practitioner
 
 type: Extension
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 
 differential:
@@ -53,14 +53,13 @@ differential:
       max: '0'
     - id: Extension.url
       path: Extension.url
-      code: 
-        - 
-          system: 'http://loinc.org'
+      code:
+        - system: http://loinc.org
           code: 54588-9
           display: Interpreter needed
-      fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed'
-    - id: 'Extension.value[x]'
-      path: 'Extension.value[x]'
+      fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed
+    - id: Extension.value[x]
+      path: Extension.value[x]
       min: 1
 
       type:

@@ -6,7 +6,7 @@ title: US Core CarePlan Profile
 status: active
 experimental: false
 date: 2023-10-17
-description: 'The US Core CarePlan Profile inherits from the FHIR [CarePlan](https://hl7.org/fhir/R4/careplan.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the CarePlan resource to record,  search, and fetch assessment and plan of treatment data associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
+description: The US Core CarePlan Profile inherits from the FHIR [CarePlan](https://hl7.org/fhir/R4/careplan.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the CarePlan resource to record,  search, and fetch assessment and plan of treatment data associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -15,62 +15,59 @@ baseDefinition: http://hl7.org/fhir/StructureDefinition/CarePlan
 derivation: constraint
 differential:
   element:
-  - id: CarePlan
-    path: CarePlan
-    mustSupport: false
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: CarePlan
-  - id: CarePlan.text
-    path: CarePlan.text
-    short: Text summary of the resource, for human interpretation
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: CarePlan.text
-  - id: CarePlan.text.status
-    path: CarePlan.text.status
-    short: generated | additional
-    mustSupport: true
-    binding:
-      strength: required
-      description: Constrained value set of narrative statuses.
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: CarePlan.text.status
-  - id: CarePlan.text.div
-    path: CarePlan.text.div
-    short: Limited xhtml content
-    mustSupport: true
-  - id: CarePlan.status
-    path: CarePlan.status
-    requirements: Indicates whether the plan is currently being acted upon, represents
-      future intentions or is now a historical record.
-    mustSupport: true
-    binding:
-      strength: required
-      description: Indicates whether the plan is currently being acted upon, represents
-        future intentions or is now a historical record.
-      valueSet: http://hl7.org/fhir/ValueSet/request-status
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: CarePlan.status
-  - id: CarePlan.intent
-    path: CarePlan.intent
-    mustSupport: true
-    binding:
-      strength: required
-      description: Codes indicating the degree of authority/intentionality associated
-        with a care plan
-      valueSet: http://hl7.org/fhir/ValueSet/care-plan-intent
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: NA (new element in STU3)
+    - id: CarePlan
+      path: CarePlan
+      mustSupport: false
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: CarePlan
+    - id: CarePlan.text
+      path: CarePlan.text
+      short: Text summary of the resource, for human interpretation
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: CarePlan.text
+    - id: CarePlan.text.status
+      path: CarePlan.text.status
+      short: generated | additional
+      mustSupport: true
+      binding:
+        strength: required
+        description: Constrained value set of narrative statuses.
+        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: CarePlan.text.status
+    - id: CarePlan.text.div
+      path: CarePlan.text.div
+      short: Limited xhtml content
+      mustSupport: true
+    - id: CarePlan.status
+      path: CarePlan.status
+      requirements: Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
+      mustSupport: true
+      binding:
+        strength: required
+        description: Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
+        valueSet: http://hl7.org/fhir/ValueSet/request-status
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: CarePlan.status
+    - id: CarePlan.intent
+      path: CarePlan.intent
+      mustSupport: true
+      binding:
+        strength: required
+        description: Codes indicating the degree of authority/intentionality associated with a care plan
+        valueSet: http://hl7.org/fhir/ValueSet/care-plan-intent
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: NA (new element in STU3)
 
 
-  - id: CarePlan.category
-    path: CarePlan.category
+    - id: CarePlan.category
+      path: CarePlan.category
      # =========== remove in US Core 9 ===========
     # slicing:
     #   discriminator:
@@ -78,21 +75,19 @@ differential:
     #     path: $this
     #   rules: open
       # =========== remove in US Core 9 ===========
-    definition: Type of plan.
-    requirements: Identifies what "kind" of plan this is to support differentiation
-      between multiple co-existing plans; e.g., "Home health", "psychiatric", "asthma",
-      "disease management", "wellness plan", etc.
+      definition: Type of plan.
+      requirements: Identifies what "kind" of plan this is to support differentiation between multiple co-existing plans; e.g., "Home health", "psychiatric", "asthma", "disease management", "wellness plan", etc.
     # =========== make min = 0 in US Core 9 ===========
-    min: 0
+      min: 0
     # =========== make min = 0 in US Core 9 ===========
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: CarePlan.category
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: CarePlan.category
   # ===========  example binding strength to preferred in US Core 9 ===========
-    binding:
-      strength: preferred
-      valueSet: http://hl7.org/fhir/ValueSet/care-plan-category
+      binding:
+        strength: preferred
+        valueSet: http://hl7.org/fhir/ValueSet/care-plan-category
 
   # ===========  example binding strength to preferred in US Core 9 ===========
 
@@ -116,78 +111,80 @@ differential:
   #     map: CarePlan.category
  # =========== make remove in US Core 9  ===========
 
-  - id: CarePlan.subject
-    path: CarePlan.subject
-    definition: Who care plan is for.
-    requirements: Identifies the patient or group whose intended care is described
-      by the plan.
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-      - http://hl7.org/fhir/StructureDefinition/Group
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: CarePlan.subject
+    - id: CarePlan.subject
+      path: CarePlan.subject
+      definition: Who care plan is for.
+      requirements: Identifies the patient or group whose intended care is described by the plan.
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+            - http://hl7.org/fhir/StructureDefinition/Group
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: CarePlan.subject
   #===================  new for USCDI 5====================================
-  - id: CarePlan.contributor
-    extension:
-      - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-        valueBoolean: true
-    path: CarePlan.contributor
-    short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Who provided the content of the care plan"
-    type:
-    - code: Reference
-      targetProfile:
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-        - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
-      _targetProfile:
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
+    - id: CarePlan.contributor
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: CarePlan.contributor
+      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Who provided the content of the care plan"
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+            - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
     #=================== new for USCDI 5 ====================================
 
     #====Add CarePlan.addresses as a new  Additional USCDI element in US Core 9====
-  - id: CarePlan.addresses
-    extension:
-      - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-        valueBoolean: true
-    path: CarePlan.addresses
-    short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Health issues this plan addresses"
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
-    mustSupport: false
+    - id: CarePlan.addresses
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: CarePlan.addresses
+      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Health issues this plan addresses"
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+      mustSupport: false
     #====Add CarePlan.addresses as a new Additional USCDI element in US Core 9====
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 4

@@ -756,7 +756,7 @@
         },
         "description": "This is a an example of FamilyMemberHistory for the *US Core FamilyMemberHistory Profile*",
         "name": "FamilyMemberHistory Example",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory|9.0.0-ballot"
       },
       {
         "reference": {
@@ -2469,14 +2469,6 @@
         "description": "US Core Pediatric Weight for Height Observation Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric weight-for-length per age and sex observations in FHIR with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
         "exampleBoolean": false,
         "name": "US Core Pediatric Weight for Height Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-pmo-procedure"
-        },
-        "description": "Codes for portable medical orders procedures.",
-        "exampleBoolean": false,
-        "name": "US Core PMO Procedure Codes"
       },
       {
         "reference": {

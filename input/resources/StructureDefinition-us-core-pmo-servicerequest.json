@@ -55,7 +55,7 @@
                 "patternCodeableConcept": {
                     "coding": [
                         {
-                            "system": "https://loinc.org",
+                            "system": "http://loinc.org",
                             "code": "93037-0"
                         }
                     ]
@@ -68,7 +68,8 @@
                 "sliceName": "us-core-pmo-category",
                 "short": "PMO order categories",
                 "binding": {
-                    "strength": "extensible",
+                    "strength": "required",
+                    "description": "The Portable Medical Order Categories Value Set is a \"starter set\" of categories supported for PMO ServiceRequests. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
                     "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.34"
                 },
                 "mustSupport": false
@@ -241,5 +242,11 @@
                 "short": "Reference to the PMO document"
             }
         ]
-    }
+    },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 2
+        }
+    ]
 }

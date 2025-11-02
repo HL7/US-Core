@@ -6,7 +6,7 @@ title: US Core Condition Problems and Health Concerns Profile
 status: active
 experimental: false
 date: 2023-10-17
-description: 'The US Core Condition Problems and Health Concerns Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Encounter Diagnosis Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Problems*, *Health Concerns*, and *SDOH Problems/Health Concerns* Data Elements. It sets minimum expectations for the Condition resource to record, search, and fetch information about a condition, diagnosis, or another event, situation, issue, or clinical concept documented and categorized as a problem or health concern, including information about a Social Determinants of Health related condition. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
+description: The US Core Condition Problems and Health Concerns Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Encounter Diagnosis Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Problems*, *Health Concerns*, and *SDOH Problems/Health Concerns* Data Elements. It sets minimum expectations for the Condition resource to record, search, and fetch information about a condition, diagnosis, or another event, situation, issue, or clinical concept documented and categorized as a problem or health concern, including information about a Social Determinants of Health related condition. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -15,95 +15,92 @@ baseDefinition: http://hl7.org/fhir/StructureDefinition/Condition
 derivation: constraint
 differential:
   element:
-  - id: Condition
-    path: Condition
-    mustSupport: false
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Condition
+    - id: Condition
+      path: Condition
+      mustSupport: false
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Condition
 
 # ==== added lastUpdated to the mustSupport list ====
 
-  - id: Condition.meta
-    path: Condition.meta
-    mustSupport: true
-  - id: Condition.meta.lastUpdated
-    path: Condition.meta.lastUpdated
-    short: When the resource last changed
-    mustSupport: true
+    - id: Condition.meta
+      path: Condition.meta
+      mustSupport: true
+    - id: Condition.meta.lastUpdated
+      path: Condition.meta.lastUpdated
+      short: When the resource last changed
+      mustSupport: true
 
 # ==== added lastUpdated to the mustSupport list ====
 
-  - id: Condition.extension:assertedDate
-    path: Condition.extension
-    sliceName: assertedDate
-    short: Date the condition was first asserted
-    max: '1'
-    type:
-    - code: Extension
-      profile:
-      - http://hl7.org/fhir/StructureDefinition/condition-assertedDate
-    mustSupport: true
-  - id: Condition.clinicalStatus
-    path: Condition.clinicalStatus
-    mustSupport: true
-    binding:
-      strength: required
-      valueSet: http://hl7.org/fhir/ValueSet/condition-clinical
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Condition.clinicalStatus
-  - id: Condition.verificationStatus
-    path: Condition.verificationStatus
-    mustSupport: true
-    binding:
-      strength: required
-      valueSet: http://hl7.org/fhir/ValueSet/condition-ver-status
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Condition.verificationStatus
-  - id: Condition.category
-    path: Condition.category
-    slicing:
-      discriminator:
-      - type: value
-        path: $this
-      rules: open
-    short: category codes
-    min: 1
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Condition.category
+    - id: Condition.extension:assertedDate
+      path: Condition.extension
+      sliceName: assertedDate
+      short: Date the condition was first asserted
+      max: '1'
+      type:
+        - code: Extension
+          profile:
+            - http://hl7.org/fhir/StructureDefinition/condition-assertedDate
+      mustSupport: true
+    - id: Condition.clinicalStatus
+      path: Condition.clinicalStatus
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: http://hl7.org/fhir/ValueSet/condition-clinical
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Condition.clinicalStatus
+    - id: Condition.verificationStatus
+      path: Condition.verificationStatus
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: http://hl7.org/fhir/ValueSet/condition-ver-status
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Condition.verificationStatus
+    - id: Condition.category
+      path: Condition.category
+      slicing:
+        discriminator:
+          - type: value
+            path: $this
+        rules: open
+      short: category codes
+      min: 1
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Condition.category
 
-  - id: Condition.category:us-core
-    path: Condition.category
-    sliceName: us-core
-    short: problem-list-item | health-concern
-    min: 1
-    mustSupport: true
-    binding:
-      strength: required
-      description: Note that other codes are permitted, see [Required Bindings When
-        Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
+    - id: Condition.category:us-core
+      path: Condition.category
+      sliceName: us-core
+      short: problem-list-item | health-concern
+      min: 1
+      mustSupport: true
+      binding:
+        strength: required
+        description: Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
 
 #======== US Core 8 change to add'l USCDI ==========
 # ================= new minimum valueset binding in v8 =====================
-  - id: Condition.category:screening-assessment
+    - id: Condition.category:screening-assessment
 
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Condition.category
-    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
-      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: USCDI Health Status/Assessments Data Class"
-    sliceName: screening-assessment
-    definition: Categories that a provider may use in their workflow to classify that
-      this Condition is related to a USCDI Health Status/Assessments Data Class.
-    requirements: Used for filtering condition
-    mustSupport: false
-    binding:
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: Condition.category
+      short: '𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: USCDI Health Status/Assessments Data Class'
+      sliceName: screening-assessment
+      definition: Categories that a provider may use in their workflow to classify that this Condition is related to a USCDI Health Status/Assessments Data Class.
+      requirements: Used for filtering condition
+      mustSupport: false
+      binding:
 
 # #=============== minimum binding extension here =================
 #       extension:
@@ -112,129 +109,131 @@ differential:
 
 #================================================================
 
-      strength: required
-      description: Note that other codes are permitted, see [Required Bindings When
-        Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+        strength: required
+        description: Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
 #=============== new valueset here that id the ame as simple =================
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
+        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
 # ====== New R5 additional Binding Element Here for Screeing and Asessment Categories ====
-      extension:
-      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
-        - url: key
-          valueId: us-core-screening-assessment-observation-category
-        - url: purpose
-          valueCode: minimum
-        - url: valueSet
-          valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category
-        - url: documentation
-          valueMarkdown: codes that any conformant certifying system SHALL support to help identify the type of USCDI Health Status Assessment data class' data elements being reported.
-        - url: shortDoco
-          valueString: USCDI Health Status/Assessments Data Elements
+          - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+            extension:
+              - url: key
+                valueId: us-core-screening-assessment-observation-category
+              - url: purpose
+                valueCode: minimum
+              - url: valueSet
+                valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category
+              - url: documentation
+                valueMarkdown: codes that any conformant certifying system SHALL support to help identify the type of USCDI Health Status Assessment data class' data elements being reported.
+              - url: shortDoco
+                valueString: USCDI Health Status/Assessments Data Elements
 #===============================================================
 #======== US Core 8 change to add'l USCDI ==========
 # ===========================================================
-  - id: Condition.code
-    path: Condition.code
-    min: 1
-    mustSupport: true
-    binding:
+    - id: Condition.code
+      path: Condition.code
+      min: 1
+      mustSupport: true
+      binding:
 
 # ====== New R5 additional Binding Element Here ====
 
-      extension:
-      - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
         extension:
-        - url: key
-          valueId: us-core-condition-code-current
-        - url: purpose
-          valueCode: current
-        - url: valueSet
-          valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current
-        - url: documentation
-          valueMarkdown: US Core uses the current additional binding for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis
-        - url: shortDoco
-          valueString: Required for new records
-          
+          - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
+            extension:
+              - url: key
+                valueId: us-core-condition-code-current
+              - url: purpose
+                valueCode: current
+              - url: valueSet
+                valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current
+              - url: documentation
+                valueMarkdown: US Core uses the current additional binding for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis
+              - url: shortDoco
+                valueString: Required for new records
+
 # ========================================================= 
 
-      strength: preferred
-      description: Valueset to describe the actual problem experienced by the patient
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Condition.code
-  - id: Condition.subject
-    path: Condition.subject
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-      - http://hl7.org/fhir/StructureDefinition/Group
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Condition.patient
-  - id: Condition.onset[x]
-    path: Condition.onset[x]
-    type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: dateTime
-    - code: Age
-    - code: Period
-    - code: Range
-    - code: string
-    mustSupport: true
-  - id: Condition.abatement[x]
-    path: Condition.abatement[x]
-    type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: dateTime
-    - code: Age
-    - code: Period
-    - code: Range
-    - code: string
-    mustSupport: true
-  - id: Condition.recordedDate
-    path: Condition.recordedDate
-    mustSupport: true
+        strength: preferred
+        description: Valueset to describe the actual problem experienced by the patient
+        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Condition.code
+    - id: Condition.subject
+      path: Condition.subject
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+            - http://hl7.org/fhir/StructureDefinition/Group
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Condition.patient
+    - id: Condition.onset[x]
+      path: Condition.onset[x]
+      type:
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: dateTime
+        - code: Age
+        - code: Period
+        - code: Range
+        - code: string
+      mustSupport: true
+    - id: Condition.abatement[x]
+      path: Condition.abatement[x]
+      type:
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: dateTime
+        - code: Age
+        - code: Period
+        - code: Range
+        - code: string
+      mustSupport: true
+    - id: Condition.recordedDate
+      path: Condition.recordedDate
+      mustSupport: true
     #===================  new for USCDI 5====================================
-  - id: Condition.recorder
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Condition.recorder
-    short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Who recorded the condition"
-    type:
-    - code: Reference
-      targetProfile:
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-        - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-        - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-      _targetProfile:
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
-        - extension:
-            - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-              valueBoolean: false
+    - id: Condition.recorder
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: Condition.recorder
+      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Who recorded the condition"
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+            - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
 
     #===================  new for USCDI 5====================================
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 4

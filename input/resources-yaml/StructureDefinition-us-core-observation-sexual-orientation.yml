@@ -7,6 +7,8 @@ extension:
       http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: informative
 #============================
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation
 version: 3.1.1
 name: USCoreObservationSexualOrientationProfile
@@ -16,15 +18,15 @@ experimental: false
 date: 2023-10-17
 publisher: HL7 US Realm Steering Committee
 contact:
-- telecom:
-  - system: url
-    value: http://www.healthit.gov
-description: "The US Core Observation Sexual Orientation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to refer to it for scope and usage definitions. This Profile sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption."
+  - telecom:
+      - system: url
+        value: http://www.healthit.gov
+description: The US Core Observation Sexual Orientation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to refer to it for scope and usage definitions. This Profile sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
 jurisdiction:
-- coding:
-  - system: urn:iso:std:iso:3166
-    code: US
-    display: United States of America
+  - coding:
+      - system: urn:iso:std:iso:3166
+        code: US
+        display: United States of America
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -33,65 +35,61 @@ baseDefinition: http://hl7.org/fhir/StructureDefinition/Observation
 derivation: constraint
 differential:
   element:
-  - id: Observation
-    path: Observation
-    constraint:
-    - key: us-core-2
-      severity: error
-      human: If there is no component or hasMember element then either a value[x]
-        or a data absent reason must be present
-      expression: (component.empty() and hasMember.empty()) implies (dataAbsentReason.exists()
-        or value.exists())
-      xpath: exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.),
-        'value')]) or exists(f:dataAbsentReason)
-    mustSupport: false
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Observation
-  - id: Observation.status
-    path: Observation.status
-    mustSupport: true
-    binding:
-      strength: required
-      valueSet: http://hl7.org/fhir/ValueSet/observation-status
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Observation.status
-  - id: Observation.code
-    path: Observation.code
-    short: Sexual Orientation
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 76690-7
-    mustSupport: true
-  - id: Observation.subject
-    path: Observation.subject
-    min: 1
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Observation.subject
-  - id: Observation.effective[x]
-    path: Observation.effective[x]
-    definition: This records the time during which the patient had identified their
-      emotional, romantic, sexual, or affectional attraction to another person.
-    type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: dateTime
-    - code: Period
-    - code: Timing
-    - code: instant
-    mustSupport: true
-    mapping:
-    - identity: argonaut-dq-dstu2
-      map: Observation.effective[x]
+    - id: Observation
+      path: Observation
+      constraint:
+        - key: us-core-2
+          severity: error
+          human: If there is no component or hasMember element then either a value[x] or a data absent reason must be present
+          expression: (component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())
+          xpath: exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)
+      mustSupport: false
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Observation
+    - id: Observation.status
+      path: Observation.status
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: http://hl7.org/fhir/ValueSet/observation-status
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Observation.status
+    - id: Observation.code
+      path: Observation.code
+      short: Sexual Orientation
+      patternCodeableConcept:
+        coding:
+          - system: http://loinc.org
+            code: 76690-7
+      mustSupport: true
+    - id: Observation.subject
+      path: Observation.subject
+      min: 1
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Observation.subject
+    - id: Observation.effective[x]
+      path: Observation.effective[x]
+      definition: This records the time during which the patient had identified their emotional, romantic, sexual, or affectional attraction to another person.
+      type:
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: dateTime
+        - code: Period
+        - code: Timing
+        - code: instant
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Observation.effective[x]
 
 
 #  ==============================
@@ -133,14 +131,14 @@ differential:
 # #=================================================
 
 
-  - id: Observation.valueCodeableConcept
-    path: Observation.valueCodeableConcept
-    short: Sexual Orientation
-    definition: The Sexual Orientation value.
-    mustSupport: true
-    binding:
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName
-        valueString: SexualOrientation
-      strength: extensible
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.11
+    - id: Observation.valueCodeableConcept
+      path: Observation.valueCodeableConcept
+      short: Sexual Orientation
+      definition: The Sexual Orientation value.
+      mustSupport: true
+      binding:
+        extension:
+          - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName
+            valueString: SexualOrientation
+        strength: extensible
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.11

@@ -2,9 +2,9 @@ resourceType: ValueSet
 id: us-core-specimen-condition
 #============= Remove when version 8 named in regs ====================
 extension:
-- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-  valueInteger: 2
-url: 'http://hl7.org/fhir/us/core/ValueSet/us-core-specimen-condition'
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-specimen-condition
 #======================================================================
 name: USCoreSpecimenCondition
 title: US Core Specimen Condition
@@ -24,6 +24,6 @@ copyright: >-
 compose:
   include:
     - valueSet:
-      - http://terminology.hl7.org/ValueSet/v2-0493
+        - http://terminology.hl7.org/ValueSet/v2-0493
     - valueSet:
-       - http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.24
+        - http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.24

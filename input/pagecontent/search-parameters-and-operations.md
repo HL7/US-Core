@@ -2,11 +2,11 @@
 
 The following operation has been defined for the US Core Implementation Guide. For more information on [FHIR RESTful operations], see the FHIR specification.
 
- <span class="bg-success" markdown="1">
+ <div class="bg-success" markdown="1">
 
 {% include list-simple-operationdefinitions.xhtml %}
 
- </span><!-- new-content -->
+ </div><!-- new-content -->
 
 <br />
 

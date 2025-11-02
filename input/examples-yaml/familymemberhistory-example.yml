@@ -10,6 +10,10 @@ meta:
         Profile*
   profile:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory
+extension:
+  - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder
+    valueReference:
+      reference: Practitioner/practitioner-1
 status: completed
 patient:
   reference: Patient/example

@@ -6,7 +6,7 @@ title: US Core Encounter Profile
 status: active
 experimental: false
 date: 2023-10-17
-description: 'The US Core Encounter Profile inherits from the FHIR [Encounter](https://hl7.org/fhir/R4/encounter.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Encounter resource to record, search, and fetch basic encounter information for an individual patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.'
+description: The US Core Encounter Profile inherits from the FHIR [Encounter](https://hl7.org/fhir/R4/encounter.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Encounter resource to record, search, and fetch basic encounter information for an individual patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -15,178 +15,179 @@ baseDefinition: http://hl7.org/fhir/StructureDefinition/Encounter
 derivation: constraint
 differential:
   element:
-  - id: Encounter
-    path: Encounter
-    mustSupport: false
+    - id: Encounter
+      path: Encounter
+      mustSupport: false
 
 # ==== added lastUpdated to the mustSupport list ====
 
-  - id: Encounter.meta
-    path: Encounter.meta
-    mustSupport: true
-  - id: Encounter.meta.lastUpdated
-    path: Encounter.meta.lastUpdated
-    short: When the resource last changed
-    mustSupport: true
+    - id: Encounter.meta
+      path: Encounter.meta
+      mustSupport: true
+    - id: Encounter.meta.lastUpdated
+      path: Encounter.meta.lastUpdated
+      short: When the resource last changed
+      mustSupport: true
 
 # ====================================================
 
 # =================== USCDI5  ================
-  - id: Encounter.extension:interpreterRequired
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
-    path: Encounter.extension
-    sliceName: interpreterRequired
-    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
-      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: Whether the patient needs an interpreter"
-    min: 0
-    max: '1'
-    type:
-    - code: Extension
-      profile:
-      - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed'
-    mustSupport: false
+    - id: Encounter.extension:interpreterRequired
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: Encounter.extension
+      sliceName: interpreterRequired
+      short: '𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Whether the patient needs an interpreter'
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+          profile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed
+      mustSupport: false
 
 # ====================================================
 
 
 
-  - id: Encounter.identifier
-    path: Encounter.identifier
-    mustSupport: true
-  - id: Encounter.identifier.system
-    path: Encounter.identifier.system
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    mustSupport: true
-  - id: Encounter.identifier.value
-    path: Encounter.identifier.value
-    min: 1
-    max: '1'
-    type:
-    - code: string
-    mustSupport: true
-  - id: Encounter.status
-    path: Encounter.status
-    mustSupport: true
-  - id: Encounter.class
-    path: Encounter.class
-    mustSupport: true
-  - id: Encounter.type
-    path: Encounter.type
-    min: 1
-    mustSupport: true
-    binding:
-      strength: extensible
-      description: Valueset to describe the Encounter Type
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.23
-  - id: Encounter.subject
-    path: Encounter.subject
-    min: 1
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-      - http://hl7.org/fhir/StructureDefinition/Group
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
+    - id: Encounter.identifier
+      path: Encounter.identifier
+      mustSupport: true
+    - id: Encounter.identifier.system
+      path: Encounter.identifier.system
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      mustSupport: true
+    - id: Encounter.identifier.value
+      path: Encounter.identifier.value
+      min: 1
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true
+    - id: Encounter.status
+      path: Encounter.status
+      mustSupport: true
+    - id: Encounter.class
+      path: Encounter.class
+      mustSupport: true
+    - id: Encounter.type
+      path: Encounter.type
+      min: 1
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: Valueset to describe the Encounter Type
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.23
+    - id: Encounter.subject
+      path: Encounter.subject
+      min: 1
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+            - http://hl7.org/fhir/StructureDefinition/Group
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
 
-    mustSupport: true
-  - id: Encounter.participant
-    path: Encounter.participant
-    mustSupport: true
-  - id: Encounter.participant.type
-    path: Encounter.participant.type
-    mustSupport: true
-  - id: Encounter.participant.period
-    path: Encounter.participant.period
-    mustSupport: true
-  - id: Encounter.participant.individual
-    path: Encounter.participant.individual
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-    mustSupport: true
-  - id: Encounter.period
-    path: Encounter.period
-    mustSupport: true
-  - id: Encounter.reasonCode
-    path: Encounter.reasonCode
-    mustSupport: true
-  - id: Encounter.reasonReference
-    path: Encounter.reasonReference
-    max: '*'
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
-      - http://hl7.org/fhir/StructureDefinition/Observation
-      - http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-    mustSupport: true
-  - id: Encounter.hospitalization
-    path: Encounter.hospitalization
-    mustSupport: true
-  - id: Encounter.hospitalization.dischargeDisposition
-    path: Encounter.hospitalization.dischargeDisposition
-    mustSupport: true
-    binding:
-      strength: preferred
-      description: '[National Uniform Billing Committee](http://www.nubc.org/), manual
-        UB-04, UB form locator 17'
-      valueSet: http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition
-  - id: Encounter.location
-    path: Encounter.location
-    mustSupport: true
-  - id: Encounter.location.location
-    path: Encounter.location.location
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
-    mustSupport: true
-  - id: Encounter.serviceProvider
-    path: Encounter.serviceProvider
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-    mustSupport: true
+      mustSupport: true
+    - id: Encounter.participant
+      path: Encounter.participant
+      mustSupport: true
+    - id: Encounter.participant.type
+      path: Encounter.participant.type
+      mustSupport: true
+    - id: Encounter.participant.period
+      path: Encounter.participant.period
+      mustSupport: true
+    - id: Encounter.participant.individual
+      path: Encounter.participant.individual
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
+    - id: Encounter.period
+      path: Encounter.period
+      mustSupport: true
+    - id: Encounter.reasonCode
+      path: Encounter.reasonCode
+      mustSupport: true
+    - id: Encounter.reasonReference
+      path: Encounter.reasonReference
+      max: '*'
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
+            - http://hl7.org/fhir/StructureDefinition/Observation
+            - http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
+    - id: Encounter.hospitalization
+      path: Encounter.hospitalization
+      mustSupport: true
+    - id: Encounter.hospitalization.dischargeDisposition
+      path: Encounter.hospitalization.dischargeDisposition
+      mustSupport: true
+      binding:
+        strength: preferred
+        description: '[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17'
+        valueSet: http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition
+    - id: Encounter.location
+      path: Encounter.location
+      mustSupport: true
+    - id: Encounter.location.location
+      path: Encounter.location.location
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+      mustSupport: true
+    - id: Encounter.serviceProvider
+      path: Encounter.serviceProvider
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+      mustSupport: true
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 5

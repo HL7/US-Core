@@ -15,6 +15,8 @@ extension:
 
 #============================
 
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3
 id: careplan-category
 url: http://hl7.org/fhir/us/core/CodeSystem/careplan-category
 name: USCoreCarePlanCategoryExtensionCodes
@@ -22,14 +24,11 @@ title: US Core CarePlan Category Extension Codes
 status: active
 experimental: false
 date: 2025-09-27
-description: Set of codes that are needed for implementation of the US-Core CarePlan
-  Profile. These codes are used as extensions to the FHIR ValueSet.
-copyright: Used by permission of HL7 International, all rights reserved Creative Commons
-  License
+description: Set of codes that are needed for implementation of the US-Core CarePlan Profile. These codes are used as extensions to the FHIR ValueSet.
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons License
 caseSensitive: true
 content: complete
 concept:
-- code: assess-plan
-  display: Assessment and Plan of Treatment
-  definition: The clinical conclusions and assumptions that guide the patient's treatment
-    and the clinical activities formulated for a patient.
+  - code: assess-plan
+    display: Assessment and Plan of Treatment
+    definition: The clinical conclusions and assumptions that guide the patient's treatment and the clinical activities formulated for a patient.

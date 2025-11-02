@@ -7,36 +7,37 @@ status: active
 experimental: false
 date: 2023-04-13
 description: Used to classify the context of clinical result observations.
-copyright: Used by permission of HL7 International, all rights reserved Creative Commons
-  License
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons License
 compose:
   include:
-  - system: http://terminology.hl7.org/CodeSystem/observation-category
-    concept:
-    - code: laboratory
-      display: Laboratory
+    - system: http://terminology.hl7.org/CodeSystem/observation-category
+      concept:
+        - code: laboratory
+          display: Laboratory
 
     # - code: survey
     #   display: Survey
 
-    - code: exam
-      display: Exam
+        - code: exam
+          display: Exam
 
-    - code: therapy
-      display: Therapy
+        - code: therapy
+          display: Therapy
 
     # - code: social-history
     #   display: Social History
 
-    - code: imaging
-      display: Imaging
+        - code: imaging
+          display: Imaging
 
-    - code: procedure
-      display: Procedure
+        - code: procedure
+          display: Procedure
 
-    - code: vital-signs
-      display: Vital Signs
+        - code: vital-signs
+          display: Vital Signs
 
-    - code: activity
-      display: Activity
- 
+        - code: activity
+          display: Activity
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3

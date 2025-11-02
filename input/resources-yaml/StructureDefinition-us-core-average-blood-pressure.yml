@@ -2,8 +2,8 @@ resourceType: StructureDefinition
 id: us-core-average-blood-pressure
 #============= Remove when version 8 named in regs ====================
 extension:
-- url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-  valueInteger: 2
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 #======================================================================
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure
 name: USCoreAverageBloodPressureProfile
@@ -20,304 +20,300 @@ baseDefinition: http://hl7.org/fhir/StructureDefinition/Observation
 derivation: constraint
 differential:
   element:
-  - id: Observation
-    path: Observation
-    short: US Core Average Blood Pressure Profile
+    - id: Observation
+      path: Observation
+      short: US Core Average Blood Pressure Profile
 
-  - id: Observation.status
-    path: Observation.status
-    mustSupport: true
+    - id: Observation.status
+      path: Observation.status
+      mustSupport: true
 
-  - id: Observation.category
-    path: Observation.category
-    slicing:
-      discriminator:
-      - type: value
-        path: coding.code
-      - type: value
-        path: coding.system
-      ordered: false
-      rules: open
-    min: 1
-    max: '*'
-    type:
-    - code: CodeableConcept
-    mustSupport: true
-  - id: Observation.category:VSCat
-    path: Observation.category
-    sliceName: VSCat
-    min: 1
-    max: '1'
-    type:
-    - code: CodeableConcept
-    mustSupport: true
-  - id: Observation.category:VSCat.coding
-    path: Observation.category.coding
-    min: 1
-    max: '*'
-    type:
-    - code: Coding
-    mustSupport: true
-  - id: Observation.category:VSCat.coding.system
-    path: Observation.category.coding.system
-    short: Identity of the terminology system
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: http://terminology.hl7.org/CodeSystem/observation-category
+    - id: Observation.category
+      path: Observation.category
+      slicing:
+        discriminator:
+          - type: value
+            path: coding.code
+          - type: value
+            path: coding.system
+        ordered: false
+        rules: open
+      min: 1
+      max: '*'
+      type:
+        - code: CodeableConcept
+      mustSupport: true
+    - id: Observation.category:VSCat
+      path: Observation.category
+      sliceName: VSCat
+      min: 1
+      max: '1'
+      type:
+        - code: CodeableConcept
+      mustSupport: true
+    - id: Observation.category:VSCat.coding
+      path: Observation.category.coding
+      min: 1
+      max: '*'
+      type:
+        - code: Coding
+      mustSupport: true
+    - id: Observation.category:VSCat.coding.system
+      path: Observation.category.coding.system
+      short: Identity of the terminology system
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: http://terminology.hl7.org/CodeSystem/observation-category
 
-  - id: Observation.category:VSCat.coding.code
-    path: Observation.category.coding.code
-    short: Symbol in syntax defined by the system
-    min: 1
-    max: '1'
-    type:
-    - code: code
-    fixedCode: vital-signs
+    - id: Observation.category:VSCat.coding.code
+      path: Observation.category.coding.code
+      short: Symbol in syntax defined by the system
+      min: 1
+      max: '1'
+      type:
+        - code: code
+      fixedCode: vital-signs
 
 
-  - id: Observation.code
-    path: Observation.code
-    short: Blood Pressure
-    type:
-    - code: CodeableConcept
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 96607-7
-    mustSupport: true
+    - id: Observation.code
+      path: Observation.code
+      short: Blood Pressure
+      type:
+        - code: CodeableConcept
+      patternCodeableConcept:
+        coding:
+          - system: http://loinc.org
+            code: 96607-7
+      mustSupport: true
 
-  - id: Observation.subject
-    path: Observation.subject
-    min: 1
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-    mustSupport: true
+    - id: Observation.subject
+      path: Observation.subject
+      min: 1
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      mustSupport: true
 
-  - id: Observation.effective[x]
-    path: Observation.effective[x]
-    short: clinically relevant time-period for the average of blood pressure (BP)
-      readings
-    min: 1
-    type:
-    - code: dateTime
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: Period
-    mustSupport: true
+    - id: Observation.effective[x]
+      path: Observation.effective[x]
+      short: clinically relevant time-period for the average of blood pressure (BP) readings
+      min: 1
+      type:
+        - code: dateTime
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: Period
+      mustSupport: true
 
 
 # ============= new for USCDI 5 =================
-  - id: Observation.performer
-    path: Observation.performer
-    type:
-      - code: Reference
-        targetProfile:
-          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-          - "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
-          - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-        _targetProfile:
-          - extension:
-              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-                valueBoolean: false
-          - extension:
-              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-                valueBoolean: false
-          - extension:
-              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-                valueBoolean: false
-          - extension:
-              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-                valueBoolean: false
-          - extension:
-              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-                valueBoolean: false
-          - extension:
-              - url: "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-                valueBoolean: false
-    mustSupport: true
+    - id: Observation.performer
+      path: Observation.performer
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+            - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
 # =================================================
 
-  - id: Observation.value[x]
-    path: Observation.value[x]
-    max: '0'
+    - id: Observation.value[x]
+      path: Observation.value[x]
+      max: '0'
 
-  - id: Observation.component
-    path: Observation.component
-    slicing:
-      discriminator:
-      - type: value
-        path: code
-      ordered: false
-      rules: open
-    short: Average systolic and diastolic
-      blood pressure and other qualifiers.
-    min: 2
-    max: '*'
-    constraint:
-    - key: us-core-26
-      severity: error
-      human: If there is no value a data absent reason must be present
-      expression: value.exists() or dataAbsentReason.exists()
-    mustSupport: true
+    - id: Observation.component
+      path: Observation.component
+      slicing:
+        discriminator:
+          - type: value
+            path: code
+        ordered: false
+        rules: open
+      short: Average systolic and diastolic blood pressure and other qualifiers.
+      min: 2
+      max: '*'
+      constraint:
+        - key: us-core-26
+          severity: error
+          human: If there is no value a data absent reason must be present
+          expression: value.exists() or dataAbsentReason.exists()
+      mustSupport: true
 
-  - id: Observation.component.value[x]
-    path: Observation.component.value[x]
-    short: Vital Sign Component Value
-    definition: Vital Signs value are typically recorded using the Quantity data type.
-      For supporting observations such as cuff size could use other datatypes such
-      as CodeableConcept.
-    type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: Quantity
-    - code: CodeableConcept
-    - code: string
-    - code: boolean
-    - code: integer
-    - code: Range
-    - code: Ratio
-    - code: SampledData
-    - code: time
-    - code: dateTime
-    - code: Period
-    mustSupport: true
+    - id: Observation.component.value[x]
+      path: Observation.component.value[x]
+      short: Vital Sign Component Value
+      definition: Vital Signs value are typically recorded using the Quantity data type. For supporting observations such as cuff size could use other datatypes such as CodeableConcept.
+      type:
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: Quantity
+        - code: CodeableConcept
+        - code: string
+        - code: boolean
+        - code: integer
+        - code: Range
+        - code: Ratio
+        - code: SampledData
+        - code: time
+        - code: dateTime
+        - code: Period
+      mustSupport: true
 
 
-  - id: Observation.component.dataAbsentReason
-    path: Observation.component.dataAbsentReason
-    condition: 
-    - us-core-26
-    mustSupport: true
+    - id: Observation.component.dataAbsentReason
+      path: Observation.component.dataAbsentReason
+      condition:
+        - us-core-26
+      mustSupport: true
 
 
-  - id: Observation.component:systolic
-    path: Observation.component
-    sliceName: systolic
-    short: Systolic Average Blood Pressure
-    min: 1
-    max: '1'
-    mustSupport: true
+    - id: Observation.component:systolic
+      path: Observation.component
+      sliceName: systolic
+      short: Systolic Average Blood Pressure
+      min: 1
+      max: '1'
+      mustSupport: true
 
-  - id: Observation.component:systolic.code
-    path: Observation.component.code
-    short: Systolic Average Blood Pressure Code
-    min: 1
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 96608-5
-    mustSupport: true
+    - id: Observation.component:systolic.code
+      path: Observation.component.code
+      short: Systolic Average Blood Pressure Code
+      min: 1
+      max: '1'
+      patternCodeableConcept:
+        coding:
+          - system: http://loinc.org
+            code: 96608-5
+      mustSupport: true
 
-  - id: Observation.component:systolic.valueQuantity
-    path: Observation.component.valueQuantity
-    short: Systolic Average Blood Pressure Value
-    type:
-    - code: Quantity
-    condition: 
-    - us-core-26
-    mustSupport: true
+    - id: Observation.component:systolic.valueQuantity
+      path: Observation.component.valueQuantity
+      short: Systolic Average Blood Pressure Value
+      type:
+        - code: Quantity
+      condition:
+        - us-core-26
+      mustSupport: true
 
-  - id: Observation.component:systolic.valueQuantity.value
-    path: Observation.component.valueQuantity.value
-    min: 1
-    max: '1'
-    type:
-    - code: decimal
-
-
-  - id: Observation.component:systolic.valueQuantity.unit
-    path: Observation.component.valueQuantity.unit
-    min: 1
-    max: '1'
-    type:
-    - code: string
+    - id: Observation.component:systolic.valueQuantity.value
+      path: Observation.component.valueQuantity.value
+      min: 1
+      max: '1'
+      type:
+        - code: decimal
 
 
-  - id: Observation.component:systolic.valueQuantity.system
-    path: Observation.component.valueQuantity.system
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: http://unitsofmeasure.org
+    - id: Observation.component:systolic.valueQuantity.unit
+      path: Observation.component.valueQuantity.unit
+      min: 1
+      max: '1'
+      type:
+        - code: string
 
 
-  - id: Observation.component:systolic.valueQuantity.code
-    path: Observation.component.valueQuantity.code
-    min: 1
-    max: '1'
-    type:
-    - code: code
-    fixedCode: mm[Hg]
-
-  
-  - id: Observation.component:diastolic
-    path: Observation.component
-    sliceName: diastolic
-    short: Diastolic Average Blood Pressure
-    min: 1
-    max: '1'
-    mustSupport: true
-
-  - id: Observation.component:diastolic.code
-    path: Observation.component.code
-    short: Diastolic Average Blood Pressure Code
-    min: 1
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 96609-3
-    mustSupport: true
-
-  - id: Observation.component:diastolic.valueQuantity
-    path: Observation.component.valueQuantity
-    short: Diastolic Average Blood Pressure Value
-    type:
-    - code: Quantity
-    condition:
-    - us-core-26
-    mustSupport: true
-
-  - id: Observation.component:diastolic.valueQuantity.value
-    path: Observation.component.valueQuantity.value
-    min: 1
-    max: '1'
-    type:
-    - code: decimal
+    - id: Observation.component:systolic.valueQuantity.system
+      path: Observation.component.valueQuantity.system
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: http://unitsofmeasure.org
 
 
-  - id: Observation.component:diastolic.valueQuantity.unit
-    path: Observation.component.valueQuantity.unit
-    min: 1
-    max: '1'
-    type:
-    - code: string
+    - id: Observation.component:systolic.valueQuantity.code
+      path: Observation.component.valueQuantity.code
+      min: 1
+      max: '1'
+      type:
+        - code: code
+      fixedCode: mm[Hg]
 
 
-  - id: Observation.component:diastolic.valueQuantity.system
-    path: Observation.component.valueQuantity.system
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: http://unitsofmeasure.org
+    - id: Observation.component:diastolic
+      path: Observation.component
+      sliceName: diastolic
+      short: Diastolic Average Blood Pressure
+      min: 1
+      max: '1'
+      mustSupport: true
+
+    - id: Observation.component:diastolic.code
+      path: Observation.component.code
+      short: Diastolic Average Blood Pressure Code
+      min: 1
+      max: '1'
+      patternCodeableConcept:
+        coding:
+          - system: http://loinc.org
+            code: 96609-3
+      mustSupport: true
+
+    - id: Observation.component:diastolic.valueQuantity
+      path: Observation.component.valueQuantity
+      short: Diastolic Average Blood Pressure Value
+      type:
+        - code: Quantity
+      condition:
+        - us-core-26
+      mustSupport: true
+
+    - id: Observation.component:diastolic.valueQuantity.value
+      path: Observation.component.valueQuantity.value
+      min: 1
+      max: '1'
+      type:
+        - code: decimal
 
 
-  - id: Observation.component:diastolic.valueQuantity.code
-    path: Observation.component.valueQuantity.code
-    min: 1
-    max: '1'
-    type:
-    - code: code
-    fixedCode: mm[Hg]
+    - id: Observation.component:diastolic.valueQuantity.unit
+      path: Observation.component.valueQuantity.unit
+      min: 1
+      max: '1'
+      type:
+        - code: string
+
+
+    - id: Observation.component:diastolic.valueQuantity.system
+      path: Observation.component.valueQuantity.system
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: http://unitsofmeasure.org
+
+
+    - id: Observation.component:diastolic.valueQuantity.code
+      path: Observation.component.valueQuantity.code
+      min: 1
+      max: '1'
+      type:
+        - code: code
+      fixedCode: mm[Hg]

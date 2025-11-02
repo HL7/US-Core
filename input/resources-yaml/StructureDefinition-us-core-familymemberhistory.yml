@@ -2,7 +2,7 @@
 resourceType: StructureDefinition
 id: us-core-familymemberhistory
 
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory
 name: USCoreFamilyMemberHistoryProfile
 title: US Core FamilyMemberHistory Profile
 status: active
@@ -13,7 +13,7 @@ description: >-
 kind: resource
 abstract: false
 type: FamilyMemberHistory
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory
 derivation: constraint
 
 differential:
@@ -31,15 +31,15 @@ differential:
 
     - id: FamilyMemberHistory.extension:recorder
       extension:
-      - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-        valueBoolean: true
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
       path: FamilyMemberHistory.extension
       short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Who recorded family member's health history"
       sliceName: recorder
       type:
         - code: Extension
           profile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder'
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory-recorder
       mustSupport: false
 
     - id: FamilyMemberHistory.status
@@ -51,7 +51,7 @@ differential:
       type:
         - code: Reference
           targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       mustSupport: true
 
     - id: FamilyMemberHistory.relationship
@@ -59,7 +59,7 @@ differential:
       binding:
         strength: extensible
         description: Characterization of the familial relationship between two people.
-        valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.19579'
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.19579
       mustSupport: true
 
     - id: FamilyMemberHistory.condition
@@ -93,3 +93,6 @@ differential:
         description: Value set to describe the actual problem experienced by the patient
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
       mustSupport: true
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2

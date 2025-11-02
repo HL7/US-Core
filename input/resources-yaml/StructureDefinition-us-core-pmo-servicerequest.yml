@@ -14,65 +14,63 @@ baseDefinition: http://hl7.org/fhir/StructureDefinition/ServiceRequest
 derivation: constraint
 differential:
   element:
-  - id: ServiceRequest
-    path: ServiceRequest
-    mustSupport: false
+    - id: ServiceRequest
+      path: ServiceRequest
+      mustSupport: false
 
-  - id: ServiceRequest.status
-    path: ServiceRequest.status
-    mustSupport: true
+    - id: ServiceRequest.status
+      path: ServiceRequest.status
+      mustSupport: true
 
-  - id: ServiceRequest.intent
-    path: ServiceRequest.intent
-    comment: To allow for the resource life cycle, no constraint on intent for use when documenting derived medical orders. Use "directive" when part of a FHIR-based PMO document.
-    mustSupport: true
+    - id: ServiceRequest.intent
+      path: ServiceRequest.intent
+      comment: To allow for the resource life cycle, no constraint on intent for use when documenting derived medical orders. Use "directive" when part of a FHIR-based PMO document.
+      mustSupport: true
     # fixedCode: directive
 
-  - id: ServiceRequest.category
-    path: ServiceRequest.category
-    min: 1
-    slicing:
-      discriminator:
-      - type: value
-        path: $this
-      rules: open
-    mustSupport: true
+    - id: ServiceRequest.category
+      path: ServiceRequest.category
+      min: 1
+      slicing:
+        discriminator:
+          - type: value
+            path: $this
+        rules: open
+      mustSupport: true
 
 #  currently a 2-level category heirarchy
 # 'A single  mandatory "PMO" category?'
-  - id: ServiceRequest.category:us-core-pmo
-    path: ServiceRequest.category
-    sliceName: us-core-pmo
-    short: PMO ServiceRequest
-    min: 1
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: https://loinc.org
-        code: 93037-0 # This code represents Portable medical order form so may not be appropriate here
-    mustSupport: true
+    - id: ServiceRequest.category:us-core-pmo
+      path: ServiceRequest.category
+      sliceName: us-core-pmo
+      short: PMO ServiceRequest
+      min: 1
+      max: '1'
+      patternCodeableConcept:
+        coding:
+          - system: http://loinc.org
+            code: 93037-0 # This code represents Portable medical order form so may not be appropriate here
+      mustSupport: true
 
 #  OPtional 'Multiple portable medical order categories'
-  - id: ServiceRequest.category:us-core-pmo-category
-    path: ServiceRequest.category
-    sliceName: us-core-pmo-category
-    short: PMO order categories
-    binding:
-      strength: required
-      description: The Portable Medical Order Categories Value Set is a "starter set"
-        of categories supported for PMO ServiceRequests. Note that
-        other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.34
-    mustSupport: false
+    - id: ServiceRequest.category:us-core-pmo-category
+      path: ServiceRequest.category
+      sliceName: us-core-pmo-category
+      short: PMO order categories
+      binding:
+        strength: required
+        description: The Portable Medical Order Categories Value Set is a "starter set" of categories supported for PMO ServiceRequests. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.34
+      mustSupport: false
 
 # Grouped Valueset - Answers to panels codes in category codes
-  - id: ServiceRequest.code
-    path: ServiceRequest.code
-    comment: |-
-      The `ServiceRequest.code` is bound to [Portable Medical Orders - Detailed Categories and Interventions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.35/expansion), which is comprised of code sets for each [Portable Medical Order Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.34/Expansion) found in `ServiceRequest.category:us-core-pmo-category`.  For proper context, these codes **SHOULD** be aligned with the appropriate Category as follows.   - When there is no appropriate code to capture the order, plain text can be used here and in the optional `ServiceRequest.orderDetail` element.
-    min: 1
-    mustSupport: true
-    binding:
+    - id: ServiceRequest.code
+      path: ServiceRequest.code
+      comment: |-
+        The `ServiceRequest.code` is bound to [Portable Medical Orders - Detailed Categories and Interventions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.35/expansion), which is comprised of code sets for each [Portable Medical Order Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.34/Expansion) found in `ServiceRequest.category:us-core-pmo-category`.  For proper context, these codes **SHOULD** be aligned with the appropriate Category as follows.   - When there is no appropriate code to capture the order, plain text can be used here and in the optional `ServiceRequest.orderDetail` element.
+      min: 1
+      mustSupport: true
+      binding:
 
     # # === Using Additional bindings for various PMO categories instead of single valuset - see Pacios valuesets ===
     #   extension:
@@ -123,8 +121,8 @@ differential:
     #           valueString: SeviceRequest.category = Additional portable medical orders or instructions # based on the loinc panel code
     # # ========================================================================== ===
 
-      strength: extensible
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.35
+        strength: extensible
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.35
 
 #   # require text since mostly text today
 #   - id: ServiceRequest.code.text
@@ -143,66 +141,66 @@ differential:
 #     short: "Plain text representation to capture additional PMO order details."
 
 # limit to Patient
-  - id: ServiceRequest.subject
-    path: ServiceRequest.subject
+    - id: ServiceRequest.subject
+      path: ServiceRequest.subject
     # short: limited to Patient
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-    mustSupport: true
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      mustSupport: true
 
 # not used in context of a PMO Document. (Invariant or narrative)
-  - id: ServiceRequest.encounter
-    path: ServiceRequest.encounter
-    comment: This element is not present when part of a PMO Document.
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-    mustSupport: true
+    - id: ServiceRequest.encounter
+      path: ServiceRequest.encounter
+      comment: This element is not present when part of a PMO Document.
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+      mustSupport: true
 
 
-  - id: ServiceRequest.occurrence[x]
-    path: ServiceRequest.occurrence[x]
+    - id: ServiceRequest.occurrence[x]
+      path: ServiceRequest.occurrence[x]
     # short: Often just a start date
-    type:
-    - extension:
-      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        valueBoolean: true
-      code: Period
-    - code: dateTime
-    - code: Timing
-    mustSupport: true
+      type:
+        - extension:
+            - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: Period
+        - code: dateTime
+        - code: Timing
+      mustSupport: true
 
-  - id: ServiceRequest.authoredOn
-    path: ServiceRequest.authoredOn
-    comment: Date instantiated (executable) order signed vs date of PMO document. These dates are the same if part of PMO document
-    mustSupport: true
+    - id: ServiceRequest.authoredOn
+      path: ServiceRequest.authoredOn
+      comment: Date instantiated (executable) order signed vs date of PMO document. These dates are the same if part of PMO document
+      mustSupport: true
 
 # Authored only by Practitioner What if AI gets into the act ...Device?
-  - id: ServiceRequest.requester
-    path: ServiceRequest.requester
+    - id: ServiceRequest.requester
+      path: ServiceRequest.requester
     # short: Authored only by Practitioner
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
       # - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-      - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+            - http://hl7.org/fhir/StructureDefinition/PractitionerRole
       # - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
       # - http://hl7.org/fhir/StructureDefinition/Device
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
       # - extension:
       #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
       #     valueBoolean: false
@@ -212,7 +210,7 @@ differential:
       # - extension:
       #   - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
       #     valueBoolean: false
-    mustSupport: true
+      mustSupport: true
   # - id: ServiceRequest.reasonCode
   #   path: ServiceRequest.reasonCode
   #   binding:
@@ -224,31 +222,34 @@ differential:
 # Other option is supportingInfo
 # Best option would be basedOn but not supported in FHIR R4
 # What about supporting QuestionnnaireResponse Directly - Base FHIR question
-  - id: ServiceRequest.reasonReference
-    path: ServiceRequest.reasonReference
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
-      - http://hl7.org/fhir/StructureDefinition/Observation
-      - http://hl7.org/fhir/StructureDefinition/DiagnosticReport
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-    mustSupport: true
-    short: Reference to the PMO document
+    - id: ServiceRequest.reasonReference
+      path: ServiceRequest.reasonReference
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+            - http://hl7.org/fhir/StructureDefinition/Observation
+            - http://hl7.org/fhir/StructureDefinition/DiagnosticReport
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
+      short: Reference to the PMO document
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2

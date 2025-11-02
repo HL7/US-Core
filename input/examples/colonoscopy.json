@@ -12,16 +12,6 @@
   },
   "status": "active",
   "intent": "order",
-  "category": [
-    {
-      "coding": [
-        {
-          "system": "http://hl7.org/fhir/us/core/CodeSystem/careplan-category",
-          "code": "assess-plan"
-        }
-      ]
-    }
-  ],
   "subject": {
     "reference": "Patient/example",
     "display": "Amy Shaw"

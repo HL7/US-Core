@@ -77,5 +77,11 @@
             "documentation": "The bundle type is 'searchset' containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources which **SHOULD** conform to the [US Core DocumentReference Profiles](StructureDefinition-us-core-documentreference.html)",
             "type": "Bundle"
         }
+    ],
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 5
+        }
     ]
 }

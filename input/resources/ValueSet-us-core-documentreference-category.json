@@ -15,5 +15,11 @@
                 "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category"
             }
         ]
-    }
+    },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 3
+        }
+    ]
 }
