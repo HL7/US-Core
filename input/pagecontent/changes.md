@@ -73,14 +73,14 @@ The January 2026 ballot addresses the following:
 9.  **Applied:** Non-substantive (Clarification) Clarify $docref operation behavior [FHIR-52869](https://jira.hl7.org/browse/FHIR-52869) See Changes [Here](OperationDefinition-docref.html)
 10. **Resolved - change required:** Non-substantive (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
 11. **Triaged:**  Non-substantive (Enhancement) Create Version History Menu Item [FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](changes.html)
-12. **Triaged:**  Non-substantive (Enhancement) Update formatting in Quick Start to make it easier to read [FHIR-50397](https://jira.hl7.org/browse/FHIR-50397) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
-13. **Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
-14. **Triaged:**  Non-substantive (Clarification) Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)
-15. **Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
-16. **Applied:** Compatible, Non-substantive (Correction) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
+(StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
+1.  **Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
+2.  **Triaged:**  Non-substantive (Clarification) Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)
+3.  **Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
+4.  **Applied:** Compatible, Non-substantive (Correction) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
     - [US Core Race Extension](StructureDefinition-us-core-race.html)
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
-17. **Pre-Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html#relationship-to-us-core-and-other-igs)
+5.  **Pre-Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html#relationship-to-us-core-and-other-igs)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>

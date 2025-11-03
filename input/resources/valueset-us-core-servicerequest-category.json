@@ -32,6 +32,16 @@
                     "http://hl7.org/fhir/ValueSet/servicerequest-category"
                 ]
             }
+        ],
+        "exclude": [
+            {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "concept": [
+                    {
+                        "code": "PMO"
+                    }
+                ]
+            }
         ]
     }
 }

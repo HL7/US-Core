@@ -289,6 +289,7 @@
 [USCorePediatricBMIforAgeObservationProfile]: StructureDefinition-pediatric-bmi-for-age.html
 [USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
+[USCorePMOServiceRequestCategory]: ValueSet-us-core-pmo-servicerequest-category.html
 [USCorePMOServiceRequestProfile]: StructureDefinition-us-core-pmo-servicerequest.html
 [USCorePractitionerProfile]: StructureDefinition-us-core-practitioner.html
 [USCorePractitionerRoleProfile]: StructureDefinition-us-core-practitionerrole.html

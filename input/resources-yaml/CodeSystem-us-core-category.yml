@@ -5,7 +5,7 @@ name: USCoreCategory
 title: US Core Category
 status: active
 experimental: false
-date: 2022-04-20
+date: 2025-11-03
 description: Category codes used across US Core Profiles and resource types. They are typically used when there is a need for categorization for searching and finding resources or workflow hints.
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons License
 caseSensitive: true
@@ -39,6 +39,9 @@ concept:
     display: Observation ADI Documentation
     definition: Statement of presence and properties of patient or provider authored documents that record a patient's goals, preferences and priorities should a patient be unable to communicate them to a provider.
 
+  - code: PMO
+    display: Portable Medical Order (PMO)
+    definition: Portable Medical Order (PMO) category
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 3

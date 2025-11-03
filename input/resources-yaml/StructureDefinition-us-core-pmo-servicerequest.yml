@@ -6,7 +6,7 @@ title: US Core PMO ServiceRequest Profile
 status: active
 date: 2025-08-26
 description: |
-  The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html) resource; refer to it for scope and usage definitions. This profile is principally intended to represent an order based on a PMO document and references the [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html) to communicate the contents of the PMO document, such as POLST, MOLST, or other state-specific forms. PMO documents follow the patient across care settings and are typically stored as scanned images in EMRs/EHRs. Together, these two profiles satisfy the USCDI's PMO Order Data Element's intent to represent orders based on an individual's PMO. The US Core PMO ServiceRequest Profile establishes minimum expectations for recording, searching, and fetching PMO-related ServiceRequest information, specifying core elements, extensions, vocabularies, and value sets that SHALL be present to promote interoperability.
+  The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html) resource; refer to it for scope and usage definitions. This profile represents an order based on a PMO document and references the [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html) to communicate the contents of the PMO document, such as POLST, MOLST, or other state-specific forms. PMO documents follow the patient across care settings and are typically stored as scanned images in EMRs/EHRs. Together, these two profiles satisfy the USCDI's PMO Order Data Element's intent to represent orders based on an individual's PMO. The US Core PMO ServiceRequest Profile establishes minimum expectations for recording, searching, and fetching PMO-related ServiceRequest information, specifying core elements, extensions, vocabularies, and value sets that SHALL be present to promote interoperability.
 kind: resource
 abstract: false
 type: ServiceRequest
@@ -43,14 +43,15 @@ differential:
     - id: ServiceRequest.category:us-core-pmo
       path: ServiceRequest.category
       sliceName: us-core-pmo
-      short: PMO ServiceRequest
+      short: A ServiceRequest category representing an order derived from a PMO document
       min: 1
       max: '1'
       patternCodeableConcept:
         coding:
-          - system: http://loinc.org
-            code: 93037-0 # This code represents Portable medical order form so may not be appropriate here
+          - system: http://hl7.org.fhir/us/core/ValueSet/us-core-pmo-servicerequest-category
+            code: PMO # This code represents a medical order derived from a PMO document
       mustSupport: true
+
 
 #  OPtional 'Multiple portable medical order categories'
     - id: ServiceRequest.category:us-core-pmo-category

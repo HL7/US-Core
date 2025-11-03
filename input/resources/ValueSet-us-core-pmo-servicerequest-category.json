@@ -1,0 +1,31 @@
+{
+    "resourceType": "ValueSet",
+    "id": "us-core-pmo-servicerequest-category",
+    "url": "http://hl7.org.fhir/us/core/ValueSet/us-core-pmo-servicerequest-category",
+    "name": "USCorePMOServiceRequestCategory",
+    "title": "US Core PMO ServiceRequest Category",
+    "status": "active",
+    "experimental": false,
+    "date": "2025-11-03",
+    "description": "The PMO ServiceRequest Category Value Set is used to indicate that the ServiceRequest is instantiated based on a Portable Medical Order (PMO) document.",
+    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "concept": [
+                    {
+                        "code": "PMO",
+                        "display": "Portable Medical Order (PMO)"
+                    }
+                ]
+            }
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+            "valueInteger": 3
+        }
+    ]
+}

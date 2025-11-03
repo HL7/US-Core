@@ -56,10 +56,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- The primary use for this profile is to instantiate medical orders after reviewing a patient's Portable Medical Order (PMO), such as POLST, MOLST, or other state-specific forms. Actionable orders are typically implemented in facility-based care environments, such as hospitals or skilled nursing facilities. This profile is not intended for routine ambulatory or office-based practice settings, where PMOs may be reviewed but new standing orders are not typically derived.
-- A secondary use for this profile is to represent the medical orders section in a FHIR PMO document, such as defined by the [PACIO Advance Healthcare Directive Interoperability Implementation Guide].
+- This profile is used to instantiate medical orders after reviewing a patient's Portable Medical Order (PMO), such as POLST, MOLST, or other state-specific forms. Actionable orders are typically implemented in facility-based care environments, such as hospitals or skilled nursing facilities. This profile is not intended for routine ambulatory or office-based practice settings, where PMOs may be reviewed but new standing orders are not typically derived.
 - *The `ServiceRequest.code` is bound to [Portable Medical Orders – Detailed Categories and Interventions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.35/expansion), which is comprised of code sets for each [Portable Medical Order Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.34/Expansion) found in `ServiceRequest.category:us-core-pmo-category`.
   - For proper context, these codes **SHOULD** be aligned with the appropriate Category as follows:
+
     |PMO Category Code|PMO Code Set|
     |---|---|
     |100822-6 (Cardiopulmonary resuscitation orders)|[Cardiopulmonary Resuscitation Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.28/expansion/Latest)<br /> <br /> [Cardiopulmonary Resuscitation Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.30/expansion/Latest)|
@@ -67,12 +67,13 @@ This section provides detailed implementation guidance for the US Core Profile t
     |100824-2 (Additional portable medical orders or instructions)|[Additional Portable Medical Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.32/expansion/Latest)|
     |100825-9 (Medically assisted nutrition orders)|[Medically Assisted Nutrition Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.35/expansion/Latest)|
     {:.grid}
+
   - When there is no appropriate code to capture the order, plain text can be used here and in the optional `ServiceRequest.orderDetail` element.
 - *The PMO document is referenced in `ServiceRequest.reasonReference`.
   - The document can be in any format the system accepts, such as a structured FHIR or CCDA document, scanned images, or PDF files.
    The ServiceRequest.basedOn currently
 
-    US Core R4 uses ServiceRequest.reasonReference to reference the PMO document. Although ServiceRequest.basedOn is more appropriate semantically, the base FHIR R4 ServiceRequest resource restricts the references to CarePlan, ServiceRequest, or MedicationRequest. In FHIR R6, a reference to DocumentReference will be added to the ServiceRequest.basedOn element. When US Core migrates to FHIR R6, it will update the reference to it.
+    US Core R4 uses `ServiceRequest.reasonReference` to reference the PMO document. Although `ServiceRequest.basedOn` is more appropriate semantically, the base FHIR R4 ServiceRequest resource restricts the references to CarePlan, ServiceRequest, or MedicationRequest. In FHIR R6, a reference to DocumentReference will be added to the `ServiceRequest.basedOn` element, and, when US Core migrates to FHIR R6, it will update the reference to it.
     {: .stu-note}
 
 

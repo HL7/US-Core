@@ -2472,9 +2472,17 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-pmo-servicerequest-category"
+        },
+        "description": "The PMO ServiceRequest Category Value Set is used to indicate that the ServiceRequest is instantiated based on a Portable Medical Order (PMO) document.",
+        "exampleBoolean": false,
+        "name": "US Core PMO ServiceRequest Category"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-pmo-servicerequest"
         },
-        "description": "The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html) resource; refer to it for scope and usage definitions. This profile is principally intended to represent an order based on a PMO document and references the [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html) to communicate the contents of the PMO document, such as POLST, MOLST, or other state-specific forms. PMO documents follow the patient across care settings and are typically stored as scanned images in EMRs/EHRs. Together, these two profiles satisfy the USCDI's PMO Order Data Element's intent to represent orders based on an individual's PMO. The US Core PMO ServiceRequest Profile establishes minimum expectations for recording, searching, and fetching PMO-related ServiceRequest information, specifying core elements, extensions, vocabularies, and value sets that SHALL be present to promote interoperability.\n",
+        "description": "The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html) resource; refer to it for scope and usage definitions. This profile represents an order based on a PMO document and references the [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html) to communicate the contents of the PMO document, such as POLST, MOLST, or other state-specific forms. PMO documents follow the patient across care settings and are typically stored as scanned images in EMRs/EHRs. Together, these two profiles satisfy the USCDI's PMO Order Data Element's intent to represent orders based on an individual's PMO. The US Core PMO ServiceRequest Profile establishes minimum expectations for recording, searching, and fetching PMO-related ServiceRequest information, specifying core elements, extensions, vocabularies, and value sets that SHALL be present to promote interoperability.\n",
         "exampleBoolean": false,
         "name": "US Core PMO ServiceRequest Profile"
       },
