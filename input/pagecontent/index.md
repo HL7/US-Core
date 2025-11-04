@@ -42,6 +42,7 @@ This Guide is divided into several pages, which are listed at the top of each pa
   - [Basic Provenance]\: This page provides implementers with important definitions to create and share the Provenance Resource.
   - [Screening and Assessments]\: This page documents how US Core Profiles are used to represent screenings and assessments for patient health status
   - [Changes Between Versions]\: This page considers the user and developer experience when transitioning between versions of US Core and documents the changes between versions.
+  - [Relationship With Other IGs]\: This page outlines the relationship between US Core and other implementation guides, including a detailed  comparison with International Patient Access (IPA) and International Patient Summary (IPS).
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles and Extensions]\: This page lists the US Core Profiles and Extensions defined in this guide to exchange quality data.
     - Each US Core Profile page includes a narrative description that lists all the [Mandatory] and [Must Support] data elements, profile-specific implementation guidance, and formal definitions. A "Quick Start" guide summarizes the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it also may cover un-profiled elements to aid with implementation and certification.
