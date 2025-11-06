@@ -2318,12 +2318,6 @@ definition:
     exampleBoolean: false
     name: US Core Pediatric Weight for Height Observation Profile
   - reference:
-      reference: ValueSet/us-core-pmo-servicerequest-category
-    description: The PMO ServiceRequest Category Value Set is used to indicate that
-      the ServiceRequest is instantiated based on a Portable Medical Order (PMO) document.
-    exampleBoolean: false
-    name: US Core PMO ServiceRequest Category
-  - reference:
       reference: StructureDefinition/us-core-pmo-servicerequest
     description: 'The US Core PMO ServiceRequest Profile inherits from the [FHIR ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)
       resource; refer to it for scope and usage definitions. This profile represents
@@ -2662,9 +2656,14 @@ definition:
     name: US Core Version 7.0.0 Model Definition
     exampleBoolean: true
   - reference:
-      reference: Library/uscore-8.0.0-model-definition
-    description: Model definition for US Core Version 8.0.0 Model
-    name: US Core Version 8.0.0 Model Definition
+      reference: Library/uscore-8.0.1-model-definition
+    description: Model definition for US Core Version 8.0.1 Model
+    name: US Core Version 8.0.1 Model Definition
+    exampleBoolean: true
+  - reference:
+      reference: Library/uscore-9.0.0-model-definition
+    description: Model definition for US Core Version 9.0.0 Model
+    name: US Core Version 9.0.0 Model Definition
     exampleBoolean: true
   - reference:
       reference: StructureDefinition/us-core-vital-signs

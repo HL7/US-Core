@@ -36,10 +36,10 @@ The January 2026 ballot addresses the following:
 3. **Resolved - change required:** Compatible, substantive (Clarification) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876) See Changes [Here](https://www.hl7.org/fhir/us/core/search-parameters-and-operations.html#search-parameters)
 4. **Triaged:** Compatible, substantive (Clarification) Hyperlink discrepancy [FHIR-49336](https://jira.hl7.org/browse/FHIR-49336) See Changes [Here](StructureDefinition-us-core-diagnosticreport-lab.html#terminology-bindings-differential)
 5. **Triaged:** Compatible, substantive (Clarification) Hyperlink discrepancy [FHIR-49337](https://jira.hl7.org/browse/FHIR-49337) See Changes [Here](StructureDefinition-us-core-observation-lab.html#terminology-bindings-differential)
-6. **Resolved - change required:** Compatible, substantive (Correction) Update Medication Adherence Value Set [FHIR-52822](https://jira.hl7.org/browse/FHIR-52822) See Changes [Here](StructureDefinition-us-core-medication-adherence.html)
-7.  **Applied:** Compatible, substantive (Enhancement) Add SNOMED CT specialty codes as an "additional binding" to `PractitionerRole.specialty`  [FHIR-52843](https://jira.hl7.org/browse/FHIR-52843) See Changes [Here](StructureDefinition-us-core-practitionerrole.html)
-8.  **Triaged:** Compatible, substantive (Correction) Update the SOPT's terminology reference in the code-system table [FHIR-44138](https://jira.hl7.org/browse/FHIR-44138) See Changes [Here](terminology.html)
-9.  **Resolved - change required:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](StructureDefinition-us-core-patient.html)
+6. **Applied:** Compatible, substantive (Correction) Update Medication Adherence Value Set [FHIR-52822](https://jira.hl7.org/browse/FHIR-52822) See Changes [Here](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.8/expansion)
+7. **Applied:** Compatible, substantive (Enhancement) Add SNOMED CT specialty codes as an "additional binding" to `PractitionerRole.specialty`  [FHIR-52843](https://jira.hl7.org/browse/FHIR-52843) See Changes [Here](StructureDefinition-us-core-practitionerrole.html)
+8. **Triaged:** Compatible, substantive (Correction) Update the SOPT's terminology reference in the code-system table [FHIR-44138](https://jira.hl7.org/browse/FHIR-44138) See Changes [Here](terminology.html)
+9. **Resolved - change required:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](StructureDefinition-us-core-patient.html)
 10. **Applied:**  Compatible, substantive (Enhancement) Additional Guidance for the appropriate NDC code to use from the NDC vaccine linker [FHIR-50798](https://jira.hl7.org/browse/FHIR-50798) See Changes:
     - [US Core Immunization Profile](StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance)
     - [Immunization Example 1](Immunization-imm-1.html)
@@ -81,6 +81,7 @@ The January 2026 ballot addresses the following:
     - [US Core Race Extension](StructureDefinition-us-core-race.html)
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 5.  **Pre-Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html#relationship-to-us-core-and-other-igs)
+2.  **Triaged:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](looking-ahead.html)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>

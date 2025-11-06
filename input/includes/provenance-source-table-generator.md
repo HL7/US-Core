@@ -1,6 +1,7 @@
 <!-- This liquid script creates a US Core provenance requirements table using input data from input/data/provenance-elements.csv
 with the following columns:
 - Row
+- Is_New
 - Is_Source : boolean flag if is provenance source element
 - Survey1, Survey2 : results of online vendor surveys
 - Observation_grouping: tag for grouping profiles together like ADI or vitals
@@ -16,22 +17,9 @@ with the following columns:
 - vendor_support_element: boolean flag if vendors surveyed on their use of the provenance source element
 - Target_Resource_1: provenance source element target resource (can be up to 7)
 - Target_Resource_1_is_MS: boolean flag if provenance source element target resource is US Core Must Support
+- Target_Resource_1_is_new: boolean flag if provenance source element target resource is newly added to the table for highlighting, default = False
 - vendor_support_Target_Resource_1: boolean flag if vendors surveyed on their use of the provenance source element target resource
-- Target_Resource_2: provenance source element target resource (can be up to 7)
-- Target_Resource_2_is_MS: boolean flag if provenance source element target resource is US Core Must Support
-- vendor_support_Target_Resource_2: boolean flag if vendors surveyed on their use of the provenance source element target resource
-- Target_Resource_3: provenance source element target resource (can be up to 7)
-- vendor_support_Target_Resource_3: boolean flag if vendors surveyed on their use of the provenance source element target resource
-- Target_Resource_4: provenance source element target resource (can be up to 7)
-- vendor_support_Target_Resource_4: boolean flag if vendors surveyed on their use of the provenance source element target resource
-- Target_Resource_5: provenance source element target resource (can be up to 7)
-- vendor_support_Target_Resource_5: boolean flag if vendors surveyed on their use of the provenance source element target resource
-- Target_Resource_6: provenance source element target resource (can be up to 7)
-- vendor_support_Target_Resource_6: boolean flag if vendors surveyed on their use of the provenance source element target resource
-- Target_Resource_7: provenance source element target resource (can be up to 7)
-- vendor_support_Target_Resource_7: boolean flag if vendors surveyed on their use of the provenance source element target resource
-- Target_Resource_8: provenance source element target resource (can be up to 7)
-- vendor_support_Target_Resource_7: boolean flag if vendors surveyed on their use of the provenance source element target resource
+same columns as above for Targets 2 -7
 - Comments
 
 TODO. add row highlighting for Is_New==True item

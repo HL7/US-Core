@@ -289,7 +289,6 @@
 [USCorePediatricBMIforAgeObservationProfile]: StructureDefinition-pediatric-bmi-for-age.html
 [USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
-[USCorePMOServiceRequestCategory]: ValueSet-us-core-pmo-servicerequest-category.html
 [USCorePMOServiceRequestProfile]: StructureDefinition-us-core-pmo-servicerequest.html
 [USCorePractitionerProfile]: StructureDefinition-us-core-practitioner.html
 [USCorePractitionerRoleProfile]: StructureDefinition-us-core-practitionerrole.html
@@ -325,7 +324,8 @@
 [uscore-5.0.1-model-definition]: Library-uscore-5.0.1-model-definition.html
 [uscore-6.1.0-model-definition]: Library-uscore-6.1.0-model-definition.html
 [uscore-7.0.0-model-definition]: Library-uscore-7.0.0-model-definition.html
-[uscore-8.0.0-model-definition]: Library-uscore-8.0.0-model-definition.html
+[uscore-8.0.1-model-definition]: Library-uscore-8.0.1-model-definition.html
+[uscore-9.0.0-model-definition]: Library-uscore-9.0.0-model-definition.html
 [USCoreVitalSignsProfile]: StructureDefinition-us-core-vital-signs.html
 [uscore-med1]: Medication-uscore-med1.html
 [uscore-med2]: Medication-uscore-med2.html

@@ -12,7 +12,7 @@ FHIR resource elements of the [Reference] datatype reference other FHIR resource
 
 ### Contained Resources
 
-When responding to a query, Servers **SHOULD** not use inline [contained] resources to represent the returned data. A contained resource can only be used when the source data exists within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used to represent the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
+When responding to a query, Servers **SHOULD** not use inline [contained] resources to represent the returned data. A contained resource can only be used when the source data exists within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used to represent the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.
 
 
 ###  Suppressed Data
@@ -28,7 +28,7 @@ In situations where the specific piece of data is hidden for security or privacy
 #### SNOMED CT Edition and Version Options
 
 1. Using only the system `http://snomed.info/sct` refers to an unspecified edition/version. For example:
-   
+
     ~~~
     "code": {
             "coding": [
@@ -58,7 +58,7 @@ In situations where the specific piece of data is hidden for security or privacy
         },
     ~~~
 
-  For more details, see [Using SNOMED CT with FHIR]. 
+  For more details, see [Using SNOMED CT with FHIR].
 
 
 
@@ -71,16 +71,17 @@ In situations where the specific piece of data is hidden for security or privacy
 - [US Core Version 5.0.1 Model Definition]
 - [US Core Version 6.1.0 Model Definition]
 - [US Core Version 7.0.0 Model Definition]
-- [US Core Version 8.0.0 Model Definition]
+- [US Core Version 8.0.1 Model Definition]
+- [US Core Version 9.0.0 Model Definition]
 
-Note that US Core Model Definitions are also available in the [Common CQL Assets for FHIR (US-Based)] implementation guide at <https://hl7.org/fhir/us/cql/2025May/Library-USCore-ModelInfo.html>
+Note that US Core Model Definitions are also available in the [Common CQL Assets for FHIR (US-Based)] implementation guide at <https://hl7.org/fhir/us/cql/Library-USCore-ModelInfo.html>
 
 For more information about using IG-specific model information with CQL and how these libraries were constructed, refer to the [Using CQL With FHIR] Implementation Guide.
 
 
 ###  Using UCUM codes in the [Quantity] datatype
 
-Some US Core Profiles bind the `Quantity.code` element in the Quantity datatype to the [UCUM] code system. For example, in the [US Core Laboratory Result Observation Profile], `Observation.valueQuantity`, `Observation.referenceRange.low`, and `Observation.referenceRange.high` are bound to UCUM. Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements). A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or when the units are missing, which will likely occur in the real world.  
+Some US Core Profiles bind the `Quantity.code` element in the Quantity datatype to the [UCUM] code system. For example, in the [US Core Laboratory Result Observation Profile], `Observation.valueQuantity`, `Observation.referenceRange.low`, and `Observation.referenceRange.high` are bound to UCUM. Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements). A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or when the units are missing, which will likely occur in the real world.
 
 **UCUM code provided**
 
@@ -285,7 +286,7 @@ However, neither specification defines how a user-facing provider app can seek r
 
 Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles and **SHOULD** populate [Resource.meta.lastUpdated] for US Core Profiles as accurately as possible. Servers **SHALL** document in `CapabilityStatement.rest.resource.searchParam.documentation` the types of changes that can be detected using the `_lastUpdated` search parameter (see example snippet below).
 
-Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile 
+Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile
 
 ~~~
 {
@@ -309,16 +310,16 @@ Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` s
                   "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
                   "type": "date",
                   "documentation": "This parameter is supported for Observations with the category
-                  \"laboratory\" and allows searching for Observations that have been created or the 
+                  \"laboratory\" and allows searching for Observations that have been created or the
                   status updated since the specified date."
                   },
                   ...
                 ]
-              ...  
+              ...
             }
             ...
           ]
-         ... 
+         ...
        }
     ]
 }
@@ -326,7 +327,7 @@ Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` s
 
 <div class="stu-note" markdown="1">
 
-Many Servers are unable to accurately populate the `.meta.lastUpdated` element. 
+Many Servers are unable to accurately populate the `.meta.lastUpdated` element.
 
 **Note to Clients:**
 - Updates to `.meta.lastUpdated` may not reflect a change in the resource and resource updates may not result in updates to `.meta.lastUpdated`.

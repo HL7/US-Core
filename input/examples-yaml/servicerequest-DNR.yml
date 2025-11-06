@@ -13,10 +13,10 @@ status: active
 intent: directive
 category:
   - coding:
-      - system: http://loinc.org
-        code: 93037-0
-        display: Portable medical order form
-    text: PMO derived Cardiopulmonary resuscitation order
+      - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+        code: PMO
+        display: Portable Medical Order (PMO)
+    text: PMO derived order
   - coding:
       - system: http://loinc.org
         code: 100822-6
