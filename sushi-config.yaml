@@ -72,6 +72,8 @@ dependencies:
     uri: 'https://phinvads.cdc.gov/vads/fhir/ImplementationGuide/us.cdc.phinvads'
     version: 0.12.0
   hl7.fhir.uv.extensions.r4: 5.2.0 #hl7.fhir.uv.extensions: 5.1.0 #5.1.0-cibuild #5.1.0-ballot1  # <<<< If your WG is not in the older list, you need to add an explicit dependency to the current version of the extensions pack
+  hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2 # try this for cross version extension per Gino on Zulip
+
 pages:
   index.md:
     # extension:

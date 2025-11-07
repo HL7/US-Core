@@ -18,7 +18,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 *see guidance below
 
-**Additional Profile specific implementation guidance:**
+### Profile Specific Implementation Guidance
+
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * [US Core Encounter Profile] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
 {% include encounter-location.md%}

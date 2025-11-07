@@ -69,6 +69,10 @@ dependsOn:
   version: 5.2.0
   uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
   id: hl7_fhir_uv_extensions_r4
+- packageId: hl7.fhir.uv.xver-r5.r4
+  version: 0.0.1-snapshot-2
+  uri: http://hl7.org/fhir/5.0/ImplementationGuide/hl7.fhir.uv.xver-r5.r4
+  id: hl7_fhir_uv_xver_r5_r4
 definition:
   extension:
   - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
@@ -495,6 +499,12 @@ definition:
       DiagnosticReport Note Profile*.
     name: EKG Strip Image
     exampleBoolean: true
+  - reference:
+      reference: Observation/e-cig-user
+    description: This example for the *US Core SmokingStatus Profile* shows how it
+      is used to capture an observation of electronic cigarette use.
+    name: Electronic Cigarette User Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
   - reference:
       reference: Encounter/example-1
     description: This is a encounter 1 example for the *US Core Encounter Profile*.

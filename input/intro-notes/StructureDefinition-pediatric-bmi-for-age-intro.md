@@ -23,7 +23,7 @@ The following are example usage scenarios for this profile:
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
+- Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}
 - Information about the growth chart tables used to determine percentiles **SHOULD** be supplied in `Observation.note.text` (for example, 'CDC Males, 2-20 years Chart').
 

@@ -29,17 +29,15 @@
                 "mustSupport": false
             },
             {
-                "id": "DocumentReference.extension:authenticationTime",
+                "id": "DocumentReference.extension:fhir5-attester",
                 "path": "DocumentReference.extension",
-                "sliceName": "authenticationTime",
-                "short": "Authentication Time",
-                "min": 0,
-                "max": "1",
+                "sliceName": "fhir5-attester",
+                "short": "Participant who has authenticated the accuracy of the document.",
                 "type": [
                     {
                         "code": "Extension",
                         "profile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time"
+                            "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester"
                         ]
                     }
                 ],
@@ -160,47 +158,6 @@
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.authenticator",
-                "path": "DocumentReference.authenticator",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
                                     }
                                 ]
                             },

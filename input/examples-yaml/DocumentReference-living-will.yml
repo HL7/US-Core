@@ -1,5 +1,6 @@
 resourceType: DocumentReference
 id: living-will
+# Patient Living Will  - Pt would be author and authenticator. (would not be signed by a Practitioner)
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
@@ -9,9 +10,26 @@ meta:
       DocumentReference Profile*
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
+# extension:
+#   - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
+#     valueDateTime: 2024-10-08T19:48:54.316108-07:00
+
+# use R5 FHIR attestor instead
 extension:
-  - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
-    valueDateTime: 2024-10-08T19:48:54.316108-07:00
+  - url: "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester"
+    extension:
+      - url: mode
+        valueCodeableConcept:
+          coding:
+            - system: "http://hl7.org/fhir/composition-attestation-mode"
+              code: personal
+      - url: time
+        valueDateTime: 2024-10-08T19:48:54.316108-07:00
+      - url: party
+        valueReference:
+          reference: Patient/example
+          display:  Amy Shaw
+
 identifier:
 - system: urn:ietf:rfc:3986
   value: urn:oid:2.16.840.1.113883.19.5.99999.1
@@ -34,9 +52,9 @@ date: 2024-10-08T19:48:54.316108-07:00
 author:
 - reference: Patient/example
   display: Amy V. Shaw
-authenticator:
-  reference: Practitioner/practitioner-1
-  display: Practitioner-1
+# authenticator:
+#   reference: Practitioner/practitioner-1
+#   display: Practitioner-1
 content:
 - attachment:
     contentType: application/pdf

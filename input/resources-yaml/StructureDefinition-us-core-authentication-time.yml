@@ -1,8 +1,18 @@
 resourceType: StructureDefinition
 id: us-core-authentication-time
 
-#============= Remove when version 8 named in regs ====================
+#=== Deprecate profile  stays FMM=2 ====
+
 extension:
+  - url: >-
+      http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: deprecated
+    _valueCode:
+      extension:
+        - url: >-
+            http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason
+          valueMarkdown: >-
+            THe US Core Authentication Time Extension extension has been superseded by the standard [Cross-version Extension for R5.DocumentReference.attester for use in FHIR R4](https://hl7.org/fhir/uv/xver-r5.r4/0.0.1-snapshot-2/StructureDefinition-ext-R5-DocumentReference.attester.html) and is deprecated. It **SHOULD NOT** be used for new or revised content. It is retained for historical/backward compatibility purposes. Implementers **SHOULD** use the FHIR R5 DocumentReference.attester extension instead
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 2
 #======================================================================
@@ -11,7 +21,7 @@ url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
 #url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time
 name: USCoreAuthenticationTimeExtension
 title: US Core Authentication Time Extension
-# alias:
+# alias:=
 #    - verification date
 status: active
 date: 2024-10-07

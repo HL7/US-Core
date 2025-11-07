@@ -23,7 +23,7 @@ The following are example usage scenarios for this profile:
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
+- Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}
 - See the [US Core Pediatric BMI for Age Observation Profile] for representing pediatric BMI measurements as a percentile based upon growth chart tables.
 

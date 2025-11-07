@@ -60,6 +60,7 @@
 [ekg-impression]: Observation-ekg-impression.html
 [ekg-lead]: Observation-ekg-lead.html
 [ekg-strip]: Media-ekg-strip.html
+[e-cig-user]: Observation-e-cig-user.html
 [example-1]: Encounter-example-1.html
 [1036]: Encounter-1036.html
 [delivery]: Encounter-delivery.html

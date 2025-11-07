@@ -1,0 +1,44 @@
+resourceType: Observation
+id: e-cig-user
+meta:
+    extension:
+        -
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+            valueString: Electronic Cigarette User Example
+        -
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+            valueMarkdown: 'This example for the *US Core SmokingStatus Profile* shows how it is used to capture an observation of electronic cigarette use.'
+    profile:
+        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus'
+status: final
+category:
+    -
+        coding:
+            -
+                system: 'http://terminology.hl7.org/CodeSystem/observation-category'
+                code: social-history
+                display: Social History
+        text: Social History
+code:
+    coding:
+        -
+            system: 'http://loinc.org'
+            code: 105045-9
+            display: Electronic cigarette status
+    text: E cig use
+subject:
+    reference: Patient/example
+    display: Amy Shaw
+effectivePeriod:
+    start: 2024-01
+performer:
+    -
+        reference: Practitioner/practitioner-3
+        display: Nurse Nancy RN
+valueCodeableConcept:
+    coding:
+        -
+            system: 'http://snomed.info/sct'
+            version: 'http://snomed.info/sct/731000124108'
+            code: '785889008'
+    text: Nicotine-filled electronic cigarette user

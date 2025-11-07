@@ -27,7 +27,7 @@ The January 2026 ballot addresses the following:
 ##### Non-compatible
 1. **Resolved - change required:** Non-compatible (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) See Changes [Here](changes.html)
 2. **Triaged:** Non-compatible (Correction) Constrain subject to only patient [FHIR-51032](https://jira.hl7.org/browse/FHIR-51032) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
-3. **Triaged:**  Non-compatible (Enhancement) Clean up examples for FHIR ADI DocumentReference Profile [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here]()
+3. **Applied:**  Non-compatible (Enhancement) Replace `DocumentReference.attestor`and US Core Authentication Time Extension extension with the R5 authenticator extension [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here]()
 4. **Applied:** Non-compatible (Correction) Correct HCPCS code system URI [FHIR-50807](https://jira.hl7.org/browse/FHIR-50807) See Changes [Here](ValueSet-us-core-procedure-code.html)
 5. **Resolved - change required:** Non-compatible, substantive (Enhancement) Add USCDI v6 Data Elements to US Core [FHIR-52965](https://jira.hl7.org/browse/FHIR-52965) See Changes Listed in the [9.0.0-Ballot Introduction](#the-january-2026-ballot) above.
 
@@ -45,12 +45,14 @@ The January 2026 ballot addresses the following:
     - [Immunization Example 1](Immunization-imm-1.html)
 11. **Resolved - change required:**  Compatible, substantive (Enhancement) merge US Core Provenance Type CodeSystem with FHIR Provenance Type CodeSystem [FHIR-50927](https://jira.hl7.org/browse/FHIR-50927) See Changes:[Here](CodeSystem-us-core-provenance-participant-type.html)
 12. **Applied:** Compatible, substantive (Correction) Remove guidance from US Core Simple Observation Profile [FHIR-51493](https://jira.hl7.org/browse/FHIR-51493) See Changes [Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
-13. **Triaged** Compatible, substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
+13. **Resolved - change required:** Compatible, substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
 14. **Applied:** Compatible, substantive (Enhancement) Add resource types that can use the Individual Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-individual-sex.html)
 15. **Applied:** Compatible, substantive (Enhancement) Add NCSBN as an optional identifier to US Core Practitioner Profile [FHIR-53040](https://jira.hl7.org/browse/FHIR-53040) See Changes:
     - [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html)
     - [Practitioner 3 Example](Practitioner-practitioner-3.html)
-16.  **Resolved - change required:** Compatible, substantive (Enhancement) Add e-cig code to US Core Smoking Status Profile's Smoking Status Type value set. [FHIR-53042](https://jira.hl7.org/browse/FHIR-53042) See Changes [Here](StructureDefinition/us-core-smokingstatus)
+16. **Applied:** Compatible, substantive (Enhancement) Add *Electronic cigarette status* to US Core Smoking Status Profile's Smoking Status Type value set. [FHIR-53042](https://jira.hl7.org/browse/FHIR-53042) See Changes
+    - [Smoking Status Type](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion)
+    - [Electronic Cigarette User Example](Observation-e-cig-user-example.html)
 17. **Triaged:** Compatible, substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html)
 
 ##### Non-substantive

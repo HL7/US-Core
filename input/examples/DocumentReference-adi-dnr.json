@@ -8,8 +8,58 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time",
-      "valueDateTime": "2024-10-08T19:48:54.316108-07:00"
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension": [
+        {
+          "url": "mode",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/composition-attestation-mode",
+                "code": "legal"
+              }
+            ]
+          }
+        },
+        {
+          "url": "time",
+          "valueDateTime": "2024-10-08T19:48:54.316108-07:00"
+        },
+        {
+          "url": "party",
+          "valueReference": {
+            "reference": "Practitioner/practitioner-1",
+            "display": "Ronald Bone, MD"
+          }
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester",
+      "extension": [
+        {
+          "url": "mode",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/composition-attestation-mode",
+                "code": "personal"
+              }
+            ]
+          }
+        },
+        {
+          "url": "time",
+          "valueDateTime": "2024-10-08T19:48:54.316108-07:00"
+        },
+        {
+          "url": "party",
+          "valueReference": {
+            "reference": "Patient/example",
+            "display": "Amy Shaw"
+          }
+        }
+      ]
     }
   ],
   "identifier": [
@@ -47,14 +97,10 @@
   "date": "2024-10-08T19:48:54.316108-07:00",
   "author": [
     {
-      "reference": "Patient/example",
-      "display": "Example"
+      "reference": "Practitioner/practitioner-1",
+      "display": "Ronald Bone, MD"
     }
   ],
-  "authenticator": {
-    "reference": "Practitioner/practitioner-1",
-    "display": "Practitioner-1"
-  },
   "content": [
     {
       "attachment": {

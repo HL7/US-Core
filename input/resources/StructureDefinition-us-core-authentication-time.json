@@ -3,6 +3,18 @@
     "id": "us-core-authentication-time",
     "extension": [
         {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "deprecated",
+            "_valueCode": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason",
+                        "valueMarkdown": "THe US Core Authentication Time Extension extension has been superseded by the standard [Cross-version Extension for R5.DocumentReference.attester for use in FHIR R4](https://hl7.org/fhir/uv/xver-r5.r4/0.0.1-snapshot-2/StructureDefinition-ext-R5-DocumentReference.attester.html) and is deprecated. It **SHOULD NOT** be used for new or revised content. It is retained for historical/backward compatibility purposes. Implementers **SHOULD** use the FHIR R5 DocumentReference.attester extension instead"
+                    }
+                ]
+            }
+        },
+        {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
             "valueInteger": 2
         }
