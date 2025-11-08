@@ -24,10 +24,10 @@ The context of US Core within the set of US Realm HL7 FHIR standards is shown in
 
 US Core is based on the FHIR R4 specification and relies these implementation guides:
 
-| Implementation Guide | Version(s) | Reason |
+| Implementation Guide | Version | Reason |
 |----------------------|-------------|--------|
-| SMART App Launch | 2.2.0 | To support reference in the [SMART on FHIR Obligations and Capabilities] page] |
-| Structured Data Capture | 3.0.0 | [US Core QuestionnaireResponse Profile] is derived from the [Structured Data Capture (SDC) Questionnaire Response Profile].|
+| SMART App Launch | {{site.data.ig.dependsOn[0].version}} | To support reference in the [SMART on FHIR Obligations and Capabilities] page] |
+| Structured Data Capture | {{site.data.ig.dependsOn[1].version}} | [US Core QuestionnaireResponse Profile] is derived from the [Structured Data Capture (SDC) Questionnaire Response Profile].|
 {:.grid}
 
 #### Alignment with Other IGs

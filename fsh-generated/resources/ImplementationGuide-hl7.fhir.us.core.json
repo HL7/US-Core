@@ -56,22 +56,22 @@
   ],
   "dependsOn": [
     {
+      "id": "smart",
       "packageId": "hl7.fhir.uv.smart-app-launch",
-      "version": "2.2.0",
       "uri": "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch",
-      "id": "hl7_fhir_uv_smart_app_launch"
+      "version": "2.2.0"
+    },
+    {
+      "id": "sdc",
+      "packageId": "hl7.fhir.uv.sdc",
+      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
+      "version": "3.0.0"
     },
     {
       "id": "vsac",
       "packageId": "us.nlm.vsac",
       "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
       "version": "0.23.0"
-    },
-    {
-      "packageId": "hl7.fhir.uv.sdc",
-      "version": "3.0.0",
-      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
-      "id": "hl7_fhir_uv_sdc"
     },
     {
       "id": "uscdcphinvads",
@@ -3725,7 +3725,13 @@
         {
           "nameUrl": "index.html",
           "title": "Home",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "informative"
+            }
+          ]
         },
         {
           "nameUrl": "conformance.html",
@@ -3770,6 +3776,17 @@
             {
               "nameUrl": "scopes.html",
               "title": "SMART on FHIR Obligations and Capabilities",
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
+            },
+            {
+              "nameUrl": "security.html",
+              "title": "Security",
               "generation": "markdown",
               "extension": [
                 {
@@ -3871,17 +3888,6 @@
               ]
             },
             {
-              "nameUrl": "changes-between-versions.html",
-              "title": "Changes Between Versions",
-              "generation": "markdown",
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-                  "valueCode": "trial-use"
-                }
-              ]
-            },
-            {
               "nameUrl": "relationship-with-other-igs.html",
               "title": "Relationship With Other IGs",
               "generation": "markdown",
@@ -3952,17 +3958,6 @@
           ]
         },
         {
-          "nameUrl": "security.html",
-          "title": "Security",
-          "generation": "markdown",
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-              "valueCode": "trial-use"
-            }
-          ]
-        },
-        {
           "nameUrl": "examples.html",
           "title": "Examples",
           "generation": "markdown",
@@ -4005,17 +4000,17 @@
                   "valueCode": "trial-use"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "nameUrl": "changes.html",
-          "title": "Change Log",
-          "generation": "markdown",
-          "extension": [
+            },
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-              "valueCode": "informative"
+              "nameUrl": "changes.html",
+              "title": "Change Log",
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "informative"
+                }
+              ]
             }
           ]
         },
@@ -4378,7 +4373,7 @@
       },
       {
         "code": "fmm-definition",
-        "value": "changes-between-versions.html#maturity-levels"
+        "value": "changes-between-versions.html#us-core-maturity-levels"
       },
       {
         "code": "path-history",

@@ -59,13 +59,22 @@ license: CC0-1.0
 date: 2025-09-24
 version: '9.0.0-ballot'
 fhirVersion: 4.0.1
-dependencies:
-  hl7.fhir.uv.smart-app-launch: 2.2.0
+dependencies:  # maintain array order - is referenced in spec using liquid variables
+  hl7.fhir.uv.smart-app-launch:
+    version: 2.2.0
+    uri: http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch
+    id: smart  #old hl7_fhir_uv_smart_app_launch
+
+  hl7.fhir.uv.sdc:
+    version: 3.0.0  #4.0.0 is latest but not found by loader
+    uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
+    id: sdc  #old hl7_fhir_uv_sdc
+
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.23.0
     id: vsac
-  hl7.fhir.uv.sdc: 3.0.0
+
   us.cdc.phinvads:
     id: uscdcphinvads
     # uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
@@ -76,9 +85,9 @@ dependencies:
 
 pages:
   index.md:
-    # extension:
-    # - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    #   valueCode: trial-use
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
     title: Home
   conformance.md:
     extension:
@@ -99,6 +108,10 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
       title: SMART on FHIR Obligations and Capabilities
+    security.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   guidance.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -134,10 +147,10 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
       title:  Screening and Assessments
-    changes-between-versions.md:
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
+    # changes-between-versions.md:
+    #   extension:
+    #   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    #     valueCode: trial-use
     relationship-with-other-igs.md:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -166,18 +179,16 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
       title: VSAC to FHIR Code System Mapping Table
-  security.md:
-    extension:
-    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-      valueCode: trial-use
   examples.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
+
   downloads.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
+
   version-history.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -186,11 +197,12 @@ pages:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
-  changes.md:
-    extension:
-    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-      valueCode: informative
-    title: Change Log
+    changes.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+      title: Change Log
+
   looking-ahead.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -311,7 +323,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - init #init: Messages describing the start up process (for debugging)
     - progress #progress: Overall progress messages
   auto-oid-root: 2.16.840.1.113883.4.642.40.2
-  fmm-definition: changes-between-versions.html#maturity-levels
+  fmm-definition: changes-between-versions.html#us-core-maturity-levels
 
 copyrightyear: '2025+'
 # releaselabel: CI Build
