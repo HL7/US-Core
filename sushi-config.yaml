@@ -178,14 +178,14 @@ pages:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
-  # version-history.md:
-  #   extension:
-  #   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-  #     valueCode: informative
-  #   changes-between-versions.md:
-  #     extension:
-  #     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-  #       valueCode: trial-use
+  version-history.md:
+    extension:
+    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      valueCode: informative
+    changes-between-versions.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   changes.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -311,6 +311,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - init #init: Messages describing the start up process (for debugging)
     - progress #progress: Overall progress messages
   auto-oid-root: 2.16.840.1.113883.4.642.40.2
+  fmm-definition: changes-between-versions.html#maturity-levels
+
 copyrightyear: '2025+'
 # releaselabel: CI Build
 releaselabel: STU 9 Ballot
@@ -325,6 +327,7 @@ menu:
       General Requirements: general-requirements.html
       Must Support: must-support.html
       SMART on FHIR Obligations and Capabilities: scopes.html
+      Security: security.html
   Guidance: #guidance.html
       USCDI: uscdi.html
       General Guidance: general-guidance.html
@@ -332,7 +335,7 @@ menu:
       Medication List: medication-list.html
       Basic Provenance: basic-provenance.html
       Screening and Assessments: screening-and-assessments.html
-      Changes Between Versions: changes-between-versions.html
+      # Changes Between Versions: changes-between-versions.html
       Relationship With Other IGs: relationship-with-other-igs.html
 
   FHIR Artifacts: #artifact.html
@@ -342,13 +345,14 @@ menu:
       Operations: search-parameters-and-operations.html#operations
       Terminology: terminology.html
       Capability Statements: capability-statements.html
-  Security: security.html
-  Examples: examples.html
+      Examples: examples.html
+  # Security: security.html
+  # Examples: examples.html
   Downloads: downloads.html
 
-  # Version History: #version-history.html
-  #     Changes Between Versions: changes-between-versions.html
-  Change Log: changes.html
+  Version History: #version-history.html
+      Changes Between Versions: changes-between-versions.html
+      Change Log: changes.html
 
   Looking Ahead: #looking-ahead.html
       US Core Roadmap: us-core-roadmap.html

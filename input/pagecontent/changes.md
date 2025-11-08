@@ -45,7 +45,7 @@ The January 2026 ballot addresses the following:
     - [Immunization Example 1](Immunization-imm-1.html)
 11. **Resolved - change required:**  Compatible, substantive (Enhancement) merge US Core Provenance Type CodeSystem with FHIR Provenance Type CodeSystem [FHIR-50927](https://jira.hl7.org/browse/FHIR-50927) See Changes:[Here](CodeSystem-us-core-provenance-participant-type.html)
 12. **Applied:** Compatible, substantive (Correction) Remove guidance from US Core Simple Observation Profile [FHIR-51493](https://jira.hl7.org/browse/FHIR-51493) See Changes [Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
-13. **Resolved - change required:** Compatible, substantive (Clarification) Review FMM levels for USCDI artifacts [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](#)
+13. **Applied:** Compatible, substantive (Clarification) Redefined FMM Levels for USCDI artifacts and renamed to US Core Maturity Levels [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](changes-between-versions.html#us=core-maturity-levels)
 14. **Applied:** Compatible, substantive (Enhancement) Add resource types that can use the Individual Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-individual-sex.html)
 15. **Applied:** Compatible, substantive (Enhancement) Add NCSBN as an optional identifier to US Core Practitioner Profile [FHIR-53040](https://jira.hl7.org/browse/FHIR-53040) See Changes:
     - [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html)
@@ -74,7 +74,7 @@ The January 2026 ballot addresses the following:
 8.   **Applied:** Non-substantive (Enhancement) Call attention and link to USCDI level 1, 2 Data elements [FHIR-52492](https://jira.hl7.org/browse/FHIR-52492) See Changes [Here](uscdi.html#anticipating-future-uscdi-versions)
 9.  **Applied:** Non-substantive (Clarification) Clarify $docref operation behavior [FHIR-52869](https://jira.hl7.org/browse/FHIR-52869) See Changes [Here](OperationDefinition-docref.html)
 10. **Resolved - change required:** Non-substantive (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
-11. **Triaged:**  Non-substantive (Enhancement) Create Version History Menu Item [FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](changes.html)
+11. **Applied:**  Non-substantive (Enhancement) Updated main menu and menu items[FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](index.html)
 (StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
 1.  **Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
 2.  **Triaged:**  Non-substantive (Clarification) Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)

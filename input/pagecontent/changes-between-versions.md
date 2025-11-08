@@ -9,13 +9,40 @@ US Core undergoes annual updates with new guidance, requirements, profiles, and 
 
 Work is underway to identify corrections in subsequent versions as "patches" to prior versions for ASTP Certification.
 
+
+<div class="bg-success" markdown="1">
+
+### US Core Maturity Levels
+
+All US Core conformance and terminology artifacts are assigned a US Core Maturity Level. Implementers can use these levels to assess the level of advancement and stability of an artifact. The following US Core Maturity Levels are defined:
+
+#### Profiles, Extensions, and Operations
+The US Core Maturity Levels are assigned to US Core profiles, extensions, and operations based on the following criteria:
+
+- **US Core Maturity Level 5**: Level 5 is assigned to US Core profiles and extensions that have been present before the publication of US Core 3.1.1 in 2020, and have been thoroughly reviewed through the HL7 ballot and other processes, and widely implemented in production systems. Many of these artifacts are also identified in regulation and subject to ASTP certification testing. These artifacts are sufficiently stable, and forward compatibility is enforced.
+- **US Core Maturity Level 4**: Level 4 is assigned to US Core artifacts meeting all the US Core Maturity Level 5 Criteria, but were published after or significantly changed since US Core 3.1.1. These artifacts are sufficiently stable, and forward compatibility is enforced.
+- **US Core Maturity Level 3**: Level 3 is assigned to US Core artifacts meeting all the US Core Maturity Level 4 or US Core Maturity Level 5 Criteria, but not yet widely used in production systems. Forward compatibility is not enforced.
+- **US Core Maturity Level 2**: Level 2 is assigned to US Core artifacts that have not been identified in regulation or subject to ASTP certification, and not widely implemented in production systems. Forward compatibility is not enforced
+- **US Core Maturity Level 1**: There are no Level 1 artifacts in US Core
+
+#### SearchParameters
+
+**US Core Maturity Level 5** is assigned to US Core SearchParameters. They are sufficiently stable, and forward compatibility is enforced. See the [Search Parameter] page for how SearchParameters defined in US Core are used.
+
+
+#### ValueSets, CodeSystems, and CapabilityStatements
+
+**US Core Maturity Level 3** is assigned ValueSets, CodeSystems, and CapabilityStatements. These artifacts are dynamic with each version of US Core. Therefore, forward compatibility is not enforced. For more information on ValueSet and CodeSystem versions, see the [Terminology] page.
+
+</div><!-- new-content -->
+
 ### Cross Version Comparisons
 
 The table below summarizes the different profiles and resource types between Argonaut Data Query and major releases of US Core :
 
 {% include dstu2-r4-table2.md %}
 
-Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
+Detailed comparisons between the US Core artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
 
 - [Comparison with version 8.0.1](comparison-v8.0.1/index.html)
 - [Comparison with version 7.0.0](comparison-v7.0.0/index.html)
