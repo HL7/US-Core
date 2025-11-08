@@ -82,8 +82,8 @@ The January 2026 ballot addresses the following:
 4.  **Applied:** Compatible, Non-substantive (Correction) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
     - [US Core Race Extension](StructureDefinition-us-core-race.html)
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
-5.  **Pre-Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html#relationship-to-us-core-and-other-igs)
-2.  **Triaged:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](looking-ahead.html)
+5.  **Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html)
+6.  **Triaged:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](looking-ahead.html)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>
