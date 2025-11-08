@@ -32,7 +32,7 @@
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Certifying Systems]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [Clinical Laboratory Improvement Amendments (CLIA)]: http://www.cdc.gov/clia/
-[Clinician Access for EHR Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#clinician-access-for-standalone
+[Clinician Access for EHR Launch]: {{site.data.fhir.ver.smart}}/conformance.html#clinician-access-for-standalone
 [Coded Elements]: general-requirements.html#using-codes-in-us-core-profiles
 [Communications]: {{site.data.fhir.path}}security.html#http
 [Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
@@ -61,7 +61,7 @@
 [FHIR Conformance Rules]: {{site.data.fhir.path}}conformance-rules.html
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
 [FHIR Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
-[FHIR OAuth authorization Endpoints and Capabilities]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities
+[FHIR OAuth authorization Endpoints and Capabilities]: {{site.data.fhir.ver.smart}}/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
 [FHIR RESTful Search API]: {{site.data.fhir.path}}http.html#search
 [FHIR RESTful operations]: {{site.data.fhir.path}}operations.html
@@ -118,7 +118,7 @@
 [Parameters]: {{site.data.fhir.path}}parameters.html
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
 [Pathology Report Narrative (11526-1)]: https://loinc.org/11526-1.html
-[Patient Access for Standalone Apps]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#patient-access-for-standalone-apps
+[Patient Access for Standalone Apps]: {{site.data.fhir.ver.smart}}/conformance.html#patient-access-for-standalone-apps
 [Patient Example]: Patient-example.html
 [Performer function Extension]: http://hl7.org/fhir/StructureDefinition/event-performerFunction
 [Physical Activity Alliance]: http://paamovewithus.org/
@@ -135,10 +135,10 @@
 [Reference]: {{site.data.fhir.path}}references.html
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
 [Referral Note (57133-1)]: https://loinc.org/57133-1.html
-[SDC Base Questionnaire]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaire.html
+[SDC Base Questionnaire]: {{site.data.fhir.sdc}}/StructureDefinition-sdc-questionnaire.html
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/index.html
-[SMART App Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}
+[SMART App Launch]: {{site.data.fhir.ver.smart}}
 [SNOMED CT]: http://snomed.info/sct
 [SNOMED CT]: http://snomed.info/sct/731000124108
 [Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
@@ -146,15 +146,15 @@
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
-[Structured Data Capture (SDC) Questionnaire Response Profile]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaireresponse.html
-[Structured Data Capture (SDC)]: {{site.data.fhir.hl7_fhir_uv_sdc}}
+[Structured Data Capture (SDC) Questionnaire Response Profile]: {{site.data.fhir.sdc}}/StructureDefinition-sdc-questionnaireresponse.html
+[Structured Data Capture (SDC)]: {{site.data.fhir.sdc}}
 [Supporting Info Extension]: https://hl7.org/fhir/extensions/StructureDefinition-workflow-supportingInfo.html
 [Suppressed Data]: general-guidance.html#suppressed-data
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
 [Target Element]: http://hl7.org/fhir/StructureDefinition/targetElement
 [Terminology Binding Extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [The US Core DocumentReferences Type Value Set]: ValueSet-us-core-documentreference-category.html
-[Token Introspection]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/token-introspection.html#token-introspection)
+[Token Introspection]: {{site.data.fhir.ver.smart}}/token-introspection.html#token-introspection)
 [Translation]: {{site.data.fhir.path}}extension-translation.html
 [U.S. Core Data for Interoperability (USCDI) v2]: https://www.healthit.gov/isp/sites/isp/files/2021-07/USCDI-Version-2-July-2021-Final.pdf
 [U.S. Core Data for Interoperability (USCDI) v3]: https://www.healthit.gov/isp/sites/isp/files/2022-10/USCDI-Version-3-October-2022-Errata-Final.pdf
@@ -212,7 +212,7 @@
 [example]: {{site.data.fhir.path}}terminologies.html#example
 [extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [extension]: {{site.data.fhir.path}}extensibility.html
-[granular scopes]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters
+[granular scopes]: {{site.data.fhir.ver.smart}}/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters
 [how to search by date]: {{site.data.fhir.path}}search.html#date
 [how to search by reference]: {{site.data.fhir.path}}search.html#reference
 [how to search by string]: {{site.data.fhir.path}}search.html#string
@@ -228,7 +228,7 @@
 [race]: SearchParameter-us-core-race.html
 [reference]: {{site.data.fhir.path}}references.html
 [registry of standard extensions]: {{site.data.fhir.path}}extensibility-registry.html
-[resource level scopes]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
+[resource level scopes]: {{site.data.fhir.ver.smart}}/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
 [role]: SearchParameter-us-core-careteam-role.html
 [search]: http://hl7.org/fhir/search.html
 [security considerations]: {{site.data.fhir.path}}security.html
