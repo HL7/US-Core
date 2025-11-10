@@ -7,10 +7,9 @@ With each major version of FHIR, the core data models have changed.  The FHIR co
 
 US Core undergoes annual updates with new guidance, requirements, profiles, and changes to existing content. The [Directory of published versions] lists the publication history with links to each version of US Core.  The [Change Log] documents the changes across the versions of US Core. The [Argonaut Data Query] guide was published separately and is not included in the directory or change log.
 
-Work is underway to identify corrections in subsequent versions as "patches" to prior versions for ASTP Certification.
-
-
 <div class="bg-success" markdown="1">
+
+When a change is identified that impacts ASTP Certification, a tracker will be designated as "patch", which allows the certification tools to implement the change immediately. A new release of US Core will be considered if a large number of "patches" are required. Patches for prior US Core versions are managed by the [Cross Group Project patch process] with approved patches on this [HL7 Confluence page].
 
 ### US Core Maturity Levels
 

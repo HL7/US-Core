@@ -16,6 +16,8 @@ extension:
     valueInteger: 3
 definition:
   extension:
+    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+    #   valueCode: hl7.fhir.us.core#8.0.1
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
       valueCode: hl7.fhir.us.core#8.0.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
@@ -66,7 +68,7 @@ dependencies:  # maintain array order - is referenced in spec using liquid varia
     id: smart  #old hl7_fhir_uv_smart_app_launch
 
   hl7.fhir.uv.sdc:
-    version: 3.0.0  #4.0.0 is latest but not found by loader
+    version: 3.0.0  #4.0.0 is coming  ... but not found by loader
     uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
     id: sdc  #old hl7_fhir_uv_sdc
 
@@ -216,6 +218,13 @@ pages:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+
+    writing-notes.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+        title: Writing Clinical Notes
+
     patient-data-feed.md:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -369,5 +378,6 @@ menu:
   Looking Ahead: #looking-ahead.html
       US Core Roadmap: us-core-roadmap.html
       Writing Vital Signs: writing-vital-signs.html
+      Writing Notes: writing-notes.html
       Patient Data Feed: patient-data-feed.html
 

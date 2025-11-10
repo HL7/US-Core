@@ -45,15 +45,15 @@ The January 2026 ballot addresses the following:
     - [Immunization Example 1](Immunization-imm-1.html)
 11. **Resolved - change required:**  Compatible, substantive (Enhancement) merge US Core Provenance Type CodeSystem with FHIR Provenance Type CodeSystem [FHIR-50927](https://jira.hl7.org/browse/FHIR-50927) See Changes:[Here](CodeSystem-us-core-provenance-participant-type.html)
 12. **Applied:** Compatible, substantive (Correction) Remove guidance from US Core Simple Observation Profile [FHIR-51493](https://jira.hl7.org/browse/FHIR-51493) See Changes [Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
-13. **Applied:** Compatible, substantive (Clarification) Redefined FMM Levels for USCDI artifacts and renamed to US Core Maturity Levels [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](changes-between-versions.html#us=core-maturity-levels)
+13. **Applied:** Compatible, substantive (Clarification) Redefined FMM Levels for USCDI artifacts and renamed to US Core Maturity Levels [FHIR-52975](https://jira.hl7.org/browse/FHIR-52975) See Changes [Here](changes-between-versions.html#us-core-maturity-levels)
 14. **Applied:** Compatible, substantive (Enhancement) Add resource types that can use the Individual Sex Extension [FHIR-52994](https://jira.hl7.org/browse/FHIR-52994) See Changes [Here](StructureDefinition-us-core-individual-sex.html)
 15. **Applied:** Compatible, substantive (Enhancement) Add NCSBN as an optional identifier to US Core Practitioner Profile [FHIR-53040](https://jira.hl7.org/browse/FHIR-53040) See Changes:
     - [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html)
     - [Practitioner 3 Example](Practitioner-practitioner-3.html)
 16. **Applied:** Compatible, substantive (Enhancement) Add *Electronic cigarette status* to US Core Smoking Status Profile's Smoking Status Type value set. [FHIR-53042](https://jira.hl7.org/browse/FHIR-53042) See Changes
     - [Smoking Status Type](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion)
-    - [Electronic Cigarette User Example](Observation-e-cig-user-example.html)
-17. **Triaged:** Compatible, substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html)
+    - [Electronic Cigarette User Example](Observation-e-cig-user.html)
+17. **Pre-Applied:** Compatible, substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html#us-core-valueset-and-codesystem-versions)
 
 ##### Non-substantive
 25.  **Applied:** Non-substantive (Clarification) Clarify Coverage.type value set usage [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122) See Changes [Here](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
@@ -83,7 +83,7 @@ The January 2026 ballot addresses the following:
     - [US Core Race Extension](StructureDefinition-us-core-race.html)
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 5.  **Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html)
-6.  **Triaged:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](looking-ahead.html)
+6.  **Pre-Applied:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](looking-ahead.html)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>
@@ -113,6 +113,8 @@ This technical update US Core have been reviewed and commented upon by the publi
 5. **Applied:** Non-substantive (Correction) Remove span tags [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 6. **Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](basic-provenance.html#author-and-author-role-data-elements)
 7. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
+8. **Pre-Applied:** Update patch policy text [FHIR-53418](https://jira.hl7.org/browse/FHIR-53418) See Changes [Here](changes-between-versions.html#versioning-of-us-core)
+9. **Pre-Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](general-guidance.html#using-cql-with-us-core)
 
 ### Version = 8.0.0
 - url: <https://hl7.org/fhir/us/core/STU8/>

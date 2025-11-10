@@ -1,6 +1,32 @@
 
 This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the US Core Implementation Guide. For more information on using codes in US Core, see the [FHIR Terminology] section in the FHIR specification and the [Coded Elements] section in this guide.
 
+<div class="bg-success" markdown="1">
+
+### US Core ValueSet and CodeSystem versions
+
+Terminology is central to US Core. Code systems and value sets change over time, independent of or due to the US Core's annual updates. These changes include adding, deprecating, or retiring code, as well as updating code definitions. In large code systems or value sets, these changes may go unnoticed; however, for smaller enumerated terminologies, they can be obvious and lead to breaking changes.
+
+Every Version of US Core that is published also publishes a snapshot of the latest versions of  code systems  and  value sets and their expansions at the time of publication. However, US Core does not "pin" the version of the terminology to a specific version of US Core, which means the canonical references to them point to their latest version. For example, in US Core  ...(example here)... The "Unpinned" terminology more accurately reflects real-world usage of US Core. When implementing US Core, implementers should use the published versions or later versions of the value sets and code systems. In some cases, implementers may need to use terminology from earlier versions to preserve legacy data.
+
+##### Value Set Packages
+
+A Value Set Package contains all the expanded value sets required for an implementation guide. In addition to the packages published with US Core, value set packages containing value sets expanded with the updated code system versions are available for the following US Core Versions to assist implementers who require them:
+
+US Core 6.1.0 (published June 2023)
+
+  - [2024](link to USCore6.1 2024 value set package)
+  - [2025](link to USCore6.1 2025 value set package)
+  - [2025](link to USCore6.1 2026 value set package)
+
+US Core 8.0.1 (published June 2025)
+
+  - [2025](link to USCore6.1 2025 value set package)
+
+For more information on Value Set Package and how they are created and used, see the [Value Set Package Implementation Guide](https://build.fhir.org/ig/cqframework/vsp-ig/)
+
+</div><!-- new-content -->
+
 ### Value Sets
 
 Most value sets used in this guide are defined in the base FHIR specification, [HL7 Terminology (THO)], or <span class="bg-success" markdown="1">the [Value Set Authority Center (VSAC)]. </span><!-- new-content -->However, US Core also defines several value sets and they are listed below.

@@ -31,6 +31,11 @@ This IG Contains the following dependencies on other IGs.
 
 {{ ip-statement | remove: '<p>' | remove: '</p>'}}
 
+<!--
+### Expansion Parameters
+
+not ready ready despite warnings.
+ -->
 
 ### Parameter Settings
 
@@ -39,3 +44,5 @@ The following [IG Parameters](https://confluence.hl7.org/display/FHIR/Implementa
 {% for p in site.data.ig.definition.parameter -%}
 - code: {{p.code}}<br/>value: {{p.value }}
 {% endfor %}
+
+

@@ -266,3 +266,6 @@
 [Level 1]: https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#level-1
 [level 2]: https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi#level-2
 [Interoperable Digital Identity and Patient Matching]: https://hl7.org/fhir/us/identity-matching/index.html
+[Cross Group Project patch process]
+[HL7 Confluence page]: https://confluence.hl7.org/display/CGP/Approved+Patches+and+Additional+Guidance
+[Cross Group Project patch process]: https://confluence.hl7.org/display/CGP/US+Core+'Patch'+Process
