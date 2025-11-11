@@ -94,7 +94,7 @@ In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. How
 
 <div class="bg-success" markdown="1">
 
-- To enable the clients to access resources from different version-specific endpoints with the same authorization token, Production Systems **SHOULD** use the same base endpoint (Authorization Endpoint URL) across versions and allow the same authorization token for different version-specific endpoints.
+- To allow clients to use a single authorization token when accessing resources from multiple version-specific endpoints, production systems **SHOULD** use the same base authorization endpoint across versions.
 - The more recent version endpoints will have additional/changed resource types and thus added scopes. For example, US Core may add a DeviceAssociation Profile when updating from FHIR R4 to FHIR R6.
 </div><!-- new-content -->
 
