@@ -13,7 +13,7 @@ When a change is identified that impacts ASTP Certification, a tracker will be d
 
 ### US Core Maturity Levels
 
-All US Core conformance and terminology artifacts are assigned a US Core Maturity Level. Implementers can use these levels to assess the level of advancement and stability of an artifact. 
+All US Core conformance and terminology artifacts are assigned a US Core Maturity Level. Implementers can use these levels to assess the level of advancement and stability of an artifact.
 
 #### Profiles, Extensions, and Operations
 The US Core Maturity Levels are assigned to US Core profiles, extensions, and operations based on the following criteria:
@@ -26,8 +26,7 @@ The US Core Maturity Levels are assigned to US Core profiles, extensions, and op
 
 #### SearchParameters
 
-**US Core Maturity Level 5** is assigned to US Core SearchParameters. They are sufficiently stable, and forward compatibility is enforced. See the [Search Parameter] page for how SearchParameters defined in US Core are used.
-
+**US Core Maturity Level 5** is assigned to US Core SearchParameters. They are sufficiently stable, and forward compatibility is enforced. See the [Search Parameters and Operations] page for how SearchParameters defined in US Core are used.
 
 #### ValueSets, CodeSystems, and CapabilityStatements
 

@@ -4154,18 +4154,18 @@ definition:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
       page:
-      - nameUrl: changes-between-versions.html
-        title: Changes Between Versions
-        generation: markdown
-        extension:
-        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-          valueCode: trial-use
       - nameUrl: changes.html
         title: Change Log
         generation: markdown
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
           valueCode: informative
+      - nameUrl: changes-between-versions.html
+        title: Changes Between Versions
+        generation: markdown
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
     - nameUrl: looking-ahead.html
       title: Looking Ahead
       generation: markdown

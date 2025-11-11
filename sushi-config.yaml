@@ -195,15 +195,15 @@ pages:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
-    changes-between-versions.md:
-      extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
     changes.md:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
       title: Change Log
+    changes-between-versions.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
 
   looking-ahead.md:
     extension:
@@ -372,8 +372,8 @@ menu:
   Downloads: downloads.html
 
   Version History: #version-history.html
-      Changes Between Versions: changes-between-versions.html
       Change Log: changes.html
+      Changes Between Versions: changes-between-versions.html
 
   Looking Ahead: #looking-ahead.html
       US Core Roadmap: us-core-roadmap.html
