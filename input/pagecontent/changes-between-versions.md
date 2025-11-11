@@ -13,7 +13,7 @@ When a change is identified that impacts ASTP Certification, a tracker will be d
 
 ### US Core Maturity Levels
 
-All US Core conformance and terminology artifacts are assigned a US Core Maturity Level. Implementers can use these levels to assess the level of advancement and stability of an artifact. The following US Core Maturity Levels are defined:
+All US Core conformance and terminology artifacts are assigned a US Core Maturity Level. Implementers can use these levels to assess the level of advancement and stability of an artifact. 
 
 #### Profiles, Extensions, and Operations
 The US Core Maturity Levels are assigned to US Core profiles, extensions, and operations based on the following criteria:
