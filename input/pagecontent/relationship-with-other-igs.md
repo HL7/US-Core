@@ -26,7 +26,7 @@ US Core is based on the FHIR R4 specification and relies these implementation gu
 
 | Implementation Guide | Version | Reason |
 |----------------------|-------------|--------|
-| SMART App Launch | {{site.data.ig.dependsOn[0].version}} | To support reference in the [SMART on FHIR Obligations and Capabilities] page] |
+| SMART App Launch | {{site.data.ig.dependsOn[0].version}} | To support reference in the [SMART on FHIR Obligations and Capabilities] page. |
 | Structured Data Capture | {{site.data.ig.dependsOn[1].version}} | [US Core QuestionnaireResponse Profile] is derived from the [Structured Data Capture (SDC) Questionnaire Response Profile].|
 {:.grid}
 
