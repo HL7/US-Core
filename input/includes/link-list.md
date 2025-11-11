@@ -142,7 +142,7 @@
 [SNOMED CT]: http://snomed.info/sct
 [SNOMED CT]: http://snomed.info/sct/731000124108
 [Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
-[Search Parameter]: {{site.data.fhir.path}}search-parameters-and-operations.html
+[Search Parameter]: search-parameters-and-operations.html
 [Searching Using lastUpdated]: general-guidance.html#searching-using-lastupdated
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
