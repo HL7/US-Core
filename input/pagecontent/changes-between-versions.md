@@ -72,7 +72,7 @@ A Server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Cor
 
 <span class="bg-success" markdown="1">Servers **SHOULD** maintain a stable common identifier for a resource across versions. When the FHIR resource ID or business identifier of the underlying clinical data is not maintained across FHIR versions, the Client **SHALL** use an alternative method to avoid duplication, such as the guidance provided in the [Interoperable Digital Identity and Patient Matching](https://hl7.org/fhir/us/identity-matching/) Implementation Guide.</span><!-- new-content -->
 
-### Expectation that FHIR DSTU2 Data is Preserved in FHIR R4
+### Expectation that <span class="bg-success" markdown="1">Data is Preserved Between Versions</span><!-- new-content -->
 
 In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
 

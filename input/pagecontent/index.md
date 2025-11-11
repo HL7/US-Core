@@ -1,6 +1,6 @@
  <div class="note-to-balloters" markdown="1">
 
-**The January 2026 ballot addresses the following**
+**What's new in the US Core January 2026 Ballot**
 
 {% include whats-new/v9-ballot.md %}
 </div>

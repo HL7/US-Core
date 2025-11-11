@@ -11,9 +11,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 - url: <https://hl7.org/fhir/us/core/2026Jan/>
 - Based on FHIR version : 4.0.1
 
-#### The January 2026 Ballot
-
-The January 2026 ballot addresses the following:
+#### What's new in the US Core January 2026 Ballot
 
 {% include whats-new/v9-ballot.md %}
 
@@ -313,10 +311,7 @@ The following trackers have been identified as publishing issues and we are work
 - url: <https://hl7.org/fhir/us/core/2025Jan/>
 - Based on FHIR version : 4.0.1
 
-
-#### The January 2025 Ballot
-
-The January 2025 ballot addresses the following:
+#### What's new in the US Core January 2025 Ballot
 
 {% include whats-new/v8-ballot.md %}
 
@@ -604,7 +599,7 @@ The following trackers have been identified as publishing issues and we are work
 - url: <https://hl7.org/fhir/us/core/2024Jan/>
 - Based on FHIR version : 4.0.1
 
-#### The January 2024 Ballot
+#### What's new in the US Core January 2024 Ballot
 
 This ballot addresses the following:
 
@@ -772,8 +767,8 @@ To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; dat
 - Based on FHIR version : 4.0.1
 
 The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2023 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
-#### What's new in Version 6.0.0 of US Core:
 
+#### What's new in Version 6.0.0 of US Core:
 
 Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 6.0.0 version of US Core and each previous major release on [Changes Between Versions] page. This section provides an overview of the significant changes in Version 6.0.0 of US Core.
 
@@ -978,8 +973,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 - url: <https://hl7.org/fhir/us/core/2023Jan/>
 - Based on FHIR version : 4.0.1
 
-
-#### The January 2023 Ballot
+#### What's new in the US Core January 2023 Ballot
 
 This ballot addresses the following:
 
