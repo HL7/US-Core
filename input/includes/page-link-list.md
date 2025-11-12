@@ -1065,6 +1065,13 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Gender Identity Extension - XML Representation]: StructureDefinition-us-core-genderIdentity.profile.xml.html
 [US Core Gender Identity Extension - JSON Representation]: StructureDefinition-us-core-genderIdentity.profile.json.html
 [US Core Gender Identity Extension - TTL Representation]: StructureDefinition-us-core-genderIdentity.profile.ttl.html
+[US Core Individual Sex Extension]: StructureDefinition-us-core-individual-sex.html
+[US Core Individual Sex Extension - Definitions]: StructureDefinition-us-core-individual-sex-definitions.html
+[US Core Individual Sex Extension - Mappings]: StructureDefinition-us-core-individual-sex-mappings.html
+[US Core Individual Sex Extension - Testing]: StructureDefinition-us-core-individual-sex-testing.html
+[US Core Individual Sex Extension - XML Representation]: StructureDefinition-us-core-individual-sex.profile.xml.html
+[US Core Individual Sex Extension - JSON Representation]: StructureDefinition-us-core-individual-sex.profile.json.html
+[US Core Individual Sex Extension - TTL Representation]: StructureDefinition-us-core-individual-sex.profile.ttl.html
 [US Core Interpreter Needed Extension]: StructureDefinition-us-core-interpreter-needed.html
 [US Core Interpreter Needed Extension - Definitions]: StructureDefinition-us-core-interpreter-needed-definitions.html
 [US Core Interpreter Needed Extension - Mappings]: StructureDefinition-us-core-interpreter-needed-mappings.html
@@ -1100,13 +1107,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Sex Extension - XML Representation]: StructureDefinition-us-core-sex.profile.xml.html
 [US Core Sex Extension - JSON Representation]: StructureDefinition-us-core-sex.profile.json.html
 [US Core Sex Extension - TTL Representation]: StructureDefinition-us-core-sex.profile.ttl.html
-[US Core Individual Sex Extension]: StructureDefinition-us-core-individual-sex.html
-[US Core Individual Sex Extension - Definitions]: StructureDefinition-us-core-individual-sex-definitions.html
-[US Core Individual Sex Extension - Mappings]: StructureDefinition-us-core-individual-sex-mappings.html
-[US Core Individual Sex Extension - Testing]: StructureDefinition-us-core-individual-sex-testing.html
-[US Core Individual Sex Extension - XML Representation]: StructureDefinition-us-core-individual-sex.profile.xml.html
-[US Core Individual Sex Extension - JSON Representation]: StructureDefinition-us-core-individual-sex.profile.json.html
-[US Core Individual Sex Extension - TTL Representation]: StructureDefinition-us-core-individual-sex.profile.ttl.html
 [US Core Tribal Affiliation Extension]: StructureDefinition-us-core-tribal-affiliation.html
 [US Core Tribal Affiliation Extension - Definitions]: StructureDefinition-us-core-tribal-affiliation-definitions.html
 [US Core Tribal Affiliation Extension - Mappings]: StructureDefinition-us-core-tribal-affiliation-mappings.html
@@ -2146,11 +2146,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Version 7.0.0 Model Definition - XML Representation]: Library-uscore-7.0.0-model-definition.xml.html
 [US Core Version 7.0.0 Model Definition - JSON Representation]: Library-uscore-7.0.0-model-definition.json.html
 [US Core Version 7.0.0 Model Definition - TTL Representation]: Library-uscore-7.0.0-model-definition.ttl.html
-[US Core Version 8.0.0 Model Definition]: Library-uscore-8.0.0-model-definition.html
-[US Core Version 8.0.0 Model Definition - Testing]: Library-uscore-8.0.0-model-definition-testing.html
-[US Core Version 8.0.0 Model Definition - XML Representation]: Library-uscore-8.0.0-model-definition.xml.html
-[US Core Version 8.0.0 Model Definition - JSON Representation]: Library-uscore-8.0.0-model-definition.json.html
-[US Core Version 8.0.0 Model Definition - TTL Representation]: Library-uscore-8.0.0-model-definition.ttl.html
+[US Core Version 8.0.1 Model Definition]: Library-uscore-8.0.1-model-definition.html
+[US Core Version 8.0.1 Model Definition - Testing]: Library-uscore-8.0.1-model-definition-testing.html
+[US Core Version 8.0.1 Model Definition - XML Representation]: Library-uscore-8.0.1-model-definition.xml.html
+[US Core Version 8.0.1 Model Definition - JSON Representation]: Library-uscore-8.0.1-model-definition.json.html
+[US Core Version 8.0.1 Model Definition - TTL Representation]: Library-uscore-8.0.1-model-definition.ttl.html
 [Uscore Med1 Example]: Medication-uscore-med1.html
 [Uscore Med1 Example - XML Representation]: Medication-uscore-med1.xml.html
 [Uscore Med1 Example - JSON Representation]: Medication-uscore-med1.json.html

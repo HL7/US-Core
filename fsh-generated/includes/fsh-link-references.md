@@ -315,7 +315,7 @@
 [uscore-5.0.1-model-definition]: Library-uscore-5.0.1-model-definition.html
 [uscore-6.1.0-model-definition]: Library-uscore-6.1.0-model-definition.html
 [uscore-7.0.0-model-definition]: Library-uscore-7.0.0-model-definition.html
-[uscore-8.0.0-model-definition]: Library-uscore-8.0.0-model-definition.html
+[uscore-8.0.1-model-definition]: Library-uscore-8.0.1-model-definition.html
 [USCoreVitalSignsProfile]: StructureDefinition-us-core-vital-signs.html
 [uscore-med1]: Medication-uscore-med1.html
 [uscore-med2]: Medication-uscore-med2.html
