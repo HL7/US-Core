@@ -27,7 +27,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 2. **Triaged:** Non-compatible (Correction) Constrain subject to only patient [FHIR-51032](https://jira.hl7.org/browse/FHIR-51032) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 3. **Applied:**  Non-compatible (Enhancement) Replace `DocumentReference.attestor`and US Core Authentication Time Extension extension with the R5 authenticator extension [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 4. **Applied:** Non-compatible (Correction) Correct HCPCS code system URI [FHIR-50807](https://jira.hl7.org/browse/FHIR-50807) See Changes [Here](ValueSet-us-core-procedure-code.html)
-5. **Resolved - change required:** Non-compatible, substantive (Enhancement) Add USCDI v6 Data Elements to US Core [FHIR-52965](https://jira.hl7.org/browse/FHIR-52965) See Changes Listed in the [9.0.0-Ballot Introduction](#the-january-2026-ballot) above.
+5. **Applied:** Non-compatible, substantive (Enhancement) Add USCDI v6 Data Elements to US Core [FHIR-52965](https://jira.hl7.org/browse/FHIR-52965) See Changes Listed in the [9.0.0-Ballot Introduction](#the-january-2026-ballot) above.
 
 ##### Compatible, substantive
 6. **Resolved - change required:** Compatible, substantive (Enhancement) Seems like observation-category CodeSystem needs to be extended to include a concept for care-experience-preference [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541) See Changes [Here]()
