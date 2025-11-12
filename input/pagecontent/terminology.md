@@ -11,17 +11,23 @@ Every Version of US Core that is published also publishes a snapshot of the late
 
 ##### Value Set Packages
 
-A Value Set Package contains all the expanded value sets required for an implementation guide. In addition to the packages published with US Core, value set packages containing value sets expanded with the updated code system versions are available for the following US Core Versions to assist implementers who require them:
+A Value Set Package contains all the expanded value sets required for an implementation guide. In addition to the packages published with US Core, annual value set packages containing value sets expanded with the updated code system versions will be available for the following US Core Versions to assist implementers who require them.
 
 US Core 6.1.0 (published June 2023)
 
-  - [2024](link to USCore6.1 2024 value set package)
-  - [2025](link to USCore6.1 2025 value set package)
-  - [2025](link to USCore6.1 2026 value set package)
+  - [US Core 6.1.0 Value Set Package - 2023-06](link to USCore6.1 2023 value set package)
+  - [US Core 6.1.0 Value Set Package - 2024-05"](link to USCore6.1 2024 value set package)
+  - [US Core 6.1.0 Value Set Package - 2025-05"](link to USCore6.1 2025 value set package)
+  - US Core 6.1.0 Value Set Package - 2026-05 (published in May 2026)
 
 US Core 8.0.1 (published June 2025)
 
-  - [2025](link to USCore6.1 2025 value set package)
+  - [US Core 8.0.1 Value Set Package - 2023-06](link to USCore8.0.1. 2025 value set package)
+  - US Core 8.0.1 Value Set Package - 2026-05 (published in May 2026)
+
+US Core 9.0.0 (published June 2026)
+
+  - US Core 9.0.0 Value Set Package - 2026-05 (published in May 2026)
 
 For more information on Value Set Package and how they are created and used, see the [Value Set Package Implementation Guide](https://build.fhir.org/ig/cqframework/vsp-ig/)
 
