@@ -24,10 +24,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="CarePlan" plural="false" %}
 
-1. a contributor*
+1. a contributor†
 2. <span class="bg-success" markdown="1">references to health issues this plan addresses*</span><!-- new-content -->
 
-*see guidance below
+\*† see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -40,7 +40,7 @@ This section provides detailed implementation guidance for the US Core Profile t
     - US Core Condition **SHOULD** be present in `CarePlan.addresses`
     - Assessment and Plan **MAY** be included as narrative in `CarePlan.text`
 * As an alternative to the US Core CarePlan, Assessment and Plan of Treatment may be included in various types of [Clinical Notes], such as Progress Notes, History & Physical (H&P), Discharge Summaries, etc.
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
 
 <!-- add this guidance if keeping assess-plan category -->
 <!-- - <span class="bg-success" markdown="1"> Systems that always populate category = "AssessPlan" and always include CarePlan.addresses will consistently meet the USCDI data element requirements for both Care Plan and Assessment and Plan.</span>new-content -->

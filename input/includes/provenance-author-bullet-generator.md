@@ -31,7 +31,8 @@
 - Target_Resource_7: provenance source element target resource (can be up to 7)
 - vendor_support_Target_Resource_7: boolean flag if vendors surveyed on their use of the provenance source element target resource
 - Comments
--  no include parameters:  -->
+-  include parameters: fn = footnote symbol "*","†","‡", etc.(default is "*"-->
+{% assign footnote-symbol = include.footnote-symbol | default: "*" -%}
 {% assign rows = site.data.provenance-elements -%}
 {% assign author = '' -%}
 {% for item in rows -%}
@@ -47,7 +48,7 @@
 {% for item in site.data.provenance-elements -%}
   {% if item.Is_Source == "TRUE" -%}
   {% if item.Path == page.name -%}
-- {% if item.Is_New %}<span class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}*The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}*The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New %}</span><!-- new-content -->{% endif %}
+- {% if item.Is_New %}<span class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}{{ footnote-symbol }}The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}{{ footnote-symbol }}The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New %}</span><!-- new-content -->{% endif %}
        {% break -%}
     {% endif -%}
     {% endif -%}

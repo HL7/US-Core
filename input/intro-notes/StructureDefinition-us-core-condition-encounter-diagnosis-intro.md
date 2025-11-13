@@ -23,7 +23,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Condition" plural="false" %}
 
-1. a recorder*
+1. a recorder†
+
+\*† see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -37,6 +39,6 @@ This section provides detailed implementation guidance for the US Core Profile t
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes.
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`. An example search is shown in the [Quick Start](#search) section below.
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
 
 {% include link-list.md %}

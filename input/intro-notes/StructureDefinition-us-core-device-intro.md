@@ -24,7 +24,7 @@ In addition, the following data elements must be supported if the data is presen
 
 {% include additional-requirements-intro.md type="Condition" plural="true" %}
 
-1. UDI Unique Device Identifier (UDI) Barcode string.*
+1. UDI Unique Device Identifier (UDI) Barcode string.†
    - Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode
    - The Device Identifier (UDI-DI)
 2. the manufacture date
@@ -35,7 +35,7 @@ In addition, the following data elements must be supported if the data is presen
 Identification Number(DIN))
 </div><!-- new-content -->
 
-*see guidance below
+\*† see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -49,9 +49,9 @@ This section provides detailed implementation guidance for the US Core Profile t
 </div><!-- new-content -->
 
 - This profile supports the requirement to retrieve a 170.315(a)(14) [Medical device list](https://www.healthit.gov/test-method/medical-device-list). It follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern] guidelines for exchanging information about the use and implantation of medical devices in patients.
-  - A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) and a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs, there is *no expectation* at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc.). The UDI generally consists of a mandatory Device Identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. The UDI and its components are mapped to the *US Core Device Profile elements in the table below:
+  - †A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) and a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs, there is *no expectation* at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc.). The UDI generally consists of a mandatory Device Identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. The UDI and its components are mapped to the US Core Device Profile elements in the table below:
 
-    |UDI component|*US Core Device Profile element|
+    |UDI component|US Core Device Profile element|
     |---|---|
     |UDI HRF string|`Device.udiCarrier.carrierHRF`|
     |DI|`Device.udiCarrier.deviceIdentifier`|
@@ -66,11 +66,11 @@ This section provides detailed implementation guidance for the US Core Profile t
       - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID, including safety information and UDI. It includes APIs to query and download a complete list of medical devices registered in GUDID.
       - The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 
-- <span class="bg-success" markdown="1">Medical devices</span><!-- new-content --> with UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`. All five UDI-PI elements defined in the UDI code may not always be present in every UDI instance. However, those UDI-PI elements present **SHALL** be represented in the corresponding *US Core Device Profile elements.
+- <span class="bg-success" markdown="1">Medical devices</span><!-- new-content --> with UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`. All five UDI-PI elements defined in the UDI code may not always be present in every UDI instance. However, those UDI-PI elements present **SHALL** be represented in the corresponding US Core Device Profile elements.
 
    UDI may not be present in all scenarios, such as historical <span class="bg-success" markdown="1">medical devices</span><!-- new-content -->, patient-reported implant information, payer-reported devices, or improperly documented implants. If UDI is not present and the manufacturer or model number information is available, they **SHOULD** be included to support historical reports of medical <span class="bg-success" markdown="1">medical devices</span><!-- new-content --> as follows:
 
-   |data element|*US Core Device Profile element|
+   |data element|US Core Device Profile element|
    |---|---|
    |manufacturer|`Device.manufacturer`|
    |model|`Device.model`|

@@ -13,7 +13,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Coverage Must Have:**
 
-1. health insurance member identifier or subscriber id
+1. health insurance member identifier or subscriber id*
 2. a status
 3. the health insurance beneficiary (patient)
 4. beneficiary's relationship to the subscriber
@@ -21,10 +21,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Coverage Must Support:**
 
-1. health insurance coverage type (e.g., Medicare)
+1. health insurance coverage type (e.g., Medicare)†
 2. coverage start or end date
 3. health insurance group
 4. health insurance plan
+
+\*† see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -37,7 +39,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 <div class="bg-success" markdown="1">
 
-- The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.
+- †The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.
 
   - To differentiate between Medicare Parts A, B, C, and D systems can use the following codes.
 
@@ -49,6 +51,6 @@ This section provides detailed implementation guidance for the US Core Profile t
     {: .grid}
 </div><!-- new-content -->
 
-- If Insurers issue unique member IDs for dependents, then the *memberId* `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
+- *If Insurers issue unique member IDs for dependents, then the *memberId* `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
 
 {% include link-list.md %}
