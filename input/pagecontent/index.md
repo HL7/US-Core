@@ -56,6 +56,7 @@ This Guide is divided into several pages, which are listed at the top of each pa
 - [Looking Ahead]\: These pages provide a preview of the future direction of US Core
    - [US Core Roadmap]\: This page outlines the approach to adding new content to US Core.
    - [Writing Vital Signs]\: This page documents how to write vital sign Observation using patient- and provider-facing apps.
+   - [Writing Clinical Notes]\: This page documents how to write Clinical Notes using patient- and provider-facing apps.
    - [Patient Data Feed]\: This page documents how to use FHIR Subscriptions to be notified when events related to US Core content occur.
 
 ### US Core Actors

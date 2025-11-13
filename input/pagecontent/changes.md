@@ -27,7 +27,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 2. **Triaged:** Non-compatible (Correction) Constrain subject to only patient [FHIR-51032](https://jira.hl7.org/browse/FHIR-51032) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 3. **Applied:**  Non-compatible (Enhancement) Replace `DocumentReference.attestor`and US Core Authentication Time Extension extension with the R5 authenticator extension [FHIR-49617](https://jira.hl7.org/browse/FHIR-49617) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 4. **Applied:** Non-compatible (Correction) Correct HCPCS code system URI [FHIR-50807](https://jira.hl7.org/browse/FHIR-50807) See Changes [Here](ValueSet-us-core-procedure-code.html)
-5. **Applied:** Non-compatible, substantive (Enhancement) Add USCDI v6 Data Elements to US Core [FHIR-52965](https://jira.hl7.org/browse/FHIR-52965) See Changes Listed in the [9.0.0-Ballot Introduction](#the-january-2026-ballot) above.
+5. **Applied:** Non-compatible, substantive (Enhancement) Add USCDI v6 Data Elements to US Core [FHIR-52965](https://jira.hl7.org/browse/FHIR-52965) See Changes Listed in the [9.0.0-Ballot Introduction](#whats-new-in-the-us-core-january-2026-ballot) above.
 
 ##### Compatible, substantive
 6. **Resolved - change required:** Compatible, substantive (Enhancement) Seems like observation-category CodeSystem needs to be extended to include a concept for care-experience-preference [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541) See Changes [Here]()
@@ -74,13 +74,13 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 10. **Resolved - change required:** Non-substantive (Correction) Fix the US Core History Page [FHIR-46749](https://jira.hl7.org/browse/FHIR-46749) See Changes [Here](https://hl7.org/fhir/us/core/history.html)
 11. **Applied:**  Non-substantive (Enhancement) Updated main menu and menu items [FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](index.html)
 1.  **Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
-2.  **Triaged:**  Non-substantive (Clarification) Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-fhir-dstu2-data-is-preserved-in-fhir-r4)
+2.  **Triaged:**  Non-substantive (Clarification) Update client Expectation that FHIR Data is Preserved [FHIR-51760](https://jira.hl7.org/browse/FHIR-51760) See Changes [Here](changes-between-versions.html#expectation-that-data-is-preserved-between-versions)
 3.  **Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](terminology.html#code-systems)
 4.  **Applied:** Compatible, Non-substantive (Correction) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
     - [US Core Race Extension](StructureDefinition-us-core-race.html)
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 5.  **Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html)
-6.  **Pre-Applied:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](looking-ahead.html)
+6.  **Pre-Applied:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](writing-clinical-notes.html)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>
