@@ -14,6 +14,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Must Support]: must-support.html
 [Observation Summary Table]: observation-summary.html
 [SMART on FHIR Obligations and Capabilities]: scopes.html
+[Security]: security.html
 [Guidance]: guidance.html
 [USCDI]: uscdi.html
 [General Guidance]: general-guidance.html
@@ -22,20 +23,21 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Basic Provenance]: basic-provenance.html
 [Using Provenance To Target Resource Elements]: element-level-provenance.html
 [Screening and Assessments]: screening-and-assessments.html
-[Changes Between Versions]: changes-between-versions.html
 [Relationship With Other IGs]: relationship-with-other-igs.html
 [Profiles and Extensions]: profiles-and-extensions.html
 [Capability Statements]: capability-statements.html
 [Search Parameters and Operations]: search-parameters-and-operations.html
 [Terminology]: terminology.html
 [VSAC to FHIR Code System Mapping Table]: vsacname-fhiruri-map.html
-[Security]: security.html
 [Examples]: examples.html
 [Downloads]: downloads.html
+[Version History]: version-history.html
 [Change Log]: changes.html
+[Changes Between Versions]: changes-between-versions.html
 [Looking Ahead]: looking-ahead.html
 [US Core Roadmap]: us-core-roadmap.html
 [Writing Vital Signs]: writing-vital-signs.html
+[Writing Clinical Notes]: writing-clinical-notes.html
 [Patient Data Feed]: patient-data-feed.html
 [Patient Data Feed Additional Resources]: patient-data-feed-additional-resources.html
 [US Core ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.core.html
@@ -1209,11 +1211,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Non Laboratory Codes - XML Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.xml.html
 [US Core Non Laboratory Codes - JSON Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.json.html
 [US Core Non Laboratory Codes - TTL Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.ttl.html
-[US Core PMO ServiceRequest Category]: ValueSet-us-core-pmo-servicerequest-category.html
-[US Core PMO ServiceRequest Category - Testing]: ValueSet-us-core-pmo-servicerequest-category-testing.html
-[US Core PMO ServiceRequest Category - XML Representation]: ValueSet-us-core-pmo-servicerequest-category.xml.html
-[US Core PMO ServiceRequest Category - JSON Representation]: ValueSet-us-core-pmo-servicerequest-category.json.html
-[US Core PMO ServiceRequest Category - TTL Representation]: ValueSet-us-core-pmo-servicerequest-category.ttl.html
 [US Core Problem or Health Concern]: ValueSet-us-core-problem-or-health-concern.html
 [US Core Problem or Health Concern - Testing]: ValueSet-us-core-problem-or-health-concern-testing.html
 [US Core Problem or Health Concern - XML Representation]: ValueSet-us-core-problem-or-health-concern.xml.html
@@ -1538,6 +1535,10 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [EKG Strip Image - XML Representation]: Media-ekg-strip.xml.html
 [EKG Strip Image - JSON Representation]: Media-ekg-strip.json.html
 [EKG Strip Image - TTL Representation]: Media-ekg-strip.ttl.html
+[Electronic Cigarette User Example]: Observation-e-cig-user.html
+[Electronic Cigarette User Example - XML Representation]: Observation-e-cig-user.xml.html
+[Electronic Cigarette User Example - JSON Representation]: Observation-e-cig-user.json.html
+[Electronic Cigarette User Example - TTL Representation]: Observation-e-cig-user.ttl.html
 [Encounter 1 Example]: Encounter-example-1.html
 [Encounter 1 Example - XML Representation]: Encounter-example-1.xml.html
 [Encounter 1 Example - JSON Representation]: Encounter-example-1.json.html
