@@ -51,7 +51,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 16. **Applied:** Compatible, substantive (Enhancement) Add *Electronic cigarette status* to US Core Smoking Status Profile's Smoking Status Type value set. [FHIR-53042](https://jira.hl7.org/browse/FHIR-53042) See Changes
     - [Smoking Status Type](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion)
     - [Electronic Cigarette User Example](Observation-e-cig-user.html)
-17. **Pre-Applied:** Compatible, substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html#us-core-valueset-and-codesystem-versions)
+17. **Applied:** Compatible, substantive (Enhancement) Add ValueSet and CodeSystem version guidance [FHIR-53111](https://jira.hl7.org/browse/FHIR-53111) See Changes [Here](terminology.html#us-core-valueset-and-codesystem-versions)
 
 ##### Non-substantive
 25.  **Applied:** Non-substantive (Clarification) Clarify Coverage.type value set usage [FHIR-44122](https://jira.hl7.org/browse/FHIR-44122) See Changes [Here](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
@@ -80,7 +80,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
     - [US Core Race Extension](StructureDefinition-us-core-race.html)
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 5.  **Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html)
-6.  **Pre-Applied:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](writing-clinical-notes.html)
+6.  **Applied:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](writing-clinical-notes.html)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>
@@ -110,8 +110,8 @@ This technical update US Core have been reviewed and commented upon by the publi
 5. **Applied:** Non-substantive (Correction) Remove span tags [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 6. **Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](basic-provenance.html#author-and-author-role-data-elements)
 7. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
-8. **Pre-Applied:** Update patch policy text [FHIR-53418](https://jira.hl7.org/browse/FHIR-53418) See Changes [Here](changes-between-versions.html#versioning-of-us-core)
-9. **Pre-Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](general-guidance.html#using-cql-with-us-core)
+8. **Applied:** Update patch policy text [FHIR-53418](https://jira.hl7.org/browse/FHIR-53418) See Changes [Here](changes-between-versions.html#versioning-of-us-core)
+9. **Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](general-guidance.html#using-cql-with-us-core)
 
 ### Version = 8.0.0
 - url: <https://hl7.org/fhir/us/core/STU8/>
@@ -353,7 +353,7 @@ The following trackers have been identified as publishing issues and we are work
     - [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-simple-observation.html)
     - [US Core Observation Screening Assessment Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-observation-screening-assessment.html)
 17. **Applied:** Compatible, substantive (Clarification) Clarify expectations for US@ for health systems [FHIR-46020](https://jira.hl7.org/browse/FHIR-46020) See Changes [Here](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
-18. **Pre-Applied:** Compatible, substantive (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) See Changes [Here](https://hl7.org/fhir/us/core/2025Jan/must-support.html)
+18. **Applied:** Compatible, substantive (Clarification) Clarify how "Additional USCDI" is applied for complex elements [FHIR-46028](https://jira.hl7.org/browse/FHIR-46028) See Changes [Here](https://hl7.org/fhir/us/core/2025Jan/must-support.html)
 19. **Applied:** Compatible, substantive (Enhancement) Create SCT Specimen Condition value set to include SNOMED CT [FHIR-47061](https://jira.hl7.org/browse/FHIR-47061) See Changes Here:
     - [US Core Specimen Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-specimen.html)
     - [US Core Specimen Condition ValueSet](https://hl7.org/fhir/us/core/2025Jan/ValueSet-us-core-specimen-condition.html)
@@ -1429,7 +1429,7 @@ Listed below are the resolved trackers for this version:
 ##### Non-substantive
 21. **Applied:** Non-substantive (Enhancement) Provide guidance on the population of narrative ([FHIR-29777](https://jira.hl7.org/browse/FHIR-29777)) [See Change Here](https://hl7.org/fhir/us/core/STU4/general-guidance.html#narrative)
 22. **Applied:** Non-substantive (Correction)  The history file markdown rendering of the table ([FHIR-30100](https://jira.hl7.org/browse/FHIR-30100)) [See Change Here](https://hl7.org/fhir/us/core/history.html)
-23. **Applied:** Non-substantive (Correction) footnote rendering     - pre-applied ([FHIR-30101](https://jira.hl7.org/browse/FHIR-30101)) [See Change Here](https://hl7.org/fhir/us/core/STU4/general-guidance.html#guidance-on-limiting-the-number-of-search-results)
+23. **Applied:** Non-substantive (Correction) fix footnote rendering ([FHIR-30101](https://jira.hl7.org/browse/FHIR-30101)) [See Change Here](https://hl7.org/fhir/us/core/STU4/general-guidance.html#guidance-on-limiting-the-number-of-search-results)
 24. **Applied:** Non-substantive (Correction) Random Section Numbering (Reminder for tooling issue) ([FHIR-30102](https://jira.hl7.org/browse/FHIR-30102)) [See Change Here](https://hl7.org/fhir/us/core/STU4/toc.html)
 25. **Applied:** Non-substantive (Enhancement) Move section 1.5 US Core Conformance Requirements ([FHIR-30103](https://jira.hl7.org/browse/FHIR-30103)) [See Change Here](https://hl7.org/fhir/us/core/STU4/conformance-expectations.html)
 26. **Applied:** Non-substantive (Correction) Remove required binding on procedure and condition ([FHIR-30109](https://jira.hl7.org/browse/FHIR-30109)) See Changes:

@@ -8,7 +8,7 @@
 {%- endfor -%}
 {% assign ur_list = r_list | split: "," | uniq | sort %}
 <ul>
-<li> The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types: 
+<li> *The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types:
 <ul id="prov-white-list">
 {% for r in  ur_list %}
     <li>{{r}}</li>

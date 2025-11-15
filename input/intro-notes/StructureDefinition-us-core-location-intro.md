@@ -13,22 +13,22 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. A status (whether in use)
 3. The type of location or facility*
 4. Contact details of the location
-5. A Location address*
+5. A Location address†
 6. The managing organization
 
-*see guidance below
+\*† see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* [US Core Encounter Profile] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
+- [US Core Encounter Profile] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
 {% include encounter-location.md%}
-* *There are three bindings for `Location.type` to meet multiple industry needs for identifying service locations:
+- *There are three bindings for `Location.type` to meet multiple industry needs for identifying service locations:
    - The extensibly bound Service Delivery Location Role Type value set is inherited from the base resource. Its binding strength has been revised to [preferred] in FHIR R5/R6, and for US Core, implementers may treat it as preferred.
    - This guide uses a grouped value set that includes concepts from Healthcare Service Location Codes (HSLOC) and SNOMED-CT Healthcare Facility Type codes to meet the USCDI applicable vocabulary standard. Implementers can use a code from either vocabulary.
    - The NUBC Place of Service (POS) codes meet the Health Insurance Portability and Accountability Act of 1996 (HIPAA) requirements for billing and Payers.
-* *{% include should-project-us.md type="Location" %}
-* *{% include should-3166-subdivision-codes.md type="Location" %}
+- †{% include should-project-us.md type="Location" %}
+- †{% include should-3166-subdivision-codes.md type="Location" %}
 
 {% include link-list.md %}

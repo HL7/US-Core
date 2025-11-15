@@ -10,7 +10,7 @@ profile:
 
 ### Mandatory and Must Support Data Elements
 
-The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
 **Each MedicationDispense Must Have:**
 
@@ -23,7 +23,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each MedicationDispense Must Support:**
 
 1. the encounter associated with the dispense
-2. who dispensed the medication*
+2. who dispensed the medication†
 3. the authorizing prescription
 4. type of dispense (e.g., partially dispensed)
 5. the quantity dispensed
@@ -33,7 +33,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 9. the route of administration
 10. the dose and rate
 
-*see guidance below
+\*† see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -41,6 +41,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 * The MedicationDispense resource is used to represent the USCDI medication fill status.
 {% include representing-meds.md %}
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
 
 {% include link-list.md %}

@@ -60,7 +60,7 @@ As part of profile comparison, the requirements, constraints, and standards spec
 
 {{NO}} **Incompatible**: A US Core compliant resource is incompatible with the compared profile. A resource cannot be compliant to both. Where incompatible requirements are identified, more information is provided in the sections below.
 
-{{NA}} **No equivalent profile**: No equivalent profile for comparison.
+{{NA}} **No equivalent profile**: No equivalent profile in IPA or IPS for comparison. (Note that IPA and IPS profiles with no equivalent profile in US Core are listed in the sections below.)
 
 | US Core {{site.data.fhir.igVer}} | International Patient Access 1.1.0 | <span class="bg-success" markdown="1">International Patient Summary 2.0.0</span><!-- new-content -->
 | --- | :---: | :---: |

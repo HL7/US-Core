@@ -27,26 +27,26 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include additional-requirements-intro.md type="Patient" plural="true" %}
 
 1. contact detail (e.g., a telephone number or an email address)
-2. a communication language*
-3. Interpreter Needed flag*
-4. a race*
-5. an ethnicity*
+2. a communication language†
+3. Interpreter Needed flag†
+4. a race†
+5. an ethnicity†
 6. a tribal affiliation
-7. sex*
-8. date of death*
-9. address use*
-10. address period*
-11. name use*
-12. name period*
-13. suffix*
+7. sex‡
+8. date of death†
+9. address use†
+10. address period†
+11. name use†
+12. name period†
+13. suffix†
 
-*see guidance below
+\*†‡ see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- Notes for *Race*, *Ethnicity*, *Date of Death*, *Name to Use*, *Previous Name*, *Suffix*, *Previous Address*, *Interpreter Needed*, and *Preferred Language* USCDI Data Elements:
+- †Notes for *Race*, *Ethnicity*, *Date of Death*, *Name to Use*, *Previous Name*, *Suffix*, *Previous Address*, *Interpreter Needed*, and *Preferred Language* USCDI Data Elements:
   - The Complex Extensions for Race and Ethnicity allow for one or more codes of which: [Must Support] at least one category code from the OMB Race and Ethnicity Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)] code system.
     - **MAY** include additional codes from the detailed ethnicity and detailed race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)] code system
     - **SHALL** include a text description
@@ -58,7 +58,7 @@ This section provides detailed implementation guidance for the US Core Profile t
   - Servers can use the [US Core Interpreter Needed Extension] on this profile or the [US Core Encounter Profile] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.
      - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.
   - The [Patient example] demonstrates how these elements are represented
-- The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** <span class="bg-success" markdown="1">enable the user who enters the address to</span><!-- new-content --> follow it as the standard style guide for Patient addresses.
+- *The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** <span class="bg-success" markdown="1">enable the user who enters the address to</span><!-- new-content --> follow it as the standard style guide for Patient addresses.
    - Consult the style guide for details about the format for the Address datatypes elements, especially `Patient.address.line` and `Patient.address.city`.
    - Note: historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.
 - *{% include should-3166-subdivision-codes.md type="Patient" %}

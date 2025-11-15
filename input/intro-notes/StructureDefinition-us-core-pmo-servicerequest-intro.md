@@ -45,12 +45,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 4. the encounter in which the request was created
 5. when the requested service should happen
 6. when the request was made
-7. the requester*
-8. a reference to the patient's PMO document*
+7. the requester†
+8. a reference to the patient's PMO document‡
 
 <!-- {% raw %} {% include additional-requirements-intro.md type="ServiceRequest" %} {% endraw %} -->
 
-\*see guidance below
+\*†‡ see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -69,14 +69,13 @@ This section provides detailed implementation guidance for the US Core Profile t
     {:.grid}
 
   - When there is no appropriate code to capture the order, plain text can be used here and in the optional `ServiceRequest.orderDetail` element.
-- *The PMO document is referenced in `ServiceRequest.reasonReference`.
+- ‡The PMO document is referenced in `ServiceRequest.reasonReference`.
   - The document can be in any format the system accepts, such as a structured FHIR or CCDA document, scanned images, or PDF files.
    The ServiceRequest.basedOn currently
 
     US Core R4 uses `ServiceRequest.reasonReference` to reference the PMO document. Although `ServiceRequest.basedOn` is more appropriate semantically, the base FHIR R4 ServiceRequest resource restricts the references to CarePlan, ServiceRequest, or MedicationRequest. In FHIR R6, a reference to DocumentReference will be added to the `ServiceRequest.basedOn` element, and, when US Core migrates to FHIR R6, it will update the reference to it.
     {: .stu-note}
 
-
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
 
 {% include link-list.md %}

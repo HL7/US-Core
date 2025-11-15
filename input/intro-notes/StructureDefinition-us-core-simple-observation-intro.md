@@ -20,15 +20,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Support:**
 
 2. a time indicating when the observation was made
-3. who answered the questions (in other words, a performer)*
+3. who answered the questions (in other words, a performer)†
 4. a value
 
 {% include additional-requirements-intro.md type="Observation" %}
 
 1. a screening and assessments category code*
-1. references to an associated survey, assessment, or screening tool*
+1. references to an associated survey, assessment, or screening tool‡
 
-\*see guidance below
+\*†‡ see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -42,15 +42,15 @@ This section provides detailed implementation guidance for the US Core Profile t
       **code**: Transport too expensive (SNOMED CT: 160695008)
       **value**: true
 
-- \*At a minimum, Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
+- *At a minimum, Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
 
     {% include obs_cat_guidance.md category="sdoh, functional-status, or social history"%}
 
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
-  - \*Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
-{% include provenance-author-bullet-generator.md %}
-  -   \*Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
--  \*Although none of the `Observation.derivedFrom` [referenced target profiles are flagged as *Must Support*](must-support.html#must-support---resource-references), Certifying System **SHALL** support at least one of them. Client Applications **SHALL** support all.
+  - ‡Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
+{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
+  -  Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
+-  ‡Although none of the `Observation.derivedFrom` [referenced target profiles are flagged as *Must Support*](must-support.html#must-support---resource-references), Certifying System **SHALL** support at least one of them. Client Applications **SHALL** support all.
    - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
 {% include link-list.md %}

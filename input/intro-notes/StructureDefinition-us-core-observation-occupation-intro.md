@@ -16,7 +16,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a status
 2. a code for job history
 3. a patient
-5. the job code or text 
+5. the job code or text
 
 **Each Observation Must Support:**
 
@@ -29,7 +29,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a performer*
 
-*see guidance below
+
+\* see guidance below
 
 ### Profile Specific Implementation Guidance
 
