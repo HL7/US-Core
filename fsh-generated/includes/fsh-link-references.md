@@ -296,8 +296,6 @@
 [USCoreProblemOrHealthConcern]: ValueSet-us-core-problem-or-health-concern.html
 [USCoreProcedureCodes]: ValueSet-us-core-procedure-code.html
 [USCoreProcedureProfile]: StructureDefinition-us-core-procedure.html
-[USCoreProvenancePaticipantTypeCodes]: ValueSet-us-core-provenance-participant-type.html
-[USCoreProvenancePaticipantTypeExtensionCodes]: CodeSystem-us-core-provenance-participant-type.html
 [USCoreProvenance]: StructureDefinition-us-core-provenance.html
 [USCorePulseOximetryProfile]: StructureDefinition-us-core-pulse-oximetry.html
 [USCoreQuestionnaireResponseProfile]: StructureDefinition-us-core-questionnaireresponse.html

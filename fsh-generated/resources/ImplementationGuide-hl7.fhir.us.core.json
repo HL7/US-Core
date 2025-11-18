@@ -2534,22 +2534,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-provenance-participant-type"
-        },
-        "description": "The type of participation a provenance agent played for a given target.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Participant Type Codes"
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/us-core-provenance-participant-type"
-        },
-        "description": "Set of codes that are needed for implementation of the US-Core Provenance Profile. These codes are used as extensions to the FHIR value sets.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Participant Type Extension Codes"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-provenance"
         },
         "description": "The US Core Provenance Profile inherits from the FHIR [Provenance](https://hl7.org/fhir/R4/provenance.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Provenance resource to record, search, and fetch provenance information associated with a record. It covers the minimal (basic) information to support lineage of information. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used.   Before reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page, which documents several key use cases, specifically, the organization responsible for the most recent action on the resource.",

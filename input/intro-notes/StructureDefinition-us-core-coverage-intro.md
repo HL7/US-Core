@@ -51,6 +51,6 @@ This section provides detailed implementation guidance for the US Core Profile t
     {: .grid}
 </div><!-- new-content -->
 
-- *If Insurers issue unique member IDs for dependents, then the *memberId* `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
+- *If Insurers issue unique member IDs for dependents, then the memberId in `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
 
 {% include link-list.md %}

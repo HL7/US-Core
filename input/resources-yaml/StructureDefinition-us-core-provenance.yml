@@ -47,9 +47,12 @@ differential:
     - id: Provenance.agent.type
       path: Provenance.agent.type
       mustSupport: true
+      # ====  updated ValueSet in Version 9  ====
       binding:
         strength: extensible
-        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-provenance-participant-type
+        valueSet: http://terminology.hl7.org/ValueSet/provenance-agent-type
+    # =======================================
+
     - id: Provenance.agent.who
       path: Provenance.agent.who
       type:
@@ -115,7 +118,7 @@ differential:
         - code: CodeableConcept
       patternCodeableConcept:
         coding:
-          - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type
+          - system: http://terminology.hl7.org/CodeSystem/provenance-participant-type
             code: transmitter
       mustSupport: true
 extension:
