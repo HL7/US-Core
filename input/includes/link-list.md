@@ -127,7 +127,7 @@
 [Progress Note (11506-3)]: https://loinc.org/11506-3.html
 [Project US@ Technical Specification for Patient Addresses Final Version 1.0]: https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf
 [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
-[Provenance Agent Type]: ValueSet-us-core-provenance-participant-type.html
+[Provenance Agent Type]: https://terminology.hl7.org/ValueSet-provenance-agent-type.html
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
 [Quick Start]: #search
 [Radiology (LP29684-5)]: https://loinc.org/LP29684-5

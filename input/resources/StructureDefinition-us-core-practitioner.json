@@ -97,7 +97,7 @@
                 "path": "Practitioner.identifier",
                 "sliceName": "NCSBNID",
                 "patternIdentifier": {
-                    "system": "http://hl7.org/fhir/sid/us-ncsbnid"
+                    "system": "http://terminology.hl7.org/NamingSystem/NCSBNID"
                 },
                 "condition": [
                     "us-core-27"
@@ -106,7 +106,7 @@
                     {
                         "key": "us-core-27",
                         "severity": "error",
-                        "human": "NCSBNID an eight-digit numeric code with no letters or special characters",
+                        "human": "The National Council of State Boards of Nursing (NCSBN) ID is an eight-digit numeric code with no letters or special characters",
                         "expression": "value.matches('^[0-8]{8}$')",
                         "xpath": "f:value/f:matches(value,/^[0-9]{8}$/)"
                     }

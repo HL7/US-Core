@@ -18,19 +18,19 @@ A Value Set Package contains all the expanded value sets required for an impleme
 
 US Core 6.1.0 (published June 2023)
 
-  - [US Core 6.1.0 Value Set Package - 2023-06](#.html)
-  - [US Core 6.1.0 Value Set Package - 2024-05](#.html)
-  - [US Core 6.1.0 Value Set Package - 2025-05](#.html)
-  - [US Core 6.1.0 Value Set Package - 2026-05](#.html)
+  - [US Core 6.1.0 Value Set Package - 2023-06](#)
+  - [US Core 6.1.0 Value Set Package - 2024-05](#)
+  - [US Core 6.1.0 Value Set Package - 2025-05](#)
+  - [US Core 6.1.0 Value Set Package - 2026-05](#)
 
 US Core 8.0.1 (published June 2025)
 
-  - [US Core 8.0.1 Value Set Package - 2023-06](#.html)
-  - [US Core 8.0.1 Value Set Package - 2026-05](#.html)
+  - [US Core 8.0.1 Value Set Package - 2023-06]()
+  - [US Core 8.0.1 Value Set Package - 2026-05]()
 
 US Core 9.0.0 (published June 2026)
 
-  - [US Core 9.0.0 Value Set Package - 2026-05](#.html)
+  - [US Core 9.0.0 Value Set Package - 2026-05](todo.html)
 
 For more information on Value Set Package and how they are created and used, see the [Value Set Package Implementation Guide](https://build.fhir.org/ig/cqframework/vsp-ig/)
 

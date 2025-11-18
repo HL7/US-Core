@@ -1221,11 +1221,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Procedure Codes - XML Representation]: ValueSet-us-core-procedure-code.xml.html
 [US Core Procedure Codes - JSON Representation]: ValueSet-us-core-procedure-code.json.html
 [US Core Procedure Codes - TTL Representation]: ValueSet-us-core-procedure-code.ttl.html
-[US Core Provenance Participant Type Codes]: ValueSet-us-core-provenance-participant-type.html
-[US Core Provenance Participant Type Codes - Testing]: ValueSet-us-core-provenance-participant-type-testing.html
-[US Core Provenance Participant Type Codes - XML Representation]: ValueSet-us-core-provenance-participant-type.xml.html
-[US Core Provenance Participant Type Codes - JSON Representation]: ValueSet-us-core-provenance-participant-type.json.html
-[US Core Provenance Participant Type Codes - TTL Representation]: ValueSet-us-core-provenance-participant-type.ttl.html
 [US Core Screening Assessment Condition Category]: ValueSet-us-core-screening-assessment-condition-category.html
 [US Core Screening Assessment Condition Category - Testing]: ValueSet-us-core-screening-assessment-condition-category-testing.html
 [US Core Screening Assessment Condition Category - XML Representation]: ValueSet-us-core-screening-assessment-condition-category.xml.html
@@ -1281,11 +1276,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core DocumentReferences Category Codes - XML Representation]: CodeSystem-us-core-documentreference-category.xml.html
 [US Core DocumentReferences Category Codes - JSON Representation]: CodeSystem-us-core-documentreference-category.json.html
 [US Core DocumentReferences Category Codes - TTL Representation]: CodeSystem-us-core-documentreference-category.ttl.html
-[US Core Provenance Participant Type Extension Codes]: CodeSystem-us-core-provenance-participant-type.html
-[US Core Provenance Participant Type Extension Codes - Testing]: CodeSystem-us-core-provenance-participant-type-testing.html
-[US Core Provenance Participant Type Extension Codes - XML Representation]: CodeSystem-us-core-provenance-participant-type.xml.html
-[US Core Provenance Participant Type Extension Codes - JSON Representation]: CodeSystem-us-core-provenance-participant-type.json.html
-[US Core Provenance Participant Type Extension Codes - TTL Representation]: CodeSystem-us-core-provenance-participant-type.ttl.html
 [10 minute Apgar Color Example]: Observation-10-minute-apgar-color.html
 [10 minute Apgar Color Example - XML Representation]: Observation-10-minute-apgar-color.xml.html
 [10 minute Apgar Color Example - JSON Representation]: Observation-10-minute-apgar-color.json.html
