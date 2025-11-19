@@ -106,7 +106,6 @@ There are multiple different potential matches for the url 'http://terminology.h
 Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
 Unable to check whether the code is in the value set 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900|1' because the code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH was not found
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
-WARNING: ValueSet.where(id = 'us-core-condition-code'): Error from https://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd9cm
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
 
 # 20. === HL7 Terminology (THO) defines the ServiceDeliveryLocationRoleType and HealthcareServiceLocation value sets that compose this ValueSet. However, no codes are displayed in the HL7 Terminology for HealthcareServiceLocation value set, which is composed of NHSN Healthcare Facility Patient Care Location (HSLOC) and CMS Place of Service Codes (POS) codes. These codes are available at:ServiceDeliveryLocationRoleType: https://terminology.hl7.org/6.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html,HSLOC: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest,POS: https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets===
@@ -164,8 +163,6 @@ The element Observation.component.value[x] has a binding, and has multiple types
 
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex'): The Implementation Guide contains no examples for this extension
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation'): The Implementation Guide contains no examples for this profile
-WARNING: StructureDefinition/us-core-genderIdentity: StructureDefinition: The resource status 'active' and the standards status 'deprecated' are not consistent
-WARNING: StructureDefinition/us-core-sex: StructureDefinition: The resource status 'active' and the standards status 'deprecated' are not consistent
 
 # 34. === US Core provides IG-specific guidance on interpreting Must Support for slices at `~/must-support.html#must-support---slices`. Where we state: "...the slicer's Must Support property only defines the element level Must Support/Additional USCDI property. In other words, the slicer's Must Support/Additional USCDI is not inherited by the slices, and each slice must be explicitly tagged with the Must Support/Additional USCDI property to define that slice's conformance strength. If no Must Support/Additional USCDI property is defined for the slice, this lengthy chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Slices.20not.20inheriting.20preferred.20bindings.20from.20root/with/514257770 and the resulting tracker FHIR-50391. ===
 
@@ -222,7 +219,7 @@ The html source contains the word 'SHOULD' but it is not in a text phrase marked
 
  None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://nucc.org/provider-taxonomy#208D00000X)
 
- #42 === This example of the US Core Pulse Oximetry Profile inherits from the FHIR Vital Signs Profile.  The FHIR Vital Signs Profile's Observation.code binding is extensible and these code are extension codes and code translations ===
+# 42 === This example of the US Core Pulse Oximetry Profile inherits from the FHIR Vital Signs Profile.  The FHIR Vital Signs Profile's Observation.code binding is extensible and these code are extension codes and code translations ===
 
 WARNING: Observation/satO2-fiO2: Observation.code: The provided code 'http://loinc.org#59408-5 ('Oxygen saturation in Arterial blood by Pulse oximetry')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'urn:iso:std:iso:11073:10101#150456 ('MDC_PULS_OXIM_SAT_O2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
 
