@@ -19,7 +19,7 @@ This technical update US Core have been reviewed and commented upon by the publi
 
 #### Changes
 
- - This technical update US Core has eight changes which are listed below.
+ - This technical update US Core has nine changes which are listed below.
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
@@ -32,7 +32,8 @@ This technical update US Core have been reviewed and commented upon by the publi
 5. **Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](basic-provenance.html#author-and-author-role-data-elements)
 6. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
 7. **Applied:** Compatible, substantive (Correction) Rename The USCore sex extension [FHIR-53047](https://jira.hl7.org/browse/FHIR-53047) See Changes Listed in introduction above.
-8. **Applied:** Compatible, Non-substantive (Correction) Revert ICD9CM Code System URL back to `http://hl7.org/fhir/sid/icd-9-cm` [FHIR-53476](https://jira.hl7.org/browse/FHIR-53476) See Changes [Here](ValueSet-us-core-condition-code.html)
+8. **Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](general-guidance.html#using-cql-with-us-core)
+9. **Applied:** Compatible, Non-substantive (Correction) Revert ICD9CM Code System URL back to `http://hl7.org/fhir/sid/icd-9-cm` [FHIR-53476](https://jira.hl7.org/browse/FHIR-53476) See Changes [Here](ValueSet-us-core-condition-code.html)
 
 ### Version = 8.0.0
 - url: <https://hl7.org/fhir/us/core/STU8/>
