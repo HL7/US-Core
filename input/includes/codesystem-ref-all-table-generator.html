@@ -54,6 +54,9 @@ Code System Sources:
 {% assign no_link = true %}
 {% elsif item.URL contains 'http://terminology.hl7.org/CodeSystem/' %}
 {% assign source = "THO" %} <!-- THO-->
+{% elsif item.URL contains 'http://hl7.org/fhir/sid/icd-9-cm' %}
+{% assign source = "CDC" %}
+{% assign cs_link = 'https://www.cms.gov/medicare/coding-billing/icd-10-codes/icd-9-cm-diagnosis-procedure-codes-abbreviated-and-full-code-titles' %}
 {% elsif item.URL contains 'http://hl7.org/fhir/sid/icd-10-cm' %}
 {% assign source = "CDC" %}
 {% assign cs_link = 'https://www.cdc.gov/nchs/icd/icd-10-cm.htm' %}

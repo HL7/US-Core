@@ -79,6 +79,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
     - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 5.  **Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html)
 6.  **Applied:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](writing-clinical-notes.html)
+7.  **Applied:** Update patch policy text [FHIR-53418](https://jira.hl7.org/browse/FHIR-53418) See Changes [Here](changes-between-versions.html#versioning-of-us-core)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>
@@ -92,7 +93,7 @@ This technical update US Core have been reviewed and commented upon by the publi
 
 #### Changes
 
- - This technical update US Core has 7 changes which are listed below.
+ - This technical update US Core has nine changes which are listed below.
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
@@ -108,8 +109,8 @@ This technical update US Core have been reviewed and commented upon by the publi
 5. **Applied:** Non-substantive (Correction) Remove span tags [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 6. **Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](basic-provenance.html#author-and-author-role-data-elements)
 7. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
-8. **Applied:** Update patch policy text [FHIR-53418](https://jira.hl7.org/browse/FHIR-53418) See Changes [Here](changes-between-versions.html#versioning-of-us-core)
-9. **Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](general-guidance.html#using-cql-with-us-core)
+8. **Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](general-guidance.html#using-cql-with-us-core)
+9. **Applied:** Compatible, Non-substantive (Correction) Revert ICD9CM Code System URL back to `http://hl7.org/fhir/sid/icd-9-cm` [FHIR-53476](https://jira.hl7.org/browse/FHIR-53476) See Changes [Here](ValueSet-us-core-condition-code.html)
 
 ### Version = 8.0.0
 - url: <https://hl7.org/fhir/us/core/STU8/>
