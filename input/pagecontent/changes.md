@@ -79,6 +79,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 4.  **Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](relationship-with-other-igs.html)
 5.  **Applied:**  Non-substantive (Enhancement) Add Writing Clinical Notes page to Looking Ahead Section [FHIR-53283](https://jira.hl7.org/browse/FHIR-53283) See Changes [Here](writing-clinical-notes.html)
 6.  **Applied:** Update patch policy text [FHIR-53418](https://jira.hl7.org/browse/FHIR-53418) See Changes [Here](changes-between-versions.html#versioning-of-us-core)
+7.  **Resolved - change required:** Non-substantive (Correction) Remove date guidance from USCorePatientFamily SearchParameter in CapabilityStatements [FHIR-54395](https://jira.hl7.org/browse/FHIR-54395) See Changes [Here](CapabilityStatement-us-core-server.html#patient)
 
 ### Version = 8.0.1 (Meets USCDI v5 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU8.0.1/>
