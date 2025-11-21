@@ -212,3 +212,14 @@ The html source contains the word 'SHOULD' but it is not in a text phrase marked
 # 41.  === The following codes are valid additional codes in the same and different code systems as representations of the concept with different granularity due to differences in the definitions of the underlying code in the extensible FHIR Vitals Signs Observation.code binding (http://hl7.org/fhir/ValueSet/observation-vitalsignresult). ===
 
 WARNING: Observation/satO2-fiO2: Observation.code: The provided code 'http://loinc.org#59408-5 ('Oxygen saturation in Arterial blood by Pulse oximetry')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'urn:iso:std:iso:11073:10101#150456 ('MDC_PULS_OXIM_SAT_O2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
+
+# 42.  === The following codes in the example are not in the extensible base binding, v3-ServiceDeliveryLocationRoleType, defined for the element, but are valid codes taken from valuesets that are defined as "additional bindings" for different use contexts. ===
+
+The provided code 'http://snomed.info/sct|http://snomed.info/sct/731000124108#22232009 ('Hospital')' was not found in the value set 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'; The provided code 'https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html#1120-5 ('Medical Clinic')' was not found in the value set 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'
+
+
+# 43.  === We are aware that this code system is a fragment- this is an issue for terminology servers ===
+
+The value set references CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' which has status 'fragment'
+
+
