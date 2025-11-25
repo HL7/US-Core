@@ -56,7 +56,7 @@ dependsOn:
 - id: vsac
   packageId: us.nlm.vsac
   uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-  version: 0.23.0
+  version: 0.24.0
 - packageId: hl7.fhir.uv.sdc
   version: 3.0.0
   uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
@@ -1208,7 +1208,7 @@ definition:
   - reference:
       reference: QuestionnaireResponse/phq-9-example
     description: An example of a US Core QuestionnaireResponse that represents questions
-      and selected answers from the The Patient Health Questionnaire (PHQ-9) questionnaire
+      and selected answers from the Patient Health Questionnaire (PHQ-9) questionnaire
       defined in LOINC (code 44249-1). The example is generated using the LHC-Forms
       SDC Questionnaire App.
     name: QuestionnaireResponse PHQ-9 Example
