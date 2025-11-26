@@ -31,6 +31,12 @@ This IG Contains the following dependencies on other IGs.
 
 {{ ip-statement | remove: '<p>' | remove: '</p>'}}
 
+### Expansion Parameters
+
+In HL7 FHIR, expansion parameters are special query parameters that you can pass to a ValueSet $expand operation to control and customize how the ValueSet is expanded (i.e., how the full list of codes/concepts is generated from the ValueSet definition).  US Core uses the following parameters.
+
+{% include expansion-params.xhtml %}
+
 
 ### Parameter Settings
 

@@ -6,10 +6,10 @@
 
 # 01. === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile, which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue, which means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. This issue has been corrected in base FHIR ver 4.3.0 ("Release 4B"), which will correct this error when this guide is based on a newer version of FHIR. ===
 
-ERROR: Observation/satO2-fiO2: Observation.component[0].value.ofType(Quantity): The code provided (http://unitsofmeasure.org#L/min) was not found in the value set' Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a code from this value set is required: The provided code 'http://unitsofmeasure.org#L/min' was not found in the value set 'http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1'
-ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
+# ERROR: Observation/satO2-fiO2: Observation.component[0].value.ofType(Quantity): The code provided (http://unitsofmeasure.org#L/min) was not found in the value set' Vital Signs Units' (http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1), and a code from this value set is required: The provided code 'http://unitsofmeasure.org#L/min' was not found in the value set 'http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1'
+# ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 
-# 02. ==== Since the ValueSet's grammar-based definition leads to an infinite set, it cannot be expanded and leads to the following error ===
+# 02. === Since the ValueSet's grammar-based definition leads to an infinite set, it cannot be expanded and leads to the following error ===
 
 # 03. === Based upon FHIR-I's guidance on backporting CodeableReference datatype in R4 implementations, using the FHIR R5-based Sex Parameters for Clinical Use Extension is correct. The publication validation tool needs to be updated to validate it correctly. See this Chat: https://chat.fhir.org/#narrow/channel/179166-implementers/topic/UV.20Extension.20Sex.20Parameter.20for.20clinical.20use.20broken.20for.20R4.3F ===
 
@@ -50,15 +50,15 @@ None of the codings provided are in the value set 'Practice Setting Code Value S
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole'): The Implementation Guide contains no explicitly linked examples for this profile
 
 
-# 08. ==== The following content is inherited from the base standard and cannot be changed ====
+# 08. === The following content is inherited from the base standard and cannot be changed ===
 
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# 09. ==== The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.) ====
+# 09. === The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.) ===
 
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 
-# 10. ==== The self-link for these searchset bundles is to the $docref operation and not to a FHIR search string====
+# 10. === The self-link for these searchset bundles is to the $docref operation and not to a FHIR search string====
 
 No types could be determined from the search string, so the types can't be checked
 
@@ -91,7 +91,7 @@ WARNING: Bundle/docref-example-2: Bundle.entry[2].resource/*DocumentReference/di
 WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
 # =========================================================================================
-# === New Hints Warnings for 8.0.0   ====
+# === New Hints Warnings for 8.0.0   ===
 # =========================================================================================
 
 # 18. ===  The following code system and value set are in FHIR Core/THO and not under the direct control of US Core editors ===
@@ -101,7 +101,7 @@ Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|4.0.1
 Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.1.0', found versions: 3.0.0, 3.1.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse' to 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse|3.1.0'
 
-# 19. ==== The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked, and the identifiers are correct (updated text from 7.0.0) ===========
+# 19. === The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked, and the identifiers are correct (updated text from 7.0.0) ===========
 
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
@@ -112,15 +112,15 @@ The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' do
 
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' could not be found, so the code cannot be validated
 
-# 22. ====FHIR R4 http://hl7.org/fhir/ValueSet/formatcodes is in error, which has been corrected in the FHIR R5. The guide is referencing the "HL7 ValueSet of Format Codes for use with Document Sharing" that is used in R5 (updated text from 7.0.0) ===
+# 22. === FHIR R4 http://hl7.org/fhir/ValueSet/formatcodes is in error, which has been corrected in the FHIR R5. The guide is referencing the "HL7 ValueSet of Format Codes for use with Document Sharing" that is used in R5 (updated text from 7.0.0) ===
 
 INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The Coding provided (http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes#urn:hl7-org:sdwg:ccda-structuredBody:2.1) was not found in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code 'http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes#urn:hl7-org:sdwg:ccda-structuredBody:2.1: 'ccda-structuredBody:2.1'' was not found in the value set 'http://hl7.org/fhir/ValueSet/formatcodes|4.0.1')
 
-# 23. ==== The US Core Team is aware of this and will budget and move these values to THO in a future publication cycle ===
+23. === The US Core Team is aware of this and is actively moving its value sets to VSAC and code systems to THO in each publication cycle. See the change log for details. ===
 
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# 24. ==== Understood and note that this is rendered by the ig-publisher in the ig ====
+24. === These values are indeed large, and the ig-publisher informs the reader when the expansion is incomplete. ===
 
 The value set expansion is too large, and only a subset has been displayed
 
@@ -140,7 +140,7 @@ A definition for CodeSystem 'http://example.org/fhir/michigan.gov/lara/license-t
 
 WARNING: Observation/pack-years-example: Observation.value.ofType(Quantity): UCUM Codes that contain human readable annotations like {pack-years} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 
-# 29. === US Core thoroughly documents its Must Support expectations for the must supports, including how they apply to the choice of target references. See this chat https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Must.20Support.20Target.20Error.20for.20Reference.20type.20Element ===
+# 29. === US Core thoroughly documents its Must Support expectations for the must supports on the Must Support page, including how they apply to the choice of target references in the Must Support - Resource References section. (Also, see this chat https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Must.20Support.20Target.20Error.20for.20Reference.20type.20Element  ===
 
 The element Procedure.performer.actor has types/profiles/targets that are marked as must support, but the element itself is not marked as must-support
 
@@ -154,7 +154,7 @@ The element Observation.value[x] has a binding, and has multiple types subject t
 
 The element Observation.component.value[x] has a binding, and has multiple types subject to bindings ([dateTime, boolean, string, SampledData, Quantity, Period, Ratio, integer, time, Range, CodeableConcept]). The binding will apply to all the types
 
-# 32. ==== A US Direct Address for secure messaging in healthcare typically follows a format similar to an email address. for example `john.doe@direct.myhealthcareprovider.org`. Although this URL will not resolve, it represents a legitimate example of the direct address in the `endpoint.address` field. ===
+# 32. === A US Direct Address for secure messaging in healthcare typically follows a format similar to an email address. for example `john.doe@direct.myhealthcareprovider.org`. Although this URL will not resolve, it represents a legitimate example of the direct address in the `endpoint.address` field. ===
 
 # 33. === To comply with Executive Order 14168, the following changes were made: 1)Removed USCDI mapping, guidance, and examples for the US Core Observation Sexual Orientation Profile  2) Removed the US Core Birth Sex Extension, guidance, and examples from the US Core Patient Profile 3) Deprecated the US Core Gender Identity and US Core Sex Extensions and removed them from the US Core Profile, USCDI mapping, guidance, and examples. Although the profiles and extensions will remain in this version of US Core to ensure backward compatibility, no examples will be provided. ===
 
@@ -172,7 +172,7 @@ The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-suppor
 The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 The slice 'us-core' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 
-# 35. ==== These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider updating and/or adopting the recommended replacement in a future release. ====
+# 35. === These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider updating and/or adopting the recommended replacement in a future release. ===
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.2.0 is deprecated
@@ -221,8 +221,14 @@ WARNING: Observation/satO2-fiO2: Observation.code: The provided code 'http://loi
 The provided code 'http://snomed.info/sct|http://snomed.info/sct/731000124108#22232009 ('Hospital')' was not found in the value set 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'; The provided code 'https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html#1120-5 ('Medical Clinic')' was not found in the value set 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'
 
 
-# 43.  === We are aware that this code system is a fragment- this is an issue for terminology servers ===
+# 43.  === We are aware that this code system is a fragment. The error is due to an issue with the terminology server, not the implementation guide. For details, see the Zulip chat at: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/whither.20ICD9cm.20in.20THO.207.2E0.2E0.3F/with/559122224 ===
 
-The value set references CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' which has status 'fragment'
+ERROR: ValueSet.where(id = 'us-core-condition-code'): Error from https://tx.fhir.org/r4: The code system definition for http://hl7.org/fhir/sid/icd-9-cm is a fragment, so this expansion is not permitted unless the expansion parameter "incomplete-ok" has a value of "true"
+
+# 44 === This error will be present until the publication team can address it. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 ===
+
+ERROR: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide.definition.extension[96].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+
 
 
