@@ -116,11 +116,11 @@ A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/nubc-UB92' co
 
 INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The Coding provided (http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes#urn:hl7-org:sdwg:ccda-structuredBody:2.1) was not found in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code 'http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes#urn:hl7-org:sdwg:ccda-structuredBody:2.1: 'ccda-structuredBody:2.1'' was not found in the value set 'http://hl7.org/fhir/ValueSet/formatcodes|4.0.1')
 
-23. === The US Core Team is aware of this and is actively moving its value sets to VSAC and code systems to THO in each publication cycle. See the change log for details. ===
+# 23. === The US Core Team is aware of this and is actively moving its value sets to VSAC and code systems to THO in each publication cycle. See the change log for details. ===
 
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-24. === These values are indeed large, and the ig-publisher informs the reader when the expansion is incomplete. ===
+# 24. === These values are indeed large, and the ig-publisher informs the reader when the expansion is incomplete. ===
 
 The value set expansion is too large, and only a subset has been displayed
 
@@ -223,11 +223,12 @@ The provided code 'http://snomed.info/sct|http://snomed.info/sct/731000124108#22
 
 # 43.  === We are aware that this code system is a fragment. The error is due to an issue with the terminology server, not the implementation guide. For details, see the Zulip chat at: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/whither.20ICD9cm.20in.20THO.207.2E0.2E0.3F/with/559122224 ===
 
+INFORMATION: ValueSet/us-core-condition-code: ValueSet.compose.include[5]: The value set references CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' which has status 'fragment'
 ERROR: ValueSet.where(id = 'us-core-condition-code'): Error from https://tx.fhir.org/r4: The code system definition for http://hl7.org/fhir/sid/icd-9-cm is a fragment, so this expansion is not permitted unless the expansion parameter "incomplete-ok" has a value of "true"
 
 # 44 === This error will be present until the publication team can address it. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 ===
 
-ERROR: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide.definition.extension[96].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
 
 
