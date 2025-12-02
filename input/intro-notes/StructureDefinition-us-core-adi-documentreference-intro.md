@@ -54,4 +54,7 @@ This section provides detailed implementation guidance for the US Core Profile t
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 {% include provenance-author-bullet-generator.md %}
 
+In the formal definition below, the fhir5-attester extension incorrectly renders a listing of multiple types instead of the single type "Extension".  This is a known publishing error and will be resolved before final publication.
+{:.note-to-balloters}
+
 {% include link-list.md %}

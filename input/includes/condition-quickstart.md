@@ -1,5 +1,5 @@
 
-<!--format of include file 
+<!--format of include file
 include parameters:
 system-category (optional)
 category ("problem-list-item"|"health-concern"|"encounter-diagnosis") - required
@@ -25,7 +25,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Condition?patient={Type/}[id]`
 
     Example:
-    
+
       1. GET [base]/Condition?patient=1137192
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient ([how to search by reference])
@@ -35,7 +35,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]`
 
     Example:
-    
+
       1. GET [base]/Condition?patient=1032702&amp;category={% if include.system %}{{include.system }}\|{% endif %}{{include.category | default: '[category]'}}
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category = "{{include.category | default: '[category]'}}". ([how to search by reference] and [how to search by token])
@@ -50,8 +50,8 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active,http://terminology.hl7.org/CodeSystem/condition-clinical|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical|remission`
 
     Example:
-    
-      1. GET [base/Condition?patient=1032702&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active,http://terminology.hl7.org/CodeSystem/condition-clinical\|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical\|remission
+
+      1. GET [base]/Condition?patient=1032702&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active,http://terminology.hl7.org/CodeSystem/condition-clinical\|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical\|remission
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and all "active" statuses (active,relapse,remission). This will *exclude* Conditions with no `clinicalStatus` specified. ([how to search by reference] and [how to search by token])
 
@@ -60,7 +60,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active,http://terminology.hl7.org/CodeSystem/condition-clinical|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical|remission`
 
     Example:
-    
+
       1. GET [base]/Condition?patient=1032702&amp;category={% if include.system %}{{include.system }}\|{% endif %}{{include.category | default: '[category]'}}&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active,http://terminology.hl7.org/CodeSystem/condition-clinical\|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical\|remission
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category = "{{include.category | default: '[category]'}}" for all "active" statuses (active,relapse,remission). This will *exclude* Conditions with no `clinicalStatus` specified. ([how to search by reference] and [how to search by token])
@@ -70,7 +70,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]&encounter={Type/}[id]`
 
     Example:
-    
+
       1. GET [base]/Condition?patient=1032702&amp;category={% if include.system %}{{include.system }}\|{% endif %}{{include.category | default: '[category]'}}&amp;encounter=Encounter/1036
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient, encounter, and category = "{{include.category | default: '[category]'}}". {% if include.category == 'encounter-diagnosis' %}When category = "encounter-diagnosis" will return the encounter diagnosis for the encounter.{% endif %} ([how to search by reference] and [how to search by token])
@@ -80,7 +80,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&code={system|}[code]`
 
     Example:
-    
+
       1. GET [base]/Condition?patient=1032702&amp;code={{include.code | default: '[code]'}}
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and code. ([how to search by reference] and [how to search by token])
@@ -92,7 +92,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&onset-date={gt|lt|ge|le}[date]{&onset-date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]Condition?patient=555580&amp;onset-date=ge2018-01-14
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
@@ -104,7 +104,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&asserted-date={gt|lt|ge|le}[date]{&asserted-date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]Condition?patient=555580&amp;asserted-date=ge2018-01-14
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
@@ -116,7 +116,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&recorded-date={gt|lt|ge|le}[date]{&recorded-date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]Condition?patient=555580&amp;recorded-date=ge2018-01-14
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
@@ -128,7 +128,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&abatement-date={gt|lt|ge|le}[date]{&abatement-date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]Condition?patient=555580&amp;abatement-date=ge2018-01-14
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
@@ -140,7 +140,7 @@ The following search parameter combinations **SHOULD** be supported:
     `GET [base]/Condition?patient={Type/}[id]&_lastUpdated={gt|lt|ge|le}[date]{&_lastUpdated={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/Condition?patient=1032702&amp;_lastUpdated=ge2024-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and _lastUpdated. See the US Core General Guidance page for [Searching Using lastUpdated]. ([how to search by reference] and [how to search by date])
