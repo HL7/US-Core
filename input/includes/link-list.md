@@ -54,6 +54,7 @@
 [Enclosed Precondition Extension]: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/adi-enclosedPrecondition-extension
 [Event Location Extension]: http://hl7.org/fhir/StructureDefinition/event-location
 [Extensible Binding]: {{site.data.fhir.path}}terminologies.html#extensible
+[Required Binding]: {{site.data.fhir.path}}terminologies.html#required
 [Extensions]: {{site.data.fhir.path}}extensibility.html
 [FHIR Artifacts]: artifacts.html
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/index.html

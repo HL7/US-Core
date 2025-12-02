@@ -15,7 +15,7 @@ At least one of the following SMART on FHIR *Capability Sets* **SHOULD** be supp
 
 #### *Capabilities* for Implementations Supporting Backend Services
 
-Implementations supporting Backend Services -- for example, to meet US EHR certification requirements - **SHALL** include support for the<span class="bg-success" markdown="1"> `client-confidential-asymmetric` </span><!-- new-content -->capability and `system/scopes`.
+Implementations supporting Backend Services -- for example, to meet US EHR certification requirements - **SHALL** include support for the `client-confidential-asymmetric` capability and `system/scopes`.
 
 ### US Core Servers SHALL Support Token Introspection
 

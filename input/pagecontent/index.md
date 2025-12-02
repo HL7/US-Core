@@ -1,15 +1,4 @@
 
-<div class="note-to-balloters" markdown="1">
-
-**This 8.0.1 Technical update addresses the following**
-
-{% include whats-new/v8.0.1.md %}
-
-</div><!-- note-to-balloters -->
-
-Where possible, new and updated pre-publishing content is highlighted with green text and background- **This highlighting will be removed prior to publication.**
-{:.new-content}
-
 Key updates and detailed changes between this and prior versions are available on the US Core [Change Log] and [Changes Between Versions] pages.
 {:.stu-note}
 

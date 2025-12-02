@@ -29,7 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="ServiceRequest" %}
 
-1. <span class="bg-success" markdown="1">plain text representation of what is being requested</span><!-- new-content -->
+1. plain text representation of what is being requested
 1. a reason or indication for referral or consultation*
 
 \*see guidance below

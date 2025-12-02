@@ -1,10 +1,7 @@
 
 <!--  liquid script for creating a markdown table from a csv file in the input/data folder source file = input/data/additional-uscdi-requirements.csv. columns:
 This table is updated with the Jupyter script : /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/CapStatement/addl-uscdi-tabler.ipynb
-
-
-
- 'Is_New' - new element for highlighting
+'Is_New' - new element for highlighting
 'AddlUSCDI:  USCDI DE
 'Profile': Profile name using markdown link brackets
 'FHIRElement': FHIR element that is add'l USCDI

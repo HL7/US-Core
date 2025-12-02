@@ -35,14 +35,14 @@ The following extensions are only used in the US Core Implementation Guide to cr
 
 {% include ext-list-generator.md use="ig" %}
 
-<div class="bg-success" markdown="1">
+
 
 #### Deprecated US Realm Specific Extension
 
 The following extensions are not used in any US Core Profile and are *deprecated*. They **SHOULD NOT** be used for new or revised content. They are retained for historical/backward compatibility purposes.
 
 {% include ext-list-generator.md use="deprecated" %}
-</div><!-- new-content -->
+
 
 
 {% include link-list.md %}
