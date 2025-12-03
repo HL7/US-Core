@@ -82,13 +82,13 @@ WARNING: SearchParameter/us-core-goal-target-date: SearchParameter.expression: T
 # 16. ===  This invariant has been tested in the FHIRPath tester and is intended as written. The resolve() specified in the invariant has a maximum cardinality of 1, so there will never be more than one item in the collection when resolving the reference.  ===
 
 
-# 17. === The 'no-narrative' parameter is used for these resource instances because they are displayed as inline JSON examples to illustrate transactions, and the narrative degrades human readability ===
+# 17. === The 'no-narrative' parameter is used for these resource instances because they are displayed as inline JSON examples to illustrate transactions and the narrative elements degrades the human readability of the JSON ===
 
-WARNING: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: Bundle/docref-example-2: Bundle.entry[0].resource/*DocumentReference/procedure-note123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: Bundle/docref-example-2: Bundle.entry[1].resource/*DocumentReference/procedure-note456*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: Bundle/docref-example-2: Bundle.entry[2].resource/*DocumentReference/discharge*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[0].resource/*DocumentReference/procedure-note123*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[1].resource/*DocumentReference/procedure-note456*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[2].resource/*DocumentReference/discharge*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: DocumentReference/discharge-summary: DocumentReference: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
 # =========================================================================================
 # === New Hints Warnings for 8.0.0   ===
