@@ -69,12 +69,11 @@ WARNING: SearchParameter/us-core-goal-target-date: SearchParameter.expression: T
 
 # 17. === The 'no-narrative' parameter is used for these resources instances because they are displayed as inline JSON examples to illustrate transactions, and the narrative degrades human readability ===
 
-WARNING: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: Bundle/docref-example-2: Bundle.entry[0].resource/*DocumentReference/procedure-note123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: Bundle/docref-example-2: Bundle.entry[1].resource/*DocumentReference/procedure-note456*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: Bundle/docref-example-2: Bundle.entry[2].resource/*DocumentReference/discharge*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-
+WARNING: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[0].resource/*DocumentReference/procedure-note123*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[1].resource/*DocumentReference/procedure-note456*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[2].resource/*DocumentReference/discharge*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: DocumentReference/discharge-summary: DocumentReference: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 # ========================================================================================
 # === New Hints Warnings for 8.0.0   ===
 # ========================================================================================
@@ -92,6 +91,9 @@ A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationa
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
 
 # 20. === HL7 Terminology (THO) defines the ServiceDeliveryLocationRoleType and HealthcareServiceLocation value sets that compose this ValueSet. However, no codes are displayed in the HL7 Terminology for HealthcareServiceLocation value set, which is composed of NHSN Healthcare Facility Patient Care Location (HSLOC) and CMS Place of Service Codes (POS) codes. These codes are available at:ServiceDeliveryLocationRoleType: https://terminology.hl7.org/6.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html,HSLOC: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest,POS: https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets===
+
+
+
 
 # 21. === The following code system is not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues. These codes were checked manually (updated text from 7.0.0)===
 
@@ -208,25 +210,29 @@ There are multiple different potential matches for the url 'http://cts.nlm.nih.g
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
 
-# 41 === The additional binding purpose code for this value set is  "Preferred"; therefore, it does not show up in all the provided examples.===
-
- None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://nucc.org/provider-taxonomy#208D00000X)
-
-# 42 === This example of the US Core Pulse Oximetry Profile inherits from the FHIR Vital Signs Profile.  The FHIR Vital Signs Profile's Observation.code binding is extensible and these code are extension codes and code translations ===
+# 41.  === The following codes are valid additional codes in the same and different code systems as representations of the concept with different granularity due to differences in the definitions of the underlying code in the extensible FHIR Vitals Signs Observation.code binding (http://hl7.org/fhir/ValueSet/observation-vitalsignresult). ===
 
 WARNING: Observation/satO2-fiO2: Observation.code: The provided code 'http://loinc.org#59408-5 ('Oxygen saturation in Arterial blood by Pulse oximetry')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'urn:iso:std:iso:11073:10101#150456 ('MDC_PULS_OXIM_SAT_O2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'
+
+# 42.  === The following codes in the example are not in the extensible base binding, v3-ServiceDeliveryLocationRoleType, defined for the element, but are valid codes taken from valuesets that are defined as "additional bindings" for different use contexts. ===
+
+WARNING: Location/hospital: Location.type[0]: The provided code 'http://snomed.info/sct|http://snomed.info/sct/731000124108#22232009 ('Hospital')' was not found in the value set 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'; The provided code 'https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html#1120-5 ('Medical Clinic')' was not found in the value set 'http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType|3.0.0'
 
 # 43 === The error is due to an issue with the terminology server, not the implementation guide. For details, see the Zulip chat at: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/whither.20ICD9cm.20in.20THO.207.2E0.2E0.3F/with/559122224 ===
 
 ERROR: ValueSet.where(id = 'us-core-condition-code'): Error from https://tx.fhir.org/r4: The code system definition for http://hl7.org/fhir/sid/icd-9-cm is a fragment, so this expansion is not permitted unless the expansion parameter "incomplete-ok" has a value of "true"
 
-# 44 === Although it may not be published prior to this ballot version, this link will resolve when US Core 8.0.1 is published. ===
+# 44 === Although it may not be published before this ballot version is published, this link will resolve when US Core 8.0.1 is published. ===
 
 ERROR: changes-between-versions.html#/html/body/div/div/div/div/div/ul/li/a at Line 1141, column 8: The link 'comparison-v8.0.1/index.html' for "Comparison with version 8.0.1" cannot be resolved
 
 # 45 === This error will be present until the publication team can address it.  See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 ===
 
 ERROR: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide.definition.extension[96].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# 46 === The additional binding purpose code for this value set is  "Preferred"; therefore, it does not show up in all the provided examples.===
+
+ None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://nucc.org/provider-taxonomy#208D00000X)
 
 
 

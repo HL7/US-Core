@@ -57,7 +57,7 @@ To support a US Core Profile, a Server:
 
 #### Profile Support + Interaction Support
 
-Servers may deploy and support one or more US Core Profiles to represent clinical information *and* one or more of the following US Core interactions: 
+Servers may deploy and support one or more US Core Profiles to represent clinical information *and* one or more of the following US Core interactions:
 
 - "Quick Start" defined for each Profile
 - [Clinical Notes]
@@ -81,7 +81,7 @@ A Server that certifies to the [21st Century Cures Act for accessing patient dat
       - the US Core Profile's official or "canonical" URL is located on each US Core Profile page.
     - Declare support for the US Core Profile's FHIR RESTful transactions.
       - The FHIR RESTful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.
- 
+
 
     Example CapabilityStatement snippet for a Server conforming to the US Core Patient Profile:
 
@@ -134,7 +134,7 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
 The FHIR rules for extensible bindings state that *all conceptual overlaps*, including free text, should be mapped to the coded values in the bindings. US Core adopts the [current] additional binding from FHIR R5 for more flexibility in exchanging legacy and text-only data. The current binding requires newly recorded, non-legacy data to be drawn from the value set.
 
 For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueSets cover the entire domain. For data not captured by fine-grained code, it is possible to provide a high-level abstract code, such as SNOMED CT "Procedure". Therefore, instead of requiring systems to map all legacy and text data to standard codes, the value set uses a "current" binding
- 
+
 <div class="stu-note" markdown="1">
 
 The "current" binding corresponds to the US Core's interpretation of extensible bindings US Core version 6.1.0 and earlier.
@@ -165,7 +165,7 @@ Example of additional codings for Body Weight concept code.
             "code": "3141-9",
             "display": "Body Weight Measured"
           },
-    //NOTE: this is a additional coding to a different code system (Snomed CT)
+    //NOTE: this is a additional coding to a different code system (SNOMED CT)
          {
             "system": "http://snomed.info/sct",
             "code": "364589006",
@@ -255,7 +255,7 @@ There are situations when information on a particular data element is missing, a
         - Use the appropriate "unknown" concept code from the ValueSet if available.
         - If the ValueSet does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
 
-      
+
 
         Example: CareTeam resource where the mandatory `CareTeam.participant.role` value is unknown.
         ~~~
