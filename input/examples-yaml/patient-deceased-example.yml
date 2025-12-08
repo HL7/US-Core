@@ -36,7 +36,7 @@ extension:
 - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex
   valueCoding:
       system: http://snomed.info/sct
-      version: http://snomed.info/sct/731000124108
+      # version: http://snomed.info/sct/731000124108  #<<<<<< removed due to last minute term server validation error
       code: '248152002'
       display: Female (finding)
 #=====================change in US Core V8 ======================
