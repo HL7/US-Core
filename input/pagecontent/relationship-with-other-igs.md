@@ -84,7 +84,7 @@ As part of profile comparison, the requirements, constraints, and standards spec
 | [US Core DocumentReference Profile]| {{MAYBE}} | {{NA}} |
 | [US Core Encounter Profile]| {{NA}} | {{NA}} |
 | [US Core Goal Profile]| {{NA}} | {{NA}} |
-| [US Core FamilyMedicalHistory Profile] | {{NA}} | {{NA}} |
+| [US Core FamilyMemberHistory Profile] | {{NA}} | {{NA}} |
 | [US Core Head Circumference Profile]| {{OK}} | {{NA}} |
 | [US Core Heart Rate Profile]| {{OK}} | {{NA}} |
 | [US Core Immunization Profile]| {{OK}} | {{MAYBE}} |

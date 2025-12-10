@@ -26,7 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. who was involved in the procedure‡
 2. a reason or indication for referral or consultation<sup>§</sup>
 
-\*†‡sup>§</sup> see guidance below
+\*†‡<sup>§</sup> see guidance below
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.

@@ -36,7 +36,7 @@ extension:
 - url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-individual-sex
   valueCoding:
     system: http://snomed.info/sct
-    version: http://snomed.info/sct/731000124108
+    # version: http://snomed.info/sct/731000124108  #remove until publisher is fixed to not issue a warning
     code: '248153007'
     display: Male (finding)
 #=====================change in US Core V8 ======================
