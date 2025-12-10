@@ -107,15 +107,15 @@ This technical update US Core have been reviewed and commented upon by the publi
 
 ##### Non-substantive
 2. **Applied:** Non-substantive (Correction) Fix Link to Race & Ethnicity     - CDC (CDCREC) code system [FHIR-51137](https://jira.hl7.org/browse/FHIR-51137) See Changes:
-    - [US Core Race Extension](StructureDefinition-us-core-race.html)
-    - [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
-3. **Applied:** Non-substantive (Correction) Typo in US Core Laboratory Result Observation Profile [FHIR-51254](https://jira.hl7.org/browse/FHIR-51254) See Changes [Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
-4. **Applied:** Non-substantive (Correction) Typo in SMART well-known example [FHIR-51363](https://jira.hl7.org/browse/FHIR-51363) See Changes [Here](scopes.html#example-well-knownsmart-configuration-file)
-5. **Applied:** Non-substantive (Correction) Remove span tags [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
-6. **Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](basic-provenance.html#author-and-author-role-data-elements)
-7. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](StructureDefinition-us-core-servicerequest.html)
-8. **Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](general-guidance.html#using-cql-with-us-core)
-9. **Applied:** Compatible, Non-substantive (Correction) Revert ICD9CM Code System URL back to `http://hl7.org/fhir/sid/icd-9-cm` [FHIR-53476](https://jira.hl7.org/browse/FHIR-53476) See Changes [Here](ValueSet-us-core-condition-code.html)
+    - [US Core Race Extension](https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-race.html)
+    - [US Core Ethnicity Extension](https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-ethnicity.html)
+3. **Applied:** Non-substantive (Correction) Typo in US Core Laboratory Result Observation Profile [FHIR-51254](https://jira.hl7.org/browse/FHIR-51254) See Changes [Here](https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
+4. **Applied:** Non-substantive (Correction) Typo in SMART well-known example [FHIR-51363](https://jira.hl7.org/browse/FHIR-51363) See Changes [Here](https://hl7.org/fhir/us/core/STU8.0.1/scopes.html#example-well-knownsmart-configuration-file)
+5. **Applied:** Non-substantive (Correction) Remove span tags [FHIR-52125](https://jira.hl7.org/browse/FHIR-52125) See Changes [Here](https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-adi-documentreference.html)
+6. **Applied:** Non-substantive (Correction) Add missing target information to Small-Provenance Table [FHIR-52997](https://jira.hl7.org/browse/FHIR-52997) See Changes [Here](https://hl7.org/fhir/us/core/STU8.0.1/basic-provenance.html#author-and-author-role-data-elements)
+7. **Applied:** Non-substantive (Correction) Correct the definition of additional USCDI ServiceRequest element [FHIR-53029](https://jira.hl7.org/browse/FHIR-53029) See Changes [Here](https://hl7.org/fhir/us/core/STU8.0.1/StructureDefinition-us-core-servicerequest.html)
+8. **Applied:** Update CQL Library section Persuasive [FHIR-53419](https://jira.hl7.org/browse/FHIR-53419) See Changes [Here](https://hl7.org/fhir/us/core/STU8.0.1/general-guidance.html#using-cql-with-us-core)
+9. **Applied:** Compatible, Non-substantive (Correction) Revert ICD9CM Code System URL back to `http://hl7.org/fhir/sid/icd-9-cm` [FHIR-53476](https://jira.hl7.org/browse/FHIR-53476) See Changes [Here](https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-condition-code.html)
 
 ### Version = 8.0.0
 - url: <https://hl7.org/fhir/us/core/STU8/>

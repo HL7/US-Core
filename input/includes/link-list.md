@@ -270,3 +270,5 @@
 [Interoperable Digital Identity and Patient Matching]: https://hl7.org/fhir/us/identity-matching/index.htm
 [HL7 Confluence page]: https://confluence.hl7.org/display/CGP/Approved+Patches+and+Additional+Guidance
 [Cross Group Project patch process]: https://confluence.hl7.org/display/CGP/US+Core+'Patch'+Process
+[Pregnancy Intention]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1166.22/expansion
+[Pregnancy Status Observation]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.12/expansion
