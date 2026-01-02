@@ -1,0 +1,55 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "us-core-medicationrequest-intent",
+  "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-intent",
+  "version": "4.0.1",
+  "name": "USCoreMedicationrequestIntent",
+  "derivedFrom": "http://hl7.org/fhir/SearchParameter/MedicationRequest-intent",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-17",
+  "publisher": "HL7 International - Cross-Group Projects",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cgp"
+        }
+      ]
+    }
+  ],
+  "description": "**Returns prescriptions with different intents**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+  "code": "intent",
+  "base": [
+    "MedicationRequest"
+  ],
+  "type": "token",
+  "expression": "MedicationRequest.intent",
+  "xpath": "f:MedicationRequest/f:intent",
+  "xpathUsage": "normal",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "SHALL"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 5
+    }
+  ]
+}

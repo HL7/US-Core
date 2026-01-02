@@ -1,0 +1,55 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "us-core-patient-id",
+  "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-id",
+  "version": "4.0.1",
+  "name": "USCorePatientId",
+  "derivedFrom": "http://hl7.org/fhir/SearchParameter/Resource-id",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-17",
+  "publisher": "HL7 International - Cross-Group Projects",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cgp"
+        }
+      ]
+    }
+  ],
+  "description": "**Logical id of this artifact**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+  "code": "_id",
+  "base": [
+    "Patient"
+  ],
+  "type": "token",
+  "expression": "Resource.id",
+  "xpath": "f:Resource/f:id",
+  "xpathUsage": "normal",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 5
+    }
+  ]
+}
