@@ -1,5 +1,6 @@
 
-<!-- This liquid script creates context specific text for each pages author and author role implementer guidance using input data from input/data/provenance-elements.csv with the following columns:
+<!-- ==========================================================================================================
+This liquid script creates context specific text for each pages author and author role implementer guidance using input data from input/data/provenance-elements.csv with the following columns:
 - Row
 - Is_New: boolean to support highlighting new content
 - Is_Source : boolean flag if is provenance source element
@@ -31,7 +32,8 @@
 - Target_Resource_7: provenance source element target resource (can be up to 7)
 - vendor_support_Target_Resource_7: boolean flag if vendors surveyed on their use of the provenance source element target resource
 - Comments
--  include parameters: fn = footnote symbol "*","†","‡", etc.(default is "*"-->
+-  include parameters: fn = footnote symbol "*","†","‡", etc.(default is "*")
+  ========================================================================================================================== -->
 {% assign footnote-symbol = include.footnote-symbol | default: "*" -%}
 {% assign rows = site.data.provenance-elements -%}
 {% assign author = '' -%}

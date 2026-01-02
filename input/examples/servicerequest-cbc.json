@@ -1,59 +1,69 @@
 {
-  "resourceType": "ServiceRequest",
-  "id": "cbc",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0-ballot"
-    ]
-  },
-  "status": "active",
-  "intent": "order",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "ServiceRequest",
+    "id": "cbc",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "ServiceRequest CBC Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is an example requesting a Laboratory Order (CBC panel) for a patient using the *US Core ServiceRequest Profile*."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+        ]
+    },
+    "status": "active",
+    "intent": "order",
+    "category": [
         {
-          "system": "http://snomed.info/sct",
-          "version": "http://snomed.info/sct/731000124108",
-          "code": "108252007",
-          "display": "Laboratory procedure (procedure)"
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/731000124108",
+                    "code": "108252007",
+                    "display": "Laboratory procedure (procedure)"
+                }
+            ],
+            "text": "Laboratory Order"
         }
-      ],
-      "text": "Laboratory Order"
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "code": "58410-2",
-        "display": "CBC panel - Blood by Automated count",
-        "system": "http://loinc.org"
-      }
     ],
-    "text": "CBC"
-  },
-  "subject": {
-    "reference": "Patient/example",
-    "display": "Amy Shaw"
-  },
-  "encounter": {
-    "reference": "Encounter/example-1",
-    "display": "Office Visit"
-  },
-  "authoredOn": "2024-10-13T10:59:38-08:00",
-  "requester": {
-    "reference": "Practitioner/practitioner-1"
-  },
-  "reasonCode": [
-    {
-      "coding": [
+    "code": {
+        "coding": [
+            {
+                "code": "58410-2",
+                "display": "CBC panel - Blood by Automated count",
+                "system": "http://loinc.org"
+            }
+        ],
+        "text": "CBC"
+    },
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy Shaw"
+    },
+    "encounter": {
+        "reference": "Encounter/example-1",
+        "display": "Office Visit"
+    },
+    "authoredOn": "2024-10-13T10:59:38-08:00",
+    "requester": {
+        "reference": "Practitioner/practitioner-1"
+    },
+    "reasonCode": [
         {
-          "system": "http://snomed.info/sct",
-          "version": "http://snomed.info/sct/731000124108",
-          "code": "234360003",
-          "display": "Vegan's anemia (disorder)"
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/731000124108",
+                    "code": "234360003",
+                    "display": "Vegan's anemia (disorder)"
+                }
+            ],
+            "text": "Vegan's anemia"
         }
-      ],
-      "text": "Vegan's anemia"
-    }
-  ]
+    ]
 }

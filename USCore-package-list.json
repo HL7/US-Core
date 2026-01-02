@@ -1,0 +1,245 @@
+{
+    "package-id": "hl7.fhir.us.core",
+    "title": "US Core",
+    "canonical": "http://hl7.org/fhir/us/core",
+    "introduction": "The US Core Implementation Guide defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. The Data Access Framework and the [Argonaut DSTU2](https://www.fhir.org/guides/argonaut/r2/) guides initially formed the basis for US Core. The Profiles are updated annually to support the latest requirements from [ASTP U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi). Fixes required between releases are managed by the [Cross Group Project patch process](https://confluence.hl7.org/display/CGP/US+Core+%27Patch%27+Process) with approved patches on this [HL7 Confluence page](https://confluence.hl7.org/display/CGP/Approved+Patches+and+Additional+Guidance). For a summary of significant changes and a detailed list of the changes between versions, see the [Change Notes]( https://build.fhir.org/ig/HL7/US-Core/changes.html).\n\n**USCDI Version - US Core Version**\n - USCDI Version v1 - US Core Version 3.1.1\n - USCDI Version v1 - US Core Version 4.0.0 (improved Must support guidance)\n - USCDI Version v2 - US Core Version 5.0.1\n - USCDI Version v3 - US Core Version 6.1.0\n - USCDI Version v4 - US Core Version 7.0.0\n - USCDI Version v5 - US Core Version 8.0.1\n - USCDI Version v6 - US Core Version 9.0.0 (planned for May 2026)\n",
+    "introductionSource": "https://hl7.org/fhir/us/core/package-list-introduction.md",
+    "category": "National Base",
+    "list": [
+        {
+            "version": "current",
+            "desc": "Continuous Integration Build (latest in version control) - Content subject to frequent changes.",
+            "path": "http://build.fhir.org/ig/HL7/US-Core",
+            "status": "ci-build",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "8.0.0",
+            "path": "http://hl7.org/fhir/us/core/STU8",
+            "status": "trial-use",
+            "sequence": "STU8",
+            "fhirversion": "4.0.1",
+            "date": "2025-06-10",
+            "current": true,
+            "desc": "The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2025 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments. For a detailed list of the changes for this version, see the Change Notes: http://hl7.org/fhir/us/core/STU8/changes.html.",
+            "descmd": "The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2025 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/STU8/changes.html).",
+            "changes": "changes.html",
+            "milestoneName": "R8"
+        },
+        {
+            "version": "8.0.0-ballot",
+            "path": "http://hl7.org/fhir/us/core/2025Jan",
+            "status": "ballot",
+            "sequence": "STU8",
+            "fhirversion": "4.0.1",
+            "date": "2024-12-13",
+            "desc": "The January 2024 Ballot Version adds United States Core Data for Interoperability (USCDI) V5 updates that the Assistant Secretary for Technology Policy/Office of the National Coordinator for Health Information Technology (ASTP/ONC) published in July 2024. It also addresses over 50 trackers submitted by implementers since the publication of US Core ver 7.0.0. For a detailed list of the changes for this version, see the Change Notes. http://hl7.org/fhir/us/core/2024Jan/changes.html.",
+            "descmd": "The January 2024 Ballot Version adds United States Core Data for Interoperability (USCDI) V5 updates that the Assistant Secretary for Technology Policy/Office of the National Coordinator for Health Information Technology (ASTP/ONC) published in July 2024. It also addresses over 50 trackers submitted by implementers since the publication of US Core ver 7.0.0. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/2024Jan/changes.html).",
+            "changes": "changes.html"
+        },
+        {
+            "version": "7.0.0",
+            "path": "http://hl7.org/fhir/us/core/STU7",
+            "status": "trial-use",
+            "sequence": "STU7",
+            "fhirversion": "4.0.1",
+            "date": "2024-05-08",
+            "desc": "The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2024 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments. This version enables USCDI v4. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/STU7/changes.html).",
+            "descmd": "The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2024 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments. This version enables USCDI v4. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/STU7/changes.html).",
+            "changes": "changes.html",
+            "milestoneName": "R7"
+        },
+        {
+            "version": "7.0.0-ballot",
+            "path": "http://hl7.org/fhir/us/core/2024Jan",
+            "status": "ballot",
+            "sequence": "STU7",
+            "fhirversion": "4.0.1",
+            "date": "2023-12-19",
+            "desc": "The January 2024 Ballot Version adds United States Core Data for Interoperability (USCDI) V4 updates that the Office of the National Coordinator (ONC) published in July 2023. It also addresses over 50 trackers submitted by implementers since the publication of US Core ver 6.1.0. For a detailed list of the changes for this version, see the Change Notes (http://hl7.org/fhir/us/core/2024Jan/changes.html).",
+            "descmd": "The January 2024 Ballot Version adds United States Core Data for Interoperability (USCDI) V4 updates that the Office of the National Coordinator (ONC) published in July 2023. It also addresses over 50 trackers submitted by implementers since the publication of US Core ver 6.1.0. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/2024Jan/changes.html).",
+            "changes": "changes.html"
+        },
+        {
+            "version": "6.1.0",
+            "path": "http://hl7.org/fhir/us/core/STU6.1",
+            "status": "update",
+            "sequence": "STU6",
+            "fhirversion": "4.0.1",
+            "date": "2023-06-30",
+            "desc": "This STU Update to version 6.0.0 of US Core has been reviewed by the public per the HL7 STU update process and voted on by the members of the HL7 International Cross-Group Projects work group. This version enables USCDI v3. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/STU6/changes.html).",
+            "descmd": "This STU Update to version 6.0.0 of US Core has been reviewed by the public per the HL7 STU update process and voted on by the members of the HL7 International Cross-Group Projects work group. This version enables USCDI v3. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/STU6/changes.html).",
+            "milestoneName": "R6"
+        },
+        {
+            "version": "6.1.0-snapshot1",
+            "path": "http://hl7.org/fhir/us/core/STU6.1-snapshot1",
+            "status": "update",
+            "sequence": "STU6",
+            "fhirversion": "4.0.1",
+            "date": "2023-05-27",
+            "desc": "This publication snapshot of the STU Update to version 6.0.0 of US Core is published for review by the public per the HL7 STU update process. The resolution of these change has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group. - see the [Change Notes](http://hl7.org/fhir/us/core/STU6/changes.html).",
+            "descmd": "This publication snapshot of the STU Update to version 6.0.0 of US Core is published for review by the public per the HL7 STU update process. The resolution of these change has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group. - see the [Change Notes](http://hl7.org/fhir/us/core/STU6/changes.html)."
+        },
+        {
+            "version": "6.0.0",
+            "path": "http://hl7.org/fhir/us/core/STU6",
+            "status": "trial-use",
+            "sequence": "STU6",
+            "fhirversion": "4.0.1",
+            "date": "2023-05-03",
+            "desc": "STU6 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the January 2023 Ballot Version. - see the [Change Notes](http://hl7.org/fhir/us/core/STU6/changes.html).",
+            "descmd": "STU6 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the January 2023 Ballot Version. - see the [Change Notes](http://hl7.org/fhir/us/core/STU6/changes.html)."
+        },
+        {
+            "version": "6.0.0-ballot",
+            "date": "2022-12-05",
+            "path": "http://hl7.org/fhir/us/core/2023Jan",
+            "status": "ballot",
+            "sequence": "STU6",
+            "fhirversion": "4.0.1",
+            "desc": "The January 2022 Ballot Version: This version adds United States Core Data for Interoperability (USCDI) V3 updates that the Office of the National Coordinator (ONC) published in July 2022. It addresses over 70 trackers submitted by implementers since the publication of US Core ver 5.0.1. For a detailed list of the changes for this version, see the [Change Notes](http://hl7.org/fhir/us/core/2023Jan/changes.html)."
+        },
+        {
+            "version": "5.0.1",
+            "changes": "changes.html",
+            "path": "http://hl7.org/fhir/us/core/STU5.0.1",
+            "status": "trial-use",
+            "sequence": "STU5",
+            "fhirversion": "4.0.1",
+            "date": "2022-06-22",
+            "desc": "STU5 Errata Update of the US Core Implementation Guide: 1) Correction of typos in Condition profile urls, 2)Update VSAC version package dependency and 3)Correction to Provenance profile. This version enables USCDI v2. For a detailed list of the changes for this version, see [Change Notes](https://hl7.org/fhir/us/core/STU5.0.1/changes.html)",
+            "descmd": "STU5 Errata Update of the US Core Implementation Guide: 1) Correction of typos in Condition profile urls, 2)Update VSAC version package dependency and 3)Correction to Provenance profile. This version enables USCDI v2. For a detailed list of the changes for this version, see [Change Notes](https://hl7.org/fhir/us/core/STU5.0.1/changes.html)",
+            "milestoneName": "R5"
+        },
+        {
+            "version": "5.0.0",
+            "desc": "STU5 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the January 2022 Ballot Version.",
+            "changes": "changes.html",
+            "path": "http://hl7.org/fhir/us/core/STU5",
+            "status": "trial-use",
+            "sequence": "STU5",
+            "fhirversion": "4.0.1",
+            "date": "2022-05-13"
+        },
+        {
+            "version": "4.1.0",
+            "date": "2021-11-30",
+            "desc": "The January 2022 Ballot Version:  this version adds United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published in July of 2021. Continues efforts to link terminology directly to Value Set Authority Center (VSAC) where applicable. Addresses over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/2022Jan",
+            "status": "ballot",
+            "sequence": "STU5",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "4.0.0",
+            "date": "2021-06-28",
+            "desc": "STU4 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the January 2021 Ballot Version. This version provides greater clarity on Must Support to enable USCDI v1. Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/STU4",
+            "status": "trial-use",
+            "sequence": "STU4",
+            "fhirversion": "4.0.1",
+            "milestoneName": "R4"
+        },
+        {
+            "version": "3.2.0",
+            "date": "2021-1-30",
+            "desc": "The January 2021 Ballot Version: this version 1) adds new Conformance Expectations, 2)  add a set of US Core Vital Signs, 3) links terminology directly to the Value Set Authority Center (VSAC), 4) migrates to the standard set of HL7 FHIR IG templates for publishing and addresses over 95 outstanding trackers from the FHIR community.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/2021Jan",
+            "status": "ballot",
+            "sequence": "STU4",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "3.1.1",
+            "date": "2020-6-30",
+            "desc": "STU3 Technical Correction of the US Core Implementation Guide: this version addresses several technical corrections and errata and clarifications. This version enables USCDI v1. Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/STU3.1.1",
+            "status": "trial-use",
+            "sequence": "STU3",
+            "fhirversion": "4.0.1",
+            "milestoneName": "R3"
+        },
+        {
+            "version": "3.1.0",
+            "date": "2019-10-31",
+            "desc": "2nd STU3 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the STU3 For Comment Version of the US Core Implementation Guide.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/STU3.1",
+            "status": "trial-use",
+            "sequence": "STU3",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "3.0.1",
+            "date": "2019-09-01",
+            "desc": "STU3 For Comment Version of the US Core Implementation Guide: this version add changes to meet the proposed ONC U.S. Core Data for Interoperability (USCDI) v1 regulatory requirements for access to patient data.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/2019Sep",
+            "status": "ballot",
+            "sequence": "STU3",
+            "fhirversion": "4.0.0"
+        },
+        {
+            "version": "3.0.0",
+            "date": "2019-06-15",
+            "desc": "1st STU3 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the The January 2019 Ballot Version.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/STU3",
+            "status": "trial-use",
+            "sequence": "STU3",
+            "fhirversion": "4.0.0"
+        },
+        {
+            "version": "2.1.0",
+            "date": "2018-12-04",
+            "desc": "January 2019 Ballot Version: this version is the first ballot on FHIR R4. Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/2019Jan",
+            "status": "ballot",
+            "sequence": "STU3",
+            "fhirversion": "4.0.0"
+        },
+        {
+            "version": "2.0.0",
+            "date": "2018-12-04",
+            "desc": "STU2 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the The January 2018 Ballot Version.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/STU2",
+            "status": "trial-use",
+            "sequence": "STU2",
+            "fhirversion": "3.0.1"
+        },
+        {
+            "version": "1.1.0",
+            "date": "2017-12-20",
+            "desc": "January 2018 Ballot Version: this version added the US Core DocumentReference, US Core Encounter, and US Core PractitionerRole profiles.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/2018Jan",
+            "status": "ballot",
+            "sequence": "STU2",
+            "fhirversion": "3.0.1"
+        },
+        {
+            "version": "1.0.1",
+            "date": "2017-11-02",
+            "desc": "STU1 Technical Correction of the US Core Implementation Guide: this version addresses several technical corrections and errata and clarifications.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/1.0.1",
+            "status": "trial-use",
+            "sequence": "STU1",
+            "fhirversion": "3.0.1"
+        },
+        {
+            "version": "1.0.0",
+            "date": "2017-03-21",
+            "desc": "STU1 Update of the US Core Implementation Guide: this version is the result of resolution of the community comments for the The January 2017 Ballot Version.  Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/STU1",
+            "status": "trial-use",
+            "sequence": "STU1",
+            "fhirversion": "3.0.1"
+        },
+        {
+            "version": "0.0.0",
+            "date": "2016-12-06",
+            "desc": "January 2017 Ballot Version: this version is the first ballot of US Core Details of the changes in this version can be seen at https://github.com/HL7/US-Core/blob/master/input/pagecontent/changes.md",
+            "path": "http://hl7.org/fhir/us/core/2017Jan",
+            "status": "ballot",
+            "sequence": "STU1",
+            "fhirversion": "1.8.0"
+        }
+    ]
+}

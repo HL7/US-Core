@@ -1,6 +1,4 @@
 
-{% include new_page.md %}
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core FamilyMemberHistory

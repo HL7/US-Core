@@ -1,26 +1,36 @@
 {
-  "resourceType": "Goal",
-  "id": "goal-1",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|9.0.0-ballot"
-    ]
-  },
-  "lifecycleStatus": "active",
-  "description": {
-    "text": "Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"
-  },
-  "subject": {
-    "reference": "Patient/example",
-    "display": "Amy Shaw"
-  },
-  "target": [
-    {
-      "dueDate": "2016-04-05"
+    "resourceType": "Goal",
+    "id": "goal-1",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Goal 1 Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a goal 1 example for the *US Core Goal Profile* and demonstrates use free text for Goal.description."
+            }
+        ]
+    },
+    "lifecycleStatus": "active",
+    "description": {
+        "text": "Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"
+    },
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy Shaw"
+    },
+    "target": [
+        {
+            "dueDate": "2016-04-05"
+        }
+    ],
+    "expressedBy": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Dr Ronald Bone"
     }
-  ],
-  "expressedBy": {
-    "reference": "Practitioner/practitioner-1",
-    "display": "Dr Ronald Bone"
-  }
 }

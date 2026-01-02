@@ -1,52 +1,62 @@
 {
-  "resourceType": "Location",
-  "id": "hl7east",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|9.0.0-ballot"
-    ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.acme.org/location",
-      "value": "29"
-    }
-  ],
-  "status": "active",
-  "name": "Health Level Seven International - Amherst",
-  "type": [
-    {
-      "coding": [
+    "resourceType": "Location",
+    "id": "hl7east",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "HL7East Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a HL7East example for the *US Core Location Profile*."
+            }
+        ]
+    },
+    "identifier": [
         {
-          "system": "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
-          "code": "1184-1",
-          "display": "Administrative Areas"
+            "system": "http://www.acme.org/location",
+            "value": "29"
         }
-      ],
-      "text": "Administrative Office"
-    }
-  ],
-  "description": "HL7 Headquarters - East",
-  "telecom": [
-    {
-      "system": "phone",
-      "value": "(+1) 734-677-7777"
-    }
-  ],
-  "address": {
-    "line": [
-      "3300 WASHTENAW AVE STE 227"
     ],
-    "city": "AMHERST",
-    "state": "MA",
-    "postalCode": "01002",
-    "country": "USA"
-  },
-  "position": {
-    "longitude": -72.519854,
-    "latitude": 42.373222
-  },
-  "managingOrganization": {
-    "display": "Health Level Seven International"
-  }
+    "status": "active",
+    "name": "Health Level Seven International - Amherst",
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html",
+                    "code": "1184-1",
+                    "display": "Administrative Areas"
+                }
+            ],
+            "text": "Administrative Office"
+        }
+    ],
+    "description": "HL7 Headquarters - East",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "(+1) 734-677-7777"
+        }
+    ],
+    "address": {
+        "line": [
+            "3300 WASHTENAW AVE STE 227"
+        ],
+        "city": "AMHERST",
+        "state": "MA",
+        "postalCode": "01002",
+        "country": "USA"
+    },
+    "position": {
+        "longitude": -72.519854,
+        "latitude": 42.373222
+    },
+    "managingOrganization": {
+        "display": "Health Level Seven International"
+    }
 }

@@ -1,19 +1,29 @@
 {
-  "resourceType": "Medication",
-  "id": "uscore-med1",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|9.0.0-ballot"
-    ]
-  },
-  "code": {
-    "coding": [
-      {
-        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-        "code": "206765",
-        "display": "lisinopril 10 MG Oral Tablet [Prinivil]"
-      }
-    ],
-    "text": "Prinivil (lisinopril) oral 10 mg"
-  }
+    "resourceType": "Medication",
+    "id": "uscore-med1",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Uscore Med1 Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a uscore med1 example for the *US Core Medication Profile*."
+            }
+        ]
+    },
+    "code": {
+        "coding": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code": "206765",
+                "display": "lisinopril 10 MG Oral Tablet [Prinivil]"
+            }
+        ],
+        "text": "Prinivil (lisinopril) oral 10 mg"
+    }
 }

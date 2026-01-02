@@ -189,13 +189,6 @@
 [`_include`]: {{site.data.fhir.path}}search.html#include
 [`_lastUpdated`]: {{site.data.fhir.path}}search.html#lastUpdated
 [`_revinclude`]: {{site.data.fhir.path}}search.html#include
-[`asserted-date`]: SearchParameter-us-core-condition-asserted-date.html
-[`description`]: SearchParameter-us-core-goal-description.html
-[`discharge-disposition`]: SearchParameter-us-core-encounter-discharge-disposition.html
-[`ethnicity`]: SearchParameter-us-core-ethnicity.html
-[`race`]: SearchParameter-us-core-race.html
-[`role`]: SearchParameter-us-core-careteam-role.html
-[asserted-date]: SearchParameter-us-core-condition-asserted-date.html
 [assertedDate Extension]: {{site.data.fhir.path}}extension-condition-asserteddate.html
 [base resource differential]: {{site.data.fhir.path}}diff.html
 [chains]: {{site.data.fhir.path}}search.html#chaining

@@ -1,17 +1,16 @@
 
-<!--  liquid script for creating a markdown table from a csv file in the input/data folder source file = input/data/additional-uscdi-requirements.csv. columns:
+<!-- =========================================================
+ liquid script for creating a markdown table from a csv file in the input/data folder source file = input/data/additional-uscdi-requirements.csv. columns:
 This table is updated with the Jupyter script : /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/CapStatement/addl-uscdi-tabler.ipynb
 
-
-
- 'Is_New' - new element for highlighting
-'AddlUSCDI:  USCDI DE
+'Is_New' - new element for highlighting
+'AddlUSCDI:  USCDI Data Elements
 'Profile': Profile name using markdown link brackets
 'FHIRElement': FHIR element that is add'l USCDI
 'combo' : column for unique matching
 
-NOTE THAT THE USCDI DE data needs to be manually mapped from the USCDI mapping table.
- -->
+NOTE THAT THE USCDI Data Elements data needs to be manually mapped from the USCDI mapping table.
+================================================================ -->
 
 {% assign rows = site.data.additional-uscdi-requirements %}
 {% for item in rows -%}
@@ -26,7 +25,7 @@ NOTE THAT THE USCDI DE data needs to be manually mapped from the USCDI mapping t
 {% if forloop.last %}{:.grid}{% endif -%}
 {% endfor %}
 
-
+<!-- ================== End Liquid ================================ -->
 
 
 

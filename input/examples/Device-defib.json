@@ -1,43 +1,53 @@
 {
-  "resourceType": "Device",
-  "id": "udi-2",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0-ballot"
-    ]
-  },
-  "udiCarrier": [
-    {
-      "deviceIdentifier": "99863313444316",
-      "carrierHRF": "(01)99863313444316(17)220101(10)M320(21)AC221",
-      "entryType": "rfid"
-    }
-  ],
-  "status": "active",
-  "manufacturer": "ACME Biomedical",
-  "expirationDate": "2022-01-01",
-  "lotNumber": "M320",
-  "serialNumber": "AC221",
-  "deviceName": [
-    {
-      "name": "ACME Defibrillator Analyzer, with Transcutaneous Pacemaker Input",
-      "type": "udi-label-name"
-    }
-  ],
-  "modelNumber": "1.0",
-  "type": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "19257004",
-        "display": "Defibrillator, device",
-        "version": "http://snomed.info/sct/731000124108"
-      }
+    "resourceType": "Device",
+    "id": "udi-2",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Defibrillator Device Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This Device example for the *US Core Device Profile* illustrates its use for implantable devices with UDI information. This example is referenced by Procedure Defibrillator Implant Example."
+            }
+        ]
+    },
+    "udiCarrier": [
+        {
+            "deviceIdentifier": "99863313444316",
+            "carrierHRF": "(01)99863313444316(17)220101(10)M320(21)AC221",
+            "entryType": "rfid"
+        }
     ],
-    "text": "Defibrillator"
-  },
-  "patient": {
-    "reference": "Patient/example",
-    "display": "Amy V. Shaw"
-  }
+    "status": "active",
+    "manufacturer": "ACME Biomedical",
+    "expirationDate": "2022-01-01",
+    "lotNumber": "M320",
+    "serialNumber": "AC221",
+    "deviceName": [
+        {
+            "name": "ACME Defibrillator Analyzer, with Transcutaneous Pacemaker Input",
+            "type": "udi-label-name"
+        }
+    ],
+    "modelNumber": "1.0",
+    "type": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "19257004",
+                "display": "Defibrillator, device",
+                "version": "http://snomed.info/sct/731000124108"
+            }
+        ],
+        "text": "Defibrillator"
+    },
+    "patient": {
+        "reference": "Patient/example",
+        "display": "Amy V. Shaw"
+    }
 }

@@ -1,34 +1,44 @@
 {
-  "resourceType": "Goal",
-  "id": "goal-sdoh-2",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|9.0.0-ballot"
-    ]
-  },
-  "lifecycleStatus": "active",
-  "description": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "406156006",
-        "display": "In paid employment",
-        "version": "http://snomed.info/sct/731000124108"
-      }
+    "resourceType": "Goal",
+    "id": "goal-sdoh-2",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Goal 2 Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a goal 2 example for the *US Core Goal Profile* and demonstrates use of a code for Goal.description."
+            }
+        ]
+    },
+    "lifecycleStatus": "active",
+    "description": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "406156006",
+                "display": "In paid employment",
+                "version": "http://snomed.info/sct/731000124108"
+            }
+        ],
+        "text": "In paid employment"
+    },
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy Shaw"
+    },
+    "target": [
+        {
+            "dueDate": "2022-02-01"
+        }
     ],
-    "text": "In paid employment"
-  },
-  "subject": {
-    "reference": "Patient/example",
-    "display": "Amy Shaw"
-  },
-  "target": [
-    {
-      "dueDate": "2022-02-01"
+    "expressedBy": {
+        "reference": "Patient/example",
+        "display": "Amy Shaw"
     }
-  ],
-  "expressedBy": {
-    "reference": "Patient/example",
-    "display": "Amy Shaw"
-  }
 }

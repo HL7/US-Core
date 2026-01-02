@@ -1,4 +1,6 @@
-<!-- This liquid script creates a US Core provenance requirements table using input data from input/data/provenance-elements.csv
+<!-- ==================================================================
+This liquid script creates a US Core provenance requirements table using input data from input/data/provenance-elements.csv
+which is manually updated when new profiles are added to the guide.
 with the following columns:
 - Row
 - Is_New
@@ -23,12 +25,9 @@ same columns as above for Targets 2 -7
 - Comments
 
 TODO. add row highlighting for Is_New==True item
--  no include parameters:  -->
+-  no include parameters:
+================================================================== -->
 
-
-{% assign rows = site.data.provenance-elements %}
-{% for item in rows %}
-{% if forloop.first %}
 <table class="grid">
 <thead>
 <tr>
@@ -40,29 +39,29 @@ TODO. add row highlighting for Is_New==True item
 </tr>
 </thead>
 <tbody>
-{% endif %}
-{% if item["Is_Source"] == "TRUE" %}
-  {% assign targets= '' %}
-  {% for i in (1..8) %}
-    {% assign key = "Target_Resource_" | append: i %}
-    {% assign MS_key = "Target_Resource_" | append: i | append: "_is_MS" %}
-    {% assign is_new_key = "Target_Resource_" | append: i | append: "_is_new" %}
-    {% assign target = item[key] %}
-    {% if target %}
-      {% if item[MS_key] == "TRUE" %}{% assign target = target | prepend: "<strong>" | append: "**</strong>" %}{% endif %}
-      {% if item[is_new_key] == "TRUE" %}{% assign target = target | prepend: '<span class="bg-success" markdown="1">' | append: "</span><!-- new-content -->" %}{% endif %}
-      {% assign targets = targets | append: target | append: "," %}
-    {% endif %}
-  {% endfor %}
-<tr>
-<td><a href="{{item.Path}}">{{item.US_Core_Profile}}</a></td>
-<td><code>{% if item.is_MS == "TRUE" %}<strong>{% endif %}{{item.FiveWs_author | append: item.FiveWs_source | append: item.FiveWs_actor}}{% if item.is_MS == "TRUE" %}*</strong>{% endif %}</code></td>
-<td>{{ targets | split: "," | join: ", " }}</td>
-</tr>
-{% endif %}
-
-{% if forloop.last %}
+{% assign rows = site.data.provenance-elements -%}
+{% for item in rows %}
+  {% if item["Is_Source"] == "TRUE" -%}
+    {% assign targets= '' -%}
+    {% for i in (1..8) -%}
+      {% assign key = "Target_Resource_" | append: i -%}
+      {% assign MS_key = "Target_Resource_" | append: i | append: "_is_MS" -%}
+      {% assign is_new_key = "Target_Resource_" | append: i | append: "_is_new" -%}
+      {% assign target = item[key] -%}
+      {% if target -%}
+        {% if item[MS_key] == "TRUE" %}{% assign target = target | prepend: "<strong>" | append: "**</strong>" %}{% endif -%}
+        {% if item[is_new_key] == "TRUE" %}{% assign target = target | prepend: '<span class="bg-success" markdown="1">' | append: "</span><!-- new-content -->" %}{% endif -%}
+        {% assign targets = targets | append: target | append: "," -%}
+      {% endif -%}
+    {% endfor %}
+  <tr {% if item.Is_New %} class="bg-success"{% endif %}>
+  <td><a href="{{item.Path}}">{{item.US_Core_Profile}}</a></td>
+  <td><code>{% if item.is_MS == "TRUE" %}<strong>{% endif %}{{item.FiveWs_author | append: item.FiveWs_source | append: item.FiveWs_actor}}{% if item.is_MS == "TRUE" %}*</strong>{% endif %}</code></td>
+  <td>{{ targets | split: "," | join: ", " }}</td>
+  </tr>
+  {% endif %}
+{% endfor %}
 </tbody>
 </table>
-{% endif %}
-{% endfor %}
+
+<!-- =============================== end liquid =================================== -->
