@@ -1,18 +1,17 @@
 <!-- This liquid script creates context specific text for each pages quickstart using input data from input/data/scopes.csv -->
 {% assign smart_scope = false %}
-{% for scope in site.data.scopes %}
-  {% if scope.page_name == page.name %}
+{% for scope in site.data.profile_metadata %}
+  {% if scope.rel_url == page.name %}
     {% capture smart_scope %}
 
-      {% assign scope_string = scope | inspect %}
       {% assign conf_verbs = "SHALL,SHOULD,MAY" | split: "," %}
       {% for conf in conf_verbs %}
-        {%- if scope_string contains conf %}
+        {%- if scope.resource_scope_conf == conf or scope.cat1_scope_conf == conf or scope.cat12_scope_conf == conf or scope.cat2_scope_conf == conf or scope.cat4_scope_conf == conf or scope.cat5_scope_conf == conf or scope_cat6_conf == conf %}
 Servers providing access to {{ scope.data_element }} data **{{conf}}** support these [US Core SMART Scopes]:
-          {%- if scope.resource_conformance == conf %}
+          {%- if scope.resource_scope_conf == conf %}
   -  [resource level scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs`
           {% endif -%}
-          {% for i in (1..6) %}{% assign category =  'category_' | append: i %}{% assign category_conformance =  'category_' | append: i |append: '_conformance' -%}
+          {% for i in (1..6) %}{% assign category =  'cat' | append: i |append: '_scope' %}{% assign category_conformance =  category |append: '_conf' -%}
             {%- if scope[category] and scope[category_conformance] == conf %}
   -  [granular scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs?category={{ scope[category] }}`
             {% endif -%}
@@ -23,6 +22,8 @@ Servers providing access to {{ scope.data_element }} data **{{conf}}** support t
     {% break %}
   {% endif %}
 {% endfor %}
+
+<!--  ======================== end liquid ================================ -->
 
 ---
 
@@ -37,10 +38,6 @@ Below is an overview of the required Server RESTful FHIR interactions for this p
 - See the [Search Syntax](general-guidance.html#search-syntax) section for a description of the US Core search syntax.
 - See the [General Requirements] section for additional rules and expectations when a Server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
-
-
-
-
 
 {% if smart_scope -%}
 #### US Core Scopes

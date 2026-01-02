@@ -1,0 +1,85 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+ <!--      <h4>Custom liquid Version</h4> -->
+    <hr/>
+    <p><b>id</b> {{ SearchParameter.id }}</p>
+<!--    <p><b>url</b> : <code>{{ SearchParameter.url }}}</code></p>>
+    <p><b>name</b> : {{ SearchParameter.name }}</p> -->
+    {% if SearchParameter.derivedFrom %}
+        <p><b>derivedFrom</b> : <code>{{ SearchParameter.derivedFrom.replace('http://', ' http://') }}</code></p> <!-- added leading space to prevent build from trying to create link -->
+    {% endif %}
+    <p><b>status</b> : {{ SearchParameter.status }}</p>
+    {% if SearchParameter.experimental %}
+        <p><b>experimental</b>  {{ SearchParameter.experimental }}</p>
+    {% endif %}
+    <p><b>date</b> : {{ SearchParameter.date }}</p>
+ <!-- <p><b>publisher</b> : {{ SearchParameter.publisher }}</p>
+    <p><b>contact</b> : {{ SearchParameter.contact[0].telecom[0].value }}</p>
+    <p><b>jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+           States of America (the)'})</span>
+    </p> -->
+    <p><b>code</b> : "{{ SearchParameter.code }}"</p>
+    <p><b>base</b> : {{SearchParameter.base}} </p>
+    <p><b>type</b> : {{ SearchParameter.type }}</p>
+    <p><b>expression</b> : <code>{{ SearchParameter.expression }}</code></p>
+    {% if SearchParameter.target %}
+        <p><b>target</b> : {{SearchParameter.target}} </p>
+    {% endif %}
+    <p><b>multipleOr</b> : {{ SearchParameter.multipleOr }}  (Conformance Expectation = {{ SearchParameter.multipleOr.extension.first().value }})</p>
+    <p><b>multipleAnd</b> : {{ SearchParameter.multipleAnd }} (Conformance Expectation = {{ SearchParameter.multipleAnd.extension.first().value }})</p>
+    {% if SearchParameter.comparator.exists() %}
+        <p><b>comparator codes</b> :</p>
+            <ul>
+                <li>"eq" <i>{{ SearchParameter.comparator[0] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[0].value }})</li>
+                <li>"ne" <i>{{ SearchParameter.comparator[1] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[1].value }})</li>
+                <li>"gt" <i>{{ SearchParameter.comparator[2] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[2].value }})</li>
+                <li>"ge" <i>{{ SearchParameter.comparator[3] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[3].value }})</li>
+                <li>"lt" <i>{{ SearchParameter.comparator[4] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[4].value }})</li>
+                <li>"le" <i>{{ SearchParameter.comparator[5] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[5].value }})</li>
+                <li>"sa" <i>{{ SearchParameter.comparator[6] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[6].value }})</li>
+                <li>"eb" <i>{{ SearchParameter.comparator[7] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[7].value }})</li>
+                <li>"ap" <i>{{ SearchParameter.comparator[8] }}</i> (Conformance Expectation = {{ SearchParameter.comparator.extension[8].value }})</li>
+            </ul>
+    {% endif %}
+
+    {% if SearchParameter.modifier %}
+        <p><b>modifier codes</b> :</p>
+            <ul>
+                <li>"missing" <i>{{ SearchParameter.modifier[0] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[0].value }})</li>
+                <li>"exact" <i>{{ SearchParameter.modifier[1] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[1].value }})</li>
+                <li>"contains" <i>{{ SearchParameter.modifier[2] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[2].value }})</li>
+                <li>"not" <i>{{ SearchParameter.modifier[3] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[3].value }})</li>
+                <li>"text" <i>{{ SearchParameter.modifier[4] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[4].value }})</li>
+                <li>"in" <i>{{ SearchParameter.modifier[5] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[5].value }})</li>
+                <li>"not-in" <i>{{ SearchParameter.modifier[6] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[6].value }})</li>
+                <li>"below" <i>{{ SearchParameter.modifier[7] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[7].value }})</li>
+                <li>"above" <i>{{ SearchParameter.modifier[8] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[8].value }})</li>
+                <li>"type" <i>{{ SearchParameter.modifier[9] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[9].value }})</li>
+                <li>"identifier" <i>{{ SearchParameter.modifier[10] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[10].value }})</li>
+                <li>"of-type" <i>{{ SearchParameter.modifier[11] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[11].value }})</li>
+                <li>"code-text" <i>{{ SearchParameter.modifier[12] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[12].value }})</li>
+                <li>"text-advanced" <i>{{ SearchParameter.modifier[13] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[13].value }})</li>
+                <li>"iterate" <i>{{ SearchParameter.modifier[14] }}</i> ( Conformance Expectation = {{ SearchParameter.modifier.extension[14].value }})</li>
+            </ul>
+    {% endif %}
+
+    {% if SearchParameter.chain %}  <!-- will list up to five chains -->
+        <p><b>chained names: </b> :</p>
+          <ul>
+            {% if SearchParameter.chain[0] %}
+            <li>"{{ SearchParameter.chain[0] }}" (Conformance Expectation = {{ SearchParameter.chain.extension[0].value }})</li>
+            {% endif %}
+            {% if SearchParameter.chain[1] %}
+            <li>"{{ SearchParameter.chain[1] }}" (Conformance Expectation = {{ SearchParameter.chain.extension[1].value }})</li>
+            {% endif %}
+            {% if SearchParameter.chain[2] %}
+            <li>"{{ SearchParameter.chain[2] }}" (Conformance Expectation = {{ SearchParameter.chain.extension[2].value }})</li>
+            {% endif %}
+            {% if SearchParameter.chain[3] %}
+            <li>"{{ SearchParameter.chain[3] }}" (Conformance Expectation = {{ SearchParameter.chain.extension[3].value }})</li>
+            {% endif %}
+            {% if SearchParameter.chain[4] %}
+            <li>"{{ SearchParameter.chain[4] }}" (Conformance Expectation = {{ SearchParameter.chain.extension[4].value }})</li>
+            {% endif %}
+          </ul>
+    {% endif %}
+</div>

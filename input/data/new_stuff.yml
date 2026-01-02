@@ -39,10 +39,10 @@
 # SearchParameters
 
 
-# Profiles - moved to consolidated profiles table
+# Profiles === MOVED TO input/data/profile_metadata.csv TABLE ====
 # - USCoreAllergyIntolerance
 # - USCoreConditionEncounterDiagnosisProfile
-- USCoreConditionProblemsHealthConcernsProfile
+# - USCoreConditionProblemsHealthConcernsProfile
 # - USCoreQuestionnaireResponseProfile
 # - USCoreObservationSurveyProfile
 # - USCoreObservationSDOHAssessment
@@ -64,12 +64,12 @@
 # - USCoreDiagnosticReportProfileNoteExchange
 # - USCoreDocumentReferenceProfile
 # - USCoreProcedureProfile
-- USCoreServiceRequestProfile
+# - USCoreServiceRequestProfile
 # - USCoreTreatmentInterventionPreferenceProfile
 # - USCoreCareExperiencePreferenceProfile
 # - USCoreLaboratoryResultObservationProfile
-- USCoreCarePlanProfile
-- USCoreLaboratoryResultObservationProfile
+# - USCoreCarePlanProfile
+# - USCoreLaboratoryResultObservationProfile
 # - USCoreCarePlanProfile
 # - USCoreCareTeamProfile
 # - USCoreGoalProfile
@@ -77,16 +77,16 @@
 # - USCoreSmokingStatusProfile
 # - USCorePatientProfile
 # - USCoreObservationADIDocumentationProfile
-- USCoreADIDocumentReferenceProfile
+# - USCoreADIDocumentReferenceProfile
 # - USCoreVitalSignsProfile
 # - USCoreSexExtension
-- USCoreFamilyMemberHistoryProfile
-- USCoreDeviceProfile
-- USCorePMOServiceRequestProfile
-- USCorePractitionerProfile
-- USCorePractitionerRoleProfile
+# - USCoreFamilyMemberHistoryProfile
+# - USCoreDeviceProfile
+# - USCorePMOServiceRequestProfile
+# - USCorePractitionerProfile
+# - USCorePractitionerRoleProfile
 
-# Extensions
+# Extensions === MOVED TO input/data/profile_metadata.csv TABLE ====
 # - USCoreExtensionQuestionnaireUri
 # - USCoreTribalAffiliationExtension
 # - USCoreSexForClinicalUse
@@ -95,13 +95,13 @@
 # - USCoreGenderIdentityExtension
 # - USCoreMedicationAdherenceExtension
 # - USCDIRequirement
-- USCoreAuthenticationTimeExtension
+# - USCoreAuthenticationTimeExtension
 # - USCoreInterpreterRequiredExtension
-- USCoreRaceExtension
-- USCoreEthnicityExtension
+# - USCoreRaceExtension
+# - USCoreEthnicityExtension
 # - USCoreSexExtension
-- USCoreIndividualSexExtension
-- USCoreFamilyMemberHistoryRecorderExtension
+# - USCoreIndividualSexExtension
+# - USCoreFamilyMemberHistoryRecorderExtension
 
 # OperationDefinition
 
@@ -220,7 +220,7 @@
 # - 'Docref Example 2'
 # - At Home In Vitro Test Example
 # - AllergyIntolerance Non-pharmacologic Agent Example
-# - AllergyIntolerance Example
+- AllergyIntolerance Example
 # - Average Blood Pressure Example
 # - Hospital Location
 # - Procedure Defibrillator Implant Example

@@ -1672,7 +1672,7 @@ definition:
     exampleBoolean: false
     name: US Core Category
   - reference:
-      reference: CapabilityStatement/us-core-client
+      reference: CapabilityStatement/us-core-client-liquid
     description: This Section describes the expected capabilities of the US Core Client
       which is responsible for creating and initiating the queries for information
       about an individual patient. The complete list of FHIR profiles, RESTful operations,
@@ -1681,7 +1681,7 @@ definition:
       have the option of choosing from this list to access necessary data based on
       their local use cases and other contextual requirements.
     exampleBoolean: false
-    name: US Core Client CapabilityStatement
+    name: US Core Client CapabilityStatement Liquid Rendered
   - reference:
       reference: ValueSet/us-core-clinical-note-type
     description: The US Core Clinical Note Type Value Set is a 'starter set' of types
@@ -2494,7 +2494,7 @@ definition:
     exampleBoolean: false
     name: US Core Screening Assessment Observation Maximum Category
   - reference:
-      reference: CapabilityStatement/us-core-server
+      reference: CapabilityStatement/us-core-server-liquid
     description: This Section describes the expected capabilities of the US Core Server
       actor which is responsible for providing responses to the queries submitted
       by the US Core Requestors. The complete list of FHIR profiles, RESTful operations,
@@ -2504,7 +2504,7 @@ definition:
       Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for
       Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).
     exampleBoolean: false
-    name: US Core Server CapabilityStatement
+    name: US Core Server CapabilityStatement Liquid Rendered
   - reference:
       reference: ValueSet/us-core-servicerequest-category
     description: A set of SNOMED CT and LOINC concepts to classify a requested service
@@ -4212,8 +4212,8 @@ definition:
     value: input/pagecontent
   - code: path-pages
     value: input/intro-notes
-  - code: path-pages
-    value: fsh-generated/includes
+  - code: path-liquid
+    value: input/liquid
   - code: path-expansion-params
     value: ../../input/_resources/exp-params.json
   - code: active-tables
@@ -4326,20 +4326,6 @@ definition:
     value: comparison-argo/sd-argo-ethnicity-us-core-ethnicity.html
   - code: html-exempt
     value: comparison-argo/vs-narrative-status-us-core-narrative-status.html
-  - code: ipa-comparison
-    value: '{current}'
-  - code: ips-comparison
-    value: '{current}'
-  - code: logging
-    value: tx
-  - code: logging
-    value: html
-  - code: logging
-    value: generate
-  - code: logging
-    value: init
-  - code: logging
-    value: progress
   - code: auto-oid-root
     value: 2.16.840.1.113883.4.642.40.2
   - code: fmm-definition

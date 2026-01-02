@@ -1,3 +1,12 @@
-{% include StructureDefinition-us-core-vital-signs-notes.md  code3="8310-5" %}
+<!--input/intro-notes/StructureDefinition-us-core-condition-encounter-diagnosis-notes.md -->
+<!-- establish the page context and get type,title,optionally fixed-categories and code lists (remember to escape "|" with "\|" ) -->
+{% assign id = include.id %}
+{% assign sd = site.data.structuredefinitions[id] %}
+{% assign type = sd.type %}
+{% assign title = sd.title %}
+
+{% include quickstart-intro.md %}
+
+{% include quickstart-search.md type=type title=title  category="http://terminology.hl7.org/CodeSystem/observation-category\|vital-signs" code2="http://loinc.org\|8867-4" code3="http://loinc.org\|9279-1" code1="http://loinc.org\|8310-5" single_example=false %}
 
 {% include link-list.md %}
