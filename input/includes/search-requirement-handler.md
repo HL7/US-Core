@@ -6,7 +6,7 @@
 {% assign search_types = search_row.type | split: "," -%}
 
 {%- comment %} search requirement details {% endcomment -%}
-1. **{{conf_verb}}** {% if search_row.description %}{{search_row.description}} using {% else %}support searching using {% endif %}the combination of the {% comment %}preserve space{% endcomment -%}
+1. **{{conf_verb}}** {% if search_row.description %}{{search_row.description}} using {% else %}support searching using {% endif %}{% if search_codes.size > 1 %}the combination of {% endif %}the {% comment %}preserve space{% endcomment -%}
 {%- for search_code in search_codes -%}
 {%- assign search_code_row = site.data.search_requirements | where:"code", search_code |  where: "base", resource_type | first -%}
 {%- assign search_code_link = search_code_row.rel_url -%}

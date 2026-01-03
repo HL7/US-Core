@@ -18,8 +18,6 @@
 
    {% include examplebutton_default.html example="documentreference-clinical-note-post" b_title = "Click Here To See Example" %}
 
-
-
 #### Mandatory Operation:
 
 1. **SHALL** support fetching documents using the $docref operation.

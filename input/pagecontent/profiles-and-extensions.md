@@ -65,7 +65,7 @@ The script filters out and sorts,adds relative links, and allows for highlightin
         {% assign deprecated_titles = deprecated_titles |  append: sd.title | append: "," -%}
     {%- elsif profile_meta_row.ig_only -%}
         {% assign ig_only_titles = ig_only_titles | append: sd.title | append: "," -%}
-    {%- elsif profile_meta_row.realm_only -%
+    {%- elsif profile_meta_row.realm_only -%}
         {% assign realm_only_titles = realm_only_titles | append: sd.title | append: "," -%}
     {%- else -%}
         {% assign profile_titles = profile_titles | append: sd.title | append: ","  -%}

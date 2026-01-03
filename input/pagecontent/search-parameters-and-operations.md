@@ -1,11 +1,12 @@
-<!-- {% raw %} ### Operations
+### Operations
 
 The following operation has been defined for the US Core Implementation Guide. For more information on [FHIR RESTful operations], see the FHIR specification.
 
-
+<ul>
 {% include list-simple-operationdefinitions.xhtml %}
+</ul>
 
-<br /> {% endraw %} -->
+<br />
 
 ### Search Parameters
 
@@ -43,8 +44,6 @@ The following search parameters have been defined by US Core. They are defined t
 ##### Goal
 - [US Core Goal Description](SearchParameter-us-core-goal-description.html)
 
-##### Patient
-
 #### Search Parameters derived from the Base FHIR Specification
 
 
@@ -69,8 +68,9 @@ It groups by type,sorts alphabetically by title, adds relative links, and allows
 {% assign exclude_list = "us-core-condition-asserted-date,us-core-careteam-role,us-core-encounter-discharge-disposition,us-core-goal-description" -%}
 {% assign my_types = "" -%}
 {% for sd_hash in site.data.structuredefinitions -%}
-  {% assign my_types =  my_types | append: sd_hash[1].type | append: "," -%}
-{% endfor -%}
+  {%- unless sd_hash[1].type == "Extension" -%}
+    {% assign my_types =  my_types | append: sd_hash[1].type | append: "," -%}
+  {%- endunless -%}{% endfor -%}
 {% assign my_array = my_types | split: "," | sort | uniq -%}
 {% for i in my_array %}
 

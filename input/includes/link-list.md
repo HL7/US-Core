@@ -265,3 +265,4 @@
 [Cross Group Project patch process]: https://confluence.hl7.org/display/CGP/US+Core+'Patch'+Process
 [Pregnancy Intention]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1166.22/expansion
 [Pregnancy Status Observation]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.12/expansion
+[Parameters for all resources]: {{site.data.fhir.path}}search.html#all

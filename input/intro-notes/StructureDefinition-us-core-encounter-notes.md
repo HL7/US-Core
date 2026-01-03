@@ -9,6 +9,4 @@
 
 {% include quickstart-search.md type=type title=title %}
 
-{% include write-and-docref.md %}
-
 {% include link-list.md %}
