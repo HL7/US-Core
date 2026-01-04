@@ -64,16 +64,16 @@
     {% if instantiates.exists() %}
       <tr>
         <th>Instantiates other capabilities:</th>
-        <td>
+       <td>
           <ul>
-            {% for cs in instantiates %}
-              <li>
-                {% if cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
-                  <strong>{{cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support
-                {% endif %}
-                {% if cs.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').exists() %}<a href="{{ cs.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}">{{ cs.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</a>{% else %}{{ig}}{% endif %}
-              </li>
-            {% endfor %}
+         {% for ig in instantiates %}
+          {% assign display = ig.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+          {% assign rel_url = ig.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+          {% assign conf = ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}
+          {% if rel_url and display %}
+            <li><strong>{{ conf }}</strong> support {% if rel_url and display %}<a href="{{ rel_url }}">{{ display }}</a>{% else %}{{ ig }}{% endif %}</li>
+           {% endif %}
+        {%  endfor %}
           </ul>
         </td>
       </tr>
@@ -83,14 +83,14 @@
         <th>Imports other capabilities:</th>
         <td>
           <ul>
-            {% for cs in imports %}
-              <li>
-                {% if cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
-                  <strong>{{cs.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support
-                {% endif %}
-                {% if cs.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').exists() %}<a href="{{ cs.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}">{{ cs.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</a>{% else %}{{ig}}{% endif %}
-              </li>
-            {% endfor %}
+         {% for ig in imports %}
+          {% assign display = ig.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+          {% assign rel_url = ig.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+          {% assign conf = ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}
+          {% if rel_url and display %}
+            <li><strong>{{ conf }}</strong> support {% if rel_url and display %}<a href="{{ rel_url }}">{{ display }}</a>{% else %}{{ ig }}{% endif %}</li>
+          {% endif %}
+        {%  endfor %}
           </ul>
         </td>
       </tr>
@@ -100,14 +100,14 @@
         <th>Supports other guides:</th>
         <td>
           <ul>
-            {% for ig in implementationGuide %}
-              <li>
-                {% if ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
-                  <strong>{{ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support
-                {% endif %}
-                {% if ig.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').exists() %}<a href="{{ ig.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}">{{ ig.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</a>{% else %}{{ig}}{% endif %}
-              </li>
-            {% endfor %}
+         {% for ig in implementationGuide %}
+          {% assign display = ig.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+          {% assign rel_url = ig.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+          {% assign conf = ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}
+          {% if rel_url and display %}
+            <li><strong>{{ conf }}</strong> support {% if rel_url and display %}<a href="{{ rel_url }}">{{ display }}</a>{% else %}{{ ig }}{% endif %}</li>
+         {% endif %}
+         {% endfor %}
           </ul>
         </td>
       </tr>
@@ -133,7 +133,7 @@
     {% endif %}
   </ul>
 
--->
+
 
   <!--  REST Capabilities -->
   {% for Arest in rest %}
@@ -278,20 +278,22 @@
             <!-- Supported Profiles -->
             <td>
               {% if r.supportedProfile %}
-                {% if r.supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').exists() %}
-                  {% for supportedProfile in r.supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference') %}
-                    <span style="color: grey;">•</span> <a href="{{ supportedProfile.value.reference }}">{{ supportedProfile.value.display }}</a><br />
-                  {% endfor %}
-                {% else %}
-                   {% for supportedProfile in r.supportedProfile %}{{r.supportedProfile}}{% endfor %}
-                {% endif %}
+                      {% for supportedProfile in r.supportedProfile %}
+                          {% assign display = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+                          {% assign rel_url = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+                        {% if display and rel_url %}
+                          <span style="color: grey;">•</span><a href="{{ rel_url }}">{{ display }}</a><br />
+                        {% else %}
+                          <span style="color: grey;">•</span>{{ supportedProfile }}<br />
+                        {% endif %}
+                      {% endfor %}
               {% else %}
                  <span style="color: grey;">-</span>
               {% endif %}
             </td>
 
             <!-- Supported Searches will need to do some sort of mapping instead of join to get the expectations printed out -->
-            <td>
+            <td>exist
               {% if r.searchParam %}
                 {{r.searchParam.name.join(', ')}}
                 {% if r.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination').exists() %}
@@ -354,8 +356,15 @@
           {% if resource.supportedProfile %}<p>Supported Profiles:</p>
             <ul>
               {% for supportedProfile in resource.supportedProfile %}
-                <li>{% if supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}<strong>{{supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support {% endif %}
-                {% if supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').exists() %}<a href="{{ supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}">{{ supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</a>{% else %}{{supportedProfile}}{% endif %}
+                 {% assign display = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+                 {% assign rel_url = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+                 {% assign conf = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value) %}
+                <li>{% if conf %}<strong>{{conf}}</strong> support {% endif %}
+                       {% if display and rel_url %}
+                          <a href="{{ rel_url }}">{{ display }}</a>
+                        {% else %}
+                          {{ supportedProfile }}
+                        {% endif %}
                 </li>
               {% endfor %}
             </ul>
@@ -738,24 +747,65 @@
        {% endif %}
 
         {% if resource.operation.exists() %}<p>FHIR Operations:</p>
-          <ul>
-            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
-              <li><strong>SHALL</strong> support <a href="{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}"><code>{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</code></a></li>
-            {% endif %}
-            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
-              <li><strong>SHALL-NOT</strong> support <a href="{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}"><code>{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</code></a></li>
-            {% endif %}
-            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
-              <li><strong>SHOULD</strong> support <a href="{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}"><code>{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</code></a></li>
-            {% endif %}
-            {% if resource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
-              <li><strong>MAY</strong> support <a href="{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}"><code>{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY')).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</code></a></li>
-            {% endif %}
-            {% if resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false)  %}
-              <li><a href="{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false)).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.reference }}"><code>{{ resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false)).extension('http://hl7.org/fhir/StructureDefinition/artifact-reference').value.display }}</code></a></li>
-            {% endif %}
-          </ul>
+        {% assign  ops = resource.operation %}
 
+               <ul>
+          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "SHALL")) %}
+          {% if conf_op %}
+            <li> <strong>SHALL</strong> support
+            {% for op in conf_op %}
+              {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+              {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+              {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
+            {% endfor %}
+           </li>
+          {% endif %}
+
+          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "SHOULD")) %}
+          {% if conf_op %}
+            <li> <strong>SHOULD</strong> support
+            {% for op in conf_op %}
+              {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+              {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+              {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
+            {% endfor %}
+           </li>
+          {% endif %}
+
+          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "MAY")) %}
+          {% if conf_op %}
+            <li> <strong>MAY</strong> support
+            {% for op in conf_op %}
+              {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+              {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+              {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
+            {% endfor %}
+           </li>
+          {% endif %}
+
+          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "SHALL-NOT")) %}
+          {% if conf_op %}
+            <li> <strong>SHALL-NOT</strong> support
+            {% for op in conf_op %}
+              {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+              {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+              {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
+            {% endfor %}
+           </li>
+          {% endif %}
+
+           {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').empty())) %}
+          {% if conf_op %}
+            <li> support
+            {% for op in conf_op %}
+              {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
+              {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+              {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
+            {% endfor %}
+           </li>
+          {% endif %}
+
+          </ul>
           {% for o in resource.operation %}
             {% if o.documentation.exists() %}
               <blockquote>

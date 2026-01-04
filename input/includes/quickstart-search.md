@@ -1,4 +1,6 @@
-<!-- {% raw %} This liquid script generates context specific search parameter narratives for each profiles base on the page context and type:
+ {% comment %}
+  ========================================================================
+  This liquid script generates context specific search parameter narratives for each profiles base on the page context and type:
 
 invoke with:
 {% include quickstart-search.md type=type fixed_categories='{system|}[code]' code_codes='{system|}[code]'
@@ -43,25 +45,21 @@ search_requirements.csv columns:
 
 This script filters out the searchparameters for the Profile's resource type using the page context and uses the  'search-requirement-handler.md' to generate the narrative text.
 
+
+establishes the page context and gets type
+page.path = {{page.path}}
+type = {{ include.type }}
+title = {{ include.title }}
+then run through the csv file for all the data
+
+
 TODO: add highlighting for new and updated content
-
-  {% endraw %} -->
-
-
+=============================================================================
+{% endcomment %}
 
 ---
 
-**LIQUID SCRIPT**
 
-establish the page context and get type
-
-page.path = {{page.path}}
-
-type = {{ include.type }}
-
-title = {{ include.title }}
-
-then run through the csv file for all the data
 
 {% assign resource_type = include.type -%}
 {% assign profile_name = include.title -%}

@@ -28,15 +28,15 @@ Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful
 
 The following summary tables  may be useful to testers and analysts to review the *Must Support* and *Mandatory* elements across profiles.
 
-- All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. 
+- All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file.
   - [CSV](all-profiles.csv)
   - [Excel](all-profiles.xlsx)
-- The [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles. 
+- The [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
 - the [Must Support - Resource References](#must-support---resource-references) section below lists all the *Must Support* references to other US Core Profiles and FHIR resources for each US Core Profile.
 
 
 
-### Additional USCDI Requirements 
+### Additional USCDI Requirements
 
 
 The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI)]. See the [USCDI] page for more information about the US Core and USCDI relationship and a mapping between US Core Profiles and the USCDI Data Classes and Elements. Some US Core Profile elements needed to represent USCDI Data Elements for [ASTP Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements as *Additional USCDI Requirements*.
@@ -45,13 +45,44 @@ Implementers seeking ASTP certification **SHALL** interpret *Additional USCDI Re
 
 The table below lists the *Additional USCDI Requirements* and their corresponding Profiles and FHIR elements.
 
-{% include additional-uscdi-tabler.md %}
+<!-- =========================================================
+liquid script for creating a table listing the additional USCDI element. The source is a csv file
+in the input/data folder source file = input/data/additional-uscdi-requirements.csv.
+This table is updated with a custom  Python-Jupyter script:
+/Users/ehaas/Documents/Python/Jupyter/MyNotebooks/CapStatement/addl-uscdi-tabler.ipynb
+
+HOWEVER, the USCDI Data Elements data needs to be manually mapped to it from the USCDI mapping table.
+
+additional-uscdi-requirements.csv columns:
+
+- 'Is_New': Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
+- 'AddlUSCDI':  USCDI Data Elements corresponding ot the add'l USCDI FHIR element. Note that this needs to be manually mapped using the the USCDI mapping table as a guide.
+- 'Profile': US Core Profile name to which the add'l USCDI elements belongs. The format is markdown link brackets for reference-style links.  For example "[US Core Goal Profile]".
+- 'FHIRElement': FHIR element that is add'l USCDI
+- 'combo' : column for unique matching
+
+================================================================ -->
+
+{% assign rows = site.data.additional-uscdi-requirements %}
+{% for item in rows -%}
+{% if item.Is_New != "!" -%}
+{% if forloop.first -%}
+| Additional USCDI Requirements | Profile | FHIR Element |
+|---|---|---|
+{% else -%}
+{% if item.Is_New == "True" %}|<span class="bg-success" markdown="1">{{item.Addl_USCDI}}</span><!-- new-content -->|<span class="bg-success" markdown="1">[{{item.Profile}}]</span><!-- new-content -->|<span class="bg-success" markdown="1">`{{item.FHIR_Element}}`</span><!-- new-content -->|{% else %}|{{item.Addl_USCDI}}|[{{item.Profile}}]|`{{item.FHIR_Element}}`|{% endif %}
+{% endif -%}
+{% endif -%}
+{% if forloop.last %}{:.grid}{% endif -%}
+{% endfor %}
+
+<!-- ================== End Liquid ================================ -->
 
 #### Communicating Additional USCDI Requirements for Certifying Systems
 
  Throughout the rest of the specification, the term "Certifying System" will be used consistently to refer to such systems seeking ASTP certification, distinguishing them from other implementers (e.g., non-certifying systems) that may treat Additional USCDI Requirements as optional.  To communicate when *Additional USCDI Requirements* elements are in a US Core profile:
 
-1. The profiles page includes an "Additional USCDI Requirements" listing the elements under the "Mandatory and *Must Support* Data Elements" section. 
+1. The profiles page includes an "Additional USCDI Requirements" listing the elements under the "Mandatory and *Must Support* Data Elements" section.
 2. The computable [US Core USCDI Requirement Extension] is added to each element in the profile's [StructureDefinition].
 3. The formal view of the profile content displays "**ADDITIONAL USCDI:**" in the element's short description (see below for examples).
 
@@ -59,7 +90,7 @@ The table below lists the *Additional USCDI Requirements* and their correspondin
 
 ### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
 
-On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table". Several examples below illustrate the presentation of *Must Support* elements and their rules. 
+On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table". Several examples below illustrate the presentation of *Must Support* elements and their rules.
 Except where noted, the same rules apply for the *Additional USCDI Requirements* for Certifying Systems.
 
 
@@ -70,7 +101,7 @@ Elements with a cardinality starting with "1"  under the column header, "Card." 
   {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
 
 #### Key Elements Table View
- 
+
 The "Key Elements Table" view consists of:
 1. All the *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements in the differential view
 2. Any *Mandatory*, *Must Support*, and *Additional USCDI Requirements* elements inherited from a US Core Profile or other profile from which it is derived. (e.g., the [US Core Body Height Profile] is based on the [US Core Vital Signs Profile], and the [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
@@ -244,7 +275,7 @@ There are several instances in this Guide where there is a choice of supporting 
 For example:
 
 
-* [US Core MedicationRequest Profile] can represent that information is from a secondary source using a boolean flag in `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`. 
+* [US Core MedicationRequest Profile] can represent that information is from a secondary source using a boolean flag in `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`.
    *  Although both are marked as *Must Support*, the Server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The Client application **SHALL** support both elements.
 7
@@ -256,7 +287,7 @@ For example:
 
 FHIR profiles use [slicing] to define repeating elements (elements that may occur more than once in an instance) by putting constraints on one or more of the repeating elements ("slices"). See Figure 14 below for how that is represented in the guide.
 
-The element that defines the slicing discriminator ("slicer") may define constraints that apply across all slices for the following element properties: max, type (code, profile, targetProfile, aggregation, and versioning), fixed[x], pattern[x], minValue[x], maxValue[x], maxLength, constraints, required and extensible bindings (including additional bindings), mustHaveValue, and valueAlternatives. However, the slicer's Must Support property *only* defines the element level *Must Support/Additional USCDI* property. In other words, the slicer's *Must Support/Additional USCDI* is not inherited by the slices, and each slice must be explicitly tagged with the *Must Support/Additional USCDI* property to define that slice's conformance strength. If no *Must Support/Additional USCDI* property is defined for the slice, then support for that slice's definition is optional. 
+The element that defines the slicing discriminator ("slicer") may define constraints that apply across all slices for the following element properties: max, type (code, profile, targetProfile, aggregation, and versioning), fixed[x], pattern[x], minValue[x], maxValue[x], maxLength, constraints, required and extensible bindings (including additional bindings), mustHaveValue, and valueAlternatives. However, the slicer's Must Support property *only* defines the element level *Must Support/Additional USCDI* property. In other words, the slicer's *Must Support/Additional USCDI* is not inherited by the slices, and each slice must be explicitly tagged with the *Must Support/Additional USCDI* property to define that slice's conformance strength. If no *Must Support/Additional USCDI* property is defined for the slice, then support for that slice's definition is optional.
 
 For example, the [US Core Organization Profile] `Organization.identifier` element is a Must Support slicer element and defines three slices, "NPI", "CLIA", and "NAIC". Only the "NPI" slice is labeled as a Must Support element. When claiming conformance to this profile:
 

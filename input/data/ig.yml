@@ -1672,7 +1672,7 @@ definition:
     exampleBoolean: false
     name: US Core Category
   - reference:
-      reference: CapabilityStatement/us-core-client-liquid
+      reference: CapabilityStatement/us-core-client
     description: This Section describes the expected capabilities of the US Core Client
       which is responsible for creating and initiating the queries for information
       about an individual patient. The complete list of FHIR profiles, RESTful operations,
@@ -1681,7 +1681,7 @@ definition:
       have the option of choosing from this list to access necessary data based on
       their local use cases and other contextual requirements.
     exampleBoolean: false
-    name: US Core Client CapabilityStatement Liquid Rendered
+    name: US Core Client CapabilityStatement
   - reference:
       reference: ValueSet/us-core-clinical-note-type
     description: The US Core Clinical Note Type Value Set is a 'starter set' of types
@@ -2494,7 +2494,7 @@ definition:
     exampleBoolean: false
     name: US Core Screening Assessment Observation Maximum Category
   - reference:
-      reference: CapabilityStatement/us-core-server-liquid
+      reference: CapabilityStatement/us-core-server
     description: This Section describes the expected capabilities of the US Core Server
       actor which is responsible for providing responses to the queries submitted
       by the US Core Requestors. The complete list of FHIR profiles, RESTful operations,
@@ -2504,7 +2504,7 @@ definition:
       Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for
       Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).
     exampleBoolean: false
-    name: US Core Server CapabilityStatement Liquid Rendered
+    name: US Core Server CapabilityStatement
   - reference:
       reference: ValueSet/us-core-servicerequest-category
     description: A set of SNOMED CT and LOINC concepts to classify a requested service

@@ -37,7 +37,7 @@ The figure below shows how screening and assessments lead to providing services 
 
 ### Screening and Assessments
 
-Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations: 
+Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations:
 
 
 - Clinician makes a simple observation - (for example, the patient states they are homeless)
@@ -57,7 +57,7 @@ Local policies guide what is appropriate for the problem list and what is approp
 
 Every Server that supports the USDCI Data Class "Health Status/Assessments":
 
--  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].  
+-  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].
    -  The US Core Simple Observation Profile's `Observation.derivedFrom` element **SHOULD** reference the Structured Screening and Assessment upon which clinical judgment observations are made (see below). Likewise, the US Core Condition Profile's `Condition.evidence.detail` element **SHOULD** reference the Structured Screening and Assessment which assist in diagnosing problems or health concerns.
 
 #### Structured Screening and Assessments
@@ -120,7 +120,53 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 API consumers can query by category when accessing patient information. Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. US Core defined these USCDI Health Assessments Data Elements category codes:
 
-{% include assessment-category-table-generator.html %}
+<!-- ========================================================
+The liquid syntax below generates the screening and assessment
+categories table. The source is a csv file at
+input/data/assessments-valuesets.csv where edits to the table contents
+are made manually.
+
+assessments-valuesets.csv columns:
+- Data Class Number: number to group by USCDI Data Element
+- USCoreStarterCodes: Whether the codes are a starter set
+- USCDI Data Element: ASTP assigned Data Element for the Health Status Assessments Data Class
+- Category Code: US Core assigned Observation category codes
+- ValueSet Name: US Core or VSAC assigned value set name
+- VSAC Link: url to VSAC value set
+- VSAC OID: VSAC assigned OID for the value set
+- Clinical Judgement: Whether code is a clinical judgement code
+- Panel: Whether code is a panel code
+- Panel: Item: Whether code is a panel item code
+- Comment: notes
+- MCC: If codes came from MCC
+
+The script retrieves, sorts, and selects the table data.
+==============================================================-->
+
+<table class="grid">
+<thead>
+<tr>
+<th>USCDI Data Element</th>
+<th>Category Code</th>
+</tr>
+</thead>
+<tbody>
+{% assign rows = site.data.assessments-valuesets %}
+{% assign USCDI = "" %}
+{% for item in rows %}
+{% unless USCDI == item["USCDI Data Element"] %}
+<tr>
+<td>{{item["USCDI Data Element"]}}</td>
+<td>"{{item["Category Code"]}}"</td>
+</tr>
+{% assign USCDI = item["USCDI Data Element"] %}
+{% endunless %}
+{% endfor %}
+</tbody>
+</table>
+
+<!-- ================== End Liquid ================================ -->
+
 
 For the US Core Simple Observation Profile and US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes listed above.
 
@@ -128,7 +174,7 @@ For the US Core Condition Problems and Health Concerns Profile, Servers **SHALL*
 
 For the US Core ServiceRequest Profile, Servers **SHOULD** support all the above category codes.
 
-The category element is optional in US Core Procedure and US Core Goal, but implementers can categorize them using one of the above category codes or infer the context by inspecting the referenced ServiceRequest if available. Similarly, they can review the Questionnaire resource's metadata to determine the context of the US Core QuestionnaireResponse. 
+The category element is optional in US Core Procedure and US Core Goal, but implementers can categorize them using one of the above category codes or infer the context by inspecting the referenced ServiceRequest if available. Similarly, they can review the Questionnaire resource's metadata to determine the context of the US Core QuestionnaireResponse.
 
 
 
@@ -136,7 +182,7 @@ The category element is optional in US Core Procedure and US Core Goal, but impl
 
 #### Screening and Assessment Codes
 
-The US Core Observation Screening Assessment Profile, SDC Base Questionnaire, and US Core Simple Observation Profiles have [preferred] or [example] bindings to broadly defined LOINC value sets. These value sets contain concepts that span many use cases and are not bound to any USCDI Health Assessments Data Element.  
+The US Core Observation Screening Assessment Profile, SDC Base Questionnaire, and US Core Simple Observation Profiles have [preferred] or [example] bindings to broadly defined LOINC value sets. These value sets contain concepts that span many use cases and are not bound to any USCDI Health Assessments Data Element.
 
 ##### USCDI Health Assessments Data Element Value Sets
 
@@ -147,8 +193,46 @@ The following sections and table below identify the associated value sets for ea
 - The Gravity project created and maintains the [Social Determinants of Health Screening Assessments And Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.206/expansion) value set for the SDOH USCDI Health Assessments Data Element. This value set contains both panel and panel item codes.
 
    In addition to these concepts, implementers should consider using several SDOH value sets maintained and updated in VSAC by [Multiple Chronic Condition (MCC) Care Plan Implementation Guide] and the HL7 Patent Care work group with support from the National Institute of Health. These are panel item codes that may be part of a LOINC panel.
-   
-{% include mcc-valueset-list-generator.html %}
+
+<!-- ========================================================
+The liquid syntax below generates a list of SDOH screening and
+assessment valuesets. The source is a csv file at
+input/data/assessments-valuesets.csv where edits to the table contents
+are made manually.
+
+assessments-valuesets.csv columns:
+- Data Class Number: number to group by USCDI Data Element
+- USCoreStarterCodes: Whether the codes are a starter set
+- USCDI Data Element: ASTP assigned Data Element for the Health Status Assessments Data Class
+- Category Code: US Core assigned Observation category codes
+- ValueSet Name: US Core or VSAC assigned value set name
+- VSAC Link: url to VSAC value set
+- VSAC OID: VSAC assigned OID for the value set
+- Clinical Judgement: Whether code is a clinical judgement code
+- Panel: Whether code is a panel code
+- Panel: Item: Whether code is a panel item code
+- Comment: notes
+- MCC: If codes came from MCC
+
+The script retrieves, sorts, and selects the list data.
+==============================================================-->
+{% assign rows = site.data.assessments-valuesets %}
+<ul>
+{% for item in rows -%}
+{% unless item["USCDI Data Element"] contains "!" -%}
+{% if item["MCC"] == "TRUE" -%}
+{% unless forloop.first -%}
+<li>
+<a href="{{item["VSAC Link"]}}">{{item["ValueSet Name"]}}</a>
+</li>
+{% endunless -%}
+{% endif -%}
+{% endunless -%}
+{% endfor %}
+</ul>
+
+<!-- ===================== end liquid =========================== -->
+
 
 ###### Functional Status
 
@@ -181,7 +265,58 @@ The following sections and table below identify the associated value sets for ea
 - The [Drug Misuse](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.707/expansion) values set contains SNOMED CT clinical judgment codes
 to represent conclusions or diagnoses about drug misuse or abuse. In many cases, the value (answer) at `Observation.value` may be boolean true \| false.
 
-{% include assessment-valueset-table-generator.html %}
+<!-- ========================================================
+The liquid syntax below generates the screening and assessment
+valuesets table. The source is a csv file at
+input/data/assessments-valuesets.csv where edits to the table contents
+are made manually.
+
+assessments-valuesets.csv columns:
+Data Class Number: number to group by USCDI Data Element
+USCoreStarterCodes: Whether the codes are a starter set
+USCDI Data Element: ASTP assigned Data Element for the Health Status Assessments Data Class
+Category Code: US Core assigned Observation category codes
+ValueSet Name: US Core or VSAC assigned value set name
+VSAC Link: url to VSAC value set
+VSAC OID: VSAC assigned OID for the value set
+Clinical Judgement: Whether code is a clinical judgement code
+Panel: Whether code is a panel code
+Panel: Item: Whether code is a panel item code
+Comment: notes
+MCC: If codes came from MCC
+
+The script retrieves, sorts, and selects the table data.
+==============================================================-->
+
+<table class="grid">
+<thead>
+<tr>
+<th>USCDI Data Element</th>
+<th>ValueSet (VSAC link)</th>
+<th>Clinical Judgement Codes</th>
+<th>Panel Codes</th>
+<th>Panel Item Codes</th>
+</tr>
+</thead>
+<tbody>
+{% assign rows = site.data.assessments-valuesets %}
+{% for item in rows %}
+{% if item["USCoreStarterCodes"] == "TRUE" %}
+<tr>
+<td>{{item["USCDI Data Element"]}}</td>
+<td><a href="{{item["VSAC Link"]}}">{{item["ValueSet Name"]}}</a></td>
+{% if item["Clinical Judgement"] == "TRUE" %}<td style="text-align:center; color:green">&#x2714;</td>{% else %}<td></td>{% endif %}
+{% if item["Panel"] == "TRUE" %}<td style="text-align:center; color:green">&#x2714;</td>{% else %}<td></td>{% endif %}
+{% if item["Panel Item"] == "TRUE" %}<td style="text-align:center; color:green">&#x2714;</td>{% else %}<td></td>{% endif %}
+<!-- <td><a href="{ {site.data.fhir.path} }terminologies.html#{ {item["Binding Strength"]} }">{ {item["Binding Strength"]} }</a></td> -->
+</tr>
+{% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+<!-- ================== End Liquid ================================ -->
+
 
 This information is also available as a [csv](tables/assessments-valuesets.csv) or [excel](tables/assessments-valuesets.xlsx) file:
 
@@ -196,7 +331,7 @@ US Core uses broadly defined value sets that contain concepts used across use ca
 * [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
 
  The figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped value set is compatible with the broader US Core Problem code value set.
- 
+
 
 
 {% include img-med.html img="sdoh_condition.svg" caption="SDOH Grouped Value Set Reuse in US Core" %}
@@ -207,7 +342,43 @@ US Core uses broadly defined value sets that contain concepts used across use ca
 
 These examples show what Screening and Assessments data produced and consumed by systems conforming with this implementation guide might look like.
 
-{% include assessment_examples.md %}
+<!-- =========================================================
+liquid script for lists all the screening and assessment examples.
+The source is a csv file at input/data/uscdi-examples.yml.
+This file is manually maintained.
+
+input/data/uscdi-examples.yml contains:
+
+groups:
+  [Group key]:
+    name: [Group Name]
+    description:[Group description]
+    resources: [list of resources by Type/id]
+
+This script groups the examples by assessment category and sorts alphabetically by title,
+adds relative links It uses the input/data/ig.yml (which is generated by sushi
+and added to the input/data directory by the publish.sh script after running sushi
+to create the ig resource.) to filter out extraneous examples
+================================================================ -->
+
+{% assign
+assessments = "SDOH,Functional,Disability,Mental,PE,Booze,Drugs" %}
+{% for group in site.data.uscdi-examples.groups %}
+{%- if assessments contains group[0] -%}
+#### {{ group[1].description }}
+
+{% for example in group[1].resources -%}
+    {% for resource in site.data.ig.definition.resource -%}
+        {% if resource.reference.reference == example -%}
+            - [{{resource.name}}]({{ example | replace: "/", "-"}}.html)
+{% break %}
+        {% endif -%}
+    {% endfor -%}
+{% endfor -%}
+{% endif %}
+{% endfor %}
+
+<!-- ================== End Liquid ================================ -->
 
 
 {% include link-list.md %}

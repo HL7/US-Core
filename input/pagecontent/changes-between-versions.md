@@ -66,7 +66,7 @@ profile-metadata.csv columns:
 - cat[n]_scope: (n =  1..6). Multiple granular scopes may be defined for a profile.
 - cat[n]_scope_conf: (n =  1..6) Resource Level SMART Scope requirements, Values: "SHALL"|"SHOULD"|"MAY"  Multiple granular scopes may be defined for a profile.
 
-The sorts and selects the table data and allows for highlighting new and updated content.
+The script sorts and selects the table data and allows for highlighting new and updated content.
  ====================================================================== -->
 
 <table class="grid">

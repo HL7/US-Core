@@ -235,3 +235,8 @@ ERROR: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide.definition.exte
 
 INFORMATION: Immunization/imm-1: Immunization.vaccineCode.coding[1].code: Code "49281012188" not found in NDC
 ERROR: Immunization/imm-1: Immunization.vaccineCode.coding[1].code: Unknown code '49281012188' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version ''
+
+# 49 === This guide uses a custom liquid script to generat the the CapabilityStatement narrative. To facilate rendering of displays and relative links to human readable content, the Capability statemnent uses the Display Name and Narrative Link extensions on the canonicals types - 'supportedProfiles', 'operation.definition', and 'implementationGuide' elements.  As a result, the relative links in the Narrative Link extensions will generate "No definition could be found" warnings wherever they are used. For example: "No definition could be found for URL value 'StructureDefinition-us-core-allergyintolerance.html'" The warning have been checked and are valid links internal to to guide or to other guides.
+
+No definition could be found for URL value%
+A definition could not be found for Canonical URL%
