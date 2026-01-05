@@ -1,74 +1,64 @@
 {
-    "resourceType": "ServiceRequest",
-    "id": "rehab",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "ServiceRequest for Rehab Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is an example requesting alcohol rehab sessions for a patient using the *US Core ServiceRequest Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-        ]
-    },
-    "status": "active",
-    "intent": "order",
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                    "code": "sdoh",
-                    "display": "SDOH"
-                },
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "410606002",
-                    "display": "Social service procedure",
-                    "version": "http://snomed.info/sct/731000124108"
-                }
-            ],
-            "text": "Social Determinants Of Health/Social Service Procedure"
-        }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://snomed.info/sct",
-                "code": "24165007",
-                "display": "Alcoholism counseling",
-                "version": "http://snomed.info/sct/731000124108"
-            },
-            {
-                "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-                "code": "HZ30ZZZ",
-                "display": "Individual Counseling for Substance Abuse Treatment, Cognitive"
-            }
-        ],
-        "text": "Alcohol rehabilitation"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "encounter": {
-        "reference": "Encounter/example-1",
-        "display": "Office Visit"
-    },
-    "occurrenceDateTime": "2021-11-20",
-    "authoredOn": "2021-11-12T10:59:38-08:00",
-    "requester": {
-        "reference": "Practitioner/practitioner-1"
-    },
-    "reasonReference": [
-        {
-            "reference": "Observation/AHC-HRSN-item-example-68517-2",
-            "display": "Alcohol use disorder (disorder)"
-        }
+  "resourceType": "ServiceRequest",
+  "id": "rehab",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0-TEST"
     ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+          "code": "sdoh",
+          "display": "SDOH"
+        },
+        {
+          "system": "http://snomed.info/sct",
+          "code": "410606002",
+          "display": "Social service procedure",
+          "version": "http://snomed.info/sct/731000124108"
+        }
+      ],
+      "text": "Social Determinants Of Health/Social Service Procedure"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24165007",
+        "display": "Alcoholism counseling",
+        "version": "http://snomed.info/sct/731000124108"
+      },
+      {
+        "system": "http://www.cms.gov/Medicare/Coding/ICD10",
+        "code": "HZ30ZZZ",
+        "display": "Individual Counseling for Substance Abuse Treatment, Cognitive"
+      }
+    ],
+    "text": "Alcohol rehabilitation"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "encounter": {
+    "reference": "Encounter/example-1",
+    "display": "Office Visit"
+  },
+  "occurrenceDateTime": "2021-11-20",
+  "authoredOn": "2021-11-12T10:59:38-08:00",
+  "requester": {
+    "reference": "Practitioner/practitioner-1"
+  },
+  "reasonReference": [
+    {
+      "reference": "Observation/AHC-HRSN-item-example-68517-2",
+      "display": "Alcohol use disorder (disorder)"
+    }
+  ]
 }

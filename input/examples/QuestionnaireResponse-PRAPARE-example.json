@@ -1,339 +1,329 @@
 {
-    "resourceType": "QuestionnaireResponse",
-    "id": "prapare-example",
-    "meta": {
-        "extension": [
+  "resourceType": "QuestionnaireResponse",
+  "id": "prapare-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|9.0.0-TEST"
+    ]
+  },
+  "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/prapare-example",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  },
+  "authored": "2022-03-28T18:30:40-07:00",
+  "item": [
+    {
+      "linkId": "/93025-5",
+      "text": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
+      "item": [
+        {
+          "linkId": "/93043-8",
+          "text": "Personal characteristics",
+          "item": [
             {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "QuestionnaireResponse PRAPARE Example"
+              "linkId": "/93043-8/56051-6",
+              "text": "Hispanic or Latino",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA32-8",
+                    "display": "No"
+                  }
+                }
+              ]
             },
             {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* PRAPARE examples. This example is generated using the LHC-Forms SDC Questionnaire App."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-        ]
-    },
-    "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/prapare-example",
-    "status": "completed",
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy V. Shaw"
-    },
-    "authored": "2022-03-28T18:30:40-07:00",
-    "item": [
-        {
-            "linkId": "/93025-5",
-            "text": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",
-            "item": [
+              "linkId": "/93043-8/32624-9",
+              "text": "Race",
+              "answer": [
                 {
-                    "linkId": "/93043-8",
-                    "text": "Personal characteristics",
-                    "item": [
-                        {
-                            "linkId": "/93043-8/56051-6",
-                            "text": "Hispanic or Latino",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA32-8",
-                                        "display": "No"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93043-8/32624-9",
-                            "text": "Race",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA4457-3",
-                                        "display": "White"
-                                    }
-                                },
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30187-1",
-                                        "display": "Pacific Islander"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93043-8/93035-4",
-                            "text": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA33-6",
-                                        "display": "Yes"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93043-8/93034-7",
-                            "text": "Discharged from the U.S. Armed Forces",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA32-8",
-                                        "display": "No"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93043-8/54899-0",
-                            "text": "Preferred language",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA43-5",
-                                        "display": "English"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA4457-3",
+                    "display": "White"
+                  }
                 },
                 {
-                    "linkId": "/93042-0",
-                    "text": "Family and home",
-                    "item": [
-                        {
-                            "linkId": "/93042-0/63512-8",
-                            "text": "How many people are living or staying at this address [#]",
-                            "answer": [
-                                {
-                                    "valueInteger": 6
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93042-0/71802-3",
-                            "text": "Housing status",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30190-5",
-                                        "display": "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93042-0/93033-9",
-                            "text": "Are you worried about losing your housing [PRAPARE]",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30122-8",
-                                        "display": "I choose not to answer this question"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93042-0/56799-0",
-                            "text": "Address",
-                            "answer": [
-                                {
-                                    "valueString": "Broadway"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "linkId": "/93041-2",
-                    "text": "Money and resources",
-                    "item": [
-                        {
-                            "linkId": "/93041-2/82589-3",
-                            "text": "Highest level of educ",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30191-3",
-                                        "display": "Less than high school degree"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93041-2/67875-5",
-                            "text": "Employment status current",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA17956-6",
-                                        "display": "Unemployed"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93041-2/76437-3",
-                            "text": "Primary insurance",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA17849-3",
-                                        "display": "Medicaid"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93041-2/63586-2",
-                            "text": "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]",
-                            "answer": [
-                                {
-                                    "valueDecimal": 25000
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93041-2/93031-3",
-                            "text": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30126-9",
-                                        "display": "Clothing"
-                                    }
-                                },
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30127-7",
-                                        "display": "Child care"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93041-2/93030-5",
-                            "text": "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30134-3",
-                                        "display": "Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "linkId": "/93040-4",
-                    "text": "Social and emotional health",
-                    "item": [
-                        {
-                            "linkId": "/93040-4/93029-7",
-                            "text": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA30130-1",
-                                        "display": "1 or 2 times a week"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93040-4/93038-8",
-                            "text": "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA13909-9",
-                                        "display": "Somewhat"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "linkId": "/93039-6",
-                    "text": "Optional additional questions",
-                    "item": [
-                        {
-                            "linkId": "/93039-6/93028-9",
-                            "text": "Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA32-8",
-                                        "display": "No"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93039-6/93027-1",
-                            "text": "Are you a refugee",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA32-8",
-                                        "display": "No"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93039-6/93026-3",
-                            "text": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA32-8",
-                                        "display": "No"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "linkId": "/93039-6/76501-6",
-                            "text": "Within the last year, have you been afraid of your partner or ex-partner",
-                            "answer": [
-                                {
-                                    "valueCoding": {
-                                        "system": "http://loinc.org",
-                                        "code": "LA32-8",
-                                        "display": "No"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30187-1",
+                    "display": "Pacific Islander"
+                  }
                 }
-            ]
+              ]
+            },
+            {
+              "linkId": "/93043-8/93035-4",
+              "text": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA33-6",
+                    "display": "Yes"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93043-8/93034-7",
+              "text": "Discharged from the U.S. Armed Forces",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA32-8",
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93043-8/54899-0",
+              "text": "Preferred language",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA43-5",
+                    "display": "English"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "/93042-0",
+          "text": "Family and home",
+          "item": [
+            {
+              "linkId": "/93042-0/63512-8",
+              "text": "How many people are living or staying at this address [#]",
+              "answer": [
+                {
+                  "valueInteger": 6
+                }
+              ]
+            },
+            {
+              "linkId": "/93042-0/71802-3",
+              "text": "Housing status",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30190-5",
+                    "display": "I do not have housing (staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, or in a park)"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93042-0/93033-9",
+              "text": "Are you worried about losing your housing [PRAPARE]",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30122-8",
+                    "display": "I choose not to answer this question"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93042-0/56799-0",
+              "text": "Address",
+              "answer": [
+                {
+                  "valueString": "Broadway"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "/93041-2",
+          "text": "Money and resources",
+          "item": [
+            {
+              "linkId": "/93041-2/82589-3",
+              "text": "Highest level of educ",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30191-3",
+                    "display": "Less than high school degree"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93041-2/67875-5",
+              "text": "Employment status current",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA17956-6",
+                    "display": "Unemployed"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93041-2/76437-3",
+              "text": "Primary insurance",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA17849-3",
+                    "display": "Medicaid"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93041-2/63586-2",
+              "text": "What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]",
+              "answer": [
+                {
+                  "valueDecimal": 25000
+                }
+              ]
+            },
+            {
+              "linkId": "/93041-2/93031-3",
+              "text": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30126-9",
+                    "display": "Clothing"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30127-7",
+                    "display": "Child care"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93041-2/93030-5",
+              "text": "Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30134-3",
+                    "display": "Yes, it has kept me from non-medical meetings, appointments, work, or from getting things that I need"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "/93040-4",
+          "text": "Social and emotional health",
+          "item": [
+            {
+              "linkId": "/93040-4/93029-7",
+              "text": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA30130-1",
+                    "display": "1 or 2 times a week"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93040-4/93038-8",
+              "text": "Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA13909-9",
+                    "display": "Somewhat"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "/93039-6",
+          "text": "Optional additional questions",
+          "item": [
+            {
+              "linkId": "/93039-6/93028-9",
+              "text": "Have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility in past 1 year [PRAPARE]",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA32-8",
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93039-6/93027-1",
+              "text": "Are you a refugee",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA32-8",
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93039-6/93026-3",
+              "text": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA32-8",
+                    "display": "No"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "/93039-6/76501-6",
+              "text": "Within the last year, have you been afraid of your partner or ex-partner",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA32-8",
+                    "display": "No"
+                  }
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

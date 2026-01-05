@@ -1,76 +1,66 @@
 {
-    "resourceType": "QuestionnaireResponse",
-    "id": "AUDIT-C",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) QuestionnaireResponse Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is the [LHC Form](https://loinc.org/lhc-forms/) Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources."
-            }
-        ]
-    },
-    "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/AUDIT-C",
-    "status": "completed",
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
-    },
-    "authored": "2023-08-14T20:40:49.675Z",
-    "author": {
-        "reference": "Practitioner/practitioner-1",
-        "type": "Practitioner"
-    },
-    "item": [
-        {
-            "linkId": "/68517-2",
-            "text": "How many times in the past year have you have X or more drinks in a day",
-            "answer": [
-                {
-                    "valueDecimal": 0
-                }
-            ]
-        },
-        {
-            "linkId": "/68519-8",
-            "text": "How many standard drinks containing alcohol do you have on a typical day",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA15694-5",
-                        "display": "1 or 2"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/68520-6",
-            "text": "How often do you have 6 or more drinks on 1 occasion",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA6270-8",
-                        "display": "Never"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/75626-2",
-            "text": "Total score [AUDIT-C]",
-            "answer": [
-                {
-                    "valueDecimal": 0
-                }
-            ]
-        }
+  "resourceType": "QuestionnaireResponse",
+  "id": "AUDIT-C",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|9.0.0-TEST"
     ]
+  },
+  "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/AUDIT-C",
+  "status": "completed",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  },
+  "authored": "2023-08-14T20:40:49.675Z",
+  "author": {
+    "reference": "Practitioner/practitioner-1",
+    "type": "Practitioner"
+  },
+  "item": [
+    {
+      "linkId": "/68517-2",
+      "text": "How many times in the past year have you have X or more drinks in a day",
+      "answer": [
+        {
+          "valueDecimal": 0
+        }
+      ]
+    },
+    {
+      "linkId": "/68519-8",
+      "text": "How many standard drinks containing alcohol do you have on a typical day",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA15694-5",
+            "display": "1 or 2"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/68520-6",
+      "text": "How often do you have 6 or more drinks on 1 occasion",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6270-8",
+            "display": "Never"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/75626-2",
+      "text": "Total score [AUDIT-C]",
+      "answer": [
+        {
+          "valueDecimal": 0
+        }
+      ]
+    }
+  ]
 }

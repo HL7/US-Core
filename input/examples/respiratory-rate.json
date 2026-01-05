@@ -1,62 +1,52 @@
 {
-    "resourceType": "Observation",
-    "id": "respiratory-rate",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Respiratory Rate Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a respiratory rate example for the *Vitalsigns Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
-        ]
-    },
-    "status": "final",
-    "category": [
+  "resourceType": "Observation",
+  "id": "respiratory-rate",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate|9.0.0-TEST"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "vital-signs",
-                    "display": "Vital Signs"
-                }
-            ],
-            "text": "Vital Signs"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
         }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "9279-1",
-                "display": "Respiratory rate"
-            }
-        ],
-        "text": "respiratory_rate"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "encounter": {
-        "display": "GP Visit"
-    },
-    "effectiveDateTime": "1999-07-02",
-    "performer": [
-        {
-            "reference": "Practitioner/practitioner-1",
-            "display": "Dr Ronald Bone"
-        }
-    ],
-    "valueQuantity": {
-        "value": 26.0,
-        "unit": "breaths per minute",
-        "system": "http://unitsofmeasure.org",
-        "code": "/min"
+      ],
+      "text": "Vital Signs"
     }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "9279-1",
+        "display": "Respiratory rate"
+      }
+    ],
+    "text": "respiratory_rate"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "encounter": {
+    "display": "GP Visit"
+  },
+  "effectiveDateTime": "1999-07-02",
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-1",
+      "display": "Dr Ronald Bone"
+    }
+  ],
+  "valueQuantity": {
+    "value": 26.0,
+    "unit": "breaths per minute",
+    "system": "http://unitsofmeasure.org",
+    "code": "/min"
+  }
 }

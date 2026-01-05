@@ -1,64 +1,54 @@
 {
-    "resourceType": "Observation",
-    "id": "pregnancy-intent",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Pregnancy Intent Observation Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a pregnancy intent example for the *US Core Observation Pregnancy Intent Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent"
-        ]
-    },
-    "status": "final",
-    "category": [
+  "resourceType": "Observation",
+  "id": "pregnancy-intent",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent|9.0.0-TEST"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "social-history",
-                    "display": "Social History"
-                }
-            ],
-            "text": "Social History"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "social-history",
+          "display": "Social History"
         }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "86645-9",
-                "display": "Pregnancy intention in the next year - Reported"
-            }
-        ],
-        "text": "Pregnancy Intent"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "effectiveDateTime": "2022-09-23T22:39:43+00:00",
-    "performer": [
-        {
-            "reference": "Practitioner/practitioner-1",
-            "display": "Dr Ronald Bone"
-        }
-    ],
-    "valueCodeableConcept": {
-        "coding": [
-            {
-                "system": "http://snomed.info/sct",
-                "version": "http://snomed.info/sct/731000124108",
-                "code": "454381000124105",
-                "display": "Not sure of desire to become pregnant (finding)"
-            }
-        ],
-        "text": "Pregnant"
+      ],
+      "text": "Social History"
     }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "86645-9",
+        "display": "Pregnancy intention in the next year - Reported"
+      }
+    ],
+    "text": "Pregnancy Intent"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2022-09-23T22:39:43+00:00",
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-1",
+      "display": "Dr Ronald Bone"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/731000124108",
+        "code": "454381000124105",
+        "display": "Not sure of desire to become pregnant (finding)"
+      }
+    ],
+    "text": "Pregnant"
+  }
 }

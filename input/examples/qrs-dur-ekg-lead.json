@@ -1,62 +1,52 @@
 {
-    "resourceType": "Observation",
-    "id": "qrs-dur-ekg-lead",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "QRS dur {EKG lead} Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a QRS dur {EKG lead} Example for the *Clinical Test Result Observation Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-        ]
-    },
-    "status": "final",
-    "category": [
+  "resourceType": "Observation",
+  "id": "qrs-dur-ekg-lead",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0-TEST"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "procedure",
-                    "display": "Procedure"
-                }
-            ],
-            "text": "Procedure"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "procedure",
+          "display": "Procedure"
         }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "44973-6",
-                "display": "QRS dur {EKG lead}"
-            }
-        ],
-        "text": "QRS dur {EKG lead}"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "encounter": {
-        "display": "Cardiology Consult"
-    },
-    "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
-    "performer": [
-        {
-            "reference": "Practitioner/practitioner-1",
-            "display": "Dr Ronald Bone"
-        }
-    ],
-    "valueQuantity": {
-        "value": 60.0,
-        "unit": "ms",
-        "system": "http://unitsofmeasure.org",
-        "code": "ms"
+      ],
+      "text": "Procedure"
     }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "44973-6",
+        "display": "QRS dur {EKG lead}"
+      }
+    ],
+    "text": "QRS dur {EKG lead}"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "encounter": {
+    "display": "Cardiology Consult"
+  },
+  "effectiveDateTime": "2021-11-10T16:48:57.246958-08:00",
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-1",
+      "display": "Dr Ronald Bone"
+    }
+  ],
+  "valueQuantity": {
+    "value": 60.0,
+    "unit": "ms",
+    "system": "http://unitsofmeasure.org",
+    "code": "ms"
+  }
 }

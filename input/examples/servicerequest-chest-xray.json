@@ -1,70 +1,60 @@
 {
-    "resourceType": "ServiceRequest",
-    "id": "chest-xray",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "ServiceRequest Chest XRay Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is an example requesting a Imaging Order (Portable XR Chest Views) for a patient using the *US Core ServiceRequest Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-        ]
-    },
-    "status": "active",
-    "intent": "order",
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/731000124108",
-                    "code": "363679005",
-                    "display": "Imaging (procedure)"
-                }
-            ],
-            "text": "Imaging Order"
-        }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "30746-2",
-                "display": "Portable XR Chest Views"
-            }
-        ],
-        "text": "Portable XR Chest Views"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "encounter": {
-        "reference": "Encounter/1036",
-        "display": "inpatient encounter"
-    },
-    "occurrenceDateTime": "2024-10-13",
-    "authoredOn": "2024-10-13T10:59:38-08:00",
-    "requester": {
-        "reference": "Practitioner/practitioner-1"
-    },
-    "reasonCode": [
-        {
-            "coding": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/731000124108",
-                    "code": "386663009",
-                    "display": "Bicycle accident (event)"
-                }
-            ],
-            "text": "Bicycle accident"
-        }
+  "resourceType": "ServiceRequest",
+  "id": "chest-xray",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0-TEST"
     ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "363679005",
+          "display": "Imaging (procedure)"
+        }
+      ],
+      "text": "Imaging Order"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "30746-2",
+        "display": "Portable XR Chest Views"
+      }
+    ],
+    "text": "Portable XR Chest Views"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "encounter": {
+    "reference": "Encounter/1036",
+    "display": "inpatient encounter"
+  },
+  "occurrenceDateTime": "2024-10-13",
+  "authoredOn": "2024-10-13T10:59:38-08:00",
+  "requester": {
+    "reference": "Practitioner/practitioner-1"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "386663009",
+          "display": "Bicycle accident (event)"
+        }
+      ],
+      "text": "Bicycle accident"
+    }
+  ]
 }

@@ -666,7 +666,7 @@
                   <strong>{% include expectation_handler.html action='verb' extension=s.extension %}</strong>
                 </td>
                 <td>
-                  <a href="{{ 'SearchParameter-' + s.definition.value.split('/').last() + '.html' }}">{{s.name}}</a>
+                  <a href="{{ 'SearchParameter-' + s.definition.value.split('|').first().split('/').last() + '.html' }}">{{s.name}}</a>
                 </td>
                 <td>
                   {{s.type}}
@@ -717,7 +717,7 @@
                     <strong>{% include expectation_handler.html action='verb' extension=s.extension %}</strong>
                   </td>
                   <td>
-                    {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}<a href="{{'SearchParameter-' + single_param.definition.value.split('/').last() + '.html'}}">{{item.value}}</a>{% if item.value != last %}+{% endif %}{% endif %}{% endfor %}{% endfor %}
+                    {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}<a href="{{'SearchParameter-' + single_param.definition.value.split('|').first().split('/').last() + '.html'}}">{{item.value}}</a>{% if item.value != last %}+{% endif %}{% endif %}{% endfor %}{% endfor %}
                   </td>
                   <td>
                     {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{{single_param.type}}{% if item.value != last %}+{% endif %}{% endif %}{% endfor %}{% endfor %}
@@ -737,7 +737,7 @@
             <!--<p>Search Parameter Requirements (When Used Alone or in Combination):</p>-->
             <ul>
               {% for s in resource.searchParam.where(documentation.exists()) %}
-                <li><a href="{{ 'SearchParameter-' + s.definition.value.split('/').last() + '.html' }}">{{s.name}}</a> ({{s.type}}):{{s.documentation}}</li>
+                <li><a href="{{ 'SearchParameter-' + s.definition.value.split('|').first().split('/').last() + '.html' }}">{{s.name}}</a> ({{s.type}}):{{s.documentation}}</li>
               {% endfor %}
             </ul>
           </div>
