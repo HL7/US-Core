@@ -1,375 +1,375 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-simple-observation",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation",
-    "name": "USCoreSimpleObservationProfile",
-    "title": "US Core Simple Observation Profile",
-    "status": "active",
-    "date": "2024-11-16",
-    "description": "The US Core Simple Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This US Core FHIR Profile captures any \"simple\" observations not covered by other US Core Observation profiles. It represents any observation not classified as vital signs, laboratory,  imaging, or other specific observation types. This profile sets minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about patient health status or other general observations. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Observation",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
+  "resourceType": "StructureDefinition",
+  "id": "us-core-simple-observation",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation",
+  "name": "USCoreSimpleObservationProfile",
+  "title": "US Core Simple Observation Profile",
+  "status": "active",
+  "date": "2024-11-16",
+  "description": "The US Core Simple Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This US Core FHIR Profile captures any \"simple\" observations not covered by other US Core Observation profiles. It represents any observation not classified as vital signs, laboratory,  imaging, or other specific observation types. This profile sets minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about patient health status or other general observations. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "short": "assessment observation"
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
             {
-                "id": "Observation",
-                "path": "Observation",
-                "short": "assessment observation"
-            },
-            {
-                "id": "Observation.status",
-                "path": "Observation.status",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.category",
-                "path": "Observation.category",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "$this"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "strength": "preferred",
-                    "description": "FHIR and US Core codes for high level observation categories.",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
-                }
-            },
-            {
-                "id": "Observation.category:us-core",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Observation.category",
-                "sliceName": "us-core",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: US Core classification of type of observation",
-                "min": 0,
-                "mustSupport": false,
-                "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
-                            "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category"
-                        }
-                    ],
-                    "strength": "required",
-                    "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
-                }
-            },
-            {
-                "id": "Observation.code",
-                "path": "Observation.code",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "preferred"
-                }
-            },
-            {
-                "id": "Observation.subject",
-                "path": "Observation.subject",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/Group",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.effective[x]",
-                "path": "Observation.effective[x]",
-                "definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g., human patients - this is usually called the \"physiologically relevant time\".",
-                "comment": "At least a date should be present unless this observation is a historical report.",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Period"
-                    },
-                    {
-                        "code": "Timing"
-                    },
-                    {
-                        "code": "instant"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.performer",
-                "path": "Observation.performer",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.value[x]",
-                "path": "Observation.value[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "Quantity"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "string"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "boolean"
-                    },
-                    {
-                        "code": "integer"
-                    },
-                    {
-                        "code": "Range"
-                    },
-                    {
-                        "code": "Ratio"
-                    },
-                    {
-                        "code": "SampledData"
-                    },
-                    {
-                        "code": "time"
-                    },
-                    {
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Period"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.derivedFrom",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Observation.derivedFrom",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: US Core Profiles or other resource the observation is made from",
-                "definition": "US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived.",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/StructureDefinition/Observation",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse",
-                            "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
-                            "http://hl7.org/fhir/StructureDefinition/Media",
-                            "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": false
+              "type": "value",
+              "path": "$this"
             }
-        ]
-    },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 4
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "FHIR and US Core codes for high level observation categories.",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
         }
+      },
+      {
+        "id": "Observation.category:us-core",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Observation.category",
+        "sliceName": "us-core",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: US Core classification of type of observation",
+        "min": 0,
+        "mustSupport": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category"
+            }
+          ],
+          "strength": "required",
+          "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category"
+        }
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred"
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g., human patients - this is usually called the \"physiologically relevant time\".",
+        "comment": "At least a date should be present unless this observation is a historical report.",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Timing"
+          },
+          {
+            "code": "instant"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "Quantity"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "CodeableConcept"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Observation.derivedFrom",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: US Core Profiles or other resource the observation is made from",
+        "definition": "US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse",
+              "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+              "http://hl7.org/fhir/StructureDefinition/Media",
+              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": false
+      }
     ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 4
+    }
+  ]
 }

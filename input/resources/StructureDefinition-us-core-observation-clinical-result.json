@@ -1,334 +1,334 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-observation-clinical-result",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result",
-    "name": "USCoreObservationClinicalResultProfile",
-    "title": "US Core Observation Clinical Result Profile",
-    "status": "active",
-    "date": "2023-10-17",
-    "description": "The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.\n\nThe US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Observation",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
+  "resourceType": "StructureDefinition",
+  "id": "us-core-observation-clinical-result",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result",
+  "name": "USCoreObservationClinicalResultProfile",
+  "title": "US Core Observation Clinical Result Profile",
+  "status": "active",
+  "date": "2023-10-17",
+  "description": "The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.\n\nThe US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "constraint": [
+          {
+            "key": "us-core-2",
+            "severity": "error",
+            "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
+            "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())",
+            "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
             {
-                "id": "Observation",
-                "path": "Observation",
-                "constraint": [
-                    {
-                        "key": "us-core-2",
-                        "severity": "error",
-                        "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
-                        "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())",
-                        "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Observation.status",
-                "path": "Observation.status",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.category",
-                "path": "Observation.category",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "$this"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.category:us-core",
-                "path": "Observation.category",
-                "sliceName": "us-core",
-                "short": "Classification of type of observation",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category"
-                }
-            },
-            {
-                "id": "Observation.code",
-                "path": "Observation.code",
-                "short": "Clinical Test or Procedure Name",
-                "definition": "The name of the clinical test or procedure performed on a patient.  A LOINC **SHALL** be used if the concept is present in LOINC.",
-                "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible"
-                }
-            },
-            {
-                "id": "Observation.subject",
-                "path": "Observation.subject",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/Group",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.encounter",
-                "path": "Observation.encounter",
-                "short": "Encounter associated with Observation",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.effective[x]",
-                "path": "Observation.effective[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Period"
-                    },
-                    {
-                        "code": "Timing"
-                    },
-                    {
-                        "code": "instant"
-                    }
-                ],
-                "condition": [
-                    "us-core-1"
-                ],
-                "constraint": [
-                    {
-                        "key": "us-core-1",
-                        "severity": "error",
-                        "human": "Datetime must be at least to day.",
-                        "expression": "$this is dateTime implies $this.toString().length() >= 10",
-                        "xpath": "f:matches(effectiveDateTime,/\\d{4}\\d{2}\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?(Z|[-+]\\d{2}:\\d{2})?)?$/)"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.performer",
-                "path": "Observation.performer",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.value[x]",
-                "path": "Observation.value[x]",
-                "short": "Result Value",
-                "definition": "The clinical test or procedure result value. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "Quantity"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "CodeableConcept"
-                    },
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "string"
-                    },
-                    {
-                        "code": "boolean"
-                    },
-                    {
-                        "code": "integer"
-                    },
-                    {
-                        "code": "Range"
-                    },
-                    {
-                        "code": "Ratio"
-                    },
-                    {
-                        "code": "SampledData"
-                    },
-                    {
-                        "code": "time"
-                    },
-                    {
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Period"
-                    }
-                ],
-                "condition": [
-                    "us-core-2",
-                    "us-core-3"
-                ],
-                "constraint": [
-                    {
-                        "key": "us-core-3",
-                        "severity": "error",
-                        "human": "SHALL use UCUM for coded quantity units.",
-                        "expression": "ofType(Quantity).system.empty() or ofType(Quantity).system = 'http://unitsofmeasure.org'",
-                        "xpath": "not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.dataAbsentReason",
-                "path": "Observation.dataAbsentReason",
-                "condition": [
-                    "us-core-2"
-                ],
-                "mustSupport": true
+              "type": "value",
+              "path": "$this"
             }
-        ]
-    },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 4
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:us-core",
+        "path": "Observation.category",
+        "sliceName": "us-core",
+        "short": "Classification of type of observation",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category"
         }
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Clinical Test or Procedure Name",
+        "definition": "The name of the clinical test or procedure performed on a patient.  A LOINC **SHALL** be used if the concept is present in LOINC.",
+        "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible"
+        }
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "short": "Encounter associated with Observation",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Timing"
+          },
+          {
+            "code": "instant"
+          }
+        ],
+        "condition": [
+          "us-core-1"
+        ],
+        "constraint": [
+          {
+            "key": "us-core-1",
+            "severity": "error",
+            "human": "Datetime must be at least to day.",
+            "expression": "$this is dateTime implies $this.toString().length() >= 10",
+            "xpath": "f:matches(effectiveDateTime,/\\d{4}\\d{2}\\d{2}(T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?(Z|[-+]\\d{2}:\\d{2})?)?$/)"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "short": "Result Value",
+        "definition": "The clinical test or procedure result value. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "Quantity"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "CodeableConcept"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "condition": [
+          "us-core-2",
+          "us-core-3"
+        ],
+        "constraint": [
+          {
+            "key": "us-core-3",
+            "severity": "error",
+            "human": "SHALL use UCUM for coded quantity units.",
+            "expression": "ofType(Quantity).system.empty() or ofType(Quantity).system = 'http://unitsofmeasure.org'",
+            "xpath": "not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "condition": [
+          "us-core-2"
+        ],
+        "mustSupport": true
+      }
     ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 4
+    }
+  ]
 }

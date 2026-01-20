@@ -1,241 +1,241 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-immunization",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization",
-    "name": "USCoreImmunizationProfile",
-    "title": "US Core Immunization Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2023-10-17",
-    "description": "The US Core Immunization Profile inherits from the FHIR [Immunization](https://hl7.org/fhir/R4/immunization.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Immunization resource to record, search, and fetch immunization history associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Immunization",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Immunization",
-                "path": "Immunization",
-                "constraint": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "key": "us-core-5",
-                        "severity": "warning",
-                        "human": "SHOULD have an additional coding to the NDC value set",
-                        "expression": "vaccineCode.coding.where(system='http://hl7.org/fhir/sid/cvx').exists() implies vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').exists()",
-                        "xpath": "(exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']) and exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])) or exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])not()"
-                    }
-                ],
-                "mustSupport": false,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Immunization"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.status",
-                "path": "Immunization.status",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/immunization-status"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Immunization.status"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.statusReason",
-                "path": "Immunization.statusReason",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "example",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/immunization-status-reason"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Immunization.wasNotGiven"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.vaccineCode",
-                "path": "Immunization.vaccineCode",
-                "short": "Vaccine Product Type (bind to CVX)",
-                "condition": [
-                    "us-core-5"
-                ],
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.6"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Immunization.vaccineCode"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.patient",
-                "path": "Immunization.patient",
-                "alias": [
-                    "Patient"
-                ],
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-                        ]
-                    }
-                ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Immunization.patient"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.encounter",
-                "path": "Immunization.encounter",
-                "short": "Encounter the immunization was part of",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Immunization.occurrence[x]",
-                "path": "Immunization.occurrence[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "string"
-                    }
-                ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Immunization.date"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.primarySource",
-                "path": "Immunization.primarySource",
-                "definition": "Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data  documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.",
-                "comment": "This updated definition is adopted from the FHIR R5 Immunization resource.",
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Immunization.reported"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.location",
-                "path": "Immunization.location",
-                "short": "Where the vaccine was administered",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Immunization.lotNumber",
-                "path": "Immunization.lotNumber",
-                "mustSupport": true
-            },
-            {
-                "id": "Immunization.performer",
-                "path": "Immunization.performer",
-                "mustSupport": true
-            },
-            {
-                "id": "Immunization.performer.actor",
-                "path": "Immunization.performer.actor",
-                "mustSupport": true,
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
+  "resourceType": "StructureDefinition",
+  "id": "us-core-immunization",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization",
+  "name": "USCoreImmunizationProfile",
+  "title": "US Core Immunization Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-10-17",
+  "description": "The US Core Immunization Profile inherits from the FHIR [Immunization](https://hl7.org/fhir/R4/immunization.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Immunization resource to record, search, and fetch immunization history associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Immunization",
+        "path": "Immunization",
+        "constraint": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ],
+            "key": "us-core-5",
+            "severity": "warning",
+            "human": "SHOULD have an additional coding to the NDC value set",
+            "expression": "vaccineCode.coding.where(system='http://hl7.org/fhir/sid/cvx').exists() implies vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').exists()",
+            "xpath": "(exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']) and exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])) or exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])not()"
+          }
+        ],
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization"
+          }
         ]
-    },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 5
-        }
+      },
+      {
+        "id": "Immunization.status",
+        "path": "Immunization.status",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/immunization-status"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.status"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.statusReason",
+        "path": "Immunization.statusReason",
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/immunization-status-reason"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.wasNotGiven"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "short": "Vaccine Product Type (bind to CVX)",
+        "condition": [
+          "us-core-5"
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.6"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.vaccineCode"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "alias": [
+          "Patient"
+        ],
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.patient"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.encounter",
+        "path": "Immunization.encounter",
+        "short": "Encounter the immunization was part of",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.occurrence[x]",
+        "path": "Immunization.occurrence[x]",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "dateTime"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.date"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.primarySource",
+        "path": "Immunization.primarySource",
+        "definition": "Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data  documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.",
+        "comment": "This updated definition is adopted from the FHIR R5 Immunization resource.",
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.reported"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.location",
+        "path": "Immunization.location",
+        "short": "Where the vaccine was administered",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.lotNumber",
+        "path": "Immunization.lotNumber",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.performer",
+        "path": "Immunization.performer",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.performer.actor",
+        "path": "Immunization.performer.actor",
+        "mustSupport": true,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 5
+    }
+  ]
 }

@@ -30,7 +30,7 @@ differential:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
           valueBoolean: true
       path: Device.udiCarrier
-      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Unique Device Identifier (UDI) Barcode string"
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Unique Device Identifier (UDI) Barcode string"
 # === Make additional USCDI in Version 9 ====
       comment: Some devices may not have UDI information (for example. historical data or patient reported data).
       max: '1'
@@ -62,7 +62,7 @@ differential:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
           valueBoolean: true
       path: Device.distinctIdentifier
-      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: The distinct identification string"
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The distinct identification string"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
       mapping:
@@ -75,7 +75,7 @@ differential:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
           valueBoolean: true
       path: Device.manufactureDate
-      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Date when the device was made"
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date when the device was made"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
       mapping:
@@ -88,7 +88,7 @@ differential:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
           valueBoolean: true
       path: Device.expirationDate
-      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Date and time of expiry of this device (if applicable)"
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date and time of expiry of this device (if applicable)"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
       mapping:
@@ -101,7 +101,7 @@ differential:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
           valueBoolean: true
       path: Device.lotNumber
-      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Lot number of manufacture"
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Lot number of manufacture"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
       mapping:
@@ -114,7 +114,7 @@ differential:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
           valueBoolean: true
       path: Device.serialNumber
-      short: "\uD835\uDDD4\uD835\uDDD7\uD835\uDDD7\uD835\uDDDC\uD835\uDDE7\uD835\uDDDC\uD835\uDDE2\uD835\uDDE1\uD835\uDDD4\uD835\uDDDF \uD835\uDDE8\uD835\uDDE6\uD835\uDDD6\uD835\uDDD7\uD835\uDDDC: Serial number assigned by the manufacturer"
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Serial number assigned by the manufacturer"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
       mapping:

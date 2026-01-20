@@ -1,30 +1,30 @@
 {
-    "resourceType": "ValueSet",
-    "id": "us-core-screening-assessment-condition-category",
-    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category",
-    "name": "USCoreScreeningAssessmentConditionCategory",
-    "title": "US Core Screening Assessment Condition Category",
-    "status": "active",
-    "experimental": false,
-    "date": "2024-11-16",
-    "description": "This value set consists of the single code \"sdoh\". It is the minimum value set of category codes used in the US Core Condition Problems and Health Concerns Profile that any conformant system **SHALL** support to help identify the type of USCDI Health Status/Assessment data class being reported.",
-    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
-    "compose": {
-        "include": [
-            {
-                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                "concept": [
-                    {
-                        "code": "sdoh"
-                    }
-                ]
-            }
+  "resourceType": "ValueSet",
+  "id": "us-core-screening-assessment-condition-category",
+  "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category",
+  "name": "USCoreScreeningAssessmentConditionCategory",
+  "title": "US Core Screening Assessment Condition Category",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-16",
+  "description": "This value set consists of the single code \"sdoh\". It is the minimum value set of category codes used in the US Core Condition Problems and Health Concerns Profile that any conformant system **SHALL** support to help identify the type of USCDI Health Status/Assessment data class being reported.",
+  "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+        "concept": [
+          {
+            "code": "sdoh"
+          }
         ]
-    },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 3
-        }
+      }
     ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 3
+    }
+  ]
 }

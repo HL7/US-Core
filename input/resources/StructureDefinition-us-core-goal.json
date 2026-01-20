@@ -1,232 +1,232 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-goal",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal",
-    "name": "USCoreGoalProfile",
-    "title": "US Core Goal Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2023-10-17",
-    "description": "The US Core Goal Profile inherits from the FHIR [Goal](https://hl7.org/fhir/R4/goal.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Goal resource to record,  search, and fetch Goal information associated with a patient.   It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Goal",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Goal",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Goal",
-                "path": "Goal",
-                "mustSupport": false,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Goal"
-                    }
-                ]
-            },
-            {
-                "id": "Goal.lifecycleStatus",
-                "path": "Goal.lifecycleStatus",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/goal-status"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Goal.status"
-                    }
-                ]
-            },
-            {
-                "id": "Goal.description",
-                "path": "Goal.description",
-                "mustSupport": true,
-                "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
-                            "extension": [
-                                {
-                                    "url": "key",
-                                    "valueId": "gravity-sdoh-goals"
-                                },
-                                {
-                                    "url": "purpose",
-                                    "valueCode": "preferred"
-                                },
-                                {
-                                    "url": "valueSet",
-                                    "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.71"
-                                },
-                                {
-                                    "url": "documentation",
-                                    "valueMarkdown": "Social Determinants of Health Goals when the Goal is an SDOH goal."
-                                }
-                            ]
-                        }
-                    ],
-                    "strength": "preferred",
-                    "description": "Value set to describe the Goal",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Goal.description"
-                    }
-                ]
-            },
-            {
-                "id": "Goal.subject",
-                "path": "Goal.subject",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/Group",
-                            "http://hl7.org/fhir/StructureDefinition/Organization"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Goal.subject"
-                    }
-                ]
-            },
-            {
-                "id": "Goal.start[x]",
-                "path": "Goal.start[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "date"
-                    },
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Goal.target",
-                "path": "Goal.target",
-                "mustSupport": true
-            },
-            {
-                "id": "Goal.target.due[x]",
-                "path": "Goal.target.due[x]",
-                "type": [
-                    {
-                        "extension": [
-                            {
-                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                "valueBoolean": true
-                            }
-                        ],
-                        "code": "date"
-                    },
-                    {
-                        "code": "Duration"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Goal.expressedBy",
-                "path": "Goal.expressedBy",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            }
+  "resourceType": "StructureDefinition",
+  "id": "us-core-goal",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal",
+  "name": "USCoreGoalProfile",
+  "title": "US Core Goal Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-10-17",
+  "description": "The US Core Goal Profile inherits from the FHIR [Goal](https://hl7.org/fhir/R4/goal.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Goal resource to record,  search, and fetch Goal information associated with a patient.   It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Goal",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Goal",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Goal",
+        "path": "Goal",
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Goal"
+          }
         ]
-    },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 5
-        }
+      },
+      {
+        "id": "Goal.lifecycleStatus",
+        "path": "Goal.lifecycleStatus",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/goal-status"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Goal.status"
+          }
+        ]
+      },
+      {
+        "id": "Goal.description",
+        "path": "Goal.description",
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "gravity-sdoh-goals"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "preferred"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.71"
+                },
+                {
+                  "url": "documentation",
+                  "valueMarkdown": "Social Determinants of Health Goals when the Goal is an SDOH goal."
+                }
+              ]
+            }
+          ],
+          "strength": "preferred",
+          "description": "Value set to describe the Goal",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Goal.description"
+          }
+        ]
+      },
+      {
+        "id": "Goal.subject",
+        "path": "Goal.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Goal.subject"
+          }
+        ]
+      },
+      {
+        "id": "Goal.start[x]",
+        "path": "Goal.start[x]",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "date"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Goal.target",
+        "path": "Goal.target",
+        "mustSupport": true
+      },
+      {
+        "id": "Goal.target.due[x]",
+        "path": "Goal.target.due[x]",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "date"
+          },
+          {
+            "code": "Duration"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Goal.expressedBy",
+        "path": "Goal.expressedBy",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
     ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 5
+    }
+  ]
 }

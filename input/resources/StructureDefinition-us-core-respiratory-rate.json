@@ -1,111 +1,111 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-respiratory-rate",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate",
-    "name": "USCoreRespiratoryRateProfile",
-    "title": "US Core Respiratory Rate Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2023-10-17",
-    "description": "The US Core Respiratory Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
-    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Observation",
-    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
+  "resourceType": "StructureDefinition",
+  "id": "us-core-respiratory-rate",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate",
+  "name": "USCoreRespiratoryRateProfile",
+  "title": "US Core Respiratory Rate Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-10-17",
+  "description": "The US Core Respiratory Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "short": "US Core Respiratory Rate Profile"
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Respiratory Rate",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
             {
-                "id": "Observation",
-                "path": "Observation",
-                "short": "US Core Respiratory Rate Profile"
-            },
-            {
-                "id": "Observation.code",
-                "path": "Observation.code",
-                "short": "Respiratory Rate",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "patternCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "http://loinc.org",
-                            "code": "9279-1"
-                        }
-                    ]
-                },
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.valueQuantity",
-                "path": "Observation.valueQuantity",
-                "short": "Vital Signs Value",
-                "min": 0,
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.valueQuantity.value",
-                "path": "Observation.valueQuantity.value",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "decimal"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.valueQuantity.unit",
-                "path": "Observation.valueQuantity.unit",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.valueQuantity.system",
-                "path": "Observation.valueQuantity.system",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "uri"
-                    }
-                ],
-                "fixedUri": "http://unitsofmeasure.org",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.valueQuantity.code",
-                "path": "Observation.valueQuantity.code",
-                "short": "Coded responses from the common UCUM units for vital signs value set.",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "code"
-                    }
-                ],
-                "fixedCode": "/min",
-                "mustSupport": true
+              "system": "http://loinc.org",
+              "code": "9279-1"
             }
-        ]
-    },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 5
-        }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "short": "Vital Signs Value",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.value",
+        "path": "Observation.valueQuantity.value",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.unit",
+        "path": "Observation.valueQuantity.unit",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.system",
+        "path": "Observation.valueQuantity.system",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.code",
+        "path": "Observation.valueQuantity.code",
+        "short": "Coded responses from the common UCUM units for vital signs value set.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "/min",
+        "mustSupport": true
+      }
     ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 5
+    }
+  ]
 }

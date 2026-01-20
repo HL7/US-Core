@@ -1,232 +1,232 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-condition-encounter-diagnosis",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis",
-    "name": "USCoreConditionEncounterDiagnosisProfile",
-    "title": "US Core Condition Encounter Diagnosis Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2023-10-17",
-    "description": "The US Core Condition Encounter Diagnosis Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Problems and Health Concerns Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Encounter Diagnosis* Data Element. It sets minimum expectations for the Condition resource to record, search, and fetch information about an encounter diagnosis. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Condition",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "Condition",
-                "path": "Condition",
-                "mustSupport": false,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Condition"
-                    }
-                ]
-            },
-            {
-                "id": "Condition.category",
-                "path": "Condition.category",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "$this"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "short": "category codes",
-                "min": 1,
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Condition.category"
-                    }
-                ]
-            },
-            {
-                "id": "Condition.category:us-core",
-                "path": "Condition.category",
-                "sliceName": "us-core",
-                "short": "encounter-diagnosis",
-                "min": 1,
-                "max": "1",
-                "patternCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-                            "code": "encounter-diagnosis"
-                        }
-                    ]
-                },
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.code",
-                "path": "Condition.code",
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
-                            "extension": [
-                                {
-                                    "url": "key",
-                                    "valueId": "us-core-condition-code-current"
-                                },
-                                {
-                                    "url": "purpose",
-                                    "valueCode": "current"
-                                },
-                                {
-                                    "url": "valueSet",
-                                    "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current"
-                                },
-                                {
-                                    "url": "documentation",
-                                    "valueMarkdown": "US Core uses the current additional binding for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis"
-                                },
-                                {
-                                    "url": "shortDoco",
-                                    "valueString": "Required for new records"
-                                }
-                            ]
-                        }
-                    ],
-                    "strength": "preferred",
-                    "description": "Valueset to describe the actual problem experienced by the patient",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Condition.code"
-                    }
-                ]
-            },
-            {
-                "id": "Condition.subject",
-                "path": "Condition.subject",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/Group"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Condition.patient"
-                    }
-                ]
-            },
-            {
-                "id": "Condition.encounter",
-                "path": "Condition.encounter",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.recordedDate",
-                "path": "Condition.recordedDate",
-                "mustSupport": true
-            },
-            {
-                "id": "Condition.recorder",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Condition.recorder",
-                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Who recorded the condition",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
+  "resourceType": "StructureDefinition",
+  "id": "us-core-condition-encounter-diagnosis",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis",
+  "name": "USCoreConditionEncounterDiagnosisProfile",
+  "title": "US Core Condition Encounter Diagnosis Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-10-17",
+  "description": "The US Core Condition Encounter Diagnosis Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Problems and Health Concerns Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Encounter Diagnosis* Data Element. It sets minimum expectations for the Condition resource to record, search, and fetch information about an encounter diagnosis. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition"
+          }
         ]
-    },
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 4
-        }
+      },
+      {
+        "id": "Condition.category",
+        "path": "Condition.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "category codes",
+        "min": 1,
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.category"
+          }
+        ]
+      },
+      {
+        "id": "Condition.category:us-core",
+        "path": "Condition.category",
+        "sliceName": "us-core",
+        "short": "encounter-diagnosis",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+              "code": "encounter-diagnosis"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code",
+        "path": "Condition.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "us-core-condition-code-current"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "current"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current"
+                },
+                {
+                  "url": "documentation",
+                  "valueMarkdown": "US Core uses the current additional binding for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis"
+                },
+                {
+                  "url": "shortDoco",
+                  "valueString": "Required for new records"
+                }
+              ]
+            }
+          ],
+          "strength": "preferred",
+          "description": "Valueset to describe the actual problem experienced by the patient",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.code"
+          }
+        ]
+      },
+      {
+        "id": "Condition.subject",
+        "path": "Condition.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/Group"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.patient"
+          }
+        ]
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.recordedDate",
+        "path": "Condition.recordedDate",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.recorder",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Condition.recorder",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Who recorded the condition",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 4
+    }
+  ]
 }

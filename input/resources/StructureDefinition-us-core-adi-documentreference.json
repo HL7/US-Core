@@ -1,240 +1,240 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-adi-documentreference",
-    "extension": [
-        {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-            "valueInteger": 2
-        }
-    ],
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference",
-    "version": "3.1.1",
-    "name": "USCoreADIDocumentReferenceProfile",
-    "title": "US Core ADI DocumentReference Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2023-10-17",
-    "description": "The US Core Advance Directive Information (ADI) DocumentReference Profile inherits from the FHIR [DocumentReference](https://hl7.org/fhir/R4/documentreference.html) resource; refer to it for scope and usage definitions. It sets minimum expectations for searching and fetching patient Advance Directive Information (ADI) documents using the DocumentReference resource. Examples of advance healthcare directive documents include physician order for life sustaining treatment (POLST), do not resuscitate order (DNR), and medical power of attorney. In addition to the document contents, it communicates the type of advance directive document, the author, the verifier, and other properties. To represent whether advance directive documents exist for a patient, see the [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html). To represent orders based on an individual's Portable Medical Order (PMO), see the [US Core PMO ServiceRequest Profile](StructureDefinition-us-core-pmo-servicerequest.html). This profile sets minimum expectations for searching and fetching patient ADI documents using the DocumentReference resource. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "DocumentReference",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "DocumentReference",
-                "path": "DocumentReference",
-                "mustSupport": false
-            },
-            {
-                "id": "DocumentReference.extension:fhir5-attester",
-                "path": "DocumentReference.extension",
-                "sliceName": "fhir5-attester",
-                "short": "Participant who has authenticated the accuracy of the document.",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.identifier",
-                "path": "DocumentReference.identifier",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.status",
-                "path": "DocumentReference.status",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
-                }
-            },
-            {
-                "id": "DocumentReference.type",
-                "path": "DocumentReference.type",
-                "min": 1,
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "description": "Advance Directives Content Type",
-                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41"
-                }
-            },
-            {
-                "id": "DocumentReference.category",
-                "path": "DocumentReference.category",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "$this"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 1,
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.category:adi",
-                "path": "DocumentReference.category",
-                "sliceName": "adi",
-                "short": "Categorization of ADI document",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "description": "Advance Healthcare Directive Categories Grouper. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
-                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.69.4"
-                }
-            },
-            {
-                "id": "DocumentReference.subject",
-                "path": "DocumentReference.subject",
-                "min": 1,
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.date",
-                "path": "DocumentReference.date",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.author",
-                "path": "DocumentReference.author",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
-                        ],
-                        "_targetProfile": [
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            },
-                            {
-                                "extension": [
-                                    {
-                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": false
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content",
-                "path": "DocumentReference.content",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment",
-                "path": "DocumentReference.content.attachment",
-                "definition": "The document and format referenced.",
-                "comment": "If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`.",
-                "constraint": [
-                    {
-                        "key": "us-core-6",
-                        "severity": "error",
-                        "human": "DocumentReference.content.attachment.url or DocumentReference.content.attachment.data or both SHALL be present.",
-                        "expression": "url.exists() or data.exists()",
-                        "xpath": "f:url or f:content"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment.contentType",
-                "path": "DocumentReference.content.attachment.contentType",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment.data",
-                "path": "DocumentReference.content.attachment.data",
-                "min": 0,
-                "condition": [
-                    "us-core-6"
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment.url",
-                "path": "DocumentReference.content.attachment.url",
-                "min": 0,
-                "condition": [
-                    "us-core-6"
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.format",
-                "path": "DocumentReference.content.format",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "valueSet": "http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes|2.1.0"
-                }
-            }
-        ]
+  "resourceType": "StructureDefinition",
+  "id": "us-core-adi-documentreference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
     }
+  ],
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference",
+  "version": "3.1.1",
+  "name": "USCoreADIDocumentReferenceProfile",
+  "title": "US Core ADI DocumentReference Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2023-10-17",
+  "description": "The US Core Advance Directive Information (ADI) DocumentReference Profile inherits from the FHIR [DocumentReference](https://hl7.org/fhir/R4/documentreference.html) resource; refer to it for scope and usage definitions. It sets minimum expectations for searching and fetching patient Advance Directive Information (ADI) documents using the DocumentReference resource. Examples of advance healthcare directive documents include physician order for life sustaining treatment (POLST), do not resuscitate order (DNR), and medical power of attorney. In addition to the document contents, it communicates the type of advance directive document, the author, the verifier, and other properties. To represent whether advance directive documents exist for a patient, see the [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html). To represent orders based on an individual's Portable Medical Order (PMO), see the [US Core PMO ServiceRequest Profile](StructureDefinition-us-core-pmo-servicerequest.html). This profile sets minimum expectations for searching and fetching patient ADI documents using the DocumentReference resource. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "mustSupport": false
+      },
+      {
+        "id": "DocumentReference.extension:fhir5-attester",
+        "path": "DocumentReference.extension",
+        "sliceName": "fhir5-attester",
+        "short": "Participant who has authenticated the accuracy of the document.",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.attester"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.status",
+        "path": "DocumentReference.status",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
+        }
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Advance Directives Content Type",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.41"
+        }
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category:adi",
+        "path": "DocumentReference.category",
+        "sliceName": "adi",
+        "short": "Categorization of ADI document",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Advance Healthcare Directive Categories Grouper. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.69.4"
+        }
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.date",
+        "path": "DocumentReference.date",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content",
+        "path": "DocumentReference.content",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment",
+        "path": "DocumentReference.content.attachment",
+        "definition": "The document and format referenced.",
+        "comment": "If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`.",
+        "constraint": [
+          {
+            "key": "us-core-6",
+            "severity": "error",
+            "human": "DocumentReference.content.attachment.url or DocumentReference.content.attachment.data or both SHALL be present.",
+            "expression": "url.exists() or data.exists()",
+            "xpath": "f:url or f:content"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "min": 0,
+        "condition": [
+          "us-core-6"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "min": 0,
+        "condition": [
+          "us-core-6"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.format",
+        "path": "DocumentReference.content.format",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-HL7FormatCodes|2.1.0"
+        }
+      }
+    ]
+  }
 }
