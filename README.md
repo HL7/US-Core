@@ -17,41 +17,42 @@ This documentation provides a comprehensive guide to the technical stack and wor
       1. Used for
       1. Documentation reference
             1. including installation
-   2. Jekyll
-      1. Used for
-      1. Documentation reference
-            1. including installation
-      2. HL7 templates
+   2. HL7 templates
          1. Used for
          2. Where located
+   3. Jekyll
+      1. Used for
+      2. Documentation reference
+            1. including installation
+
       3. Include files
          1. Used for
          2. Where located
       4. Collections
          1. Used for
          2. Where located
-   3. Liquid
+   4. Liquid
       1. Used for
       2. Documentation reference(s)
-   4. Sushi
+   5. Sushi
       1. Used for
       2. Where located
       3. Documentation reference
           1. including installation
-   5. Jira
+   6. Jira
       1. Used for
       2. Where located
       3. Documentation reference
-   6. Python Scripts
+   7. Python Scripts
       1. Used for
       2. Where located
       3. Documentation reference  (Python, VSCode, VSCode notebooks for Python)
           1. including installation
-   7. publish.sh Bash Script
+   8. publish.sh Bash Script
       1. Used for
       2. where located
       3. Documentation reference (Bash, Git Bash for Windows installation)
-   8. Git
+   9. Git
       1. Used for
       2. where located
       3. Documentation reference (Bash, Git Bash for Windows installation)
@@ -83,6 +84,110 @@ This documentation provides a comprehensive guide to the technical stack and wor
       1.
    2. Pulling
       1. Pull Checking
-9. Pre-publication Checklist
+9.  Pre-publication Checklist
    1.  Checklist
    2.  Gotchas
+
+
+- [Welcome to the US Core Implementation Guide Repository](#welcome-to-the-us-core-implementation-guide-repository)
+  - [US Core Publication Documentation](#us-core-publication-documentation)
+    - [IG publisher](#ig-publisher)
+      - [What It Does](#what-it-does)
+      - [Documentation](#documentation)
+        - [IG Publisher CLI (including installation)](#ig-publisher-cli-including-installation)
+        - [IG Publisher Documentation](#ig-publisher-documentation)
+    - [HL7 Templates](#hl7-templates)
+      - [What It Does](#what-it-does-1)
+      - [Documentation (including installation)](#documentation-including-installation)
+    - [Jekyll](#jekyll)
+      - [What It Does](#what-it-does-2)
+      - [Documentation (including installation)](#documentation-including-installation-1)
+
+
+### IG publisher
+
+#### What It Does
+
+The FHIR IG Publisher is a tool that takes implementation guide source content and transforms it into a complete published implementation guide, including human-readable HTML files and a machine-processable NPM package (package.tgz). It validates all resources in the IG, generates renderings for each artifact, and produces an HTML QA file with any errors encountered.
+
+The IG Publisher's key dependencies include:
+
+- **Java runtime** - Required to execute the publisher JAR file
+- **Jekyll** - Website generation tool for producing final HTML output
+- **Ruby** - Ruby requirements for Jekyll
+- **SUSHI** - you need this to configure the Implementation Guide resource adn optionally to author implementation guide artifacts using the FSH Domain-Specific Language (DSL).
+- **HL7 IG Templates** -  Packages referenced by the IG Publisher that control the visual styling, page structure, and navigation of published FHIR Implementation Guides.
+- **Terminology Server** (tx.fhir.org) - Handles terminology operations with local caching
+- **FHIR core specification** - The base FHIR version being targeted
+- **IG source content** - Created manually using text/JSON/YAML editors like VSCode or optionally via SUSHI.
+<!-- - **Dependent IGs** - Other implementation guides referenced via `dependsOn` (e.g., US Core) -->
+
+
+#### Documentation
+
+##### IG Publisher CLI (including installation)
+
+This document describes specific options available for running the FHIR IG Publisher command-line tool and installation instructions.
+
+https://confluence.hl7.org/spaces/FHIR/pages/175618322/IG+Publisher+CLI
+
+##### IG Publisher Documentation
+
+Other details of the publishing process are also available in the IG Publisher Documentation page.
+
+https://confluence.hl7.org/spaces/FHIR/pages/35718627/IG+Publisher+Documentation
+
+### HL7 Templates
+
+#### What It Does
+
+HL7 IG Templates are packages referenced by the IG Publisher that control the visual styling, page structure, and navigation of published FHIR Implementation Guides. They define how FHIR resources are rendered as pages and provide a framework into which authors integrate their narrative content.
+
+#### Documentation (including installation)
+
+The HL7 IG Templates is reference in the `ig.ini` with the key-value pair "template = hl7.fhir.template#[version]"  where "[version]" is the template's version:
+
+```ini
+# Use a specific version
+template = hl7.fhir.template#1.0.0
+
+# Use the current CI build version
+template = hl7.fhir.template#current
+
+# If no version specified, defaults to latest release
+template = hl7.fhir.template
+```
+
+- "#current" refers to the *Continuous Integration Build* (latest in version control) maintained on build.fhir.org.  The "#current" version is useful during development,but **for official HL7 publications use a specific released version** (e.g., "#1.0.0")
+
+These documents provides more details describing how to specify and use templates.
+
+  - https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html
+  - https://build.fhir.org/ig/FHIR/ig-guidance/template.html
+
+
+### Jekyll
+
+#### What It Does
+
+Jekyll serves as the website generation tool that takes the processed FHIR artifacts, templates, and page content produced by the IG Publisher and compiles them into the final static HTML output that forms the publishable Implementation Guide. It also makes IG metadata (version, canonical URL, dependencies, etc.) available through data variables that can be referenced in page templates.
+
+The Jekyll's key dependencies include:
+
+- **Ruby** (version 2.7.0+; 3.1.3+ recommended)
+- **RubyGems** - Ruby's package manager including...
+  - **liquid** - Templating engine for dynamic content (e.g., `{{ site.data.fhir.version }}`)
+  - **kramdown**- - Markdown parser that converts .md files to HTML
+
+#### Documentation (including installation)
+
+Dtails of static website creation using Jekyll and installation instructions.
+
+https://jekyllrb.com/
+
+
+
+
+
+
+

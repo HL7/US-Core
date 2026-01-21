@@ -58,8 +58,8 @@ description: >-
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2026-01-01
-version: '9.0.0-TEST'
+date: 2026-01-21
+version: '9.0.0'
 fhirVersion: 4.0.1
 dependencies:  # maintain array order - is referenced in spec using liquid variables
   hl7.fhir.uv.smart-app-launch:
@@ -337,9 +337,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   fmm-definition: changes-between-versions.html#us-core-maturity-levels
 
 copyrightyear: '2025+'
-# releaselabel: CI Build
-releaselabel: STU 9 Ballot
-# releaselabel: STU 8
+releaselabel: CI Build
+# releaselabel: STU 9 Ballot
+# releaselabel: STU p
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
