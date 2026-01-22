@@ -11,82 +11,79 @@ All issues should be logged using the official [Jira tracker system](http://hl7.
 
 This documentation provides a comprehensive guide to the technical stack and workflows used to publish the HL7 FHIR US Core Implementation Guide. It covers the essential tools—including the IG Publisher, Jekyll, Sushi, and supporting scripts—along with step-by-step processes for building, updating, and troubleshooting the publication.
 
+- [Welcome to the US Core Implementation Guide Repository](#welcome-to-the-us-core-implementation-guide-repository)
+  - [US Core Publication Documentation](#us-core-publication-documentation)
+  - [IG publisher](#ig-publisher)
+    - [What It Does](#what-it-does)
+    - [Documentation](#documentation)
+      - [IG Publisher CLI (including installation)](#ig-publisher-cli-including-installation)
+      - [IG Publisher Documentation](#ig-publisher-documentation)
+  - [HL7 Templates](#hl7-templates)
+    - [What It Does](#what-it-does-1)
+    - [Documentation (including installation)](#documentation-including-installation)
+  - [Jekyll](#jekyll)
+    - [What It Does](#what-it-does-2)
+    - [Documentation (including installation)](#documentation-including-installation-1)
+  - [Jekyll Include files](#jekyll-include-files)
+    - [Documentation](#documentation-1)
+      - [Repository Structure](#repository-structure)
+      - [Syntax](#syntax)
+    - [Key Points](#key-points)
+  - [Jekyll Collections](#jekyll-collections)
+    - [Documentation](#documentation-2)
+      - [Repository Structure](#repository-structure-1)
+      - [Managing Collections](#managing-collections)
+      - [Accessing Collection Data:](#accessing-collection-data)
+    - [Key Points](#key-points-1)
+  - [Jekyll Liquid](#jekyll-liquid)
+    - [What It Does](#what-it-does-3)
+    - [Documentation](#documentation-3)
+      - [Creating Tables, Lists, and Examples](#creating-tables-lists-and-examples)
+      - [Creating Page Contents](#creating-page-contents)
+    - [Key Points](#key-points-2)
+  - ["Intro|Notes" Files](#intronotes-files)
+    - [Documentation](#documentation-4)
+      - [US Core Only Uses Sushi to Produce The FHIR Implementation Guide Resource.](#us-core-only-uses-sushi-to-produce-the-fhir-implementation-guide-resource)
+      - [Repository Structure](#repository-structure-2)
+      - [IG Configuration](#ig-configuration)
+    - [Key Points](#key-points-3)
+  - [FHIR Liquid](#fhir-liquid)
+    - [What It Does](#what-it-does-4)
+    - [Documentation](#documentation-5)
+      - [Repository Structure](#repository-structure-3)
+      - [IG Configuration](#ig-configuration-1)
+      - [FHIR Liquid Profile Documentation](#fhir-liquid-profile-documentation)
+    - [Key Points](#key-points-4)
+  - [Sushi](#sushi)
+    - [What It Does](#what-it-does-5)
+    - [Documentation](#documentation-6)
+      - [US Core Only Uses Sushi to Produce The FHIR Implementation Guide Resource.](#us-core-only-uses-sushi-to-produce-the-fhir-implementation-guide-resource-1)
+      - [Repository Structure](#repository-structure-4)
+      - [FHIR IG Auto-Build Process with SUSHI](#fhir-ig-auto-build-process-with-sushi)
+        - [The Pipeline](#the-pipeline)
+      - [Sushi Documentation](#sushi-documentation)
+    - [Key Points](#key-points-5)
+  - [Sushi Configuration File: Pages](#sushi-configuration-file-pages)
+  - [Sushi Configuration File: Dependencies](#sushi-configuration-file-dependencies)
+  - [Sushi Configuration File: FHIR Artifacts](#sushi-configuration-file-fhir-artifacts)
+  - [Sushi Configuration File: Parameters](#sushi-configuration-file-parameters)
+  - [Sushi Configuration File: Menu](#sushi-configuration-file-menu)
+  - [Jira](#jira)
+    - [What It Does](#what-it-does-6)
+    - [Documentation](#documentation-7)
+  - [US Core Python Scripts](#us-core-python-scripts)
+    - [What They Do](#what-they-do)
+      - [US Core Python Scripts' Key Dependencies](#us-core-python-scripts-key-dependencies)
+    - [Documentation](#documentation-8)
+      - [How to update the files Using The US Core Python Scripts](#how-to-update-the-files-using-the-us-core-python-scripts)
+      - [Python Installation](#python-installation)
+      - [VSCode and Jupyter Installation](#vscode-and-jupyter-installation)
+  - [Publish.sh Bash Script next....](#publishsh-bash-script-next)
+  - [Git](#git)
+  - [Overview of US Core publication Process](#overview-of-us-core-publication-process)
+  - [Misc topics](#misc-topics)
 
-1. Overview of US Core publication stack
-   1. ig-publisher
-      1. Used for
-      1. Documentation reference
-            1. including installation
-   2. HL7 templates
-         1. Used for
-         2. Where located
-   3. Jekyll
-      1. Used for
-      2. Documentation reference
-            1. including installation
 
-      3. Include files
-         1. Used for
-         2. Where located
-      4. Collections
-         1. Used for
-         2. Where located
-   4. Liquid
-      1. Used for
-      2. Documentation reference(s)
-   5. Sushi
-      1. Used for
-      2. Where located
-      3. Documentation reference
-          1. including installation
-   6. Jira
-      1. Used for
-      2. Where located
-      3. Documentation reference
-   7. Python Scripts
-      1. Used for
-      2. Where located
-      3. Documentation reference  (Python, VSCode, VSCode notebooks for Python)
-          1. including installation
-   8. publish.sh Bash Script
-      1. Used for
-      2. where located
-      3. Documentation reference (Bash, Git Bash for Windows installation)
-   9. Git
-      1. Used for
-      2. where located
-      3. Documentation reference (Bash, Git Bash for Windows installation)
-2. Overview of US Core publication Process
-   1. Run build with current publication
-   2. Run build after update to Profile
-3. Publish.sh
-   1. default output
-      1. checks ...
-   2. options explained
-      1. default output
-      2. checks ...
-   3. common runs
-      1. run build after update to markdown pages ( no change to artifacts )
-      2. run build after update to artifacts ( e.g., profile or example )
-      3. run build after publisher updated.
-      4. run build after deleting an artifacts or example
-   4. prepublishing steps
-   5. troubleshooting ( when you screw up )
-4. Updating the implementation guide resource using Sushi
-5. Include files
-6. Liquid scripts
-   1. How to use with collection as data source to create page content including lists and tables
-   2. How to generate narrative
-7. Python Scripts
-   1. How to update Collections
-8. Git
-   1. Pushing
-      1.
-   2. Pulling
-      1. Pull Checking
-9.  Pre-publication Checklist
-   1.  Checklist
-   2.  Gotchas
 
 ## IG publisher
 
@@ -101,6 +98,7 @@ The IG Publisher's key dependencies include:
 - **Ruby** - Ruby requirements for Jekyll
 - **SUSHI** - you need this to configure the Implementation Guide resource adn optionally to author implementation guide artifacts using the FSH Domain-Specific Language (DSL).
 - **HL7 IG Templates** -  Packages referenced by the IG Publisher that control the visual styling, page structure, and navigation of published FHIR Implementation Guides.
+- **FHIRPath** - Path-based navigation and extraction language that IG authors use to define constraints, invariants, search parameters, and slicing logic.
 - **Terminology Server** (tx.fhir.org) - Handles terminology operations with local caching
 - **FHIR core specification** - The base FHIR version being targeted
 - **IG source content** - Created manually using text/JSON/YAML editors like VSCode or optionally via SUSHI.
@@ -161,17 +159,44 @@ The Jekyll's key dependencies include:
 - **Ruby** (version 2.7.0+; 3.1.3+ recommended)
 - **RubyGems** - Ruby's package manager including...
   - **liquid** - Templating engine for dynamic content (e.g., `{{ site.data.fhir.version }}`)
-  - **kramdown**- - Markdown parser that converts .md files to HTML
+  - **kramdown**- - Markdown parser that converts .md files to HTML for pages and include files.*
 
-### Documentation
+\*kramdown markdown cannot be used for markdown datatype elements in FHIR resources which "*...requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.*"
 
-#### Jekyll Include files
+###  Documentation (including installation)
+
+For a comprehensive documentation of static website creation using Jekyll and installation instructions.
+
+https://jekyllrb.com/
+
+
+
+## Jekyll Include files
 
 A feature that is used extensively in US Core pages is Jekyll Include files.  Jekyll Include files allow reusable content fragments to be defined once and inserted into multiple pages using the {% include filename %} syntax. This promotes consistency across the IG by ensuring common elements (like navigation, boilerplate text, or repeated guidance) remain synchronized, and simplifies maintenance since updates only need to be made in one location rather than across every page that uses the content.
 
+###  Documentation
+
+#### Repository Structure
+
 The `input/includes/` directory is the standard location for Jekyll include files
 
-Syntax:
+~~~
+├── input
+│   ├── includes
+│   │   ├── DAR-exception.md
+│   │   ├── SDOH_search_transaction.md
+│   │   ├── additional-codings.md
+│   │   ├── additional-requirements-intro.md
+│   │   ├── boilerplate-clia-warning.md
+...
+│   │   ├── should-project-us.md
+│   │   ├── uscdi-uscore-version-table.md
+│   │   ├── vitals-guidance.md
+│   │   └── whats-new
+~~~
+
+#### Syntax
 
 Basic include:
 ```liquid
@@ -188,19 +213,118 @@ Accessing parameters within the include file:
 This profile is for {{ include.name }} with status {{ include.status }}.
 ```
 
-👉👉👉 Note that the "Intro/notes" fragments are defined in the `input/intro-notes/` directory and the file naming syntax is "[artifact file name]" + "intro|notes" + ".md". For example, for the introduction to the US Core Patient Profile: `input/intro-notes/StructureDefinition-us-core-patient-intro.md`) These fragments are included into artifact pages (e.g., US Core Patient Profile) by the HL7 templates and not directly included using the above syntax.  👈👈👈
+Wherever includes are used with parameters the include file's inline comments document whether the parameters are required or optional and what there values are...
 
-#### Jekyll Collections
+For examples,the include file: `input/includes/observation_guidance_1.md` content:
 
-Another feature that is used extensively in US Core pages is Jekyll Collections.  Jekyll Collections allow grouping related content (such as profiles metadata) into named sets that can be iterated over and rendered programmatically using liquid scripts (see below). This enables IG authors to generate consistent pages for similar artifacts automatically, such as creating a summary table listing data, without manually maintaining each entry.
+~~~
+<!--
+include parameters:
+category (optional)
+example1 (optional)
+example2 (optional)
+recommendation (optional - extra recommendation inserted after first sentence in obs_cat_guidance.md)
+example usage:
+{% raw %}
+{% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" recommendation="Server **SHOULD** use [Observation Category Codes] if applicable." %}
+{% endraw %} -->
 
-The `input/data/` directory is the standard location to *add and edit* US Core authored collections. The IG Publisher also generates collections and these and the US Core authored collections are *accessed* in the `temp/pages/_data` directory.  Managing collections and using collection in liquid scripts are covered in there respective sections below.
+{% include obs_cat_guidance.md -%}
+{% include additional-codings.md %}
+* Systems **SHOULD** support `Observation.effectivePeriod` to accurately represent measurements over time {{include.example2}}.
+{% include DAR-exception.md %}
+* See the [General Guidance] page for further guidance on SNOMED and UCUM.
+* See the [LOINC scale type to FHIR data type mapping] for guidance on which `Observation.value[x]` data type to use based on the LOINC Type of Scale.
 
-####  Jekyll Documentation (including installation)
+{% include link-list.md %}
+~~~
+###  Key Points
 
-For a comprehensive documentation of static website creation using Jekyll and installation instructions.
+- Jekyll include files allow reusable content fragments to be defined once in `input/includes/` and inserted into multiple pages using `{% include filename %}` syntax, ensuring consistency and simplifying maintenance across the IG.
+- Includes can accept parameters using `{% include fragment.md name="value" %}` syntax, which are accessed within the include file via `{{ include.name }}`.
+- Include files that use parameters document whether each parameter is required or optional and provide example usage in inline comments at the top of the file.
 
-https://jekyllrb.com/
+## Jekyll Collections
+
+Another feature that is used extensively in US Core pages is Jekyll Collections.  Jekyll Collections allow grouping related content (such as profiles metadata) into named sets that can be iterated over and rendered programmatically using liquid scripts (see below). Although US Core's collections are either CSV of YAML files, Jekyll allows CSV,YAML, and JSON files. This enables IG authors to generate consistent pages for similar artifacts automatically, such as creating a summary table listing data, without manually maintaining each entry.
+
+ For documentation on using Collections in Jekyll see: https://jekyllrb.com/docs/collections/
+
+###  Documentation
+
+#### Repository Structure
+
+The `input/data/` directory is the standard location to *add and edit* US Core authored collections. The IG Publisher also generates collections and these and the US Core authored collections are *accessed* in the `temp/pages/_data` directory.
+
+~~~
+├── input
+│   ├── data
+│   │   ├── README.md
+│   │   ├── additional-uscdi-requirements.csv
+│   │   ├── addl_uscdi_choice_refs.csv
+│   │   ├── addl_uscdi_refs.csv
+│   │   ├── assessments-valuesets.csv
+│   │   ├── codesystem-ref-all-list.csv
+│   │   ├── ig.yml
+│   │   ├── ms_choice_refs.csv
+│   │   ├── ms_refs.csv
+│   │   ├── new_stuff.yml
+│   │   ├── profile_metadata.csv
+│   │   ├── provenance-elements.csv
+│   │   ├── search_requirements.csv
+│   │   ├── uscdi-examples.yml
+│   │   ├── uscdi-table.csv
+│   │   ├── uscore-sps.csv
+│   │   ├── valueset-ref-all-list.csv
+│   │   └── vsacname-fhiruri-map.csv
+~~~
+
+####  Managing Collections
+
+The US Core PageContent file or include documents the Collection's contents and whether it is generated by the IG Publisher, manually updated or a uses python scripts to update it (discussed in detail below). The US Core PageContent file or include file and the Collections they use are listed below :
+
+
+PageContent/includes file|US Core Collection|IG Publisher-Generated Collection
+---|---|---
+input/includes/ms-target-table-generator.md|input/data/ms_refs.csv
+input/includes/ms-target-table-generator.md|input/data/ms_choice_refs.csv
+input/includes/ms-target-table-generator.md|input/data/addl_uscdi_refs.csv
+input/includes/ms-target-table-generator.md|input/data/addl_uscdi_choice_refs.csv
+input/pagecontent/must-support.md|input/data/additional-uscdi-requirements.csv
+input/pagecontent/vsacname-fhiruri-map.md|input/data/vsacname-fhiruri-map.csv
+input/includes/provenance-author-bullet-generator.md|input/data/provenance-elements.csv
+input/includes/quickstart-intro.md|input/data/profile_metadata.csv
+input/includes/quickstart-search.md|input/data/search_requirements.csv
+input/includes/res-list-generator.md|input/data/new_stuff|temp/pages/_data/resources.json
+input/includes/sd_link.html||temp/pages/_data/structuredefinitions.json
+input/includes/sd-list-generator.md|input/data/profile-metadata.csv|temp/pages/_data/structuredefinitions.json
+input/pagecontent/basic-provenance.md|nput/data/provenance-elements.csv
+input/pagecontent/changes-between-versions.md|input/data/profile-metadata.csv
+input/pagecontent/examples.md|*input/data/ig.yml
+input/pagecontent/profiles-and-extensions.md|input/data/profile-metadata.csv|temp/pages/_data/structuredefinitions.json
+input/pagecontent/relationship-with-other-igs.md|input/data/profile_metadata.csv
+input/pagecontent/scopes.md|input/data/profile_metadata.csv
+input/pagecontent/screening-and-assessments.md|input/data/assessments-valuesets.csv
+input/pagecontent/screening-and-assessments.md|input/data/uscdi-examples.yml
+input/pagecontent/search-parameters-and-operations.md||temp/pages/_data/structuredefinitions.json,<br />temp/pages/_data/resources.json
+input/pagecontent/terminology.md|temp/pages/valueset-ref-all-list.csv
+input/pagecontent/terminology.md|temp/pages/codesystem-ref-all-list.csv.
+input/pagecontent/uscdi.md|input/data/uscdi-table.csv
+
+\* The publish.sh script adds `input/data/ig.yml` to the input/data directory after running sushi  (for details see the Publish.sh section below).
+
+#### Accessing Collection Data:
+
+Collection data files are stored in `temp/pages/_data`, and are accessed using "site.data.[filename]" as a liquid variable.  For example, to get a list of US Core Profile titles, you would loop through profile_metadata.csv rows using `{% for row in site.data.profile_metadata %}`
+
+### Key Points
+
+- Jekyll collections group related content (like profile metadata) into named sets stored as CSV, YAML, or JSON files in `input/data/`, enabling IG authors to generate consistent pages programmatically without manually maintaining each entry.
+
+- Collections are managed in different ways — some are generated by the IG Publisher, some are manually updated, and some use Python scripts — with the managing approach documented in the associated PageContent or include file.
+
+- Collection data is accessed in Liquid templates via `site.data.[filename]` syntax (e.g., `{% for row in site.data.profile_metadata %}`) from the `temp/pages/_data` directory where both authored and IG Publisher-generated collections reside.
+
 
 ## Jekyll Liquid
 
@@ -208,13 +332,145 @@ https://jekyllrb.com/
 
 Jekyll/Shopify Liquid is a templating language that enables dynamic content generation within static web pages using tags ({% %}) for logic and output ({{ }}) for variables. It allows IG authors to insert dynamic values (like {{ site.data.fhir.version }}), create conditional content, loop through collections, and apply filters to transform data—all at build time rather than runtime. This enables FHIR IGs to maintain consistency across pages, automatically reflect dependency versions, and generate repetitive content programmatically while still producing fast, static HTML output.
 
-### Documentation
-
-Jekyll Liquid scripts is used extensively in US Core pages to create page content including lists and tables with collections.  Managing collections and using collection in liquid scripts are covered in detail in a following section.
-
 Liquid is a Ruby Gem that is installed as a dependency when you install Jekyll.  For documentation on using Liquid with Jekyll see:
 
 https://jekyllrb.com/docs/liquid/
+
+### Documentation
+
+Jekyll Liquid scripts is used extensively in US Core pages to create page content including lists and tables with collections.  As documented above, the US Core PageContent file or include documents the Collection's contents and whether it is generated by the IG Publisher, manually updated or a uses python scripts to update it (discussed in detail below).
+
+#### Creating Tables, Lists, and Examples
+
+ As documented above, US Core create lists and tables and examples in page content by leveraging liquid with collections.  The PageContent or include files document the Collection's contents and source. In General the liquid accesses the collection data stored at `temp/pages/_data` using `site.[collection_name]` syntax and loops through it to create the content from the row data. In most cases, simple markdown or XHTML content is created. However for input/pagecontent/uscdi.md there is extensive styling applied to the XHTML.
+
+General syntax for a Liquid table from a CSV:
+
+assume `my_csv.csv` contains columns with headers "title" and "url"
+
+~~~xhtml
+<table class="grid">
+<thead>
+<tr>
+<th>Title</th>
+<th>url</th>
+</tr>
+</thead>
+<tbody>
+{% assign rows = site.data.my_csv | sort: "title" %}
+{% for item in rows %}
+<tr>
+<td>{{item.title}}</td>
+<td>{{item.url}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+~~~
+
+#### Creating Page Contents
+
+US Core uses Liquid templating to generate a custom "Notes" file for each profile documenting the required and optional FHIR RESTful search APIs for US Core certification. However, explaining this advanced use of Liquid is beyond the scope of this document.
+
+### Key Points
+
+- Jekyll Liquid is a templating language that enables dynamic content generation using tags (`{% %}`) for logic and output (`{{ }}`) for variables, allowing IG authors to insert dynamic values, create conditional content, loop through collections, and apply filters—all at build time to produce static HTML.
+
+- US Core extensively uses Liquid with collections to create tables, lists, and examples by accessing collection data via `site.data.[collection_name]` syntax and looping through rows to generate markdown or XHTML content.
+
+- US Core also uses Liquid templating to generate custom profile notes documenting required and optional FHIR RESTful search APIs for certification, though this advanced usage is beyond the scope of the document.
+
+
+## "Intro|Notes" Files
+
+Another feature that is used extensively in US Core pages are the "Intro and Notes" files. They are similar to the Jekyll Include files, but these fragments are included into artifact pages (e.g., US Core Patient Profile) by the HL7 templates and not directly includes using Jekyll includes syntax described above.
+
+### Documentation
+
+#### US Core Only Uses Sushi to Produce The FHIR Implementation Guide Resource.
+
+These markdown file use a special naming syntax of "[artifact file name]" + "intro|notes" + ".md". For example, for the introduction to the US Core Patient Profile: `input/intro-notes/StructureDefinition-us-core-patient-intro.md`)
+
+#### Repository Structure
+
+They are defined in the `input/intro-notes/` directory
+
+~~~
+├── input
+│   ├── intro-notes
+│   │   ├── DiagnosticReport-cbc-intro.md
+│   │   ├── DiagnosticReport-metabolic-panel-intro.md
+│   │   ├── Observation-cbc-erythrocytes-intro.md
+...
+│   │   ├── ValueSet-detailed-ethnicity-intro.md
+│   │   ├── ValueSet-detailed-race-intro.md
+│   │   ├── ValueSet-simple-language-intro.md
+│   │   ├── ValueSet-us-core-location-type-intro.md
+│   │   └── ValueSet-us-core-pregnancy-intent-intro.md
+~~~
+
+#### IG Configuration
+
+Using SUSHI and `sushi-config.yaml` file to create the Implementation Guide resource, the following [Implementation Guide Parameter](https://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html) defines relative path that contains these fragments for generating the introductions and notes section on FHIR artifacts
+
+~~~
+  path-pages:
+    - input/pagecontent   # defines relative path that contains the pagecontent
+    - input/intro-notes   # defines relative path that contains the intro|notes fragments
+~~~
+
+### Key Points
+
+- "Intro and Notes" files are markdown fragments that get automatically included into artifact pages (like profile pages) by HL7 templates, rather than being manually inserted using Jekyll include syntax.
+
+- These files follow a specific naming convention of `[artifact file name]-intro.md` or `[artifact file name]-notes.md` and are stored in the `input/intro-notes/` directory.
+
+- The `sushi-config.yaml` file's `path-pages` parameter must include `input/intro-notes` to tell the IG Publisher where to find these fragments when generating artifact pages.
+
+## FHIR Liquid
+
+### What It Does
+
+FHIR Liquid is a templating language used to build human-readable narratives for FHIR resources (`text.div`) (it also can transform external data sources like V2 and CDA into FHIR resources).  It uses a very limited subset of the standard Liquid syntax and replaces Liquid expressions and functions with FHIRPath expressions and functions.
+
+### Documentation
+
+US Core uses FHIR Liquid to build custom narratives for:
+
+- All US Core Search Parameters
+- US Core Client CapabilityStatement
+- US Core Server CapabilityStatement
+
+#### Repository Structure
+
+```├── input
+│   ├── liquid
+│   │   ├── CapabilityStatement.liquid
+│   │   ├── SearchParameter.liquid
+│   │   └── expectation_handler.html
+```
+
+#### IG Configuration
+
+Using SUSHI and `sushi-config.yaml` file to create the Implementation Guide resource, the following [Implementation Guide Parameter](https://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html) defines relative path that contains liquid templates for generating narrative:
+
+~~~
+  path-liquid: input/liquid
+~~~
+
+#### FHIR Liquid Profile Documentation
+
+For documentation on using Liquid in FHIR see (Note the documented features not fully implemented!):
+
+https://confluence.hl7.org/spaces/FHIR/pages/66938964/FHIR+Liquid+Profile
+
+
+### Key Points
+
+- Templates execute against a single FHIR resource as the "focus" object.
+- Supports `if/else`, `for` loops.
+- ⚠️ Documentation is spotty and learning curve steep.
+
 
 ## Sushi
 
@@ -284,6 +540,11 @@ https://fshschool.org/docs/sushi/installation/
 - US Core *only* uses SUSHI and `sushi-config.yaml` file to create the Implementation Guide resource.
 - US Core does not use SUSHI to author artifacts
 
+## Sushi Configuration File: Pages
+## Sushi Configuration File: Dependencies
+## Sushi Configuration File: FHIR Artifacts
+## Sushi Configuration File: Parameters
+## Sushi Configuration File: Menu
 
 ## Jira
 
@@ -324,7 +585,7 @@ US Core uses several Python scripts, written as [Jupyter files](https://jupyter-
 
 #### How to update the files Using The US Core Python Scripts
 
-The US Core PageContent file or include documents the Collection's contents and whether it is manually updated or a uses python script to update and the location of the Python Scripts that modifies it. Similarly each Python Scripts documents what is does and how to use it.  The Collections that use Python scripts are listed below:
+The US Core PageContent file or include documents the Collection's contents and whether it is manually updated or a uses python script to update and the location of the Python Scripts that modifies it. Similarly each Python Scripts documents what is does and how to use it.  The Collections that use the scripts are listed below:
 
 PageContent/includes file|US Core Collection|Python Script
 ---|---|---|
@@ -358,22 +619,38 @@ For setting up Jupyter on VSCode see:
 
 https://code.visualstudio.com/docs/datascience/jupyter-notebooks
 
-### Key Points
 
-- US Core uses Python scripts to update Jekyll Collection data because the logic is too complex to handle inline.
-- Running the scripts requires Python 3.7+, VS Code with the Python and Jupyter extensions, and Python packages including `jupyter`, `ipykernel`, and `PyYAML`.
-- Each Python script and its associated PageContent/include file documents what collection it modifies and how to use it.
+## Publish.sh Bash Script next....
+    ### Used for
+    ### where located
+    ### Documentation reference (Bash, Git Bash for Windows installation)
+    #### default output
+        2. checks ...
+    #### options explained
+        3. default output
+        4. checks ...
+    #### common runs
+        5. run build after update to markdown pages ( no change to artifacts )
+        6. run build after update to artifacts ( e.g., profile or example )
+        7. run build after publisher updated.
+        8. run build after deleting an artifacts or example
+    ####  prepublishing steps
+    ####  troubleshooting ( when you screw up )
+    ####  adding ig.yaml to the data file as a collection
+## Git
+    ### Used for
+    ### where located
+    ### Documentation reference (Bash, Git Bash for Windows installation)
+    #### Pushing
+        Push_to_autobuild.sh
+    ####  Pulling
+        PullCheck
+## Overview of US Core publication Process
+    ### current publication
+    ### addition or update to Profile
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Misc topics
+    1. argo comparators - see inline instructions
+    2. change log creation.
+    3. ignoreWarnings.text
+    4. version comparisons
