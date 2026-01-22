@@ -1,4 +1,7 @@
-<!-- This liquid script creates context specific text for each pages quickstart using input data from input/data/scopes.csv -->
+<!-- This liquid script creates context specific text for each pages quickstart.
+The source data is at input/data/profile_metadata.csv where manual edits to the table contents are made
+when new profiles are added, deprecated, etc.
+ -->
 {% assign smart_scope = false %}
 {% for scope in site.data.profile_metadata %}
   {% if scope.rel_url == page.name %}

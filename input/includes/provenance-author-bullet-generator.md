@@ -1,6 +1,9 @@
 
 <!-- ==========================================================================================================
-This liquid script creates context specific text for each pages author and author role implementer guidance using input data from input/data/provenance-elements.csv with the following columns:
+This liquid script creates context specific text for each pages author and author role implementer guidance using input data from
+ input/data/provenance-elements.csv which is manually updated when new profiles are added to the guide.
+
+input/data/provenance-elements.csv columns:
 - Row
 - Is_New: boolean to support highlighting new content
 - Is_Source : boolean flag if is provenance source element

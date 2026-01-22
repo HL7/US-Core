@@ -1,6 +1,11 @@
-<!-- {% raw %}  This liquid script creates a ms target table using input data from input/data/csv files
+<!-- {% raw %}  This liquid script creates a ms target table using input data from the following input/data/csv files:
 
-This file is created with the python jupyter script: https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb 
+ 1. `input/data/ms_refs.csv`
+ 2. `input/data/addl_uscdi_refs.csv`
+ 3. `input/data/ms_choice_refs.csv`
+ 4. `input/data/adl_uscdi_choice_refs.csv`
+
+These files are created with the python jupyter script: https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 with the following columns:
 - profile: The US Core Profile that has Must Support Reference elements
 - target1..target7: The  Must Support target profiles or resources (up to 7 for now may be more in future)
