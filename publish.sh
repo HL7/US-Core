@@ -18,7 +18,7 @@ set -e
 trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
 trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
 
-while getopts abcdefghijklmnopqrstuvwxyzC option;
+while getopts abcdefghijklmnopqrstuvwxyzCV option;
 do
  case "${option}"
  in
@@ -46,6 +46,7 @@ do
  y) YAML_JSON=1;;
  z) DEL_TEMP=1;;
  C) DEL_CACHE=1;;
+ V) VSACURI=1;;
  esac
 
 done
@@ -58,6 +59,7 @@ inpath=input
 examples="$inpath"/examples
 resources="$inpath"/resources
 fsh_resources="fsh-generated/resources"
+data="$inpath"/data
 
 if [[ $IN_DOCS ]]; then
   outpath=docs
@@ -109,6 +111,7 @@ echo "-x remove change highlighting from all markdown files =  $REM_HIGHLIGHT"
 echo "-y delete all json files and tranform all yaml files to json files = $YAML_JSON"
 echo "-z delete the template and temp directories before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
 echo "-C delete the input-cache before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
+echo "-V update the vsacname-fhiruri-map.csv file for US Core = $VSACURI"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -116,7 +119,7 @@ sleep 1
 
 if [[ $# >  0 ]]; then # check CSV Files
 
-  CSV_FILE="input/data/profile_metadata.csv"
+  CSV_FILE="$data"/profile_metadata.csv
   echo "CSV = $CSV_FILE"
   if [ -f "$CSV_FILE" ]; then
     echo ""
@@ -137,7 +140,7 @@ if [[ $# >  0 ]]; then # check CSV Files
     sleep 1
   fi
 
-  CSV_FILE="input/data/provenance-elements.csv"
+  CSV_FILE="$data"/provenance-elements.csv
   echo "CSV = $CSV_FILE"
   if [ -f "$CSV_FILE" ]; then
     echo ""
@@ -159,7 +162,7 @@ if [[ $# >  0 ]]; then # check CSV Files
     sleep 1
   fi
 
-  CSV_FILE="input/data/uscdi-table.csv"
+  CSV_FILE="$data"/uscdi-table.csv
   echo "CSV = $CSV_FILE"
   if [ -f "$CSV_FILE" ]; then
     echo ""
@@ -181,7 +184,7 @@ if [[ $# >  0 ]]; then # check CSV Files
     sleep 1
   fi
 
-  CSV_FILE="input/data/search_requirements.csv"
+  CSV_FILE="$data"/search_requirements.csv
   echo "CSV = $CSV_FILE"
   if [ -f "$CSV_FILE" ]; then
     echo ""
@@ -239,6 +242,30 @@ fi
 #   echo ""
 #   sleep 1
 # fi
+
+if [[ $VSACURI ]]; then
+URL="https://cts.nlm.nih.gov/fhir/metadata"
+VSACURI_MAP="$data"/vsacname-fhiruri-map.csv
+  echo ""
+  echo "===================================================================="
+  echo "Update $VSACURI_MAP file for US Core"
+  echo "VSAC source at $URL"
+  #Fetch the JSON and process it with jq to create markdown table
+  curl -s "$URL" | jq -r '
+  .extension |  # Extract the extensions array
+    ["VSAC Code System Name,FHIR URI"] +    # Create CSV header
+  (map(    # Process each extension into a table row and sort
+    .extension as $ext |
+    [$ext[] | select(.url == "name") | .valueString] as $name |   # Get name from valueString where url is "name"
+    [$ext[] | select(.url == "system") | .valueUri] as $system |    # Get system from valueUri where url is "system"
+    ($name[0] // "N/A") + "," + ($system[0] // "N/A")      # Create CCSV row
+  )| sort
+    )
+    | join("\n")' | tee $outfile      # Join all lines with newlines
+  echo "===================================================================="
+  echo ""
+  sleep 1
+fi
 
 if [[ $DEL_TEMP ]]; then
 echo "================================================================="
