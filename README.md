@@ -72,13 +72,29 @@ This documentation provides a comprehensive guide to the technical stack and wor
     - [What It Does](#what-it-does-6)
     - [Documentation](#documentation-7)
   - [US Core Python Scripts](#us-core-python-scripts)
-    - [What They Do](#what-they-do)
+    - [What is Does](#what-is-does)
       - [US Core Python Scripts' Key Dependencies](#us-core-python-scripts-key-dependencies)
     - [Documentation](#documentation-8)
       - [How to update the files Using The US Core Python Scripts](#how-to-update-the-files-using-the-us-core-python-scripts)
       - [Python Installation](#python-installation)
       - [VSCode and Jupyter Installation](#vscode-and-jupyter-installation)
-  - [Publish.sh Bash Script next....](#publishsh-bash-script-next)
+  - [Publish.sh Bash Script](#publishsh-bash-script)
+    - [What is Does](#what-is-does-1)
+    - [Documentation](#documentation-9)
+      - [Key Tools It Uses](#key-tools-it-uses)
+      - [Bash Installation](#bash-installation)
+        - [Mac](#mac)
+        - [Git Bash for Windows](#git-bash-for-windows)
+      - [High-Level Flow](#high-level-flow)
+      - [Basic Syntax](#basic-syntax)
+      - [Command-Line Options](#command-line-options)
+    - [Common Workflows](#common-workflows)
+      - [Build IG no changes/updates (just IG Publisher, no SUSHI)](#build-ig-no-changesupdates-just-ig-publisher-no-sushi)
+      - [Update IG Publisher, then build](#update-ig-publisher-then-build)
+      - [Build IG after changes/updates (Convert YAML to JSON, then run SUSHI, then run IG Publisher removing meta extension and adding versions to canonicicals)](#build-ig-after-changesupdates-convert-yaml-to-json-then-run-sushi-then-run-ig-publisher-removing-meta-extension-and-adding-versions-to-canonicicals)
+      - [Delete temp/cache (Run build after deleting an artifacts or example)](#delete-tempcache-run-build-after-deleting-an-artifacts-or-example)
+      - [Prepublication Steps](#prepublication-steps)
+      - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
   - [Overview of US Core publication Process](#overview-of-us-core-publication-process)
   - [Misc topics](#misc-topics)
@@ -562,7 +578,7 @@ This is typically done *right before* final publication and takes 1 to 2 days fo
 
 ## US Core Python Scripts
 
-### What They Do
+### What is Does
 
 US Core uses several Python scripts, written as [Jupyter files](https://jupyter-notebook.readthedocs.io/en/latest/), to update collection data for the Jekyll Collections documented in the next section.  The complex logic to do this make it infeasible to perform with inline Jekyll liquid scripting.
 
@@ -594,10 +610,6 @@ input/includes/ms-target-table-generator.md|input/data/ms_choice_refs.csv|https:
 input/includes/ms-target-table-generator.md|input/data/addl_uscdi_refs.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 input/includes/ms-target-table-generator.md|input/data/addl_uscdi_choice_refs.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 input/pagecontent/must-support.md|input/data/additional-uscdi-requirements.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/addl-uscdi-tabler.ipynb
-\*input/pagecontent/vsacname-fhiruri-map.md|input/data/vsacname-fhiruri-map.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/bash_scripts/vsacname_fhiruri_mapper.ipynb
-
-*TODO move script to the publish.sh script as an option
-
 
 #### Python Installation
 
@@ -620,23 +632,206 @@ For setting up Jupyter on VSCode see:
 https://code.visualstudio.com/docs/datascience/jupyter-notebooks
 
 
-## Publish.sh Bash Script next....
-    ### Used for
-    ### where located
-    ### Documentation reference (Bash, Git Bash for Windows installation)
-    #### default output
-        2. checks ...
-    #### options explained
-        3. default output
-        4. checks ...
-    #### common runs
-        5. run build after update to markdown pages ( no change to artifacts )
-        6. run build after update to artifacts ( e.g., profile or example )
-        7. run build after publisher updated.
-        8. run build after deleting an artifacts or example
-    ####  prepublishing steps
-    ####  troubleshooting ( when you screw up )
-    ####  adding ig.yaml to the data file as a collection
+## Publish.sh Bash Script
+
+### What is Does
+
+This is a bash script for building and publishing **HL7 FHIR Implementation Guides (IGs)**. It automates the process of validating, transforming, and publishing FHIR resources using SUSHI (a FHIR Shorthand compiler) and the HL7 IG Publisher.
+
+Amongs its many functions it:
+
+1. **Validates data files** — Checks that CSV metadata files contain all expected FHIR resources
+2. **Transforms YAML to JSON** — Converts YAML resource definitions to JSON format
+3. **Runs Sushi** — Executes Sushi to create the Implementation Guide resource from the `sushi-config.yaml` file
+4. **Validates JSON** — Checks all JSON files for syntax errors, duplicates, and null values
+5. **Runs the IG Publisher** — Executes the Java-based HL7 FHIR IG Publisher tool
+6. **Updates artifacts** — Updates artifacts for final publication
+7. **Adds ig.yaml collection** Adds the ImplementationGuide resource to the `input/data/ig.yml` folder as a collection
+
+---
+
+### Documentation
+
+This is a build automation script for **HL7 FHIR Implementation Guides**. It wraps the IG Publisher toolchain with pre-processing, validation, and convenience features.
+
+#### Key Tools It Uses
+
+| Tool | Purpose |
+|------|---------|
+| `jq` | JSON processing and validation |
+| `yq` | YAML → JSON conversion |
+| `sushi` | FSH (FHIR Shorthand) compiler |
+| `java -jar publisher.jar` | HL7 IG Publisher |
+| `curl` | Download updates (publisher, VSAC metadata) |
+
+#### Bash Installation
+
+##### Mac
+
+Bash is the native to linux and MAC OS terminal language. to install yq, and jq on Mac
+
+Using Homebrew (recommended)
+
+```bash
+# Install Homebrew first (if not already installed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install jq
+brew install yq
+```
+Verify Installation
+
+```bash
+jq --version
+yq --version
+```
+##### Git Bash for Windows
+
+1. Download and run the installer:
+
+    https://git-scm.com/downloads/win
+
+    Accept the defaults, or customize as needed.
+
+2. jq
+
+    **Manual download**
+    1. Download from: https://github.com/jqlang/jq/releases/latest
+    2. Get `jq-win64.exe`
+    3. Rename to `jq.exe`
+    4. Move to `C:\Program Files\Git\usr\bin\`
+
+3. yq
+
+    **Manual download**
+    1. Download from: https://github.com/mikefarah/yq/releases/latest
+    2. Get `yq_windows_amd64.exe`
+    3. Rename to `yq.exe`
+    4. Move to `C:\Program Files\Git\usr\bin\`
+
+Verify Installation
+
+```bash
+git --version
+jq --version
+yq --version
+```
+
+
+#### High-Level Flow
+
+```
+1. Parse command-line flags (-a, -b, -c, etc.)
+           ↓
+2. Clean up (.DS_Store files)
+           ↓
+3. Validate CSV metadata files (check for missing resources)
+           ↓
+4. Pre-processing (depending on flags):
+   • Convert YAML → JSON (-y)
+   • Update version numbers in canonicals (-e)
+   • Remove meta elements from examples (-k, -n)
+   • Remove change highlighting from markdown (-x)
+   • Delete cached directories (-z, -C)
+           ↓
+5. Run SUSHI (FSH → FHIR) if -s flag
+           ↓
+6. Validate JSON files (syntax, duplicates, nulls)
+           ↓
+7. Run IG Publisher (Java) if -i flag
+           ↓
+8. Post-processing (depending on flags):
+   • Copy terminology tables (-f)
+   • Generate page link list (-l)
+   • Open output in browser (-v, -q)
+```
+
+
+
+#### Basic Syntax
+
+```bash
+./publish.sh [options]
+```
+
+#### Command-Line Options
+
+| Flag | Purpose | common editor option | prepublication step | use with Caution|
+|------|---------| ----- | ---|---|
+| `-a` | Copy SearchParameter Excel sheet to data folder as CSV (TODO - unused remove) |||⚠️|
+| `-b` | IG publisher option: Enable debug mode (verbose logging)(TODO - check if this already the default) |||⚠️|
+| `-c` | Copy CSV files from the `input/data` folder to `/input/images/tables` folder as downloadable CSV/Excel files. This step should be executed after the final edits to all the CSV files the `input/data` folder||✅|
+| `-d` | IG publisher option: Output to `docs` folder instead of default `output` folder.  This was orginally used to render on Github pages instead of using the autobuild. (TODO - check if still needed, if not remove) |||
+| `-e` | JQ script to append current version to canonical URLs in the `meta.profile" values for examples and `rest.resource.supporterProfiles` and other canonical URLs in CapabilityStatements. This step is done after Sushi processing and before the IG Publisher executes. |✅|✅|
+| `-f` | Copy the ig-publisher generated temp/pages/valueset-ref-all-list.csv and temp/pages/codesystem-ref-all-list.csv to
+`input/data' folder.  This step should be executed after a successful build, and the IG publisher needs to be run again to update the rendered tables at /terminology.html ||✅|
+| `-g` | IG publisher option: Turn off narrative generation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
+| `-h` | IG publisher option: Turn off validation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
+| `-i` | Run the IG Publisher — executes the Java-based HL7 FHIR IG Publisher tool. Execute this after running Sushi and conversion of YAML resource definitions to JSON format ( `-sy` options) (TODO: The default location for the IG publisher is the MAC OS `download` directory  - update to the local directory and add to .gitignore)|✅||
+| `-j` | IG publisher option: Enable "rapido" mode (faster build) (TODO - metrics to see how much it actually speed it up or even works- consider removal) |||⚠️|
+| `-k` | JQ script to remove `meta.profile` elements from examples (but not from the YAML source files). This step is done after Sushi processing and before the IG Publisher executes. NOT USED IN US CORE |||
+| `-l` | The -l flag generates a markdown link reference list that makes it easy to create internal links between pages in your Implementation Guide. It is included in the `input/includes/link_list.md` file that is included at the end of every page. This step should be executed after the addition of pages and artifacts to the `input` folder. ||✅|
+| `-n` |  JQ script to remove `meta.extension:instance_name` and `meta.extension.instance_description` extensions from the JSON examples (but not from the YAML source files). This step is done after Sushi processing and before the IG Publisher executes.|✅|✅|
+| `-o` | Revert back to the previous/old version of the IG Publisher.  This useful when the latest version of the IG Publisher is buggy and prevents editing. (TODO: The default location for the IG publisher is the MAC OS `download` directory  - update to the local directory and add to .gitignore)||||
+| `-p` | Download the latest version of the IG Publisher. Periodically the IG Publisher is updated and needs to be downloaded. (TODO: The default location for the IG publisher is the MAC OS `download` directory  - update to the local directory and add to .gitignore)||||
+| `-q` | IG publisher option:  After execution, automatically open the built IG in a browser to the QA report page (`qa.html`) ||||
+| `-r` | Remove all generated JSON files (TODO: review this code and consider removing)|||⚠️|
+| `-s` | Executes Sushi to create the Implementation Guide resource from the `sushi-config.yaml` file). This is executed before running the ig-publisher and often combined with conversion of YAML resource definitions to JSON format ( `-sy` options) |✅||
+| `-t` | IG publisher option:  Run without a terminology server (offline mode). |||⚠️|
+| `-v` | IG publisher option:  After execution, automatically open the built IG in a browser to the IG home page (`index.html`) ||||
+| `-x` | Remove change highlighting from markdown files. This one-time step is executed after publication of a Ballot version or before publication of a new version to remove all the html highlighting use to identify new an updated text in the ig. A manual review is still needed afterwards to ensure the removal is complete and there are no side effects.  |||⚠️|
+| `-y` | Delete all JSON files and regenerate from YAML. This option removes all examples and conformance artifacts types that use YAML as source files prior to regenerating them from the YAML source files. Before converting, the script checks if anyone edited the JSON files directly (instead of editing the YAML source). If the safety check passes, it converts all .yml files to .json files using yq. |✅||
+| `-z` | Delete template/temp directories before publishing . Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build is behaving unexpectedly due to cached state. You're switching between different IG template versions|
+| `-C` | Delete input-cache before publishing. -C does the same thing as `-z` but for the input-cache/ directory, which stores downloaded dependencies (packages, terminology, etc.).|
+| `-V` | Update the VSAC name-to-FHIR-URI mapping CSV. This is executed prior to publication of a new version, it downloads the latest VSAC (Value Set Authority Center) metadata from the NLM (National Library of Medicine) and creates a CSV mapping file that links VSAC code system names to their FHIR URIs, and outputs a sorted CSV to `input/data/vsacname-fhiruri-map.csv` ||✅|
+
+
+
+### Common Workflows
+
+Flags can be combined in any order:
+
+#### Build IG no changes/updates (just IG Publisher, no SUSHI)
+
+```bash
+./publish.sh -i
+```
+
+#### Update IG Publisher, then build
+
+```bash
+./publish.sh -pi
+```
+
+#### Build IG after changes/updates (Convert YAML to JSON, then run SUSHI, then run IG Publisher removing meta extension and adding versions to canonicicals)
+
+```bash
+./publish.sh -sy
+...
+./publish.sh -ien
+```
+
+####  Delete temp/cache (Run build after deleting an artifacts or example)
+```bash
+./publish.sh -zC
+...
+./publish.sh -sy
+...
+./publish.sh -ien
+```
+
+####  Prepublication Steps
+
+Updated table and file contents
+1. remove meta extensions from examples (`-n` option)
+2. Update terminology table (`-f` option)
+3. update page link list ((`-l` option)
+4. Add Excel and CVS to the images/table folder (`-c` option)
+5. Append version to meta. profiles in examples and Capstatements (`-e` option)
+
+
+
+####  Troubleshooting ( when you screw up )
+
 ## Git
     ### Used for
     ### where located
