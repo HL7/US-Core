@@ -97,6 +97,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
   - [Overview of US Core publication Process](#overview-of-us-core-publication-process)
+    - [Prepublication checklists](#prepublication-checklists)
   - [Misc topics](#misc-topics)
 
 
@@ -762,8 +763,7 @@ yq --version
 | `-c` | Copy CSV files from the `input/data` folder to `/input/images/tables` folder as downloadable CSV/Excel files. This step should be executed after the final edits to all the CSV files the `input/data` folder||✅|
 | `-d` | IG publisher option: Output to `docs` folder instead of default `output` folder.  This was orginally used to render on Github pages instead of using the autobuild. (TODO - check if still needed, if not remove) |||
 | `-e` | JQ script to append current version to canonical URLs in the `meta.profile" values for examples and `rest.resource.supporterProfiles` and other canonical URLs in CapabilityStatements. This step is done after Sushi processing and before the IG Publisher executes. |✅|✅|
-| `-f` | Copy the ig-publisher generated temp/pages/valueset-ref-all-list.csv and temp/pages/codesystem-ref-all-list.csv to
-`input/data' folder.  This step should be executed after a successful build, and the IG publisher needs to be run again to update the rendered tables at /terminology.html ||✅|
+| `-f` | Copy the ig-publisher generated temp/pages/valueset-ref-all-list.csv and temp/pages/codesystem-ref-all-list.csv to `input/data' folder.  This step should be executed after a successful build, and the IG publisher needs to be run again to update the rendered tables at /terminology.html ||✅|
 | `-g` | IG publisher option: Turn off narrative generation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
 | `-h` | IG publisher option: Turn off validation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
 | `-i` | Run the IG Publisher — executes the Java-based HL7 FHIR IG Publisher tool. Execute this after running Sushi and conversion of YAML resource definitions to JSON format ( `-sy` options) (TODO: The default location for the IG publisher is the MAC OS `download` directory  - update to the local directory and add to .gitignore)|✅||
@@ -828,9 +828,8 @@ Updated table and file contents
 4. Add Excel and CVS to the images/table folder (`-c` option)
 5. Append version to meta. profiles in examples and Capstatements (`-e` option)
 
-
-
 ####  Troubleshooting ( when you screw up )
+  TODO
 
 ## Git
     ### Used for
@@ -839,10 +838,47 @@ Updated table and file contents
     #### Pushing
         Push_to_autobuild.sh
     ####  Pulling
-        PullCheck
+        PullCheck.sh
 ## Overview of US Core publication Process
     ### current publication
     ### addition or update to Profile
+### Prepublication checklists
+
+- [ ] Apply trackers
+- [ ] Review the Application of trackers
+- [ ] Copy Editing
+  - [ ] typos, grammar -mostly done when applied changes (full Grammerly review when publish)
+  - [ ] Screen scrape for open links ([, ]) repeating words etc
+  - [ ] read through
+- [ ] Observation profile comparison table (part of publisher - review when publish)
+- [ ] Version comparison tables (part of publisher - review, will update argo when publish)
+- [ ] Technical QA
+  - [ ] Terminology (add ignorewarning notes for these )
+  - [ ] Open Issues
+  - [ ] Variance request for QA Issues: 
+  - [ ] Update IgnoreWarnings.txt file
+    - [ ] remove unused items
+    - [ ] Grammar check IgnoreWarnings comments
+- [ ] Review CababilityStatements (when publish)
+- [ ] Updated table and file contents
+  - [ ] meta stripped (custom bash script when build)
+  - [ ] Update terminology table (custom bash script when build)
+  - [ ] Update mustsupport target tables (python scripts)
+  - [ ] page link list (custom bash script when build)
+  - [ ] Add Excel and CVS to the images/table folder (custom bash script when build)
+  - [ ] Append version to meta. profiles in examples and Capstatements - - (part of custom bash script when build)
+- [ ] Confirm change log links for the last cycle updated to the published version  (needs us core 8.0.1 to be published first)
+- [ ] Update the Jira file
+- [ ] Update US Core History Page Introduction (The master for the US core introduction is at https://hl7.org/fhir/us/core/package-list-introduction.md send GG changes to that file directly)
+- [ ] CGP Review
+- [ ] Publication Request ( not needed for ballot)
+- [ ] CGP Approval for ballot
+- [ ] Attend FMG review calls
+- [ ] FMG Approval for ballot
+- [ ] TCS Vote
+- [ ] Publication checklist:  
+- [ ] download.pdf 
+
 
 ## Misc topics
     1. argo comparators - see inline instructions
