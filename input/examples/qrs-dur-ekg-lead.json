@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "qrs-dur-ekg-lead",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "QRS dur {EKG lead} Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a QRS dur {EKG lead} Example for the *Clinical Test Result Observation Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
     ]
   },
   "status": "final",

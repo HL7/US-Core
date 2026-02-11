@@ -1,8 +1,8 @@
  <div class="note-to-balloters" markdown="1">
 
-**What's new in the US Core January 2026 Ballot**
+**What's new in the US Core STU 9 **
 
-{% include whats-new/v9-ballot.md %}
+{% include whats-new/v9.md %}
 </div>
 
 Where possible, new and updated pre-publishing content is highlighted with green text and background- **This highlighting will be removed prior to publication.**

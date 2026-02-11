@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "TAPS-item-example-96844-6",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Taps Item Example 96844-6"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Taps Item Example 96844-6 (How often have you used any prescription medications just for the feeling, more than prescribed or that were not prescribed for you in past 12 months [TAPS]) for the *US Core Observation Screening Assessment Profile*"
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
     ]
   },
   "status": "final",

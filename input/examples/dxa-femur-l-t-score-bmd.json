@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "dxa-femur-l-t-score-bmd",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "DXA Femur-L T-score BMD Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a DXA Femur-L T-score BMD Example for the *Clinical Test Result Observation Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
     ]
   },
   "status": "final",

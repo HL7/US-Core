@@ -3,7 +3,17 @@
   "id": "AUDIT-C",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) QuestionnaireResponse Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is the [LHC Form](https://loinc.org/lhc-forms/) Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources."
+      }
     ]
   },
   "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/AUDIT-C",

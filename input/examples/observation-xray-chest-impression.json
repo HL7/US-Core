@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "xray-chest-impression",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Xray Chest Impression Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This example of a US Core Observation Clinical Result Profile illustrates its use to capture information about a patient's radiology study impression."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
     ]
   },
   "status": "final",

@@ -2,9 +2,19 @@
   "resourceType": "Observation",
   "id": "at-home-in-vitro-test",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "At Home In Vitro Test Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is an At home in vitro test example for the *US Core Observation Lab Profile*, with a coded result value."
+      }
+    ],
     "lastUpdated": "2021-01-28T16:06:21-05:00",
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
     ]
   },
   "status": "final",

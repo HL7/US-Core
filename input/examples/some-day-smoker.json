@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "some-day-smoker",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Some Day Smoker Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This example for the *US Core Smokingstatus Profile* shows a coded result."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
     ]
   },
   "status": "final",

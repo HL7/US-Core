@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "TAPS-panel-example-96841-2",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Taps Panel Example 96841-2"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Taps Panel Example 96841-2 (Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS]) for the *US Core Observation Screening Assessment Profile*"
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
     ]
   },
   "status": "final",

@@ -3,7 +3,17 @@
   "id": "substance-use-status",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Substance Use Status Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is an Substance-use-status example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations."
+      }
     ]
   },
   "category": [

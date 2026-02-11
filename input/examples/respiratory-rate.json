@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "respiratory-rate",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Respiratory Rate Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a respiratory rate example for the *Vitalsigns Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
     ]
   },
   "status": "final",

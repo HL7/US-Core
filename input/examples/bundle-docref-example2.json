@@ -1,6 +1,18 @@
 {
   "resourceType": "Bundle",
   "id": "docref-example-2",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Docref Example 2"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This bundle is a the response to a $docref operation and contains an examples of *US Core DocumentReference*.  It is used in [Example 2: Request Procedure Notes and Discharge Summaries for 2019](StructureDefinition-us-core-documentreference.html#mandatory-operation)."
+      }
+    ]
+  },
   "type": "searchset",
   "total": 3,
   "link": [

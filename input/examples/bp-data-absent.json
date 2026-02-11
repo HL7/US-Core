@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "bp-data-absent",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "BP Data Absent Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a bp data absent example for the *Vitalsigns Profile* showing how to reprsesent blood pressure with a missing diastolic measurement."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
     ]
   },
   "status": "final",

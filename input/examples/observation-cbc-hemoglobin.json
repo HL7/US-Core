@@ -2,9 +2,19 @@
   "resourceType": "Observation",
   "id": "cbc-hemoglobin",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Hemoglobin Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a hemoglobin example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*."
+      }
+    ],
     "lastUpdated": "2005-07-05T15:29:58.597000+00:00",
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
     ]
   },
   "status": "final",

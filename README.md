@@ -97,6 +97,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
   - [Overview of US Core publication Process](#overview-of-us-core-publication-process)
+    - [Prepare IG for for new version:](#prepare-ig-for-for-new-version)
     - [Prepublication checklists](#prepublication-checklists)
   - [Misc topics](#misc-topics)
 
@@ -816,6 +817,7 @@ Flags can be combined in any order:
 ...
 ./publish.sh -sy
 ...
+
 ./publish.sh -ien
 ```
 
@@ -840,6 +842,78 @@ Updated table and file contents
     ####  Pulling
         PullCheck.sh
 ## Overview of US Core publication Process
+
+### Prepare IG for for new version:
+
+- [ ] Run IG with latest publisher to get baseline qa report
+- [ ] Update `sushi-config.yaml` (For information on using this file for IG Configuration see: https://fshschool.org/docs/sushi/configuration/)
+  - [ ] Add latest versions of US Core to `definition.extension` list : (for example
+     ~~~
+      - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+        valueCode: hl7.fhir.us.core#8.0.1
+     ~~~
+     these are to inform the publisher link checker that links to this IG in the change log are valid
+  - [ ] Update the `date`: (e.g.,"2026-01-21") to current date
+  - [ ] Change `version` element to new version
+      - This IG follows the [FHIR Releases and Versioning](https://hl7.org/fhir/versions.html#versions)versioning identification.
+        - If updating to a new ballot version the version will "N.0.0-ballot" where "N" is the new *major* release (e.g. "9.0.0-ballot")
+        - If updating to a new publication post ballot the version will "N.0.0" where "N" is the new major release (e.g. "9.0.0")
+        - If updating to a new [STU Update](https://confluence.hl7.org/pages/viewpage.action?pageId=107217093) publication post ballot the version will be "N.M.0" where "N" is the major release, and "M" is the new *minor* release (e.g. "9.1.0")
+        - If updating to a new [Technical Correction](https://confluence.hl7.org/spaces/ARB/pages/76164490/Definition+Errata+Technical+Correction) publication post ballot the version will be "N.M.T" where "N" is the major release, and "M" is the minor release and  "T" is the technical correction release  (e.g. "9.0.1")
+  - [ ] Update the dependencies latest version as needed ( TODO document teh dependencies topic)
+  - [ ] Update the `version-comparison-master` to the last published version: (e.g., "8.0.1")
+  - [ ] Add the last published version to the `version-comparison` list : (e.g., "- 8.0.1")
+  - [ ] Update the `releaselabel`
+        - "CI Build": default release label that refers to a non-stable release that changes with each commit.
+        - "STU <N> Ballot: (e.g., "STU 9 Ballot") - a frozen release used in the ballot process
+        - "STU <N>: (e.g., "STU 9") - a frozen release used for
+  - [ ] Update the `copyrightyear`: (e.g., '2025+') to latest year
+
+- [ ] Update the change log change markdown inline relative linke to to absolute references in change log using this regex find and replace string:
+   ~~~
+      find: \]\((?!http)(.*)\)
+
+      replace: ](https://hl7.org/fhir/us/core/<lastversion>/$1)
+   ~~~
+   e.g.,
+    ```
+    from
+
+    "...See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)"
+    to
+
+      "...See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-adi-documentreference.html)")
+    ```
+- [ ] Update the `publication-request.json` file: for more information about this file see: https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation
+  - [ ] update the `version` to the updated version:(e.g., "9.0.0")   (see the discussion of versioning in updating the `sushi-config.yaml` checkbox above)
+  - [ ] update the `path` to the updated path:
+    -  for ballot publications this is "http://hl7.org/fhir/us/core/yyyymmm" where "yyyymmm" is the ballot cycle (e.g., "2026Jan")
+    -  for published versions this is "http://hl7.org/fhir/us/core/STU<N[.M.T]>" where "N" is the major version and "[.M.T]" is stu and technical update only if present (e.g., "STU9", "STU6.1, and "STU8.0.1")
+  - [ ] Update the `mode`
+       -  For ballot change to  "working"
+       -  For publication change to  "milestone"
+       -  For technical correction change to "technical-correction"
+  - [ ] Update the `status`
+       -  For ballot change to  "ballot"
+       -  For publication change to "trial-use"
+  - [ ] Update the `sequence`
+        -  Should be the same as in the ReleaseLabel in `sushi-config.yaml` **without** a space (US Core only) (e.g.,"STU9" )
+  - [ ] Update both `desc` and `descmd` with the same content using markdown formatting for `descmd`  refer to previuos versions at https://hl7.org/fhir/us/core/history.html for  suggested content.
+- [ ] Update the Home page (`input\pagencontent\index.html`)
+  -  Replace the includes what's new section with new page (usually a template stub) from `input/includes/whats-new` folder
+- [ ] Update the Change Log page (`input\pagencontent\changes.html`) adding the latest version section after the how-to-read-the-page section  at the top of the page by
+   -  copy and paste the most recent ballot or publication section
+   -  update the version
+   -  update the USCDI version if applicable
+   -  Replace the includes what's new section with new page (usually a template stub) from `input/includes/whats-new` folder
+-  [ ]  Review the QA log and debug errors, warnings and bad links.  (see debugging QA errors)
+
+
+
+
+
+
+
     ### current publication
     ### addition or update to Profile
 ### Prepublication checklists

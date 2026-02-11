@@ -2,8 +2,18 @@
   "resourceType": "QuestionnaireResponse",
   "id": "phq-9-example",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "QuestionnaireResponse PHQ-9 Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "An example of a US Core QuestionnaireResponse that represents questions and selected answers from the The Patient Health Questionnaire (PHQ-9) questionnaire defined in LOINC (code 44249-1). The example is generated using the LHC-Forms SDC Questionnaire App."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
     ]
   },
   "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/phq-9-example",

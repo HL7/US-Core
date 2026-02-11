@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "pulse-intensity-palpation",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Pulse intensity Palpation Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Pulse intensity Palpation Example for the *Clinical Test Result Observation Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
     ]
   },
   "status": "final",

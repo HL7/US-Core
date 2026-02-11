@@ -3,7 +3,17 @@
   "id": "holy-healthcare",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Organization Holy Healthcare Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is an example managing organization using the *US Core Organization Profile*."
+      }
     ]
   },
   "identifier": [

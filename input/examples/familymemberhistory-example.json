@@ -2,8 +2,18 @@
   "resourceType": "FamilyMemberHistory",
   "id": "familymemberhistory-example",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "FamilyMemberHistory Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a an example of FamilyMemberHistory for the *US Core FamilyMemberHistory Profile*"
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory"
     ]
   },
   "extension": [

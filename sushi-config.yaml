@@ -16,10 +16,10 @@ extension:
     valueInteger: 3
 definition:
   extension:
-    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
-    #   valueCode: hl7.fhir.us.core#8.0.1
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
-      valueCode: hl7.fhir.us.core#8.0.0
+      valueCode: hl7.fhir.us.core#8.0.1
+    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+    #   valueCode: hl7.fhir.us.core#8.0.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
       valueCode: hl7.fhir.us.core#8.0.0-ballot
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
@@ -58,7 +58,7 @@ description: >-
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2026-01-21
+date: 2026-02-10
 version: '9.0.0'
 fhirVersion: 4.0.1
 dependencies:  # maintain array order - is referenced in spec using liquid variables
@@ -274,9 +274,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
-  version-comparison-master: 8.0.0
+  version-comparison-master: 8.0.1
   version-comparison:
-    - 8.0.0
+    - 8.0.1
     - 7.0.0
     - 6.1.0
     - 5.0.1
@@ -336,10 +336,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   auto-oid-root: 2.16.840.1.113883.4.642.40.2
   fmm-definition: changes-between-versions.html#us-core-maturity-levels
 
-copyrightyear: '2025+'
+copyrightyear: '2026+'
 releaselabel: CI Build
 # releaselabel: STU 9 Ballot
-# releaselabel: STU p
+# releaselabel: STU 9
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │

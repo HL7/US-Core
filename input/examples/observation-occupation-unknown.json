@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "observation-occupation-unknown",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Occupation Observation Example: Unknown Occupation"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This example of the *US Core Observation Occupation Profile*  represents a situation where the industry is known, but the occupation is not."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
     ]
   },
   "status": "final",
