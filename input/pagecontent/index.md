@@ -1,7 +1,7 @@
- <div class="note-to-balloters" markdown="1">
+ <div class="bg-danger" markdown="1">
+<span style="background-color: yellow; color: black; padding: 2px 5px; display: inline;">**Note to Reviewers**</span>
 
-**What's new in the US Core STU 9 **
-
+**What's new in the US Core STU 9**
 {% include whats-new/v9.md %}
 </div>
 

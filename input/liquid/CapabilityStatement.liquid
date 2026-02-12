@@ -373,7 +373,7 @@
         <p>
           {% if resource.referencePolicy %}Reference Policy: {% for rf in resource.referencePolicy %}<code>{{rf}}</code>,{% endfor %}{% endif %}
 
-          {% if resource.versioning %}Versioning Policy: <code>{{resource.versioning}}</code>{% endif %}
+          {% comment %} {% if resource.versioning %}Versioning Policy: <code>{{resource.versioning}}</code>{% endif %} <<< TRIGGERS a NPE in BUILD see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/comparison.20parameters.20interferes.20with.20liquid.20parameter.2E/near/573431070 {% endcomment %}
 
           {% if resource.readHistory %}Server returns past versions as part of the vRead operation.{% endif %}
 

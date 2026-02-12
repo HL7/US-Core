@@ -87,6 +87,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
         - [Git Bash for Windows](#git-bash-for-windows)
       - [High-Level Flow](#high-level-flow)
       - [Basic Syntax](#basic-syntax)
+      - [Configuration](#configuration)
       - [Command-Line Options](#command-line-options)
     - [Common Workflows](#common-workflows)
       - [Build IG no changes/updates (just IG Publisher, no SUSHI)](#build-ig-no-changesupdates-just-ig-publisher-no-sushi)
@@ -755,25 +756,37 @@ yq --version
 ./publish.sh [options]
 ```
 
+#### Configuration
+
+1. The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.
+update the line
+~~~
+41   ig_path="<ig publisher location>" # **THE LOCATION OF `org.hl7.fhir.igpublisher.jar` NEEDS TO BE CONFIGURED FOR YOUR LOCAL INSTALL **  ====
+~~~
+
+For example:
+1. local ig folder:`ig_path="$PWD"
+2. for mac OS' downloads folder: `ig_path="$HOME/Downloads"`
+
+
 #### Command-Line Options
 
 | Flag | Purpose | common editor option | prepublication step | use with Caution|
 |------|---------| ----- | ---|---|
-| `-a` | Copy SearchParameter Excel sheet to data folder as CSV (TODO - unused remove) |||⚠️|
-| `-b` | IG publisher option: Enable debug mode (verbose logging)(TODO - check if this already the default) |||⚠️|
+| `-b` | IG publisher option: Enable debug mode (verbose logging) - may slow down build |||⚠️|
 | `-c` | Copy CSV files from the `input/data` folder to `/input/images/tables` folder as downloadable CSV/Excel files. This step should be executed after the final edits to all the CSV files the `input/data` folder||✅|
 | `-d` | IG publisher option: Output to `docs` folder instead of default `output` folder.  This was orginally used to render on Github pages instead of using the autobuild. (TODO - check if still needed, if not remove) |||
 | `-e` | JQ script to append current version to canonical URLs in the `meta.profile" values for examples and `rest.resource.supporterProfiles` and other canonical URLs in CapabilityStatements. This step is done after Sushi processing and before the IG Publisher executes. |✅|✅|
 | `-f` | Copy the ig-publisher generated temp/pages/valueset-ref-all-list.csv and temp/pages/codesystem-ref-all-list.csv to `input/data' folder.  This step should be executed after a successful build, and the IG publisher needs to be run again to update the rendered tables at /terminology.html ||✅|
 | `-g` | IG publisher option: Turn off narrative generation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
 | `-h` | IG publisher option: Turn off validation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
-| `-i` | Run the IG Publisher — executes the Java-based HL7 FHIR IG Publisher tool. Execute this after running Sushi and conversion of YAML resource definitions to JSON format ( `-sy` options) (TODO: The default location for the IG publisher is the MAC OS `download` directory  - update to the local directory and add to .gitignore)|✅||
+| `-i` | Run the IG Publisher — executes the Java-based HL7 FHIR IG Publisher tool. Execute this after running Sushi and conversion of YAML resource definitions to JSON format ( `-sy` options) **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.|✅||
 | `-j` | IG publisher option: Enable "rapido" mode (faster build) (TODO - metrics to see how much it actually speed it up or even works- consider removal) |||⚠️|
-| `-k` | JQ script to remove `meta.profile` elements from examples (but not from the YAML source files). This step is done after Sushi processing and before the IG Publisher executes. NOT USED IN US CORE |||
-| `-l` | The -l flag generates a markdown link reference list that makes it easy to create internal links between pages in your Implementation Guide. It is included in the `input/includes/link_list.md` file that is included at the end of every page. This step should be executed after the addition of pages and artifacts to the `input` folder. ||✅|
+| `-k` | JQ script to remove `meta.profile` elements from examples (but not from the YAML source files). This step is done after Sushi processing and before the IG Publisher executes. NOT USED IN US CORE |||⚠️|
+| `-l` | The -l flag generates a markdown link reference list that makes it easy to create internal links between pages in your Implementation Guide. It is included in the `input/includes/link_list.md` file that is included at the end of every page. This step should be executed after the addition of pages and artifacts to the `input` folder and can be postponed until right before the QA process ||✅|
 | `-n` |  JQ script to remove `meta.extension:instance_name` and `meta.extension.instance_description` extensions from the JSON examples (but not from the YAML source files). This step is done after Sushi processing and before the IG Publisher executes.|✅|✅|
-| `-o` | Revert back to the previous/old version of the IG Publisher.  This useful when the latest version of the IG Publisher is buggy and prevents editing. (TODO: The default location for the IG publisher is the MAC OS `download` directory  - update to the local directory and add to .gitignore)||||
-| `-p` | Download the latest version of the IG Publisher. Periodically the IG Publisher is updated and needs to be downloaded. (TODO: The default location for the IG publisher is the MAC OS `download` directory  - update to the local directory and add to .gitignore)||||
+| `-o` | Revert back to the previous/old version of the IG Publisher.  This useful when the latest version of the IG Publisher is buggy and prevents editing. **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.||||
+| `-p` | Download the latest version of the IG Publisher. Periodically the IG Publisher is updated and needs to be downloaded. **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.||||
 | `-q` | IG publisher option:  After execution, automatically open the built IG in a browser to the QA report page (`qa.html`) ||||
 | `-r` | Remove all generated JSON files (TODO: review this code and consider removing)|||⚠️|
 | `-s` | Executes Sushi to create the Implementation Guide resource from the `sushi-config.yaml` file). This is executed before running the ig-publisher and often combined with conversion of YAML resource definitions to JSON format ( `-sy` options) |✅||
