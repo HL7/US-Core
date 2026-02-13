@@ -57,6 +57,25 @@ my_strings=(
     '<div class="bg-success" markdown="1">'
     '</div><!-- new-content -->'
 )
+# define csv file to clear "Is_New" column data
+# !! THE FIRST COLUMN DATA WILL BE CLEARED FROM THESE FILE WHEN PROCESSED
+csv_files_to_clean=(
+  input/data/additional-uscdi-requirements.csv
+  input/data/profile_metadata.csv
+  input/data/provenance-elements.csv
+  input/data/search_requirements.csv
+  )
+# special is_new columns in input/data/provenance-elements.csv to clear
+# prov_csv_columns_clean=(
+# Target_Resource_1_is_new
+# Target_Resource_2_is_new
+# Target_Resource_3_is_new
+# Target_Resource_4_is_new
+# Target_Resource_5_is_new
+# Target_Resource_6_is_new
+# Target_Resource_7_is_new
+# Target_Resource_8_is_new
+# )
 # ===================================
 
 echo "================================================================="
@@ -210,31 +229,68 @@ done
 fi
 
 if [[ $REM_HIGHLIGHT ]]; then
-echo "================================================================="
-echo "remove change highlighting from all markdown files"
-echo "================================================================="
-find "$inpath" -type f -name "*.md" | while read -r file_path; do
-    # Skip files with "generator" or "tabler" in their names
-    if [[ "$file_path" == *"generator"* || "$file_path" == *"tabler"* ]]; then
-        echo "Skipping file: $file_path"
-        continue
-    fi
+  echo "================================================================="
+  echo "============ remove new-content highlighting  ==================="
+  echo "================================================================="
+  echo ""
+  echo "=== this will remove new-content highlighting from all markdown files, and ==="
+  echo "=== comments out all lines in input/data/new_stuff.yml, and ==="
+  echo "=== clears all Is_New column data from ${csv_files_to_clean[@]} ... ==="
+  read -p "Do you want to continue? (y/N) " answer
+  if [[ "$answer" == "y" ]]; then
+    echo "Continuing..."
+    echo "================================================================="
+    echo ""
 
-    # Process each file
-    temp_file=$(mktemp)
-    cp "$file_path" "$temp_file"
-    for string_to_remove in "${my_strings[@]}"; do
-        # Use sed to remove the string from the file (macOS-compatible)
-        sed -i '' "s|$string_to_remove||g" "$file_path"
+    find "$inpath" -type f -name "*.md" | while read -r file_path; do
+        # Process each file
+        temp_file=$(mktemp)
+        cp "$file_path" "$temp_file"
+        for string_to_remove in "${my_strings[@]}"; do
+            # Use sed to remove the string from the file (macOS-compatible)
+            sed -i '' "s|$string_to_remove||g" "$file_path"
+        done
+        if ! cmp -s "$file_path" "$temp_file"; then
+            echo "Tags removed successfully from file: $file_path!"
+        fi
     done
-    if ! cmp -s "$file_path" "$temp_file"; then
-        echo "Tags removed successfully from file: $file_path!"
-    fi
-done
-echo "================================================================="
-echo "Tags removed successfully. Check for any remaining tags manually"
-echo " and clear the new stuff file..."
-echo "================================================================="
+    # echo "================================================================="
+    # echo "Comment out all lines in `input/data/new_stuff.yml`..."
+    # echo "================================================================="
+    sed -i '' 's/^[^#]/#&/' "$data"/new_stuff.yml
+    # echo "================================================================="
+    # echo "Clear all Is_New first column data from `input/data/` csv files"
+    # echo "================================================================="
+    # echo ""
+    for file in "${csv_files_to_clean[@]}"; do
+        sed -i '' '1!s/^[^,]*//' "$file"
+    done
+    # echo "================================================================="
+    # echo "Clear all special is_new columns in input/data/provenance-elements.csv" NOT USED AWK BREAKS CSV with embedded commas and quotes
+    # echo "================================================================="
+    # echo ""
+    # prov_csv=input/data/provenance-elements.csv
+    # # sed -i '' $'s/\r$//' "$prov_csv" # At the start: convert whatever line endings to Unix to prevent a Jekyll error
+    # for col_name in "${prov_csv_columns_clean[@]}"; do
+    #     COL=$(head -1 "$prov_csv" | tr ',' '\n' | grep -n "^${col_name}$" | cut -d: -f1)
+    #     if [ -n "$COL" ]; then
+    #         awk -F',' -v OFS=',' -v col="$COL" 'NR > 1 { $col = "" } 1' "$prov_csv" > tmp.csv && mv tmp.csv "$prov_csv"
+    #     else
+    #         echo "Column '$col_name' not found!"
+    #     fi
+    # done
+    echo "================================================================="
+    echo "done! Check for any remaining tags or new content highlighting manually"
+    echo "================================================================="
+    echo ""
+    sleep 1
+  else
+      echo "Operation cancelled by user."
+      echo "================================================================="
+      echo ""
+      sleep 1
+      exit 1
+  fi
 fi
 
 if [[ $PAGE_LINKS ]]; then

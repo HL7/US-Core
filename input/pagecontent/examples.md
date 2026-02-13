@@ -35,7 +35,7 @@ It groups by type and sorts alphabetically by title, adds relative links, and al
               {%- endfor -%}
 
               {%- if new -%}
-                <li><a href="{{p.reference.reference | replace: '/','-'}}.html">{{p.name}}</a></li>
+                <li><a href="{{p.reference.reference | replace: '/','-'}}.html"><span data-note="highlight text" class="bg-success" markdown="1">{{p.name}}</span><!-- new-content highlight text --></a></li>
               {% else %}
                 <li><a href="{{p.reference.reference | replace: '/','-'}}.html">{{p.name}}</a></li>
               {% endif %}

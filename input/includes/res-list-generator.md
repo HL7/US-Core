@@ -32,7 +32,7 @@ and allows for highlighting new stuff using the input/data/new_stuff data file
            {%- endif -%}
         {%- endfor -%}
         {%- if new %}
-          <li><a href="{{r.path}}"><span class="bg-success" markdown="1">{{r.title}}</span><!-- new-content --></a></li>
+          <li><a href="{{r.path}}"><span data-note="highlight text" class="bg-success" markdown="1">{{r.title}}</span><!-- new-content highlight text --></a></li>
         {% else %}
           <li><a href="{{r.path}}">{{r.title}}</a></li>
         {% endif -%}

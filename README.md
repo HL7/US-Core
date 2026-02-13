@@ -792,7 +792,7 @@ For example:
 | `-s` | Executes Sushi to create the Implementation Guide resource from the `sushi-config.yaml` file). This is executed before running the ig-publisher and often combined with conversion of YAML resource definitions to JSON format ( `-sy` options) |✅||
 | `-t` | IG publisher option:  Run without a terminology server (offline mode). |||⚠️|
 | `-v` | IG publisher option:  After execution, automatically open the built IG in a browser to the IG home page (`index.html`) ||||
-| `-x` | Remove change highlighting from markdown files. This one-time step is executed after publication of a Ballot version or before publication of a new version to remove all the html highlighting use to identify new an updated text in the ig. A manual review is still needed afterwards to ensure the removal is complete and there are no side effects.  |||⚠️|
+| `-x` | Remove change highlighting from markdown filesm, comments out all items in `input/data/new_stuff.yml`, and removes all `Is_New` columns data from `input/data/additional-uscdi-requirements.csv`, `input/data/profile_metadata.csv`, `input/data/provenance-elements.csv`,and `input/data/search_requirements.csv`. This one-time step is executed after publication of a Ballot version or before publication of a new version to remove all the html highlighting use to identify new an updated text in the ig. A manual review is still needed afterwards to ensure the removal is complete and there are no side effects.  |||⚠️|
 | `-y` | Delete all JSON files and regenerate from YAML. This option removes all examples and conformance artifacts types that use YAML as source files prior to regenerating them from the YAML source files. Before converting, the script checks if anyone edited the JSON files directly (instead of editing the YAML source). If the safety check passes, it converts all .yml files to .json files using yq. |✅||
 | `-z` | Delete template/temp directories before publishing . Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build is behaving unexpectedly due to cached state. You're switching between different IG template versions|
 | `-C` | Delete input-cache before publishing. -C does the same thing as `-z` but for the input-cache/ directory, which stores downloaded dependencies (packages, terminology, etc.).|
@@ -953,14 +953,22 @@ Updated table and file contents
      -  Copy and paste this markdown text into the change log under the "Changes" header
      -  Note that the change log is updated as trackers are applied, see the  *Updating the Change Log* item below.
 -  [ ]  Remove change highlighting if prior build is Ballot
-   -  [ ]  using the publish.sh `-x` option
+   -  [ ]  using the publish.sh `-x` option to remove the new-content highlighting from all markdown files
+   -  [ ]  manually clears all the "Is_New" column data from:
+         - `input/data/additional-uscdi-requirements.csv`
+         - `input/data/profile_metadata.csv`
+         - `input/data/provenance-elements.csv`
+         - `input/data/search_requirements.csv`
+   -  [ ]  manually clear the is_new columns in `input/data/provenance-elements.csv`:
+      -  Target_Resource_1_is_new
+      -  Target_Resource_2_is_new
+      -  Target_Resource_3_is_new
+      -  Target_Resource_4_is_new
+      -  Target_Resource_5_is_new
+      -  Target_Resource_6_is_new
+      -  Target_Resource_7_is_new
+      -  Target_Resource_8_is_new
    -  [ ]  manually conform the highlighting removed and no formatting issues ( white space errors)
-   -  [ ] comment out all items in `input/data/new_stuff.yml`
-   -  [ ] update all "new flags in CSV Files (consider adding bash script to publish.sh)
-      -  [ ] `input/data/additional-uscdi-requirements.csv`: change all `Is_New` columns data from "TRUE" to "FALSE"
-      -  [ ] `input/data/profile_metadata.csv`: change all `is_new` columns data from "TRUE" to "FALSE"
-      -  [ ] `input/data/provenance-elements.csv`: change all `Is_New, Target_Resource_1_is_new, Target_Resource_2_is_new, Target_Resource_3_is_new, etc` columns data from "TRUE" to "FALSE"
-      -  [ ] `input/data/search_requirements.csv` change all `is_new` columns data from "TRUE" to "FALSE"
 -  [ ]  Review the QA log and debug errors, warnings and bad links.  (see debugging QA errors)
 
 
@@ -1022,7 +1030,13 @@ Updated table and file contents
       - The `Updated Content [Link](#)` is edited to link to the relevant section(s) that have been updated
         - These are *relative* links so they point to the current version (As documented above, they are updated to absolute links *before* adding a new section to the change log)
  -  Before publication group and reorder list by change impact using an AI chat tool.
-3. QA tricks and tips
+3. New content highlighting
+   - csv files
+   - yaml files
+   - md files
+     - snippets in VS codes
+   - removal of new content highlighting
+4. QA tricks and tips
    - ignoreWarnings.text
-4. Version comparisons
+5. Version comparisons
     - Argo DSTU2 Comparisons - see inline instructions

@@ -69,12 +69,12 @@ The source table is input/data/profile_metadata.csv where manual edits to the ta
 
 profile-metadata.csv columns:
 
+- Is_New: Flag for new or updated content for the current version. Deafult is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
 - row: row id
 - id: profile or extension's StructureDefinition id
 - uri: profile or extension's canonical url
 - title: profile or extension's human readable name
 - rel_url: profile or extension's relative path to the narrative content page in the IG.
-- is_new: Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
 - current_fmm: FMM level in the current published version
 - proposed_fmm: Proposed FMM level for next version
 - added: Published version when the profile or extension was added to the guide.
@@ -107,7 +107,7 @@ The script filters out the active profiles and displays their compliance levels
 {% assign rows = site.data.profile_metadata | sort: "title" %}
 {% for item in rows %}
 {% unless item["resource_type"] == "Extension" or item["deprecated"] or item["retired"] %}
-<tr{% if item["is_new"] == "TRUE" %} class="bg-success"{% endif %}>
+<tr{% if item["Is_New"] == "TRUE" %} class="bg-success"{% endif %}>
 <td markdown="span">[{{item["title" | trim ]}}]</td>
 <td style="text-align: center;">{{item["ipa_compatibility"] | trim | replace: 'OK', OK | replace: 'MAYBE', MAYBE | replace: 'NA', NA | replace: 'NO', NO }}</td>
 <td style="text-align: center;">{{item["ips_compatibility"] | trim | replace: 'OK', OK | replace: 'MAYBE', MAYBE | replace: 'NA', NA | replace: 'NO', NO }}</td>

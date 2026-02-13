@@ -65,13 +65,11 @@ additional-uscdi-requirements.csv columns:
 
 {% assign rows = site.data.additional-uscdi-requirements %}
 {% for item in rows -%}
-{% if item.Is_New != "!" -%}
 {% if forloop.first -%}
 | Additional USCDI Requirements | Profile | FHIR Element |
 |---|---|---|
 {% else -%}
-{% if item.Is_New == "True" %}|{{item.Addl_USCDI}}|[{{item.Profile}}]|`{{item.FHIR_Element}}`|{% else %}|{{item.Addl_USCDI}}|[{{item.Profile}}]|`{{item.FHIR_Element}}`|{% endif %}
-{% endif -%}
+{% if item.Is_New == "True" %}|<span data-note="highlight text" class="bg-success" markdown="1">{{item.Addl_USCDI}}</span><!-- new-content highlight text -->|<span data-note="highlight text" class="bg-success" markdown="1">[{{item.Profile}}]</span><!-- new-content highlight text -->|<span data-note="highlight text" class="bg-success" markdown="1">`{{item.FHIR_Element}}`</span><!-- new-content highlight text -->|{% else %}|{{item.Addl_USCDI}}|[{{item.Profile}}]|`{{item.FHIR_Element}}`|{% endif %}
 {% endif -%}
 {% if forloop.last %}{:.grid}{% endif -%}
 {% endfor %}

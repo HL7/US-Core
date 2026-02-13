@@ -26,12 +26,12 @@ The following [Extensions] have been defined as part of the US Core Implementati
 
 profile-metadata.csv columns:
 
+- Is_New: Flag for new or updated content for the current version. Deafult is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
 - row: row id
 - id: profile or extension's StructureDefinition id
 - uri: profile or extension's canonical url
 - title: profile or extension's human readable name
 - rel_url: profile or extension's relative path to the narrative content page in the IG.
-- is_new: Flag for new or updated content for the current version. Deafult is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
 - current_fmm: FMM level in the current published version
 - proposed_fmm: Proposed FMM level for next version
 - added: Published version when the profile or extension was added to the guide.
@@ -81,7 +81,7 @@ The following extensions are used in US Core Profiles.
 {% assign titles = profile_titles | split: "," | sort -%}
 {% for title in titles -%}
 {% assign profile_meta_row = site.data.profile_metadata | where:"title", title | first -%}
-- <span {% if profile_meta_row.is_new == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
+- <span {% if profile_meta_row.Is_New == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
 {% endfor %}
 
 #### Other US Realm Specific Extension
@@ -90,7 +90,7 @@ The following extensions are not used in any US Core Profile. They are provided 
 {% assign titles = realm_only_titles | split: "," | sort -%}
 {% for title in titles -%}
 {% assign profile_meta_row = site.data.profile_metadata | where:"title", title | first -%}
-- <span {% if profile_meta_row.is_new == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
+- <span {% if profile_meta_row.Is_New == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
 {% endfor %}
 
 #### US Core Profile StructureDefinition Extensions
@@ -99,7 +99,7 @@ The following extensions are only used in the US Core Implementation Guide to cr
 {% assign titles = ig_only_titles | split: "," | sort -%}
 {% for title in titles -%}
 {% assign profile_meta_row = site.data.profile_metadata | where:"title", title | first -%}
-- <span {% if profile_meta_row.is_new == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
+- <span {% if profile_meta_row.Is_New == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
 {% endfor %}
 
 #### Deprecated US Realm Specific Extension
@@ -109,7 +109,7 @@ The following extensions are not used in any US Core Profile and are *deprecated
 {% assign titles = deprecated_titles | split: "," | sort -%}
 {% for title in titles -%}
 {% assign profile_meta_row = site.data.profile_metadata | where:"title", title | first -%}
-- <span {% if profile_meta_row.is_new == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
+- <span {% if profile_meta_row.Is_New == "TRUE" %} class="bg-success"{% endif %} markdown="1">[{{ title }}]</span>
 {% endfor %}
 
 {% include link-list.md %}

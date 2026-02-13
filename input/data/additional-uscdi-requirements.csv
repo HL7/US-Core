@@ -7,9 +7,6 @@ Is_New,Addl_USCDI,Profile,FHIR_Element,combo
 ,An Ethnicity,US Core Patient Profile,Patient.extension:ethnicity,US Core Patient Profile-Patient.extension:ethnicity
 ,A Tribal Affiliation,US Core Patient Profile,Patient.extension:tribalAffiliation,US Core Patient Profile-Patient.extension:tribalAffiliation
 ,A Sex,US Core Patient Profile,Patient.extension:sex,US Core Patient Profile-Patient.extension:sex
-!,Sex Parameter For Clinical Use,US Core Patient Profile,Patient.extension:sexParameterForClinicalUse,US Core Patient Profile-Patient.extension:sexParameterForClinicalUse
-!,Gender Identity,US Core Patient Profile,Patient.extension:genderIdentity,US Core Patient Profile-Patient.extension:genderIdentity
-!,Personal Pronouns,US Core Patient Profile,Patient.extension:personalPronouns,US Core Patient Profile-Patient.extension:personalPronouns
 ,Date Of Death,US Core Patient Profile,Patient.deceased[x],US Core Patient Profile-Patient.deceased[x]
 ,Address Use,US Core Patient Profile,Patient.address.use,US Core Patient Profile-Patient.address.use
 ,Address Period,US Core Patient Profile,Patient.address.period,US Core Patient Profile-Patient.address.period
@@ -35,7 +32,6 @@ Is_New,Addl_USCDI,Profile,FHIR_Element,combo
 ,Health Status Assessments,US Core Observation Screening Assessment Profile,Observation.category:screening-assessment,US Core Observation Screening Assessment Profile-Observation.category:screening-assessment
 ,Health Status Assessments,US Core Condition Problems and Health Concerns Profile,Condition.category:screening-assessment,US Core Condition Problems and Health Concerns Profile-Condition.category:screening-assessment
 ,Pregnancy Status,US Core Observation Pregnancy Intent Profile,Observation.performer,US Core Observation Pregnancy Intent Profile-Observation.performer
-!,Sexual Orientation,US Core Observation Sexual Orientation Profile,Observation.performer,US Core Observation Sexual Orientation Profile-Observation.performer
 ,Pregnancy Status,US Core Observation Pregnancy Status Profile,Observation.performer,US Core Observation Pregnancy Status Profile-Observation.performer
 ,Provenance Author,US Core AllergyIntolerance Profile,AllergyIntolerance.recorder,US Core AllergyIntolerance Profile-AllergyIntolerance.recorder
 ,Provenance Author,US Core Care Experience Preference Profile,Observation.performer,US Core Care Experience Preference Profile-Observation.performer
@@ -46,11 +42,11 @@ Is_New,Addl_USCDI,Profile,FHIR_Element,combo
 ,Provenance Author,US Core Treatment Intervention Preference Profile,Observation.performer,US Core Treatment Intervention Preference Profile-Observation.performer
 ,Orders,US Core ServiceRequest Profile,ServiceRequest.code.text,US Core ServiceRequest Profile-ServiceRequest.code.text
 ,Laboratory Tests,US Core Laboratory Result Observation Profile,Observation.code.text,US Core Laboratory Result Observation Profile-Observation.code.text
-False,Care Plan,US Core CarePlan Profile,CarePlan.addresses,US Core CarePlan Profile-CarePlan.addresses
-False,Family Health History,US Core FamilyMemberHistory Profile,FamilyMemberHistory.extension:recorder,US Core FamilyMemberHistory Profile-FamilyMemberHistory.extension:recorder
-False,Unique Device Identifier,US Core Device Profile,Device.udiCarrier,US Core Device Profile-Device.udiCarrier
-False,Unique Device Identifier,US Core Device Profile,Device.distinctIdentifier,US Core Device Profile-Device.distinctIdentifier
-False,Unique Device Identifier,US Core Device Profile,Device.manufactureDate,US Core Device Profile-Device.manufactureDate
-False,Unique Device Identifier,US Core Device Profile,Device.expirationDate,US Core Device Profile-Device.expirationDate
-False,Unique Device Identifier,US Core Device Profile,Device.lotNumber,US Core Device Profile-Device.lotNumber
-False,Unique Device Identifier,US Core Device Profile,Device.serialNumber,US Core Device Profile-Device.serialNumber
+,Care Plan,US Core CarePlan Profile,CarePlan.addresses,US Core CarePlan Profile-CarePlan.addresses
+,Family Health History,US Core FamilyMemberHistory Profile,FamilyMemberHistory.extension:recorder,US Core FamilyMemberHistory Profile-FamilyMemberHistory.extension:recorder
+,Unique Device Identifier,US Core Device Profile,Device.udiCarrier,US Core Device Profile-Device.udiCarrier
+,Unique Device Identifier,US Core Device Profile,Device.distinctIdentifier,US Core Device Profile-Device.distinctIdentifier
+,Unique Device Identifier,US Core Device Profile,Device.manufactureDate,US Core Device Profile-Device.manufactureDate
+,Unique Device Identifier,US Core Device Profile,Device.expirationDate,US Core Device Profile-Device.expirationDate
+,Unique Device Identifier,US Core Device Profile,Device.lotNumber,US Core Device Profile-Device.lotNumber
+,Unique Device Identifier,US Core Device Profile,Device.serialNumber,US Core Device Profile-Device.serialNumber

@@ -136,8 +136,9 @@ This table is also available as a [csv](tables/provenance-elements.csv) or [exce
 This liquid script creates a US Core provenance requirements table using input data from input/data/provenance-elements.csv
 which is manually updated when new profiles are added to the guide.
 with the following columns:
+
+- Is_New: Flag for new or updated content for the current version. Deafult is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
 - Row
-- Is_New
 - Is_Source : boolean flag if is provenance source element
 - Survey1, Survey2 : results of online vendor surveys
 - Observation_grouping: tag for grouping profiles together like ADI or vitals

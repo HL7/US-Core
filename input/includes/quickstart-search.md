@@ -17,13 +17,13 @@ when new searchparameters are added, deprecated, etc.
 
 search_requirements.csv columns:
 
+- Is_New: Flag for new or updated content for the current version. Default is "FALSE" or empty and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
 - Index: row id
 - base: The resource type this search parameter applies to. For search combinations this field is empty.
 - code: name for parameter in search url. For search combinations this is a list of comma separated names
 - base_conf: Conformance verb  = "SHALL"|"SHOULD"|"MAY" indicating what the level of support for Server RESTful FHIR interactions for the resource type when supporting the US Core interactions
 - type_documentation: Additional requirements for the parameter type. For search combinations this field is empty.
 - exists: Flag to indicate if the search parameter is derived from a base FHIR searchparameter. For search combinations this field is empty.
-- is_new: Flag for new or updated content for the current version. Default is "FALSE" or empty and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
 - type: The type of value that a search parameter may contain, and how the content is interpreted. see https://hl7.org/fhir/searchparameter-definitions.html#SearchParameter.type  For search combinations this is a list of comma separated types.
 - expression: A FHIRPath expression that returns a set of elements for the search parameter. For search combinations this field is empty. (currently not used)
 - multipleOr: not used

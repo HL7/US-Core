@@ -7,12 +7,12 @@
 
 profile-metadata.csv columns:
 
+- Is_New: Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
 - row: row id
 - id: profile or extension's StructureDefinition id
 - uri: profile or extension's canonical url
 - title: profile or extension's human readable name
 - rel_url: profile or extension's relative path to the narrative content page in the IG.
-- is_new: Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
 - current_fmm: FMM level in the current published version
 - proposed_fmm: Proposed FMM level for next version
 - added: Published version when the profile or extension was added to the guide.
@@ -63,13 +63,13 @@ It create a list, grouped by type, sorted alphabetically by title, adds relative
         {% endfor %}
 
         {%- assign profile_meta_row = site.data.profile_metadata | where:"title", sd1.title | first -%}
-          {%- if profile_meta_row.is_new  == "TRUE" -%}
+          {%- if profile_meta_row.Is_New  == "TRUE" -%}
                 {%- assign new = true -%}
           {%- endif -%}
 
           {%- unless parent or child -%}
             {%- if new -%}
-              <li><a href="{{sd1.path}}"><span class="bg-success" markdown="1">{{sd1.title}}</span><!-- new-content --></a></li>
+              <li><a href="{{sd1.path}}"><span data-note="highlight text" class="bg-success" markdown="1">{{sd1.title}}</span><!-- new-content highlight text --></a></li>
             {% else %}
               <li><a href="{{sd1.path}}">{{sd1.title}}</a></li>
             {% endif %}
@@ -77,7 +77,7 @@ It create a list, grouped by type, sorted alphabetically by title, adds relative
 
           {%- if parent -%}
             {%- if new -%}
-              <li><a href="{{sd1.path}}"><span class="bg-success" markdown="1">{{sd1.title}}</span><!-- new-content --></a>
+              <li><a href="{{sd1.path}}"><span data-note="highlight text" class="bg-success" markdown="1">{{sd1.title}}</span><!-- new-content highlight text --></a>
             {% else %}
               <li><a href="{{sd1.path}}">{{sd1.title}}</a>
             {% endif %}
@@ -87,11 +87,11 @@ It create a list, grouped by type, sorted alphabetically by title, adds relative
                   {% if sd1.name == sd3.basename %}
                     {%- assign new = false -%}
                     {%- assign profile_meta_row = site.data.profile_metadata | where:"title", sd3.title | first -%}
-                     {%- if profile_meta_row.is_new  == "TRUE" -%}
+                     {%- if profile_meta_row.Is_New  == "TRUE" -%}
                            {%- assign new = true -%}
                       {%- endif -%}
                       {%- if new -%}
-                        <li><a href="{{sd3.path}}"><span class="bg-success" markdown="1">{{sd3.title}}</span><!-- new-content --></a></li>
+                        <li><a href="{{sd3.path}}"><span data-note="highlight text" class="bg-success" markdown="1">{{sd3.title}}</span><!-- new-content highlight text --></a></li>
                       {% else %}
                         <li><a href="{{sd3.path}}">{{sd3.title}}</a></li>
                       {% endif %}
