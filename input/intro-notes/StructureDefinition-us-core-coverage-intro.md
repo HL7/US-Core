@@ -37,7 +37,7 @@ This section provides detailed implementation guidance for the US Core Profile t
   - The absence of a Coverage resource instance may mean the patient has no coverage or the healthcare provider may not know it.
   - A `coverage.type` of "81" (Self-pay) **MAY** be used to imply that the patient has no coverage or that an individual or organization other than an insurer is taking responsibility for payment for a portion of the health care costs.
 
-<div class="bg-success" markdown="1">
+
 
 - †The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.
 
@@ -49,7 +49,7 @@ This section provides detailed implementation guidance for the US Core Profile t
     Part C (Medicare Advantage Plan)|111 (Medicare HMO)<br />112 (Medicare PPO)<br />113 (Medicare POS) | These are the most common types of Medicare Advantage Plans
     Part D|122 (Medicare Drug Benefit)|
     {: .grid}
-</div><!-- new-content -->
+
 
 - *If Insurers issue unique member IDs for dependents, then the memberId in `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
 

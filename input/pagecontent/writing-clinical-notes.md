@@ -1,7 +1,3 @@
-
-This page is new for US Core Version {{site.data.ig.version}}
-{:.new-content}
-
 ### Purpose and Scope
 
 This page defines a US Core approach to writing **clinical notes** using the FHIR R4 `DocumentReference` resource.

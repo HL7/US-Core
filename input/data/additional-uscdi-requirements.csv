@@ -46,11 +46,11 @@ Is_New,Addl_USCDI,Profile,FHIR_Element,combo
 ,Provenance Author,US Core Treatment Intervention Preference Profile,Observation.performer,US Core Treatment Intervention Preference Profile-Observation.performer
 ,Orders,US Core ServiceRequest Profile,ServiceRequest.code.text,US Core ServiceRequest Profile-ServiceRequest.code.text
 ,Laboratory Tests,US Core Laboratory Result Observation Profile,Observation.code.text,US Core Laboratory Result Observation Profile-Observation.code.text
-True,Care Plan,US Core CarePlan Profile,CarePlan.addresses,US Core CarePlan Profile-CarePlan.addresses
-True,Family Health History,US Core FamilyMemberHistory Profile,FamilyMemberHistory.extension:recorder,US Core FamilyMemberHistory Profile-FamilyMemberHistory.extension:recorder
-True,Unique Device Identifier,US Core Device Profile,Device.udiCarrier,US Core Device Profile-Device.udiCarrier
-True,Unique Device Identifier,US Core Device Profile,Device.distinctIdentifier,US Core Device Profile-Device.distinctIdentifier
-True,Unique Device Identifier,US Core Device Profile,Device.manufactureDate,US Core Device Profile-Device.manufactureDate
-True,Unique Device Identifier,US Core Device Profile,Device.expirationDate,US Core Device Profile-Device.expirationDate
-True,Unique Device Identifier,US Core Device Profile,Device.lotNumber,US Core Device Profile-Device.lotNumber
-True,Unique Device Identifier,US Core Device Profile,Device.serialNumber,US Core Device Profile-Device.serialNumber
+False,Care Plan,US Core CarePlan Profile,CarePlan.addresses,US Core CarePlan Profile-CarePlan.addresses
+False,Family Health History,US Core FamilyMemberHistory Profile,FamilyMemberHistory.extension:recorder,US Core FamilyMemberHistory Profile-FamilyMemberHistory.extension:recorder
+False,Unique Device Identifier,US Core Device Profile,Device.udiCarrier,US Core Device Profile-Device.udiCarrier
+False,Unique Device Identifier,US Core Device Profile,Device.distinctIdentifier,US Core Device Profile-Device.distinctIdentifier
+False,Unique Device Identifier,US Core Device Profile,Device.manufactureDate,US Core Device Profile-Device.manufactureDate
+False,Unique Device Identifier,US Core Device Profile,Device.expirationDate,US Core Device Profile-Device.expirationDate
+False,Unique Device Identifier,US Core Device Profile,Device.lotNumber,US Core Device Profile-Device.lotNumber
+False,Unique Device Identifier,US Core Device Profile,Device.serialNumber,US Core Device Profile-Device.serialNumber

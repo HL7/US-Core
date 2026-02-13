@@ -53,7 +53,7 @@ input/data/provenance-elements.csv columns:
 {% for item in site.data.provenance-elements -%}
   {% if item.Is_Source == "TRUE" -%}
   {% if item.Path == page.name -%}
-- {% if item.Is_New %}<span class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}{{ footnote-symbol }}The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}{{ footnote-symbol }}The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New %}</span><!-- new-content -->{% endif %}
+- {% if item.Is_New == "TRUE" %}<span class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}{{ footnote-symbol }}The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}{{ footnote-symbol }}The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New == "TRUE" %}</span><!-- new-content -->{% endif %}
        {% break -%}
     {% endif -%}
     {% endif -%}

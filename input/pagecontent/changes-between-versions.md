@@ -7,7 +7,7 @@ With each major version of FHIR, the core data models have changed.  The FHIR co
 
 US Core undergoes annual updates with new guidance, requirements, profiles, and changes to existing content. The [Directory of published versions] lists the publication history with links to each version of US Core.  The [Change Log] documents the changes across the versions of US Core. The [Argonaut Data Query] guide was published separately and is not included in the directory or change log.
 
-<div class="bg-success" markdown="1">
+
 
 When a change is identified that impacts ASTP Certification, a tracker will be designated as "patch", which allows the certification tools to implement the change immediately. A new release of US Core will be considered if a large number of "patches" are required. Patches for prior US Core versions are managed by the [Cross Group Project patch process] with approved patches on this [HL7 Confluence page].
 
@@ -32,7 +32,7 @@ The US Core Maturity Levels are assigned to US Core profiles, extensions, and op
 
 **US Core Maturity Level 3** is assigned ValueSets, CodeSystems, and CapabilityStatements. These artifacts are dynamic with each version of US Core. Therefore, forward compatibility is not enforced. For more information on ValueSet and CodeSystem versions, see the [Terminology] page.
 
-</div><!-- new-content -->
+
 
 ### Cross Version Comparisons
 
@@ -143,9 +143,9 @@ A Server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Cor
 
 ### No Guarantee that Resource IDs are Preserved
 
-<span class="bg-success" markdown="1">Servers **SHOULD** maintain a stable common identifier for a resource across versions. When the FHIR resource ID or business identifier of the underlying clinical data is not maintained across FHIR versions, the Client **SHALL** use an alternative method to avoid duplication, such as the guidance provided in the [Interoperable Digital Identity and Patient Matching](https://hl7.org/fhir/us/identity-matching/) Implementation Guide.</span><!-- new-content -->
+Servers **SHOULD** maintain a stable common identifier for a resource across versions. When the FHIR resource ID or business identifier of the underlying clinical data is not maintained across FHIR versions, the Client **SHALL** use an alternative method to avoid duplication, such as the guidance provided in the [Interoperable Digital Identity and Patient Matching](https://hl7.org/fhir/us/identity-matching/) Implementation Guide.
 
-### Expectation that <span class="bg-success" markdown="1">Data is Preserved Between Versions</span><!-- new-content -->
+### Expectation that Data is Preserved Between Versions
 
 In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
 
@@ -165,10 +165,10 @@ In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. How
 
 ### Authorization Across Versions
 
-<div class="bg-success" markdown="1">
+
 
 - To allow clients to use a single authorization token when accessing resources from multiple version-specific endpoints, production systems **SHOULD** use the same base authorization endpoint across versions.
 - The more recent version endpoints will have additional/changed resource types and thus added scopes. For example, US Core may add a DeviceAssociation Profile when updating from FHIR R4 to FHIR R6.
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

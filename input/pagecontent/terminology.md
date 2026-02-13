@@ -1,7 +1,7 @@
 
 This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the US Core Implementation Guide. For more information on using codes in US Core, see the [FHIR Terminology] section in the FHIR specification and the [Coded Elements] section in this guide.
 
-<div class="bg-success" markdown="1">
+
 
 ### US Core ValueSet and CodeSystem versions
 
@@ -34,11 +34,11 @@ US Core 9.0.0 (published June 2026)
 
 For more information on Value Set Package and how they are created and used, see the [Value Set Package Implementation Guide](https://build.fhir.org/ig/cqframework/vsp-ig/)
 
-</div><!-- new-content -->
+
 
 ### Value Sets
 
-Most value sets used in this guide are defined in the base FHIR specification, [HL7 Terminology (THO)], or <span class="bg-success" markdown="1">the [Value Set Authority Center (VSAC)]. </span><!-- new-content -->However, US Core also defines several value sets and they are listed below.
+Most value sets used in this guide are defined in the base FHIR specification, [HL7 Terminology (THO)], or the [Value Set Authority Center (VSAC)]. However, US Core also defines several value sets and they are listed below.
 
 Value sets in US Core and C-CDA may retain inactive codes. These codes may be useful for historical queries but are not recommended for new data. Implementers should note that some code systems exclude inactive codes from current expansions; if needed, these codes may be accessible through prior expansions via terminology services. HL7 recommends validators allow non-active codes with note on their status.
 {:.bg-info}
@@ -130,7 +130,7 @@ Value Set Sources:
 
 ### Code Systems
 
-See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the base FHIR specification<span class="bg-success" markdown="1"> or [HL7 Terminology (THO)]. </span><!-- new-content -->However, the following code systems are unique to this guide and not listed in the base FHIR specification. If a URI is listed here, it **SHALL** be used in the US Core profiles to identify the code system in preference to any other code system URI.
+See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of code system names used in FHIR. Most code systems used in this guide are defined in the base FHIR specification or [HL7 Terminology (THO)]. However, the following code systems are unique to this guide and not listed in the base FHIR specification. If a URI is listed here, it **SHALL** be used in the US Core profiles to identify the code system in preference to any other code system URI.
 
 #### US Core Defined Code Systems
 

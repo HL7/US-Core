@@ -952,6 +952,15 @@ Updated table and file contents
      -  Review the markdown in a markdown viewer like
      -  Copy and paste this markdown text into the change log under the "Changes" header
      -  Note that the change log is updated as trackers are applied, see the  *Updating the Change Log* item below.
+-  [ ]  Remove change highlighting if prior build is Ballot
+   -  [ ]  using the publish.sh `-x` option
+   -  [ ]  manually conform the highlighting removed and no formatting issues ( white space errors)
+   -  [ ] comment out all items in `input/data/new_stuff.yml`
+   -  [ ] update all "new flags in CSV Files (consider adding bash script to publish.sh)
+      -  [ ] `input/data/additional-uscdi-requirements.csv`: change all `Is_New` columns data from "TRUE" to "FALSE"
+      -  [ ] `input/data/profile_metadata.csv`: change all `is_new` columns data from "TRUE" to "FALSE"
+      -  [ ] `input/data/provenance-elements.csv`: change all `Is_New, Target_Resource_1_is_new, Target_Resource_2_is_new, Target_Resource_3_is_new, etc` columns data from "TRUE" to "FALSE"
+      -  [ ] `input/data/search_requirements.csv` change all `is_new` columns data from "TRUE" to "FALSE"
 -  [ ]  Review the QA log and debug errors, warnings and bad links.  (see debugging QA errors)
 
 

@@ -64,7 +64,7 @@ In situations where the specific piece of data is hidden for security or privacy
 
 ### Using CQL With US Core
 
-<div class="bg-success" markdown="1">
+
 
 [Clinical Quality Language (CQL)] is a high-level, domain-specific language focused on clinical quality and targeted at measure and decision support artifact authors. To use CQL with FHIR,  a [model definition] for the profiles and extensions defined in US Core must be provided to the CQL implementation environment. To support implementations using Clinical Quality Language (CQL) and US-Core, the model definition is provided as FHIR [Library] resources:
 
@@ -74,7 +74,7 @@ US Core Model Definitions for prior versions of US Core are available in [US Cor
 
 For more information about using IG-specific model information with CQL, how these libraries were constructed, and a "FHIRHelpers" library for use with the model definitions refer to the [Using CQL With FHIR] Implementation Guide.
 
-</div><!-- new-content -->
+
 
 ###  Using UCUM codes in the [Quantity] datatype
 

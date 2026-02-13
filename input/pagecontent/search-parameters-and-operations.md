@@ -101,7 +101,7 @@ It groups by type,sorts alphabetically by title, adds relative links, and allows
                 {%- endfor %}
                 {%- endcapture -%}
 {% comment %} {{titlecase | inspect }} {% endcomment %}
-- {% if new %}<span class="bg-success" markdown="1">{% endif %}[{{ titlecase | replace_first: 'Us', 'US' | replace: '-', ' '}}]({{resource_hash[1].path}}){% if new %}</span><!-- new-content -->{% endif %}
+- {% if new %}{% endif %}[{{ titlecase | replace_first: 'Us', 'US' | replace: '-', ' '}}]({{resource_hash[1].path}}){% if new %}{% endif %}
             {%- endif -%}
         {%- endunless -%}
     {%- endif -%}

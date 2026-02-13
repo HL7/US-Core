@@ -19,13 +19,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each CarePlan Must Support:**
 
 1. a narrative summary of the patient assessment and plan of treatment*
-2. <span class="bg-success" markdown="1">a category</span><!-- new-content -->
+2. a category
 <!-- 1. a category code of "assess-plan" -->
 
 {% include additional-requirements-intro.md type="CarePlan" plural="false" %}
 
 1. a contributor†
-2. <span class="bg-success" markdown="1">references to health issues this plan addresses*</span><!-- new-content -->
+2. references to health issues this plan addresses*
 
 \*† see guidance below
 
@@ -33,7 +33,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* <span class="bg-success" markdown="1">\*The original US Core CarePlan Profile was designed to support the "Assessment and Plan" from a narrative Progress Note. The future direction of US Core CarePlan Profile is continue to move from text-based content to discrete references to conditions/needs (`CarePlan.addresses`), goals (`CarePlan.goal`), and strategies (`CarePlan.activities`).</span><!-- new-content -->
+* \*The original US Core CarePlan Profile was designed to support the "Assessment and Plan" from a narrative Progress Note. The future direction of US Core CarePlan Profile is continue to move from text-based content to discrete references to conditions/needs (`CarePlan.addresses`), goals (`CarePlan.goal`), and strategies (`CarePlan.activities`).
 
 * Additional considerations for systems aligning with [HL7 Consolidated (C-CDA)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements:
     - US Core Goal **SHOULD** be present in `CarePlan.goal`
@@ -43,6 +43,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 {% include provenance-author-bullet-generator.md footnote-symbol='†' %}
 
 <!-- add this guidance if keeping assess-plan category -->
-<!-- - <span class="bg-success" markdown="1"> Systems that always populate category = "AssessPlan" and always include CarePlan.addresses will consistently meet the USCDI data element requirements for both Care Plan and Assessment and Plan.</span>new-content -->
+<!-- -  Systems that always populate category = "AssessPlan" and always include CarePlan.addresses will consistently meet the USCDI data element requirements for both Care Plan and Assessment and Plan.</span>new-content -->
 
 {% include link-list.md %}

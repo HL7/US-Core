@@ -183,11 +183,11 @@ The script sorts and selects the table data and allows for highlighting new and 
       {% assign target = item[key] -%}
       {% if target -%}
         {% if item[MS_key] == "TRUE" %}{% assign target = target | prepend: "<strong>" | append: "**</strong>" %}{% endif -%}
-        {% if item[is_new_key] == "TRUE" %}{% assign target = target | prepend: '<span class="bg-success" markdown="1">' | append: "</span><!-- new-content -->" %}{% endif -%}
+        {% if item[is_new_key] == "TRUE" %}{% assign target = target | prepend: '' | append: "" %}{% endif -%}
         {% assign targets = targets | append: target | append: "," -%}
       {% endif -%}
     {% endfor %}
-  <tr {% if item.Is_New %} class="bg-success"{% endif %}>
+  <tr {% if item.Is_New == "TRUE" %} class="bg-success"{% endif %}>
   <td><a href="{{item.Path}}">{{item.US_Core_Profile}}</a></td>
   <td><code>{% if item.is_MS == "TRUE" %}<strong>{% endif %}{{item.FiveWs_author | append: item.FiveWs_source | append: item.FiveWs_actor}}{% if item.is_MS == "TRUE" %}*</strong>{% endif %}</code></td>
   <td>{{ targets | split: "," | join: ", " }}</td>
