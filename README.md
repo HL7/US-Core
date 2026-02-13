@@ -759,7 +759,7 @@ yq --version
 #### Configuration
 
 1. The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.
-update the line
+update line 41 in the `publish.sh` script:
 ~~~
 41   ig_path="<ig publisher location>" # **THE LOCATION OF `org.hl7.fhir.igpublisher.jar` NEEDS TO BE CONFIGURED FOR YOUR LOCAL INSTALL **  ====
 ~~~
@@ -882,7 +882,7 @@ Updated table and file contents
         - "STU <N>: (e.g., "STU 9") - a frozen release used for
   - [ ] Update the `copyrightyear`: (e.g., '2025+') to latest year
 
-- [ ] Update the change log change markdown inline relative linke to to absolute references in change log using this regex find and replace string:
+- [ ] Update the change log change markdown inline relative links to to absolute references in change log using this regex find and replace string:
    ~~~
       find: \]\((?!http)(.*)\)
 
@@ -914,11 +914,44 @@ Updated table and file contents
   - [ ] Update both `desc` and `descmd` with the same content using markdown formatting for `descmd`  refer to previuos versions at https://hl7.org/fhir/us/core/history.html for  suggested content.
 - [ ] Update the Home page (`input\pagencontent\index.html`)
   -  Replace the includes what's new section with new page (usually a template stub) from `input/includes/whats-new` folder
-- [ ] Update the Change Log page (`input\pagencontent\changes.html`) adding the latest version section after the how-to-read-the-page section  at the top of the page by
-   -  copy and paste the most recent ballot or publication section
-   -  update the version
-   -  update the USCDI version if applicable
-   -  Replace the includes what's new section with new page (usually a template stub) from `input/includes/whats-new` folder
+- [ ] Update the Change Log page (`input\pagencontent\changes.html`)
+  - [ ] Add the introductory text for latest version after the how-to-read-the-page section  at the top of the page:
+     -  copy and paste the most recent ballot or publication introduction sections
+
+        e.g.:
+        ~~~
+        ### Version = 9.0.0  (Meets USCDI v6 Requirements)
+        - url: <https://hl7.org/fhir/us/core/STU9/>
+        - Based on FHIR version: 4.0.1
+
+        The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2025 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments.
+        #### What's new in Version 9.0.0 of US Core:
+
+        Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 9.0.0 version of US Core and each previous major release on [Changes Between Versions] page. Below is an overview of significant changes between Version 9.0.0 and Version 9.0.0-ballot of US Core.
+
+        {% include whats-new/v9.md %}
+
+        #### Changes:
+
+        The ballot-related comments resulted in over 100 changes to this specification, which are listed below:
+
+        **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
+        ~~~
+        -  update the version
+        -  update the USCDI version if applicable
+        -  Replace the includes what's new section with new page (usually a template stub) from `input/includes/whats-new` folder
+  - [ ] Add the trackers items for the new version
+     - Use Jira Search `https://jira.hl7.org/issues/?filter=23999#`
+     -  Export Search as a ";" separated CSV file using Jira's "exporter" function
+     -  Use following VS Code find and replace regex to create the markdown text in VS Code (or equivalent regex in other text editor):
+        ~~~
+        find: "(.*?)";"(.*?)";"(.*?)";"(.*?)";"(.*?)";"(.*?)";.*
+
+        replace: 1. **$1:** $2 ($3) $4 [$5](https://jira.hl7.org/browse/$5) See Changes [Here]($6)
+        ~~~
+     -  Review the markdown in a markdown viewer like
+     -  Copy and paste this markdown text into the change log under the "Changes" header
+     -  Note that the change log is updated as trackers are applied, see the  *Updating the Change Log* item below.
 -  [ ]  Review the QA log and debug errors, warnings and bad links.  (see debugging QA errors)
 
 
@@ -968,7 +1001,19 @@ Updated table and file contents
 
 
 ## Misc topics
-    1. argo comparators - see inline instructions
-    2. change log creation.
-    3. ignoreWarnings.text
-    4. version comparisons
+
+2. Updating the Change Log
+   - For a discussion on adding a change log section for a new version. See "Update the Change Log page" item in the *Prepare IG for for new version* above"
+   - The change log is updated as trackers are applied
+      - The `Tracker Status` is updated from "Triaged" to "Resoved-Change Required" to "Applied" , etc
+        - The Change log is updated to "Applied" ***before*** tracker QA
+        - Jira is updatd to "Applied" ***after*** tracker QA.
+      - The `Change Impact` and `Change Category` are updated if missing or incorrect (usually when updating the status from "Triaged" to "Resoved-Change Required").
+      - The `Change Summary` is edited to reflect what changes we actually made vs the tracker summary.
+      - The `Updated Content [Link](#)` is edited to link to the relevant section(s) that have been updated
+        - These are *relative* links so they point to the current version (As documented above, they are updated to absolute links *before* adding a new section to the change log)
+ -  Before publication group and reorder list by change impact using an AI chat tool.
+3. QA tricks and tips
+   - ignoreWarnings.text
+4. Version comparisons
+    - Argo DSTU2 Comparisons - see inline instructions

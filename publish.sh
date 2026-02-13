@@ -312,7 +312,7 @@ path2="$ig_path"/org.hl7.fhir.igpublisher-old.jar
 echo "========================================================================"
 echo "Downloading most recent publisher from $puburl to:"
 echo ~/Downloads/org.hl7.fhir.igpublisher.jar
-echo "... it's ~100 MB, so this may take a bit"
+echo "... it's ~200 MB, so this may take a bit"
 echo "========================================================================"
 mv $path1 $path2
 curl -L $puburl -o $path1
