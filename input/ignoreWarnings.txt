@@ -122,10 +122,10 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # 27. === These Examples demonstrate the use of additional Codes or Identifiers not defined in US Core profiles  Updated in 9.0.0-ballot ===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|9.0.0-ballot
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|9.0.0-ballot
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|9.0.0-ballot
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|9.0.0-ballot
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|9.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|9.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|9.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|9.0.0
 A definition for CodeSystem 'http://example.org/fhir/michigan.gov/lara/license-type' could not be found, so the code cannot be validated
 
 # 28. === In this example, representing the concept clearly with human-readable annotations {pack-years} is not misleading. It clearly illustrates how to use the Observation with the code and demonstrates a clinical need outweighing concerns about using annotations. ===
@@ -162,8 +162,6 @@ The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-suppor
 The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 The slice 'us-core' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 The slice 'NCSBNID' on path 'Practitioner.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'us-core-pmo-category' on path 'ServiceRequest.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-
 
 # 35. === These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider updating and/or adopting the recommended replacement in a future release. ===
 
@@ -209,6 +207,7 @@ There are multiple different potential matches for the url 'http://cts.nlm.nih.g
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause:%
 The html source contains the word 'SHALL NOT' but it is not in a text phrase marked as a conformance clause:%
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause:%
+The html source contains the word 'SHOULD NOT' but it is not in a text phrase marked as a conformance clause:%
 
 # 41.  === The following codes are valid additional codes in the same and different code systems as representations of the concept with different granularity due to differences in the definitions of the underlying code in the extensible FHIR Vitals Signs Observation.code binding (http://hl7.org/fhir/ValueSet/observation-vitalsignresult). ===
 

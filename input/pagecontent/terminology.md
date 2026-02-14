@@ -97,14 +97,13 @@ Value Set Sources:
 {% for item in rows %}
 {% assign base_URL = item.URL | split: 'ValueSet/' | first -%}
 {% assign stem_URL = item.URL | split: 'ValueSet/' | last -%}
-{% comment %} # mapping of valueset source name to the base_URL and link to a user friendly view. {% endcomment -%}
-{% comment %} {% assign vs_link = site.data.source[base_URL][1] | replace: "{{stem_URL}}", stem_URL | replace: "{{site.data.fhir.path}}", {{site.data.fhir.path}} | replace: "v2-2.7-0360", "v2-0360" %} {% endcomment -%}
+{% comment %} mapping of valueset source name to the base_URL and link to a user friendly view. {% endcomment -%}
 {% if base_URL == 'http://cts.nlm.nih.gov/fhir/' -%}
   {% assign vs_name = 'VSAC' %}
   {% assign vs_link = 'https://vsac.nlm.nih.gov/valueset/' | append: stem_URL | append: '/expansion' -%}
 {% elsif base_URL == 'http://hl7.org/fhir/' %}
   {% assign vs_name = 'FHIR' %}
-  {% assign vs_link = {{site.data.fhir.path}} | append: 'valueset-' | append: stem_URL | append: '.html'| replace: "v2-2.7-0360", "v2-0360" -%}
+  {% assign vs_link = {{site.data.fhir.path}} | append: 'valueset-' | append: stem_URL | append: '.html' -%}
 {% elsif base_URL == 'http://hl7.org/fhir/us/core/' -%}
   {% assign vs_name = 'US CORE' -%}
   {% assign vs_link = 'ValueSet-' | append: stem_URL | append: '.html' -%}
@@ -113,7 +112,7 @@ Value Set Sources:
   {% assign vs_link = 'https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=' | append: stem_URL -%}
 {% elsif base_URL == 'http://terminology.hl7.org/' -%}
   {% assign vs_name = 'THO' -%}
-  {% assign vs_link = 'http://terminology.hl7.org/ValueSet/' | append: stem_URL -%}
+  {% assign vs_link = 'http://terminology.hl7.org/ValueSet/' | append: stem_URL | replace: "v2-2.7-0360", "v2-0360" -%}
 {% endif -%}
 <tr>
 <td>{{forloop.index}}</td>

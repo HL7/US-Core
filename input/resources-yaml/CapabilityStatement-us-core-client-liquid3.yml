@@ -4301,16 +4301,8 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: ServiceRequest
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-pmo-servicerequest|9.0.0-ballot'
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0-ballot'
     _supportedProfile:
-    - extension:
-      - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
-      - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-        valueUrl: StructureDefinition-us-core-pmo-servicerequest.html
-      - url: http://hl7.org/fhir/StructureDefinition/display
-        valueString: US Core PMO ServiceRequest Profile
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHALL

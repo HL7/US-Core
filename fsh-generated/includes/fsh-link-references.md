@@ -199,7 +199,7 @@
 [bmp]: ServiceRequest-bmp.html
 [cbc]: ServiceRequest-cbc.html
 [chest-xray]: ServiceRequest-chest-xray.html
-[servicerequest-pmo-example1]: ServiceRequest-servicerequest-pmo-example1.html
+[servicerequest-dnr-example1]: ServiceRequest-servicerequest-dnr-example1.html
 [ekg]: ServiceRequest-ekg.html
 [foodpantry-referral]: ServiceRequest-foodpantry-referral.html
 [rehab]: ServiceRequest-rehab.html
@@ -290,7 +290,6 @@
 [USCorePediatricBMIforAgeObservationProfile]: StructureDefinition-pediatric-bmi-for-age.html
 [USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
-[USCorePMOServiceRequestProfile]: StructureDefinition-us-core-pmo-servicerequest.html
 [USCorePractitionerProfile]: StructureDefinition-us-core-practitioner.html
 [USCorePractitionerRoleProfile]: StructureDefinition-us-core-practitionerrole.html
 [USCoreProblemOrHealthConcern]: ValueSet-us-core-problem-or-health-concern.html

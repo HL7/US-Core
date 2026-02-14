@@ -1,14 +1,14 @@
 resourceType: ServiceRequest
-id: servicerequest-pmo-example1
+id: servicerequest-dnr-example1
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: ServiceRequest DNR Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is an example DNR request
-      using the *US Core PMO ServiceRequest Profile*.
+      using the *US Core ServiceRequest Profile*.
   profile:
-    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-pmo-servicerequest
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
 status: active
 intent: directive
 category:

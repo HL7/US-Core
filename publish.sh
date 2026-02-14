@@ -59,12 +59,12 @@ my_strings=(
 )
 # define csv file to clear "Is_New" column data
 # !! THE FIRST COLUMN DATA WILL BE CLEARED FROM THESE FILE WHEN PROCESSED
-csv_files_to_clean=(
-  input/data/additional-uscdi-requirements.csv
-  input/data/profile_metadata.csv
-  input/data/provenance-elements.csv
-  input/data/search_requirements.csv
-  )
+# csv_files_to_clean=(
+#   input/data/additional-uscdi-requirements.csv
+#   input/data/profile_metadata.csv
+#   input/data/provenance-elements.csv
+#   input/data/search_requirements.csv
+#   )
 # special is_new columns in input/data/provenance-elements.csv to clear
 # prov_csv_columns_clean=(
 # Target_Resource_1_is_new
@@ -110,7 +110,7 @@ echo "-s parameter for running only sushi = $SUSHI"
 echo "-t parameter for no terminology server (run faster and offline)= $NA"
 echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
 echo "-x remove change highlighting from all markdown files =  $REM_HIGHLIGHT"
-echo "-y delete all json files and tranform all yaml files to json files = $YAML_JSON"
+echo "-y tranform all yaml files to json files = $YAML_JSON"
 echo "-z delete the template and temp directories before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
 echo "-C delete the input-cache before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
 echo "-V update the vsacname-fhiruri-map.csv file for US Core = $VSACURI"
@@ -235,7 +235,6 @@ if [[ $REM_HIGHLIGHT ]]; then
   echo ""
   echo "=== this will remove new-content highlighting from all markdown files, and ==="
   echo "=== comments out all lines in input/data/new_stuff.yml, and ==="
-  echo "=== clears all Is_New column data from ${csv_files_to_clean[@]} ... ==="
   read -p "Do you want to continue? (y/N) " answer
   if [[ "$answer" == "y" ]]; then
     echo "Continuing..."
@@ -259,14 +258,14 @@ if [[ $REM_HIGHLIGHT ]]; then
     # echo "================================================================="
     sed -i '' 's/^[^#]/#&/' "$data"/new_stuff.yml
     # echo "================================================================="
-    # echo "Clear all Is_New first column data from `input/data/` csv files"
+    # echo "Clear all Is_New first column data from `input/data/` csv files" NOT USED BREAKS CSV with embedded commas and quotes  TODO debug
     # echo "================================================================="
     # echo ""
-    for file in "${csv_files_to_clean[@]}"; do
-        sed -i '' '1!s/^[^,]*//' "$file"
-    done
+    # for file in "${csv_files_to_clean[@]}"; do
+    #     sed -i '' '1!s/^[^,]*//' "$file"
+    # done
     # echo "================================================================="
-    # echo "Clear all special is_new columns in input/data/provenance-elements.csv" NOT USED AWK BREAKS CSV with embedded commas and quotes
+    # echo "Clear all special is_new columns in input/data/provenance-elements.csv" NOT USED BREAKS CSV with embedded commas and quotes  TODO debug
     # echo "================================================================="
     # echo ""
     # prov_csv=input/data/provenance-elements.csv
@@ -329,6 +328,7 @@ if [[ $YAML_JSON ]]; then
     echo "using yq see https://github.com/mikefarah/yq"
     echo "========================================================================"
     echo ""
+
 
     for json_file in $inpath/$dir/*.json; do
         base=$(basename "$json_file" .json)
@@ -535,7 +535,7 @@ if [[ $IG_PUBLISH ]]; then
     missing_count=0
     for filepath in "$resources"/StructureDefinition-*.json; do
         resource_id=$(jq -r '.id' "$filepath")
-        if ! awk -F',' -v id="$resource_id" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+        if ! awk -F',' -v id="$resource_id" '$3 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
             echo "❌ Missing: $resource_id (from $(basename "$filepath"))"
             ((missing_count++))
         fi
@@ -600,7 +600,7 @@ if [[ $IG_PUBLISH ]]; then
     missing_count=0
     for filepath in "$resources"/StructureDefinition-*.json; do
         resource_type=$(jq -r '.type' "$filepath")
-        if ! awk -F',' -v id="$resource_type" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+        if ! awk -F',' -v id="$resource_type" '$3 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
             echo "❌ Missing Resource Type: $resource_type (from $(basename "$filepath"))"
             ((missing_count++))
         fi

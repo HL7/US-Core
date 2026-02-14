@@ -27,7 +27,7 @@ compose:
   - valueSet:
     - http://hl7.org/fhir/ValueSet/servicerequest-category
 # exclude "PMO" since it is profiled separately
-  exclude:
-  - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
-    concept:
-      - code: PMO
+  # exclude:
+  # - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+  #   concept:
+  #     - code: PMO
