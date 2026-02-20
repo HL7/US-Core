@@ -114,6 +114,11 @@ pages:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
+    requirements.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+      title: Requirements Table
   guidance.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -168,6 +173,7 @@ pages:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
       valueCode: informative
+    title:  Capability Statements and Requirements Resources
   search-parameters-and-operations.md:
     extension:
     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -350,6 +356,7 @@ menu:
       Must Support: must-support.html
       SMART on FHIR Obligations and Capabilities: scopes.html
       Security: security.html
+      Requirement Table: requirements.html
   Guidance: #guidance.html
       USCDI: uscdi.html
       General Guidance: general-guidance.html
@@ -366,7 +373,8 @@ menu:
       Search Parameters: search-parameters-and-operations.html#search-parameters
       Operations: search-parameters-and-operations.html#operations
       Terminology: terminology.html
-      Capability Statements: capability-statements.html
+      Capability Statements: capability-statements.html#capability-statements
+      Requirements: capability-statements.html#requirements-resource
       Examples: examples.html
   # Security: security.html
   # Examples: examples.html

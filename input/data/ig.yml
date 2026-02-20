@@ -2056,9 +2056,17 @@
         "reference": {
           "reference": "CapabilityStatement/us-core-client"
         },
-        "description": "This Section describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the [Conformance Requirements for Server](CapabilityStatement-us-core-server.html). US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+        "description": "This CapabilityStatement describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the [US Core CapabilityStatement](CapabilityStatement-us-core-server.html). US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
         "exampleBoolean": false,
         "name": "US Core Client CapabilityStatement"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/us-core-client"
+        },
+        "description": "This Requirements resources lists the US Core Requestor (Clients including Certifying Systems) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.",
+        "exampleBoolean": false,
+        "name": "US Core Client Requirements"
       },
       {
         "reference": {
@@ -2600,9 +2608,17 @@
         "reference": {
           "reference": "CapabilityStatement/us-core-server"
         },
-        "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ASTP 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).",
+        "description": "This CapabilityStatement describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ASTP 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).",
         "exampleBoolean": false,
         "name": "US Core Server CapabilityStatement"
+      },
+      {
+        "reference": {
+          "reference": "Requirements/us-core-server"
+        },
+        "description": "This Requirements resources lists the US Core Responder (Servers including Certifying Systems) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.",
+        "exampleBoolean": false,
+        "name": "US Core Server Requirements"
       },
       {
         "reference": {
@@ -3770,6 +3786,17 @@
                   "valueCode": "trial-use"
                 }
               ]
+            },
+            {
+              "nameUrl": "requirements.html",
+              "title": "Requirements Table",
+              "generation": "markdown",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+                  "valueCode": "trial-use"
+                }
+              ]
             }
           ]
         },
@@ -3889,7 +3916,7 @@
         },
         {
           "nameUrl": "capability-statements.html",
-          "title": "Capability Statements",
+          "title": "Capability Statements and Requirements Resources",
           "generation": "markdown",
           "extension": [
             {

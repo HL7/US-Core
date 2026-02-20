@@ -1,25 +1,24 @@
 resourceType: CapabilityStatement
-id: us-core-server
-url: 'http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server'
+id: us-core-client
+url: 'http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client'
 version: 9.0.0-ballot
-name: UsCoreServerCapabilityStatement
-title: US Core Server CapabilityStatement
+name: UsCoreClientCapabilityStatement
+title: US Core Client CapabilityStatement
 status: active
 experimental: false
-date: '2025-12-19T19:15:48.367775-08:00'
+date: '2025-12-19T19:16:08.871976-08:00'
 publisher: HL7 International - Cross-Group Projects
 contact:
 - telecom:
   - system: url
     value: 'http://www.hl7.org/Special/committees/cgp'
-description: 'This Section describes the expected capabilities of the US Core Server
-  actor which is responsible for providing responses to the queries submitted by the
-  US Core Requestors. The complete list of FHIR profiles, RESTful operations, and
-  search parameters supported by US Core Servers are defined. Systems implementing
-  this capability statement should meet the ASTP 2015 Common Clinical Data Set (CCDS)
-  access requirement for Patient Selection 170.315(g)(7) and Application Access -
-  Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for Interoperability
-  (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).'
+description: 'This CapabilityStatement describes the expected capabilities of the US Core Client
+  which is responsible for creating and initiating the queries for information about
+  an individual patient. The complete list of FHIR profiles, RESTful operations, and
+  search parameters supported by US Core Servers are defined
+  in the [US Core CapabilityStatement](CapabilityStatement-us-core-server.html).
+  US Core Clients have the option of choosing from this list to access necessary data
+  based on their local use cases and other contextual requirements.'
 jurisdiction:
 - coding:
   - system: 'urn:iso:std:iso:3166'
@@ -48,44 +47,55 @@ _implementationGuide:
 - extension:
   - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
     valueCode: SHOULD
-  - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-    valueUrl: https://hl7.org/fhir/smart-app-launch/STU2/index.html
-  - url: http://hl7.org/fhir/StructureDefinition/display
-    valueString: SMART App Launch version 2.0.0 and later
 rest:
-- mode: server
-  documentation: "The US Core Server **SHALL**:\n\n1. Support the US Core Patient
-    resource profile AND at least one additional resource profile from the list of
-    US Core Profiles AND and all *Must Support* US Core Profiles and resources it
-    references.\n     -  A summary table listing all the *Must Support* references
-    to other US Core Profiles and FHIR resources for each US Core Profile is located
-    in the [Must Support - Resource References](must-support.html#must-support---resource-references)
-    section of the guide.\n1. Follow the requirements documented in the [General Requirements](general-requirements.html)
-    and [Must Support](must-support.html) pages\n1. Return the following response
-    classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized
-    request\n   - (Status 403): insufficient scopes\n   - (Status 404): unknown resource\n\
-    1. Support JSON source formats for all US Core interactions.\n\nThe US Core Server
-    **SHOULD**:\n\n1. Follow the guidance documented in the [General Guidance](general-guidance.html)
-    page\n1. Support XML source formats for all US Core interactions.\n1. Identify
-    the US Core profiles supported as part of the FHIR `meta.profile` attribute for
-    each instance.\n\n\n**NOTE**: US Core SearchParameters referenced in this CapabilityStatement
-    that are derived from standard FHIR SearchParameters are only defined to document
-    Server and Client expectations. They specify additional expectations for the following
-    SearchParameter elements:\n \n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n\
-    - `modifier`\n- `chain`\n\nThey **SHALL NOT** be interpreted as search parameters
-    for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters."
-  security:
-    description: >-
-      1. See the [General Security Considerations](security.html)
-      section for requirements and recommendations.
+- mode: client
+  documentation: >-
+    The US Core Client **SHALL**:
 
-      1. A server **SHALL** reject any unauthorized requests by
-      returning an `HTTP 401` "Unauthorized", `HTTP 403` "Forbidden",
-      or `HTTP 404` "Not Found"
+
+
+    1. Support fetching and querying of one or more US Core profile(s),
+    using the supported RESTful interactions and search parameters
+    declared in the US Core Server CapabilityStatement.
+
+    1. Follow the requirements documented in the [General
+    Requirements](general-requirements.html) and [Must
+    Support](must-support.html) pages
+
+
+
+    **NOTE**: US Core SearchParameters referenced in this
+    CapabilityStatement that are derived from standard FHIR
+    SearchParameters are only defined to document Server and Client
+    expectations. They specify additional expectations for the following
+    SearchParameter elements:
+
+
+
+    - `multipleAnd`
+
+    - `multipleOr`
+
+    - `comparator`
+
+    - `modifier`
+
+    - `chain`
+
+
+
+    They **SHALL NOT** be interpreted as search parameters for search.
+    Servers and Clients **SHOULD** use the standard FHIR
+    SearchParameters.
+  security:
+    description: '1. See the [General Security Considerations](security.html) section
+      for requirements and recommendations.'
   resource:
+
+
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -101,10 +111,10 @@ rest:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHALL
-      - url: http://hl7.org/fhir/StructureDefinition/display
-        valueString: US Core AllergyIntolerance Profile
       - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
         valueUrl: StructureDefinition-us-core-allergyintolerance.html
+      - url: http://hl7.org/fhir/StructureDefinition/display
+        valueString: US Core AllergyIntolerance Profile
     interaction:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -147,7 +157,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -158,9 +168,6 @@ rest:
       documentation: >-
         The client **SHALL** provide at least a code value
         and **MAY** provide both the system and code values.
-
-
-
         The server **SHALL** support both.
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -171,13 +178,14 @@ rest:
       documentation: >-
         The client **SHALL** provide at least a id value and
         **MAY** provide both the Type and id values.
-
-
-
         The server **SHALL** support both.
+
+
+
+
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -284,7 +292,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -341,7 +349,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHALL
@@ -462,7 +470,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -505,7 +513,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -610,28 +618,23 @@ rest:
           StructureDefinition-us-core-condition-problems-health-concerns.html
       - url: http://hl7.org/fhir/StructureDefinition/display
         valueString: US Core Condition Problems and Health Concerns Profile
-    documentation: >-
-      * For Encounter Diagnosis use the *US Core Condition
-      Encounter Diagnosis Profile*.
-
-        * When `Condition.category` is "encounter-diagnosis" the
-      encounter, **SHOULD** be referenced in
-      `Condition.encounter`.
-
-      * For Problems and Health Concerns use the *US Core Condition
-      Problems and Health Concerns Profile*.
-
-        * When `Condition.category` is a "problems-list-item", the
-      `Condition.clinicalStatus **SHOULD** be present.
-
-       * See the US Core General Guidance page for [Searching Using
-      lastUpdated](general-guidance.html#searching-using-lastupdated).
-      Updates to `Condition.meta.lastUpdated` **SHOULD** reflect:
-
-          * New problems and health concerns
-
-          * Changes in the clinical status or verifications status
-      of problems or health concern
+    documentation: "* For Encounter Diagnosis use the *US Core Condition Encounter
+      Diagnosis Profile*.\n  * When `Condition.category` is \"encounter-diagnosis\"\
+      \ the encounter, **SHOULD** be referenced in `Condition.encounter`.\n* For Problems
+      and Health Concerns use the *US Core Condition Problems and Health Concerns
+      Profile*.\n  * When `Condition.category` is a \"problems-list-item\", the `Condition.clinicalStatus
+      **SHOULD** be present.\n  * There is no single element in Condition that represents
+      the date of diagnosis. It may be the assertedDate Extension, `Condition.onsetDateTime`,
+      or `Condition.recordedDate`.\n      * Although all three are marked as must
+      support, the server is not required to support all.\n  \t* A server **SHALL**
+      support `Condition.recordedDate`.\n      * A server **SHALL** support at least
+      one of the assertedDate Extension and `Condition.onsetDateTime`. A server may
+      support both, which means they support all three elements.\n      * The client
+      application **SHALL** support all three elements.\n  * See the US Core General
+      Guidance page for [Searching Using lastUpdated](general-guidance.html#searching-using-lastupdated).
+      Updates to `Condition.meta.lastUpdated` **SHOULD** reflect:\n    * New problems
+      and health concerns\n    * Changes in the clinical status or verifications status
+      of problems or health concern"
     interaction:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -674,7 +677,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -818,7 +821,7 @@ rest:
         *second + time offset*.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Coverage
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|9.0.0-ballot'
@@ -872,7 +875,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -889,7 +892,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -980,7 +983,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1023,7 +1026,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -1188,7 +1191,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1277,7 +1280,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHALL
@@ -1430,7 +1433,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1521,36 +1524,30 @@ rest:
     operation:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
       name: docref
       definition: 'http://hl7.org/fhir/us/core/OperationDefinition/docref'
       _definition:
-        extension:
-        - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-          valueUrl: OperationDefinition-docref.html
-        - url: http://hl7.org/fhir/StructureDefinition/display
-          valueString: '$docref'
+          extension:
+            - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+              valueUrl: OperationDefinition-docref.html
+            - url: http://hl7.org/fhir/StructureDefinition/display
+              valueString: '$docref'
       documentation: >-
-        A server **SHALL** be capable of responding to
-        a $docref operation and  capable of returning at
-        least a reference to a generated CCD document, if
-        available. **MAY** provide references to other
-        'on-demand' and 'stable' documents (or
-        'delayed/deferred assembly') that meet the query
-        parameters as well. If a context date range is
-        supplied the server ** SHOULD**  provide references
-        to any document that falls within the date range.  If
-        no date range is supplied, then the server **SHALL**
-        provide references to last or current
-        document(s).  **SHOULD** document what resources, if
-        any, are returned as included resources
+        A client **SHOULD** be capable of transacting
+        a $docref operation and capable of receiving at least
+        a reference to a generated CCD document, and  **MAY**
+        be able to receive other document types, if
+        available.   **SHOULD**  be capable of receiving
+        documents as included resources in response to the
+        operation.
 
 
 
         `GET [base]/DocumentReference/$docref?patient=[id]`
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -1718,7 +1715,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1852,7 +1849,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Endpoint
     documentation: The Media Resource is a Must Support referenced resource when
       using the US Core PractitionerRole Profile.
@@ -1895,7 +1892,7 @@ rest:
       code: history-type
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -1957,7 +1954,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1987,7 +1984,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -2069,7 +2066,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2163,7 +2160,7 @@ rest:
       code: history-type
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -2236,7 +2233,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2280,7 +2277,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Location
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|9.0.0-ballot'
@@ -2292,9 +2289,9 @@ rest:
         valueUrl: StructureDefinition-us-core-location.html
       - url: http://hl7.org/fhir/StructureDefinition/display
         valueString: US Core Location Profile
-    documentation: '* Systems **SHOULD** enable the user who enters the address to
-      follow the Project US@ Technical Specification for Patient Addresses Final Version
-      1.0 as the standard style guide for `Location.address.line` and  `Location.address.city`.'
+    documentation: '* Systems **SHOULD** follow the Project US@ Technical Specification
+      for Patient Addresses Final Version 1.0 as the standard style guide for `Location.address.line`
+      and  `Location.address.city`.'
     interaction:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2365,7 +2362,7 @@ rest:
       type: string
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Media
     documentation: The Media Resource is a Must Support referenced resource when
       using the US Core DiagnosticReport Profile for Report and Note Exchange.
@@ -2408,7 +2405,7 @@ rest:
       code: history-type
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Medication
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|9.0.0-ballot'
@@ -2462,7 +2459,7 @@ rest:
       code: history-type
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -2560,7 +2557,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2603,7 +2600,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -2731,7 +2728,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2801,7 +2798,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -3128,7 +3125,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3217,7 +3214,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Organization
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|9.0.0-ballot'
@@ -3237,10 +3234,9 @@ rest:
       (sometimes called "NAIC Number" or "cocode")  for
       `Organization.Identifier`.
 
-      * Systems **SHOULD** enable the user who enters the address
-      to follow the Project US@ Technical Specification for Patient
-      Addresses Final Version 1.0 as the standard style guide for
-      `Organization.address.line`
+      * Systems **SHOULD** follow the Project US@ Technical
+      Specification for Patient Addresses Final Version 1.0 as the
+      standard style guide for `Organization.address.line`
       and  `Organization.address.city`.
     interaction:
     - extension:
@@ -3294,7 +3290,7 @@ rest:
       type: string
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHALL
@@ -3338,7 +3334,7 @@ rest:
       include additional codes from the detailed ethnicity and detailed race value
       sets drawn from the Race & Ethnicity - CDC (CDCREC) code system\n    - **SHALL**
       include a text description\n* Although Patient.deceased[x] is marked as
-       *Additional USCDI Requirement*, certifying systems are not required to support both choices,
+      *Additional USCDI Requirement*, certifying systems are not required to support both choices,
       but **SHALL** support at least `Patient.deceasedDateTime`.\n*  Servers can use
       the US Core Interpreter Needed Extension on this profile or the US Core Encounter
       Profile to communicate whether a patient needs an interpreter. Although the
@@ -3348,10 +3344,10 @@ rest:
       on at least one. The certifying Client application **SHALL** support the extension
       on both profiles.\n     - Systems **SHOULD** designate the patient's preferred
       language in the `Patient.communication.preferred` element.\n* Certifying systems
-      **SHALL** and non-certifying systems **SHOULD** enable the user who enters the
-      address to follow the Project US@ Technical Specification for Patient Addresses
-      Final Version 1.0 as the standard style guide for `Patient.address.line` and\
-      \  `Patient.address.city` for new and updated records."
+      **SHALL** and non-certifying systems **SHOULD** follow the Project US@ Technical
+      Specification for Patient Addresses Final Version 1.0 as the standard style
+      guide for `Patient.address.line` and  `Patient.address.city` for new and updated
+      records."
     interaction:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3394,7 +3390,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3463,7 +3459,7 @@ rest:
       type: string
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Practitioner
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|9.0.0-ballot'
@@ -3495,10 +3491,9 @@ rest:
       available to the patient (such as a work address or office
       telephone number).
 
-      * Systems **SHOULD** enable the user who enters the address
-      to follow the Project US@ Technical Specification for Patient
-      Addresses Final Version 1.0 as the standard style guide for
-      `Practitioner.address.line`
+      * Systems **SHOULD** follow the Project US@ Technical
+      Specification for Patient Addresses Final Version 1.0 as the
+      standard style guide for `Practitioner.address.line`
       and  `Practitioner.address.city`.
     interaction:
     - extension:
@@ -3565,7 +3560,7 @@ rest:
       type: string
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: PractitionerRole
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|9.0.0-ballot'
@@ -3657,7 +3652,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -3702,9 +3697,9 @@ rest:
         * Only LOINC concepts that reflect actual procedures
       **SHOULD** be used
 
-      * A procedure including a medical device **SHOULD** use
+      * A procedure including an implantable device **SHOULD** use
       `Procedure.focalDevice` with a reference to the *US Core
-      Device Profile*.
+      Implantable Device Profile*.
 
       * Servers and Clients **SHALL** support both US Core
       ServiceRequest and US Core Procedure Profiles for
@@ -3778,7 +3773,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3835,7 +3830,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Provenance
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0-ballot'
@@ -3868,8 +3863,6 @@ rest:
           * DocumentReference
 
           * Encounter
-
-          * FamilyMemberHistory
 
           * Goal
 
@@ -4167,7 +4160,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -4187,9 +4180,9 @@ rest:
         valueUrl: StructureDefinition-us-core-relatedperson.html
       - url: http://hl7.org/fhir/StructureDefinition/display
         valueString: US Core RelatedPerson Profile
-    documentation: '* Systems **SHOULD** enable the user who enters the address to
-      follow the Project US@ Technical Specification for Patient Addresses Final Version
-      1.0 as the standard style guide for `RelatedPerson.address.line` and  `RelatedPerson.address.city`.'
+    documentation: '* Systems **SHOULD** follow the Project US@ Technical Specification
+      for Patient Addresses Final Version 1.0 as the standard style guide for `RelatedPerson.address.line`
+      and  `RelatedPerson.address.city`.'
     interaction:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4232,7 +4225,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4261,7 +4254,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
         valueCode: SHOULD
@@ -4385,7 +4378,7 @@ rest:
       code: create
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: MAY
+        valueCode: SHALL
       code: search-type
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4420,7 +4413,7 @@ rest:
     _searchRevInclude:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-        valueCode: SHALL
+        valueCode: SHOULD
     searchParam:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4496,7 +4489,7 @@ rest:
         The server **SHALL** support both.
   - extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
-      valueCode: SHALL
+      valueCode: SHOULD
     type: Specimen
     supportedProfile:
     - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0-ballot'

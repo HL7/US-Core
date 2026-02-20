@@ -237,6 +237,7 @@
 [USCoreCareTeam]: StructureDefinition-us-core-careteam.html
 [USCoreCategory]: CodeSystem-us-core-category.html
 [UsCoreClientCapabilityStatement]: CapabilityStatement-us-core-client.html
+[USCoreClientRequirements]: Requirements-us-core-client.html
 [USCoreClinicalNoteType]: ValueSet-us-core-clinical-note-type.html
 [USCoreClinicalResultObservationCategory]: ValueSet-us-core-clinical-result-observation-category.html
 [USCoreConditionCategoryExtensionCodes]: CodeSystem-condition-category.html
@@ -305,6 +306,7 @@
 [USCoreScreeningAssessmentObservationCategory]: ValueSet-us-core-screening-assessment-observation-category.html
 [USCoreScreeningAssessmentObservationMaximumCategory]: ValueSet-us-core-screening-assessment-observation-maximum-category.html
 [UsCoreServerCapabilityStatement]: CapabilityStatement-us-core-server.html
+[USCoreServerRequirements]: Requirements-us-core-server.html
 [USCoreServiceRequestCategoryCodes]: ValueSet-us-core-servicerequest-category.html
 [USCoreServiceRequestProfile]: StructureDefinition-us-core-servicerequest.html
 [USCoreSexExtension]: StructureDefinition-us-core-sex.html

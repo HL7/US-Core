@@ -1,0 +1,25 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+<p>These requirements apply to the actor: <i><strong>US Core Requestor(Servers including Certifying Systems)</strong></i></p>
+
+<table class="grid">
+  <thead>
+    <tr>
+    <th>Key</th>
+    <th>Conformance</th>
+    <th>Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in Requirements.statement %}
+    <tr>
+    <td>{{ i.key }}</td>
+    <td style="text-align: center;">{{ i.conformance.join(', ') }}{% if i.extension('http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot').exists() %}SHALL-NOT{% endif %}{% if i.extension('http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement').exists() %}<br />(certifying systems<br />only){% endif %}</td>
+    <td>{{ i.requirement | markdownify }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+

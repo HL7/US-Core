@@ -4,7 +4,7 @@ set -e
 trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
 trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
 
-while getopts bcdefghijklmnopqrstuvwxyzCV option;
+while getopts bcdefghijklmnopqrstuvwxyzCVR option;
 do
  case "${option}"
  in
@@ -32,6 +32,8 @@ do
  z) DEL_TEMP=1;;
  C) DEL_CACHE=1;;
  V) VSACURI=1;;
+ R) GEN_REQ=1;;
+
  esac
 
 done
@@ -114,6 +116,7 @@ echo "-y tranform all yaml files to json files = $YAML_JSON"
 echo "-z delete the template and temp directories before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
 echo "-C delete the input-cache before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
 echo "-V update the vsacname-fhiruri-map.csv file for US Core = $VSACURI"
+echo "-R create Requirements Resources from csv file = $GEN_REQ"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -157,6 +160,58 @@ sleep 1
 #   echo ""
 #   sleep 1
 # fi
+
+if [[ $GEN_REQ ]]; then
+  echo "======================================="
+  echo "Update Requirements resources"...
+  # do not process rows with Conformance = "Deprecated"
+  # use the SHALLNOT extension for Conformance = "SHALL-NOT"
+
+  for role in server client; do
+    if [ "$role" == "server" ]; then
+      filter='.actor == "Server" or .actor == "Both"'
+    else
+      filter='.actor == "Client" or .actor == "Both"'
+    fi
+
+    yq -p=csv -oy --csv-auto-parse=f "
+      [.[] |
+        pick([\"key\", \"conformance\", \"requirement\", \"certifiers_only\", \"actor\"]) |
+        select($filter) |
+        select(.conformance != \"DEPRECATED\") |
+        .conformance = (.conformance | split(\"|\")) |
+
+        with(select(.certifiers_only == \"TRUE\");
+          .extension = [{
+            \"url\": \"http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement\",
+            \"valueBoolean\": true
+          }]) |
+        with(select(.certifiers_only != \"TRUE\");
+          . ) |
+
+        with(select(.conformance | contains([\"SHALL-NOT\"]));
+          .extension = (.extension // []) + [{
+            \"url\": \"http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot\",
+            \"valueBoolean\": true
+          }] |
+          .conformance = [.conformance[] | select(. != \"SHALL-NOT\")]
+        ) |
+        with(select(.conformance | length == 0);
+          del(.conformance)
+        ) |
+
+        del(.certifiers_only) |
+        del(.actor)
+      ]
+    " "$data"/us_core_reqs.csv > /tmp/statements.yaml
+
+    yq -i '.statement = load("/tmp/statements.yaml")' "${inpath}/resources-yaml/R5Requirements-us-core-${role}.yml"
+    echo "updated input/resources-yaml/R5Requirements-us-core-${role}.yml"...
+  done
+
+  echo "============= done ! ======================="
+  echo ""
+fi
 
 if [[ $VSACURI ]]; then
 URL="https://cts.nlm.nih.gov/fhir/metadata"

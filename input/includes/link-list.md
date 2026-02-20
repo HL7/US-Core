@@ -1,3 +1,5 @@
+<!-- Requirements links -->
+{% include requirements-link-list.md %}
 <!-- FHIR Core Resources -->
 {% include r4-link-list.md %}
 <!-- IG Pages (Including IG Artifacts -->

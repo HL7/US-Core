@@ -1,0 +1,3753 @@
+{
+  "resourceType": "Requirements",
+  "id": "us-core-server",
+  "url": "http://hl7.org/fhir/us/core/Requirements/us-core-server",
+  "name": "USCoreServerRequirements",
+  "title": "US Core Server Requirements",
+  "description": "This Requirements resources lists the US Core Responder (Servers including Certifying Systems) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.",
+  "_actor": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString": "US Core Requestor (Servers including Certifying Systems)"
+        }
+      ]
+    }
+  ],
+  "statement": [
+    {
+      "key": "CONF-0001",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "To support a US Core Profile, a Server: **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition."
+    },
+    {
+      "key": "CONF-0002",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "To support a US Core Profile, a Server: **SHOULD** declare support for a US Core Profile by including its official URL in the Server’s `CapabilityStatement.rest.resource.supportedProfile` element."
+    },
+    {
+      "key": "CONF-0003",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Servers may deploy and support one or more US Core Profiles to represent clinical information"
+    },
+    {
+      "key": "CONF-0004",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Server may deploy and support ... the following US Core interaction: “Quick Start” defined for each Profile"
+    },
+    {
+      "key": "CONF-0005",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Server may deploy and support ... the following US Core interaction: [Clinical Notes](https://hl7.org/fhir/us/core/clinical-notes.html)"
+    },
+    {
+      "key": "CONF-0006",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Server may deploy and support ... the following US Core interaction: [Medication List](https://hl7.org/fhir/us/core/medication-list.html)"
+    },
+    {
+      "key": "CONF-0007",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Server may deploy and support ... the following US Core interaction: [Basic Provenance](https://hl7.org/fhir/us/core/basic-provenance.html)"
+    },
+    {
+      "key": "CONF-0008",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Server may deploy and support ... the following US Core interaction: [Screening and Assessments](https://hl7.org/fhir/us/core/screening-and-assessments.html)"
+    },
+    {
+      "key": "CONF-0009",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Servers implementing ... [clinical information representation] can claim conformance to the US Core Profile content structure ... by implementing all or parts of the US Core CapabilityStatement into their capabilities."
+    },
+    {
+      "key": "CONF-0010",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Servers implementing ... [interactions] can claim conformance to the ... RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities"
+    },
+    {
+      "key": "CONF-0011",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "A Server that certifies to the [21st Century Cures Act for accessing patient data](https://www.federalregister.gov/d/2020-07419/p-1177) **SHALL** implement all components in the USCDI [[USCDI link](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)]",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0012",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "A Server that certifies to the [21st Century Cures Act for accessing patient data](https://www.federalregister.gov/d/2020-07419/p-1177) **SHALL** implement all components in the ... the US Core CapabilityStatement [[Definition](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html)] .",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0013",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition."
+    },
+    {
+      "key": "CONF-0014",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHOULD** declare conformance with the US [Core Server Capability Statement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`"
+    },
+    {
+      "key": "CONF-0015",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement."
+    },
+    {
+      "key": "CONF-0016",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL**… Declare support for the US Core Profile by including its official URL in the Server’s CapabilityStatement.rest.resource.supportedProfile element."
+    },
+    {
+      "key": "CONF-0017",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL**… Declare support for the US Core Profile’s FHIR RESTful transactions."
+    },
+    {
+      "key": "CONF-0018",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[Required binding](http://hl7.org/fhir/R4/terminologies.html#required) to a ValueSet definition means that one of the codes from the specified ValueSet **SHALL** be used."
+    },
+    {
+      "key": "CONF-0019",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For `CodeableConcept`, which permits multiple codings and a text element, this [[Required binding](http://hl7.org/fhir/R4/terminologies.html#required) to a ValueSet definition] rule applies to at least one of the codings"
+    },
+    {
+      "key": "CONF-0020",
+      "requirement": "For a [[required binding](http://hl7.org/fhir/R4/terminologies.html#required) to a ValueSet definition], a `CodeableConcept`which permits multiple codings and a text element … [using] only text is not valid.",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0021",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[When populating a coded element with a [required binding](http://hl7.org/fhir/R4/terminologies.html#required] to a ValueSet definition] US Core Responders **SHALL** provide a code exclusively from [the required binding] ValueSet"
+    },
+    {
+      "key": "CONF-0023",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[Extensible binding] (http://hl7.org/fhir/R4/terminologies.html#extensible) means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present."
+    },
+    {
+      "key": "CONF-0024",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[When using an [extensible Binding] (http://hl7.org/fhir/R4/terminologies.html#extensible)] If no suitable code exists in the [extensible] ValueSet, alternate code(s) may be provided."
+    },
+    {
+      "key": "CONF-0026",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "For `CodeableConcept` [with an [extensible binding] (http://hl7.org/fhir/R4/terminologies.html#extensible) … If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used."
+    },
+    {
+      "key": "CONF-0027",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When claiming conformance to ... [to a US Core profile extensible binding rule, a] US Core Responders Shall provide:\nA code from … [the] valueset 'DataElement.code.code' if the concept exists in the valueset [for a DataElement.code that has an extensible binding]\nOr an alternative code if the concept does not exist in the valueset [for a DataElement.code that has an extensible binding]\nOr text in ... `[DataElement.code.text]’ if only text is available [for a DataElement.code that has an extensible binding]"
+    },
+    {
+      "key": "CONF-0029",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called \"additional codings\"."
+    },
+    {
+      "key": "CONF-0030",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[The additional codings] may be equivalent to or narrower in meaning than the standard concept code."
+    },
+    {
+      "key": "CONF-0033",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Not all modifier elements are Mandatory or Must Support, and there is no requirement for supporting them"
+    },
+    {
+      "key": "CONF-0034",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Servers **MAY** communicate a system-wide profile in their CapabilityStatement to identify which additional elements, including modifier elements, they support"
+    },
+    {
+      "key": "CONF-0039",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled Must Support), the data element **SHALL** be omitted from the resource."
+    },
+    {
+      "key": "CONF-0040",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If the data element is a Mandatory element (in other words, where the minimum cardinality is > 0), it **SHALL** be present even if the source system does not have data."
+    },
+    {
+      "key": "CONF-0041",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For [mandatory] non-coded data elements [where data is not available], use the [DataAbsentReason Extension](http://hl7.org/fhir/R4/extension-data-absent-reason.html) in the data type ... [with] the code `unknown` - The value is expected to exist but is not known."
+    },
+    {
+      "key": "CONF-0042",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In situations where data is not available] for [mandatory] coded data elements … [with] *example*, *preferred*, or *extensible* binding strengths (CodeableConcept or Coding datatypes) If the source system has text but no coded data, only the text element is used."
+    },
+    {
+      "key": "CONF-0043",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In situations where data is not available] for [mandatory] coded data elements… [with] *example*, *preferred*, or *extensible* binding strengths (CodeableConcept or Coding datatypes):\nFor Coding datatypes, the text-only data is represented as a display element"
+    },
+    {
+      "key": "CONF-0044",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In situations where data is not available] for [mandatory] coded data elements… [with] *example*, *preferred*, or *extensible* binding strengths (CodeableConcept or Coding datatypes): … If there is neither text nor coded data ... [then] use the appropriate “unknown” concept code from the ValueSet if available."
+    },
+    {
+      "key": "CONF-0045",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In situations where data is not available] for [mandatory] coded data elements… [with] *example*, *preferred*, or *extensible* binding strengths (CodeableConcept or Coding datatypes): … If there is neither text nor coded data ... [then] if the ValueSet does not have the appropriate “unknown” concept code, use unknown from the [DataAbsentReason Code System](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html)."
+    },
+    {
+      "key": "CONF-0046",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In situations where data is not available] for [mandatory] coded data elements… [with] *required* binding strength (CodeableConcept or code datatypes): use the appropriate “unknown” concept code from the ValueSet if available"
+    },
+    {
+      "key": "CONF-0047",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In situations where data is not available] for [mandatory] coded data elements… [with] *required* binding strength (CodeableConcept or code datatypes): If the ValueSet does not have the appropriate “unknown” concept code, you must use a concept from the ValueSet. Otherwise, the instance will not be conformant"
+    },
+    {
+      "key": "CONF-0048",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If the source system does not have data for a Mandatory element for a coded data element with *required* binding strength] If any of these status codes is missing [meaning it lacks an \"unknown\" or otherwise appropriate concept code from the ValueSet, a] 404 HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource."
+    },
+    {
+      "key": "CONF-0049",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If the source system does not have data for a Mandatory element for a coded data element with *required* binding strength, and the ValueSet does not have the appropriate \"unknown\" concept code, then] if returning a response to a search, the problematic resource **SHALL** be excluded from the search set"
+    },
+    {
+      "key": "CONF-0050",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If the source system does not have data for a Mandatory element for a coded data element with *required* binding strength, and the ValueSet does not have the appropriate \"unknown\" concept code, then] if returning a response to a search, … a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed."
+    },
+    {
+      "key": "CONF-0051",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The [FHIR RESTful Search API](http://hl7.org/fhir/R4/http.html#search) requires that Servers that support search **SHALL** support the HTTP `POST`-based search."
+    },
+    {
+      "key": "CONF-0052",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For all the supported search interactions in this guide, Servers **SHALL** also support the `GET`-based search."
+    },
+    {
+      "key": "CONF-0055",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When searching using the `token` type searchparameter [(how to search by token)](http://hl7.org/fhir/R4/search.html#token) The Server **SHALL** support both [system and code values]"
+    },
+    {
+      "key": "CONF-0058",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When searching using the `reference` type searchparameter [(how to search by reference)](http://hl7.org/fhir/R4/search.html#reference) The Server **SHALL** support both [id and Type values]"
+    },
+    {
+      "key": "CONF-0061",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When searching using the `date` type searchparameter [(how to search by date)](http://hl7.org/fhir/R4/search.html#date) The Server **SHALL** support values precise to the day for elements of datatype `date`"
+    },
+    {
+      "key": "CONF-0062",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When searching using the `date` type searchparameter [(how to search by date)](http://hl7.org/fhir/R4/search.html#date) The Server **SHALL** support values precise … to the second + time offset for elements of `datatype` dateTime"
+    },
+    {
+      "key": "CONF-0063",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers are strongly encouraged to support a query for resources without requiring a status parameter."
+    },
+    {
+      "key": "CONF-0064",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If business requirements prohibit [querying a resource without a status parameter], they **SHALL** follow the guidelines here."
+    },
+    {
+      "key": "CONF-0065",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "For searches where the Client does not supply a status parameter, an implementation’s business rules may override the FHIR RESTful search expectations and require a status parameter to be provided"
+    },
+    {
+      "key": "CONF-0066",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For searches where the Client does not supply a status parameter, … systems [that require a status parameter to be provided] are allowed to reject such requests as follows:\n\n**SHALL** return an HTTP 400 status"
+    },
+    {
+      "key": "CONF-0067",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For searches where the Client does not supply a status parameter, … systems [that require a status parameter to be provided] are allowed to reject such requests as follows:\n\n**SHALL** return an [OperationOutcome](http://hl7.org/fhir/R4/operationoutcome.html) specifying that status(es) must be present."
+    },
+    {
+      "key": "CONF-0068",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For searches where the Client does not supply a status parameter, … systems [that require a status parameter to be provided] are allowed to reject such requests as follows:\n\n**SHALL** support search with status if status required"
+    },
+    {
+      "key": "CONF-0069",
+      "requirement": "[For systems that require a status parameter to be provided, they] **SHALL** NOT restrict search results ( i.e., apply ‘hidden’ filters) when a Client includes status parameters in the query.",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0070",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For systems that require a status parameter to be provided,] if a system doesn’t support a specific status code value that is queried, it **SHOULD** return an HTTP 200 status with a search bundle."
+    },
+    {
+      "key": "CONF-0071",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For systems that require a status parameter to be provided,] if a system doesn’t support a specific status code value that is queried [and returns a search bundle],... [t]he search bundle **SHOULD** contain resources matching the search criteria"
+    },
+    {
+      "key": "CONF-0072",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For systems that require a status parameter to be provided,] if a system doesn’t support a specific status code value that is queried [and returns a search bundle],... [t]he search bundle **SHOULD** contain ... an OperationOutcome warning the Client which status code value is not supported."
+    },
+    {
+      "key": "CONF-0073",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For searches where the Client does not supply a status parameter, … systems [that require a status parameter to be provided] are allowed to reject such requests as follows:...\n\n**SHALL** document this behavior in its CapabilityStatement for the “search-type” interaction in `CapabilityStatement.rest.resource.interaction.documentation.`"
+    },
+    {
+      "key": "CONF-0074",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When an element is Mandatory, the data is expected always to be present."
+    },
+    {
+      "key": "CONF-0075",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:\n\nUS Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server Capability Statement](https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-Server.html)."
+    },
+    {
+      "key": "CONF-0078",
+      "requirement": "For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:\n\nWhen information on a particular data element is not present, and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0080",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:\n\nIn cases where information on a specific data element is missing, and the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information."
+    },
+    {
+      "key": "CONF-0081",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When sending reason for missing information, follow] the same methdology outlined in the [Missing Data](https://hl7.org/fhir/us/core/STU8/general-requirements.html#missing-data) section but using the appropriate reason code instead of unknown [reason code]."
+    },
+    {
+      "key": "CONF-0084",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Implementors [US Core Responders] seeking ONC certification [in the ONC IT Health Certification program] **SHALL** interpret Additional USCDI Requirements as Must Support elements as documented above and below;"
+    },
+    {
+      "key": "CONF-0086",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Implementors [US Core Responders] [not] seeking ONC certification [in the ONC IT Health Certification program] **SHALL** interpret Additional USCDI Requirements as … optional."
+    },
+    {
+      "key": "CONF-0087",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If an element is marked as Must Support and defined by a pattern [as described by [ElementDefinition.pattern](http://hl7.org/fhir/R4/elementdefinition-definitions.html#ElementDefinition.pattern_x_)], then the pattern defines the elements and element values that the Server **SHALL** be capable of providing."
+    },
+    {
+      "key": "CONF-0090",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Primitive elements are single elements with a primitive value. If they are marked as Must Support, then the Server **SHALL** be capable of providing the element value to meet the Must Support requirement."
+    },
+    {
+      "key": "CONF-0091",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[W]hen claiming conformance [to a profile with a must support primitive element] … US Core responders SHALL be capable of providing the value [of the primitive element]"
+    },
+    {
+      "key": "CONF-0093",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For any complex element marked as Must Support, the Server **SHALL** be capable of providing at least one of the sub-element values."
+    },
+    {
+      "key": "CONF-0094",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If any sub-element is marked as Must Support [for a complex element], it must also meet the Must Support requirements and satisfy the Must Support requirements for the parent element."
+    },
+    {
+      "key": "CONF-0095",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[I]f any sub-element is marked as Must Support or Additional USCDI [for a complex element] and the parent element is not, there is no expectation that you must support the parent."
+    },
+    {
+      "key": "CONF-0096",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[I]f any sub-element is marked as Must Support [for a complex element] and the parent element is not… [and] the parent element is represented in the structure, Servers SHALL support the sub-element(s) marked as Must Support."
+    },
+    {
+      "key": "CONF-0097",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When claiming conformance [to a must support complex element with no must support sub-elements] … US Core Responders SHALL be capable of providing a value in [the] sub-element"
+    },
+    {
+      "key": "CONF-0099",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When claiming conformance [to a must support complex element with one or more must support sub-elements] … US Core Responders SHALL be capable of providing a value in [each must support sub-element]"
+    },
+    {
+      "key": "CONF-0101",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems [US Core Responders] can support the other elements [of a complex element, not labeled as a Must Support], but this is not a requirement of US Core"
+    },
+    {
+      "key": "CONF-0103",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The U.S. Core Data for Interoperability (USCDI) may require additional elements, [which is a requirement for certification in the ONC IT Health Certification program, but not a requirement of US Core conformance for US Core Responders]"
+    },
+    {
+      "key": "CONF-0105",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "In certain profiles, only specific resource references are labeled as Must Support.\n\n...\n\n- US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [all listed Must Support profile(s).]"
+    },
+    {
+      "key": "CONF-0107",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems [US Core Responders] can support other [resource] references [other than those labeled as Must Support], but this is not a requirement of US Core"
+    },
+    {
+      "key": "CONF-0109",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "In specific profiles, only a single resource reference is present on an element labeled Must Support.\n\n...\n\n- US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [the Must Support Profile.]"
+    },
+    {
+      "key": "CONF-0111",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support[, or a profile has] an Additional USCDI element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Additional USCDI\n\n… When claiming conformance to [such a] profile:\n\n- US Core Responders **SHALL** be capable of populating [the Must Support or Additional USCDI data type choice]"
+    },
+    {
+      "key": "CONF-0114",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support[, or a profile has] an Additional USCDI element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Additional USCDI\n\n…\n\n[US Core Responders] **MAY** support populating ... other [data type] choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core."
+    },
+    {
+      "key": "CONF-0115",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the Must Support or Additional USCDI requirement. In such cases, the Server  or Certifying System **SHALL** support at least one element."
+    },
+    {
+      "key": "CONF-0117",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "An individual SMART Server will publish a granular list of its capabilities, and a set of these capabilities is combined to support a specific use, a Capability Set. See SMART App Launch’s [FHIR OAuth authorization Endpoints and Capabilities](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities) for more details. Servers MAY support ... [any] SMART on FHIR Capability Sets and capabilities [(see [FHIR OAuth authorization Endpoints and Capabilities](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities))]"
+    },
+    {
+      "key": "CONF-0118",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "At least one of the following SMART on FHIR Capability Sets SHOULD be supported for US Core Servers that support User-Facing Applications ...\n[Patient Access Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#patient-access-for-standalone-apps)\n[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#clinician-access-for-standalone)"
+    },
+    {
+      "key": "CONF-0119",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For certified systems[, those participating in the ONC IT Health Certification program], both SHALL be supported:\n[Patient Access Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#patient-access-for-standalone-apps)\n[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#clinician-access-for-standalone)"
+    },
+    {
+      "key": "CONF-0120",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Implementations [US Core Responders] supporting Backend Services ... SHALL include support for the Client-confidential-asymmetric capability."
+    },
+    {
+      "key": "CONF-0121",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Implementations [US Core Responders] supporting Backend Services ... SHALL include support for the ... system/scopes."
+    },
+    {
+      "key": "CONF-0122",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Implementations [US Core Requestors] supporting Backend Services – for example, to meet US EHR certification requirements [of the ONC IT Health Certification program]- SHALL include support for the Client-confidential-asymmetric capability and system/scopes."
+    },
+    {
+      "key": "CONF-0123",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server[s] SHALL support token introspection defined by the SMART App Launch Guide. For more details and additional consideration, see SMART App Launch’s [Token Introspection](http://hl7.org/fhir/smart-app-launch/STU2/token-introspection.html#token-introspection)."
+    },
+    {
+      "key": "CONF-0124",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Implementations meeting US EHR certification [of the ONC IT Health Certification program] requirements must support all US Core’s required scopes."
+    },
+    {
+      "key": "CONF-0125",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Other systems only need to support scopes for the US Core APIs they support [instead of all US Core's required scopes]"
+    },
+    {
+      "key": "CONF-0126",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Servers MAY support other scopes in addition to those listed below and in the Quick Start sections."
+    },
+    {
+      "key": "CONF-0128",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For “User-Facing Applications”, a system’s support for patient-level (patient) or user-level (user) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](https://hl7.org/fhir/us/core/STU8/scopes.html#capability-sets) above). For example, if a Server lists permission-patient and permission-user in its capabilities, it SHALL support both patient-level and user-level required scopes"
+    },
+    {
+      "key": "CONF-0129",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For “User-Facing Applications”, a system’s support for patient-level (patient) or user-level (user) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](https://hl7.org/fhir/us/core/STU8/scopes.html#capability-sets) above). For example, if a Server lists permission-patient and permission-user in its capabilities, it ... SHOULD support both patient-level and user-level recommended best-practice scopes"
+    },
+    {
+      "key": "CONF-0130",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For “Backend-Services”, System-level scopes (system) describe data that a Client system is directly authorized to access. Systems that support system-level (system) scopes SHALL support the required US Core scopes"
+    },
+    {
+      "key": "CONF-0131",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For “Backend-Services”, System-level scopes (system) describe data that a Client system is directly authorized to access. Systems that support system-level (system) scopes SHOULD support the recommended US Core scopes"
+    },
+    {
+      "key": "CONF-0132",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] AllergyIntolerance [the] <patient|user|system>/AllergyIntolerance.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes] \n"
+    },
+    {
+      "key": "CONF-0133",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] CarePlan [the] <patient|user|system>/CarePlan.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes] \n"
+    },
+    {
+      "key": "CONF-0134",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] CareTeam [the] <patient|user|system>/CareTeam.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0135",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Condition [the] <patient|user|system>/Condition.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0136",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Coverage [the] <patient|user|system>/Coverage.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0137",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Device [the] <patient|user|system>/Device.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0138",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] DiagnosticReport [the] <patient|user|system>/DiagnosticReport.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0139",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] DocumentReference [the] <patient|user|system>/DocumentReference.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0140",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Encounter [the] <patient|user|system>/Encounter.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0141",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Goal [the] <patient|user|system>/Goal.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0142",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Immunization [the] <patient|user|system>/Immunization.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0143",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] MedicationDispense [the] <patient|user|system>/MedicationDispense.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0144",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] MedicationRequest [the] <patient|user|system>/MedicationRequest.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0145",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Observation [the] <patient|user|system>/Observation.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0146",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Organization [the] <patient|user|system>/Organization.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0147",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Patient [the] <patient|user|system>/Patient.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0148",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Practitioner [the] <patient|user|system>/Practitioner.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0149",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] PractitionerRole [the] <patient|user|system>/PractitionerRole.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0150",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Procedure [the] <patient|user|system>/Procedure.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0151",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Provenance [the] <patient|user|system>/Provenance.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0152",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] QuestionnaireResponse [the] <patient|user|system>/QuestionnaireResponse.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0153",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] RelatedPerson [the] <patient|user|system>/RelatedPerson.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0154",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] ServiceRequest [the] <patient|user|system>/ServiceRequest.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0155",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] Specimen [the] <patient|user|system>/Specimen.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0156",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **MAY** be supported\n...\n[For] Location [the] <patient|user|system>/Location.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0157",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **MAY** be supported\n...\n[For] Medication [the] <patient|user|system>/Medication.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0158",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Condition [the] <patient|user|system>/Condition.rs?category=http://hl7.org/fhir/us/core/CodeSystem/condition-category|health-concern [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0159",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Condition [the] <patient|user|system>/Condition.rs?category=http://terminology.hl7.org/CodeSystem/condition-category|encounter-diagnosis [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0160",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Condition [the] <patient|user|system>/Condition.rs?category=http://terminology.hl7.org/CodeSystem/condition-category|problem-list-item [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0161",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Observation [the] <patient|user|system>/Observation.rs?category=http://hl7.org/fhir/us/core/CodeSystem/us-core-category|sdoh [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0162",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Observation [the] <patient|user|system>/Observation.rs?category=http://terminology.hl7.org//CodeSystem-observation-category|social-history [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0163",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Observation [the] <patient|user|system>/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0164",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Observation [the] <patient|user|system>/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|survey [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0165",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following granular scopes **SHALL** be supported\n...\n[For] Observation [the] <patient|user|system>/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0166",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The following granular scopes **SHOULD** be supported\n...\n[For] DocumentReference [the] <patient|user|system>/DocumentReference.rs?category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]"
+    },
+    {
+      "key": "CONF-0167",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "In addition to the capabilities defined in the Server’s CapabilityStatement, Servers SHALL document their SMART capabilities in their [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known) JSON file."
+    },
+    {
+      "key": "CONF-0168",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request.... The Server SHALL list all the required US Core Scopes for the US Core Profiles they support in the scopes_supported array"
+    },
+    {
+      "key": "CONF-0169",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request. The Server [MAY support] additional scopes (so Clients should not consider … [the required scopes] an exhaustive list)."
+    },
+    {
+      "key": "CONF-0170",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request. Servers MAY limit Clients’ scopes to those configured at registration time."
+    },
+    {
+      "key": "CONF-0171",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request. … Servers SHALL allow users to select a subset of the requested scopes at the approval time."
+    },
+    {
+      "key": "CONF-0173",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `introspection_endpoint` the URL to a Server’s introspection endpoint. ... Servers SHALL document this endpoint in the file"
+    },
+    {
+      "key": "CONF-0174",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Therefore, a [reference](http://hl7.org/fhir/R4/references.html) to a US Core resource SHOULD include a logical id (Reference.reference), not an identifier (Reference.identifier)."
+    },
+    {
+      "key": "CONF-0175",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For all references, US Core Responders SHOULD return resources that conform to a US Core profile if a US Core profile exists for the resource type."
+    },
+    {
+      "key": "CONF-0176",
+      "conformance": [
+        "SHOULD-NOT"
+      ],
+      "requirement": "When responding to a query, Servers SHOULD not use inline [contained](http://hl7.org/fhir/R4/references.html#contained) resources to represent the returned data."
+    },
+    {
+      "key": "CONF-0177",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[I]f referencing a contained resource in a US Core Profile, the contained resource SHOULD be a US Core Profile if a US Core Profile exists for the resource type."
+    },
+    {
+      "key": "CONF-0178",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[M]asking data [where a specific piece of data is hidden for security and privacy reasons] SHOULD be handled based on implemented policies."
+    },
+    {
+      "key": "CONF-0179",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When masking data] elements with a minimum cardinality = 0 (including elements labeled Must Support) [for security and privacy reasons], the element SHOULD be omitted from the resource."
+    },
+    {
+      "key": "CONF-0180",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When masking] Mandatory elements (in other words, where the minimum cardinality is > 0) [for security and privacy reasons, use the code “unknown” following the guidance on Missing Data in the Conformance Sections."
+    },
+    {
+      "key": "CONF-0181",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[When using SNOMED codes in US Core Profiles I]mplementers MAY use the default system URI [of [SNOMED CT](http://snomed.info/sct)], which refers to an unspecified edition/version [of SNOMED]"
+    },
+    {
+      "key": "CONF-0182",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[To enable] terminology Servers to be able to validate US Edition-only codes [of [SNOMED CT](http://snomed.info/sct)], implementers SHOULD provide the accompanying system URI to describe the edition [see example 2 on [US Core general guidance](https://hl7.org/fhir/us/core/STU8/general-guidance.html#snomed-ct-united-states-edition)]"
+    },
+    {
+      "key": "CONF-0183",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If a] US Core Profiles binds the Quantity.code element in the Quantity datatype to the [UCUM](http://unitsofmeasure.org/) code system, [then] systems should also use UCUM for the optional valueRange and valueRatio datatypes (which are complex datatypes with Quantity elements)"
+    },
+    {
+      "key": "CONF-0184",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If a] US Core Profiles binds the Quantity.code element in the Quantity datatype to the [UCUM](http://unitsofmeasure.org/) code system, [when] UCUM code [is] provided [it SHOULD be indicated in the Quantity.unit and Quantity.code elements with Quantity.system = \"http://unitsofmeasure.org\"]"
+    },
+    {
+      "key": "CONF-0185",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If a] US Core Profiles binds the Quantity.code element in the Quantity datatype to the [UCUM](http://unitsofmeasure.org/) code system, [then] if UCUM units are unavailable, represent units in the unit element"
+    },
+    {
+      "key": "CONF-0186",
+      "conformance": [
+        "SHOULD-NOT"
+      ],
+      "requirement": "[If a] US Core Profiles binds the Quantity.code element in the Quantity datatype to the [UCUM](http://unitsofmeasure.org/) code system, [when]\nno units [are available systems SHOULD NOT supply the unit field]"
+    },
+    {
+      "key": "CONF-0187",
+      "conformance": [
+        "SHOULD-NOT"
+      ],
+      "requirement": "A FHIR Server SHOULD not delete records."
+    },
+    {
+      "key": "CONF-0188",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "A FHIR Server SHOULD update the appropriate resource status to entered-in-error or inactive [when requested to delete records]"
+    },
+    {
+      "key": "CONF-0189",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If a system supports the deletion of records, they SHOULD refer to the [Deletion Safety Checks](http://hl7.org/fhir/R4/safety.html#conformance) in the FHIR specification."
+    },
+    {
+      "key": "CONF-0190",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "A FHIR Server SHOULD allow these resources [those entered in error] to be searchable by Client applications."
+    },
+    {
+      "key": "CONF-0191",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If the FHIR Server has updated the resource status to entered-in-error:\nFor patient facing applications, A FHIR Server SHOULD remove the resource’s contents, leaving only an id and status. Note that this typically will not conform to the US Core or FHIR StructureDefinitions."
+    },
+    {
+      "key": "CONF-0192",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "If the FHIR Server has updated the resource status to entered-in-error:\n...\nFor provider-facing applications, the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to."
+    },
+    {
+      "key": "CONF-0193",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "the data provider SHOULD do their best to translate (safely) to the requested language [when accessing records in a native or requested language]"
+    },
+    {
+      "key": "CONF-0195",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When Clients request a resource in a specific language] Servers SHOULD make reasonable efforts to translate what can be safely translated."
+    },
+    {
+      "key": "CONF-0196",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When Clients request a resource in a specific language] Servers SHOULD populate the Resource’s language element with a code based on the underlying language of record, not the requested language.\n"
+    },
+    {
+      "key": "CONF-0197",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When Clients request a resource in a specific language] Servers SHOULD … [use] the [Human Language](http://hl7.org/fhir/R4/extension-language.html) Extension when the language of a display, etc, is known to differ from the stated (or inferred) language."
+    },
+    {
+      "key": "CONF-0198",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When Clients request a resource in a specific language] [Servers SHOULD use] the [Translation](http://hl7.org/fhir/R4/extension-translation.html) Extension when the Server provides additional translations by its own choice or in response to a different Accept-Language than what the resource is stored in."
+    },
+    {
+      "key": "CONF-0199",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When Clients request a resource in a specific language] Servers SHOULD make it known what languages are supported in their CapabilityStatement(s) using this extension:\nhttp://hl7.org/fhir/5.0/StructureDefinition/extension-CapablilityStatement.acceptLanguage [[definition](https://hl7.org/fhir/R5/capabilitystatement-definitions.html#CapabilityStatement.acceptLanguage)]"
+    },
+    {
+      "key": "CONF-0200",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers SHOULD support the [_lastUpdated](http://hl7.org/fhir/R4/search.html#lastUpdated) search parameter for US Core Profiles"
+    },
+    {
+      "key": "CONF-0201",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers ... SHOULD populate [Resource.meta.lastUpdated](http://hl7.org/fhir/R4/resource.html#Meta) for US Core Profiles as accurately as possible."
+    },
+    {
+      "key": "CONF-0202",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL document in CapabilityStatement.rest.resource.searchParam.documentation the types of changes that can be detected using the _lastUpdated search parameter"
+    },
+    {
+      "key": "CONF-0203",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "US Core Servers [MAY support compartment based searchs, but] are not required to support patient [compartment](http://hl7.org/fhir/R4/compartmentdefinition.html) based searches."
+    },
+    {
+      "key": "CONF-0204",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "US Core Servers [MAY resolve absolute URLs, but] are not required to resolve absolute URLs external to their environment."
+    },
+    {
+      "key": "CONF-0205",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Servers can [MAY] choose to return the results in a series of pages to manage the number of search results returned."
+    },
+    {
+      "key": "CONF-0206",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Consultation Note (11488-4)](https://loinc.org/11488-4.html)"
+    },
+    {
+      "key": "CONF-0207",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Discharge Summary (18842-5)](https://loinc.org/18842-5.html)"
+    },
+    {
+      "key": "CONF-0208",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[History & Physical Note (34117-2)](https://loinc.org/34117-2.html)"
+    },
+    {
+      "key": "CONF-0209",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Procedures Note (28570-0)](https://loinc.org/28570-0.html)"
+    },
+    {
+      "key": "CONF-0210",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Progress Note (11506-3)](https://loinc.org/11506-3.html)"
+    },
+    {
+      "key": "CONF-0211",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Imaging Narrative (18748-4)](https://loinc.org/18748-4.html)"
+    },
+    {
+      "key": "CONF-0212",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Laboratory Report Narrative (11502-2)](https://loinc.org/11502-2.html)"
+    },
+    {
+      "key": "CONF-0213",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Pathology Report Narrative (11526-1)](https://loinc.org/11526-1.html)"
+    },
+    {
+      "key": "CONF-0214",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … DiagnosticReport categories:\n[Cardiology (LP29708-2)](https://loinc.org/LP29708-2)"
+    },
+    {
+      "key": "CONF-0215",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … DiagnosticReport categories:\n[Pathology (LP7839-6)](https://loinc.org/LP7839-6)"
+    },
+    {
+      "key": "CONF-0216",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … DiagnosticReport categories:\n[Radiology (LP29684-5)](https://loinc.org/LP29684-5)"
+    },
+    {
+      "key": "CONF-0217",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "systems are encouraged to support other common notes types, such as:\n[Referral Note (57133-1)](https://loinc.org/57133-1.html)"
+    },
+    {
+      "key": "CONF-0218",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "systems are encouraged to support other common notes types, such as:\n[Surgical Operation Note (11504-8)](https://loinc.org/11504-8.html)"
+    },
+    {
+      "key": "CONF-0219",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "systems are encouraged to support other common notes types, such as:\n[Nurse Note (34746-8)](https://loinc.org/34746-8.html)"
+    },
+    {
+      "key": "CONF-0220",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server SHALL expose these overlapping scanned or narrative-only reports through both DiagnosticReport and DocumentReference by representing the same attachment URL [as] DocumentReference.content.attachment.url [and] \nDiagnosticReport.presentedForm.url"
+    },
+    {
+      "key": "CONF-0221",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "when DiagnosticReport.presentedForm.url references a Scan (PDF), that Attachment SHALL also be accessible through DocumentReference.content.attachment.url"
+    },
+    {
+      "key": "CONF-0222",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems [Servers] may extend their capabilities [around types of clinical notes] to the complete US Core DocumentReference Type Value Set."
+    },
+    {
+      "key": "CONF-0223",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "This guide requires [Server] systems to implement the [US Core DocumentReference Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html)"
+    },
+    {
+      "key": "CONF-0224",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "This guide requires [Server] systems to implement the [US Core DiagnosticReport Profile for Report and Note exchange](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html)"
+    },
+    {
+      "key": "CONF-0225",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems [Servers] may support other [DiagnosticReport] categories as well."
+    },
+    {
+      "key": "CONF-0227",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The following SHOULD be exposed via DiagnosticReport: Imaging Narrative\n"
+    },
+    {
+      "key": "CONF-0228",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The following SHOULD be exposed via DiagnosticReport: Laboratory Report Narrative\n"
+    },
+    {
+      "key": "CONF-0229",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The following SHOULD be exposed via DiagnosticReport: Pathology Report Narrative\n"
+    },
+    {
+      "key": "CONF-0230",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The following SHOULD be exposed via DiagnosticReport: Procedure Note"
+    },
+    {
+      "key": "CONF-0231",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers that support DiagnosticReport will include the clinical note narrative content in DiagnosticReport.presentedForm"
+    },
+    {
+      "key": "CONF-0233",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "FHIR Server claiming support to this guide SHOULD support the $expand operation [[operation link](http://hl7.org/fhir/R4/valueset-operation-expand.html) to provide information to Clients requesting information on the note and report types the Server supports]"
+    },
+    {
+      "key": "CONF-0234",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category&contextDirection=outgoing for DiagnosticReport report category discovery [for read operations]"
+    },
+    {
+      "key": "CONF-0235",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category&contextDirection=incoming for DiagnosticReport report category discovery [for write operations]"
+    },
+    {
+      "key": "CONF-0236",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code&contextDirection=outgoing for DiagnosticReport report type discovery [for read operations]"
+    },
+    {
+      "key": "CONF-0237",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code&contextDirection=incoming for DiagnosticReport report type discovery [for write operations]"
+    },
+    {
+      "key": "CONF-0238",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category&contextDirection=outgoing for DocumentReference note category discovery [for read operations]"
+    },
+    {
+      "key": "CONF-0239",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category&contextDirection=incoming for DocumentReference note category discovery [for write operations]"
+    },
+    {
+      "key": "CONF-0240",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type&contextDirection=outgoing for DocumentReference note type discovery [for read operations]"
+    },
+    {
+      "key": "CONF-0241",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:\nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type&contextDirection=incoming for DocumentReference note type discovery [for write operations]"
+    },
+    {
+      "key": "CONF-0242",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=outgoing for DiagnosticReport report content type discovery [for read operations]"
+    },
+    {
+      "key": "CONF-0243",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=incoming for DiagnosticReport report content type discovery [for write operations]"
+    },
+    {
+      "key": "CONF-0244",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing for DocumentReference note content type discovery [for read operations]"
+    },
+    {
+      "key": "CONF-0245",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming for DocumentReference note content type discovery [for write operations]"
+    },
+    {
+      "key": "CONF-0246",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[The [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html) and [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)] medication resources are not profiled by US Core, and systems that support US Core are permitted to use them"
+    },
+    {
+      "key": "CONF-0247",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When using a code [to represent a medication][, the code SHALL follow the [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible) binding rules to [Medication Clinical Drug (RxNorm)](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion) - i.e., unless RxNorm does not cover the concept, the RxNorm code SHALL be used."
+    },
+    {
+      "key": "CONF-0248",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "USCDI recommends the [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory) as an optional medication terminology. They can be supplied as an additional coding element [when representing a medication]"
+    },
+    {
+      "key": "CONF-0249",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "When referencing the Medication resource, the resource may be included in the returned bundle, as an external resource, or as a [contained](http://hl7.org/fhir/R4/references.html#contained) resource if it can’t stand alone. … The Server application MAY choose any combination of these methods"
+    },
+    {
+      "key": "CONF-0250",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "if an external reference to Medication is used, the Server SHALL support the [_include](http://hl7.org/fhir/R4/search.html#include) parameter for searching this element"
+    },
+    {
+      "key": "CONF-0252",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nA MedicationRequest resource query **SHALL** be all that is required to access \"all medications\" or \"all active medications\" for a patient. (In other words, no other medication resource type needs to be fetched)"
+    },
+    {
+      "key": "CONF-0253",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nThe [MedicationRequest resource] query result **SHALL** include all MedicationRequest resources with a `MedicationRequest.intent` = \"order\" representing authorized medication orders directly derived from the system's orders."
+    },
+    {
+      "key": "CONF-0254",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nThe [MedicationRequest resource] query result **SHALL** include all prescribed and \"self-prescribed\" MedicationRequest resources with a `MedicationRequest.intent` = \"plan\" representing reported medications."
+    },
+    {
+      "key": "CONF-0256",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nServers **SHALL** use the `MedicationRequest.reported[x]` element to indicate that the MedicationRequest record was captured as a secondary \"reported\" record rather than an original primary source-of-truth record."
+    },
+    {
+      "key": "CONF-0257",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nServers [MAY] use the `MedicationRequest.reported[x]` element to indicate ... the source of the report."
+    },
+    {
+      "key": "CONF-0258",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nWhen recording \"self-prescribed\" medication, Servers **SHOULD** use the `MedicationRequest.requester` element to indicate the Patient or RelatedPerson is the prescriber."
+    },
+    {
+      "key": "CONF-0259",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nServers **SHOULD** support the encounter search parameter. "
+    },
+    {
+      "key": "CONF-0260",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\n[If Servers support the encounter search parameter, s]earching by encounter will return all medications ordered during that encounter, including medications administered in the hospital and prescribed or discharge medications intended to be taken at home."
+    },
+    {
+      "key": "CONF-0262",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:\nServers **MAY** support the search parameters `category`and `encounter`. This search will return all medications ordered during an encounter for a given MedicationRequest.category such as \"inpatient\"."
+    },
+    {
+      "key": "CONF-0263",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "To provide a list of a patient’s medications, it may be necessary to “de-duplicate” them. The de-duplication activity MAY be supplied by the Server"
+    },
+    {
+      "key": "CONF-0266",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The HIE must maintain the original data source."
+    },
+    {
+      "key": "CONF-0267",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "An agent.type=”assembler”, agent.type=”transmitter”, or other agents from [Provenance Agent Type](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-provenance-participant-type.html) value set MAY also be included."
+    },
+    {
+      "key": "CONF-0268",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "implementers [of US Core's framework of Screening and Assessments] SHOULD consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases."
+    },
+    {
+      "key": "CONF-0269",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Every Server that supports the USDCI Data Class “Health Status/Assessments”:\n\nSHALL support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html) or [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html)."
+    },
+    {
+      "key": "CONF-0270",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Every Server that supports the USDCI Data Class “Health Status/Assessments”:\n...\nThe US Core Simple Observation Profile's Observation.derivedFrom element **SHOULD** reference the [Structured Screening and Assessment](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#structured-screening-and-assessments) upon which clinical judgment observations are made"
+    },
+    {
+      "key": "CONF-0271",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Every Server that supports the USDCI Data Class “Health Status/Assessments”:\n...\nthe US Core Condition Profile's Condition.evidence.detail element **SHOULD** reference the [Structured Screening and Assessment](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#structured-screening-and-assessments) which assist in diagnosing problems or health concerns."
+    },
+    {
+      "key": "CONF-0272",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For API developers using US Core, it’s important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:\nObservations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions ... anything that meets one of the preceding criteria must be surfaced as an Observation."
+    },
+    {
+      "key": "CONF-0273",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For API developers using US Core, it’s important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:\nObservations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions ... anything that meets one of the preceding criteria must be surfaced as an Observation."
+    },
+    {
+      "key": "CONF-0274",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For FHIR implementers, it is important to note that QuestionnaireResponse [which represent the source-of-truth of a completed form, shall] references a specific version of a form, whether it was represented as a FHIR Questionnaire or not. This reference provides the context of exactly what options were available, what logic was used to calculate answers, and what questions were asked."
+    },
+    {
+      "key": "CONF-0280",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Implementers SHOULD treat these [USCDI Health Status Assessments Data Element] value sets as having an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible) binding."
+    },
+    {
+      "key": "CONF-0281",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "when recording SDOH data [with] US Core Profiles, Servers SHOULD use … [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion), [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion), [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion), [and] [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)"
+    },
+    {
+      "key": "CONF-0282",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "A Server may support Version DSTU2 and Argonaut Data Query"
+    },
+    {
+      "key": "CONF-0283",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "A Server may support … FHIR R4 and US Core ver 3.1.1+"
+    },
+    {
+      "key": "CONF-0284",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "A Server may support [both] [(]Version DSTU2 and Argonaut Data Query[) and (] FHIR R4 and US Core ver 3.1.1+[)]"
+    },
+    {
+      "key": "CONF-0285",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "A Server may make explicit which version of Argo/US Core is on their FHIR endpoint (e.g., “DSTU2” or “R4” path component or separate files based on version)."
+    },
+    {
+      "key": "CONF-0287",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers SHOULD maintain a stable common identifier for a resource across [FHIR] versions."
+    },
+    {
+      "key": "CONF-0288",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "In an upgraded R4 endpoint, any data in FHIR DSTU2 SHOULD be in FHIR R4."
+    },
+    {
+      "key": "CONF-0289",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation SHOULD be supported in a R4 implementation"
+    },
+    {
+      "key": "CONF-0290",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation SHOULD be supported in a R4 implementation [with the] exception [of]\nMedicationStatement may be deprecated, and the data SHOULD be mapped to MedicationRequest."
+    },
+    {
+      "key": "CONF-0291",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation SHOULD be supported in a R4 implementation [with the] exception [of]\nCare teams as represented by CarePlan in DSTU2 SHOULD be replaced by and the data mapped to CareTeam in R4"
+    },
+    {
+      "key": "CONF-0295",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers SHOULD make available the same information in DSTU2 and R4 where the more recent standard allows."
+    },
+    {
+      "key": "CONF-0296",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers SHOULD make available the same information in DSTU2 and R4 where the more recent standard allows … [with the] exception [of]\nMedicationStatement data [should be] mapped to MedicationRequest"
+    },
+    {
+      "key": "CONF-0297",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers SHOULD make available the same information in DSTU2 and R4 where the more recent standard allows … [with the] exception [of]\ncare teams, as represented by CarePlan, SHOULD be mapped to CareTeam in R4"
+    },
+    {
+      "key": "CONF-0298",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Data SHOULD be maintained between [FHIR] versions (i.e., not be degraded)."
+    },
+    {
+      "key": "CONF-0300",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Separate authorization is required [between different versions of FHIR]"
+    },
+    {
+      "key": "CONF-0302",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[The clinical status of the allergy] SHALL be present if verification status is not “entered-in-error”"
+    },
+    {
+      "key": "CONF-0303",
+      "requirement": "[The clinical status of the allergy] SHALL NOT be present if verification Status is “entered-in-error”",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0305",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Profile Specific Implementation Guidance:\n\nNo Known Allergies may be represented using the US Core-AllergyIntolerance profile"
+    },
+    {
+      "key": "CONF-0306",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[When used No Known Allergies is documented the system Shall use an] appropriate negation code in AllergyIntolerence.code"
+    },
+    {
+      "key": "CONF-0307",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[When used No Known Allergies is documented the system Shall use an] verification status in AllergyIntolerance.verificationStatus"
+    },
+    {
+      "key": "CONF-0308",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If a patient has not been asked about their allergies, this would be represented as:\nAllergyIntolerance.code = “1631000175102” (Patient not asked (contextual qualifier) (qualifier value))\nAllergyIntolerance.verificationStatus = “unconfirmed” or empty (in other words, then element omitted)"
+    },
+    {
+      "key": "CONF-0309",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If a patient has been asked, but has indicated they have no known allergies, this would be represented as:\nAllergyIntolerance.code = “716186003” (No known allergy (situation))\nAllergyIntolerance.verificationStatus = “confirmed”"
+    },
+    {
+      "key": "CONF-0310",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Considerations for systems aligning with [HL7 Consolidated (C-CDA)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements: US Core Goal SHOULD be present in CarePlan.goal"
+    },
+    {
+      "key": "CONF-0311",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Considerations for systems aligning with [HL7 Consolidated (C-CDA)] (http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements: ... US Core Condition SHOULD be present in CarePlan.addresses"
+    },
+    {
+      "key": "CONF-0312",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Considerations for systems aligning with [HL7 Consolidated (C-CDA)] (http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements: Assessment and Plan MAY be included as narrative in CarePlan.text"
+    },
+    {
+      "key": "CONF-0313",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although both US Core Practitioner Profile and US Core PractitionerRole are Must Support, ... Server system[s conforming to the US Core CareTeam profile are] ... not required to support references to both, but SHALL support at least one of them"
+    },
+    {
+      "key": "CONF-0317",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When conforming to the US Core CareTeam profile] Because the US Core PractitionerRole Profile supplies the provider’s location and contact information and a reference to the Practitioner, Server systems [conforming to the US Core CareTeam profile] SHOULD reference it instead of the US Core Practitioner Profile [when conforming to the US Core CareTeam profile] ."
+    },
+    {
+      "key": "CONF-0318",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers [conforming to the US Core CareTeam profile] that support only US Core Practitioner Profile and do not support the US Core PractitionerRole Profile SHALL provide implementation-specific guidance on how to access a provider’s location ... information using only the Practitioner resource."
+    },
+    {
+      "key": "CONF-0319",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers [conforming to the US Core CareTeam profile] that support only US Core Practitioner Profile and do not support the US Core PractitionerRole Profile SHALL provide implementation-specific guidance on how to access a provider’s ... contact information using only the Practitioner resource."
+    },
+    {
+      "key": "CONF-0320",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For Problems and Health Concerns [records, systems SHOULD] use the [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html)."
+    },
+    {
+      "key": "CONF-0321",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[Newly created Encounter Diagnosis records SHALL have a] Condition.code … [from the] [“current”](https://hl7.org/fhir/R5/terminologies.html#binding) … [value set] binding."
+    },
+    {
+      "key": "CONF-0322",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[Historical Encounter Diagnosis records MAY have a] Condition.code … [from the] base “preferred” … [value set] binding."
+    },
+    {
+      "key": "CONF-0323",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "USCDI’s applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM. The US Core Condition Codes only supports ICD-9-CM for historical purposes. When using ICD codes, only non-header ICD-10-CM codes SHOULD be used as the primary code for current encounter diagnoses."
+    },
+    {
+      "key": "CONF-0324",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[A US Core Condition Encounter Diagnosis] encounter SHOULD always be referenced in Condition.encounter."
+    },
+    {
+      "key": "CONF-0330",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For Encounter Diagnosis [records, systems SHOULD] use the [US Core Condition Encounter Diagnosis Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html)."
+    },
+    {
+      "key": "CONF-0331",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If the category is \"problem-list-item\", Condition.clinicalStatus SHOULD be present."
+    },
+    {
+      "key": "CONF-0332",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Updates to .meta.lastUpdated SHOULD reflect: New problems and health concerns "
+    },
+    {
+      "key": "CONF-0333",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Updates to .meta.lastUpdated SHOULD reflect:\nChanges in the clinical status or verifications status of problems or health concerns [This will change to a SHALL requirement in US Core v8.0.0]"
+    },
+    {
+      "key": "CONF-0334",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "A coverage.type of “81” (Self-pay) MAY be used to imply that the patient has no coverage or that an individual or organization other than an insurer is taking responsibility for payment for a portion of the health care costs."
+    },
+    {
+      "key": "CONF-0335",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Implementers should refer to the [PHDSC Payer Type Committee User’s Guide](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) for the Source of Payment Typology when selecting codes."
+    },
+    {
+      "key": "CONF-0336",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "To differentiate Medicare Parts A, B, C, and D systems can use the following codes [when sending Coverage.type]: [For] Part A and B [use] 121 (Medicare Fee For Service)"
+    },
+    {
+      "key": "CONF-0337",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "To differentiate Medicare Parts A, B, C, and D systems can use the following codes: [For] Part C (Medicare Advantage Plan) [use] 111 (Medicare HMO), 112 (Medicare PPO), 113 (Medicare POS)"
+    },
+    {
+      "key": "CONF-0338",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "To differentiate Medicare Parts A, B, C, and D systems can use the following codes: [For] Part D [use] 122 (Medicare Drug Benefit)"
+    },
+    {
+      "key": "CONF-0339",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If Insurers issue unique member IDs for dependents, then the memberId Coverage.identifier should be used [with the unique dependent ID] instead of Coverage.dependent to uniquely refer to the dependent with respect to their insurance."
+    },
+    {
+      "key": "CONF-0340",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For non-implantable devices (for example, software or crutches), use the base FHIR Device resource or other use case-specific Device profiles."
+    },
+    {
+      "key": "CONF-0341",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the [unique device ID] UDI"
+    },
+    {
+      "key": "CONF-0342",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Implantable medical devices with UDI information SHALL represent the UDI code in Device.udiCarrier.carrierHRF"
+    },
+    {
+      "key": "CONF-0343",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "UDI-PI elements present [in Device.udiCarrier.carrierHRF] SHALL be represented in the corresponding US Core Implantable Device Profile elements"
+    },
+    {
+      "key": "CONF-0344",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If UDI is not present and the manufacturer … is available, … [it] SHOULD be included to support historical reports of implantable medical devices [where] manufacturer [is sent in] Device.manufacturer"
+    },
+    {
+      "key": "CONF-0345",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If UDI is not present and the ... model number information is available, … [it] SHOULD be included to support historical reports of implantable medical devices [where] model [is sent in] Device.model"
+    },
+    {
+      "key": "CONF-0346",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers SHOULD support query by Device.type to allow Clients to request the patient’s devices by a specific type."
+    },
+    {
+      "key": "CONF-0347",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Records of implanted devices MAY be queried against UDI data, including: UDI HRF string (udi-carrier)"
+    },
+    {
+      "key": "CONF-0348",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Records of implanted devices MAY be queried against UDI data, including:UDI Device Identifier (udi-di)"
+    },
+    {
+      "key": "CONF-0349",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Records of implanted devices MAY be queried against UDI data, including: Manufacturer (manufacturer)"
+    },
+    {
+      "key": "CONF-0350",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Records of implanted devices MAY be queried against UDI data, including: Model number (model)"
+    },
+    {
+      "key": "CONF-0351",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Implementers MAY also adopt custom SearchParameters for searching by lot numbers"
+    },
+    {
+      "key": "CONF-0352",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Implementers MAY also adopt custom SearchParameters for searching by serial number"
+    },
+    {
+      "key": "CONF-0353",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Implementers MAY also adopt custom SearchParameters for searching by expiration date"
+    },
+    {
+      "key": "CONF-0354",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Implementers MAY also adopt custom SearchParameters for searching by manufacture date"
+    },
+    {
+      "key": "CONF-0355",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Implementers MAY also adopt custom SearchParameters for searching by distinct identifier"
+    },
+    {
+      "key": "CONF-0356",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The diagnostically relevant time (known as the “effective time” and typically the time of specimen collection) … SHALL be present if status [of the diagnostic report] is ‘partial’, ‘preliminary’, ‘final’, ‘amended’, ‘corrected’, or ‘appended’."
+    },
+    {
+      "key": "CONF-0357",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When the report was released … SHALL be present if status [of the diagnostic report] is ‘partial’, ‘preliminary’, ‘final’, ‘amended’, ‘corrected’, or ‘appended’."
+    },
+    {
+      "key": "CONF-0358",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Updates to .meta.lastUpdated SHOULD reflect New laboratory reports. "
+    },
+    {
+      "key": "CONF-0359",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Updates to .meta.lastUpdated SHOULD reflect changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended)."
+    },
+    {
+      "key": "CONF-0360",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The DiagnosticReport.category binding Must Support, at a minimum, the US Core DiagnosticReport Category Codes of Cardiology, Radiology, and Pathology"
+    },
+    {
+      "key": "CONF-0361",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Other [diagnostic report] categories may be supported [when using US Core DiagnosticReport Profile for Report and Note Exchange]"
+    },
+    {
+      "key": "CONF-0362",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[L]inkages between specific LOINC codes and the LP-type codes may be used as guidance [for a Server's categorization of diagnostic reports]"
+    },
+    {
+      "key": "CONF-0364",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For Diagnostic Imaging Reports systems SHOULD support using the subset of LOINC codes defined in CONF-DIR-19 in HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) - Universal Realm, Release 1.0."
+    },
+    {
+      "key": "CONF-0365",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The DocumentReference.type binding Must Support, at a minimum, the 10 [Common Clinical Notes](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)"
+    },
+    {
+      "key": "CONF-0366",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The DocumentReference.type binding may extend to the whole [US Core DocumentReference Type Value Set](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-documentreference-type.html)"
+    },
+    {
+      "key": "CONF-0367",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[DocumentReference.type may also use] other category schemes such as the LOINC-based [Document Class Value Set](http://hl7.org/fhir/R4/valueset-document-classcodes.html) and [IHE XDSclassCode](https://wiki.ihe.net/index.php/XDS_classCode_Metadata_Coding_System)"
+    },
+    {
+      "key": "CONF-0368",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although both [DocumentReference.attachment.url and DocumentReference.attachment.data] are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but SHALL support at least one of these elements."
+    },
+    {
+      "key": "CONF-0372",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If there are multiple DocumentReference.content element repetitions, these SHALL all represent the same document in different formats or attachment metadata"
+    },
+    {
+      "key": "CONF-0373",
+      "requirement": "The [documentReference.content] element SHALL NOT contain different versions of the same content.",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0374",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The organization responsible for the DocumentReference SHALL be present either in DocumentReference.custodian or accessible in the Provenance resource targeting the DocumentReference using Provenance.agent.who or Provenance.agent.onBehalfOf"
+    },
+    {
+      "key": "CONF-0375",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although ... marked as Must Support, Servers are not required to support both [an Encounter.reasonCode or a reference with Encounter.reasonReference], but they SHALL support at least one of these elements."
+    },
+    {
+      "key": "CONF-0378",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If Encounter.reasonReference references an Observation, it SHOULD conform to a US Core Observation [profile applicable to the observation being made]"
+    },
+    {
+      "key": "CONF-0379",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although … marked as Must Support, Servers are not required to support both Encounter.location.location and Encounter.serviceProvider, but they SHALL support at least one of these elements."
+    },
+    {
+      "key": "CONF-0382",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If the event facility/location differs from the Encounter.location, systems SHOULD reference it directly"
+    },
+    {
+      "key": "CONF-0383",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If the event facility/location differs from the Encounter.location, … systems SHALL use the location element for all resources where the element is available."
+    },
+    {
+      "key": "CONF-0384",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "If the event facility/location differs from the Encounter.location … systems MAY use the standard [Event Location Extension](http://hl7.org/fhir/StructureDefinition/event-location) for US Core DiagnosticReport Profile for Laboratory Results Reporting and US Core Observation Clinical Result Profile."
+    },
+    {
+      "key": "CONF-0385",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Updates to .meta.lastUpdated SHOULD reflect New encounters/visits"
+    },
+    {
+      "key": "CONF-0386",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Updates to .meta.lastUpdated SHOULD reflect changes in the status of encounters, including events that trigger the same status (e.g., in-progress → in-progress)."
+    },
+    {
+      "key": "CONF-0387",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although both Goal.startDate and Goal.target.dueDate are marked as Must Support, the Server system is not required to support both, but SHALL support at least one of these elements."
+    },
+    {
+      "key": "CONF-0390",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[Servers shall] use the status code: not-done to represent that an immunization was not given."
+    },
+    {
+      "key": "CONF-0391",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organization participating in the ONC Health IT Certification program] [CVX vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) are required"
+    },
+    {
+      "key": "CONF-0392",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[NDC vaccine codes](http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) SHOULD be supported as an additional code [of [CVX Vaccine Codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp)]"
+    },
+    {
+      "key": "CONF-0393",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The preferred code system identifier … is [http://hl7.org/fhir/sid/cvx](http://hl7.org/fhir/sid/cvx) for CVX [vaccine codes]"
+    },
+    {
+      "key": "CONF-0394",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The preferred code system identifier … is [http://hl7.org/fhir/sid/ndc](http://hl7.org/fhir/sid/ndc) for NDC vaccine codes]"
+    },
+    {
+      "key": "CONF-0395",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems SHOULD follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Location.address.line"
+    },
+    {
+      "key": "CONF-0396",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems SHOULD follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Location.address.city"
+    },
+    {
+      "key": "CONF-0397",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When using a code [to represent a medication for a medication dispense], RXNorm concepts are used."
+    },
+    {
+      "key": "CONF-0398",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "When using a code [to represent a medication for a medication dispense], [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory) can be supplied as an additional coding element."
+    },
+    {
+      "key": "CONF-0399",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "When referencing a Medication resource in .medicationReference, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained)"
+    },
+    {
+      "key": "CONF-0400",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "When referencing a Medication resource in .medicationReference, the resource may be an external resource"
+    },
+    {
+      "key": "CONF-0401",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The Server systems are not required to support both a [medication] code and a reference [when sending medicationDispense], but SHALL support at least one of these methods"
+    },
+    {
+      "key": "CONF-0402",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If an external reference to a Medication resource is used, the Server SHALL support the [_include](http://hl7.org/fhir/R4/search.html#include) parameter for searching this element."
+    },
+    {
+      "key": "CONF-0405",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organization participating in the ONC Health IT Certification program Servers SHALL support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):], The reason or indication for the prescription"
+    },
+    {
+      "key": "CONF-0406",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organization participating in the ONC Health IT Certification program Servers SHALL support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):] reported adherence to prescribed medication instructions"
+    },
+    {
+      "key": "CONF-0407",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "When recording “self-prescribed” medication, requester SHOULD be used to indicate the Patient or RelatedPerson as the prescriber"
+    },
+    {
+      "key": "CONF-0408",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although [medicationRequest.reportedBoolean and MedicationRequest.reportedReference] are both marked as Must Support, the Server system is not required to support both, but SHALL support at least one of these elements"
+    },
+    {
+      "key": "CONF-0411",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although both MedicationRequest.reasonCode and MedicationRequest.reasonReference are marked as Additional USCDI Requirements [which are required for organizations participating in the ONC Health IT Certification program]. The certifying Server system is not required to support both, but SHALL support at least one of these elements"
+    },
+    {
+      "key": "CONF-0414",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program and supporting MedicationRequest.reasonReference,] Servers SHALL support at least one target resource in MedicationRequest.reasonReference"
+    },
+    {
+      "key": "CONF-0416",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] the referenced resources SHOULD be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles)."
+    },
+    {
+      "key": "CONF-0417",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Source EHR identifiers SHOULD be included to support deduplication across MedicationRequest resources."
+    },
+    {
+      "key": "CONF-0419",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The observations MAY have additional codes that translate or map to the Observation code or category codes [such as] … local system-specific codes [and] …more specific codes"
+    },
+    {
+      "key": "CONF-0420",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For an Observation a] code system value SHOULD be supplied for each additional code"
+    },
+    {
+      "key": "CONF-0421",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Because the blood pressure values are communicated in the mandatory systolic and diastolic components [when using the US Core Average Blood Pressure Profile,] the Observation.value[x] element SHALL be omitted"
+    },
+    {
+      "key": "CONF-0422",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The context or precondition of a patient’s [care experience] preference SHOULD be supplied in the Observation.valueString or in an extension"
+    },
+    {
+      "key": "CONF-0423",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers SHOULD use the base FHIR [Observation Category Codes] (http://hl7.org/fhir/R4/valueset-observation-category.html) [in Observation.category]"
+    },
+    {
+      "key": "CONF-0424",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems SHOULD support Observation.effectivePeriod to accurately represent measurements over time"
+    },
+    {
+      "key": "CONF-0425",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "An Observation.component without a value, SHALL include a reason why the data is absent"
+    },
+    {
+      "key": "CONF-0426",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems that never provide a component observation without a component value … [MAY choose not] to support Observation.component.dataAbsentReason"
+    },
+    {
+      "key": "CONF-0427",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "An Observation without a value, SHALL include a reason why the data is absent"
+    },
+    {
+      "key": "CONF-0428",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[For] an Observation without a value … [Systems MAY choose not to] include a reason why the data is absent … [if] there are component observations or … reporting panel observations using Observation.hasMember"
+    },
+    {
+      "key": "CONF-0429",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems that never provide an observation without a value ... [MAY choose not] to support Observation.dataAbsentReason"
+    },
+    {
+      "key": "CONF-0430",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When sending US Core Laboratory Results Observation Profile] updates to .meta.lastUpdated SHOULD reflect new laboratory observations"
+    },
+    {
+      "key": "CONF-0431",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When sending US Core Laboratory Results Observation Profile] updates to .meta.lastUpdated SHOULD reflect changes in the status of laboratory observations, including events that trigger the same status (e.g., amended → amended)"
+    },
+    {
+      "key": "CONF-0432",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[When sending US Core Observation Occupation Profile] for … [a] current job, [Servers SHALL] omit observation.effectivePeriod.end to indicate it is ongoing."
+    },
+    {
+      "key": "CONF-0433",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When the industry is known, but the occupation is not, [Servers SHALL] use the value “unknown” from the [DataAbsentReason Code System](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html)"
+    },
+    {
+      "key": "CONF-0434",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "when the occupation is known but the industry is not, [Servers SHALL] omit the industry Observation.component"
+    },
+    {
+      "key": "CONF-0435",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "To represent the patient’s pregnancy status, [Servers SHALL] use the [US Core Observation Pregnancy Status Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-pregnancystatus.html)."
+    },
+    {
+      "key": "CONF-0436",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "To represent the patient’s intent to become pregnant, [Servers SHALL] use the [US Core Observation Pregnancy Intent Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-pregnancyintent.html)."
+    },
+    {
+      "key": "CONF-0437",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For] multi-question surveys or assessments Observation.code is an overarching assessment or screening code, and the Observation.value element SHOULD be empty"
+    },
+    {
+      "key": "CONF-0438",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "A practitioner’s clinical observation or assertion about a patient’s health status, which is not a response to a screening or assessment question,SHOULD use the [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-simple-observation.html) instead [of the US Core Observation Screening Assessment Profile]"
+    },
+    {
+      "key": "CONF-0439",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "the Server system ... SHALL support [either] Reference(US Core Observation Screening Assessment Profile) or Reference(US Core QuestionnaireResponse Profile) for Observation.derivedFrom"
+    },
+    {
+      "key": "CONF-0440",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Additional codes that translate or map to the Observation code (e.g., local codes) are allowed [when using US Core Observation Sexual Orientation Profile]"
+    },
+    {
+      "key": "CONF-0441",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Observations formally part of an assessment tool or survey SHOULD use the [US Core Observation Screening Assessment Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html)."
+    },
+    {
+      "key": "CONF-0442",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "An assertion or determination derived from screening and assessment tools SHOULD reference them using Observation.derivedFrom"
+    },
+    {
+      "key": "CONF-0443",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "When using `Observation.derivedFrom’ to reference an Observation, the referenced Observation SHOULD be a US Core Observation"
+    },
+    {
+      "key": "CONF-0444",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although none of the Observation.derivedFrom [references are flagged as Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html#must-support---resource-references), the Server SHALL support at least one of them"
+    },
+    {
+      "key": "CONF-0445",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[US Core] treatment intervention preferences expressed by a patient may be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer."
+    },
+    {
+      "key": "CONF-0446",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When using US Core Treatment Intervention Preference Profile] the context or precondition of a patient’s preference SHOULD be supplied in the Observation.valueString ... or an extension"
+    },
+    {
+      "key": "CONF-0447",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[US Core Vital Signs] observations MAY have [component](http://hl7.org/fhir/R4/observation.html#gr-comp) observations … [see] FHIR core specification [vital signs table](http://hl7.org/fhir/R4/observation-vitalsigns.html#vitals-table) for examples"
+    },
+    {
+      "key": "CONF-0448",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Information about the growth chart tables used to determine percentiles SHOULD be supplied in Observation.note.text"
+    },
+    {
+      "key": "CONF-0449",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[In the US Core Blood Pressure Profile] because the blood pressure values are communicated in the mandatory systolic and diastolic components[,] the Observation.value[x] element SHOULD be omitted"
+    },
+    {
+      "key": "CONF-0450",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In the US Core Blood Pressure Profile] because the blood pressure values are communicated in the mandatory systolic and diastolic components[,] an Observation without a systolic or diastolic result value, SHALL include a reason why the data is absent in Observation.component.dataAbsentReason"
+    },
+    {
+      "key": "CONF-0451",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[In the US Core Blood Pressure Profile] because the blood pressure values are communicated in the mandatory systolic and diastolic components[,] All Server systems - including those that never provide a component observation without a value - SHALL support Observation.component.dataAbsentReason for the components."
+    },
+    {
+      "key": "CONF-0452",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Inspired oxygen therapy may be represented with [component](http://hl7.org/fhir/R4/observation.html#gr-comp) observations when measured at the same time as the pulse oximetry measurements [in the US Core Pulse Oximetry profile]"
+    },
+    {
+      "key": "CONF-0453",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Many pulse oximetry readings are taken while the patient is breathing room air. The concept of “room air” (unmodified, ambient air) SHOULD be represented as an inhaled oxygen flow rate of 0 liters/min"
+    },
+    {
+      "key": "CONF-0454",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "A pulse oximetry reading without inspired oxygen component observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component](http://hl7.org/fhir/R4/observation.html#gr-comp) observations SHOULD be used [when using the US Core Pulse Oximetry profile.]"
+    },
+    {
+      "key": "CONF-0455",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Systems SHALL support National Provider Identifier (NPI) for organizations"
+    },
+    {
+      "key": "CONF-0456",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems … SHOULD the National Association of Insurance Commissioners NAIC Company code (sometimes called “NAIC Number” or “cocode”) for payers."
+    },
+    {
+      "key": "CONF-0457",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems … SHOULD support Clinical Laboratory Improvement Amendments (CLIA) for laboratories"
+    },
+    {
+      "key": "CONF-0458",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems SHOULD follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Organization.address.line and Organization.address.city"
+    },
+    {
+      "key": "CONF-0459",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which [Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html) at least one category code from the OMB Race ... Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [for the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]."
+    },
+    {
+      "key": "CONF-0460",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which [Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html) at least one category code from the OMB ... Ethnicity Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [for the [US Core Ethnicity Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-ethnicity.html)]."
+    },
+    {
+      "key": "CONF-0461",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which MAY include additional codes from the detailed ethnicity ... value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]"
+    },
+    {
+      "key": "CONF-0462",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which SHALL include a text description [of category codes when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]"
+    },
+    {
+      "key": "CONF-0463",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which MAY include additional codes from the detailed ... race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]"
+    },
+    {
+      "key": "CONF-0464",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which SHALL include a text description [of category codes when using the [US Core Ethnicity Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-ethnicity.html)]"
+    },
+    {
+      "key": "CONF-0465",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although Patient.deceased[x] is marked as additional USCDI, certifying systems are not required to support both [boolean and dateTime data types], but SHALL support [at] least Patient.deceasedDateTime"
+    },
+    {
+      "key": "CONF-0466",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Previous name is represented by setting Patient.name.use to “old” or providing an end date in Patient.name.period or doing both"
+    },
+    {
+      "key": "CONF-0467",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Previous address is represented by setting Patient.address.use to “old” or providing an end date in Patient.address.period or doing both."
+    },
+    {
+      "key": "CONF-0469",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[Certifying systems](https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program) [, those that are participating in the ONC Health IT certification program,] SHALL ... follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Patient.address.line and Patient.address.city for new and updated records."
+    },
+    {
+      "key": "CONF-0470",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Non-certifying systems[, systems that are not participating in the ONC Health IT certification program,] SHOULD follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Patient.address.line and Patient.address.city for new and updated records."
+    },
+    {
+      "key": "CONF-0471",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[For systems participating in the ONC Health IT certification program,] this requirement [to follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) for Patient.address.line and Patient.address.city] does not apply to historical records or documents that are exposed through FHIR-based APIs. [Organizations MAY choose not to use use Project US@ Technical Specification for Patient Addresses Final Version 1.0 when sending historical records]"
+    },
+    {
+      "key": "CONF-0472",
+      "conformance": [
+        "SHOULD-NOT"
+      ],
+      "requirement": "The Patient’s Social Security Numbers SHOULD NOT be used as a patient identifier in Patient.identifier.value"
+    },
+    {
+      "key": "CONF-0473",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers that support only the US Core Practitioner Profile and do not support the [US Core PractitionerRole Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitionerrole.html) SHALL provide implementation-specific guidance on how to access a provider’s location and contact information using only the Practitioner resource."
+    },
+    {
+      "key": "CONF-0474",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Although Practitioner.address is marked as Must Support, the Server system … [MAY choose not to] support it if they support the US Core PractitionerRole Profile"
+    },
+    {
+      "key": "CONF-0475",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[When using the US Core Practioner Profile] Practitioner.address … SHALL [be supported] if … [the Server does] not support the US Core PractitionerRole Profile"
+    },
+    {
+      "key": "CONF-0477",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Only professional/work contact information about the practitioner SHOULD be available to the patient"
+    },
+    {
+      "key": "CONF-0478",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems SHOULD follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Practitioner.address.line and Practitioner.address.city."
+    },
+    {
+      "key": "CONF-0479",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Procedure codes … [MAY] be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC [for procedure.code]"
+    },
+    {
+      "key": "CONF-0480",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[If using LOINC codes in procedure.code] only LOINC concepts that reflect actual procedures SHOULD be used"
+    },
+    {
+      "key": "CONF-0481",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "communication.preferred MAY designate a preferred language when multiple languages are represented"
+    },
+    {
+      "key": "CONF-0482",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program] Servers … SHALL support ... US Core Procedure Profile for communicating the reason or justification for a referral as Additional USCDI Requirements"
+    },
+    {
+      "key": "CONF-0484",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] although both Procedure.reasonCode and Procedure.reasonReference are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but SHALL support at least one of these elements."
+    },
+    {
+      "key": "CONF-0486",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using Procedure.reasonReference Servers SHALL support at least one target resource in Procedure.reasonReference"
+    },
+    {
+      "key": "CONF-0488",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using Procedure.reasonReference …The referenced resources SHOULD be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles)"
+    },
+    {
+      "key": "CONF-0489",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type AllergyIntolerance"
+    },
+    {
+      "key": "CONF-0490",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type CarePlan"
+    },
+    {
+      "key": "CONF-0491",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type CareTeam"
+    },
+    {
+      "key": "CONF-0492",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Condition"
+    },
+    {
+      "key": "CONF-0493",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Coverage"
+    },
+    {
+      "key": "CONF-0494",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Device"
+    },
+    {
+      "key": "CONF-0495",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type DiagnosticReport"
+    },
+    {
+      "key": "CONF-0496",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Document Reference"
+    },
+    {
+      "key": "CONF-0497",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Encounter"
+    },
+    {
+      "key": "CONF-0498",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Goal"
+    },
+    {
+      "key": "CONF-0499",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Immunization"
+    },
+    {
+      "key": "CONF-0500",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type MedicationDispense"
+    },
+    {
+      "key": "CONF-0501",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type MedicationRequest"
+    },
+    {
+      "key": "CONF-0502",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Observation"
+    },
+    {
+      "key": "CONF-0503",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Patient"
+    },
+    {
+      "key": "CONF-0504",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type Procedure"
+    },
+    {
+      "key": "CONF-0505",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type QuestionnaireResponse"
+    },
+    {
+      "key": "CONF-0506",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type RelatedPerson"
+    },
+    {
+      "key": "CONF-0507",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The US Core Provenance resource SHALL be supported for … [this] US Core resource type ServiceRequest"
+    },
+    {
+      "key": "CONF-0508",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If a system receives a provider in Provenance.agent.who as free text, they must capture [the organization] who sent them the information [and upon] request ... SHALL provide this organization as the source"
+    },
+    {
+      "key": "CONF-0509",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "If a system receives a provider in Provenance.agent.who as free text, … [upon request they] MAY include the free text provider."
+    },
+    {
+      "key": "CONF-0510",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems that need to know the activity has occurred SHOULD populate the activity [Provenance.activity]"
+    },
+    {
+      "key": "CONF-0511",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If the QuestionnaireResponse is based on a non-FHIR form [then a] ... FHIR Questionnaire [needs to] represent at least the relevant metadata"
+    },
+    {
+      "key": "CONF-0512",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "If the QuestionnaireResponse is based on a non-FHIR form [then a] … FHIR Questionnaire's questions may be omitted"
+    },
+    {
+      "key": "CONF-0513",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems SHOULD follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for RelatedPerson.address.line and RelatedPerson.address.city"
+    },
+    {
+      "key": "CONF-0514",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The Must Support `ServiceRequest.category` is bound, at a minimum, to the [US Core ServiceRequest Category Codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-servicerequest-category.html), and other category codes can be used."
+    },
+    {
+      "key": "CONF-0515",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The ServiceRequest.code value ... SHOULD be constrained to a subset for a particular use case or domain"
+    },
+    {
+      "key": "CONF-0516",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program] Servers … SHALL support ... US Core Service Request Profile for communicating the reason or justification for a referral as Additional USCDI Requirements"
+    },
+    {
+      "key": "CONF-0518",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] although both ServiceRequest.reasonCode and ServiceRequest.reasonReference are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but SHALL support at least one of these elements."
+    },
+    {
+      "key": "CONF-0520",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference Servers SHALL support at least one target resource in ServiceRequest.reasonReference"
+    },
+    {
+      "key": "CONF-0522",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference …The referenced resources SHOULD be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles)"
+    },
+    {
+      "key": "CONF-0523",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Since the binding [for Specimen.type and additional USCDI elements] is [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible) when a code is unavailable, just text is allowed [and conformant]."
+    },
+    {
+      "key": "CONF-0524",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although both Specimen.identifier and Specimen.accessionIdentifier are marked as Must Support, the Server system is not required to support both, but SHALL support at least one of these elements."
+    },
+    {
+      "key": "CONF-0532",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[Servers] SHOULD Support the ...\n[SMART App Launch version 2.0.0 and later](http://hl7.org/fhir/smart-app-launch/history.html)"
+    },
+    {
+      "key": "CONF-0533",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL support the US Core Patient resource profile"
+    },
+    {
+      "key": "CONF-0534",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL support … at least one additional resource profile [in addition to the US Core Patient resource profile] from the list of US Core Profiles"
+    },
+    {
+      "key": "CONF-0535",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL … Implement the RESTful behavior according to the FHIR specification."
+    },
+    {
+      "key": "CONF-0536",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL … return the following response class (Status 400) [for] invalid parameters"
+    },
+    {
+      "key": "CONF-0537",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL … return the following response class (Status 401/4xx) [for] unauthorized request"
+    },
+    {
+      "key": "CONF-0538",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL … return the following response class (Status 403) [for] insufficient scopes"
+    },
+    {
+      "key": "CONF-0539",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL … return the following response class (Status 404) [for] unknown resource"
+    },
+    {
+      "key": "CONF-0540",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "US Core Server SHALL … support JSON source formats for all US Core interactions."
+    },
+    {
+      "key": "CONF-0541",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "US Core Server SHOULD … support XML source formats for all US Core interactions."
+    },
+    {
+      "key": "CONF-0542",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "US Core Server SHOULD … identify the US Core profiles supported as part of the FHIR meta.profile attribute for each instance."
+    },
+    {
+      "key": "CONF-0543",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "A Server SHALL reject any unauthorized requests by returning an HTTP 401 \"Unauthorized\", HTTP 403 \"Forbidden\", or HTTP 404 \"Not Found\""
+    },
+    {
+      "key": "CONF-0548",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[US Core Servers] SHOULD support [$expand](http://hl7.org/fhir/OperationDefinition/ValueSet-expand) operation"
+    },
+    {
+      "key": "CONF-0549",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "If a Server supports DocumentReference for creating, using, and sharing clinical notes, it SHOULD also support the context and contextdirection parameters of the $expand operation"
+    },
+    {
+      "key": "CONF-0550",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Systems SHALL establish a risk analysis and management regime that conforms with HIPAA security regulatory requirements"
+    },
+    {
+      "key": "CONF-0552",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "US Federal systems SHOULD conform with the risk management and mitigation requirements defined in NIST 800 series documents."
+    },
+    {
+      "key": "CONF-0554",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "US Federal systems … SHOULD include security category assignment following NIST 800-60 vol. 2 Appendix D.14."
+    },
+    {
+      "key": "CONF-0556",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The coordination of risk management and the related security and privacy controls … SHOULD be defined in the Business Associate Agreement when available."
+    },
+    {
+      "key": "CONF-0558",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Systems SHALL reference a single time source to establish a common time base for security auditing and clinical data records among computing systems."
+    },
+    {
+      "key": "CONF-0560",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The selected time service SHOULD be documented in the Business Associate Agreement when available."
+    },
+    {
+      "key": "CONF-0562",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Systems SHALL keep audit logs of the various transactions."
+    },
+    {
+      "key": "CONF-0564",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Systems SHALL use TLS version 1.2 or higher for all transmissions not taking place over a secure network connection."
+    },
+    {
+      "key": "CONF-0566",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "US Federal systems SHOULD conform with FIPS PUB 140-2."
+    },
+    {
+      "key": "CONF-0568",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Systems SHALL conform to [FHIR Communications Security](http://hl7.org/fhir/R4/security.html#http) requirements."
+    },
+    {
+      "key": "CONF-0570",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For Authentication and Authorization, Systems SHALL support any [SMART App Launch Version 2.0.0](http://hl7.org/fhir/smart-app-launch/history.html) for Client <-> Server interactions."
+    },
+    {
+      "key": "CONF-0572",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Systems SHALL implement consent requirements per their state, local, and institutional policies."
+    },
+    {
+      "key": "CONF-0574",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The Business Associate Agreements SHOULD document systems’ mutual consent requirements."
+    },
+    {
+      "key": "CONF-0576",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems SHOULD provide Provenance statements using the [US Core Provenance Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-provenance.html) resource and associated requirements."
+    },
+    {
+      "key": "CONF-0578",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems MAY implement the [FHIR Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)"
+    },
+    {
+      "key": "CONF-0580",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems MAY protect the confidentiality of data at rest via encryption and associated access controls."
+    },
+    {
+      "key": "CONF-0583",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The [additional] current binding [[FHIR R5 link](https://hl7.org/fhir/R5/terminologies.html#binding)] requires newly recorded, non-legacy data to be drawn from the [bound] value set."
+    },
+    {
+      "key": "CONF-0584",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If the QuestionnaireResponse is based on a non-FHIR form [then a] ... FHIR Questionnaire [will communicate] the identifier of the non-FHIR form instead of the canonical URI using the US Core Extension Questionnaire URI extension."
+    },
+    {
+      "key": "CONF-0587",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Each AllergyIntolerance Must Support: a verification status"
+    },
+    {
+      "key": "CONF-0588",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Each AllergyIntolerance Must Support: a reaction manifestation"
+    },
+    {
+      "key": "CONF-0801",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If an element is marked as *Additional USCDI* and defined by a pattern [as described by [ElementDefinition.pattern](http://hl7.org/fhir/R4/elementdefinition-definitions.html#ElementDefinition.pattern_x_)], then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing."
+    },
+    {
+      "key": "CONF-0802",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "\n\n\nPrimitive elements are single elements with a primitive value…. If they are marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement."
+    },
+    {
+      "key": "CONF-0803",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values. "
+    },
+    {
+      "key": "CONF-0804",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If any sub-element is marked as *Additional USCDI* [for a complex element], it must also meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element."
+    },
+    {
+      "key": "CONF-0805",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[I]f any sub-element is marked as *Additional USCDI* [for a complex element] and the parent element is not… [and] the parent element is represented in the structure, Certifying System **SHALL** support the sub-elements labeled as *Additional USCDI*."
+    },
+    {
+      "key": "CONF-0808",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When a Reference type element is labeled as Must Support and has a single target profile referenced, the target profile **SHALL** be supported."
+    },
+    {
+      "key": "CONF-0809",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When a Reference type element is labeled as Additional USCDI and has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems."
+    },
+    {
+      "key": "CONF-0810",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When a Reference type element is labeled as Must Support, has multiple target profiles referenced, and specific targets are labeled as Must Support, the Must Support target profile(s) **SHALL** be supported."
+    },
+    {
+      "key": "CONF-0811",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "When a Reference type element labeled as Additional USCDI, has multiple target profiles referenced, and specific targets are labeled as Must Support, the Must Support target profile(s) **SHALL** be supported by Certifying Systems."
+    },
+    {
+      "key": "CONF-0812",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[I]f a slice is labeled as ... Additional USCDI and the slicer element is not labeled as ... Additional USCDI, then if the ... certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core."
+    },
+    {
+      "key": "CONF-0813",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[If a] slicer's Must Support property only defines the element level … Additional USCDI property[, i.e.,] no … Additional USCDI property is defined for the slice, then support for that slice's definition is optional."
+    },
+    {
+      "key": "CONF-0814",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[I]f a slice is labeled as … Additional USCDI and the slicer element is ... labeled as … Additional USCDI, then … certifying system [**SHALL** support] the element[ and] the slice's definition."
+    },
+    {
+      "key": "CONF-0818",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Surgical Operation Note (11504-8)](https://loinc.org/11504-8.html)"
+    },
+    {
+      "key": "CONF-0819",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers SHALL support, at minimum, these … \"Common Clinical Notes\":\n[Emergency Department Note (34111-5)](https://loinc.org/34111-5.html)"
+    },
+    {
+      "key": "CONF-0820",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers that support the USCDI Health Status/Assessments Data Class **SHALL** support the US Core Observation Screening Assessment Profile"
+    },
+    {
+      "key": "CONF-0821",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers that support the USCDI Health Status/Assessments Data Class ... **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile.\""
+    },
+    {
+      "key": "CONF-0822",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For the US Core Simple Observation Profile, Servers **SHALL** support all the category codes [listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes)."
+    },
+    {
+      "key": "CONF-0823",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For the … US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes [listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes)."
+    },
+    {
+      "key": "CONF-0824",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For the US Core Condition Problems and Health Concerns Profile, Servers **SHALL** support the code ,\"sdoh\""
+    },
+    {
+      "key": "CONF-0825",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For the US Core Condition Problems and Health Concerns Profile, Servers **SHOULD** support the other category codes [listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes)."
+    },
+    {
+      "key": "CONF-0826",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For the US Core ServiceRequest Profile, Servers SHOULD support all the [[listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes)] category codes."
+    },
+    {
+      "key": "CONF-0827",
+      "requirement": "US Core SearchParameters referenced in [the US Core Client] CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document Server ... expectations. They specify additional expectations for the following SearchParameter elements:B7\n\n- multipleAnd\n- multipleOr\n- comparator\n- modifier\n- chain\n\nThey **SHALL NOT** be interpreted as search parameters for search. ",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "key": "CONF-0828",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Servers ... **SHOULD** use the standard FHIR SearchParameters."
+    },
+    {
+      "key": "CONF-0831",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[The Server **SHALL** support the] category of \"problem-list-item\""
+    },
+    {
+      "key": "CONF-0832",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[The Server **SHALL** support the] category of \"health-concern\""
+    },
+    {
+      "key": "CONF-0833",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Certifying Systems **SHALL** support, a category of \"sdoh\""
+    },
+    {
+      "key": "CONF-0834",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Certifying Systems ... **SHOULD** support the ... [US Core Simple Observation Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html) codes"
+    },
+    {
+      "key": "CONF-0835",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Certifying Systems ... **MAY** support other categories"
+    },
+    {
+      "key": "CONF-0836",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results."
+    },
+    {
+      "key": "CONF-0837",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example)."
+    },
+    {
+      "key": "CONF-0838",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view DICOM (Digital Imaging and Communications in Medicine) studies, series, and SOP (Service-Object Pair) instances referenced in the -[ImagingStudy](http://hl7.org/fhir/R4/imagingstudy.html) resource."
+    },
+    {
+      "key": "CONF-0839",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": " If the referenced a document or file [referenced by `DocumentReference.content.attachment.url`]  is hosted on a Server outside the FHIR Server, it should be securely accessible using the same authorization credentials that were used to access the FHIR Server. This reduces complexity for the Client and improves the user experience."
+    },
+    {
+      "key": "CONF-0840",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although the [US Core Interpreter Needed] extension is marked as an Additional USCDI Requirements on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one."
+    },
+    {
+      "key": "CONF-0841",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "There is no guarantee that vaccine lot numbers are globally unique, and they are not recommended for matching or de-duplication across systems unless used with other data elements such as a vaccine product code, manufacturer code, or date of administration. Implementers **MAY** communicate the `Immunization.manufacturer` to ensure global uniqueness to lot numbers."
+    },
+    {
+      "key": "CONF-0842",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers **SHALL** return all active medications following the [Get All Active Medications](https://hl7.org/fhir/us/core/STU8/medication-list.html#get-all-active-medications) guidance."
+    },
+    {
+      "key": "CONF-0843",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For US Core Laboratory Result Observation Profile, even] when the specimen type is already implied by the LOINC code used in `Observation.code` (e.g., a LOINC code for Blood Glucose), the `Observation.specimen` element **SHOULD** also be populated with the referenced Specimen resource to explicitly communicate the collected specimen type."
+    },
+    {
+      "key": "CONF-0844",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For US Core Laboratory Result Observation Profile, the] type of specimen [in `Observation.specimen`] SHOULD not conflict with the LOINC code [in `Observation.code`]."
+    },
+    {
+      "key": "CONF-0845",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For the US Core Observation Screening Assessment Profile, the]  category type \"survey\" is required."
+    },
+    {
+      "key": "CONF-0846",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) codes"
+    },
+    {
+      "key": "CONF-0847",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHOULD** support, the [US Core Screening Assessment Observation Maximum Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-maximum-category.html) codes"
+    },
+    {
+      "key": "CONF-0848",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **MAY** support other codes."
+    },
+    {
+      "key": "CONF-0850",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] when using Observation.derivedFrom to reference an Observation, the referenced Observation SHOULD be a US Core Observation."
+    },
+    {
+      "key": "CONF-0851",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Servers can use the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter."
+    },
+    {
+      "key": "CONF-0852",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] is marked as an Additional USCDI Requirement on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one."
+    },
+    {
+      "key": "CONF-0855",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Systems **SHOULD** designate the patient's preferred language in the Patient.communication.preferred element."
+    },
+    {
+      "key": "CONF-0856",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The `Procedure.performed` is mandatory if `Procedure.status` is \"completed\" or \"in-progress\"."
+    },
+    {
+      "key": "CONF-0857",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI Laboratory Order, ... implementers SHOULD use the corresponding category codes listed ... below:\n- [108252007 Laboratory procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=108252007&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)"
+    },
+    {
+      "key": "CONF-0858",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI ... Clinical Test Order, ... implementers SHOULD use the corresponding category codes listed ... below:\n- [386053000 Evaluation procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=386053000&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)\n- [410606002 Social service procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)\n- [387713003 Surgical procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)"
+    },
+    {
+      "key": "CONF-0859",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI ... Imaging Order, ... implementers SHOULD use the corresponding category codes listed ... below:\n- [363679005 Imaging (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=363679005&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)"
+    },
+    {
+      "key": "CONF-0860",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI ... Procedure Order Data Elements, implementers SHOULD use the corresponding category codes listed ... below:\n- [386053000 Evaluation procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=386053000&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)\n- [410606002 Social service procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)\n- [387713003 Surgical procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)"
+    },
+    {
+      "key": "CONF-0861",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **SHOULD** support the other [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html) [in addition to  the [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html)]"
+    },
+    {
+      "key": "CONF-0862",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html)"
+    },
+    {
+      "key": "CONF-0863",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **MAY** support other categories [in addition to  [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) and  [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html)]."
+    },
+    {
+      "key": "CONF-0864",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "An Observation without a value, **SHALL** include a reason why the data is absent unless there are 1) component observations, or 2) reporting panel observations using Observation.hasMember. "
+    },
+    {
+      "key": "CONF-0865",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`."
+    },
+    {
+      "key": "CONF-0866",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "An `Observation.component` without a value, SHALL include a reason why the data is absent. "
+    },
+    {
+      "key": "CONF-0867",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Systems that never provide a component observation without a component value are not required to support `Observation.component.dataAbsentReason`."
+    },
+    {
+      "key": "CONF-0868",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but SHALL support at least one."
+    },
+    {
+      "key": "CONF-0870",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[I]f a slice is labeled as Must Support... and the slicer element is not labeled as Must Support..., then if the Server... supports the element, it must support the slice's definition. There are no examples of this structure in US Core."
+    },
+    {
+      "key": "CONF-0871",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[If a] slicer's Must Support property only defines the element level Must Support...[, i.e.,] no Must Support... property is defined for the slice, then support for that slice's definition is optional."
+    },
+    {
+      "key": "CONF-0872",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[I]f a slice is labeled as Must Support... and the slicer element is ... labeled as Must Support..., then ... the Server... [**SHALL** support] the element[ and] the slice's definition."
+    }
+  ]
+}

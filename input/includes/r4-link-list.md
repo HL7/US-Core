@@ -143,3 +143,4 @@
 [ValueSet]: {{site.data.fhir.path}}valueset.html
 [VerificationResult]: {{site.data.fhir.path}}verificationresult.html
 [VisionPrescription]: {{site.data.fhir.path}}visionprescription.html
+[Requirements]: https://hl7.org/fhir/R5/requirements.html

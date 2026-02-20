@@ -12,6 +12,10 @@ The US Core Profile elements include *Mandatory*, *Must Support*, and *Additiona
 
 The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resource specify how the Server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
 
+<div class="bg-success" markdown="1">
+The [Requirements Table] and [Requirements Resource][Capability Statements] list the requirements defined in the US Core Implementation Guide's narrative sections. The <sup>[§](#.html)</sup> footnote associated with a narrative section’s sentence, phrase, or bullet indicates a requirement and links to the requirement in the requirements table.
+</div><!-- new-content -->
+
 ### Conforming to US Core
 
 There are two different ways to implement US Core:
@@ -27,8 +31,8 @@ An example scenario would be a Server using only the [FHIR Bulk Data Access (Fla
 
 To support a US Core Profile, a Server:
 
-- **SHALL** Be able to populate all profile data elements that are mandatory and flagged as Must Support as defined by that profile's StructureDefinition.
-- **SHOULD** declare support for a US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.
+- **SHALL** Be able to populate all profile data elements that are mandatory and flagged as Must Support as defined by that profile's StructureDefinition.<sup>[§][CONF-0001]</sup>
+- **SHOULD** declare support for a US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.<sup>[§][CONF-0002]</sup>
     - The US Core Profile's official or "canonical" URL is located on each US Core Profile page
 
       example CapabilityStatement snippet for a Server supporting the US Core Patient Profile:
@@ -57,29 +61,29 @@ To support a US Core Profile, a Server:
 
 #### Profile Support + Interaction Support
 
-Servers may deploy and support one or more US Core Profiles to represent clinical information *and* one or more of the following US Core interactions:
+Servers may deploy and support one or more US Core Profiles to represent clinical information<sup>[§][CONF-0003]</sup> *and* one or more of the following US Core interactions:
 
-- "Quick Start" defined for each Profile
-- [Clinical Notes]
-- [Medication List]
-- [Basic Provenance]
-- [Screening and Assessments]
+- "Quick Start" defined for each Profile<sup>[§][CONF-0004]</sup>
+- [Clinical Notes]<sup>[§][CONF-0005]</sup>
+- [Medication List]<sup>[§][CONF-0006]</sup>
+- [Basic Provenance]<sup>[[§]CONF-0007]</sup>
+- [Screening and Assessments]<sup>[§][CONF-0008]</sup>
 
-Servers implementing both can claim conformance to the US Core Profile content structure and the RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities as described below.
-A Server that certifies to the [21st Century Cures Act for accessing patient data] must implement all components in the USCDI and the US Core CapabilityStatement.
+Servers implementing both can claim conformance to the US Core Profile content structure and the RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities as described below.<sup>[§][CONF-0009],[§][CONF-0010]</sup>
+A Server that certifies to the [21st Century Cures Act for accessing patient data] **SHALL** implement all components in the USCDI and the US Core CapabilityStatement.<sup>[§][CONF-0011],[§][CONF-0012]</sup>
 
 ##### Claiming conformance to a US Core Profile
 
  A conformant Server:
 
 
-- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
-- **SHOULD** declare conformance with the [US Core Server CapabilityStatement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`
+- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.<sup>[[§]CONF-0013]</sup>
+- **SHOULD** declare conformance with the [US Core Server CapabilityStatement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`<sup>[[§]CONF-0014]</sup>
 
-- **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
-    - Declare support for the US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.
+- **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.<sup>[§][CONF-0015]</sup>
+    - Declare support for the US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.<sup>[§][CONF-0016]</sup>
       - the US Core Profile's official or "canonical" URL is located on each US Core Profile page.
-    - Declare support for the US Core Profile's FHIR RESTful transactions.
+    - Declare support for the US Core Profile's FHIR RESTful transactions.<sup>[§][CONF-0017]</sup>
       - The FHIR RESTful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.
 
 
@@ -93,12 +97,12 @@ The following rules summarize the requirements defined by [FHIR Terminology] for
 
 #### Required Bindings For Coded Elements
 
-[Required binding] to a ValueSet definition means that one of the codes from the specified ValueSet **SHALL** be used. For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and only text is *not* valid.
+[Required binding] to a ValueSet definition means that one of the codes from the specified ValueSet **SHALL** be used. For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and text only is *not* valid.<sup>[§][CONF-0018],[§][CONF-0019],[§][CONF-0020]</sup>
 
 For example, the [US Core AllergyIntolerance Profile] `clinicalStatus` element has a required binding to the AllergyIntoleranceClinicalStatusCodes ValueSet. Therefore, when claiming conformance to this profile:
 
-- US Core Responders **SHALL** provide a code *exclusively* from this ValueSet in  `AllergyIntolerance.clinicalStatus.code`.
-- US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.clinicalStatus.code`.
+- US Core Responders **SHALL** provide a code *exclusively* from this ValueSet in  `AllergyIntolerance.clinicalStatus.code`.<sup>[§][CONF-0021]</sup>
+- US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.clinicalStatus.code`.<sup>[§][CONF-0022]</sup>
 
   {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 1: US Core AllergyIntolerance.clinicalStatus" %}
 
