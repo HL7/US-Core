@@ -268,3 +268,5 @@
 [Pregnancy Intention]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1166.22/expansion
 [Pregnancy Status Observation]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.12/expansion
 [Parameters for all resources]: {{site.data.fhir.path}}search.html#all
+[US Core Server v8.0.0 Specification Requirements]: https://inferno.healthit.gov/suites/us_core_v800/
+ [Inferno]: https://inferno.healthit.gov/

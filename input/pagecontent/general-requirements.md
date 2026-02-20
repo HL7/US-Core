@@ -66,7 +66,7 @@ Servers may deploy and support one or more US Core Profiles to represent clinica
 - "Quick Start" defined for each Profile<sup>[§][CONF-0004]</sup>
 - [Clinical Notes]<sup>[§][CONF-0005]</sup>
 - [Medication List]<sup>[§][CONF-0006]</sup>
-- [Basic Provenance]<sup>[[§]CONF-0007]</sup>
+- [Basic Provenance]<sup>[§][CONF-0007]</sup>
 - [Screening and Assessments]<sup>[§][CONF-0008]</sup>
 
 Servers implementing both can claim conformance to the US Core Profile content structure and the RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities as described below.<sup>[§][CONF-0009],[§][CONF-0010]</sup>
@@ -77,8 +77,8 @@ A Server that certifies to the [21st Century Cures Act for accessing patient dat
  A conformant Server:
 
 
-- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.<sup>[[§]CONF-0013]</sup>
-- **SHOULD** declare conformance with the [US Core Server CapabilityStatement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`<sup>[[§]CONF-0014]</sup>
+- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.<sup>[§][CONF-0013]</sup>
+- **SHOULD** declare conformance with the [US Core Server CapabilityStatement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`<sup>[§][CONF-0014]</sup>
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.<sup>[§][CONF-0015]</sup>
     - Declare support for the US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.<sup>[§][CONF-0016]</sup>
@@ -119,15 +119,15 @@ FHIR profiles use [slicing] when a coded element is a repeating elements and a p
 
 #### Extensible Binding for Coded Elements
 
-[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.  If no suitable code exists in the ValueSet, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings. If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used.
+[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.<sup>[§][CONF-0023]</sup>  If no suitable code exists in the ValueSet, alternate code(s) may be provided.<sup>[§][CONF-0024]</sup>  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings.<sup>[§][CONF-0025]</sup> If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used.<sup>[§][CONF-0026]</sup>
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for the CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
-- US Core Responders **SHALL** provide:
+- US Core Responders **SHALL** provide:<sup>[§][CONF-00]</sup>
   - A code from this valueset in `AllergyIntolerance.code.code` *if the concept exists* in the ValueSet
   - Or an alternative code *if the concept does not exist* in the ValueSet
   - Or text in `AllergyIntolerance.code. text' if only text is available.
-- US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
+- US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`<sup>[§][CONF-0028]</sup>
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 3: US Core AllergyIntolerance.code" %}
 
@@ -146,12 +146,10 @@ The "current" binding corresponds to the US Core's interpretation of extensible 
 
   {% include img.html img="Must_Support_Condition_code.png" caption="Figure 4: US Core Condition Problems and Health Concerns.code" %}
 
-
-
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
 
-Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called "additional codings". They may be equivalent to or narrower in meaning than the standard concept code.
+Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called "additional codings".<sup>[§][CONF-0029]</sup> They may be equivalent to or narrower in meaning than the standard concept code.<sup>[§][CONF-0030]</sup>
 
 Example of additional codings for Body Weight concept code.
 
@@ -207,9 +205,9 @@ Example of additional coding of CVX vaccine code to NDC code.
 
 ### Modifier Elements
 
-A FHIR [modifier element] is an element that modifies the meaning of a resource element. Although Servers and Clients **SHALL** be able to process  [Mandatory] or [Must Support] elements, not all modifier elements are  Mandatory or Must Support, and there is no requirement for supporting them. Therefore, FHIR Clients need to be aware of unexpected modifier elements in the data they receive because they can alter the meaning of the data and can potentially lead to errors or even security risks if not properly handled. In addition, modifiers can be introduced when the data is created, edited, or transmitted, so it is crucial to ensure that all modifiers are understood and handled correctly.
+A FHIR [modifier element] is an element that modifies the meaning of a resource element. Although Servers and Clients **SHALL** be able to process [Mandatory] or [Must Support] elements, not all modifier elements are Mandatory or Must Support, and there is no requirement for supporting them.<sup>[§][CONF-0031],[§][CONF-0032],[§][CONF-0033]</sup> Therefore, FHIR Clients need to be aware of unexpected modifier elements in the data they receive because they can alter the meaning of the data and can potentially lead to errors or even security risks if not properly handled. In addition, modifiers can be introduced when the data is created, edited, or transmitted, so it is crucial to ensure that all modifiers are understood and handled correctly.
 
-In addition to declaring which US Core profiles they support, Servers **MAY** communicate a system-wide profile in their CapabilityStatement to identify which additional elements, including modifier elements, they support. However, systems are free to include other data elements - and receivers **SHOULD** accept instances that even contain unexpected data elements *except* when those elements are modifier elements. Unless a Client determines they can process it safely, rejection is typically the only safe action if unexpected modifier elements are present. For example, an app or system may process modifier elements nested inside an ignored element or in a resource only for human review.
+In addition to declaring which US Core profiles they support, Servers **MAY** communicate a system-wide profile in their CapabilityStatement to identify which additional elements, including modifier elements, they support.<sup>[§][CONF-0034]</sup> However, systems are free to include other data elements - and receivers **SHOULD** accept instances that even contain unexpected data elements *except* when those elements are modifier elements.<sup>[§][CONF-0035],[§][CONF-0036]</sup> Unless a Client determines they can process it safely, rejection is typically the only safe action if unexpected modifier elements are present.<sup>[§][CONF-0037]</sup> For example, an app or system may process modifier elements nested inside an ignored element or in a resource only for human review.
 
 Some examples of modifiers that are not Must Support elements in US Core Profiles include:
 
@@ -219,16 +217,16 @@ Some examples of modifiers that are not Must Support elements in US Core Profile
 - `Practitioner.identifier.use`
 - `Patient.active`
 
-Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and modifier elements for a profile, as demonstrated in the figure below.
+Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages.<sup>[§][CONF-0038]</sup> This view lists all the Must Support and modifier elements for a profile, as demonstrated in the figure below.
 
  {% include img.html img="modifier-element-view.png" caption="Figure 5: Modifier Elements Listed in Key Element View" %}
 
 ### Missing Data
 
-There are situations when information on a particular data element is missing, and the source system does not know the reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **SHALL** be omitted from the resource. However, if the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present *even if* the source system does not have data. The core specification guides what to do in this situation, which is summarized below:
+There are situations when information on a particular data element is missing, and the source system does not know the reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **SHALL** be omitted from the resource.<sup>[§][CONF-0039]</sup> However, if the data element is a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present *even if* the source system does not have data.<sup>[§][CONF-0040]</sup> The core specification guides what to do in this situation, which is summarized below:
 
-1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
-  - Use the code `unknown` - The value is expected to exist but is not known.
+1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type.
+  - Use the code `unknown` - The value is expected to exist but is not known.<sup>[§][CONF-0041]</sup>
 
     Example: Patient resource where the patient name is not available.
 
@@ -253,11 +251,11 @@ There are situations when information on a particular data element is missing, a
 
 1. For *coded* data elements:
    - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept or Coding datatypes):
-      - If the source system has text but no coded data, only the `text` element is used.
-          - For Coding datatypes, the text-only data is represented as a `display` element.
+      - If the source system has text but no coded data, only the `text` element is used.<sup>[§][CONF-0042]</sup>
+          - For Coding datatypes, the text-only data is represented as a `display` element.<sup>[§][CONF-0043]</sup>
       - If there is neither text nor coded data:
-        - Use the appropriate "unknown" concept code from the ValueSet if available.
-        - If the ValueSet does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
+        - Use the appropriate "unknown" concept code from the ValueSet if available.<sup>[§][CONF-0044]</sup>
+        - If the ValueSet does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].<sup>[§][CONF-0045]</sup>
 
 
 
@@ -287,8 +285,8 @@ There are situations when information on a particular data element is missing, a
 
 
    - *required* binding strength (CodeableConcept or code datatypes):
-      - use the appropriate "unknown" concept code from the ValueSet if available
-      - if the ValueSet does not have the appropriate "unknown" concept code, you must use a concept from the ValueSet. Otherwise, the instance will not be conformant
+      - use the appropriate "unknown" concept code from the ValueSet if available.<sup>[§][CONF-0046]</sup>
+      - if the ValueSet does not have the appropriate "unknown" concept code, you must use a concept from the ValueSet. Otherwise, the instance will not be conformant.<sup>[§][CONF-0047]</sup>
 
         - For the US Core profiles, the following mandatory or conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`*
@@ -299,21 +297,21 @@ There are situations when information on a particular data element is missing, a
 
         *The `clinicalStatus` element is conditionally mandatory based on resource-specific constraints.
 
-        If any of these status codes is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.
+        If any of these status codes is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource.<sup>[§][CONF-0048]</sup> If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.<sup>[§][CONF-0049],[§][CONF-0049]</sup>
 
 ### FHIR RESTful Search API Requirements
 
-The [FHIR RESTful Search API] requires that Servers that support search **SHALL** support the HTTP `POST`-based search. For all the supported search interactions in this guide, Servers **SHALL** also support the `GET`-based search.
+The [FHIR RESTful Search API] requires that Servers that support search **SHALL** support the HTTP `POST`-based search.<sup>[§][CONF-0051]</sup> For all the supported search interactions in this guide, Servers **SHALL** also support the `GET`-based search.<sup>[§][CONF-0052]</sup>
 
 - When searching using the `token` type searchparameter  [(how to search by token)]
-    - The Client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
-    - The Server **SHALL** support both.
+    - The Client **SHALL** provide at least a code value and **MAY** provide both the system and code values.<sup>[§][CONF-0053],[§][CONF-0054]</sup>
+    - The Server **SHALL** support both.<sup>[§][CONF-0055]</sup>
 - When searching using the `reference` type searchparameter  [(how to search by reference)]
-    - The Client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.
-    - The Server **SHALL** support both.
+    - The Client **SHALL** provide at least an id value and **MAY** provide both the Type and id values.<sup>[§][CONF-0056],[§][CONF-0057]</sup>
+    - The Server **SHALL** support both.<sup>[§][CONF-0058]</sup>
 - When searching using the `date` type searchparameter [(how to search by date)]:
-    - The Client **SHALL** provide values precise to the *day* for elements of datatype `date` and to the *second + time offset* for elements of datatype `dateTime`.
-    - The Server **SHALL** support values precise to the *day* for elements of datatype `date` and  to the *second + time offset* for elements of datatype `dateTime`.
+    - The Client **SHALL** provide values precise to the *day* for elements of datatype `date` and to the *second + time offset* for elements of datatype `dateTime`.<sup>[§][CONF-0059],[§][CONF-0060]</sup>
+    - The Server **SHALL** support values precise to the *day* for elements of datatype `date` and  to the *second + time offset* for elements of datatype `dateTime`.<sup>[§][CONF-0061],[§][CONF-0062]</sup>
 
     The table below summarizes the date precision:
 
@@ -325,22 +323,22 @@ The [FHIR RESTful Search API] requires that Servers that support search **SHALL*
 
 ### Search for Servers Requiring Status
 
-Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this, they **SHALL** follow the guidelines here.
+Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this, they **SHALL** follow the guidelines here.<sup>[§][CONF-0063],[§][CONF-0064]</sup>
 {: .highlight-note}
 
-For searches where the Client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
+For searches where the Client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.<sup>[§][CONF-0065]</sup>  These systems are allowed to reject such requests as follows:
 
-- **SHALL** return an HTTP `400` status
-- **SHALL** return an [OperationOutcome] specifying that status(es) must be present.
-- **SHALL** support search with status if status required
-- **SHALL NOT** restrict search results ( i.e., apply 'hidden' filters) when a Client includes status parameters in the query.
-  - If a system doesn't support a specific status code value that is queried, it  **SHOULD** return an HTTP `200` status with a search bundle. The search bundle **SHOULD** contain resources matching the search criteria *and* an OperationOutcome warning the Client which status code value is not supported.
+- **SHALL** return an HTTP `400` status.<sup>[§][CONF-0066]</sup>
+- **SHALL** return an [OperationOutcome] specifying that status(es) must be present.<sup>[§][CONF-0067]</sup>
+- **SHALL** support search with status if status required.<sup>[§][CONF-0068]</sup>
+- **SHALL NOT** restrict search results ( i.e., apply 'hidden' filters) when a Client includes status parameters in the query.<sup>[§][CONF-0069]</sup>
+  - If a system doesn't support a specific status code value that is queried, it  **SHOULD** return an HTTP `200` status with a search bundle.<sup>[§][CONF-0070]</sup> The search bundle **SHOULD** contain resources matching the search criteria *and* an OperationOutcome warning the Client which status code value is not supported.<sup>[§][CONF-0071],[§][CONF-0072]</sup>
 
    - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, and `entered-in-error` but not the concept `refuted`, the search parameter refers to an unsupported code since `refuted` is not known to the Server.
 
      {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
-- **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
+- **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.<sup>[§][CONF-0093]</sup>
 - For "entered-in-error" status, see the [representing entered in error information](general-guidance.html#representing-entered-in-error-information) section.
 
 <br />
