@@ -3,7 +3,7 @@ id: us-core-server
 url: http://hl7.org/fhir/us/core/Requirements/us-core-server
 name: USCoreServerRequirements
 title: US Core Server Requirements
-description: This Requirements resources lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the Requirements resources for US Core Certifying Systems for the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification.
+description: This Requirements resources lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification.
 _actor:
   - extension:
       - url: http://hl7.org/fhir/StructureDefinition/display
@@ -60,38 +60,23 @@ statement:
   - key: CONF-0013
     conformance:
       - SHALL
-    requirement: |-
-      [To claim conformance to a US Core Profile] a conformant Server:
-
-      **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
+    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition."
   - key: CONF-0014
     conformance:
       - SHOULD
-    requirement: |-
-      [To claim conformance to a US Core Profile] a conformant Server:
-
-      **SHOULD** declare conformance with the US [Core Server Capability Statement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`
+    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHOULD** declare conformance with the US [Core Server Capability Statement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`"
   - key: CONF-0015
     conformance:
       - SHALL
-    requirement: |-
-      [To claim conformance to a US Core Profile] a conformant Server:
-
-      **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
+    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement."
   - key: CONF-0016
     conformance:
       - SHALL
-    requirement: |-
-      [To claim conformance to a US Core Profile] a conformant Server:
-
-      **SHALL**… Declare support for the US Core Profile by including its official URL in the Server’s CapabilityStatement.rest.resource.supportedProfile element.
+    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL**… Declare support for the US Core Profile by including its official URL in the Server’s CapabilityStatement.rest.resource.supportedProfile element."
   - key: CONF-0017
     conformance:
       - SHALL
-    requirement: |-
-      [To claim conformance to a US Core Profile] a conformant Server:
-
-      **SHALL**… Declare support for the US Core Profile’s FHIR RESTful transactions.
+    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL**… Declare support for the US Core Profile’s FHIR RESTful transactions."
   - key: CONF-0018
     conformance:
       - SHALL
@@ -411,11 +396,10 @@ statement:
     conformance:
       - SHALL
     requirement: |-
-      [If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support[, or a profile has] an Additional USCDI element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Additional USCDI
-
+      [If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support
       … When claiming conformance to [such a] profile:
 
-      - US Core Responders **SHALL** be capable of populating [the Must Support or Additional USCDI data type choice]
+      - US Core Responders **SHALL** be capable of populating [the Must Support  data type choice]
   - key: CONF-0114
     conformance:
       - MAY
@@ -458,10 +442,6 @@ statement:
     conformance:
       - SHALL
     requirement: Implementations [US Core Responders] supporting Backend Services ... SHALL include support for the ... system/scopes.
-  - key: CONF-0122
-    conformance:
-      - SHALL
-    requirement: Implementations [US Core Requestors] supporting Backend Services – for example, to meet US EHR certification requirements [of the ONC IT Health Certification program]- SHALL include support for the Client-confidential-asymmetric capability and system/scopes.
   - key: CONF-0123
     conformance:
       - SHALL
@@ -499,18 +479,12 @@ statement:
     conformance:
       - SHALL
     conditionality: true
-    requirement: |
-      The following scopes that correspond directly to FHIR resource types **SHALL** be supported
-      ...
-      [For] AllergyIntolerance [the] <patient|user|system>/AllergyIntolerance.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]
+    requirement: "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] AllergyIntolerance [the] <patient|user|system>/AllergyIntolerance.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes] \n"
   - key: CONF-0133
     conformance:
       - SHALL
     conditionality: true
-    requirement: |
-      The following scopes that correspond directly to FHIR resource types **SHALL** be supported
-      ...
-      [For] CarePlan [the] <patient|user|system>/CarePlan.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]
+    requirement: "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] CarePlan [the] <patient|user|system>/CarePlan.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes] \n"
   - key: CONF-0134
     conformance:
       - SHALL
@@ -1010,12 +984,6 @@ statement:
     requirement: |-
       systems are encouraged to support other common notes types, such as:
       [Referral Note (57133-1)](https://loinc.org/57133-1.html)
-  - key: CONF-0218
-    conformance:
-      - SHOULD
-    requirement: |-
-      systems are encouraged to support other common notes types, such as:
-      [Surgical Operation Note (11504-8)](https://loinc.org/11504-8.html)
   - key: CONF-0219
     conformance:
       - SHOULD
@@ -1025,9 +993,7 @@ statement:
   - key: CONF-0220
     conformance:
       - SHALL
-    requirement: |-
-      To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server SHALL expose these overlapping scanned or narrative-only reports through both DiagnosticReport and DocumentReference by representing the same attachment URL [as] DocumentReference.content.attachment.url [and]
-      DiagnosticReport.presentedForm.url
+    requirement: "To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server SHALL expose these overlapping scanned or narrative-only reports through both DiagnosticReport and DocumentReference by representing the same attachment URL [as] DocumentReference.content.attachment.url [and] \nDiagnosticReport.presentedForm.url"
   - key: CONF-0221
     conformance:
       - SHALL
@@ -1070,63 +1036,63 @@ statement:
   - key: CONF-0231
     conformance:
       - SHALL
-    requirement: Servers that support DiagnosticReport will include the clinical note narrative content in DiagnosticReport.presentedForm
+    requirement: Servers that support DiagnosticReport will include the clinical note narrative content in  `DiagnosticReport.presentedForm`
   - key: CONF-0233
     conformance:
       - SHOULD
     requirement: FHIR Server claiming support to this guide SHOULD support the $expand operation [[operation link](http://hl7.org/fhir/R4/valueset-operation-expand.html) to provide information to Clients requesting information on the note and report types the Server supports]
   - key: CONF-0234
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category&contextDirection=outgoing for DiagnosticReport report category discovery [for read operations]
   - key: CONF-0235
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category&contextDirection=incoming for DiagnosticReport report category discovery [for write operations]
   - key: CONF-0236
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code&contextDirection=outgoing for DiagnosticReport report type discovery [for read operations]
   - key: CONF-0237
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code&contextDirection=incoming for DiagnosticReport report type discovery [for write operations]
   - key: CONF-0238
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category&contextDirection=outgoing for DocumentReference note category discovery [for read operations]
   - key: CONF-0239
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category&contextDirection=incoming for DocumentReference note category discovery [for write operations]
   - key: CONF-0240
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type&contextDirection=outgoing for DocumentReference note type discovery [for read operations]
   - key: CONF-0241
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: |-
       [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers SHALL support] the #expand operation as follows:
@@ -1135,30 +1101,22 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
-      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=outgoing for DiagnosticReport report content type discovery [for read operations]
+    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=outgoing for DiagnosticReport report content type discovery [for read operations]"
   - key: CONF-0243
     conformance:
       - SHOULD
     conditionality: true
-    requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
-      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=incoming for DiagnosticReport report content type discovery [for write operations]
+    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=incoming for DiagnosticReport report content type discovery [for write operations]"
   - key: CONF-0244
     conformance:
       - SHOULD
     conditionality: true
-    requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
-      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing for DocumentReference note content type discovery [for read operations]
+    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing for DocumentReference note content type discovery [for read operations]"
   - key: CONF-0245
     conformance:
       - SHOULD
     conditionality: true
-    requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
-      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming for DocumentReference note content type discovery [for write operations]
+    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming for DocumentReference note content type discovery [for write operations]"
   - key: CONF-0246
     conformance:
       - MAY
@@ -2649,3 +2607,12 @@ statement:
       - SHALL
     conditionality: true
     requirement: '[I]f a slice is labeled as Must Support... and the slicer element is ... labeled as Must Support..., then ... the Server... [**SHALL** support] the element[ and] the slice''s definition.'
+  - key: CONF-0881
+    conformance:
+      - SHALL
+    requirement: |-
+      When a Reference element is labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*
+
+      ...
+
+      - US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to *at least one* target profile.

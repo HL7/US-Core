@@ -1,6 +1,5 @@
 {% include new_page.md %}
-
-This table lists the requirements defined in the US Core Implementation Guide’s narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv), [Excel](tables/us_core_reqs.xlsx) file, and as [US Core Requirements Resources]Capability Statements].
+This table lists the requirements defined in the US Core Implementation Guide’s narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv) and [Excel](tables/us_core_reqs.xlsx) file, as well as in [US Core Requirements Resources][Capability Statements].
 
 Legend:
 
@@ -12,8 +11,8 @@ Legend:
   * Both: Both US Core Responder and Requester (including Certifying System).
 * Certifying Systems Only: A Flag to indicate whether the requirement is an additional USCDI certification requirement.
 * Conformance: The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD-NOT, or SHALL NOT. Note that there may be several conformance verbs in a single statement.
+* Conditional: A Flag to indicate whether the requirement is conditional. The condition is stated in the requirement statement.
 * Requirement: The actual requirements statement, which is a direct quote from the IG and may include helpful context in square brackets. Note that statements in the narrative section that contain multiple requirements in a single context are split into individual requirement statements.
-
 
 
 <!-- ==================================================================
@@ -42,7 +41,7 @@ added = added for US Core publication:
    Mapping: actor -> Requirements.actor"  NOTE updated to be "Server|Client|Both" since only a single actor supported in the R5 requirements resource.
 - certifiers_only:  (added) Flag to indicate whether the requirement is an additional USCDI certification requirement.  Default is empty or "FALSE" and set to "TRUE" for additional USCDI certification requirements. Mapping: certifiers_only -> Requirements.statement.extension:uscdi-requirements = true
 - Sub-Requirement(s): (inherited)  Not used
-- Conditionality: (inherited)  Not used
+- conditionality: (inherited)  A Flag to indicate whether the requirement is conditional.  The condition is usually stated in the requirement.
 - Conditionality Details: (inherited)  Not used
 - Verifiable?: (inherited)  Not used
 - Verifiability Details: (inherited)  Not used
@@ -73,6 +72,7 @@ The script sorts and selects the table data and allows for highlighting new and 
 <th>Certifying Systems<br />
 Only</th>
 <th>Conformance</th>
+<th>Conditional</th>
 <th>Requirement</th>
 </tr>
 </thead>
@@ -86,6 +86,7 @@ Only</th>
     <td>{{item.actor}}</td>
     <td style="text-align: center;">{% if item.certifiers_only  == "TRUE" %}X{% endif %}</td>
     <td>{{item.conformance}}</td>
+    <td style="text-align: center;">{% if item.conditionality  == "TRUE" %}X{% endif %}</td>
     <td>{{item.requirement | markdownify }}</td>
     </tr>
   {% endunless %}

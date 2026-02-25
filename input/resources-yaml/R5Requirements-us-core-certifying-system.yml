@@ -3,7 +3,7 @@ id: us-core-certifying-system
 url: http://hl7.org/fhir/us/core/Requirements/us-core-certifying-system
 name: USCoreCertifyingSystemRequirements
 title: US Core Certifying System Requirements
-description: This Requirements resources lists the US Core Certifying System requirements defined in the US Core Implementation Guide narrative sections. It lists the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification. These requirements represent the regulatory and technical specifications that design artifacts must meet to ensure interoperability.  See the Requirements resources for US Core Servers for list of the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections.
+description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification. These requirements represent the regulatory and technical specifications that design artifacts must meet to ensure interoperability.  See the [US Core Server Requirements](Requirements-us-core-server.html) for the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections.
 _actor:
   - extension:
       - url: http://hl7.org/fhir/StructureDefinition/display
@@ -35,3 +35,19 @@ statement:
     conformance:
       - SHALL
     requirement: '[For any complex element marked as *Additional USCDI*]. If any sub-element is marked as *Additional USCDI*, [the Certifying System **SHALL**] ... meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element.'
+  - key: CONF-0878
+    conformance:
+      - SHALL
+    requirement: When a Reference type element is labeled as *Additional USCDI* and has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems.
+  - key: CONF-0880
+    conformance:
+      - SHALL
+    requirement: When a Reference type element labeled as *Additional USCDI*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported by Certifying Systems
+  - key: CONF-0883
+    conformance:
+      - SHALL
+    requirement: When a Reference element is labeled as *Additional USCDI* has multiple target profiles referenced, but none are labeled as *Must Support*, *at least one* target profile **SHALL** be supported by Certifying Systems.
+  - key: CONF-0884
+    conformance:
+      - SHALL
+    requirement: If an *Additional USCDI* element has a choice of datatypes for its content, the datatypes the Certifying System **SHALL** support are labeled as *Must Support*.

@@ -3,7 +3,7 @@ id: us-core-client
 url: http://hl7.org/fhir/us/core/Requirements/us-core-client
 name: USCoreClientRequirements
 title: US Core Client Requirements
-description: This Requirements resources lists the US Core Requestor (Clients including Certifying Systems) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.
+description: This Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Requestor (Client) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.
 _actor:
   - extension:
       - url: http://hl7.org/fhir/StructureDefinition/display
@@ -138,11 +138,10 @@ statement:
     conformance:
       - SHALL
     requirement: |-
-      [If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support[, or a profile has] an Additional USCDI element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Additional USCDI
-
+      [If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support
       … When claiming conformance to [such a] profile:
 
-      - US Core Requestors **SHALL** be capable of processing [the Must Support or data type choice]
+      - US Core Requestors **SHALL** be capable of processing [the Must Support data type choice]
   - key: CONF-0113
     conformance:
       - MAY
@@ -157,6 +156,10 @@ statement:
       - SHALL
     conditionality: true
     requirement: There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the Must Support or Additional USCDI requirement. In such cases, … the Client application **SHALL** support all elements.
+  - key: CONF-0122
+    conformance:
+      - SHALL
+    requirement: Implementations [US Core Requestors] supporting Backend Services – for example, to meet US EHR certification requirements [of the ONC IT Health Certification program]- SHALL include support for the Client-confidential-asymmetric capability and system/scopes.
   - key: CONF-0127
     conformance:
       - SHOULD
@@ -464,7 +467,7 @@ statement:
     conformance:
       - SHOULD-NOT
     conditionality: true
-    requirement: The [HTTP Cache-Control](https://httpwg.org/specs/rfc9111.html) response header stores a response associated with a request and reuses the stored response for subsequent requests. If Cache-Control is present in the Server response headers, the Clients **SHOULD NOT** search the same data within the time stated in Cache-Control headers.
+    requirement: The [HTTP Cache-Control](https://httpwg.org/specs/rfc9111.html) response header stores a response associated with a request and reuses the stored response for subsequent requests. If a `Cache-Control` header is present in the Server response headers, the Clients **SHOULD NOT** search the same data within the time stated in the `Cache-Control` header.
   - key: CONF-0829
     requirement: "US Core SearchParameters referenced in [the US Core Client] CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document ... Client expectations. They specify additional expectations for the following SearchParameter elements:B7\n\n- multipleAnd\n- multipleOr\n- comparator\n- modifier\n- chain\n\nThey **SHALL NOT** be interpreted as search parameters for search. "
     extension:
@@ -492,3 +495,12 @@ statement:
     conformance:
       - SHALL
     requirement: ' ''Observation.performer'' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support.... Clients SHALL support both.'
+  - key: CONF-0882
+    conformance:
+      - SHALL
+    requirement: |-
+      When a Reference element is labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*
+
+      ...
+
+      - US Core Requesters **SHALL** be capable of processing  [such an element]  with a valid reference to *at least one* target profile.

@@ -13,7 +13,7 @@ The FHIR specification defines five FHIR pharmacy resources concerned with the o
   - [MedicationRequest]\: An order or request for the supply of the medication and the instructions for administration of the medication to a patient, and patient reported medications.
   - [MedicationDispense]\: Provision a medication with regards to dispensing in response to a prescription
 
-The following two medication resources are not profiled by US Core, and systems that support US Core are permitted to use them.   They are introduced here to provide background and define the relationships between the pharmacy resources. **However, as documented in the section below, the US Core Guidance for accessing a patient's medications does not use them:** 
+The following two medication resources are not profiled by US Core, and systems that support US Core are permitted to use them.<sup>[§][CONF-0246]</sup>  They are introduced here to provide background and define the relationships between the pharmacy resources. **However, as documented in the section below, the US Core Guidance for accessing a patient's medications does not use them:**
 
   - [MedicationAdministration]
   - [MedicationStatement]
@@ -35,7 +35,7 @@ This IG focuses on access to a patient's medications. Therefore, it is essential
 
 #### Options for Representing Medication
 
- This guide supports representing a medication using a code or a reference to a Medication resource. Typically, a code will be for a branded (for example, Crestor 10mg tablet) or a generic (for example, Rosuvastatin 10mg tablet) medication. When using a code, the code  **SHALL** follow the [extensible] binding rules to [Medication Clinical Drug (RxNorm)] - i.e., unless RxNorm does not cover the concept, the RxNorm code **SHALL** be used. USCDI recommends the [National Drug Codes (NDC)] as an optional medication terminology. They can be supplied as an additional coding element. More information about using codes can be found in the [General Guidance] and the [FHIR Terminology] sections. A medication resource is typically used when information not included in the RxNorm code is required. For example, the Medication resource is the only way to represent compounded correctly or extemporaneously prepared medication. When referencing the Medication resource, the resource may be included in the returned bundle, as an external resource, or as a [contained] resource if it can't stand alone. These options are shown in Figure 3 below. The Server application **MAY** choose any combination of these methods, but if an external reference to Medication is used, the Server **SHALL** support the [`_include`] parameter for searching this element. The Client application **MUST** support all methods. The [MedicationRequest examples] show these different methods. Additional guidance is provided below and in the [US Core Server CapabilityStatement] section.
+ This guide supports representing a medication using a code or a reference to a Medication resource. Typically, a code will be for a branded (for example, Crestor 10mg tablet) or a generic (for example, Rosuvastatin 10mg tablet) medication. When using a code, the code  **SHALL** follow the [extensible] binding rules to [Medication Clinical Drug (RxNorm)] - i.e., unless RxNorm does not cover the concept, the RxNorm code **SHALL** be used.<sup>[§][CONF-0247]</sup> USCDI recommends the [National Drug Codes (NDC)] as an optional medication terminology. They can be supplied as an additional coding element.<sup>[§][CONF-0248]</sup> More information about using codes can be found in the [General Guidance] and the [FHIR Terminology] sections. A medication resource is typically used when information not included in the RxNorm code is required. For example, the Medication resource is the only way to represent compounded correctly or extemporaneously prepared medication. When referencing the Medication resource, the resource may be included in the returned bundle, as an external resource, or as a [contained] resource if it can't stand alone. These options are shown in Figure 3 below. The Server application **MAY** choose any combination of these methods,<sup>[§][CONF-0249]</sup> but if an external reference to Medication is used, the Server **SHALL** support the [`_include`] parameter for searching this element.<sup>[§][CONF-0250]</sup> The Client application <span class="bg-success" markdown="1">**SHALL**</span><!-- new-content --> support all methods.<sup>[§][CONF-0251]</sup> The [MedicationRequest examples] show these different methods. Additional guidance is provided below and in the [US Core Server CapabilityStatement] section.
 
 {% include img.html img="ArgoR4Meds_4.svg" caption="Figure 3: Ways to Represent the Medication" %}
 
@@ -53,13 +53,13 @@ This IG focuses on access to a patient's medications. Therefore, it is essential
 
 
 
-1. A MedicationRequest resource query **SHALL** be all that is required to access "all medications" or "all active medications" for a patient. (In other words, no other medication resource type needs to be fetched)
-1. The query result **SHALL** include all MedicationRequest resources with a `MedicationRequest.intent` = "order" representing authorized medication orders directly derived from the system's orders.
-1. The query result **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with a `MedicationRequest.intent` = "plan" representing reported medications.
-1. Servers **SHALL** use the `MedicationRequest.reported[x]` element to indicate that the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
-1. When recording "self-prescribed" medication, Servers **SHOULD** use the `MedicationRequest.requester` element to indicate the Patient or RelatedPerson is the prescriber.
-1. Servers **SHOULD** support the encounter search parameter. Searching by encounter will return all medications ordered during that encounter, including medications administered in the hospital and prescribed or discharge medications intended to be taken at home.
-1. Servers **MAY** support the search parameters `category` and `encounter`. This search will return all medications ordered during an encounter for a given `MedicationRequest.category` such as "inpatient".
+1. A MedicationRequest resource query **SHALL** be all that is required to access "all medications" or "all active medications" for a patient. (In other words, no other medication resource type needs to be fetched)<sup>[§][CONF-0252]</sup>
+1. The query result **SHALL** include all MedicationRequest resources with a `MedicationRequest.intent` = "order" representing authorized medication orders directly derived from the system's orders.<sup>[§][CONF-0253]</sup>
+1. The query result **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with a `MedicationRequest.intent` = "plan" representing reported medications.<sup>[§][CONF-0254]</sup>
+1. Servers **SHALL** use the `MedicationRequest.reported[x]` element to indicate that the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record.<sup>[§][CONF-0256]</sup> It may also indicate the source of the report.<sup>[§][CONF-0257]</sup>
+1. When recording "self-prescribed" medication, Servers **SHOULD** use the `MedicationRequest.requester` element to indicate the Patient or RelatedPerson is the prescriber.<sup>[§][CONF-0258]</sup>
+1. Servers **SHOULD** support the encounter search parameter.<sup>[§][CONF-0259]</sup> Searching by encounter will return all medications ordered during that encounter, including medications administered in the hospital and prescribed or discharge medications intended to be taken at home.<sup>[§][CONF-0260]</sup>
+1. Servers **MAY** support the search parameters `category` and `encounter`. This search will return all medications ordered during an encounter for a given `MedicationRequest.category` such as "inpatient".<sup>[§][CONF-0262]</sup>
 
 
 #### Get All Medications
@@ -90,7 +90,7 @@ See the [US Core Server CapabilityStatement] for a complete list of supported RE
 
 #### De-duplication of Data
 
-Medications may be duplicated in a medication list when multiple sources of data are used to generate the list. To provide a list of a patient's medications, it may be necessary to "de-duplicate" them. The de-duplication activity **MAY** be supplied by the Server, but **SHOULD** be provided by the Client.
+Medications may be duplicated in a medication list when multiple sources of data are used to generate the list. To provide a list of a patient's medications, it may be necessary to "de-duplicate" them. The de-duplication activity **MAY** be supplied by the Server,<sup>[§][CONF-0263]</sup> but **SHOULD** be provided by the Client.<sup>[§][CONF-0264]</sup>
 
 This specification does not specify de-duplication best practices; however, systems can consider the following approaches:
 

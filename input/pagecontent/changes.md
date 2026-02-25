@@ -40,7 +40,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 14. **Resolved - change required:** Non-substantive (Correction) How To Read This Guide Changes [FHIR-54213](https://jira.hl7.org/browse/FHIR-54213) See Changes [Here]()
 15. **Resolved - change required:**  (Correction) Must Support technical corrections [FHIR-54214](https://jira.hl7.org/browse/FHIR-54214) See Changes [Here]()
 16. **Resolved - change required:** Non-substantive (Enhancement) USCDI to US Core Mapping Table [FHIR-54216](https://jira.hl7.org/browse/FHIR-54216) See Changes [Here]()
-17. **Resolved - change required:** Non-substantive (Correction) Medication List MUST [FHIR-54218](https://jira.hl7.org/browse/FHIR-54218) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/medication-list.html#options-for-representing-medication)
+17. **Applied:** Non-substantive (Correction) Change MUST to SHALL [FHIR-54218](https://jira.hl7.org/browse/FHIR-54218) See Changes [Here](medication-list.html#options-for-representing-medication)
 18. **Resolved - change required:**  (Correction) Basic Provenance Technical Corrections [FHIR-54219](https://jira.hl7.org/browse/FHIR-54219) See Changes [Here]()
 19. **Resolved - change required:** Non-substantive (Clarification) Basic Provenance Use Case References [FHIR-54221](https://jira.hl7.org/browse/FHIR-54221) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/basic-provenance.html#hie-transformation)
 20. **Resolved - change required:** Non-substantive (Clarification) USCDI Support Language in 3.6 [FHIR-54223](https://jira.hl7.org/browse/FHIR-54223) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/screening-and-assessments.html)
@@ -110,7 +110,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 79. **Triaged:**  () US Core DocumentReference  Scope Clarification [FHIR-55691](https://jira.hl7.org/browse/FHIR-55691) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-documentreference.html)
 80. **Submitted:**  () HCPCS URI does not resolve [FHIR-55689](https://jira.hl7.org/browse/FHIR-55689) See Changes [Here]()
 81. **Applied:**  Non-substantive (Correction) Update grammar for language guidance [FHIR-55954](https://jira.hl7.org/browse/FHIR-55954) See Changes [Here](general-guidance.html#language-support)
-81. **Pre-Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
+82. **Pre-Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>
