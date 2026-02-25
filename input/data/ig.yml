@@ -68,12 +68,6 @@
       "version": "3.0.0"
     },
     {
-      "id": "vsac",
-      "packageId": "us.nlm.vsac",
-      "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-      "version": "0.24.0"
-    },
-    {
       "id": "uscdcphinvads",
       "packageId": "us.cdc.phinvads",
       "uri": "https://phinvads.cdc.gov/vads/fhir/ImplementationGuide/us.cdc.phinvads",
@@ -2054,6 +2048,14 @@
       },
       {
         "reference": {
+          "reference": "Requirements/us-core-certifying-system"
+        },
+        "description": "This Requirements resources lists the US Core Certifying System requirements defined in the US Core Implementation Guide narrative sections. It lists the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification. These requirements represent the regulatory and technical specifications that design artifacts must meet to ensure interoperability.  See the Requirements resources for US Core Servers for list of the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections.",
+        "exampleBoolean": false,
+        "name": "US Core Certifying System Requirements"
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/us-core-client"
         },
         "description": "This CapabilityStatement describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the [US Core CapabilityStatement](CapabilityStatement-us-core-server.html). US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
@@ -2616,7 +2618,7 @@
         "reference": {
           "reference": "Requirements/us-core-server"
         },
-        "description": "This Requirements resources lists the US Core Responder (Servers including Certifying Systems) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.",
+        "description": "This Requirements resources lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the Requirements resources for US Core Certifying Systems for the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification.",
         "exampleBoolean": false,
         "name": "US Core Server Requirements"
       },

@@ -28,6 +28,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "US Core Requestors SHALL be capable of processing the code in ['DataElement.code.code' or text in 'DataElement.code.text' for a DataElement.code that has an extensible binding]"
     },
     {
@@ -35,6 +36,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "Clients SHALL be able to process [elements that are] [Mandatory](https://hl7.org/fhir/us/core/must-support.html) or [Must Support elements](https://hl7.org/fhir/us/core/must-support.html)"
     },
     {
@@ -42,6 +44,7 @@
       "conformance": [
         "SHOULD"
       ],
+      "conditionality": true,
       "requirement": "receivers SHOULD accept instances that ... contain unexpected data elements  [[definition](http://hl7.org/fhir/R4/conformance-rules.html#isModifier)]"
     },
     {
@@ -49,6 +52,7 @@
       "conformance": [
         "SHOULD-NOT"
       ],
+      "conditionality": true,
       "requirement": "receivers SHOULD [NOT] accept instances that ... contain unexpected data elements … when those elements are modifier elements [[definition](http://hl7.org/fhir/R4/conformance-rules.html#isModifier)]"
     },
     {
@@ -126,6 +130,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "Implementors [US Core Requestors] seeking ONC certification [in the ONC IT Health Certification program] **SHALL** interpret Additional USCDI Requirements as Must Support elements as documented above and below;"
     },
     {
@@ -133,6 +138,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "Implementors [US Core Requestors] [not] seeking ONC certification [in the ONC IT Health Certification program] **SHALL** interpret Additional USCDI Requirements as … optional."
     },
     {
@@ -210,6 +216,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the Must Support or Additional USCDI requirement. In such cases, … the Client application **SHALL** support all elements."
     },
     {
@@ -231,6 +238,7 @@
       "conformance": [
         "MAY"
       ],
+      "conditionality": true,
       "requirement": "[When Clients request a resource in a specific language] Clients MAY request language/locale using the http [Accept-Language](https://www.ietf.org/rfc/rfc2616.txt) header."
     },
     {
@@ -252,6 +260,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "The Client application MUST support all methods [for referencing a medication resource: returned bundle, as an external resource, or as a [contained](http://hl7.org/fhir/R4/references.html#contained) resource]"
     },
     {
@@ -280,6 +289,7 @@
       "conformance": [
         "SHOULD"
       ],
+      "conditionality": true,
       "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation SHOULD be supported in a R4 implementation"
     },
     {
@@ -420,6 +430,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program,] the certifying Client application SHALL support [MedicationRequest.reasonCode.]"
     },
     {
@@ -427,6 +438,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program,] the certifying Client application SHALL support [MedicationRequest.reasonReference.]"
     },
     {
@@ -434,6 +446,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program,] Clients SHALL support all target resources in MedicationRequest.reasonReference."
     },
     {
@@ -448,6 +461,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program] … Clients SHALL support ... US Core Procedure Profile for communicating the reason or justification for a referral as Additional USCDI Requirements"
     },
     {
@@ -455,6 +469,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program,] The certifying Client application SHALL support both [Procedure.reasonCode and Procedure.reasonReference]"
     },
     {
@@ -462,6 +477,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using Procedure.reasonReference … Clients SHALL support all target resources in Procedure.reasonReference"
     },
     {
@@ -469,6 +485,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program] … Clients SHALL support ... US Core ServiceRequest Profile for communicating the reason or justification for a referral as Additional USCDI Requirements"
     },
     {
@@ -476,6 +493,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program,] The certifying Client application SHALL support both [ServiceRequest.reasonCode and ServiceRequest.reasonReference]"
     },
     {
@@ -483,6 +501,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference … Clients SHALL support all target resources in ServiceRequest.reasonReference"
     },
     {
@@ -490,6 +509,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "The Client application SHALL support both [ Specimen.identifier and Specimen.accessionIdentifier]"
     },
     {
@@ -679,6 +699,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "The [additional] current binding [[FHIR R5 link](https://hl7.org/fhir/R5/terminologies.html#binding)] requires newly recorded, non-legacy data to be drawn from the [bound] value set."
     },
     {
@@ -693,6 +714,7 @@
       "conformance": [
         "SHOULD"
       ],
+      "conditionality": true,
       "requirement": "When the Server supports [ the _include search parameter], Clients **SHOULD** use the _include search parameter to retrieve referenced content instead of searching for a resource and then performing a separate search for other references (for example, Patient, Encounter, and Location) in the result set."
     },
     {
@@ -700,6 +722,7 @@
       "conformance": [
         "SHOULD"
       ],
+      "conditionality": true,
       "requirement": "If the Server does not support the _include search parameter, Clients **SHOULD** consolidate duplicate searches before searching for referenced resources in the result set"
     },
     {
@@ -707,6 +730,7 @@
       "conformance": [
         "SHOULD-NOT"
       ],
+      "conditionality": true,
       "requirement": "The [HTTP Cache-Control](https://httpwg.org/specs/rfc9111.html) response header stores a response associated with a request and reuses the stored response for subsequent requests. If Cache-Control is present in the Server response headers, the Clients **SHOULD NOT** search the same data within the time stated in Cache-Control headers."
     },
     {
@@ -738,6 +762,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "The certifying Client application **SHALL** support the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] ."
     },
     {
@@ -745,6 +770,7 @@
       "conformance": [
         "SHALL"
       ],
+      "conditionality": true,
       "requirement": "The certifying Client application **SHALL** support the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] on [the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html)]. "
     },
     {

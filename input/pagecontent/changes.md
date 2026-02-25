@@ -34,7 +34,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 8. **Resolved - change required:** Non-substantive (Clarification) Clarify if DocumentReference profile is just for notes, or anything non-ADI [FHIR-53490](https://jira.hl7.org/browse/FHIR-53490) See Changes [Here](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-documentreference.html)
 9. **Resolved - change required:** Compatible, substantive (Enhancement) Missing Tribal Affilliation values [FHIR-53592](https://jira.hl7.org/browse/FHIR-53592) See Changes [Here]()
 10. **Resolved - change required:** Non-substantive (Clarification) Clarification Around Slicing with Valuesets [FHIR-53597](https://jira.hl7.org/browse/FHIR-53597) See Changes [Here](https://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html)
-11. **Resolved - change required:** Non-substantive (Enhancement) convert all example snippets from XML to JSON [FHIR-53612](https://jira.hl7.org/browse/FHIR-53612) See Changes [Here](https://hl7.org/fhir/us/core/general-guidance.html#language-support)
+11. **Applied:** Non-substantive (Enhancement) Convert example snippet from XML to JSON [FHIR-53612](https://jira.hl7.org/browse/FHIR-53612) See Changes[Here](general-guidance.html#language-support)
 12. **Resolved - change required:** Compatible, substantive (Enhancement) Remove Must Support Requirement for ServiceRequest.reasonReference [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-pmo-servicerequest.html#profile)
 13. **Resolved - change required:**  (Correction) Note to Balloters typo [FHIR-54212](https://jira.hl7.org/browse/FHIR-54212) See Changes [Here]()
 14. **Resolved - change required:** Non-substantive (Correction) How To Read This Guide Changes [FHIR-54213](https://jira.hl7.org/browse/FHIR-54213) See Changes [Here]()
@@ -50,7 +50,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 24. **Resolved - change required:** Compatible, substantive (Enhancement) 7.0.1.0.1 Value Set Package Links [FHIR-54230](https://jira.hl7.org/browse/FHIR-54230) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/terminology.html#value-set-packages)
 25. **Resolved - change required:**  (Correction) Broken Link: ​Comparison with version 8.0.1 [FHIR-54248](https://jira.hl7.org/browse/FHIR-54248) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/changes-between-versions.html#cross-version-comparisons)
 26. **Resolved - change required:** Compatible, substantive (Correction) Clearly Mark Deprecated Profiles / Extensions [FHIR-54254](https://jira.hl7.org/browse/FHIR-54254) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-questionnaireresponse.html)
-27. **Resolved - change required:**  (Correction) Remove .html suffix from links to LOINC codes [FHIR-54257](https://jira.hl7.org/browse/FHIR-54257) See Changes [Here](https://hl7.org/fhir/us/core/clinical-notes.html)
+27. **Applied:** Non-substantive (Correction) Fix LOINC code links [FHIR-54257](https://jira.hl7.org/browse/FHIR-54257) See Changes [Here](https://hl7.org/fhir/us/core/clinical-notes.html)
 28. **Resolved - change required:**  (Correction) A few grammatical fixes and bad link to STU8 [FHIR-54269](https://jira.hl7.org/browse/FHIR-54269) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/index.html)
 29. **Resolved - change required:** Compatible, substantive (Enhancement) PMO ServiceRequest Profile Optionality [FHIR-54271](https://jira.hl7.org/browse/FHIR-54271) See Changes [Here]()
 30. **Resolved - change required:** Non-substantive (Enhancement) PMO Service Request [FHIR-54287](https://jira.hl7.org/browse/FHIR-54287) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-pmo-servicerequest.html)
@@ -77,7 +77,12 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 51. **Resolved - change required:** Non-substantive (Clarification) More guidance needed for what to represent in Requester field. [FHIR-54949](https://jira.hl7.org/browse/FHIR-54949) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-pmo-servicerequest.html)
 52. **Resolved - change required:**  (Correction) Fix Jira spec [FHIR-55391](https://jira.hl7.org/browse/FHIR-55391) See Changes [Here]()
 53. **Resolved - change required:**  (Correction) fix grammar [FHIR-55411](https://jira.hl7.org/browse/FHIR-55411) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/index.html)
-54. **Resolved - change required:** Non-substantive (Enhancement) Add Requirements page and resource [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/)
+54. **Resolved - change required:** Compatible, substantive (Enhancement)  New Requirements Table page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes:
+    -  [US Core Conformance Artifacts](general-requirements.html#us-core-conformance-artifacts)
+    -  [Requirements Table](requirement.html)
+    -  [Capability Statements and Requirements Resources ](capability-statements.html)
+    -  [US Core Client Requirements](Requirements-us-core-client.html)
+    -  [US Core Client Requirements](Requirements-us-core-client.html)
 55. **Resolved - change required:**  (Correction) Update Version Comparison from 8.0.0 to 8.0.1 [FHIR-55472](https://jira.hl7.org/browse/FHIR-55472) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/changes-between-versions.html#cross-version-comparisons)
 56. **Resolved - change required:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-pmo-servicerequest.html)
 57. **Triaged:**  () Request for patch on 3.1.1 Organization identifier cardinality [FHIR-51489](https://jira.hl7.org/browse/FHIR-51489) See Changes [Here]()
@@ -104,7 +109,8 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 78. **Triaged:** Non-compatible (Correction) Review use of additional bindings [FHIR-55688](https://jira.hl7.org/browse/FHIR-55688) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-location-definitions.html#Location.type)
 79. **Triaged:**  () US Core DocumentReference  Scope Clarification [FHIR-55691](https://jira.hl7.org/browse/FHIR-55691) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-documentreference.html)
 80. **Submitted:**  () HCPCS URI does not resolve [FHIR-55689](https://jira.hl7.org/browse/FHIR-55689) See Changes [Here]()
-
+81. **Applied:**  Non-substantive (Correction) Update grammar for language guidance [FHIR-55954](https://jira.hl7.org/browse/FHIR-55954) See Changes [Here](general-guidance.html#language-support)
+81. **Pre-Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>

@@ -1,0 +1,64 @@
+{
+  "resourceType": "Requirements",
+  "id": "us-core-certifying-system",
+  "url": "http://hl7.org/fhir/us/core/Requirements/us-core-certifying-system",
+  "name": "USCoreCertifyingSystemRequirements",
+  "title": "US Core Certifying System Requirements",
+  "description": "This Requirements resources lists the US Core Certifying System requirements defined in the US Core Implementation Guide narrative sections. It lists the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification. These requirements represent the regulatory and technical specifications that design artifacts must meet to ensure interoperability.  See the Requirements resources for US Core Servers for list of the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections.",
+  "_actor": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString": "US Core Certifying System"
+        }
+      ]
+    }
+  ],
+  "statement": [
+    {
+      "key": "CONF-0011",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "A Server that certifies to the [21st Century Cures Act for accessing patient data](https://www.federalregister.gov/d/2020-07419/p-1177) **SHALL** implement all components in the USCDI [[USCDI link](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)]"
+    },
+    {
+      "key": "CONF-0012",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "A Server that certifies to the [21st Century Cures Act for accessing patient data](https://www.federalregister.gov/d/2020-07419/p-1177) **SHALL** implement all components in the ... the US Core CapabilityStatement [[Definition](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html)] ."
+    },
+    {
+      "key": "CONF-0873",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If an element is marked as *Additional USCDI* and defined by a pattern [as described by [ElementDefinition.pattern](http://hl7.org/fhir/R4/elementdefinition-definitions.html#ElementDefinition.pattern_x_)], then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing."
+    },
+    {
+      "key": "CONF-0874",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "If [an element is] ... marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement."
+    },
+    {
+      "key": "CONF-0875",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values"
+    },
+    {
+      "key": "CONF-0876",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[For any complex element marked as *Additional USCDI*]. If any sub-element is marked as *Additional USCDI*, [the Certifying System **SHALL**] ... meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element."
+    }
+  ]
+}

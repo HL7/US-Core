@@ -164,31 +164,26 @@ sleep 1
 if [[ $GEN_REQ ]]; then
   echo "======================================="
   echo "Update Requirements resources"...
-  # do not process rows with Conformance = "Deprecated"
+  # do not process rows with Conformance = "DEPRECATED
   # use the SHALLNOT extension for Conformance = "SHALL-NOT"
 
-  for role in server client; do
-    if [ "$role" == "server" ]; then
-      filter='.actor == "Server" or .actor == "Both"'
+
+  for role in server client certifying-system; do
+    if [ "$role" == "certifying-system" ]; then
+      filter='.actor == "Server" and .certifiers_only == "TRUE"'
+    elif [ "$role" == "server" ]; then
+      filter='.actor == "Server" and .certifiers_only != "TRUE"'
     else
-      filter='.actor == "Client" or .actor == "Both"'
+      filter='.actor == "Client"'
     fi
 
     yq -p=csv -oy --csv-auto-parse=f "
       [.[] |
-        pick([\"key\", \"conformance\", \"requirement\", \"certifiers_only\", \"actor\"]) |
+        pick([\"key\", \"conformance\", \"conditionality\", \"requirement\", \"certifiers_only\", \"actor\"]) |
         select($filter) |
         select(.conformance != \"DEPRECATED\") |
+
         .conformance = (.conformance | split(\"|\")) |
-
-        with(select(.certifiers_only == \"TRUE\");
-          .extension = [{
-            \"url\": \"http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement\",
-            \"valueBoolean\": true
-          }]) |
-        with(select(.certifiers_only != \"TRUE\");
-          . ) |
-
         with(select(.conformance | contains([\"SHALL-NOT\"]));
           .extension = (.extension // []) + [{
             \"url\": \"http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot\",
@@ -200,6 +195,12 @@ if [[ $GEN_REQ ]]; then
           del(.conformance)
         ) |
 
+        with(select(.conditionality == \"TRUE\");
+          .conditionality = true
+        ) |
+        with(select(.conditionality != true);
+          del(.conditionality)
+        ) |
         del(.certifiers_only) |
         del(.actor)
       ]

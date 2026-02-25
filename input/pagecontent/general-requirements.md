@@ -119,7 +119,7 @@ FHIR profiles use [slicing] when a coded element is a repeating elements and a p
 
 #### Extensible Binding for Coded Elements
 
-[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.<sup>[§][CONF-0023]</sup>  If no suitable code exists in the ValueSet, alternate code(s) may be provided.<sup>[§][CONF-0024]</sup>  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings.<sup>[§][CONF-0025]</sup> If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used.<sup>[§][CONF-0026]</sup>
+[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.<sup>[§][CONF-0023]</sup>  If no suitable code exists in the ValueSet, alternate code(s) may be provided.<sup>[§][CONF-0024]</sup>  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings. If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used.<sup>[§][CONF-0026]</sup>
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for the CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
@@ -205,7 +205,7 @@ Example of additional coding of CVX vaccine code to NDC code.
 
 ### Modifier Elements
 
-A FHIR [modifier element] is an element that modifies the meaning of a resource element. Although Servers and Clients **SHALL** be able to process [Mandatory] or [Must Support] elements, not all modifier elements are Mandatory or Must Support, and there is no requirement for supporting them.<sup>[§][CONF-0031],[§][CONF-0032],[§][CONF-0033]</sup> Therefore, FHIR Clients need to be aware of unexpected modifier elements in the data they receive because they can alter the meaning of the data and can potentially lead to errors or even security risks if not properly handled. In addition, modifiers can be introduced when the data is created, edited, or transmitted, so it is crucial to ensure that all modifiers are understood and handled correctly.
+A FHIR [modifier element] is an element that modifies the meaning of a resource element. Although Servers and Clients **SHALL** be able to process [Mandatory] or [Must Support] elements, not all modifier elements are Mandatory or Must Support, and there is no requirement for supporting them.<sup>[§][CONF-0032],[§][CONF-0033]</sup> Therefore, FHIR Clients need to be aware of unexpected modifier elements in the data they receive because they can alter the meaning of the data and can potentially lead to errors or even security risks if not properly handled. In addition, modifiers can be introduced when the data is created, edited, or transmitted, so it is crucial to ensure that all modifiers are understood and handled correctly.
 
 In addition to declaring which US Core profiles they support, Servers **MAY** communicate a system-wide profile in their CapabilityStatement to identify which additional elements, including modifier elements, they support.<sup>[§][CONF-0034]</sup> However, systems are free to include other data elements - and receivers **SHOULD** accept instances that even contain unexpected data elements *except* when those elements are modifier elements.<sup>[§][CONF-0035],[§][CONF-0036]</sup> Unless a Client determines they can process it safely, rejection is typically the only safe action if unexpected modifier elements are present.<sup>[§][CONF-0037]</sup> For example, an app or system may process modifier elements nested inside an ignored element or in a resource only for human review.
 
@@ -217,7 +217,7 @@ Some examples of modifiers that are not Must Support elements in US Core Profile
 - `Practitioner.identifier.use`
 - `Patient.active`
 
-Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages.<sup>[§][CONF-0038]</sup> This view lists all the Must Support and modifier elements for a profile, as demonstrated in the figure below.
+Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and modifier elements for a profile, as demonstrated in the figure below.
 
  {% include img.html img="modifier-element-view.png" caption="Figure 5: Modifier Elements Listed in Key Element View" %}
 
@@ -338,7 +338,7 @@ For searches where the Client does not supply a status parameter, an implementat
 
      {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
-- **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.<sup>[§][CONF-0093]</sup>
+- **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.<sup>[§][CONF-0073]</sup>
 - For "entered-in-error" status, see the [representing entered in error information](general-guidance.html#representing-entered-in-error-information) section.
 
 <br />

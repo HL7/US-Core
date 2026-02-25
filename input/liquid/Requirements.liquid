@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
 
-<p>These requirements apply to the actor: <i><strong>US Core Requestor(Servers including Certifying Systems)</strong></i></p>
+<p>These requirements apply to the actor: <i><strong>{{ Requirements.actor.extension('http://hl7.org/fhir/StructureDefinition/display').value }}</strong></i></p>
 
 <table class="grid">
   <thead>
@@ -14,7 +14,7 @@
     {% for i in Requirements.statement %}
     <tr>
     <td>{{ i.key }}</td>
-    <td style="text-align: center;">{{ i.conformance.join(', ') }}{% if i.extension('http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot').exists() %}SHALL-NOT{% endif %}{% if i.extension('http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement').exists() %}<br />(certifying systems<br />only){% endif %}</td>
+    <td style="text-align: center;">{{ i.conformance.join(', ') }}{% if i.extension('http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot').exists() %}SHALL-NOT{% endif %}{% if i.conditionality.exists() and i.conditionality = true %}<br />(conditional){% endif %}</td>
     <td>{{ i.requirement | markdownify }}</td>
     </tr>
     {% endfor %}

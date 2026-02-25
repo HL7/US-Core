@@ -72,11 +72,6 @@ dependencies:  # maintain array order - is referenced in spec using liquid varia
     uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
     id: sdc  #old hl7_fhir_uv_sdc
 
-  us.nlm.vsac:
-    uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.24.0
-    id: vsac
-
   us.cdc.phinvads:
     id: uscdcphinvads
     # uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
@@ -373,7 +368,7 @@ menu:
       Search Parameters: search-parameters-and-operations.html#search-parameters
       Operations: search-parameters-and-operations.html#operations
       Terminology: terminology.html
-      Capability Statements: capability-statements.html#capability-statements
+      Capability Statements: capability-statements.html#capability-statement
       Requirements: capability-statements.html#requirements-resource
       Examples: examples.html
   # Security: security.html

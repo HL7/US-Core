@@ -9,30 +9,29 @@ This implementation guide defines how systems exchange ten "Common Clinical Note
 
 Servers **SHALL** support, at *minimum*, these ten "Common Clinical Notes":
 
-  1. [Consultation Note (11488-4)]
-  1. [Discharge Summary (18842-5)]
-  1. [History & Physical Note (34117-2)]
-  1. [Procedures Note (28570-0)] 
-  1. [Progress Note (11506-3)]
-  1. [Imaging Narrative (18748-4)]
-  1. [Laboratory Report Narrative (11502-2)]
-  1. [Pathology Report Narrative (11526-1)]
-  1. [Surgical Operation Note (11504-8)]
-  1. [Emergency Department Note (34111-5)]
+  1. [Consultation Note (11488-4)]<sup>[§][CONF-0206]</sup>
+  1. [Discharge Summary (18842-5)]<sup>[§][CONF-0207]</sup>
+  1. [History & Physical Note (34117-2)]<sup>[§][CONF-0208]</sup>
+  1. [Procedures Note (28570-0)]<sup>[§][CONF-0209]</sup>
+  1. [Progress Note (11506-3)]<sup>[§][CONF-0210]</sup>
+  1. [Imaging Narrative (18748-4)]<sup>[§][CONF-0211]</sup>
+  1. [Laboratory Report Narrative (11502-2)]<sup>[§][CONF-0212]</sup>
+  1. [Pathology Report Narrative (11526-1)]<sup>[§][CONF-0213]</sup>
+  1. [Surgical Operation Note (11504-8)]<sup>[§][CONF-0818]</sup>
+  1. [Emergency Department Note (34111-5)]<sup>[§][CONF-0819]</sup>
 
 Servers **SHALL** support, at *minimum*, these three DiagnosticReport categories:
 
-  1. [Cardiology (LP29708-2)]
-  1. [Pathology (LP7839-6)]
-  1. [Radiology (LP29684-5)]
+  1. [Cardiology (LP29708-2)]<sup>[§][CONF-0214]</sup>
+  1. [Pathology (LP7839-6)]<sup>[§][CONF-0215]</sup>
+  1. [Radiology (LP29684-5)]<sup>[§][CONF-0216]</sup>
 
 A DiagnosticReport category query allows a Client to retrieve multiple documents in a single query (see [Support Requirements](#support-requirements)).
 
 The Argonaut project team provided this initial list to HL7 after surveying the Argonaut and the US Veterans Administration (VA) participants. They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types, such as:
 
-* [Referral Note (57133-1)]
-* [Surgical Operation Note (11504-8)]
-* [Nurse Note (34746-8)]
+* [Referral Note (57133-1)<sup>[§][CONF-0217]</sup>]
+* [Nurse Note (34746-8)]<sup>[§][CONF-0219]</sup>
 
 The complete list of note (document) types is available in the [US Core DocumentReference Type Value Set].
 
@@ -48,12 +47,12 @@ There is no single best practice for representing a scanned or narrative-only re
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the Client will receive all the clinical information available for a patient and can easily identify duplicate data.
+To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]<sup>,[§][CONF-0220]</sup> Exposing the content in this manner guarantees the Client will receive all the clinical information available for a patient and can easily identify duplicate data.
 
 * `DocumentReference.content.attachment.url`
 * `DiagnosticReport.presentedForm.url`
 
-For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers to implement the duplicate reference to allow Clients to find Pathology reports or other Diagnostic Reports in either resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g., Pathology scan in DiagnosticReport), this wouldn't be required. However, at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in the proper use of these resources.
+For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2)<sup>[§][CONF-0221]</sup> This guide requires servers to implement the duplicate reference to allow Clients to find Pathology reports or other Diagnostic Reports in either resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g., Pathology scan in DiagnosticReport), this wouldn't be required. However, at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in the proper use of these resources.
 
 {% include img.html img="both-url.jpg" caption="Figure 2: Expose a PDF Report Through Both DiagnosticReport and DocumentReference" %}
 
@@ -93,25 +92,25 @@ Not all scanned information stored through DocumentReference will be exposed thr
 
 #### Support Requirements
 
-This guide requires systems to implement the [US Core DocumentReference Profile] and to support a *minimum* of all ten  Common Clinical Notes listed above. Systems may extend their capabilities to the complete [US Core DocumentReference Type Value Set]. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+This guide requires systems to implement the [US Core DocumentReference Profile]<sup>[§][CONF-0223]</sup> and to support a *minimum* of all ten Common Clinical Notes listed above. Systems may extend their capabilities to the complete [US Core DocumentReference Type Value Set].<sup>[§][CONF-0222]</sup> This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
-This guide requires systems to implement the [US Core DiagnosticReport Profile for Report and Note exchange] and to support a *minimum* of the three report categories:
+This guide requires systems to implement the [US Core DiagnosticReport Profile for Report and Note exchange]<sup>[§][CONF-0224]</sup> and to support a *minimum* of the three report categories:
 
 * [Cardiology (LP29708-2)]
 * [Pathology (LP7839-6)]
 * [Radiology (LP29684-5)]
 
-Systems may support other categories as well.
+Systems may support other categories as well.<sup>[§][CONF-0225],[§][CONF-0226]</sup>
 
 The vendors that participated in developing this guide did not differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Therefore, Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
 The following **SHOULD** be exposed via DiagnosticReport
-* Imaging Narrative
-* Laboratory Report Narrative
-* Pathology Report Narrative
-* Procedure Note
+* Imaging Narrative<sup>[§][CONF-0227]</sup>
+* Laboratory Report Narrative<sup>[§][CONF-0228]</sup>
+* Pathology Report Narrative<sup>[§][CONF-0229]</sup>
+* Procedure Note<sup>[§][CONF-0230]</sup>
 
-Servers that support DiagnosticReport will include the clinical note narrative content in `DiagnosticReport.presentedForm`.
+Servers that support DiagnosticReport will include the clinical note narrative content in `DiagnosticReport.presentedForm`.<sup>[§][CONF-231]</sup>
 
 A method for discovering the types of notes and reports that a server supports is described in the [Determining Server Note Type](#using-expand) section below.
 
@@ -140,22 +139,22 @@ Common Client search scenarios include:
 ### Determining Server Note Type
 {: #using-expand}
 
-In addition to inspecting a server CapabilityStatement, a Client can determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.
+In addition to inspecting a server CapabilityStatement, a Client can determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**.<sup>[§][CONF-0232]</sup> Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.<sup>[§][CONF-0233]</sup>
 
 #### Discovering Note and Report Types
 
-The note and report types for a particular server are discovered by invoking the #expand operation as follows:
+The note and report types for a particular server are discovered by invoking the `#expand` operation as follows:
 
 `GET [base]/ValueSet/$expand?context=[context]&contextDirection=[contextDirection]`
 
 
 Where:
 - [contextDirection] = `incoming` for write operations and `outgoing` for read operations.
-- [context] = 
-   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category` for DiagnosticReport report category discovery
-   -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code` for DiagnosticReport report type discovery
-   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category` for DocumentReference note category discovery
-   -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type` for DocumentReference note type discovery
+- [context] =
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category` for DiagnosticReport report category discovery<sup>[§][CONF-0234],[§][CONF-0235]</sup>
+   -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code` for DiagnosticReport report type discovery<sup>[§][CONF-0236],[§][CONF-0237]</sup>
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category` for DocumentReference note category discovery<<sup>[§][CONF-0238],[§][CONF-0239]</sup>
+   -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type` for DocumentReference note type discovery<sup>[§][CONF-0240],[§][CONF-0241]</sup>
 
 **Examples**
 
@@ -176,8 +175,8 @@ The read and write formats for a particular server are discovered by invoking th
 Where:
 - [contextDirection] = `incoming` for write operations and `outgoing` for read operations.
  - [context] =
-   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType` for DiagnosticReport report content type discovery.
-   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType` for DocumentReference note content type discovery
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType` for DiagnosticReport report content type discovery.<sup>[§][CONF-0242],[§][CONF-0243]</sup>
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType` for DocumentReference note content type discovery<sup>[§][CONF-0244],[§][CONF-0245]</sup>
 
 
  **Examples**
@@ -205,7 +204,7 @@ The following single query into DocumentReference supports all three scenarios:
 
   GET [base]/DocumentReference?patient=[id]&type=http://loinc.org|18842-5
 
-The server returns either a pointer to the Composition or the Binary resource. If other more specific resources are developed for Clinical Notes, systems can update their pointers to the new resource.  
+The server returns either a pointer to the Composition or the Binary resource. If other more specific resources are developed for Clinical Notes, systems can update their pointers to the new resource.
 
 #### Clinical Notes vs ClinicalImpression
 

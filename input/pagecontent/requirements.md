@@ -1,4 +1,6 @@
-This table lists the requirements defined in the US Core Implementation Guide’s narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv) or [Excel](tables/us_core_reqs.xlsx) file, and as [US Core Server Requirements] and [US Core Client Requirements] resources.
+{% include new_page.md %}
+
+This table lists the requirements defined in the US Core Implementation Guide’s narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv), [Excel](tables/us_core_reqs.xlsx) file, and as [US Core Requirements Resources]Capability Statements].
 
 Legend:
 
@@ -9,10 +11,10 @@ Legend:
   * Client: US Core Requester (Clients including Certifying Systems)
   * Both: Both US Core Responder and Requester (including Certifying System).
 * Certifying Systems Only: A Flag to indicate whether the requirement is an additional USCDI certification requirement.
-* Conformance: The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD-NOT, SHALL NOT, and DEPRECATED*.  Note that there may be several conformance verbs in a single statement.
+* Conformance: The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD-NOT, or SHALL NOT. Note that there may be several conformance verbs in a single statement.
 * Requirement: The actual requirements statement, which is a direct quote from the IG and may include helpful context in square brackets. Note that statements in the narrative section that contain multiple requirements in a single context are split into individual requirement statements.
 
-*If a requirement is removed for some reason, its ID is retired and its Conformance is updated to DEPRECATED.
+
 
 <!-- ==================================================================
 This liquid script creates a US Core requirements table using input data from input/data/us_core_reqs.csv which derived from the US Core Server v8.0.0 Specification Requirements which can be downloaded here: https://github.com/inferno-framework/us-core-test-kit/blob/main/lib/us_core_test_kit/requirements/hl7.fhir.us.core_8.0.0_reqs.xlsx
@@ -29,15 +31,15 @@ added = added for US Core publication:
 - ID*: (inherited) The unique identifier for the requirement. IDs are short, meaningless (they do not contain context like section numbers), and numeric. An approach is incrementing integers. See below for how to handle IDs for child requirements.
 - key: (added) A requirement key that identifies the requirement and links it to the statement in the guide. The format is "CONF-NNNN" where NNNN is a sequentially increasing zero padded integer with the coresponding ID* value.  e.g, "CONF-0022" Mapping: key -> Requirements.statement.key"
 - URL*: (inherited) "The URL of the deepest section that contains the requirement. The URL provides context for the requirement text.
-Mapping: URL ->  Requirements.statement.reference"
+   Mapping: URL ->  Requirements.statement.reference"
 - rel_url: (added) Url of the page from where the requirements statement came from, this is use to create a link back to the page.
 - requirement: (inherited changed columm name from Requirement*) "A direct quote from the IG. Add any clarifications or interpretations in a helper column like the Test Plan column. May include helpful context in square brackets.
-Mapping: requirement -> Requirements.statement.requirement" The format is Markdown and is either a sentence, one of more bullets, or even a paragraph to express a single requirement.
-- conformance: (inherited changed columm name from Conformance*) "The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD NOT [updated to SHOULD-NOT], SHALL NOT [updated to SHALL-NOT], and DEPRECATED [see  excel file]Further Consideration below for when to use DEPRECATED)."  Note that there may be several conformance verbs in a single statement. The format is "<CONF>|<CONF>|etc" where "<CONF>" is a conformance verb.
-Mapping: conformance -> Requirements.statement.conformance.
+  Mapping: requirement -> Requirements.statement.requirement" The format is Markdown and is either a sentence, one of more bullets, or even a paragraph to express a single requirement.
+- conformance: (inherited changed columm name from Conformance*) "The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD NOT [updated to SHOULD-NOT], SHALL NOT [updated to SHALL-NOT], and DEPRECATED [see  excel file]Further Consideration below for when to use DEPRECATED)."  Note   that there may be several conformance verbs in a single statement. The format is "<CONF>|<CONF>|etc" where "<CONF>" is a conformance verb.  If a requirement is removed for some reason, its ID is retired and its Conformance is updated to DEPRECATED - These are not published in the table or the resource.
+   Mapping: conformance -> Requirements.statement.conformance.
 - update_verb: a field to indicate that a tracker needs to be created to update the conformance verb in the IG. default is empty format old verb to new verb  for example, must to **SHALL**
 - actor: (inherited changed columm name from Actors*) "The actor, or actors, that the requirement constrains. The values will depend on the target specification, e.g., for Subscriptions (https://hl7.org/fhir/uv/subscriptions-backport/STU1.1/actors.html), Client and Server.
-Mapping: actor -> Requirements.actor"  NOTE updated to be "Server|Client|Both" since only a single actor supported in the R5 requirements resource.
+   Mapping: actor -> Requirements.actor"  NOTE updated to be "Server|Client|Both" since only a single actor supported in the R5 requirements resource.
 - certifiers_only:  (added) Flag to indicate whether the requirement is an additional USCDI certification requirement.  Default is empty or "FALSE" and set to "TRUE" for additional USCDI certification requirements. Mapping: certifiers_only -> Requirements.statement.extension:uscdi-requirements = true
 - Sub-Requirement(s): (inherited)  Not used
 - Conditionality: (inherited)  Not used
@@ -75,18 +77,18 @@ Only</th>
 </tr>
 </thead>
 <tbody>
-{% assign rows = site.data.us_core_reqs -%}
+{% assign rows = site.data.us_core_reqs %}
 {% for item in rows %}
-    {% assign cert=item.certifiers_only -%}
-    {% assign source=item.rel_url -%}
-  <tr id="{{item.key}}" {% if item.Is_New == "TRUE" %} class="bg-success"{% endif %}>
-  <td><a href="{{item.Page}}.html#{{item.key}}">{{item.key}}</a></td>
-  <td>{{item.context}}</td>
-  <td>{{item.actor}}</td>
-  <td style="text-align: center;">{% if cert == "TRUE" %}X{% endif %}</td>
-  <td>{{item.conformance}}</td>
-  <td>{{item.requirement | markdownify }}</td>
-  </tr>
+  {% unless item.conformance == "DEPRECATED" %}
+    <tr id="{{item.key}}" {% if item.Is_New == "TRUE" %}class="bg-success"{% endif %}>
+    <td><a href="{{item.Page}}.html#{{item.key}}">{{item.key}}</a></td>
+    <td>{{item.context}}</td>
+    <td>{{item.actor}}</td>
+    <td style="text-align: center;">{% if item.certifiers_only  == "TRUE" %}X{% endif %}</td>
+    <td>{{item.conformance}}</td>
+    <td>{{item.requirement | markdownify }}</td>
+    </tr>
+  {% endunless %}
 {% endfor %}
 </tbody>
 </table>

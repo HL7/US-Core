@@ -1,6 +1,6 @@
 <!--{% raw %} ================================================================
 usage: Manually add to and remove
-{% include new_page %}
+{% include new_page.md %}
 from the artifact introduction fragment as needed.
  ============================================================== {% endraw %}-->
 

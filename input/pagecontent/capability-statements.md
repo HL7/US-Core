@@ -6,7 +6,7 @@ The following Capability Statements have been defined for the US Core Implementa
 {% include list-capabilitystatements.xhtml %}
 </ul>
 
-
+<div class="bg-success" markdown="1">
 
 ### Requirements Resource
 
@@ -15,5 +15,6 @@ The following Requirements Resources have been defined for the US Core Implement
 {% include list-requirements.xhtml %}
 </ul>
 <br />
+</div><!-- new-content -->
 
 {% include link-list.md %}

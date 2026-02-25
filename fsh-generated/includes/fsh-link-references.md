@@ -236,6 +236,7 @@
 [USCoreCarePlanProfile]: StructureDefinition-us-core-careplan.html
 [USCoreCareTeam]: StructureDefinition-us-core-careteam.html
 [USCoreCategory]: CodeSystem-us-core-category.html
+[USCoreCertifyingSystemRequirements]: Requirements-us-core-certifying-system.html
 [UsCoreClientCapabilityStatement]: CapabilityStatement-us-core-client.html
 [USCoreClientRequirements]: Requirements-us-core-client.html
 [USCoreClinicalNoteType]: ValueSet-us-core-clinical-note-type.html

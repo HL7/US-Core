@@ -40,19 +40,19 @@
 [Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
 [Conformance Requirements]: capability-statements.html
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
-[Consultation Note (11488-4)]: https://loinc.org/11488-4.html
+[Consultation Note (11488-4)]: https://loinc.org/11488-4
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [Deletion Safety Checks]: {{site.data.fhir.path}}safety.html#conformance
 [Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
 [Direct address]: https://www.healthit.gov/sites/default/files/directbasicsforprovidersqa_05092014.pdf
 [Directory of published versions]: {{site.data.fhir.canonical}}/history.html
-[Discharge Summary (18842-5)]: https://loinc.org/18842-5.html
+[Discharge Summary (18842-5)]: https://loinc.org/18842-5
 [Document Class Value Set]: {{site.data.fhir.path}}valueset-document-classcodes.html
 [Element Level Provenance]: element-level-provenance.html
 [ElementDefinition.pattern]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.pattern_x_
-[Emergency Department Note (34111-5)]: https://loinc.org/34111-5.html
-[Emergency Department Note (34111-5)]: https://loinc.org/34111-5.html
+[Emergency Department Note (34111-5)]: https://loinc.org/34111-5
+[Emergency Department Note (34111-5)]: https://loinc.org/34111-5
 [Enclosed Precondition Extension]: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/adi-enclosedPrecondition-extension
 [Event Location Extension]: http://hl7.org/fhir/StructureDefinition/event-location
 [Extensible Binding]: {{site.data.fhir.path}}terminologies.html#extensible
@@ -82,10 +82,10 @@
 [HL7 Cross Paradigm Implementation Guide: UDI Pattern]: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=487
 [HL7 Terminology (THO)]: https://terminology.hl7.org
 [HTI-1 final rule]: https://www.federalregister.gov/documents/2023/04/18/2023-07229/health-data-technology-and-interoperability-certification-program-updates-algorithm-transparency-and
-[History & Physical Note (34117-2)]: https://loinc.org/34117-2.html
+[History & Physical Note (34117-2)]: https://loinc.org/34117-2
 [Human Language]: {{site.data.fhir.path}}extension-language.html
 [IHE XDSclassCode]: https://wiki.ihe.net/index.php/XDS_classCode_Metadata_Coding_System
-[Imaging Narrative (18748-4)]: https://loinc.org/18748-4.html
+[Imaging Narrative (18748-4)]: https://loinc.org/18748-4
 [Immunization-imm-1]: Immunization-imm-1.html
 [Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
 [Intervention Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9/expansion
@@ -94,7 +94,7 @@
 [LOINC Radiology Codes]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.18/expansion
 [LOINC scale type to FHIR data type mapping]: {{site.data.fhir.path}}loinc.html#dataelements
 [LOINC]: http://loinc.org
-[Laboratory Report Narrative (11502-2)]: https://loinc.org/11502-2.html
+[Laboratory Report Narrative (11502-2)]: https://loinc.org/11502-2
 [Mandatory]: must-support.html
 [Medication Adherence ValueSet]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.8/expansionStructureDefinition-us-core-medication-adherence.html
 [Medication Clinical Drug (RxNorm)]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion
@@ -110,7 +110,7 @@
 [Narrative]: {{site.data.fhir.path}}security.html#narrative
 [National Drug Codes (NDC)]: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
 [Normative]: {{site.data.fhir.path}}versions.html#maturity
-[Nurse Note (34746-8)]: https://loinc.org/34746-8.html
+[Nurse Note (34746-8)]: https://loinc.org/34746-8
 [ASTP Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [Observation Category Codes]: {{site.data.fhir.path}}valueset-observation-category.html
 [Observation Grouping]: {{site.data.fhir.path}}observation.html#obsgrouping
@@ -120,14 +120,14 @@
 [PHQ-9]: https://en.wikipedia.org/wiki/PHQ-9
 [Parameters]: {{site.data.fhir.path}}parameters.html
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
-[Pathology Report Narrative (11526-1)]: https://loinc.org/11526-1.html
+[Pathology Report Narrative (11526-1)]: https://loinc.org/11526-1
 [Patient Access for Standalone Apps]: {{site.data.fhir.ver.smart}}/conformance.html#patient-access-for-standalone-apps
 [Patient Example]: Patient-example.html
 [Performer function Extension]: http://hl7.org/fhir/StructureDefinition/event-performerFunction
 [Physical Activity Alliance]: http://paamovewithus.org/
 [Physical Activity Implementation Guide]: https://hl7.org/fhir/us/physical-activity/
-[Procedures Note (28570-0)]: https://loinc.org/28570-0.html
-[Progress Note (11506-3)]: https://loinc.org/11506-3.html
+[Procedures Note (28570-0)]: https://loinc.org/28570-0
+[Progress Note (11506-3)]: https://loinc.org/11506-3
 [Project US@ Technical Specification for Patient Addresses Final Version 1.0]: https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf
 [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Provenance Agent Type]: https://terminology.hl7.org/ValueSet-provenance-agent-type.html
@@ -137,7 +137,7 @@
 [Record or update]: us-core-roadmap.html#future-candidate-requirements-under-consideration
 [Reference]: {{site.data.fhir.path}}references.html
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
-[Referral Note (57133-1)]: https://loinc.org/57133-1.html
+[Referral Note (57133-1)]: https://loinc.org/57133-1
 [SDC Base Questionnaire]: {{site.data.fhir.sdc}}/StructureDefinition-sdc-questionnaire.html
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/index.html
@@ -154,7 +154,7 @@
 [Structured Data Capture (SDC)]: {{site.data.fhir.sdc}}
 [Supporting Info Extension]: https://hl7.org/fhir/extensions/StructureDefinition-workflow-supportingInfo.html
 [Suppressed Data]: general-guidance.html#suppressed-data
-[Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
+[Surgical Operation Note (11504-8)]: https://loinc.org/11504-8
 [Target Element]: http://hl7.org/fhir/StructureDefinition/targetElement
 [Terminology Binding Extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [The US Core DocumentReferences Type Value Set]: ValueSet-us-core-documentreference-category.html
@@ -269,4 +269,4 @@
 [Pregnancy Status Observation]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.12/expansion
 [Parameters for all resources]: {{site.data.fhir.path}}search.html#all
 [US Core Server v8.0.0 Specification Requirements]: https://inferno.healthit.gov/suites/us_core_v800/
- [Inferno]: https://inferno.healthit.gov/
+[Inferno]: https://inferno.healthit.gov/

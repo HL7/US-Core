@@ -28,7 +28,7 @@ The US Core Maturity Levels are assigned to US Core profiles, extensions, and op
 
 **US Core Maturity Level 5** is assigned to US Core SearchParameters. They are sufficiently stable, and forward compatibility is enforced. See the [Search Parameters and Operations] page for how SearchParameters defined in US Core are used.
 
-#### ValueSets, CodeSystems, and CapabilityStatements
+#### ValueSets, CodeSystems, <span class="bg-success" markdown="1">CapabilityStatements and Requirements</span><!-- new-content -->
 
 **US Core Maturity Level 3** is assigned ValueSets, CodeSystems, and CapabilityStatements. These artifacts are dynamic with each version of US Core. Therefore, forward compatibility is not enforced. For more information on ValueSet and CodeSystem versions, see the [Terminology] page.
 
