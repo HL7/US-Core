@@ -13,7 +13,7 @@ With the addition of the USCDI Health Status Assessments data elements, US Core 
 - Alcohol Use
 - Substance Use
 
-However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.
+However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.<sup>[§][CONF-0268]</sup>
 
 The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI] SDOH data elements for Assessments, Goals, Interventions, and Problems/Health Concerns.
 
@@ -55,10 +55,10 @@ Whether based on simple observations or detailed assessments, clinicians may rec
 
 Local policies guide what is appropriate for the problem list and what is appropriate for an observation. For example, some clinics may consider social needs sensitive information inappropriate for the problem list. Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.
 
-Every Server that supports the USDCI Data Class "Health Status/Assessments":
+Every Server (including "Certifying Systems") that supports the USDCI Data Class "Health Status/Assessments":
 
--  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].
-   -  The US Core Simple Observation Profile's `Observation.derivedFrom` element **SHOULD** reference the Structured Screening and Assessment upon which clinical judgment observations are made (see below). Likewise, the US Core Condition Profile's `Condition.evidence.detail` element **SHOULD** reference the Structured Screening and Assessment which assist in diagnosing problems or health concerns.
+-  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].<sup>[§][CONF-0269]</sup>
+   -  The US Core Simple Observation Profile's `Observation.derivedFrom` element **SHOULD** reference the Structured Screening and Assessment upon which clinical judgment observations are made (see below).<sup>[§][CONF-0270]</sup> Likewise, the US Core Condition Profile's `Condition.evidence.detail` element **SHOULD** reference the Structured Screening and Assessment which assist in diagnosing problems or health concerns.<sup>[§][CONF-0271]</sup>
 
 #### Structured Screening and Assessments
 
@@ -106,7 +106,7 @@ US Core Observation Screening Assessment can be extracted from US Core Questionn
 
 For API developers using US Core, it's important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:
 
-- Observations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions. Not all answers in a form will necessarily be appropriate to surface as an Observation. However, anything that meets one of the preceding criteria must be surfaced as an Observation.
+- Observations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions. Not all answers in a form will necessarily be appropriate to surface as an Observation. However, anything that meets one of the preceding criteria must be surfaced as an Observation.<sup>[§][CONF-0272]</sup>
 - QuestionnaireResponses represent the source-of-truth of a completed form. QuestionnaireResponse shows how the question was phrased, what answer text was seen or typed, the order in which the survey or assessment was completed, etc. For FHIR implementers, it is important to note that QuestionnaireResponse references a specific version of a form, whether it was represented as a FHIR Questionnaire or not. (however, it may be challenging to determine canonical URLs and linkIds consistently across systems without using a FHIR Questionnaire.) This reference provides the context of exactly what options were available, what logic was used to calculate answers, and what questions were asked. It is important to note that QuestionnaireResponse cannot be used for searching based on individual responses but to capture higher-level information such as what form was filled out, by whom, and when.
 
 In many cases, data might be represented using both mechanisms - the initial raw assessment retained for audit or detailed review stored as a QuestionnaireResponse, and the detailed key answers surfaced as Observations for easy search and analysis.
@@ -118,7 +118,7 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 #### Category Codes
 
-API consumers can query by category when accessing patient information. Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. US Core defined these USCDI Health Assessments Data Elements category codes:
+API consumers can query by category when accessing patient information.<sup>[§][CONF-0275]</sup> Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. US Core defined these USCDI Health Assessments Data Elements category codes:
 
 <!-- ========================================================
 The liquid syntax below generates the screening and assessment

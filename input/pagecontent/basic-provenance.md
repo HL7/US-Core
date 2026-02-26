@@ -35,10 +35,9 @@ The HL7 Basic Provenance Informative implementation guide outlines four use case
 
 #### Clinical Information Reconciliation and Incorporation
 
-[Clinical Information Reconciliation and
-Incorporation (CIRI)] allows clinicians to reconcile and incorporate patient
-health information sent in from external sources to maintain a more accurate
-and up-to-date patient records. Consolidated Clinical Document Architecture
+<span class="bg-success" markdown="1">Clinical Information Reconciliation and Incorporation (CIRI) allows clinicians to reconcile and incorporate patient
+health information sent in from external sources to maintain more accurate
+and up-to-date patient records.</span><!-- new-content --> Consolidated Clinical Document Architecture
 (C-CDA) documents are often used to share clinical information with clinicians
 from external sources like hospitals, Health Information Exchanges (HIEs), or
 other clinicians, and allows the clinician to import and reconcile health care
@@ -82,7 +81,7 @@ Dr. Accepted is the latest author after verifying the problem on 5/2018 and acce
 
 A Health Information Exchange (HIE) is an organization and technology that facilitates information exchange between one and many partners. In specific HIE scenarios, they only redistribute information, while in others, they store, transform, and redistribute information. The HIE must maintain the clinical content fidelity (original author, author organization, and timestamp). In addition, the HIE must keep track of who sent them the information for auditing; however, they are not required to include the original transmitter when redistributing content.
 
-{% include img.html img="Provenance_HIE_Single_Org_Device.svg" caption="Figure 3: HIE Redistribution - No clinical content transformation" %}
+{% include img.html img="Provenance_HIE_Redistribution.svg" caption="Figure 3: HIE Redistribution - No clinical content transformation" %}
 
 Since no clinical content is changed in the HIE redistribution, the best scenario is a Provenance Record with:
 - `Provenance.agent.type` = author
@@ -96,17 +95,17 @@ Since no clinical content is changed in the HIE redistribution, the best scenari
 
 #### HIE Transformation
 
-Unlike Use Case 3 - HIE Redistribution, Use Case 4 includes data transformation. Information is received (e.g., v2 lab, other CDs), transformed by a HIE, stored, and passed in a new format (e.g., CCD or FHIR).
+<span class="bg-success" markdown="1">In contrast to HIE Redistribution, HIE Transformation includes a step to convert the source data format into a different data format.</span><!-- new-content --> Information is received (e.g., v2 lab, other CDs), transformed by a HIE, stored, and passed in a new format (e.g., CCD or FHIR).
 
-{% include img.html img="Provenance_HIE_Multi_Org_Device.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
+{% include img.html img="Provenance_HIE_Transformation.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
 
-Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The HIE must maintain the original data source. An `agent.type`="assembler", `agent.type`="transmitter", or other agents from [Provenance Agent Type] value set **MAY** also be included. Due to insufficient implementer guidance, the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include it in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
+Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The HIE must maintain the original data source. An `agent.type`="assembler", `agent.type`="transmitter", or other agents from [Provenance Agent Type] value set **MAY** also be included.<sup>[§][CONF-0267]</sup> Due to insufficient implementer guidance, the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include it in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
 
 ### Individual Level Provenance
 
 
 
-The functionality of the Provenance resource discussed above. The table below lists the US Core elements that communicate the author and author roles corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals*. They are also documented on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled [Must Support] or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.
+The functionality of the Provenance resource discussed above. The table below lists the US Core elements that communicate the author and author roles corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals*. They are also documented on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled [Must Support] or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.<sup>[§][CONF-0885]</sup>
 
 ##### Author and Author Role Data Elements
 
