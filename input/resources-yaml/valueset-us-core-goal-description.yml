@@ -1,16 +1,12 @@
 resourceType: ValueSet
 id: us-core-goal-description
-meta:
-  versionId: '1'
-  lastUpdated: 2022-04-27T23:53:20.720000+00:00
 url: http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description
 name: USCoreGoalCodes
 title: US Core Goal Codes
 status: active
 experimental: false
-date: 2022-09-29
-description: Concepts from SNOMED CT  and LOINC code systems that can be used to indicate
-  the goal.
+date: 2026-02-26
+description: Concepts from SNOMED CT "Clinical finding (finding)" hierarchy, and LOINC "clinical classes".
 copyright: "1. This value set includes content from SNOMED CT, which is copyright
   \xA9 2002+ International Health Terminology Standards Development Organisation (IHTSDO),
   and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT
@@ -22,4 +18,15 @@ copyright: "1. This value set includes content from SNOMED CT, which is copyrigh
 compose:
   include:
   - system: http://snomed.info/sct
+    filter:
+    - property: concept
+      op: is-a
+      value: '1055210001'
   - system: http://loinc.org
+    filter:
+      - property: CLASSTYPE
+        op: '='
+        value: '2'
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3

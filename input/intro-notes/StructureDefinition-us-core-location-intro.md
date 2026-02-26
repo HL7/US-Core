@@ -27,7 +27,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 - *There are three bindings for `Location.type` to meet multiple industry needs for identifying service locations:
    - The extensibly bound Service Delivery Location Role Type value set is inherited from the base resource. Its binding strength has been revised to [preferred] in FHIR R5/R6, and for US Core, implementers may treat it as preferred.
    - This guide uses a grouped value set that includes concepts from Healthcare Service Location Codes (HSLOC) and SNOMED-CT Healthcare Facility Type codes to meet the USCDI applicable vocabulary standard. Implementers can use a code from either vocabulary.
-   - The NUBC Place of Service (POS) codes meet the Health Insurance Portability and Accountability Act of 1996 (HIPAA) requirements for billing and Payers.
+   - The <span class="bg-success" markdown="1">CMS</span><!-- new-content --> Place of Service (POS) codes meet the Health Insurance Portability and Accountability Act of 1996 (HIPAA) requirements for billing and Payers.
 - †{% include should-project-us.md type="Location" %}
 - †{% include should-3166-subdivision-codes.md type="Location" %}
 
