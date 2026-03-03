@@ -270,3 +270,5 @@
 [Parameters for all resources]: {{site.data.fhir.path}}search.html#all
 [US Core Server v8.0.0 Specification Requirements]: https://inferno.healthit.gov/suites/us_core_v800/
 [Inferno]: https://inferno.healthit.gov/
+[TribalEntityUS]: https://terminology.hl7.org/5.5.0/ValueSet-v3-TribalEntityUS.html
+[Standard Code Book]: https://www.ihs.gov/scb/standard-code-book-tables/tribe/

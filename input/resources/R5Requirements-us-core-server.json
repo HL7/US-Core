@@ -1640,32 +1640,25 @@
       "requirement": "To provide a list of a patient’s medications, it may be necessary to “de-duplicate” them. The de-duplication activity MAY be supplied by the Server"
     },
     {
-      "key": "CONF-0266",
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "The HIE must maintain the original data source."
-    },
-    {
       "key": "CONF-0267",
       "conformance": [
         "MAY"
       ],
-      "requirement": "An agent.type=”assembler”, agent.type=”transmitter”, or other agents from [Provenance Agent Type](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-provenance-participant-type.html) value set MAY also be included."
+      "requirement": "An agent.type=”assembler”, agent.type=”transmitter”, or other agents from [Provenance Agent Type](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-provenance-participant-type.html) value set **MAY** also be included."
     },
     {
       "key": "CONF-0268",
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "implementers [of US Core's framework of Screening and Assessments] SHOULD consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases."
+      "requirement": "implementers [of US Core's framework of Screening and Assessments] **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases."
     },
     {
       "key": "CONF-0269",
       "conformance": [
         "SHALL"
       ],
-      "requirement": "Every Server that supports the USDCI Data Class “Health Status/Assessments”:\n\nSHALL support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html) or [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html)."
+      "requirement": "Every Server that supports the USDCI Data Class “Health Status/Assessments”:\n\n**SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html) or [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html)."
     },
     {
       "key": "CONF-0270",
@@ -1689,20 +1682,6 @@
       "requirement": "For API developers using US Core, it’s important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:\nObservations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions ... anything that meets one of the preceding criteria must be surfaced as an Observation."
     },
     {
-      "key": "CONF-0273",
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "For API developers using US Core, it’s important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:\nObservations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions ... anything that meets one of the preceding criteria must be surfaced as an Observation."
-    },
-    {
-      "key": "CONF-0274",
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "For FHIR implementers, it is important to note that QuestionnaireResponse [which represent the source-of-truth of a completed form, shall] references a specific version of a form, whether it was represented as a FHIR Questionnaire or not. This reference provides the context of exactly what options were available, what logic was used to calculate answers, and what questions were asked."
-    },
-    {
       "key": "CONF-0280",
       "conformance": [
         "SHOULD"
@@ -1715,34 +1694,6 @@
         "SHOULD"
       ],
       "requirement": "when recording SDOH data [with] US Core Profiles, Servers SHOULD use … [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion), [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion), [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion), [and] [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)"
-    },
-    {
-      "key": "CONF-0282",
-      "conformance": [
-        "MAY"
-      ],
-      "requirement": "A Server may support Version DSTU2 and Argonaut Data Query"
-    },
-    {
-      "key": "CONF-0283",
-      "conformance": [
-        "MAY"
-      ],
-      "requirement": "A Server may support … FHIR R4 and US Core ver 3.1.1+"
-    },
-    {
-      "key": "CONF-0284",
-      "conformance": [
-        "MAY"
-      ],
-      "requirement": "A Server may support [both] [(]Version DSTU2 and Argonaut Data Query[) and (] FHIR R4 and US Core ver 3.1.1+[)]"
-    },
-    {
-      "key": "CONF-0285",
-      "conformance": [
-        "MAY"
-      ],
-      "requirement": "A Server may make explicit which version of Argo/US Core is on their FHIR endpoint (e.g., “DSTU2” or “R4” path component or separate files based on version)."
     },
     {
       "key": "CONF-0287",
@@ -1812,9 +1763,9 @@
     {
       "key": "CONF-0300",
       "conformance": [
-        "SHALL"
+        "SHOULD"
       ],
-      "requirement": "Separate authorization is required [between different versions of FHIR]"
+      "requirement": "To allow Clients to use a single authorization token when accessing resources from multiple version-specific endpoints, Servers **SHOULD** use the same base authorization endpoint across versions."
     },
     {
       "key": "CONF-0302",
@@ -3931,6 +3882,13 @@
         "SHALL"
       ],
       "requirement": "When a Reference element is labeled as *Must Support* has multiple target profiles referenced, but none are labeled as *Must Support*\n\n...\n\n- US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to *at least one* target profile."
+    },
+    {
+      "key": "CONF-0885",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled Must Support or Additional USCDI Requirements. However,[even if they are not   labeled Must Support or Additional USCDI Requirements] all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data."
     }
   ]
 }

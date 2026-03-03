@@ -12,8 +12,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Condition Must Have:**
 
-1. a category code of 'encounter-diagnosis'
-2. a code that identifies the condition*
+1. a category code of "encounter-diagnosis"
+2. a code that identifies the condition<sup>1</sup>
 3. a patient
 
 **Each Condition Must Support:**
@@ -23,22 +23,22 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Condition" plural="false" %}
 
-1. a recorder†
+1. a recorder<sup>2</sup>
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* For Problems and Health Concerns, use the [US Core Condition Problems and Health Concerns Profile].
-* \*The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.
-  - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.
+* For Problems and Health Concerns, use the [US Core Condition Problems and Health Concerns Profile].<sup>[§][CONF-0320]</sup>
+* <sup>1</sup>The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.
+  - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.<sup>[§][CONF-0321],[§][CONF-0322]</sup>
   - USCDI's applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM.
-    - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used as the primary code for current encounter diagnoses.
+    - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used as the primary code for current encounter diagnoses.<sup>[§][CONF-0323]</sup>
     - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes.
-* The encounter **SHOULD** always be referenced in `Condition.encounter`.
+* The encounter **SHOULD** always be referenced in `Condition.encounter`.<sup>[§][CONF-0324]</sup>
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`. An example search is shown in the [Quick Start](#search) section below.
-{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
 {% include link-list.md %}

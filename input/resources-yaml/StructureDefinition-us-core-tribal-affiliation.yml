@@ -64,7 +64,7 @@ differential:
       type:
         - code: CodeableConcept
       binding:
-        strength: extensible
+        strength: preferred #changed from extensible in ver 9
         description: Tribal Entity recognized by the United States Bureau Of Indian Affairs.
         valueSet: http://terminology.hl7.org/ValueSet/v3-TribalEntityUS
     - id: Extension.extension:isEnrolled
