@@ -14,7 +14,7 @@
     {% for i in Requirements.statement %}
     <tr>
     <td>{{ i.key }}</td>
-    <td style="text-align: center;">{{ i.conformance.join(', ') }}{% if i.extension('http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot').exists() %}SHALL-NOT{% endif %}{% if i.conditionality.exists() and i.conditionality = true %}<br />(conditional){% endif %}</td>
+    <td style="text-align: center;">{{ i.conformance.join(', ') }}{% if i.extension('http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot').exists() %}SHALL-NOT{% endif %}</td>
     <td>{{ i.requirement | markdownify }}</td>
     </tr>
     {% endfor %}

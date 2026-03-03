@@ -72,7 +72,6 @@ The script sorts and selects the table data and allows for highlighting new and 
 <th>Certifying Systems<br />
 Only</th>
 <th>Conformance</th>
-<th>Conditional</th>
 <th>Requirement</th>
 </tr>
 </thead>
@@ -86,7 +85,6 @@ Only</th>
     <td>{{item.actor}}</td>
     <td style="text-align: center;">{% if item.certifiers_only  == "TRUE" %}X{% endif %}</td>
     <td>{{item.conformance}}</td>
-    <td style="text-align: center;">{% if item.conditionality  == "TRUE" %}X{% endif %}</td>
     <td>{{item.requirement | markdownify }}</td>
     </tr>
   {% endunless %}

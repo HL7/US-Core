@@ -137,37 +137,34 @@ Detailed comparisons between the US Core artifacts in this current {{site.data.f
 
 ### Endpoint Discoverability
 
-A Server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Core ver 3.1.1+ or both. A Server may make explicit which version of Argo/US Core is on their FHIR endpoint (e.g., "DSTU2" or "R4" path component or separate files based on version). However, the best practice is to inspect the [endpoint metadata](http://hl7.org/fhir/R4/http.html) on each endpoint to discover the information about a Server's capabilities, including the FHIR version and the US Core Profile version that is supported:
+A Server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Core ver 3.1.1+ or both. A Server may make explicit which version of Argo/US Core on their FHIR endpoint (e.g., "DSTU2" or "R4" path component or separate files based on version). However, the best practice is to inspect the [endpoint metadata](http://hl7.org/fhir/R4/http.html) on each endpoint to discover the information about a Server's capabilities, including the FHIR version and the US Core Profile version that is supported:
 
 `GET [base]/metadata{?mode=[mode]} {&_format=[mime-type]}`
 
 ### No Guarantee that Resource IDs are Preserved
 
-Servers **SHOULD** maintain a stable common identifier for a resource across versions. When the FHIR resource ID or business identifier of the underlying clinical data is not maintained across FHIR versions, the Client **SHALL** use an alternative method to avoid duplication, such as the guidance provided in the [Interoperable Digital Identity and Patient Matching](https://hl7.org/fhir/us/identity-matching/) Implementation Guide.
+Servers **SHOULD** maintain a stable common identifier for a resource across versions.<sup>[§][CONF-0287]</sup> When the FHIR resource ID or business identifier of the underlying clinical data is not maintained across FHIR versions, the Client **SHALL** use an alternative method to avoid duplication, such as the guidance provided in the [Interoperable Digital Identity and Patient Matching](https://hl7.org/fhir/us/identity-matching/) Implementation Guide.<sup>[§][CONF-0286]</sup>
 
 ### Expectation that Data is Preserved Between Versions
 
-In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
+In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4.<sup>[§][CONF-0287]</sup> However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
 
-* The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation
+* The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation.<sup>[§][CONF-0289],[§][CONF-0292]</sup>
   - Exceptions
-    - MedicationStatement may be deprecated, and the data **SHOULD** be mapped to MedicationRequest.
+    - MedicationStatement may be deprecated, and the data **SHOULD** be mapped to MedicationRequest.<sup>[§][CONF-0290],[§][CONF-0293]</sup>
        - See the guidance on the [Medication List] page for how to access a patient's medications
-    - Care teams as represented by CarePlan in DSTU2 **SHOULD** be replaced by and the data mapped to CareTeam in R4
+    - Care teams as represented by CarePlan in DSTU2 **SHOULD** be replaced by and the data mapped to CareTeam in R4.<sup>[§][CONF-0291],[§][CONF-0294]</sup>
 
-* Servers **SHOULD** make available the same information in DSTU2 and R4 where the more recent standard allows.  (e.g., patient Rhonda Jones is available on both)
+* Servers **SHOULD** make available the same information in DSTU2 and R4 where the more recent standard allows (e.g., patient Amy V. Shaw is available on both).<sup>[§][CONF-295]</sup>
   - Exceptions
-    - MedicationStatement data mapped to MedicationRequest
-    - care teams, as represented by CarePlan, **SHOULD** be mapped to CareTeam in R4
-* Data **SHOULD** be maintained between versions (i.e., not be degraded).
-* When updating between versions, Clients **SHOULD** consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.
-
+    - MedicationStatement data mapped to MedicationRequest.<sup>[§][CONF-0296]</sup>
+    - care teams, as represented by CarePlan, **SHOULD** be mapped to CareTeam in R4.<sup>[§][CONF-0297]</sup>
+* Data **SHOULD** be maintained between versions (i.e., not be degraded).<sup>[§][CONF-0298]</sup>
+* When updating between versions, Clients **SHOULD** consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.<sup>[§][CONF-0299]</sup>
 
 ### Authorization Across Versions
 
-
-
-- To allow clients to use a single authorization token when accessing resources from multiple version-specific endpoints, production systems **SHOULD** use the same base authorization endpoint across versions.
+- To allow Clients to use a single authorization token when accessing resources from multiple version-specific endpoints, Servers **SHOULD** use the same base authorization endpoint across versions.<sup>[§][CONF-0300]</sup>
 - The more recent version endpoints will have additional/changed resource types and thus added scopes. For example, US Core may add a DeviceAssociation Profile when updating from FHIR R4 to FHIR R6.
 
 
