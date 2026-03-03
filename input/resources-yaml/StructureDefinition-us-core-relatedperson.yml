@@ -38,13 +38,12 @@ differential:
         - us-core-14
       mustSupport: true
 
-#============  pre-applied missing binding FHIR-34755============
+#============  pre-applied new binding FHIR-53376============
       binding:
         strength: preferred
         description: >-
-          The nature of the relationship between a patient and the related
-          person.
-        valueSet: http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype
+          Personal And Legal Relationship Role Type
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.12.1
 #============  pre-applied missing binding ============
 
     - id: RelatedPerson.name

@@ -30,7 +30,7 @@ A DiagnosticReport category query allows a Client to retrieve multiple documents
 
 The Argonaut project team provided this initial list to HL7 after surveying the Argonaut and the US Veterans Administration (VA) participants. They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types, such as:
 
-* [Referral Note (57133-1)<sup>[§][CONF-0217]</sup>]
+* [Referral Note (57133-1)]<sup>[§][CONF-0217]</sup>
 * [Nurse Note (34746-8)]<sup>[§][CONF-0219]</sup>
 
 The complete list of note (document) types is available in the [US Core DocumentReference Type Value Set].
