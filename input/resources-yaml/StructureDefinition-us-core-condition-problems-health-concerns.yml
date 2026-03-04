@@ -84,7 +84,7 @@ differential:
       mustSupport: true
       binding:
         strength: required
-        description: Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+        description: Note that other codes are permitted in other slices, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
 
 #======== US Core 8 change to add'l USCDI ==========
@@ -110,7 +110,7 @@ differential:
 #================================================================
 
         strength: required
-        description: Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+        description: Note that other codes are permitted in other slices, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
 #=============== new valueset here that id the ame as simple =================
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
 # ====== New R5 additional Binding Element Here for Screeing and Asessment Categories ====

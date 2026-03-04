@@ -101,7 +101,7 @@ differential:
   #     strength: required
   #     description: The US Core DocumentReferences Type Value Set is a "starter set"
   #       of categories supported for fetching and storing clinical notes. Note that
-  #       other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+  #       other codes are permitted in other slices, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
   #     valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category
 
 # =============== ADI Grouping Code  =============================
@@ -113,7 +113,7 @@ differential:
       mustSupport: true
       binding:
         strength: required
-        description: Advance Healthcare Directive Categories Grouper. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+        description: Advance Healthcare Directive Categories Grouper. Note that other codes are permitted in other slices, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.69.4
 
 # ==================================================================

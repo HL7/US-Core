@@ -26,8 +26,10 @@ The following [Extensions] have been defined as part of the US Core Implementati
 
 profile-metadata.csv columns:
 
-- Is_New: Flag for new or updated content for the current version. Deafult is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
-- row: row id
+=== UTF WITH BOM ISSUES WHEN SAVED IN EXCEL AFFECTS THE FIRST COLUMN — IS NEW  THE FIX IS TO RE SAVE THE CSV AS UTF 8 WITHOUT BOM: ===
+
+- Is_New: Flag for new or updated content for the current version. Deafult is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide. === UTF WITH BOM ISSUES WHEN SAVED IN EXCEL AFFECTS THE FIRST COLUMN — IS NEW  THE FIX IS TO RE SAVE THE CSV AS UTF 8 WITHOUT BOM: ===
+- row: row idc
 - id: profile or extension's StructureDefinition id
 - uri: profile or extension's canonical url
 - title: profile or extension's human readable name

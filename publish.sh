@@ -576,7 +576,23 @@ if [[ $IG_PUBLISH ]]; then
 
   echo ""
   echo "===================================================================="
-  echo "Checks on CSV Data Files - US CORE ONLY ..."
+  echo "Check for BOM in CSV Data Files ..."
+  for file in "$data"/*.csv; do
+    if head -c 3 "$file" | grep -q $'\xef\xbb\xbf'; then
+        echo "BOM found in $file — removing..."
+        sed -i '' '1s/^\xEF\xBB\xBF//' "$file"
+        echo "Done."
+    else
+        echo "No BOM found in $file"
+    fi
+  done
+  echo "====================================================================="
+  echo ""
+  sleep 1
+
+  echo ""
+  echo "===================================================================="
+  echo "Check CSV Content - US CORE ONLY ..."
   echo "====================================================================="
   echo ""
   sleep 1

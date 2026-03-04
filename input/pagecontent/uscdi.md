@@ -120,6 +120,20 @@ and adds relative links.
   <p style="font-size: 300%; font-weight: bold;" class="text-center">US Core Data for Interoperability USCDI</p>
 </div>
 
+<div class="panel">
+  <div class="panel-body">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th class="col-sm-4">USCDI Data Class/Element</th>
+          <th class="col-sm-4">US Core Profile</th>
+          <th class="col-sm-2">Notes</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+
 {% for group in items_grouped %}
 {% for item in group.items %}
 {% if forloop.first %}

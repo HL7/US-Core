@@ -31,6 +31,158 @@
       "requirement": "A Server that certifies to the [21st Century Cures Act for accessing patient data](https://www.federalregister.gov/d/2020-07419/p-1177) **SHALL** implement all components in the ... the US Core CapabilityStatement [[Definition](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html)] ."
     },
     {
+      "key": "CONF-0124",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "Implementations meeting US EHR certification [of the ONC IT Health Certification program] requirements must support all US Core’s required scopes."
+    },
+    {
+      "key": "CONF-0465",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Although Patient.deceased[x] is marked as additional USCDI, certifying systems are not required to support both [boolean and dateTime data types], but **SHALL**support [at] least Patient.deceasedDateTime"
+    },
+    {
+      "key": "CONF-0469",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[Certifying systems](https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program) [, those that are participating in the ONC Health IT certification program,] **SHALL**... follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Patient.address.line and Patient.address.city for new and updated records."
+    },
+    {
+      "key": "CONF-0801",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "If an element is marked as *Additional USCDI* and defined by a pattern [as described by [ElementDefinition.pattern](http://hl7.org/fhir/R4/elementdefinition-definitions.html#ElementDefinition.pattern_x_)], then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing."
+    },
+    {
+      "key": "CONF-0802",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "\n\n\nPrimitive elements are single elements with a primitive value…. If they are marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement."
+    },
+    {
+      "key": "CONF-0803",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values. "
+    },
+    {
+      "key": "CONF-0805",
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "[I]f any sub-element is marked as *Additional USCDI* [for a complex element] and the parent element is not… [and] the parent element is represented in the structure, Certifying System **SHALL** support the sub-elements labeled as *Additional USCDI*."
+    },
+    {
+      "key": "CONF-0809",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "When a Reference type element is labeled as Additional USCDI and has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems."
+    },
+    {
+      "key": "CONF-0811",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "When a Reference type element labeled as Additional USCDI, has multiple target profiles referenced, and specific targets are labeled as Must Support, the Must Support target profile(s) **SHALL** be supported by Certifying Systems."
+    },
+    {
+      "key": "CONF-0812",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[I]f a slice is labeled as ... Additional USCDI and the slicer element is not labeled as ... Additional USCDI, then if the ... certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core."
+    },
+    {
+      "key": "CONF-0814",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[I]f a slice is labeled as … Additional USCDI and the slicer element is ... labeled as … Additional USCDI, then … certifying system [**SHALL** support] the element[ and] the slice's definition."
+    },
+    {
+      "key": "CONF-0833",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "Certifying Systems **SHALL** support, a category of \"sdoh\""
+    },
+    {
+      "key": "CONF-0834",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Certifying Systems ... **SHOULD** support the ... [US Core Simple Observation Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html) codes"
+    },
+    {
+      "key": "CONF-0835",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "Certifying Systems ... **MAY** support other categories"
+    },
+    {
+      "key": "CONF-0846",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) codes"
+    },
+    {
+      "key": "CONF-0847",
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHOULD** support, the [US Core Screening Assessment Observation Maximum Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-maximum-category.html) codes"
+    },
+    {
+      "key": "CONF-0848",
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **MAY** support other codes."
+    },
+    {
+      "key": "CONF-0861",
+      "conformance": [
+        "SHOULD"
+      ],
+      "conditionality": true,
+      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **SHOULD** support the other [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html) [in addition to  the [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html)]"
+    },
+    {
+      "key": "CONF-0862",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html)"
+    },
+    {
+      "key": "CONF-0863",
+      "conformance": [
+        "MAY"
+      ],
+      "conditionality": true,
+      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **MAY** support other categories [in addition to  [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) and  [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html)]."
+    },
+    {
       "key": "CONF-0873",
       "conformance": [
         "SHALL"

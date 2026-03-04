@@ -7,7 +7,7 @@
 
 profile-metadata.csv columns:
 
-- Is_New: Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
+- Is_New: Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide. === UTF WITH BOM ISSUES WHEN SAVED IN EXCEL AFFECTS THE FIRST COLUMN — "IS NEW"  THE FIX IS TO RE SAVE THE CSV AS UTF 8 WITHOUT BOM: ===
 - row: row id
 - id: profile or extension's StructureDefinition id
 - uri: profile or extension's canonical url

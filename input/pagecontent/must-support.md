@@ -34,7 +34,7 @@ The following summary tables  may be useful to testers and analysts to review th
   - [CSV](all-profiles.csv)
   - [Excel](all-profiles.xlsx)
 - The [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
-- the [Must Support - Resource References](#must-support---resource-references) section below lists all the *Must Support* references to other US Core Profiles and FHIR resources for each US Core Profile.
+- The [Must Support - Resource References](#must-support---resource-references) section below lists all the *Must Support* references to other US Core Profiles and FHIR resources for each US Core Profile.
 
 
 

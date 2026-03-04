@@ -24,7 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include additional-requirements-intro.md type="CarePlan" plural="false" %}
 
 1. a contributor<sup>2</sup>
-2. references to health issues this plan addresses*
+2. references to health issues this plan addresses<sup>1</sup>
 
 <sup>1,2</sup>see guidance below
 

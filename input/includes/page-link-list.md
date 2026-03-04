@@ -15,6 +15,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Observation Summary Table]: observation-summary.html
 [SMART on FHIR Obligations and Capabilities]: scopes.html
 [Security]: security.html
+[Requirements Table]: requirements.html
 [Guidance]: guidance.html
 [USCDI]: uscdi.html
 [General Guidance]: general-guidance.html
@@ -25,7 +26,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Screening and Assessments]: screening-and-assessments.html
 [Relationship With Other IGs]: relationship-with-other-igs.html
 [Profiles and Extensions]: profiles-and-extensions.html
-[Capability Statements]: capability-statements.html
+[Capability Statements and Requirements Resources]: capability-statements.html
 [Search Parameters and Operations]: search-parameters-and-operations.html
 [Terminology]: terminology.html
 [VSAC to FHIR Code System Mapping Table]: vsacname-fhiruri-map.html
@@ -42,6 +43,21 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Patient Data Feed Additional Resources]: patient-data-feed-additional-resources.html
 [US Core ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.core.html
 [Artifacts Summary]: artifacts.html
+[US Core Certifying System Requirements]: Requirements-us-core-certifying-system.html
+[US Core Certifying System Requirements - Testing]: Requirements-us-core-certifying-system-testing.html
+[US Core Certifying System Requirements - XML Representation]: Requirements-us-core-certifying-system.xml.html
+[US Core Certifying System Requirements - JSON Representation]: Requirements-us-core-certifying-system.json.html
+[US Core Certifying System Requirements - TTL Representation]: Requirements-us-core-certifying-system.ttl.html
+[US Core Client Requirements]: Requirements-us-core-client.html
+[US Core Client Requirements - Testing]: Requirements-us-core-client-testing.html
+[US Core Client Requirements - XML Representation]: Requirements-us-core-client.xml.html
+[US Core Client Requirements - JSON Representation]: Requirements-us-core-client.json.html
+[US Core Client Requirements - TTL Representation]: Requirements-us-core-client.ttl.html
+[US Core Server Requirements]: Requirements-us-core-server.html
+[US Core Server Requirements - Testing]: Requirements-us-core-server-testing.html
+[US Core Server Requirements - XML Representation]: Requirements-us-core-server.xml.html
+[US Core Server Requirements - JSON Representation]: Requirements-us-core-server.json.html
+[US Core Server Requirements - TTL Representation]: Requirements-us-core-server.ttl.html
 [US Core Client CapabilityStatement]: CapabilityStatement-us-core-client.html
 [US Core Client CapabilityStatement - Testing]: CapabilityStatement-us-core-client-testing.html
 [US Core Client CapabilityStatement - XML Representation]: CapabilityStatement-us-core-client.xml.html
