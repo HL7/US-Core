@@ -40,9 +40,9 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 14. **Applied:**  (Correction) Remove open markdown link [FHIR-54219](https://jira.hl7.org/browse/FHIR-54219) See Changes [Here](basic-provenance.html#clinical-information-reconciliation-and-incorporation)
 15. **Applied:** Non-substantive (Clarification) Update text referring to provenance use cases. [FHIR-54221](https://jira.hl7.org/browse/FHIR-54221) See Changes [Here](basic-provenance.html#hie-transformation)
 16. **Applied:** Non-substantive (Clarification) Clarify USCDI support language[FHIR-54223](https://jira.hl7.org/browse/FHIR-54223) See Changes [Here](screening-and-assessments.htmll#clinical-judgments)
-17. **Resolved - change required:** Non-substantive (Enhancement) Screening and Assessment Codes Table [FHIR-54224](https://jira.hl7.org/browse/FHIR-54224) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/screening-and-assessments.html)
-18. **Resolved - change required:** Non-substantive (Correction) Relationship With Other IGs (3.7 technical corrections) [FHIR-54226](https://jira.hl7.org/browse/FHIR-54226) See Changes [Here]()
-19. **Resolved - change required:**  (Correction) Conformance verbs are inconsistently or not bolded [FHIR-54229](https://jira.hl7.org/browse/FHIR-54229) See Changes [Here]()
+17. **Applied:** Non-substantive (Enhancement) Entitle Health Status Assessments Value Sets Table [FHIR-54224](https://jira.hl7.org/browse/FHIR-54224) See Changes [Here](screening-and-assessments.html#uscdi-health-assessments-data-element-value-sets)
+18. **Applied:** Non-substantive (Correction) Correct typos and bad links [FHIR-54226](https://jira.hl7.org/browse/FHIR-54226) See Changes [Here](relationship-with-other-igs.html#relationship-of-us-core-with-other-igs)
+19. **Applied:**  Non-substantive (Correction) Bold Conformance verbs [FHIR-54229](https://jira.hl7.org/browse/FHIR-54229) See Changes [Here](writing-clinical-notes.html)
 20. **Resolved - change required:** Compatible, substantive (Enhancement) 7.0.1.0.1 Value Set Package Links [FHIR-54230](https://jira.hl7.org/browse/FHIR-54230) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/terminology.html#value-set-packages)
 21. **Applied:** Non-substantive (Correction) Fix Link: ​Comparison with version 8.0.1 [FHIR-54248](https://jira.hl7.org/browse/FHIR-54248) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/changes-between-versions.html#cross-version-comparisons)
 22. **Resolved - change required:** Compatible, substantive (Correction) Clearly Mark Deprecated Profiles / Extensions [FHIR-54254](https://jira.hl7.org/browse/FHIR-54254) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-questionnaireresponse.html)
@@ -106,7 +106,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 73. **Applied:**  Non-substantive (Correction) Update grammar for language guidance [FHIR-55954](https://jira.hl7.org/browse/FHIR-55954) See Changes [Here](general-guidance.html#language-support)
 74. **Resolve - change required:**  Non-substantive (Correction) Change the footnote symbols *†‡§¶ to numbers [FHIR-55841](https://jira.hl7.org/browse/FHIR-55841) For example, see Changes [Here](StructureDefinition-us-core-allergyintolerance.html#mandatory-and-must-support-data-elements)
 75. **Pre-Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
-75. **Pre-Applied:**  Update the ImplementationGuide.description [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](ImplementationGuide-hl7.fhir.us.core.html)
+76. **Pre-Applied:**  Update the ImplementationGuide.description [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](ImplementationGuide-hl7.fhir.us.core.html)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>

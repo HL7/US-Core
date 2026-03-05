@@ -18,7 +18,7 @@ It complements the US Core **[Clinical Notes (read)][1]** guidance (which expose
 **Out of scope**
 
 * Stateful/draft workflows (e.g., ambient scribing, continuous audio capture).
-* No requirement for FHIR `transaction` support; a single `POST` suffices. FHIR Bundle transactions (type='transaction') are out of scope for this specification; clients SHALL rely on individual `POST`/`PUT` operations. However, servers MAY support transactions extensionally (e.g., for creating paired resources like `DocumentReference` + `DiagnosticReport`), and clients MAY use them where available.
+* No requirement for FHIR `transaction` support; a single `POST` suffices. FHIR Bundle transactions (type='transaction') are out of scope for this specification; clients **SHALL** rely on individual `POST`/`PUT` operations. However, servers **MAY** support transactions extensionally (e.g., for creating paired resources like `DocumentReference` + `DiagnosticReport`), and clients **MAY** use them where available.
 
 ---
 
@@ -52,7 +52,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 #### References: Author and Encounter
 
 * **Client requirement.** Clients **SHALL** be capable of populating `author` and `context.encounter` when known.
-* **How to populate.** The `reference.reference` element SHALL contain either:
+* **How to populate.** The `reference.reference` element **SHALL** contain either:
 
   * a **resolvable relative reference** to a resource on the target server (e.g., `"Practitioner/123"`), or
   * a **contained resource** reference (e.g., `"#prac1"`) when a resolvable reference is not possible.
@@ -66,14 +66,14 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 #### Context.encounter
 
-* Servers SHALL accept either a resolvable encounter reference or a contained `Encounter` reference.
-* Business rules MAY require an encounter association, but servers SHALL NOT reject merely because the reference is not resolvable.
+* Servers **SHALL** accept either a resolvable encounter reference or a contained `Encounter` reference.
+* Business rules **MAY** require an encounter association, but servers **SHALL NOT** reject merely because the reference is not resolvable.
 
 #### Date handling
 
 * `DocumentReference.date` represents the **time the reference was created** (an `instant`).
 * There is **no distinct “authored date”** element in R4. This specification does not attempt to introduce one.
-* The **clinically relevant timeframe** SHALL be expressed using `context.period`.
+* The **clinically relevant timeframe** **SHALL** be expressed using `context.period`.
 
 #### Identifier
 
@@ -88,8 +88,8 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 #### Other context elements
 
-* Clients MAY populate other `context.*` elements.
-* Servers SHALL NOT reject because they are present.
+* Clients **MAY** populate other `context.*` elements.
+* Servers **SHALL NOT** reject because they are present.
 
 #### Patient-asserted signaling
 
@@ -115,23 +115,23 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 #### Status correction
 
 * Servers **SHOULD** allow updates of `status` to `entered-in-error`.
-* Clients MAY submit a partial `PUT` request to a `DocumentReference` resource, including only the `id`, `status` (set to 'entered-in-error'), `subject` (for verification), and other top-level fields as needed—omitting the full content or context. Servers SHALL accept such partial updates without requiring the original document content and SHOULD transition the resource's status accordingly. Servers MAY subsequently exclude the resource from search results (e.g., to limit visibility), but SHALL still support read access via direct ID lookup if authorized.
+* Clients **MAY** submit a partial `PUT` request to a `DocumentReference` resource, including only the `id`, `status` (set to 'entered-in-error'), `subject` (for verification), and other top-level fields as needed—omitting the full content or context. Servers **SHALL** accept such partial updates without requiring the original document content and **SHOULD** transition the resource's status accordingly. Servers **MAY** subsequently exclude the resource from search results (e.g., to limit visibility), but **SHALL** still support read access via direct ID lookup if authorized.
 
 #### Capability discovery
 
-* Servers **SHOULD** support the FHIR `ValueSet/$expand` operation with `contextDirection=incoming` to enable client discovery of supported note and report categories/codes (e.g., LOINC for `DocumentReference.type`). See the US Core Clinical Notes IG for details on invocation (e.g., contexts for `us-core-documentreference` category/type and equivalent `DiagnosticReport` elements): https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html#using-expand. Note that discovery of supported MIME types (section 4.9) and content formats (section 4.6) is separate and out-of-band: Servers SHALL document these in their API documentation, including any limits or extensions beyond the minima in this specification.
+* Servers **SHOULD** support the FHIR `ValueSet/$expand` operation with `contextDirection=incoming` to enable client discovery of supported note and report categories/codes (e.g., LOINC for `DocumentReference.type`). See the US Core Clinical Notes IG for details on invocation (e.g., contexts for `us-core-documentreference` category/type and equivalent `DiagnosticReport` elements): https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html#using-expand. Note that discovery of supported MIME types (section 4.9) and content formats (section 4.6) is separate and out-of-band: Servers **SHALL** document these in their API documentation, including any limits or extensions beyond the minima in this specification.
 
 #### Correction and Replacement
 
 * Clients have two distinct mechanisms for corrections: entered-in-error for full retractions (see 4.12) and replacement for supersessions (below). These provide technical signals of "this was a mistake" or "this document replaces that one," respectively. Downstream handling (e.g., archiving, notifications, visibility to readers) is out of scope and a server policy decision.
-* When a client needs to supersede an existing document (e.g., due to revisions without full retraction), they SHOULD create a new `DocumentReference` via `POST` and populate `relatesTo` with `code` = 'replaces' and `targetReference` to the original resource's ID. The new document SHALL include the updated content.
-* Servers SHALL accept incoming `relatesTo` elements on create (and round-trip them) but MAY ignore the relationship for local policy decisions.
+* When a client needs to supersede an existing document (e.g., due to revisions without full retraction), they **SHOULD** create a new `DocumentReference` via `POST` and populate `relatesTo` with `code` = 'replaces' and `targetReference` to the original resource's ID. The new document **SHALL** include the updated content.
+* Servers **SHALL** accept incoming `relatesTo` elements on create (and round-trip them) but **MAY** ignore the relationship for local policy decisions.
 
 ---
 
 ### Terminology
 
-* **Type.** `DocumentReference.type` **SHALL** use LOINC and support at minimum the ten **Common Clinical Notes**. Servers SHALL support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
+* **Type.** `DocumentReference.type` **SHALL** use LOINC and support at minimum the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
 
   - 11488-4: Consultation note
   - 11535-2: Discharge summary note
@@ -144,7 +144,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
   - 34745-8: Continuity of care document
   - 51848-0: Functional status assessment note
 
-  Clients SHALL use these where applicable. For other note types, clients SHOULD use LOINC codes when available; servers MAY accept additional terminology (e.g., SNOMED) if no suitable LOINC exists, but SHALL round-trip them. ([US Core Clinical Notes][1])
+  Clients **SHALL** use these where applicable. For other note types, clients **SHOULD** use LOINC codes when available; servers **MAY** accept additional terminology (e.g., SNOMED) if no suitable LOINC exists, but **SHALL** round-trip them. ([US Core Clinical Notes][1])
 * **Category.** Servers **SHALL** support the US Core DocumentReference Category (`clinical-note`). ([US Core DocRef][3])
 
 ---
@@ -178,7 +178,7 @@ Servers **SHALL** support SMART v2 scopes for create/update and advertise them i
 **Update**
 
 * `PUT [base]/DocumentReference/{id}`
-* Supported for correcting status (e.g., `entered-in-error`) via partial updates (see 4.12) or other changes. Clients SHOULD use `POST` with `relatesTo` (code='replaces') for document supersessions instead of in-place content updates (see 4.14).
+* Supported for correcting status (e.g., `entered-in-error`) via partial updates (see 4.12) or other changes. Clients **SHOULD** use `POST` with `relatesTo` (code='replaces') for document supersessions instead of in-place content updates (see 4.14).
 
 ---
 
@@ -284,55 +284,55 @@ PUT [base]/DocumentReference/abc
 
 **Servers**
 
-☐ SHALL support create for `DocumentReference`; SHOULD support update.
+☐ **SHALL** support create for `DocumentReference`; **SHOULD** support update.
 
-☐ SHALL accept & persist all Mandatory and Must Support elements.
+☐ **SHALL** accept & persist all Mandatory and Must Support elements.
 
-☐ SHALL accept inline content up to at least 5 MiB.
+☐ **SHALL** accept inline content up to at least 5 MiB.
 
-☐ SHALL accept `author` and `context.
+☐ **SHALL** accept `author` and `context.
   encounter` either as resolvable relative references or contained resources, with optional `display`.
 
-☐ SHALL accept `text/plain; charset=utf-8` and `application/pdf`.
+☐ **SHALL** accept `text/plain; charset=utf-8` and `application/pdf`.
 
-☐ SHALL support conditional create (`If-None-Exist`).
+☐ **SHALL** support conditional create (`If-None-Exist`).
 
-☐ SHALL document limits and mediated submission policy.
+☐ **SHALL** document limits and mediated submission policy.
 
-☐ SHALL accept partial `PUT`s for `status` = 'entered-in-error' without full content; SHOULD transition status and MAY suppress from searches.
+☐ **SHALL** accept partial `PUT`s for `status` = 'entered-in-error' without full content; **SHOULD** transition status and **MAY** suppress from searches.
 
-☐ SHALL accept and round-trip `relatesTo` with `code` = 'replaces' on create; MAY ignore for policy.
+☐ **SHALL** accept and round-trip `relatesTo` with `code` = 'replaces' on create; **MAY** ignore for policy.
 
-☐ SHOULD return `OperationOutcome` on failed writes and when limits are exceeded.
+☐ **SHOULD** return `OperationOutcome` on failed writes and when limits are exceeded.
 
-☐ SHOULD allow `status` updates to `entered-in-error`.
+☐ **SHOULD** allow `status` updates to `entered-in-error`.
 
-☐ MAY support URLs for content with higher limits.
+☐ **MAY** support URLs for content with higher limits.
 
-☐ MAY deduplicate using identifiers, hashes, or heuristics.
+☐ **MAY** deduplicate using identifiers, hashes, or heuristics.
 
 
 **Clients**
 
-☐ SHALL supply `status`, `type`, `category`, `subject`, `content`, and `content.attachment.contentType`.
+☐ **SHALL** supply `status`, `type`, `category`, `subject`, `content`, and `content.attachment.contentType`.
 
-☐ SHALL support both inline and URL content.
+☐ **SHALL** support both inline and URL content.
 
-☐ SHALL be capable of populating `author` and `context.encounter` with either resolvable or contained references.
+☐ **SHALL** be capable of populating `author` and `context.encounter` with either resolvable or contained references.
 
-☐ SHOULD provide stable identifiers.
+☐ **SHOULD** provide stable identifiers.
 
-☐ SHOULD populate `date`.
+☐ **SHOULD** populate `date`.
 
-☐ SHOULD populate `content.format`.
+☐ **SHOULD** populate `content.format`.
 
-☐ SHOULD populate `context.period`.
+☐ **SHOULD** populate `context.period`.
 
-☐ SHOULD include `PATAST` for patient-asserted notes.
+☐ **SHOULD** include `PATAST` for patient-asserted notes.
 
-☐ SHOULD use `relatesTo` = 'replaces' for superseding documents instead of in-place updates.
+☐ **SHOULD** use `relatesTo` = 'replaces' for superseding documents instead of in-place updates.
 
-☐ SHOULD use `ValueSet/$expand?contextDirection=incoming` for type discovery per US Core guidance.
+☐ **SHOULD** use `ValueSet/$expand?contextDirection=incoming` for type discovery per US Core guidance.
 
 ---
 

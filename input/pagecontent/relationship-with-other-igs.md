@@ -14,7 +14,7 @@ US Core is intended to provide an implementable standard for FHIR based interfac
 
 The context of US Core within the set of US Realm HL7 FHIR standards is shown in the figure below.
 
-{% include img.html img="relationships.svg" caption="Figure 1: Figure 1: Context of US Core within the set of HL7 US FHIR standards" %}
+{% include img.html img="relationships.svg" caption="Figure 1: Context of US Core within the set of HL7 US FHIR standards" %}
 
 
 
@@ -22,7 +22,7 @@ The context of US Core within the set of US Realm HL7 FHIR standards is shown in
 
 #### IG Dependencies
 
-US Core is based on the FHIR R4 specification and relies these implementation guides:
+US Core is based on the FHIR R4 specification and relies <span class="bg-success" markdown="1">on</span><!-- new-content --> these implementation guides:
 
 | Implementation Guide | Version | Reason |
 |----------------------|-------------|--------|
@@ -39,7 +39,7 @@ Other international and national standards were reviewed and considered during t
 Implementation Guide |Relationship
 ---|---
 [International Patient Access (IPA)]|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of US Core. US Core is compatible with IPA, e.g. US Core conformant data can be accessed by an IPA conformant client.
-[International Patient Summary (IPS)]|This IG describes specify how to represent in HL7 FHIR the IPS. An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. US Core is compatible with IPS, e.g. US Core conformant data can be used to generate a patient summary that is conformant to IPS.
+[International Patient Summary (IPS)]|<span class="bg-success" markdown="1">The goal of this Implementation Guide is to specify how to represent in HL7 FHIR the International Patient Summary (IPS).</span><!-- new-content --> An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. US Core is compatible with IPS, e.g. US Core conformant data can be used to generate a patient summary that is conformant to IPS.
 {:.grid}
 
 #### Comparison With International IGs
@@ -120,7 +120,7 @@ The script filters out the active profiles and displays their compliance levels
 
 ##### Additional requirements in IPA
 
-The following US Core resource are compatible to the IPA profiles, but the IPA profile(s) contain additional requirements which are listed below. Changes may be needed to meet all the IPA profile requirements. Implementers are advised to note that some code changes may be required to support these profiles.
+The following US Core resources are compatible to the IPA profiles, but the IPA profile(s) contain additional requirements which are listed below. Changes may be needed to meet all the IPA profile requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 
 1. [US Core ADI DocumentReference Profile]
@@ -184,7 +184,7 @@ This version of US Core has no equivalent profile for the following IPA profiles
 
 ##### Additional requirements in IPS
 
-The following US Core resource are compatible to the IPS profiles, but the IPS profile(s) contain additional requirements which are listed below. Changes may be needed to meet all the IPA profile requirements. Implementers are advised to note that some code changes may be required to support these profiles.
+The following US Core resources are compatible to the IPS profiles, but the IPS profile(s) contain additional requirements which are listed below. Changes may be needed to meet all the <span class="bg-success" markdown="1">IPS</span><!-- new-content --> profile requirements. Implementers are advised to note that some code changes may be required to support these profiles.
 
 1. [US Core AllergyIntolerance Profile]
 
@@ -402,10 +402,10 @@ The following US Core resource are compatible to the IPS profiles, but the IPS p
    - `Specimen.subject.reference` Element minimum cardinalities differ: '1' vs '0'
 
 ###### Missing Data
-US Core compliant resources are compliant with IPA requirements for Missing Data.
+US Core compliant resources are compliant with <span class="bg-success" markdown="1">IPS</span><!-- new-content --> requirements for Missing Data.
 
 ###### Suppressed Data
-IPA does not include requirements for Suppressed Data.
+<span class="bg-success" markdown="1">IPS</span><!-- new-content --> does not include requirements for Suppressed Data.
 
 ###### Additional profiles in IPS
 This version of US Core has no equivalent profile for the following IPS profiles:
