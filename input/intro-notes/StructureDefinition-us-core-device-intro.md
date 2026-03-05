@@ -68,7 +68,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - Medical devices with UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`. All five UDI-PI elements defined in the UDI code may not always be present in every UDI instance. However, those UDI-PI elements present **SHALL** be represented in the corresponding US Core Device Profile elements.
 
-   UDI may not be present in all scenarios, such as historical medical devices, patient-reported implant information, payer-reported devices, or improperly documented implants. If UDI is not present and the manufacturer or model number information is available, they **SHOULD** be included to support historical reports of medical medical devices as follows:
+   UDI may not be present in all scenarios, such as historical medical devices, patient-reported implant information, payer-reported devices, or improperly documented implants. If UDI is not present and the manufacturer or model number information is available, they **SHOULD** be included to support historical reports of <span class="bg-success" markdown="1">medical devices</span><!-- new-content --> as follows:
 
    |data element|US Core Device Profile element|
    |---|---|

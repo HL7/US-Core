@@ -5,7 +5,7 @@ The following are example usage scenarios for the US Core FamilyMemberHistory
  profile:
 
 -   Query for a family member's relevant health history
--   [Record or update] relevant health history for a a family member
+-   [Record or update] relevant health <span class="bg-success" markdown="1">history for a family member</span><!-- new-content -->
 
 ### Mandatory and Must Support Data Elements
 
