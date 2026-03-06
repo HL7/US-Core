@@ -17,9 +17,6 @@ differential:
     - id: Condition
       path: Condition
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition
 
   #========= removed in US Core 8 =======================
   # - id: Condition.extension:assertedDate
@@ -38,18 +35,12 @@ differential:
   #   binding:
   #     strength: required
   #     valueSet: http://hl7.org/fhir/ValueSet/condition-clinical
-  #   mapping:
-  #   - identity: argonaut-dq-dstu2
-  #     map: Condition.clinicalStatus
   # - id: Condition.verificationStatus
   #   path: Condition.verificationStatus
   #   mustSupport: true
   #   binding:
   #     strength: required
   #     valueSet: http://hl7.org/fhir/ValueSet/condition-ver-status
-  #   mapping:
-  #   - identity: argonaut-dq-dstu2
-  #     map: Condition.verificationStatus
    #========================================================
     - id: Condition.category
       path: Condition.category
@@ -61,9 +52,6 @@ differential:
       short: category codes
       min: 1
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.category
     - id: Condition.category:us-core
       path: Condition.category
       sliceName: us-core
@@ -102,9 +90,6 @@ differential:
         strength: preferred
         description: Valueset to describe the actual problem experienced by the patient
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.code
     - id: Condition.subject
       path: Condition.subject
       type:
@@ -120,9 +105,6 @@ differential:
                 - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: false
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.patient
     - id: Condition.encounter
       path: Condition.encounter
       type:

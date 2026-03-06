@@ -19,13 +19,7 @@
       {
         "id": "Goal",
         "path": "Goal",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Goal"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Goal.lifecycleStatus",
@@ -34,13 +28,7 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/goal-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Goal.status"
-          }
-        ]
+        }
       },
       {
         "id": "Goal.description",
@@ -73,13 +61,7 @@
           "strength": "preferred",
           "description": "Value set to describe the Goal",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Goal.description"
-          }
-        ]
+        }
       },
       {
         "id": "Goal.subject",
@@ -120,13 +102,7 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Goal.subject"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Goal.start[x]",

@@ -20,9 +20,6 @@ differential:
     - id: Device
       path: Device
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device
 
     - id: Device.udiCarrier
 # === Make additional USCDI in Version 9 ===
@@ -35,25 +32,16 @@ differential:
       comment: Some devices may not have UDI information (for example. historical data or patient reported data).
       max: '1'
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.udi
     - id: Device.udiCarrier.deviceIdentifier
       path: Device.udiCarrier.deviceIdentifier
       min: 1
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
     - id: Device.udiCarrier.carrierHRF
       path: Device.udiCarrier.carrierHRF
       alias:
         - UDI
         - Barcode String
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.udi
 
 
     - id: Device.distinctIdentifier
@@ -65,9 +53,6 @@ differential:
       short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The distinct identification string"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
 
     - id: Device.manufactureDate
 # === Make additional USCDI in Version 9 ===
@@ -78,9 +63,6 @@ differential:
       short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date when the device was made"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
 
     - id: Device.expirationDate
 # === Make additional USCDI in Version 9 ===
@@ -91,9 +73,6 @@ differential:
       short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date and time of expiry of this device (if applicable)"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
 
     - id: Device.lotNumber
 # === Make additional USCDI in Version 9 ===
@@ -104,9 +83,6 @@ differential:
       short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Lot number of manufacture"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
 
     - id: Device.serialNumber
 # === Make additional USCDI in Version 9 ===
@@ -117,9 +93,6 @@ differential:
       short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Serial number assigned by the manufacturer"
 # === Make additional USCDI in Version 9 ====
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
 
     - id: Device.type
       path: Device.type
@@ -129,9 +102,6 @@ differential:
         strength: extensible
         description: Codes to identify medical devices
         valueSet: http://hl7.org/fhir/ValueSet/device-kind
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.type
     - id: Device.patient
       path: Device.patient
 # ===== change to min=0 in Version 9======
@@ -142,9 +112,6 @@ differential:
           targetProfile:
             - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.patient
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 4

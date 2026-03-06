@@ -19,13 +19,7 @@
       {
         "id": "Patient",
         "path": "Patient",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Patient.extension:race",
@@ -48,13 +42,7 @@
             ]
           }
         ],
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.extension"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Patient.extension:ethnicity",
@@ -77,13 +65,7 @@
             ]
           }
         ],
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.extension"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Patient.extension:tribalAffiliation",
@@ -158,38 +140,20 @@
         "id": "Patient.identifier",
         "path": "Patient.identifier",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.identifier"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.identifier.system",
         "path": "Patient.identifier.system",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.identifier.system"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.identifier.value",
         "path": "Patient.identifier.value",
         "short": "The value that is unique within the system.",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.identifier.value"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.name",
@@ -204,13 +168,7 @@
             "xpath": "(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:family or /f:given))"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.name"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.name.use",
@@ -230,13 +188,7 @@
         "condition": [
           "us-core-6"
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.name.family"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.name.given",
@@ -244,13 +196,7 @@
         "condition": [
           "us-core-6"
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.name.given"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.name.suffix",
@@ -262,13 +208,7 @@
         ],
         "path": "Patient.name.suffix",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Parts that come after the name",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Patient.name.period",
@@ -280,13 +220,7 @@
         ],
         "path": "Patient.name.period",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Time period when name was/is in use",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Patient.telecom",
@@ -298,13 +232,7 @@
         ],
         "path": "Patient.telecom",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: A contact detail for the individual",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Patient.telecom.system",
@@ -315,25 +243,13 @@
           "strength": "required",
           "description": "Telecommunications form for contact point.",
           "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        }
       },
       {
         "id": "Patient.telecom.value",
         "path": "Patient.telecom.value",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.telecom.use",
@@ -342,24 +258,12 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-use"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        }
       },
       {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.birthDate"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.deceased[x]",
@@ -375,13 +279,7 @@
       {
         "id": "Patient.address",
         "path": "Patient.address",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.birthDate"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.address.use",
@@ -403,13 +301,7 @@
             "valueString": "49 MEADOW ST"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.address.city",
@@ -420,13 +312,7 @@
             "valueString": "EVERYTOWN"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.address.state",
@@ -442,13 +328,7 @@
           "strength": "extensible",
           "description": "Two Letter USPS alphabetic codes.",
           "valueSet": "http://terminology.hl7.org/ValueSet/USPS-State"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        }
       },
       {
         "id": "Patient.address.postalCode",
@@ -463,13 +343,7 @@
             "valueString": "74047"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Patient.address.period",
@@ -480,13 +354,7 @@
           }
         ],
         "path": "Patient.address.period",
-        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Time period when address was/is in use",
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Time period when address was/is in use"
       },
       {
         "id": "Patient.communication",
@@ -498,13 +366,7 @@
         ],
         "path": "Patient.communication",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: A language which may be used to communicate with the patient about his or her health",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.communication"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Patient.communication.language",
@@ -513,13 +375,7 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://terminology.hl7.org/ValueSet/Languages"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.communication.language"
-          }
-        ]
+        }
       }
     ]
   },

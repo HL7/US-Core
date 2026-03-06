@@ -42,13 +42,7 @@
       {
         "id": "Medication",
         "path": "Medication",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Medication"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Medication.code",
@@ -58,13 +52,7 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Medication.code"
-          }
-        ]
+        }
       }
     ]
   },

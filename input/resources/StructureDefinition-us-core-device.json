@@ -21,13 +21,7 @@
       {
         "id": "Device",
         "path": "Device",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Device"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Device.udiCarrier",
@@ -41,25 +35,13 @@
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Unique Device Identifier (UDI) Barcode string",
         "comment": "Some devices may not have UDI information (for example. historical data or patient reported data).",
         "max": "1",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Device.udi"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Device.udiCarrier.deviceIdentifier",
         "path": "Device.udiCarrier.deviceIdentifier",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA (not Supported)"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Device.udiCarrier.carrierHRF",
@@ -68,13 +50,7 @@
           "UDI",
           "Barcode String"
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Device.udi"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Device.distinctIdentifier",
@@ -86,13 +62,7 @@
         ],
         "path": "Device.distinctIdentifier",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The distinct identification string",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA (not Supported)"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Device.manufactureDate",
@@ -104,13 +74,7 @@
         ],
         "path": "Device.manufactureDate",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date when the device was made",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA (not Supported)"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Device.expirationDate",
@@ -122,13 +86,7 @@
         ],
         "path": "Device.expirationDate",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date and time of expiry of this device (if applicable)",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA (not Supported)"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Device.lotNumber",
@@ -140,13 +98,7 @@
         ],
         "path": "Device.lotNumber",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Lot number of manufacture",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA (not Supported)"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Device.serialNumber",
@@ -158,13 +110,7 @@
         ],
         "path": "Device.serialNumber",
         "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Serial number assigned by the manufacturer",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA (not Supported)"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Device.type",
@@ -175,13 +121,7 @@
           "strength": "extensible",
           "description": "Codes to identify medical devices",
           "valueSet": "http://hl7.org/fhir/ValueSet/device-kind"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Device.type"
-          }
-        ]
+        }
       },
       {
         "id": "Device.patient",
@@ -194,13 +134,7 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Device.patient"
-          }
-        ]
+        "mustSupport": true
       }
     ]
   },

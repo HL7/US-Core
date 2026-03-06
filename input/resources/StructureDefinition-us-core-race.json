@@ -84,13 +84,7 @@
             "code": "Extension"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "iso11179",
-            "map": "/ClinicalDocument/recordTarget/patientRole/patient/raceCode"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Extension.extension:ombCategory.url",
@@ -131,12 +125,6 @@
         "type": [
           {
             "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "iso11179",
-            "map": "/ClinicalDocument/recordTarget/patientRole/patient/sdtc:raceCode"
           }
         ]
       },

@@ -208,13 +208,7 @@
           "strength": "extensible",
           "description": "Two letter USPS alphabetic codes.",
           "valueSet": "http://terminology.hl7.org/ValueSet/USPS-State"
-        },
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "./Sites"
-          }
-        ]
+        }
       },
       {
         "id": "Practitioner.address.postalCode",

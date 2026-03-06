@@ -19,13 +19,7 @@
       {
         "id": "CareTeam",
         "path": "CareTeam",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "CareTeam"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "CareTeam.status",
@@ -35,13 +29,7 @@
           "strength": "required",
           "description": "Indicates whether the team is current , represents future intentions or is now a historical record.",
           "valueSet": "http://hl7.org/fhir/ValueSet/care-team-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "CarePlan.status"
-          }
-        ]
+        }
       },
       {
         "id": "CareTeam.subject",
@@ -74,25 +62,13 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "CarePlan.subject"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CareTeam.participant",
         "path": "CareTeam.participant",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "CarePlan.participant"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "CareTeam.participant.role",
@@ -104,13 +80,7 @@
           "strength": "extensible",
           "description": "Indicates specific responsibility of an individual within the care team, such as Primary physician, Team coordinator, Caregiver, etc.",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.30"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "CarePlan.participant.role"
-          }
-        ]
+        }
       },
       {
         "id": "CareTeam.participant.member",
@@ -179,13 +149,7 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "CarePlan.participant.member"
-          }
-        ]
+        "mustSupport": true
       }
     ]
   },

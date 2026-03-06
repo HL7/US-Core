@@ -44,18 +44,12 @@ differential:
           expression: (component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())
           xpath: exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation
     - id: Observation.status
       path: Observation.status
       mustSupport: true
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/ValueSet/observation-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.status
     - id: Observation.code
       path: Observation.code
       short: Sexual Orientation
@@ -72,9 +66,6 @@ differential:
           targetProfile:
             - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.subject
     - id: Observation.effective[x]
       path: Observation.effective[x]
       definition: This records the time during which the patient had identified their emotional, romantic, sexual, or affectional attraction to another person.
@@ -87,9 +78,6 @@ differential:
         - code: Timing
         - code: instant
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.effective[x]
 
 
 #  ==============================

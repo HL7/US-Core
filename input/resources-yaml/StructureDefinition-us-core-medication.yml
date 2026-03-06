@@ -29,9 +29,6 @@ differential:
     - id: Medication
       path: Medication
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Medication
     - id: Medication.code
       path: Medication.code
       min: 1
@@ -39,9 +36,6 @@ differential:
       binding:
         strength: extensible
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Medication.code
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 5

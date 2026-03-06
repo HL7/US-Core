@@ -18,18 +18,12 @@ differential:
     - id: Goal
       path: Goal
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Goal
     - id: Goal.lifecycleStatus
       path: Goal.lifecycleStatus
       mustSupport: true
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/ValueSet/goal-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Goal.status
     - id: Goal.description
       path: Goal.description
       mustSupport: true
@@ -54,9 +48,6 @@ differential:
         strength: preferred #extensible
         description: Value set to describe the Goal
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Goal.description
     - id: Goal.subject
       path: Goal.subject
       type:
@@ -78,9 +69,6 @@ differential:
 
 
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Goal.subject
     - id: Goal.start[x]
       path: Goal.start[x]
       type:

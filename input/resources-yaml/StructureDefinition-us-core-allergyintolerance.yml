@@ -18,27 +18,18 @@ differential:
     - id: AllergyIntolerance
       path: AllergyIntolerance
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: AllergyIntolerance
     - id: AllergyIntolerance.clinicalStatus
       path: AllergyIntolerance.clinicalStatus
       mustSupport: true
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/ValueSet/allergyintolerance-clinical
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: AllergyIntolerance.status
     - id: AllergyIntolerance.verificationStatus
       path: AllergyIntolerance.verificationStatus
       mustSupport: true
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/ValueSet/allergyintolerance-verification
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: AllergyIntolerance.status
     - id: AllergyIntolerance.code
       path: AllergyIntolerance.code
       min: 1
@@ -46,9 +37,6 @@ differential:
       binding:
         strength: extensible
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: AllergyIntolerance.substance
     - id: AllergyIntolerance.patient
       path: AllergyIntolerance.patient
       type:
@@ -56,9 +44,6 @@ differential:
           targetProfile:
             - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: AllergyIntolerance.patient
     #===================  new for USCDI 5====================================
     - id: AllergyIntolerance.recorder
       extension:

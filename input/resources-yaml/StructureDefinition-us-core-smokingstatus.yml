@@ -29,9 +29,6 @@ differential:
           human: For Observation.code 401201003|Cigarette pack-years or 782516008|Number of calculated smoking pack years SHOULD use valueQuantity
           expression: code.coding.where(code in '401201003'|'782516008').exists() implies value.is(Quantity)
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation
     - id: Observation.status
       path: Observation.status
       short: final | entered-in-error
@@ -39,9 +36,6 @@ differential:
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.status
     - id: Observation.category
       path: Observation.category
       slicing:
@@ -72,9 +66,6 @@ differential:
         strength: extensible
         description: Smoking status type
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.6
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.code
     - id: Observation.subject
       path: Observation.subject
       min: 1
@@ -83,9 +74,6 @@ differential:
           targetProfile:
             - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.subject
     - id: Observation.effective[x]
       path: Observation.effective[x]
       min: 1
@@ -93,9 +81,6 @@ differential:
         - code: dateTime
         - code: Period
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.issued
 
 # ============= new for USCDI 5 =================
     - id: Observation.performer
@@ -169,9 +154,6 @@ differential:
         description: Smoking status comprehensive
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.3
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.valueCodeableConcept
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 4

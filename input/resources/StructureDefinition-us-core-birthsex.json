@@ -38,17 +38,7 @@
         "comment": "This extension aligns with LOINC 76689-9 (Sex assigned at birth).",
         "min": 0,
         "max": "1",
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
-          },
-          {
-            "identity": "iso11179",
-            "map": ".patient.administrativeGenderCode"
-          }
-        ]
+        "isModifier": false
       },
       {
         "id": "Extension.url",

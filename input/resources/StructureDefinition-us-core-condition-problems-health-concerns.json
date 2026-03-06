@@ -19,13 +19,7 @@
       {
         "id": "Condition",
         "path": "Condition",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Condition"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Condition.meta",
@@ -61,13 +55,7 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Condition.clinicalStatus"
-          }
-        ]
+        }
       },
       {
         "id": "Condition.verificationStatus",
@@ -76,13 +64,7 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Condition.verificationStatus"
-          }
-        ]
+        }
       },
       {
         "id": "Condition.category",
@@ -98,13 +80,7 @@
         },
         "short": "category codes",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Condition.category"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Condition.category:us-core",
@@ -202,13 +178,7 @@
           "strength": "preferred",
           "description": "Valueset to describe the actual problem experienced by the patient",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Condition.code"
-          }
-        ]
+        }
       },
       {
         "id": "Condition.subject",
@@ -240,13 +210,7 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Condition.patient"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Condition.onset[x]",

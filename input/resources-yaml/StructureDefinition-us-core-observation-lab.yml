@@ -41,9 +41,6 @@ differential:
           - system: http://terminology.hl7.org/CodeSystem/observation-category
             code: laboratory
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.category
     - id: Observation.code
       path: Observation.code
       short: Laboratory Test Name
@@ -52,9 +49,6 @@ differential:
         strength: extensible
         description: Laboratory LOINC Codes
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.code
 
 # ======== added for USCore V8 =================
     - id: Observation.code.text
@@ -102,9 +96,6 @@ differential:
           expression: ofType(CodeableConcept).coding.system.empty() or (ofType(CodeableConcept).coding.system contains 'http://snomed.info/sct')
           xpath: not(exists(f:valueCodeableConcept/f:coding/f:system) ) or f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.value[x]
     - id: Observation.interpretation
       path: Observation.interpretation
       short: Result interpretation

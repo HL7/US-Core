@@ -61,13 +61,7 @@
             "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
           }
         ],
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Observation.status",
@@ -76,13 +70,7 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/observation-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.status"
-          }
-        ]
+        }
       },
       {
         "id": "Observation.code",
@@ -110,13 +98,7 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.subject"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Observation.effective[x]",
@@ -142,13 +124,7 @@
             "code": "instant"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.effective[x]"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Observation.valueCodeableConcept",

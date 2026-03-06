@@ -94,6 +94,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Update IG Publisher, then build](#update-ig-publisher-then-build)
       - [Build IG after changes/updates (Convert YAML to JSON, then run SUSHI, then run IG Publisher removing meta extension and adding versions to canonicicals)](#build-ig-after-changesupdates-convert-yaml-to-json-then-run-sushi-then-run-ig-publisher-removing-meta-extension-and-adding-versions-to-canonicicals)
       - [Delete temp/cache (Run build after deleting an artifacts or example)](#delete-tempcache-run-build-after-deleting-an-artifacts-or-example)
+      - [Update the requirments resource (run after update to the us\_core\_reqs.csv file)](#update-the-requirments-resource-run-after-update-to-the-us_core_reqscsv-file)
       - [Prepublication Steps](#prepublication-steps)
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
@@ -329,6 +330,7 @@ input/pagecontent/search-parameters-and-operations.md||temp/pages/_data/structur
 input/pagecontent/terminology.md|temp/pages/valueset-ref-all-list.csv
 input/pagecontent/terminology.md|temp/pages/codesystem-ref-all-list.csv.
 input/pagecontent/uscdi.md|input/data/uscdi-table.csv
+input/pagecontent/requirements.md|input/data/us_core_reqs.csv
 
 \* The publish.sh script adds `input/data/ig.yml` to the input/data directory after running sushi  (for details see the Publish.sh section below).
 
@@ -459,12 +461,17 @@ US Core uses FHIR Liquid to build custom narratives for:
 - All US Core Search Parameters
 - US Core Client CapabilityStatement
 - US Core Server CapabilityStatement
+- US Core Client Requirements
+- US Core Server Requirements
+- US Core Certifying System Requirements
+
 
 #### Repository Structure
 
 ```├── input
 │   ├── liquid
 │   │   ├── CapabilityStatement.liquid
+│   │   ├── Requirements.liquid
 │   │   ├── SearchParameter.liquid
 │   │   └── expectation_handler.html
 ```
@@ -648,7 +655,7 @@ Amongs its many functions it:
 3. **Runs Sushi** — Executes Sushi to create the Implementation Guide resource from the `sushi-config.yaml` file
 4. **Validates JSON** — Checks all JSON files for syntax errors, duplicates, and null values
 5. **Runs the IG Publisher** — Executes the Java-based HL7 FHIR IG Publisher tool
-6. **Updates artifacts** — Updates artifacts for final publication
+6. **Updates artifacts** — Updates and creates artifacts for final publication
 7. **Adds ig.yaml collection** Adds the ImplementationGuide resource to the `input/data/ig.yml` folder as a collection
 
 ---
@@ -797,6 +804,7 @@ For example:
 | `-z` | Delete template/temp directories before publishing . Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build is behaving unexpectedly due to cached state. You're switching between different IG template versions|
 | `-C` | Delete input-cache before publishing. -C does the same thing as `-z` but for the input-cache/ directory, which stores downloaded dependencies (packages, terminology, etc.).|
 | `-V` | Update the VSAC name-to-FHIR-URI mapping CSV. This is executed prior to publication of a new version, it downloads the latest VSAC (Value Set Authority Center) metadata from the NLM (National Library of Medicine) and creates a CSV mapping file that links VSAC code system names to their FHIR URIs, and outputs a sorted CSV to `input/data/vsacname-fhiruri-map.csv` ||✅|
+| `-R` | Createa Requirements Resources from the us_core_reqs.csv file. This is executed after updates to the csv file. The csv file is manually updated using the excel file input/images-source/~$hl7.fhir.us.core_8.0.0_reqs.xlsx which is derived the US Core Server v8.0.0 Specification Requirements, created by Inferno and its open-source testing framework to support the ONC Health IT Certification Program. The goal is to share this data with the inferno team in future releases.
 
 
 
@@ -832,6 +840,12 @@ Flags can be combined in any order:
 ...
 
 ./publish.sh -ien
+```
+
+#### Update the requirments resource (run after update to the us_core_reqs.csv file)
+
+```bash
+./publish.sh -R
 ```
 
 ####  Prepublication Steps

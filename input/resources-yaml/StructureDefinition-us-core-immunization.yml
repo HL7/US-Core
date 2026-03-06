@@ -27,27 +27,18 @@ differential:
           expression: vaccineCode.coding.where(system='http://hl7.org/fhir/sid/cvx').exists() implies vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').exists()
           xpath: (exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']) and exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])) or exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])not()
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Immunization
     - id: Immunization.status
       path: Immunization.status
       mustSupport: true
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/ValueSet/immunization-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Immunization.status
     - id: Immunization.statusReason
       path: Immunization.statusReason
       mustSupport: true
       binding:
         strength: example
         valueSet: http://hl7.org/fhir/ValueSet/immunization-status-reason
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Immunization.wasNotGiven
     - id: Immunization.vaccineCode
       path: Immunization.vaccineCode
       short: Vaccine Product Type (bind to CVX)
@@ -57,9 +48,6 @@ differential:
       binding:
         strength: extensible
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.6
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Immunization.vaccineCode
     - id: Immunization.patient
       path: Immunization.patient
       alias:
@@ -69,9 +57,6 @@ differential:
           targetProfile:
             - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Immunization.patient
     - id: Immunization.encounter
       path: Immunization.encounter
       short: Encounter the immunization was part of
@@ -89,17 +74,11 @@ differential:
           code: dateTime
         - code: string
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Immunization.date
     - id: Immunization.primarySource
       path: Immunization.primarySource
       definition: Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data  documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.
       comment: This updated definition is adopted from the FHIR R5 Immunization resource.
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Immunization.reported
 
     - id: Immunization.location
       path: Immunization.location

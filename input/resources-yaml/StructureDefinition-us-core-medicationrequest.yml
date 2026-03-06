@@ -34,9 +34,6 @@ differential:
           human: requester SHALL be present if intent is "order"
           expression: (intent='order' or intent='original-order' or intent='reflex-order'or intent='filler-order' or intent='instance-order') implies requester.exists()
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder
     - id: MedicationRequest.extension:medicationAdherence
       extension:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -58,9 +55,6 @@ differential:
         strength: required
         description: A code specifying the state of the prescribing event. Describes the lifecycle of the prescription.
         valueSet: http://hl7.org/fhir/ValueSet/medicationrequest-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder.status
     - id: MedicationRequest.intent
       path: MedicationRequest.intent
       condition:
@@ -70,9 +64,6 @@ differential:
         strength: required
         description: The kind of medication order.
         valueSet: http://hl7.org/fhir/ValueSet/medicationrequest-intent
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder.status
     - id: MedicationRequest.category
       path: MedicationRequest.category
       slicing:
@@ -123,9 +114,6 @@ differential:
                 - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: false
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder.status
     - id: MedicationRequest.medication[x]
       path: MedicationRequest.medication[x]
       type:
@@ -137,9 +125,6 @@ differential:
       binding:
         strength: extensible
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder.medication[x]
     - id: MedicationRequest.subject
       path: MedicationRequest.subject
       type:
@@ -157,9 +142,6 @@ differential:
 
 
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder.patient
     - id: MedicationRequest.encounter
       path: MedicationRequest.encounter
       type:
@@ -167,15 +149,9 @@ differential:
           targetProfile:
             - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA
     - id: MedicationRequest.authoredOn
       path: MedicationRequest.authoredOn
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder.dateWritten
     - id: MedicationRequest.requester
       path: MedicationRequest.requester
       type:
@@ -209,9 +185,6 @@ differential:
       condition:
         - us-core-21
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: MedicationOrder.prescriber
     - id: MedicationRequest.reasonCode
       extension:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

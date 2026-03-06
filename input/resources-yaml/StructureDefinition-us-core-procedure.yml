@@ -24,9 +24,6 @@ differential:
           human: Performed SHALL be present if the status is 'completed' or 'in-progress'
           expression: (status='completed' or status='in-progress') implies performed.exists()
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Procedure
     - id: Procedure.basedOn
       extension:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -54,9 +51,6 @@ differential:
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/ValueSet/event-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Procedure.status
     - id: Procedure.code
       path: Procedure.code
       min: 1
@@ -83,9 +77,6 @@ differential:
         strength: preferred
         description: Codes describing the type of  Procedure
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Procedure.code
     - id: Procedure.subject
       path: Procedure.subject
       type:
@@ -103,9 +94,6 @@ differential:
 
 
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Procedure.subject
     - id: Procedure.encounter
       path: Procedure.encounter
       short: Encounter associated with the procedure
@@ -128,9 +116,6 @@ differential:
       condition:
         - us-core-7
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Procedure.performed[x]
 
 # =========== New for USCDI 5 Provenance Author  ==================
 

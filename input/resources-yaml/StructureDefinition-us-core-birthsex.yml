@@ -34,11 +34,6 @@ differential:
       min: 0
       max: '1'
       isModifier: false
-      mapping:
-        - identity: rim
-          map: player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender
-        - identity: iso11179
-          map: .patient.administrativeGenderCode
     - id: Extension.url
       path: Extension.url
       fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex

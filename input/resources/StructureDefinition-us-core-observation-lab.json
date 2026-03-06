@@ -41,13 +41,7 @@
             }
           ]
         },
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.category"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Observation.code",
@@ -58,13 +52,7 @@
           "strength": "extensible",
           "description": "Laboratory LOINC Codes",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.code"
-          }
-        ]
+        }
       },
       {
         "id": "Observation.code.text",
@@ -153,13 +141,7 @@
             "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.value[x]"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Observation.interpretation",

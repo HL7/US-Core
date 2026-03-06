@@ -18,16 +18,10 @@ differential:
     - id: CarePlan
       path: CarePlan
       mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan
     - id: CarePlan.text
       path: CarePlan.text
       short: Text summary of the resource, for human interpretation
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.text
     - id: CarePlan.text.status
       path: CarePlan.text.status
       short: generated | additional
@@ -36,9 +30,6 @@ differential:
         strength: required
         description: Constrained value set of narrative statuses.
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.text.status
     - id: CarePlan.text.div
       path: CarePlan.text.div
       short: Limited xhtml content
@@ -51,9 +42,6 @@ differential:
         strength: required
         description: Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.
         valueSet: http://hl7.org/fhir/ValueSet/request-status
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.status
     - id: CarePlan.intent
       path: CarePlan.intent
       mustSupport: true
@@ -61,9 +49,6 @@ differential:
         strength: required
         description: Codes indicating the degree of authority/intentionality associated with a care plan
         valueSet: http://hl7.org/fhir/ValueSet/care-plan-intent
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (new element in STU3)
 
 
     - id: CarePlan.category
@@ -81,9 +66,6 @@ differential:
       min: 0
     # =========== make min = 0 in US Core 9 ===========
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.category
   # ===========  example binding strength to preferred in US Core 9 ===========
       binding:
         strength: preferred
@@ -106,9 +88,6 @@ differential:
   #     - system: http://hl7.org/fhir/us/core/CodeSystem/careplan-category
   #       code: assess-plan
   #   mustSupport: true
-  #   mapping:
-  #   - identity: argonaut-dq-dstu2
-  #     map: CarePlan.category
  # =========== make remove in US Core 9  ===========
 
     - id: CarePlan.subject
@@ -128,9 +107,6 @@ differential:
                 - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: false
       mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.subject
   #===================  new for USCDI 5====================================
     - id: CarePlan.contributor
       extension:

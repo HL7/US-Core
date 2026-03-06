@@ -36,13 +36,7 @@
             "expression": "code.coding.where(code in '401201003'|'782516008').exists() implies value.is(Quantity)"
           }
         ],
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Observation.status",
@@ -52,13 +46,7 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.status"
-          }
-        ]
+        }
       },
       {
         "id": "Observation.category",
@@ -104,13 +92,7 @@
           "strength": "extensible",
           "description": "Smoking status type",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.6"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.code"
-          }
-        ]
+        }
       },
       {
         "id": "Observation.subject",
@@ -124,13 +106,7 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.subject"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Observation.effective[x]",
@@ -144,13 +120,7 @@
             "code": "Period"
           }
         ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.issued"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Observation.performer",
@@ -274,13 +244,7 @@
           "description": "Smoking status comprehensive",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.3"
         },
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.valueCodeableConcept"
-          }
-        ]
+        "mustSupport": true
       }
     ]
   },
