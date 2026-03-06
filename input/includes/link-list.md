@@ -160,9 +160,6 @@
 [The US Core DocumentReferences Type Value Set]: ValueSet-us-core-documentreference-category.html
 [Token Introspection]: {{site.data.fhir.ver.smart}}/token-introspection.html#token-introspection)
 [Translation]: {{site.data.fhir.path}}extension-translation.html
-[U.S. Core Data for Interoperability (USCDI) v2]: https://www.healthit.gov/isp/sites/isp/files/2021-07/USCDI-Version-2-July-2021-Final.pdf
-[U.S. Core Data for Interoperability (USCDI) v3]: https://www.healthit.gov/isp/sites/isp/files/2022-10/USCDI-Version-3-October-2022-Errata-Final.pdf
-[U.S. Core Data for Interoperability (USCDI) v4]: https://www.healthit.gov/isp/sites/isp/files/2023-10/USCDI-Version-4-October-2023-Errata-Final.pdf
 [U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi
 [UCUM Codes ValueSet]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org

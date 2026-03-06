@@ -47,7 +47,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 21. **Applied:** Non-substantive (Correction) Fix Link: ​Comparison with version 8.0.1 [FHIR-54248](https://jira.hl7.org/browse/FHIR-54248) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/changes-between-versions.html#cross-version-comparisons)
 22. **Resolved - change required:** Compatible, substantive (Correction) Un-deprecate the US Core QuestionnaireResponse Profile in Jira [FHIR-55391](https://jira.hl7.org/browse/FHIR-55391), [FHIR-54254](https://jira.hl7.org/browse/FHIR-54254) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-questionnaireresponse.html)
 23. **Applied:** Non-substantive (Correction) Fix LOINC code links [FHIR-54257](https://jira.hl7.org/browse/FHIR-54257) See Changes [Here](https://hl7.org/fhir/us/core/clinical-notes.html)
-24. **Applied:**  (Correction) Fix grammar and bad link to STU8 [FHIR-54269](https://jira.hl7.org/browse/FHIR-54269) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/index.html)
+24. **Applied:**  (Correction) Fix typos and links [FHIR-54269](https://jira.hl7.org/browse/FHIR-54269) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/index.html)
 25. **Resolved - change required:** Compatible, substantive (Enhancement) PMO ServiceRequest Profile Optionality [FHIR-54271](https://jira.hl7.org/browse/FHIR-54271) See Changes [Here]()
 26. **Resolved - change required:** Non-substantive (Enhancement) PMO Service Request [FHIR-54287](https://jira.hl7.org/browse/FHIR-54287) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-pmo-servicerequest.html)
 27. **Resolved - change required:**  (Correction) minor yet obvious typos, which should be a quick fix [FHIR-54289](https://jira.hl7.org/browse/FHIR-54289) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/index.html#home)
@@ -83,11 +83,11 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 52. **Triaged:**  () Update Race and Ethnicity Valueset [FHIR-53784](https://jira.hl7.org/browse/FHIR-53784) See Changes [Here](https://hl7.org/fhir/us/core/STU6.1/ValueSet-omb-race-category.html)
 53. **Triaged:**  () Alignment with OMB Statistical Policy Directive No. 15 (SPD‑15, 2024 revisions) for race and ethnicity standards. [FHIR-53792](https://jira.hl7.org/browse/FHIR-53792) See Changes [Here](https://hl7.org/fhir/us/core/StructureDefinition-us-core-race.html)
 54. **Triaged:** Non-substantive (Clarification) Clarification on PMO formats [FHIR-53823](https://jira.hl7.org/browse/FHIR-53823) See Changes [Here]()
-55. **Triaged:** Compatible, substantive (Correction) ElementDefinition mappings refer to missing StructureDefinition mappings [FHIR-54105](https://jira.hl7.org/browse/FHIR-54105) See Changes [Here]()
-56. **Pre-Applied:** Non-substantive (Clarification) Update Basic Provenance Figure 3 and 4 [FHIR-54222](https://jira.hl7.org/browse/FHIR-54222) See Changes
+55. **Applied:** Compatible, substantive (Correction) Remove 	argonaut-dq-dstu2 mappings from US Core StructureDefinitions [FHIR-54105](https://jira.hl7.org/browse/FHIR-54105) For Changes See previous versions 'StructureDefinitions.differential.element[].id.mapping' elements
+56. *Applied:** Non-substantive (Clarification) Update Basic Provenance Figure 3 and 4 [FHIR-54222](https://jira.hl7.org/browse/FHIR-54222) See Changes
     - [HIE Redistribution](https://hl7.org/fhir/us/core/2026Jan/basic-provenance.html#hie-redistribution)
     - [HIE Transformation](https://hl7.org/fhir/us/core/2026Jan/basic-provenance.html#hie-transformation)
-57. **Triaged:**  () Writing Vital Signs Encounter Determination [FHIR-54227](https://jira.hl7.org/browse/FHIR-54227) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/writing-vital-signs.html#observation-elements)
+57. **Triaged:** Non-substantive (Enhancement) Clarify server behavior for Writing Vital Signs Encounter Determination [FHIR-54227](https://jira.hl7.org/browse/FHIR-54227) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/writing-vital-signs.html#observation-elements)
 58. **Triaged:** Non-substantive (Clarification) Need clarification of Additional USCDI Requirements [FHIR-54247](https://jira.hl7.org/browse/FHIR-54247) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
 59. **Re-open:** Non-substantive (Enhancement) Limit US Core Goal Codes ValueSet definition to clinical SNOMED CT and LOINC hierarchies. [FHIR-54407](https://jira.hl7.org/browse/FHIR-54407) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/ValueSet-us-core-goal-description.html)
 60. **Triaged:**  () Include category concepts in Detailed Ethnicity value set [FHIR-54410](https://jira.hl7.org/browse/FHIR-54410) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-ethnicity.html)
@@ -104,8 +104,9 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 71. **Submitted:**  () HCPCS URI does not resolve [FHIR-55689](https://jira.hl7.org/browse/FHIR-55689) See Changes [Here]()
 72. **Applied:**  Non-substantive (Correction) Update grammar for language guidance [FHIR-55954](https://jira.hl7.org/browse/FHIR-55954) See Changes [Here](general-guidance.html#language-support)
 73. **Resolve - change required:**  Non-substantive (Correction) Change the footnote symbols *†‡§¶ to numbers [FHIR-55841](https://jira.hl7.org/browse/FHIR-55841) For example, see Changes [Here](StructureDefinition-us-core-allergyintolerance.html#mandatory-and-must-support-data-elements)
-74. **Pre-Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
-75. **Pre-Applied:**  Update the ImplementationGuide.description [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](ImplementationGuide-hl7.fhir.us.core.html)
+74. **Applied:**  Non-substantive (Correction) Remove redundant guidance from Representing Deleted and Entered in Error Information Section [FHIR-55953](https://jira.hl7.org/browse/FHIR-55953 ) See Changes [Here](general-guidance.html#representing-deleted-and-entered-in-error-information)
+75. **Pre-Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
+76. **Pre-Applied:**  Update the ImplementationGuide.description [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](ImplementationGuide-hl7.fhir.us.core.html)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>
@@ -707,7 +708,7 @@ The following trackers have been identified as publishing issues and we are work
 
 This ballot addresses the following:
 
-- We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v4] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2023:
+- We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v4](https://www.healthit.gov/isp/sites/isp/files/2023-10/USCDI-Version-4-October-2023-Errata-Final.pdf) Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2023:
 
   - For the USCDI Allergies and Intolerances Substance (Non-Medication) data element, no change was needed for the [US Core AllergyIntolerance Profile] because the existing `code` element binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) already includes "Non-pharmacologic agent"
 
@@ -849,7 +850,7 @@ The following trackers have been identified as publishing issues and we will wor
 The changes in this STU Update to US Core 6.0.0 have been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 6.1.0 of US Core:
 
-To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a [USCDI Requirement](https://hl7.org/fhir/us/core/STU6/must-support.html#uscdi-requirements)(). The [US Core Birth Sex Extension] is no longer a *USCDI Requirement*.
+To meet the [U.S. Core Data for Interoperability (USCDI) v3](https://isp.healthit.gov/sites/default/files/2022-10/USCDI-Version-3-October-2022-Errata-Final.pdf) &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a [USCDI Requirement](https://hl7.org/fhir/us/core/STU6/must-support.html#uscdi-requirements)(). The [US Core Birth Sex Extension] is no longer a *USCDI Requirement*.
 
 #### Updates and Corrected Errata in Version 6.1.0 of US Core:
 
@@ -876,7 +877,7 @@ The changes in this annual update to US Core have been reviewed and commented up
 
 Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 6.0.0 version of US Core and each previous major release on [Changes Between Versions] page. This section provides an overview of the significant changes in Version 6.0.0 of US Core.
 
-- New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v3] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022. [This table](https://hl7.org/fhir/us/core/STU6/uscdi.html) summarizes the USCDI Data Classes and Data Elements and the corresponding US Core Profile(s).
+- New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v3](https://isp.healthit.gov/sites/default/files/2022-10/USCDI-Version-3-October-2022-Errata-Final.pdf) new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022. [This table](https://hl7.org/fhir/us/core/STU6/uscdi.html) summarizes the USCDI Data Classes and Data Elements and the corresponding US Core Profile(s).
   - The *new* [US Core Coverage Profile] represent and access data related to an individual's health insurance coverage for health care.
   - The profiles from version 5.0.1 have been renamed and re-scoped in this version to accommodate the USCDI Health Status/Assessments Data Classes.
     -  The [US Core Observation Screening Assessment Profile] replaces the *US Core Observation Survey Profile* and *US Core Observation SDOH Assessment Profile*, and the [US Core Simple Observation Profile] replaces the *US Core Observation Social History Profile*.  See the Cross Version Comparisons Table on the [Changes Between Versions] page for a summary of profile revisions between versions.
@@ -1081,7 +1082,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 
 This ballot addresses the following:
 
-- We have updated US Core to include the [U.S. Core Data for Interoperability (USCDI) v3] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022:
+- We have updated US Core to include the [U.S. Core Data for Interoperability (USCDI) v3](https://isp.healthit.gov/sites/default/files/2022-10/USCDI-Version-3-October-2022-Errata-Final.pdf) Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022:
 
   - **Applied**: [Health Insurance Information](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
   - **Applied**: The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](https://hl7.org/fhir/us/core/2023Jan/screening-and-assessments.html), reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use [US Core Observation Screening Assessment Profile] and the [US Core Simple Observation Profile] to represent and access health status and assessments, including: *Functional Status*, *Disability Status*, and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
@@ -1189,7 +1190,7 @@ The changes in this errata to version 5.0.0 of US Core have been reviewed by the
 The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2022 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 5.0.0 of US Core:
 
-- New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v2] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2021:
+- New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v2](https://www.healthit.gov/isp/sites/isp/files/2021-07/USCDI-Version-2-July-2021-Final.pdf) new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2021:
   -  A Social Determinants Of Health ([SDOH](https://hl7.org/fhir/us/core/STU5/sdoh.html)) guidance page on using US Core to represent and access SDOH Assessments, Goals, Interventions, and Problems/Health Concerns.
   - [US Core Observation Survey Profile](https://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-survey.html), [US Core Observation SDOH Assessment Profile](https://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-sdoh-assessment.html), and [US Core QuestionnaireResponse Profile](https://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-questionnaireresponse.html) to represent SDOH Assessments
   - [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-servicerequest.html) to represent SDOH Interventions

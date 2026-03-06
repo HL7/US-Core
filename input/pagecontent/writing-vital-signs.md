@@ -20,7 +20,7 @@ Servers **SHALL** document support for writing Observation resources in their Ca
 
 Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps **SHALL** support the registration and authorization of apps with the `patient/Observation.c?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope or a broader version of this scope such as `patient/Observation.c`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
 
-Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps **SHOULD** also support the registration and authorization of apps with the `patient/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope or a broader version of this scope such as `patient/Observation.u`. Note that systems can support only limited [update](#updating-previously-submitted-observations) capabilities. 
+Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps **SHOULD** also support the registration and authorization of apps with the `patient/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope or a broader version of this scope such as `patient/Observation.u`. Note that systems can support only limited [update](#updating-previously-submitted-observations) capabilities.
 
 When offering a patient write capability, health systems may choose to enable or disable this capability based on factors such as the provider, patient, payer, app, and vital type, or may choose to enable the capability broadly. If patients and apps attempting to write data are not enabled, and this can be discerned during the authorization process, the Server **SHALL** omit these unsupported scopes from the resulting access token. If an app uses an access token without the required scopes to submit an `Observation` or the patient is not enabled to write data, the Server **SHALL** return an error and **SHOULD** include an `OperationOutcome` in the response body.
 
@@ -28,7 +28,7 @@ When offering a patient write capability, health systems may choose to enable or
 
 Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps **SHALL** support the registration and authorization of apps with the `user/Observation.c?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.c?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes or broader versions of these scopes such as `user/Observation.c` and `system/Observation.c`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
 
-Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps **SHOULD** also support the registration and authorization of apps with either `user/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes, or broader versions of these scopes such as `user/Observation.u` and `system/Observation.u`. Note that systems can support only limited [update](#updating-previously-submitted-observations) capabilities. 
+Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps **SHOULD** also support the registration and authorization of apps with either `user/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes, or broader versions of these scopes such as `user/Observation.u` and `system/Observation.u`. Note that systems can support only limited [update](#updating-previously-submitted-observations) capabilities.
 
 #### Configuration
 Servers **SHALL** document supported scopes in the `scopes_supported` section of a `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
@@ -50,7 +50,7 @@ The workflow for submitted Observations is the responsibility of the receiving s
 
 #### Observation Elements
 
-`meta.tag` 
+`meta.tag`
 - Client - When writing patient-mediated data into the Server, provider-facing apps **SHALL** include a `Meta.tag` with a system of `http://hl7.org/fhir/us/core/CodeSystem/us-core-tags` and a value of `patient-supplied` to indicate that the data was supplied by a patient or patient designee (such as a parent or spouse) rather than by a healthcare provider.
 - Server - Systems **SHALL** associate the `patient-supplied` tag with vital signs provided by a patient written through this API, and **MAY** associate the tag with vital signs supplied by a patient regardless of how they arrive in the system. Provider-facing apps writing data supplied by a patient **SHALL** include this tag in the submitted Observation resources. The Server **MAY** subsequently dissociate the tag from the data through an explicit reconciliation process.
 
@@ -58,22 +58,22 @@ The workflow for submitted Observations is the responsibility of the receiving s
 An alternate way to tag any patient-generated data would be to use the  code "PATAST" in the `meta.security` element of the resource:
 
   > PATAST | patient asserted: Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability. was asserted by a patient.)
-  
+
 We are seeking feedback from the community on whether this more compact approach from the FHIR standard could be adopted and supported.
-</div><!-- stu-note --> 
+</div><!-- stu-note -->
 
-`encounter` 
-- Client - If populating this element, apps **SHALL** use a reference to an Encounter resource in the Server, and **MAY** use the value returned by the `launch/encounter` SMART scope. 
-- Server - Systems **SHOULD** document whether the `encounter` element is required to create a vital sign. When not required, Servers **MAY** determine this value based on context if it is omitted.
+`encounter`
+- Client - If populating this element, apps **SHALL** use a reference to an Encounter resource in the Server, and **MAY** use the value returned by the `launch/encounter` SMART scope.
+- Server - Systems **SHOULD** document whether the `encounter` element is required to create a vital sign. When not required, Servers **MAY** determine this value based on context if it is omitted, <span class="bg-success" markdown="1"> and, if they do, **SHOULD** document the criteria used to make this determination.</span><!-- new-content -->
 
-`subject` 
+`subject`
 - Client - Apps **SHALL** populate the `subject` reference with a reference to a Patient resource in the Server. Patient-facing apps **SHOULD** populate this element based on the value returned as part of the `launch/patient` SMART scope.
- 
-`device` 
-- Client - Apps **MAY** populate the `device` reference with a reference to the Device resource in the Server or a contained Device resource within the Observation. This is the device used to measure the vital sign (e.g., a BP cuff), not the device used to transmit the data (e.g., a phone). Contained device resources **SHALL** populate at least one `deviceName` element. 
+
+`device`
+- Client - Apps **MAY** populate the `device` reference with a reference to the Device resource in the Server or a contained Device resource within the Observation. This is the device used to measure the vital sign (e.g., a BP cuff), not the device used to transmit the data (e.g., a phone). Contained device resources **SHALL** populate at least one `deviceName` element.
 - Server - When this value is populated with a reference to a Device resource on the Server, Servers **SHALL** return this reference in subsequent reads operations of the resource that was created. When this value is populated with a reference to a valid contained Device resource, Servers **MAY** ignore the contained Device, return the contained Device as part of subsequent read operations, or create a Device resource in the system and return a reference to it in subsequent read operations. Servers **SHALL** not return an error due to the presence of a valid contained Device resource. Servers **SHOULD** document their behavior with regard to contained Device resources.
 
-`performer` 
+`performer`
 - Client - Apps **SHOULD** populate the `performer` element with a reference to a resource in the Server when the resource exists, or the app can create it. For patient-facing apps, if the app knows that a patient collected this data, the app **SHALL** set the `performer` to a reference to the patient based on the SMART launch context (this should also match the `Observation.subject`). If the relevant resource does not exist and the app cannot create it, the app **SHOULD** populate `performer.display`.
 - Server - When this value is populated in a successful create operation, systems **SHALL** return it in subsequent read operations of the resource that was created. Note that `performer` is not currently required in the US Core vital signs profile.
 
@@ -86,7 +86,7 @@ If a Server determines that a vital sign is a duplicate of one it has already st
 
 ### Updating Previously Submitted Observations
 
-Servers **SHOULD** support the ability for patients-facing apps to update the `status` element of a vital sign resource the user previously wrote to the system from any app to `entered-in-error` through an `update` interaction. This capability **SHOULD** only be used by apps to address data mistakes in data submission. 
+Servers **SHOULD** support the ability for patients-facing apps to update the `status` element of a vital sign resource the user previously wrote to the system from any app to `entered-in-error` through an `update` interaction. This capability **SHOULD** only be used by apps to address data mistakes in data submission.
 
 ### Including Provenance Information
 
@@ -128,7 +128,7 @@ Example:
         "identifier": {
           "system": "urn:ietf:rfc:3986",
           "value": "https://stlukes.example.org"
-        }  
+        }
       }
     },{
       "type": {
@@ -203,7 +203,7 @@ Example:
     },
     "who": {
       //this is the app that transmits the data
-      "display": "Healthkit" 
+      "display": "Healthkit"
     }
   }]
 }]

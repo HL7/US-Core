@@ -99,27 +99,23 @@ Some US Core Profiles bind the `Quantity.code` element in the Quantity datatype 
     "value": 26.0
  }
 ```
+<div class="bg-success" markdown="1">
 
-
-
-### Representing Deleted Information
+### Representing Deleted and Entered in Error Information
 
 A FHIR Server <span class="bg-success" markdown="1">**SHOULD NOT**</span><!-- new-content --> delete records.<sup>[§][CONF-0187]</sup> A FHIR Server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive` (refer to the next section).<sup>[§][CONF-0188]</sup> If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.<sup>[§][CONF-0189]</sup>
 
-### Representing Entered in Error Information
+#### Entered in Error
 
 Clinical information entered in error in the patient's record needs to be represented by the FHIR Server so that Clients can expose the corrected information to their end users.
 
 **Server Recommendations:**
-- A FHIR Server <span class="bg-success" markdown="1">**SHOULD NOT**</span><!-- new-content --> not delete resources.<sup>[§][CONF-0187]</sup>
-- A FHIR Server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive`.<sup>[§][CONF-0188]</sup>
 - A FHIR Server **SHOULD** allow these resources to be searchable by Client applications.<sup>[§][CONF-0190]</sup>
 - If the FHIR Server has updated the resource status to `entered-in-error`:
     -  For *patient facing* applications, A FHIR Server **SHOULD** remove the resource's contents, leaving only an id and status. Note that this typically will not conform to the US Core or FHIR StructureDefinitions.<sup>[§][CONF-0191]</sup>
     - For *provider-facing* applications, the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.<sup>[§][CONF-0192]</sup>
 
-
-
+</div><!-- new-content -->
 ### Narrative
 
 The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile can include a human-readable narrative containing a summary of the resource and may be used to represent the resource's content to a human.  For further guidance, refer to the [Narrative documentation] in the FHIR Specification.
