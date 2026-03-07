@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "pediatric-bmi-example",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Pediatric BMI Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a pediatric BMI example for the *Pediatric BMI For Age Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age"
     ]
   },
   "status": "final",

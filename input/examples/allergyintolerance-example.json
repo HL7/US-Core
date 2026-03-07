@@ -3,7 +3,17 @@
   "id": "example",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "AllergyIntolerance Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a allergyintolerance example for the *US Core AllergyIntolerance Profile*."
+      }
     ]
   },
   "clinicalStatus": {

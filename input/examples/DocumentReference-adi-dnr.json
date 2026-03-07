@@ -2,8 +2,18 @@
   "resourceType": "DocumentReference",
   "id": "adi-dnr",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "DocumentReference DNR"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a an example of an DNR (Do Not Resuscitate) PDF attachment for the *US Core ADI DocumentReference Profile*"
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference"
     ]
   },
   "extension": [

@@ -2,8 +2,18 @@
   "resourceType": "CarePlan",
   "id": "careplan-ulcer-example",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "CarePlan Ulcer Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is an Ulcer CarePlan example for the *US Core CarePlan Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
     ]
   },
   "text": {

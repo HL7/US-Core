@@ -79,15 +79,14 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     -  [US Core Client Requirements](Requirements-us-core-client.html)
     -  [US Core Client Requirements](Requirements-us-core-client.html)
 50. **Resolved - change required:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597), [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-pmo-servicerequest.html)
-51. **Pre-Applied:**  Change the preferred binding  for RelatedPerson.relationship VSAC Personal And Legal Relationship Role Type [FHIR-53376](https://jira.hl7.org/browse/FHIR-53376) See Changes [Here](StructureDefinition-us-core-relatedperson-definitions.html#RelatedPerson.relationship)
-52. **Triaged:**  () Update Race and Ethnicity Valueset [FHIR-53784](https://jira.hl7.org/browse/FHIR-53784) See Changes [Here](https://hl7.org/fhir/us/core/STU6.1/ValueSet-omb-race-category.html)
+51. **Applied:**  Change the preferred binding for RelatedPerson.relationship VSAC Personal And Legal Relationship Role Type [FHIR-53376](https://jira.hl7.org/browse/FHIR-53376) See Changes [Here](StructureDefinition-us-core-relatedperson-definitions.html#RelatedPerson.relationship)
 53. **Triaged:**  () Alignment with OMB Statistical Policy Directive No. 15 (SPD‑15, 2024 revisions) for race and ethnicity standards. [FHIR-53792](https://jira.hl7.org/browse/FHIR-53792) See Changes [Here](https://hl7.org/fhir/us/core/StructureDefinition-us-core-race.html)
 54. **Triaged:** Non-substantive (Clarification) Clarification on PMO formats [FHIR-53823](https://jira.hl7.org/browse/FHIR-53823) See Changes [Here]()
-55. **Applied:** Compatible, substantive (Correction) Remove 	argonaut-dq-dstu2 mappings from US Core StructureDefinitions [FHIR-54105](https://jira.hl7.org/browse/FHIR-54105) For Changes See previous versions 'StructureDefinitions.differential.element[].id.mapping' elements
-56. *Applied:** Non-substantive (Clarification) Update Basic Provenance Figure 3 and 4 [FHIR-54222](https://jira.hl7.org/browse/FHIR-54222) See Changes
+55. **Applied:** Compatible, substantive (Correction) Remove mappings from US Core StructureDefinitions [FHIR-54105](https://jira.hl7.org/browse/FHIR-54105) For Changes See previous versions 'StructureDefinitions.differential.element[].id.mapping' elements
+56. **Applied:** Non-substantive (Clarification) Update Basic Provenance Figure 3 and 4 [FHIR-54222](https://jira.hl7.org/browse/FHIR-54222) See Changes
     - [HIE Redistribution](https://hl7.org/fhir/us/core/2026Jan/basic-provenance.html#hie-redistribution)
     - [HIE Transformation](https://hl7.org/fhir/us/core/2026Jan/basic-provenance.html#hie-transformation)
-57. **Triaged:** Non-substantive (Enhancement) Clarify server behavior for Writing Vital Signs Encounter Determination [FHIR-54227](https://jira.hl7.org/browse/FHIR-54227) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/writing-vital-signs.html#observation-elements)
+57. **Applied:** Non-substantive (Enhancement) Clarify server behavior for Writing Vital Signs Encounter Determination [FHIR-54227](https://jira.hl7.org/browse/FHIR-54227) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/writing-vital-signs.html#observation-elements)
 58. **Triaged:** Non-substantive (Clarification) Need clarification of Additional USCDI Requirements [FHIR-54247](https://jira.hl7.org/browse/FHIR-54247) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
 59. **Re-open:** Non-substantive (Enhancement) Limit US Core Goal Codes ValueSet definition to clinical SNOMED CT and LOINC hierarchies. [FHIR-54407](https://jira.hl7.org/browse/FHIR-54407) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/ValueSet-us-core-goal-description.html)
 60. **Triaged:**  () Include category concepts in Detailed Ethnicity value set [FHIR-54410](https://jira.hl7.org/browse/FHIR-54410) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-ethnicity.html)
@@ -105,8 +104,8 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 72. **Applied:**  Non-substantive (Correction) Update grammar for language guidance [FHIR-55954](https://jira.hl7.org/browse/FHIR-55954) See Changes [Here](general-guidance.html#language-support)
 73. **Resolve - change required:**  Non-substantive (Correction) Change the footnote symbols *†‡§¶ to numbers [FHIR-55841](https://jira.hl7.org/browse/FHIR-55841) For example, see Changes [Here](StructureDefinition-us-core-allergyintolerance.html#mandatory-and-must-support-data-elements)
 74. **Applied:**  Non-substantive (Correction) Remove redundant guidance from Representing Deleted and Entered in Error Information Section [FHIR-55953](https://jira.hl7.org/browse/FHIR-55953 ) See Changes [Here](general-guidance.html#representing-deleted-and-entered-in-error-information)
-75. **Pre-Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
-76. **Pre-Applied:**  Update the ImplementationGuide.description [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](ImplementationGuide-hl7.fhir.us.core.html)
+75. **Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
+76. **Applied:**  Update the ImplementationGuide.description [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](ImplementationGuide-hl7.fhir.us.core.html)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>
