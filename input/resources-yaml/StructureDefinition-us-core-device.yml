@@ -104,6 +104,8 @@ differential:
         valueSet: http://hl7.org/fhir/ValueSet/device-kind
     - id: Device.patient
       path: Device.patient
+      short: Patient to whom Device is assigned
+      definition: 'Patient information, If the device is assigned to a person.'
 # ===== change to min=0 in Version 9======
     # min: 1
 # ===== change to min=0 in Version 9======

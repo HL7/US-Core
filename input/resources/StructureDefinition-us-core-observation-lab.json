@@ -180,7 +180,7 @@
           {
             "key": "us-core-22",
             "severity": "error",
-            "human": "SHALL use UCUM for coded quantity units.",
+            "human": "The system SHALL be UCUM for coded quantity units.",
             "expression": "(low.system.empty() or low.system = 'http://unitsofmeasure.org') and (high.system.empty() or high.system = 'http://unitsofmeasure.org')"
           }
         ],

@@ -1,0 +1,2 @@
+The conformance verbs used below describe the intended semantics if the content is adopted, but they carry no US Core conformance or certification requirements until the page standards status changes from 'informative'.
+{:.bg-info}

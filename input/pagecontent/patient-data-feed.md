@@ -1,5 +1,7 @@
 <!-- # Patient Data Feed: Subscriptions -->
 
+{% include conf_usage_boilerplate.md %}
+
 ### Overview
 
 The Patient Data Feed is an optional feature for servers implementing US Core. It allows clients to receive FHIR Subscription Notifications when events related to US Core content occur.
@@ -21,7 +23,7 @@ Clients use this topic URL when creating Subscriptions to indicate they are requ
 
 ### Resources, Filters, and Triggers
 
-The table below defines a minimal set of required resources, their US Core search parameters, and the standardized triggering events for the Patient Feed. 
+The table below defines a minimal set of required resources, their US Core search parameters, and the standardized triggering events for the Patient Feed.
 
 The [Additional Resources] page provides guidance for supporting additional resources.
 
@@ -82,7 +84,7 @@ Servers SHALL implement at least one of these approaches and document which one(
 - Corrections or amendments modify the resource's meaning
 
 
-> **Note**: 
+> **Note**:
 > 1. A `feed-event` will not necessarily fire for every FHIR-visible change. Implementation flexibility allows servers to define the specific events that will appear as updates.
 > 2. Servers MAY overlay their own more specific event codes onto this generic trigger. They can be included in notifications and used for more granular filtering via the `trigger` parameter, providing clients with richer context about the nature of updates.
 
@@ -196,7 +198,7 @@ Servers SHALL allow clients to create Subscriptions according to the [Subscripti
 Clients MAY include multiple filter-criteria extensions in a Subscription request; servers SHALL process all filter-criteria extensions provided by the client.
 
   * If no filter criteria are provided, servers will, by default, send notifications for all supported resource types.
-    
+
   * If one or more filter criteria are provided, servers will send notifications for *only those resources specified in the filter(s)*.
 
 #### Example Subscription Request
@@ -280,7 +282,7 @@ Examples of potential adjustments:
 1. Servers SHALL support at least one resource type from the list in Table 1.
 2. Servers MAY support additional resource types described on the [Additional Resources] page.
 3. Servers supporting the following profiles SHALL support subscriptions for their resources:
-   - US Core DocumentReference Profile 
+   - US Core DocumentReference Profile
    - US Core Encounter Profile
    - US Core DiagnosticReport Profile for Laboratory Results Reporting
    - US Core Laboratory Result Observation Profile
@@ -300,7 +302,7 @@ Examples of potential adjustments:
 1. Servers SHALL clearly document the following in their developer-facing documentation:
    - Supported resources, filters, and triggers
    - Supported channel types
-   - Supported payload types 
+   - Supported payload types
    - How their update notification implementation works, including:
      * An explanation of the internal events or conditions that trigger notifications
      * Any throttling or batching mechanisms used to manage notification frequency

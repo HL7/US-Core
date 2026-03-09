@@ -1,12 +1,14 @@
 ### Purpose and Scope
 
+{% include conf_usage_boilerplate.md %}
+
 This page defines a US Core approach to writing **clinical notes** using the FHIR R4 `DocumentReference` resource.
 
 It complements the US Core **[Clinical Notes (read)][1]** guidance (which exposes notes via `DocumentReference` and certain `DiagnosticReport` categories) and adopts conventions used in **[Writing Vital Signs][2]** (SMART scopes, CapabilityStatement documentation, error semantics).
 
 **In scope**
 
-* Create (and optional update) of notes as `DocumentReference`.
+* <span class="bg-success" markdown="1">Create (and optionally update) notes as `DocumentReference` resources.</span><!-- new-content -->
 * Two modes:
   * **Direct Write** (provider-initiated; immediate filing).
   * **Mediated Submission** (patient-asserted; server-governed review/promotion).
@@ -39,7 +41,7 @@ This write guidance standardizes **writes via `DocumentReference`**. Servers **M
 
 #### Mediated Submission (patient-asserted)
 
-* Client `POST`s a `DocumentReference` with `meta.security` including **`PATAST`**.
+* Client `POST`s a `DocumentReference` with `meta.security` including <span class="bg-success" markdown="1">`PATAST`</span><!-- new-content -->.
 * Server **MAY** hold the note for review/promotion.
 * Server **MAY** inject `PATAST` by policy (e.g., based on authorization context), even if omitted by the client. Servers that inject **SHOULD** document the conditions.
 
@@ -57,7 +59,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
   * a **resolvable relative reference** to a resource on the target server (e.g., `"Practitioner/123"`), or
   * a **contained resource** reference (e.g., `"#prac1"`) when a resolvable reference is not possible.
 * **Display.** Clients **SHOULD** also provide a `display` string for usability.
-* **Server handling.** Servers **SHALL** accept either approach. They **SHOULD** attempt to match to existing entities, and **MAY** persist contained resource content at their discretion.
+* **Server handling.** Servers **SHALL** accept either approach. They **SHOULD** attempt to <span class="bg-success" markdown="1">match references to</span><!-- new-content --> to existing entities, and **MAY** persist contained resource content at their discretion.
 * **Non-blocking.** Servers **SHALL NOT** reject a submission solely because the reference cannot be resolved.
 
 #### Author
@@ -104,7 +106,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 #### Size limits
 
 * Servers **SHALL** accept inline attachments up to at least **5 MiB**.
-* Servers **MAY** support submission via `.attachment.url` that point to larger files than this
+* Servers **MAY** support <span class="bg-success" markdown="1">submissions via `.attachment.url` that points</span><!-- new-content --> to larger files than this
 * Servers **SHALL NOT** link to client-supplied URLs for subsequent readers.
 * Servers **SHALL** document size limits in their API documentation.
 
@@ -114,8 +116,8 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 #### Status correction
 
-* Servers **SHOULD** allow updates of `status` to `entered-in-error`.
-* Clients **MAY** submit a partial `PUT` request to a `DocumentReference` resource, including only the `id`, `status` (set to 'entered-in-error'), `subject` (for verification), and other top-level fields as needed—omitting the full content or context. Servers **SHALL** accept such partial updates without requiring the original document content and **SHOULD** transition the resource's status accordingly. Servers **MAY** subsequently exclude the resource from search results (e.g., to limit visibility), but **SHALL** still support read access via direct ID lookup if authorized.
+* Servers **SHOULD** allow updates of `status` to "entered-in-error".
+* Clients **MAY** submit a partial `PUT` request to a `DocumentReference` resource, including only the `id`, `status` (set to "entered-in-error"), `subject` (for verification), and other top-level fields as needed—omitting the full content or context. <span class="bg-success" markdown="1">Servers **SHALL** accept such partial updates without requiring the original document content and **SHOULD** transition the resource's status accordingly. Servers **MAY** subsequently exclude the resource from search results (e.g., to limit visibility), but **SHALL** still support read access via direct ID lookup if authorized.</span><!-- new-content -->
 
 #### Capability discovery
 
@@ -124,14 +126,14 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 #### Correction and Replacement
 
 * Clients have two distinct mechanisms for corrections: entered-in-error for full retractions (see 4.12) and replacement for supersessions (below). These provide technical signals of "this was a mistake" or "this document replaces that one," respectively. Downstream handling (e.g., archiving, notifications, visibility to readers) is out of scope and a server policy decision.
-* When a client needs to supersede an existing document (e.g., due to revisions without full retraction), they **SHOULD** create a new `DocumentReference` via `POST` and populate `relatesTo` with `code` = 'replaces' and `targetReference` to the original resource's ID. The new document **SHALL** include the updated content.
+* When a client needs to supersede an existing document (e.g., due to revisions without full retraction), they **SHOULD** create a new `DocumentReference` via `POST` and populate `relatesTo` with `code` = "replaces" and `targetReference` to the original resource's ID. The new document **SHALL** include the updated content.
 * Servers **SHALL** accept incoming `relatesTo` elements on create (and round-trip them) but **MAY** ignore the relationship for local policy decisions.
 
 ---
 
 ### Terminology
 
-* **Type.** `DocumentReference.type` **SHALL** use LOINC and support at minimum the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
+* **Type.** `DocumentReference.type` **SHALL** use LOINC and support <span class="bg-success" markdown="1">,at minimum,</span><!-- new-content --> the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
 
   - 11488-4: Consultation note
   - 11535-2: Discharge summary note
@@ -178,7 +180,7 @@ Servers **SHALL** support SMART v2 scopes for create/update and advertise them i
 **Update**
 
 * `PUT [base]/DocumentReference/{id}`
-* Supported for correcting status (e.g., `entered-in-error`) via partial updates (see 4.12) or other changes. Clients **SHOULD** use `POST` with `relatesTo` (code='replaces') for document supersessions instead of in-place content updates (see 4.14).
+* Supported for correcting status (e.g., "entered-in-error") via partial updates (see 4.12) or other changes. Clients **SHOULD** use `POST` with `relatesTo` (code="replaces") for document supersessions instead of in-place content updates (see 4.14).
 
 ---
 
@@ -290,8 +292,7 @@ PUT [base]/DocumentReference/abc
 
 ☐ **SHALL** accept inline content up to at least 5 MiB.
 
-☐ **SHALL** accept `author` and `context.
-  encounter` either as resolvable relative references or contained resources, with optional `display`.
+☐ **SHALL** accept `author` and `context.encounter` either as resolvable relative references or contained resources, with optional `display`.
 
 ☐ **SHALL** accept `text/plain; charset=utf-8` and `application/pdf`.
 
@@ -299,13 +300,13 @@ PUT [base]/DocumentReference/abc
 
 ☐ **SHALL** document limits and mediated submission policy.
 
-☐ **SHALL** accept partial `PUT`s for `status` = 'entered-in-error' without full content; **SHOULD** transition status and **MAY** suppress from searches.
+☐ **SHALL** accept partial `PUT`s for `status` = "entered-in-error" without full content; **SHOULD** transition status and **MAY** suppress from searches.
 
-☐ **SHALL** accept and round-trip `relatesTo` with `code` = 'replaces' on create; **MAY** ignore for policy.
+☐ **SHALL** accept and round-trip `relatesTo` with `code` = "replaces" on create; **MAY** ignore for policy.
 
 ☐ **SHOULD** return `OperationOutcome` on failed writes and when limits are exceeded.
 
-☐ **SHOULD** allow `status` updates to `entered-in-error`.
+☐ **SHOULD** allow `status` updates to "entered-in-error".
 
 ☐ **MAY** support URLs for content with higher limits.
 
@@ -330,7 +331,7 @@ PUT [base]/DocumentReference/abc
 
 ☐ **SHOULD** include `PATAST` for patient-asserted notes.
 
-☐ **SHOULD** use `relatesTo` = 'replaces' for superseding documents instead of in-place updates.
+☐ **SHOULD** use `relatesTo` = "replaces" for superseding documents instead of in-place updates.
 
 ☐ **SHOULD** use `ValueSet/$expand?contextDirection=incoming` for type discovery per US Core guidance.
 

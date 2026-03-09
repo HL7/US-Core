@@ -446,7 +446,7 @@ if [[ $SUSHI ]]; then
     echo ""
     echo "========================================================================"
     echo " Using yq convert $ig_json and copy to $ig_yaml ..."
-    yq -o=json < $ig_json > $ig_yaml
+    yq -p=json -o=yaml < $ig_json > $ig_yaml
     done
   echo "======================= ... done =========================================="
   echo ""
