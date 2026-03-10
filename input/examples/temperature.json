@@ -2,18 +2,8 @@
   "resourceType": "Observation",
   "id": "temperature",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Temperature Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a temperature example for the *Vitalsigns Profile*."
-      }
-    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature|9.0.0"
     ]
   },
   "status": "final",

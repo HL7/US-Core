@@ -2,18 +2,8 @@
   "resourceType": "ServiceRequest",
   "id": "bmp",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "ServiceRequest BMP Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is an example requesting a Laboratory Order (Basic Metabolic Panel) for a patient using the *US Core ServiceRequest Profile*."
-      }
-    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0"
     ]
   },
   "status": "active",
