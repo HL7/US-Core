@@ -34,16 +34,28 @@ This write guidance standardizes **writes via `DocumentReference`**. Servers **M
 
 ### Modes of Operation
 
+<div class="bg-success" markdown="1">
+
 #### Direct Write
+Provider writes directly to the clinical system via a provider-facing app.
 
 * Client `POST`s a `DocumentReference`.
-* On success, the note **SHALL** be discoverable through normal search/read.
+* On success, the note **SHALL** be discoverable through the normal FHIR search/read API.
+
+*Example Scenario:* A provider uses a SMART on FHIR risk assessment app during a patient encounter. The app calculates a cardiovascular risk score, and the provider clicks "Save to Chart" to write the assessment report directly into the patient's record as a progress note. The EHR associates the note with the current encounter.
 
 #### Mediated Submission (patient-asserted)
+Patient mediates the exchange of a clinical note from one provider to another via a patient-facing app or a note authored by a patient-facing app.
 
-* Client `POST`s a `DocumentReference` with `meta.security` including <span class="bg-success" markdown="1">`PATAST`</span><!-- new-content -->.
+* Client `POST`s a `DocumentReference` with a `meta.security` code <span class="bg-success" markdown="1">"PATAST"</span><!-- new-content -->.
 * Server **MAY** hold the note for review/promotion.
-* Server **MAY** inject `PATAST` by policy (e.g., based on authorization context), even if omitted by the client. Servers that inject **SHOULD** document the conditions.
+* Server **MAY** add the `meta.security` code "PATAST" by policy (e.g., based on authorization context), even if it is omitted by the client, and **SHOULD** document this behavior.
+
+*Example Scenarios:*
+
+1. A patient retrieves a consultation note from their specialist's EHR using a patient-facing app, then writes it to their primary care provider's EHR.
+1. A patient uses a wellness app to document symptoms and self-management activities. The app writes this information to the patient's EHR as a patient-asserted note (tagged with "PATAST").
+</div><!-- new-content -->
 
 ---
 
@@ -95,8 +107,8 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 #### Patient-asserted signaling
 
-* Clients **SHALL** include `meta.security` with code `PATAST` when data are patient-supplied.
-* Servers **MAY** inject `PATAST` by policy.
+* Clients **SHALL** include `meta.security` with code "PATAST" when data are patient-supplied.
+* Servers **MAY** <span class="bg-success" markdown="1">add a `meta.security` code "PATAST"</span><!-- new-content --> by policy.
 
 #### MIME support
 
@@ -329,7 +341,7 @@ PUT [base]/DocumentReference/abc
 
 ☐ **SHOULD** populate `context.period`.
 
-☐ **SHOULD** include `PATAST` for patient-asserted notes.
+☐ **SHOULD** include <span class="bg-success" markdown="1">a `meta.security` code "PATAST"</span><!-- new-content --> for patient-asserted notes.
 
 ☐ **SHOULD** use `relatesTo` = "replaces" for superseding documents instead of in-place updates.
 

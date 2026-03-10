@@ -26,7 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a contributor<sup>2</sup>
 2. references to health issues this plan addresses<sup>1</sup>
 
-<sup>1,2</sup>see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 

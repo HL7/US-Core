@@ -35,7 +35,7 @@ input/data/provenance-elements.csv columns:
 - Target_Resource_7: provenance source element target resource (can be up to 7)
 - vendor_support_Target_Resource_7: boolean flag if vendors surveyed on their use of the provenance source element target resource
 - Comments
--  include parameters: fn = footnote symbol "*","†","‡", etc.(default is "<sup>2</sup>")
+-  include parameters: footnote-symbol "<sup>1</sup>","<sup>2</sup>","<sup>3</sup>", etc.(default is "<sup>2</sup>")
   ========================================================================================================================== -->
 {% assign footnote-symbol = include.footnote-symbol | default: "<sup>2</sup>" -%}
 {% assign rows = site.data.provenance-elements -%}

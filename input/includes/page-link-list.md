@@ -2182,41 +2182,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Urobilinogen Example - XML Representation]: Observation-urobilinogen.xml.html
 [Urobilinogen Example - JSON Representation]: Observation-urobilinogen.json.html
 [Urobilinogen Example - TTL Representation]: Observation-urobilinogen.ttl.html
-[US Core Version 3.1.1 Model Definition]: Library-uscore-3.1.1-model-definition.html
-[US Core Version 3.1.1 Model Definition - Testing]: Library-uscore-3.1.1-model-definition-testing.html
-[US Core Version 3.1.1 Model Definition - XML Representation]: Library-uscore-3.1.1-model-definition.xml.html
-[US Core Version 3.1.1 Model Definition - JSON Representation]: Library-uscore-3.1.1-model-definition.json.html
-[US Core Version 3.1.1 Model Definition - TTL Representation]: Library-uscore-3.1.1-model-definition.ttl.html
-[US Core Version 4.0.0 Model Definition]: Library-uscore-4.0.0-model-definition.html
-[US Core Version 4.0.0 Model Definition - Testing]: Library-uscore-4.0.0-model-definition-testing.html
-[US Core Version 4.0.0 Model Definition - XML Representation]: Library-uscore-4.0.0-model-definition.xml.html
-[US Core Version 4.0.0 Model Definition - JSON Representation]: Library-uscore-4.0.0-model-definition.json.html
-[US Core Version 4.0.0 Model Definition - TTL Representation]: Library-uscore-4.0.0-model-definition.ttl.html
-[US Core Version 5.0.1 Model Definition]: Library-uscore-5.0.1-model-definition.html
-[US Core Version 5.0.1 Model Definition - Testing]: Library-uscore-5.0.1-model-definition-testing.html
-[US Core Version 5.0.1 Model Definition - XML Representation]: Library-uscore-5.0.1-model-definition.xml.html
-[US Core Version 5.0.1 Model Definition - JSON Representation]: Library-uscore-5.0.1-model-definition.json.html
-[US Core Version 5.0.1 Model Definition - TTL Representation]: Library-uscore-5.0.1-model-definition.ttl.html
-[US Core Version 6.1.0 Model Definition]: Library-uscore-6.1.0-model-definition.html
-[US Core Version 6.1.0 Model Definition - Testing]: Library-uscore-6.1.0-model-definition-testing.html
-[US Core Version 6.1.0 Model Definition - XML Representation]: Library-uscore-6.1.0-model-definition.xml.html
-[US Core Version 6.1.0 Model Definition - JSON Representation]: Library-uscore-6.1.0-model-definition.json.html
-[US Core Version 6.1.0 Model Definition - TTL Representation]: Library-uscore-6.1.0-model-definition.ttl.html
-[US Core Version 7.0.0 Model Definition]: Library-uscore-7.0.0-model-definition.html
-[US Core Version 7.0.0 Model Definition - Testing]: Library-uscore-7.0.0-model-definition-testing.html
-[US Core Version 7.0.0 Model Definition - XML Representation]: Library-uscore-7.0.0-model-definition.xml.html
-[US Core Version 7.0.0 Model Definition - JSON Representation]: Library-uscore-7.0.0-model-definition.json.html
-[US Core Version 7.0.0 Model Definition - TTL Representation]: Library-uscore-7.0.0-model-definition.ttl.html
-[US Core Version 8.0.1 Model Definition]: Library-uscore-8.0.1-model-definition.html
-[US Core Version 8.0.1 Model Definition - Testing]: Library-uscore-8.0.1-model-definition-testing.html
-[US Core Version 8.0.1 Model Definition - XML Representation]: Library-uscore-8.0.1-model-definition.xml.html
-[US Core Version 8.0.1 Model Definition - JSON Representation]: Library-uscore-8.0.1-model-definition.json.html
-[US Core Version 8.0.1 Model Definition - TTL Representation]: Library-uscore-8.0.1-model-definition.ttl.html
-[US Core Version 9.0.0 Model Definition]: Library-uscore-9.0.0-model-definition.html
-[US Core Version 9.0.0 Model Definition - Testing]: Library-uscore-9.0.0-model-definition-testing.html
-[US Core Version 9.0.0 Model Definition - XML Representation]: Library-uscore-9.0.0-model-definition.xml.html
-[US Core Version 9.0.0 Model Definition - JSON Representation]: Library-uscore-9.0.0-model-definition.json.html
-[US Core Version 9.0.0 Model Definition - TTL Representation]: Library-uscore-9.0.0-model-definition.ttl.html
+[US Core Version 9.0.0 CQF Model Definition]: Library-USCore-ModelInfo.html
+[US Core Version 9.0.0 CQF Model Definition - Testing]: Library-USCore-ModelInfo-testing.html
+[US Core Version 9.0.0 CQF Model Definition - XML Representation]: Library-USCore-ModelInfo.xml.html
+[US Core Version 9.0.0 CQF Model Definition - JSON Representation]: Library-USCore-ModelInfo.json.html
+[US Core Version 9.0.0 CQF Model Definition - TTL Representation]: Library-USCore-ModelInfo.ttl.html
 [Uscore Med1 Example]: Medication-uscore-med1.html
 [Uscore Med1 Example - XML Representation]: Medication-uscore-med1.xml.html
 [Uscore Med1 Example - JSON Representation]: Medication-uscore-med1.json.html

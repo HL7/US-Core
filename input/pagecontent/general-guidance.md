@@ -61,7 +61,7 @@ In situations where the specific piece of data is hidden for security or privacy
 
 [Clinical Quality Language (CQL)] is a high-level, domain-specific language focused on clinical quality and targeted at measure and decision support artifact authors. To use CQL with FHIR,  a [model definition] for the profiles and extensions defined in US Core must be provided to the CQL implementation environment. To support implementations using Clinical Quality Language (CQL) and US-Core, the model definition is provided as FHIR [Library] resources:
 
-- [US Core Version 9.0.0 Model Definition]
+- [US Core Version 9.0.0 CQF Model Definition]
 
 US Core Model Definitions for prior versions of US Core are available in [US Core Version 8.0.1](https://hl7.org/fhir/us/core/STU8/general-guidance.html#using-cql-with-us-core).
 

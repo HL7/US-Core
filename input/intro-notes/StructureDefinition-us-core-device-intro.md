@@ -48,7 +48,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 #### UDI  Specific Implementation Guidance
 
 
-- This profile supports the requirement to retrieve a 170.315(a)(14) [Medical device list](https://www.healthit.gov/test-method/medical-device-list). It follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern] guidelines for exchanging information about the use and implantation of medical devices in patients.
+- <span class="bg-success" markdown="1">This profile follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern] guidelines for exchanging information about the use and implantation of medical devices in patients.</span><!-- new-content -->
   - †A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) and a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs, there is *no expectation* at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc.). The UDI generally consists of a mandatory Device Identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. The UDI and its components are mapped to the US Core Device Profile elements in the table below:
 
     |UDI component|US Core Device Profile element|
@@ -56,7 +56,7 @@ This section provides detailed implementation guidance for the US Core Profile t
     |UDI HRF string|`Device.udiCarrier.carrierHRF`|
     |DI|`Device.udiCarrier.deviceIdentifier`|
     |manufacture date (UDI-PI element)|`Device.manufactureDate`|
-    |expiration date (UDI-PI elemente|`Device.expirationDate`|
+    |expiration date (UDI-PI <span class="bg-success" markdown="1">element</span><!-- new-content -->|`Device.expirationDate`|
     |lot number (UDI-PI element)|`Device.lotNumber`|
     |serial number (UDI-PI element)|`Device.serialNumber`|
     |distinct identifier (UDI-PI element)|`Device.distinctIdentifier`|
