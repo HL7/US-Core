@@ -12,16 +12,16 @@ The following data elements are mandatory (i.e., data MUST be present) or must b
 
 **Each Provenance Must Have:**
 
-1.  a reference to the resource(s) the Provenance record is supporting (target)*
+1.  a reference to the resource(s) the Provenance record is supporting (target)<sup>1</sup>
 1. a date and time for the activity
 
 **Each Provenance Must Support:**
 
 1. the author organization responsible for the information
-1. the transmitter that provided the information†
+1. the transmitter that provided the information<sup>2</sup>
 1. the transmitter organization responsible for the transmission (if the transmitter is a device, the transmitter organization must also be valued).
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -44,7 +44,7 @@ The "black_list" below is manually updated as needed when new profiles are added
   {%- endunless -%}
 {%- endfor -%}
 <ul>
-<li> *The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types:
+<li> <sup>1</sup>The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types:
 <ul id="prov-white-list">
 {% assign resource_list = resource_list | split: "," | uniq | sort -%}
 {% for r in  resource_list %}
@@ -56,7 +56,7 @@ The "black_list" below is manually updated as needed when new profiles are added
 
 <!-- ========================== end liquid ====================== -->
 
-- †If a system receives a provider in `Provenance.agent.who` as free text, they must capture who sent them the information as the organization. On request, they  **SHALL** provide this organization as the source and **MAY** include the free text provider.
- - Systems that need to know the activity has occurred **SHOULD** populate the activity.
+- <sup>2</sup>If a system receives a provider in `Provenance.agent.who` as free text, they must capture who sent them the information as the organization. On request, they  **SHALL** provide this organization as the source and **MAY** include the free text provider.
+- <span class="bg-success" markdown="1">Other information can be tracked such as what activity has occurred in `Provenance.activity`, and details about where the entity came from (for example, a document source's identity and role) in `Provenance.entity`.</span><!-- new-content -->
 
 {% include link-list.md %}

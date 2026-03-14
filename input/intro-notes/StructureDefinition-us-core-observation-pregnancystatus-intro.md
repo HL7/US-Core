@@ -25,17 +25,17 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
-1. a performer*
+1. a performer<sup>1</sup>
 
 
-\* see guidance below
+<sup>1</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - To represent the patient's  *intent* to become pregnant, use the [US Core Observation Pregnancy Intent Profile].
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 - The [Pregnancy Status Observation] value set includes SNOMED CT codes and the HL7 V3 code for the concept "unknown". These codes have historically been used to communicate the pregnancy status of a patient.
 
 {% include link-list.md %}

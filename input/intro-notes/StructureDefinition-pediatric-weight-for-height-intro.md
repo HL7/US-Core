@@ -17,7 +17,9 @@ The following are example usage scenarios for this profile:
 
 **Each Observation Must Support:**
 
-1. a result value
+1. a result value<sup>1</sup>
+
+<sup>1</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 

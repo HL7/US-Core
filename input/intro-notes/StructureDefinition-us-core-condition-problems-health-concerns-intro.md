@@ -32,7 +32,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. additional health status/assessment categories<sup>3</sup>
 1. a recorder<sup>4</sup>
 
-<sup>1234</sup> see guidance below
+<sup>1,2,3,4</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 

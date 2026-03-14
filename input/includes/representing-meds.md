@@ -1,4 +1,4 @@
-* \*This Profile can represent a medication using a code or reference a [Medication] resource.
+* <sup>1</sup> This Profile can represent a medication using a code or reference a [Medication] resource.
     *  The Server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
     *  The Client application **SHALL** support all methods.
     *  When using a code, RXNorm concepts are used. They are defined as an [extensible] binding to `.medicationCodeableConcept`. USCDI recommends the [National Drug Codes (NDC)] as an *optional* terminology. They can be supplied as an additional coding element.

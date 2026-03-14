@@ -41,7 +41,4 @@ This section provides detailed implementation guidance for the US Core Profile t
 * As an alternative to the US Core CarePlan, Assessment and Plan of Treatment may be included in various types of [Clinical Notes], such as Progress Notes, History & Physical (H&P), Discharge Summaries, etc.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
-<!-- add this guidance if keeping assess-plan category -->
-<!-- -  Systems that always populate category = "AssessPlan" and always include CarePlan.addresses will consistently meet the USCDI data element requirements for both Care Plan and Assessment and Plan.</span>new-content -->
-
 {% include link-list.md %}

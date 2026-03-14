@@ -17,15 +17,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a status
 1. an intent code
-1. a medication*
+1. a medication<sup>1</sup>
 1. a patient
 
 **Each MedicationRequest Must Support:**
 
 1. the category  (e.g., Discharge Medication)
-2. the `reported` flag  or reference signaling that information is from a secondary source such as a patient†
+2. the `reported` flag  or reference signaling that information is from a secondary source such as a patient<sup>2</sup>
 3. the encounters
-4. a prescriber‡
+4. a prescriber<sup>3</sup>
 5. a date for when written
 6. free text dosage instructions (the *SIG*)
 7. when medication should be administered
@@ -35,10 +35,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="MedicationRequest" plural="true" %}
 
-1. the reason or indication for the prescription<sup>§</sup>
-2. reported adherence to prescribed medication instructions<sup>¶</sup>
+1. the reason or indication for the prescription<sup>4</sup>
+2. reported adherence to prescribed medication instructions<sup>5</sup>
 
-\*†‡<sup>§</sup><sup>¶</sup> see guidance below
+<sup>1,2,3,4,5</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -49,16 +49,16 @@ This section provides detailed implementation guidance for the US Core Profile t
   - When recording "self-prescribed" medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.
 
 {% include representing-meds.md %}
-{% include provenance-author-bullet-generator.md footnote-symbol='†‡' %}
-- †The MedicationRequest resource can represent that information is from a secondary source using either the flag `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`.
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
+- <sup>2</sup>The MedicationRequest resource can represent that information is from a secondary source using either the flag `MedicationRequest.reportedBoolean` or a reference using `MedicationRequest.reportedReference`.
    -  Although both are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.
    -  The Client application **SHALL** support both elements.
-- <sup>§</sup>The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
+- <sup>4</sup>The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
     - Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Additional USCDI Requirements. The certifying Server system is not required to support both, but **SHALL** support at least one of these elements. The certifying Client application **SHALL** support both elements.
        - when using  `MedicationRequest.reasonReference`:
          - Servers **SHALL** support *at least one* target resource in `MedicationRequest.reasonReference`. Clients SHALL support all target resources in `MedicationRequest.reasonReference`.
          - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].
 - Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps Client applications identify duplicates.
-- <sup>¶</sup>This profile uses the [US Core Medication Adherence Extension] to report medication adherence. This extension communicates whether a medication has been consumed according to instructions.
+- <sup>5</sup>This profile uses the [US Core Medication Adherence Extension] to report medication adherence. This extension communicates whether a medication has been consumed according to instructions.
 
 {% include link-list.md %}

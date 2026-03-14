@@ -19,12 +19,11 @@ The following are example usage scenarios for this profile:
 
 **Each QuestionnaireResponse Must Support:**
 
-<!-- 1. a tag to indicate context like SDOH -->
-1. a practitioner who recorded the answers*
-3. the questions and decimal, string, and coded answers
+1. a practitioner who recorded the answers<sup>1</sup>
+2. the questions and decimal, string, and coded answers
    - each question must have an identifier pointing to the question
 
-*see guidance below
+<sup>1</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -36,6 +35,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 - See the [Screening and Assessments] guidance page for how this profile or Observations can represent SDOH assessments.
 - QuestionnaireResponse can be searched using the standard FHIR RESTful API search parameters. Example searches are shown in the [Quick Start](#notes) section below. Although search [chains] through the associated Questionnaire can be used to query QuestionnaireResponse by item, individual responses are not directly searchable in QuestionnaireResponse. To search directly for individual responses, they must be "parsed" into a searchable form - i.e., to a local FHIR or non-FHIR data store such as a database or FHIR Observations.
 - The basic workflow for creating, discovering, retrieving, and data-extracting FHIR Questionnaire and QuestionnaireResponse is thoroughly documented in the [Structured Data Capture (SDC)] implementation guide.
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>1</sup>' %}
 
 {% include link-list.md %}

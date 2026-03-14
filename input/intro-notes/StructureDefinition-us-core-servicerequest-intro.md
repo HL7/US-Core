@@ -31,7 +31,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. <span class="bg-success" markdown="1">the name of the test, procedure, or service to be performed</span><!-- new-content -->
 1. a reason or indication for referral or consultation<sup>4</sup>
 
-<sup>1234</sup> see guidance below
+<sup>1,2,3,4</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 

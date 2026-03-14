@@ -16,7 +16,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a status
 2. a fixed code for care experience preference
 3. a patient
-  
+
 **Each Observation Must Support:**
 
 1. a category code of "care-experience-preference"
@@ -26,9 +26,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
-1. a performer*
+1. a performer<sup>1</sup>
 
-*see guidance below
+<sup>1</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -38,6 +38,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 {% include conditional-goals-guidance.md %}
 {% include additional-codings.md example1=', for example, the more specific LOINC, "81364-2 (Religious or cultural beliefs [Reported])"  '%}
   - See the existing [Care Experience Preferences at End of Life Grouping] for more specific concepts representing an individual's care experience preferences
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>1</sup>' %}
 
 {% include link-list.md %}

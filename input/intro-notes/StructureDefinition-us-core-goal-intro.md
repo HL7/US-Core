@@ -13,24 +13,24 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Goal Must Have:**
 
 1. a status
-1. description of the goal*
+1. description of the goal<sup>1</sup>
 1. a patient
 
 **Each Goal Must Support:**
 
-1. start date†
-2. target date(s)†
-3. who established the goal‡
+1. start date<sup>2</sup>
+2. target date(s)<sup>2</sup>
+3. who established the goal<sup>3</sup>
 
-\*†‡ see guidance below
+<sup>1,2,3</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
--  †Although both `Goal.startDate` and `Goal.target.dueDate` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements. The Client application **SHALL** support both elements.
-- *Goals are often captured as text and communicated in `Goal.description.text`. When the goal is a Social Determinants of Health (SDOH) goal, use the preferred [Social Determinants of Health Goals] binding.
+-  <sup>2</sup> Although both `Goal.startDate` and `Goal.target.dueDate` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements. The Client application **SHALL** support both elements.
+- <sup>1</sup> Goals are often captured as text and communicated in `Goal.description.text`. When the goal is a Social Determinants of Health (SDOH) goal, use the preferred [Social Determinants of Health Goals] binding.
 -  See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Goals
-{% include provenance-author-bullet-generator.md footnote-symbol='‡' %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
 
 {% include link-list.md %}

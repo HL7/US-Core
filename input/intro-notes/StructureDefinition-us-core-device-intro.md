@@ -18,13 +18,13 @@ In addition, the following data elements must be supported if the data is presen
 
 **Each Device Must Support:**
 
-1. a patient*
+1. a patient<sup>1</sup>
 
 
 
 {% include additional-requirements-intro.md type="Condition" plural="true" %}
 
-1. UDI Unique Device Identifier (UDI) Barcode string.†
+1. UDI Unique Device Identifier (UDI) Barcode string.<sup>2</sup>
    - Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode
    - The Device Identifier (UDI-DI)
 2. the manufacture date
@@ -35,7 +35,7 @@ In addition, the following data elements must be supported if the data is presen
 Identification Number(DIN))
 
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -49,7 +49,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 
 - <span class="bg-success" markdown="1">This profile follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern] guidelines for exchanging information about the use and implantation of medical devices in patients.</span><!-- new-content -->
-  - †A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) and a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs, there is *no expectation* at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc.). The UDI generally consists of a mandatory Device Identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. The UDI and its components are mapped to the US Core Device Profile elements in the table below:
+  - <sup>2</sup>A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) and a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs, there is *no expectation* at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc.). The UDI generally consists of a mandatory Device Identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. The UDI and its components are mapped to the US Core Device Profile elements in the table below:
 
     |UDI component|US Core Device Profile element|
     |---|---|

@@ -18,10 +18,10 @@ In addition to the Mandatory and Must Support data elements in the [US Core Vita
 **Each Observation Must Support:**
 
 1. a value for oxygen saturation
-2. a code for inspired oxygen concentration*
+2. a code for inspired oxygen concentration<sup>2</sup>
 3. a value for inspired oxygen concentration
 
-\*see guidance below
+<sup>2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -32,6 +32,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 - Inspired oxygen therapy may be represented with [component] observations when measured at the same time as the pulse oximetry measurements. They are expressed as inhaled oxygen flow rate (e.g., 6 liters/min) and inhaled oxygen concentration (e.g., 40% oxygen).
   - {:.stu-note}This profile is technically non-conformant with the base FHIR version 4.0.1 vitals profile which defines a *required* binding that excludes the concept for `L/min` for `Observation.component.value(x)`. This is a known issue and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. A change request to correct this has been applied to the base FHIR ver 4.3.0 ("Release 4B").
 - Many pulse oximetry readings are taken while the patient is breathing room air. The concept of "room air" (unmodified, ambient air) **SHOULD** be represented as an inhaled oxygen flow rate of 0 liters/min.
-- A pulse oximetry reading without inspired oxygen component observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component] observations **SHOULD** be used.
+- <sup>2</sup>A pulse oximetry reading without inspired oxygen component observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component] observations **SHOULD** be used.
 
 {% include link-list.md %}

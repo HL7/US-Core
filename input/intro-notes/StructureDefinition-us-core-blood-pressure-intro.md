@@ -19,8 +19,10 @@ The following are example usage scenarios for this profile:
 
 **Each Observation Must Support:**
 
-1. a result value for systolic blood pressure
-2. a result value for diastolic blood pressure
+1. a result value for systolic blood pressure<sup>1</sup>
+2. a result value for diastolic blood pressure<sup>1</sup>
+
+<sup>1</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 

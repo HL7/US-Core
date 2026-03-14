@@ -13,7 +13,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Coverage Must Have:**
 
-1. health insurance member identifier or subscriber id*
+1. health insurance member identifier or subscriber id<sup>1</sup>
 2. a status
 3. the health insurance beneficiary (patient)
 4. beneficiary's relationship to the subscriber
@@ -21,12 +21,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Coverage Must Support:**
 
-1. health insurance coverage type (e.g., Medicare)†
+1. health insurance coverage type (e.g., Medicare)<sup>2</sup>
 2. coverage start or end date
 3. health insurance group
 4. health insurance plan
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -36,10 +36,7 @@ This section provides detailed implementation guidance for the US Core Profile t
   - `Coverage.status` alone may not indicate whether an individual is covered. The `Coverage.period` needs to be considered as well. For example, the coverage may be expired with a status of "active", or conversely, it may be "canceled" but still have covered claims.
   - The absence of a Coverage resource instance may mean the patient has no coverage or the healthcare provider may not know it.
   - A `coverage.type` of "81" (Self-pay) **MAY** be used to imply that the patient has no coverage or that an individual or organization other than an insurer is taking responsibility for payment for a portion of the health care costs.
-
-
-
-- †The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.
+- <sup>2</sup>The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.
 
   - To differentiate between Medicare Parts A, B, C, and D systems can use the following codes.
 
@@ -51,6 +48,6 @@ This section provides detailed implementation guidance for the US Core Profile t
     {: .grid}
 
 
-- *If Insurers issue unique member IDs for dependents, then the memberId in `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
+- <sup>1</sup>If Insurers issue unique member IDs for dependents, then the memberId in `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
 
 {% include link-list.md %}

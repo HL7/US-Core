@@ -16,31 +16,31 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a category code of 'LAB'
 1. a code (preferably a LOINC code) which tells you what is being measured
 1. a patient
-1. the diagnostically relevant time (known as the "effective time" and typically the time of specimen collection)*
-1. when the report was released*
+1. the diagnostically relevant time (known as the "effective time" and typically the time of specimen collection)<sup>1</sup>
+1. when the report was released<sup>1</sup>
 
 **Each DiagnosticReport Must Support:**
 
-1. a timestamp when the resource last changed†
+1. a timestamp when the resource last changed<sup>2</sup>
 2. encounter associated with DiagnosticReport
-3. who issues the report‡
-4. a results interpreter‡
+3. who issues the report<sup>3</sup>
+4. a results interpreter<sup>3</sup>
 5. a result
 
-\*†‡ see guidance below
+<sup>1,2,3</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- \*`DiagnosticReport.effective[x]` and `DiagnosticReport.issued` have the following constraints: **SHALL** be present if status is 'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.
+- <sup>1</sup>`DiagnosticReport.effective[x]` and `DiagnosticReport.issued` have the following constraints: **SHALL** be present if status is 'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.
 - The [CLIA/USCDI/HL7 Elements Crossmapping Table] provides a crosswalk of [Clinical Laboratory Improvement Amendments (CLIA)] data elements to corresponding FHIR fields, terminology standards, and naming conventions used in HL7 CDA and HL7 V2 standards. Implementers can use this mapping to help comply with CLIA requirements when using the US Core Laboratory Result Observation Profile.
 - Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed. For example:
    -  providing both a local system code and a LOINC code that it maps to
    -  providing a more specific category code to the "LAB" category code, such as "CH" (chemistry), in an additional coding element.
-{% include provenance-author-bullet-generator.md footnote-symbol='‡' %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
 - Results that are free text or report form are represented using the `DiagnosticReport.presentedForm` element.
-- †See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
+- <sup>2</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New laboratory reports
   - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).
 - The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.

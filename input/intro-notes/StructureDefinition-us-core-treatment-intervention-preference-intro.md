@@ -21,15 +21,14 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a category code of "treatment-intervention-preference"
 2. a time indicating when the preference was made
-<!-- 3. who reported the preference -->
-1. treatment intervention preference value
+3. treatment intervention preference value
 
 {% include additional-requirements-intro.md type="Observation" plural="false" %}
 
-1. a performer*
+1. a performer<sup>1</sup>
 
-*see guidance below
-  
+<sup>1</sup> see guidance below
+
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
@@ -38,6 +37,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 {% include conditional-goals-guidance.md %}
 {% include additional-codings.md example1=', for example, the more specific LOINC, "75779-9 (Thoughts on cardiopulmonary resuscitation (CPR) [Reported])"  '%}
   - See the existing [Intervention Preferences at End of Life Grouping] for more specific concepts representing an individual's treatment intervention preferences
-{% include provenance-author-bullet-generator.md %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>1</sup>' %}
 
 {% include link-list.md %}

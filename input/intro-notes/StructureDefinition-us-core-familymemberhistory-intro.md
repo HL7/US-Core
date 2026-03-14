@@ -19,22 +19,22 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each FamilyMemberHistory Must Support:**
 
-1. 	a condition that the related person had*
+1. 	a condition that the related person had<sup>1</sup>
 
 {% include additional-requirements-intro.md type="FamilyMemberHistory" plural="false" %}
 
-1. a recorder†
+1. a recorder<sup>2</sup>
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- \*USCDI's applicable vocabulary standards for Family Health History are SNOMED CT and ICD-10-CM.
+- <sup>1</sup> USCDI's applicable vocabulary standards for Family Health History are SNOMED CT and ICD-10-CM.
     - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.
     - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only.
-{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
 <div class="note-to-balloters" markdown="1">
 The [US Core FamilyMemberHistory Recorder Extension] is used to record the individual provenance. It will be replaced by the FHIR R6 [Cross Version Extension] when FHIR R6 is published.

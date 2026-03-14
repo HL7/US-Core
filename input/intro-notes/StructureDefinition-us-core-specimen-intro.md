@@ -11,29 +11,29 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Specimen Must Have:**
 
-1. a specimen type code*
+1. a specimen type code<sup>1</sup>
 
   **Each Specimen Must Support:**
 
-1. business identifier(s)†
-2. an accession identifier†
+1. business identifier(s)<sup>2</sup>
+2. an accession identifier<sup>2</sup>
 3. a patient
 
 {% include additional-requirements-intro.md type="Specimen" plural="true" %}
 
 1. specimen collection source site
-2. specimen condition‡
+2. specimen condition<sup>3</sup>
 
-\*†‡ see guidance below
+<sup>1,2,3</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- *Since the binding is [extensible] when a code is unavailable, just text is allowed.
-- †Although both `Specimen.identifier` and `Specimen.accessionIdentifier` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.
+- <sup>1</sup>Since the binding is [extensible] when a code is unavailable, just text is allowed.
+- <sup>1</sup>Although both `Specimen.identifier` and `Specimen.accessionIdentifier` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.
     - The Client application **SHALL** support both elements.
-- ‡The specimen condition is used by the laboratory to determine the acceptability of a specimen for the ordered test. An individual specimen condition may be acceptable for one test and not for another. The specimen condition is typically provided when the specimen does not meet the laboratory's criteria for acceptability, whether the test was performed or not. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient names. This element may include information about the contents of the container, the container, and the label.
+- <sup>3</sup>The specimen condition is used by the laboratory to determine the acceptability of a specimen for the ordered test. An individual specimen condition may be acceptable for one test and not for another. The specimen condition is typically provided when the specimen does not meet the laboratory's criteria for acceptability, whether the test was performed or not. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient names. This element may include information about the contents of the container, the container, and the label.
 - in addition to Specimen search criteria, Clients may request Specimen resources be included with the Observation or DiagnosticReport resource query. An example query is provided in the [Notes](#notes) section below.
 
 {% include link-list.md %}

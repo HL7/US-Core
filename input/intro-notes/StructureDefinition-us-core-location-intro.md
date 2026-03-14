@@ -16,7 +16,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 5. A Location address<sup>2</sup>
 6. The managing organization
 
-\<sup>12</sup> see guidance below
+\<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -28,7 +28,6 @@ This section provides detailed implementation guidance for the US Core Profile t
    - <span class="bg-success" markdown="1">The Service Delivery Location Role Type value set is inherited from the base resource, and, although its binding strength is [extensible] in the base resource, US Core implementers may treat it as [preferred].</span><!-- new-content -->
    - <span class="bg-success" markdown="1">Healthcare Service Location Codes (HSLOC) and SNOMED-CT Healthcare Facility Type value sets meet the USCDI applicable vocabulary standard for the Encounter Location Data Element. Implementers can use a code from either vocabulary.</span><!-- new-content -->
    - <span class="bg-success" markdown="1">The CMS Place of Service (POS) value set meets the Health Insurance Portability and Accountability Act of 1996 (HIPAA) requirements for billing and Payers.</span><!-- new-content -->
-- <sup>2</sup>{% include should-project-us.md type="Location" %}
 - <sup>2</sup>{% include should-3166-subdivision-codes.md type="Location" %}
 
 {% include link-list.md %}

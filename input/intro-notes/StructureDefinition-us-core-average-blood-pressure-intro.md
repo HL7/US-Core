@@ -23,12 +23,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Observation Must Support:**
 
-1. a performer*
+1. a performer<sup>1</sup>
 3. a result value for the average systolic blood pressure
 4. a result value for the average diastolic blood pressure
-5. a reason if the value is absent†
+5. a reason if the value is absent<sup>2</sup>
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -40,8 +40,8 @@ This section provides detailed implementation guidance for the US Core Profile t
    -  providing more specific codes
 
   a code system value **SHOULD** be supplied for each additional code.
-{% include provenance-author-bullet-generator.md %}
-- †Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>1</sup>' %}
+- <sup>2</sup>Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
   - the `Observation.value[x]` element **SHALL** be omitted
   - An Observation without a systolic or diastolic result value **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
   - *All Server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.

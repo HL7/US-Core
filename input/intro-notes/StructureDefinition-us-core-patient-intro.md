@@ -22,31 +22,31 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Patient Must Support:**
 
 1. a birth date
-2. an address*
+2. an address<sup>1</sup>
 
 {% include additional-requirements-intro.md type="Patient" plural="true" %}
 
 1. contact detail (e.g., a telephone number or an email address)
-2. a communication language†
-3. Interpreter Needed flag†
-4. a race†
-5. an ethnicity†
+2. a communication language<sup>2</sup>
+3. Interpreter Needed flag<sup>2</sup>
+4. a race<sup>2</sup>
+5. an ethnicity<sup>2</sup>
 6. a tribal affiliation
-7. sex‡
-8. date of death†
-9. address use†
-10. address period†
-11. name use†
-12. name period†
-13. suffix†
+7. sex<sup>3</sup>
+8. date of death<sup>2</sup>
+9. address use<sup>2</sup>
+10. address period<sup>2</sup>
+11. name use<sup>2</sup>
+12. name period<sup>2</sup>
+13. suffix<sup>2</sup>
 
-\*†‡ see guidance below
+<sup>1,2,3</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- †Notes for *Race*, *Ethnicity*, *Date of Death*, *Name to Use*, *Previous Name*, *Suffix*, *Previous Address*, *Interpreter Needed*, and *Preferred Language* USCDI Data Elements:
+- <sup>2</sup>Notes for *Race*, *Ethnicity*, *Date of Death*, *Name to Use*, *Previous Name*, *Suffix*, *Previous Address*, *Interpreter Needed*, and *Preferred Language* USCDI Data Elements:
   - The Complex Extensions for Race and Ethnicity allow for one or more codes of which: [Must Support] at least one category code from the OMB Race and Ethnicity Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)] code system.
     - **MAY** include additional codes from the detailed ethnicity and detailed race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)] code system
     - **SHALL** include a text description
@@ -58,11 +58,11 @@ This section provides detailed implementation guidance for the US Core Profile t
   - Servers can use the [US Core Interpreter Needed Extension] on this profile or the [US Core Encounter Profile] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.
      - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.
   - The [Patient example] demonstrates how these elements are represented
-- *The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** enable the user who enters the address to follow it as the standard style guide for Patient addresses.
+- <sup>1</sup>The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** enable the user who enters the address to follow it as the standard style guide for Patient addresses.
    - Consult the style guide for details about the format for the Address datatypes elements, especially `Patient.address.line` and `Patient.address.city`.
    - Note: historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.
-- *{% include should-3166-subdivision-codes.md type="Patient" %}
-- *The [US Core Individual Sex Extension] represents the [U.S. Core Data for Interoperability (USCDI)] data element "Sex". Refer to the FHIR R5 [Patient] Resource for other interoperability considerations with regards to patient sex
+- <sup>1</sup>{% include should-3166-subdivision-codes.md type="Patient" %}
+- <sup>3</sup>The [US Core Individual Sex Extension] represents the [U.S. Core Data for Interoperability (USCDI)] data element "Sex". Refer to the FHIR R5 [Patient] Resource for other interoperability considerations with regards to patient sex
 - [Provenance] and the FHIR Extension [Target Element] can document how individual patient demographic data was captured. See [Element Level Provenance] on the [Basic Provenance] page for more information.
 - The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over using Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have purged them from their systems and filtered them out of incoming data.
 

@@ -16,9 +16,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Organization Must Support:**
 
-1. An identifier*
+1. An identifier<sup>1</sup>
 1. A list of contact information
-1. An address†
+1. An address<sup>2</sup>
 
 \*† see guidance below
 
@@ -26,9 +26,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- *Systems **SHALL** support National Provider Identifier (NPI) for organizations
+- <sup>1</sup>Systems **SHALL** support National Provider Identifier (NPI) for organizations
   and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories and the National Association of Insurance Commissioners NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.
-- †{% include should-project-us.md type="Organization" %}
-- †{% include should-3166-subdivision-codes.md type="Organization" %}
+- <sup>2</sup>{% include should-3166-subdivision-codes.md type="Organization" %}
 
 {% include link-list.md %}

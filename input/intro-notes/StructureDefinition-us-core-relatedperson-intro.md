@@ -21,15 +21,14 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. the relationship to the patient
 2. the name of the related person
 3. the telecom of the related person
-4. the address of the related person*
+4. the address of the related person<sup>1</sup>
 
-*see guidance below
+ <sup>1</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- *{% include should-project-us.md type="RelatedPerson" %}
-- *{% include should-3166-subdivision-codes.md type="RelatedPerson" %}
+- <sup>1</sup>{% include should-3166-subdivision-codes.md type="RelatedPerson" %}
 
 {% include link-list.md %}

@@ -15,19 +15,19 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a status
 1. a category code of "social-history"
-1. a code for smoking observation*
+1. a code for smoking observation<sup>1</sup>
 1. a patient
 1. when the observation occurred
-3. a performer†
-3. a result value*
+3. a performer<sup>2</sup>
+3. a result value<sup>1</sup>
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- *The *Smoking Status Type* Value Set on `Observation.code` is a "starter" set of concepts to capture smoking status, and the *Smoking Status Comprehensive* Value Set for `Observation.valueCodeableConcept` contains terms representing nicotine, smoking, vaping, chew, and snuff use to encourage the use of this profile for other smoking and nicotine questions.
-{% include provenance-author-bullet-generator.md footnote-symbol='†' %}
+- <sup>1</sup>The *Smoking Status Type* Value Set on `Observation.code` is a "starter" set of concepts to capture smoking status, and the *Smoking Status Comprehensive* Value Set for `Observation.valueCodeableConcept` contains terms representing nicotine, smoking, vaping, chew, and snuff use to encourage the use of this profile for other smoking and nicotine questions.
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
 {% include link-list.md %}
