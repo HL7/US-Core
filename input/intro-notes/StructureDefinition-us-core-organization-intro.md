@@ -20,7 +20,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. A list of contact information
 1. An address<sup>2</sup>
 
-\*† see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 

@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "AUDIT-C-item-example-68517-2",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Audit-C Item Example 68517-2"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Audit-C Item Example 68517-2 (How many times in the past year have you have X or more drinks in a day?) for the *US Core Observation Screening Assessment Profile*"
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
     ]
   },
   "status": "final",

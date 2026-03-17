@@ -37,19 +37,20 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - See [Clinical Notes]
-- <sup>2</sup>`DiagnosticReport.effective[x]` has the following constraint: **SHALL** be present if status is 'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.
-- <sup>1</sup>The `DiagnosticReport.category` binding Must Support, at a minimum, the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.
-  - It is up to the data source to categorize the documents they send. Therefore, Clients need to understand that data categorization is somewhat subjective, and the categorization applied by the source may not align with the Client's expectations. Any linkages between specific LOINC codes and the LP-type codes may be used as guidance. If LOINC develops a hierarchy or categorization to align these concepts, US Core will be updated.
+- <sup>2</sup>`DiagnosticReport.effective[x]` has the following constraint: **SHALL** be present if status is 'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.<sup>[§][CONF-0356]</sup>
+- <sup>1</sup>The `DiagnosticReport.category` binding Must Support, at a minimum, the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology.<sup>[§][CONF-0360]</sup> Other categories may be supported.<sup>[§][CONF-0361]</sup>
+  - It is up to the data source to categorize the documents they send. Therefore, Clients need to understand that data categorization is somewhat subjective, and the categorization applied by the source may not align with the Client's expectations. Any linkages between specific LOINC codes and the LP-type codes may be used as guidance.<sup>[§][CONF-0362]</sup> If LOINC develops a hierarchy or categorization to align these concepts, US Core will be updated.
 - A Server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g., a system may categorize an orthopedic note as cardiology.)
-- For Diagnostic Imaging Reports systems **SHOULD** support using the subset of  LOINC codes defined in CONF-DIR-19 in *HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) - Universal Realm, Release 1.0.
+- <span class="bg-success" markdown="1">For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes listed Table 4: LOINC® Document Type Codes in [HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1]<sup>[§][CONF-0364]</sup></span><!-- new-content -->
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access to the images.
 
-   * The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).
-   * The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view DICOM (Digital Imaging and Communications in Medicine) studies, series, and SOP (Service-Object Pair) instances referenced in the [ImagingStudy] resource.
+   * The `DiagnosticReport.media.link` element **SHOULD** be used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).<sup>[§][CONF-0837]</sup>
+   * The `DiagnosticReport.imagingStudy` element **SHOULD** be used to support exchange with systems that can view DICOM (Digital Imaging and Communications in Medicine) studies, series, and SOP (Service-Object Pair) instances referenced in the [ImagingStudy] resource.<sup>[§][CONF-0838]</sup>
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifier` element to access the source images from external sources.
    * The [Argonaut SMART Imaging Access project](https://confluence.hl7.org/spaces/AP/pages/161060067/SMART+Imaging+Access) defined an approach to access imaging studies using a single authorization flow.
 
-- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.
+- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.<sup>[§][CONF-0836]</sup>
+
 
 {% include link-list.md %}

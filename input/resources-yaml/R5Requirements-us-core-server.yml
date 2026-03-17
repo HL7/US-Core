@@ -3,7 +3,7 @@ id: us-core-server
 url: http://hl7.org/fhir/us/core/Requirements/us-core-server
 name: USCoreServerRequirements
 title: US Core Server Requirements
-description: This [Requirements]](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification.
+description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification.
 _actor:
   - extension:
       - url: http://hl7.org/fhir/StructureDefinition/display
@@ -1036,77 +1036,77 @@ statement:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category&contextDirection=outgoing for DiagnosticReport report category discovery [for read operations]
   - key: CONF-0235
     conformance:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category&contextDirection=incoming for DiagnosticReport report category discovery [for write operations]
   - key: CONF-0236
     conformance:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code&contextDirection=outgoing for DiagnosticReport report type discovery [for read operations]
   - key: CONF-0237
     conformance:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code&contextDirection=incoming for DiagnosticReport report type discovery [for write operations]
   - key: CONF-0238
     conformance:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category&contextDirection=outgoing for DocumentReference note category discovery [for read operations]
   - key: CONF-0239
     conformance:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category&contextDirection=incoming for DocumentReference note category discovery [for write operations]
   - key: CONF-0240
     conformance:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type&contextDirection=outgoing for DocumentReference note type discovery [for read operations]
   - key: CONF-0241
     conformance:
       - SHOULD
     conditionality: true
     requirement: |-
-      [If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation for discovering note and report types, then Servers **SHALL** support] the #expand operation as follows:
       GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type&contextDirection=incoming for DocumentReference note type discovery [for write operations]
   - key: CONF-0242
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=outgoing for DiagnosticReport report content type discovery [for read operations]"
+    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=outgoing for DiagnosticReport report content type discovery [for read operations]"
   - key: CONF-0243
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=incoming for DiagnosticReport report content type discovery [for write operations]"
+    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=incoming for DiagnosticReport report content type discovery [for write operations]"
   - key: CONF-0244
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing for DocumentReference note content type discovery [for read operations]"
+    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing for DocumentReference note content type discovery [for read operations]"
   - key: CONF-0245
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand] (http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming for DocumentReference note content type discovery [for write operations]"
+    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming for DocumentReference note content type discovery [for write operations]"
   - key: CONF-0246
     conformance:
       - MAY
@@ -1420,10 +1420,6 @@ statement:
       - SHOULD
     conditionality: true
     requirement: If Insurers issue unique member IDs for dependents, then the memberId Coverage.identifier should be used [with the unique dependent ID] instead of Coverage.dependent to uniquely refer to the dependent with respect to their insurance.
-  - key: CONF-0340
-    conformance:
-      - SHOULD
-    requirement: For non-implantable devices (for example, software or crutches), use the base FHIR Device resource or other use case-specific Device profiles.
   - key: CONF-0341
     conformance:
       - SHOULD
@@ -1431,11 +1427,11 @@ statement:
   - key: CONF-0342
     conformance:
       - SHALL
-    requirement: Implantable medical devices with UDI information **SHALL** represent the UDI code in Device.udiCarrier.carrierHRF
+    requirement: Medical devices with UDI information **SHALL** represent the UDI code in Device.udiCarrier.carrierHRF
   - key: CONF-0343
     conformance:
       - SHALL
-    requirement: UDI-PI elements present [in Device.udiCarrier.carrierHRF] **SHALL** be  represented in the corresponding US Core Implantable Device Profile elements
+    requirement: UDI-PI elements present [in Device.udiCarrier.carrierHRF] **SHALL** be  represented in the corresponding US Core Device Profile elements
   - key: CONF-0344
     conformance:
       - SHOULD
@@ -1446,10 +1442,6 @@ statement:
       - SHOULD
     conditionality: true
     requirement: If UDI is not present and the ... model number information is available, … [it] **SHOULD** be included to support historical reports of implantable medical devices [where] model [is sent in] Device.model
-  - key: CONF-0346
-    conformance:
-      - SHOULD
-    requirement: Servers SHOULD support query by Device.type to allow Clients to request the patient’s devices by a specific type.
   - key: CONF-0347
     conformance:
       - MAY
@@ -1520,7 +1512,7 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: 'For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes defined in CONF-DIR-19 in HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) - Universal Realm, Release 1.0.'
+    requirement: 'For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes listed Table 4: LOINC® Document Type Codes in *HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1*'
   - key: CONF-0365
     conformance:
       - SHALL
@@ -1568,7 +1560,7 @@ statement:
     requirement: Although … marked as Must Support, Servers are not required to support both Encounter.location.location and Encounter.serviceProvider, but they **SHALL** support at least one of these elements.
   - key: CONF-0382
     conformance:
-      - SHALL
+      - SHOULD
     conditionality: true
     requirement: If the event facility/location differs from the Encounter.location, systems **SHOULD** reference it directly
   - key: CONF-0383
@@ -1598,15 +1590,6 @@ statement:
     conformance:
       - SHALL
     requirement: '[Servers shall] use the status code: not-done to represent that an immunization was not given.'
-  - key: CONF-0391
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organization participating in the ONC Health IT Certification program] [CVX vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) are required'
-  - key: CONF-0392
-    conformance:
-      - SHOULD
-    requirement: '[NDC vaccine codes](http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) **SHOULD** be supported as an additional code [of [CVX Vaccine Codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp)]'
   - key: CONF-0393
     conformance:
       - SHOULD
@@ -1615,14 +1598,6 @@ statement:
     conformance:
       - SHOULD
     requirement: The preferred code system identifier … is [http://hl7.org/fhir/sid/ndc](http://hl7.org/fhir/sid/ndc) for NDC vaccine codes]
-  - key: CONF-0395
-    conformance:
-      - SHOULD
-    requirement: Systems **SHOULD** follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Location.address.line
-  - key: CONF-0396
-    conformance:
-      - SHOULD
-    requirement: Systems **SHOULD** follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Location.address.city
   - key: CONF-0397
     conformance:
       - SHALL
@@ -1632,7 +1607,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: When using a code [to represent a medication for a medication dispense], [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory) can be supplied as an additional coding element.
+    requirement: When using a code [to represent a medication for a medication dispense], USCDI recommends the [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)  as an *optional* terminology. They can be supplied as an additional coding element.
   - key: CONF-0399
     conformance:
       - MAY
@@ -1651,16 +1626,6 @@ statement:
       - SHALL
     conditionality: true
     requirement: If an external reference to a Medication resource is used, the Server **SHALL** support the [_include](http://hl7.org/fhir/R4/search.html#include) parameter for searching this element.
-  - key: CONF-0405
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organization participating in the ONC Health IT Certification program Servers **SHALL** support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):], The reason or indication for the prescription'
-  - key: CONF-0406
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organization participating in the ONC Health IT Certification program Servers **SHALL** support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):] reported adherence to prescribed medication instructions'
   - key: CONF-0407
     conformance:
       - SHOULD
@@ -1670,16 +1635,6 @@ statement:
       - SHALL
     conditionality: true
     requirement: Although [medicationRequest.reportedBoolean and MedicationRequest.reportedReference] are both marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements
-  - key: CONF-0411
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: Although both MedicationRequest.reasonCode and MedicationRequest.reasonReference are marked as Additional USCDI Requirements [which are required for organizations participating in the ONC Health IT Certification program]. The certifying Server system is not required to support both, but **SHALL** support at least one of these elements
-  - key: CONF-0414
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program and supporting MedicationRequest.reasonReference,] Servers **SHALL** support at least one target resource in MedicationRequest.reasonReference'
   - key: CONF-0416
     conformance:
       - SHOULD
@@ -1782,17 +1737,12 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: A practitioner’s clinical observation or assertion about a patient’s health status, which is not a response to a screening or assessment question,SHOULD use the [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-simple-observation.html) instead [of the US Core Observation Screening Assessment Profile]
+    requirement: A practitioner’s clinical observation or assertion about a patient’s health status, which is not a response to a screening or assessment question, **SHOULD** use the [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-simple-observation.html) instead [of the US Core Observation Screening Assessment Profile]
   - key: CONF-0439
     conformance:
       - SHALL
     conditionality: true
     requirement: the Server system ... **SHALL** support [either] Reference(US Core Observation Screening Assessment Profile) or Reference(US Core QuestionnaireResponse Profile) for Observation.derivedFrom
-  - key: CONF-0440
-    conformance:
-      - MAY
-    conditionality: true
-    requirement: Additional codes that translate or map to the Observation code (e.g., local codes) are allowed [when using US Core Observation Sexual Orientation Profile]
   - key: CONF-0441
     conformance:
       - SHOULD
@@ -1805,11 +1755,6 @@ statement:
     conformance:
       - SHOULD
     requirement: When using `Observation.derivedFrom’ to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation
-  - key: CONF-0444
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: Although none of the Observation.derivedFrom [references are flagged as Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html#must-support---resource-references), the Server **SHALL** support at least one of them
   - key: CONF-0445
     conformance:
       - MAY
@@ -1870,10 +1815,6 @@ statement:
     conformance:
       - SHOULD
     requirement: Systems … **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories
-  - key: CONF-0458
-    conformance:
-      - SHOULD
-    requirement: Systems **SHOULD** follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Organization.address.line and Organization.address.city
   - key: CONF-0459
     conformance:
       - SHALL
@@ -1946,10 +1887,6 @@ statement:
     conformance:
       - SHOULD
     requirement: Only professional/work contact information about the practitioner **SHOULD** be available to the patient
-  - key: CONF-0478
-    conformance:
-      - SHOULD
-    requirement: Systems **SHOULD** follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Practitioner.address.line and Practitioner.address.city.
   - key: CONF-0479
     conformance:
       - MAY
@@ -2069,10 +2006,6 @@ statement:
       - MAY
     conditionality: true
     requirement: If a system receives a provider in Provenance.agent.who as free text, … [upon request they] **MAY**  include the free text provider.
-  - key: CONF-0510
-    conformance:
-      - SHOULD
-    requirement: Systems that need to know the activity has occurred **SHOULD** populate the activity [Provenance.activity]
   - key: CONF-0511
     conformance:
       - SHALL
@@ -2083,10 +2016,6 @@ statement:
       - MAY
     conditionality: true
     requirement: If the QuestionnaireResponse is based on a non-FHIR form [then a] … FHIR Questionnaire's questions may be omitted
-  - key: CONF-0513
-    conformance:
-      - SHOULD
-    requirement: Systems **SHOULD** follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for RelatedPerson.address.line and RelatedPerson.address.city
   - key: CONF-0514
     conformance:
       - MAY
@@ -2489,3 +2418,7 @@ statement:
     conformance:
       - SHOULD
     requirement: The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled Must Support or Additional USCDI Requirements. However,[even if they are not   labeled Must Support or Additional USCDI Requirements] all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.
+  - key: CONF-0887
+    conformance:
+      - SHALL
+    requirement: Although 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but **SHALL** support at least one.

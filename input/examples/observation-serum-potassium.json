@@ -2,9 +2,19 @@
   "resourceType": "Observation",
   "id": "serum-potassium",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Serum Potassium Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a serum potassium example for the *US Core Observation Lab Profile*."
+      }
+    ],
     "lastUpdated": "2005-07-05T15:29:58.597000+00:00",
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
     ]
   },
   "status": "final",

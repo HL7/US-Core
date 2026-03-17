@@ -28,7 +28,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
--  <sup>2</sup> Although both `Goal.startDate` and `Goal.target.dueDate` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements. The Client application **SHALL** support both elements.
+-  <sup>2</sup> Although both `Goal.startDate` and `Goal.target.dueDate` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0387]</sup> The Client application **SHALL** support both elements.<sup>[§][CONF-0388],[§][CONF-0389]</sup>
 - <sup>1</sup> Goals are often captured as text and communicated in `Goal.description.text`. When the goal is a Social Determinants of Health (SDOH) goal, use the preferred [Social Determinants of Health Goals] binding.
 -  See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Goals
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}

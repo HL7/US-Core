@@ -102,6 +102,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 64. **Applied:**  Non-substantive (Correction) Remove Surgical Operation Note (11504-8) from recommended list [FHIR-55956](https://jira.hl7.org/browse/FHIR-55956) See Changes [Here](clinical-notes.html#clinical-notes)
 65. **Applied:**  Non-substantive (Correction) Update the ImplementationGuide.description [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](ImplementationGuide-hl7.fhir.us.core.html)
 66. **Applied:**  Non-substantive (Enhancement)Update US Core Provenance guidance to indicate other information that can be tracked. [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](StructureDefinition-us-core-provenance.html#profile-specific-implementation-guidance)
+67. **Applied:**  Non-substantive (Correction) Update reference to CDA Table [FHIR-56094](https://jira.hl7.org/browse/FHIR-56094) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>

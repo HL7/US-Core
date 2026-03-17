@@ -37,8 +37,8 @@ This section provides detailed implementation guidance for the US Core Profile t
 - The observations **MAY** have [component] observations. For example, to qualify the vital sign observation, 8310-5 - *Body temperature*, 8327-9 - *Body temperature measurement site* (oral, forehead, rectal, etc.) may be used as a component observation. Several of these are provided in the FHIR core specification [vital signs table].
 - Implementers may use this profile as a base for other vital signs in addition to those in this guide.
 - Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
-  - the `Observation.value[x]` element **SHOULD** be omitted
-  - an Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
-  - *All Server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
+  - the `Observation.value[x]` element **SHOULD** be omitted.<sup>[§][CONF-0449]</sup>
+  - an Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`.<sup>[§][CONF-0450]</sup>
+  - *All Server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.<sup>[§][CONF-0451]</sup>
 
 {% include link-list.md %}

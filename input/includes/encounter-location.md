@@ -6,6 +6,6 @@
     - [US Core Procedure Profile]
     - [US Core ServiceRequest Profile]
 
-  If the event facility/location differs from the `Encounter.location`, systems **SHOULD** reference it directly:
-    - Systems **SHALL** use the `location` element for all resources where the element is available.
-    - Systems **MAY** use the standard [Event Location Extension] for US Core DiagnosticReport Profile for Laboratory Results Reporting and US Core Observation Clinical Result Profile.
+  If the event facility/location differs from the `Encounter.location`, systems **SHOULD** reference it directly:<sup>[§][CONF-0382]</sup>
+    - Systems **SHALL** use the `location` element for all resources where the element is available.<sup>[§][CONF-0383]</sup>
+    - Systems **MAY** use the standard [Event Location Extension] for US Core DiagnosticReport Profile for Laboratory Results Reporting and US Core Observation Clinical Result Profile.<sup>[§][CONF-0384]</sup>

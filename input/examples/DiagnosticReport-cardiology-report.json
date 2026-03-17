@@ -3,7 +3,17 @@
   "id": "cardiology-report",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "DiagnosticReport Cardiology Report Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a DiagnosticReport cardiology report example for the *US Core DiagnosticReport Note Profile*."
+      }
     ]
   },
   "status": "final",

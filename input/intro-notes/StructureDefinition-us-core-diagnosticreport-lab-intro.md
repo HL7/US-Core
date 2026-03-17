@@ -33,7 +33,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- <sup>1</sup>`DiagnosticReport.effective[x]` and `DiagnosticReport.issued` have the following constraints: **SHALL** be present if status is 'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.
+- <sup>1</sup>`DiagnosticReport.effective[x]` and `DiagnosticReport.issued` have the following constraints: **SHALL** be present if status is 'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.<sup>[§][CONF-0356],[§][CONF-0357]</sup>
 - The [CLIA/USCDI/HL7 Elements Crossmapping Table] provides a crosswalk of [Clinical Laboratory Improvement Amendments (CLIA)] data elements to corresponding FHIR fields, terminology standards, and naming conventions used in HL7 CDA and HL7 V2 standards. Implementers can use this mapping to help comply with CLIA requirements when using the US Core Laboratory Result Observation Profile.
 - Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed. For example:
    -  providing both a local system code and a LOINC code that it maps to
@@ -41,8 +41,8 @@ This section provides detailed implementation guidance for the US Core Profile t
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
 - Results that are free text or report form are represented using the `DiagnosticReport.presentedForm` element.
 - <sup>2</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
-  - New laboratory reports
-  - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).
-- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.
+  - New laboratory reports<sup>[§][CONF-0358]</sup>
+  - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).<sup>[§][CONF-0359]</sup>
+- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.<sup>[§][CONF-0836]</sup>
 
 {% include link-list.md %}

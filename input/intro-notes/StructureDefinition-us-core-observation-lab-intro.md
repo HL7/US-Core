@@ -42,7 +42,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 - <sup>2</sup> This profile inherits the invariant "us-core-3" from the US Core Observation Clinical Result Profile that requires UCUM to be used as a unit type for `Observation.valueQuantity.code`.
 - <sup>3</sup>Even when the specimen type is already implied by the LOINC code used in `Observation.code` (e.g., a LOINC code for Blood Glucose), the `Observation.specimen` element **SHOULD** also be populated with the referenced Specimen resource to explicitly communicate the collected specimen type. The type of specimen **SHOULD** not conflict with the LOINC code.
 - <sup>1</sup> See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
-  - New laboratory observations
-  - Changes in the status of laboratory observations, including events that trigger the same status (e.g., amended → amended).
+  - New laboratory observations <sup>[§][CONF-0430]</sup>
+  - Changes in the status of laboratory observations, including events that trigger the same status (e.g., amended → amended).<sup>[§][CONF-0431]</sup>
 
 {% include link-list.md %}

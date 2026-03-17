@@ -42,15 +42,15 @@ This section provides detailed implementation guidance for the US Core Profile t
       **code**: Transport too expensive (SNOMED CT: 160695008)
       **value**: true
 
-- <sup>1</sup>At a minimum, Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category] codes, **SHOULD** support the other [US Core Simple Observation Category] codes, and **MAY** support other categories.
+- <sup>1</sup>At a minimum, Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category] codes,<sup>[§][CONF-0862]</sup> **SHOULD** support the other [US Core Simple Observation Category] codes,<sup>[§][CONF-0861]</sup> and **MAY** support other categories.<sup>[§][CONF-0863]</sup>
 
     {% include obs_cat_guidance.md category="sdoh, functional-status, or social history"%}
 
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
-  - <sup>3</sup>Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.
+  - <sup>3</sup>Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile].<sup>[§][CONF-0441]</sup> However, an assertion or determination derived from screening and assessment tools **SHOULD** reference them using `Observation.derivedFrom`.<sup>[§][CONF-0442]</sup>
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
-  -  Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one. Clients **SHALL** support both.
--  <sup>3</sup>Although none of the `Observation.derivedFrom` [referenced target profiles are flagged as *Must Support*](must-support.html#must-support---resource-references), Certifying System **SHALL** support at least one of them. Client Applications **SHALL** support all.
-   - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
+  -  Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one.<sup>[§][CONF-0868]</sup> Clients **SHALL** support both.<sup>[§][CONF-0869]</sup>
+-  <sup>3</sup>Although none of the `Observation.derivedFrom` [referenced target profiles are flagged as *Must Support*](must-support.html#must-support---resource-references), Certifying System **SHALL** support at least one of them.<sup>[§][CONF-0444]</sup> Client Applications **SHALL** support all.<sup>[§][CONF-0849]</sup>
+   - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.<sup>[§][CONF-0443]</sup>
 
 {% include link-list.md %}

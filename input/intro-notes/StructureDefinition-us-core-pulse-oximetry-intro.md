@@ -29,9 +29,9 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}
-- Inspired oxygen therapy may be represented with [component] observations when measured at the same time as the pulse oximetry measurements. They are expressed as inhaled oxygen flow rate (e.g., 6 liters/min) and inhaled oxygen concentration (e.g., 40% oxygen).
+- Inspired oxygen therapy may be represented with [component] observations when measured at the same time as the pulse oximetry measurements.<sup>[§][CONF-0452]</sup> They are expressed as inhaled oxygen flow rate (e.g., 6 liters/min) and inhaled oxygen concentration (e.g., 40% oxygen).
   - {:.stu-note}This profile is technically non-conformant with the base FHIR version 4.0.1 vitals profile which defines a *required* binding that excludes the concept for `L/min` for `Observation.component.value(x)`. This is a known issue and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. A change request to correct this has been applied to the base FHIR ver 4.3.0 ("Release 4B").
-- Many pulse oximetry readings are taken while the patient is breathing room air. The concept of "room air" (unmodified, ambient air) **SHOULD** be represented as an inhaled oxygen flow rate of 0 liters/min.
-- <sup>2</sup>A pulse oximetry reading without inspired oxygen component observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component] observations **SHOULD** be used.
+- Many pulse oximetry readings are taken while the patient is breathing room air. The concept of "room air" (unmodified, ambient air) **SHOULD** be represented as an inhaled oxygen flow rate of 0 liters/min.<sup>[§][CONF-0453]</sup>
+- <sup>2</sup>A pulse oximetry reading without inspired oxygen component observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component] observations **SHOULD** be used.<sup>[§][CONF-0454]</sup>
 
 {% include link-list.md %}

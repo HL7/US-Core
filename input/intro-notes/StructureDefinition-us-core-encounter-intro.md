@@ -40,20 +40,21 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 * To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
 * The Encounter resource can represent a reason using a code with `Encounter.reasonCode` or a reference with `Encounter.reasonReference` to  Condition or other resources.
-   * Although both are marked as Must Support, Servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.
-   * The Client application **SHALL** support both elements.
-   * If `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable. For example, a laboratory result **SHOULD** conform to the [US Core Laboratory Result Observation Profile].
+   * Although both are marked as Must Support, Servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.<sup>[§][CONF-0375]</sup>
+   * The Client application **SHALL** support both elements.<sup>[§][CONF-0376],[§][CONF-0377]</sup>
+   * If `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable.<sup>[§][CONF-0378
+   * ]</sup> For example, a laboratory result **SHOULD** conform to the [US Core Laboratory Result Observation Profile].
 * This profile supports *where the encounter occurred*.  The location address can be represented by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.
-  * Although both are marked as Must Support, Servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
-  * The Client application **SHALL** support both elements.
+  * Although both are marked as Must Support, Servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.<sup>[§][CONF-0379]</sup>
+  * The Client application **SHALL** support both elements.<sup>[§][CONF-0380],[§][CONF-0381]</sup>
 
 {% include encounter-location.md %}
 
-- <sup>2</sup>Servers can use the US Core Interpreter Needed Extension on this profile or the [US Core Patient Profile] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.
-  - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.
+- <sup>2</sup>Servers can use the US Core Interpreter Needed Extension on this profile or the [US Core Patient Profile] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one.<sup>[§][CONF-0840]</sup> The certifying Client application **SHALL** support the extension on both profiles.<sup>[§][CONF-886]</sup>
+  - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.<sup>[§][CONF-0855]</sup>
 
 - <sup>1</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
-  - New encounters/visits
-  - Changes in the status of encounters, including events that trigger the same status (e.g., in-progress → in-progress). These status changes correspond to events that can initiate [HL7 V2] ADT messages.
+  - New encounters/visits<sup>[§][CONF-0385]</sup>
+  - Changes in the status of encounters, including events that trigger the same status (e.g., in-progress → in-progress).<sup>[§][CONF-0386]</sup> These status changes correspond to events that can initiate [HL7 V2] ADT messages.
 
 {% include link-list.md %}

@@ -2,6 +2,16 @@
   "resourceType": "Questionnaire",
   "id": "prapare-example",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Questionnaire PRAPARE Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "An example of an SDC Questionnaire that represents the Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE] questionnaire defined in LOINC (code 93025-5). This example is generated using the LHC-Forms SDC Questionnaire App."
+      }
+    ],
     "profile": [
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
     ]

@@ -3,7 +3,17 @@
   "id": "deceased-example",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Deceased Patient Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a deceased patient example for the *US Core Patient Profile*."
+      }
     ]
   },
   "extension": [

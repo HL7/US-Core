@@ -18,8 +18,10 @@ with the following columns:
 
 {% assign rows = site.data.us_core_reqs -%}
 {% for item in rows %}
+{% unless item.key == blank or item.key == "" %}
 [{{item.key}}]: requirements.html#{{item.key}} "{{item.key}}"
 {: #{{item.key}}}
+{% endunless %}
 {% endfor %}
 
 <!-- =============================== end liquid =================================== -->

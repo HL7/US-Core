@@ -3,7 +3,7 @@ id: us-core-client
 url: http://hl7.org/fhir/us/core/Requirements/us-core-client
 name: USCoreClientRequirements
 title: US Core Client Requirements
-description: This [Requirements]](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Requestor (Client) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.
+description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Requestor (Client) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability.
 _actor:
   - extension:
       - url: http://hl7.org/fhir/StructureDefinition/display
@@ -500,3 +500,11 @@ statement:
       ...
 
       - US Core Requesters **SHALL** be capable of processing  [such an element]  with a valid reference to *at least one* target profile.
+  - key: CONF-0886
+    conformance:
+      - SHALL
+    requirement: Servers can use the US Core Interpreter Needed Extension on this profile or the [US Core Patient Profile] to communicate whether a patient needs an interpreter…Client application **SHALL** support the extension on both profiles.
+  - key: CONF-0888
+    conformance:
+      - SHALL
+    requirement: ' ''Observation.performer'' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support.... Clients **SHALL** support both.'

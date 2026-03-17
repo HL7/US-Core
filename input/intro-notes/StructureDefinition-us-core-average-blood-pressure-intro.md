@@ -35,14 +35,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - The category "vital-signs" aligns with the USCDI Data Class and Elements and provides a convenient and consistent grouping of the clinical concepts. Implementers can group them differently based on their clinical needs.
-- The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:
-   -  providing a local system-specific code
-   -  providing more specific codes
-
-  a code system value **SHOULD** be supplied for each additional code.
+{% include additional-codings.md %}
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>1</sup>' %}
 - <sup>2</sup>Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
-  - the `Observation.value[x]` element **SHALL** be omitted
+  - the `Observation.value[x]` element **SHALL** be omitted.<sup>[§][CONF-0421]</sup>
   - An Observation without a systolic or diastolic result value **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
   - *All Server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
 - This Profile is not dependent on any specific protocol. Information about the protocol used **SHOULD** be supplied in either:

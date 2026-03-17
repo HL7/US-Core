@@ -37,8 +37,18 @@
   "effectiveDateTime": "2020-09-10T21:56:54.671000+00:00",
   "id": "HVS-item-example-88124-3",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "HVS Item Example 88124-3"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a HVS Item Example 88124-3 (Food insecurity risk) for the *US Core Observation Screening Assessment Profile*"
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
     ]
   },
   "performer": [

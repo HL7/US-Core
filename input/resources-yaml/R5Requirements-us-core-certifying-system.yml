@@ -22,6 +22,40 @@ statement:
       - SHALL
     conditionality: true
     requirement: Implementations meeting US EHR certification [of the ONC IT Health Certification program] requirements must support all US Core’s required scopes.
+  - key: CONF-0391
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: '[For organization participating in the ONC Health IT Certification program] [CVX vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) are required'
+  - key: CONF-0392
+    conformance:
+      - SHOULD
+    requirement: '[NDC vaccine codes](http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) **SHOULD** be supported as an additional code [of [CVX Vaccine Codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp)]'
+  - key: CONF-0405
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: '[For organization participating in the ONC Health IT Certification program Servers **SHALL** support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):], The reason or indication for the prescription'
+  - key: CONF-0406
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: '[For organization participating in the ONC Health IT Certification program Servers **SHALL** support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):] reported adherence to prescribed medication instructions'
+  - key: CONF-0411
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: Although both MedicationRequest.reasonCode and MedicationRequest.reasonReference are marked as Additional USCDI Requirements [which are required for organizations participating in the ONC Health IT Certification program]. The certifying Server system is not required to support both, but **SHALL** support at least one of these elements
+  - key: CONF-0414
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: '[For organizations participating in the ONC Health IT Certification program and supporting MedicationRequest.reasonReference,] Servers **SHALL** support at least one target resource in MedicationRequest.reasonReference'
+  - key: CONF-0444
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: Although none of the Observation.derivedFrom [references are flagged as Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html#must-support---resource-references), the Certifying System *SHALL** support at least one of them
   - key: CONF-0465
     conformance:
       - SHALL

@@ -37,8 +37,18 @@
   "effectiveDateTime": "2022-03-29T22:38:59.084000+00:00",
   "id": "AHC-HRSN-item-example-68517-2",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Ahc-Hrsn Item Observation Example 68517-2"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This AHC HRSN Item Example 68517-2 (How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?) is an example of the *US Core Observation Screening and Assessment Profile* and is referenced by the *ServiceRequest for Rehab Example*"
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
     ]
   },
   "performer": [

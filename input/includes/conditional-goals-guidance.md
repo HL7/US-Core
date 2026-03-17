@@ -1,3 +1,3 @@
-- The context or precondition of a patient's preference SHOULD be supplied in:
+- The context or precondition of a patient's preference **SHOULD** be supplied in:
   - the `Observation.valueString` (for example, "If this [health scenario] were to occur, ...”) or
-  - an extension such as the PACIO Advance Directive Interoperability Implementation Guide's [Enclosed Precondition Extension].
+  - an extension such as the PACIO Advance Directive Interoperability Implementation Guide's [Enclosed Precondition Extension].<sup>[§][CONF-0422]</sup>

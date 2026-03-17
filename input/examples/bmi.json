@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "bmi",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "BMI Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a BMI example for the *Vitalsigns Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
     ]
   },
   "status": "final",

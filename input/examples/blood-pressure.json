@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "blood-pressure",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Blood Pressure Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a blood pressure example for the *Vitalsigns Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
     ]
   },
   "status": "final",

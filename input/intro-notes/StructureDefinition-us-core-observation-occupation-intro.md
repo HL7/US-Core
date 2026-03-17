@@ -36,8 +36,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 {% include additional-codings.md %}
-- For the current job, omit `observation.effectivePeriod.end` to indicate it is ongoing.
-- When the industry is known, but the occupation is not,  use the value "unknown" from the [DataAbsentReason Code System]. However, when the occupation is known but the industry is not, omit the industry `Observation.component`. The guide provides examples for both scenarios.
+- For the current job, omit `observation.effectivePeriod.end` to indicate it is ongoing.<sup>[§][CONF-0432]</sup>
+- When the industry is known, but the occupation is not,  use the value "unknown" from the [DataAbsentReason Code System].<sup>[§][CONF-0433]</sup> However, when the occupation is known but the industry is not, omit the industry `Observation.component`.<sup>[§][CONF-0434]</sup> The guide provides examples for both scenarios.
 - In the [Quick Start](#notes) section below, you can find instructions on searching for Occupations (Jobs) by `patient`, `date`, and other core search parameters. Refer to the FHIR [search] specification for more advanced queries using Observation.
 - Refer to the [Occupational Data for Health (ODH)] FHIR IG  to convey additional details; data elements, such as Employer; or different topics, such as Usual (Longest-Held) Work.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>1</sup>' %}

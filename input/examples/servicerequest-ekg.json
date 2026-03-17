@@ -2,8 +2,18 @@
   "resourceType": "ServiceRequest",
   "id": "ekg",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "ServiceRequest EKG Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is an example requesting a Clinical Test Order (EKG panel) for a patient using the *US Core ServiceRequest Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
     ]
   },
   "status": "active",

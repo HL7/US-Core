@@ -35,10 +35,10 @@ This section provides detailed implementation guidance for the US Core Profile t
 - There is no single way to indicate that the patient has no coverage using the Coverage resource:
   - `Coverage.status` alone may not indicate whether an individual is covered. The `Coverage.period` needs to be considered as well. For example, the coverage may be expired with a status of "active", or conversely, it may be "canceled" but still have covered claims.
   - The absence of a Coverage resource instance may mean the patient has no coverage or the healthcare provider may not know it.
-  - A `coverage.type` of "81" (Self-pay) **MAY** be used to imply that the patient has no coverage or that an individual or organization other than an insurer is taking responsibility for payment for a portion of the health care costs.
-- <sup>2</sup>The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.
+  - A `coverage.type` of "81" (Self-pay) **MAY** be used to imply that the patient has no coverage or that an individual or organization other than an insurer is taking responsibility for payment for a portion of the health care costs.<sup>[§][CONF-0334]</sup>
+- <sup>2</sup>The `Coverage.type` value set includes high-level categories of health care payers from the Centers for Disease Control and Prevention (CDC) National Center for Health Statistics (NCHS) Source of Payment Typology (SOPT) code system.<sup>[§][CONF-0335]</sup>
 
-  - To differentiate between Medicare Parts A, B, C, and D systems can use the following codes.
+  - To differentiate between Medicare Parts A, B, C, and D systems can use the following codes.<sup>[§][CONF-0336],[§][CONF-0337],[§][CONF-0338]</sup>
 
     Medicare Plan | SOPT Code (Description)| Comment
     |---|---|---|
@@ -48,6 +48,6 @@ This section provides detailed implementation guidance for the US Core Profile t
     {: .grid}
 
 
-- <sup>1</sup>If Insurers issue unique member IDs for dependents, then the memberId in `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.
+- <sup>1</sup>If Insurers issue unique member IDs for dependents, then the memberId in `Coverage.identifier` should be used instead of `Coverage.dependent` to uniquely refer to the dependent with respect to their insurance.<sup>[§][CONF-0339]</sup>
 
 {% include link-list.md %}

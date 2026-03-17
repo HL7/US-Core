@@ -27,6 +27,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}
-- Information about the growth chart tables used to determine percentiles **SHOULD** be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
+- Information about the growth chart tables used to determine percentiles **SHOULD** be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').<sup>[§][CONF-0448]</sup>
 
 {% include link-list.md %}

@@ -62,13 +62,13 @@ This section provides detailed implementation guidance for the US Core Profile t
     |distinct identifier (UDI-PI element)|`Device.distinctIdentifier`|
     {:.grid}
 
-  -  Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
+  -  Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:<sup>[§][CONF-0341]</sup>
       - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID, including safety information and UDI. It includes APIs to query and download a complete list of medical devices registered in GUDID.
       - The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 
-- Medical devices with UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`. All five UDI-PI elements defined in the UDI code may not always be present in every UDI instance. However, those UDI-PI elements present **SHALL** be represented in the corresponding US Core Device Profile elements.
+- Medical devices with UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`.<sup>[§][CONF-0342]</sup> All five UDI-PI elements defined in the UDI code may not always be present in every UDI instance. However, those UDI-PI elements present **SHALL** be represented in the corresponding US Core Device Profile elements.<sup>[§][CONF-0343]</sup>
 
-   UDI may not be present in all scenarios, such as historical medical devices, patient-reported implant information, payer-reported devices, or improperly documented implants. If UDI is not present and the manufacturer or model number information is available, they **SHOULD** be included to support historical reports of <span class="bg-success" markdown="1">medical devices</span><!-- new-content --> as follows:
+   UDI may not be present in all scenarios, such as historical medical devices, patient-reported implant information, payer-reported devices, or improperly documented implants. If UDI is not present and the manufacturer or model number information is available, they **SHOULD** be included to support historical reports of <span class="bg-success" markdown="1">medical devices</span><!-- new-content --> as follows:<sup>[§][CONF-0344],[§][CONF-0345]</sup>
 
    |data element|US Core Device Profile element|
    |---|---|
@@ -76,14 +76,14 @@ This section provides detailed implementation guidance for the US Core Profile t
    |model|`Device.model`|
    {:.grid}
 
-- The [Quick Start] section below describes searching for all devices. Records of implanted devices **MAY** be queried against UDI data, including:
+- The [Quick Start] section below describes searching for all devices. Records of implanted devices **MAY** be queried against UDI data, including:<sup>[§][CONF-0347],[§][CONF-0348],[§][CONF-0349],[§][CONF-0350]</sup>
 
     - UDI HRF string (`udi-carrier`)
     - UDI Device Identifier (`udi-di`)
     - Manufacturer (`manufacturer`)
     - Model number (`model`)
 
-  Implementers **MAY** also adopt custom SearchParameters for searching by:
+  Implementers **MAY** also adopt custom SearchParameters for searching by:<sup>[§][CONF-0351],[§][CONF-0352],[§][CONF-0353],[§][CONF-0354],[§][CONF-0355]</sup>
 
     - lot numbers
     - serial number
