@@ -48,13 +48,13 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - For C-CDA Clinical Documents
   - The format code in `DocumentReference.content.format` is "urn:hl7-org:sdwg:ccda-structuredBody:2.1".
-  - For other CDA documents, Servers SHOULD select the appropriate format code from the [HL7 ValueSet of Format Codes for use with Document Sharing](https://terminology.hl7.org/6.2.0/ValueSet-v3-HL7FormatCodes.html).
+  - For other CDA documents, Servers **SHOULD** select the appropriate format code from the [HL7 ValueSet of Format Codes for use with Document Sharing](https://terminology.hl7.org/6.2.0/ValueSet-v3-HL7FormatCodes.html).
 
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.content.attachment.url` or the content as inline base64 encoded data using `DocumentReference.content.attachment.data`.
     -  Although both are marked as Must Support, the Server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.<sup>[§][CONF-0368]</sup>
     -  The Client application **SHALL** support both elements.<sup>[§][CONF-0369],[§][CONF-0370]</sup>
     -  The `DocumentReference.content.attachment.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint).
-        - If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server. This reduces complexity for the client and improves the user experience.
+        - If the referenced a document or file is hosted on a server outside the FHIR server, it should be securely accessible using the same authorization credentials that were used to access the FHIR server.<sup>[§][CONF-0839]</sup> This reduces complexity for the client and improves the user experience.
     -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different formats or attachment metadata.<sup>[§][CONF-0372]</sup> The content element **SHALL NOT** contain different versions of the same content.<sup>[§][CONF-0373]</sup> For version handling, use multiple DocumentReferences with `DocumentReference.relatesTo`.
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.<sup>[§][CONF-0374]</sup>
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.

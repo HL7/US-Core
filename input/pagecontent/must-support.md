@@ -13,7 +13,7 @@ The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USC
 For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [US Core Roadmap] page for writing and updating US Core Profiles):
 
 * US Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server CapabilityStatement].<sup>[§][CONF-0075]</sup>
-* US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail.<sup>[§][CONF-0076]</sup> This processing may result in a determination not to use the resource if the resource content does not meet business requirements.
+* US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail.<sup>[§][CONF-0076]</sup> This processing may result in a determination not to use the resource if the resource content does not meet business requirements.<sup>[§][CONF-0800]</sup>
 * When information on a particular data element is not present, and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.<sup>[§][CONF-0078]</sup>
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.<sup>[§][CONF-0079]</sup>
 * When information on a particular data element is missing or suppressed, refer to the guidance for [Missing Data] and [Suppressed Data]. In cases where information on a specific data element is missing, *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.<sup>[§][CONF-0080]</sup> This is done by following the same methodology outlined in the [Missing Data] section but using the appropriate reason code instead of `unknown`.<sup>[§][CONF-0081]</sup>
@@ -124,7 +124,7 @@ This view includes the same flags and labels as described in Differential Table 
 
 #### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], used almost exclusively for the CodeableConcept and Coding datatypes. If an element is marked as *Must Support* and defined by a pattern, then the pattern defines the elements *and* element values that the Server **SHALL** be capable of providing.<sup>[§][CONF-0087]</sup> If an element is marked as *Additional USCDI* and defined by a pattern, then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing.<sup>[§][CONF-0873]</sup>
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], used almost exclusively for the CodeableConcept and Coding datatypes. If an element is marked as *Must Support* and defined by a pattern, then the pattern defines the elements *and* element values that the Server **SHALL** be capable of providing.<sup>[§][CONF-0087]</sup> If an element is marked as *Additional USCDI* and defined by a pattern, then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing.<sup>[§][CONF-0802]</sup>
 
 
 For example, the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in `DiagnosticReport.category.coding.system`  and `DiagnosticReport.category.coding.code` for a Coding element. When claiming conformance to this profile:
@@ -152,8 +152,7 @@ Complex elements are composed of primitive and other complex elements.   Note th
 For any complex element marked as *Must Support*, the Server **SHALL** be capable of providing at least one of the sub-element values.<sup>[§][CONF-0093]</sup> If any sub-element is marked as *Must Support*, it must also meet the *Must Support* requirements and satisfy the *Must Support* requirements for the parent element.<sup>[§][CONF-0094]</sup>
 
 
-For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values.<sup>[§][CONF-0875]</sup> If any sub-element is marked as *Additional USCDI*, it must also meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element.<sup>[§][CONF-0876]</sup>
-
+For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values.<sup>[§][CONF-0803]</sup> If any sub-element is marked as *Additional USCDI*, it must also meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element.<sup>[§][CONF-0804]</sup>
 
 For example, the [US Core DiagnosticReport Profile for Report and Note exchange] `presentedForm` element is labeled *Must Support* and has no *Must Support* sub-elements. When claiming conformance to this profile:
 
@@ -169,8 +168,7 @@ For example, the [US Core Patient Profile] `name` element is labeled *Must Suppo
 
 {% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
-On the other hand, if any sub-element is marked as *Must Support* or *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent.<sup>[§][CONF-0095]</sup> However, if the parent element is represented in the structure, Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** support the sub-elements labeled as *Additional USCDI*.<sup>[§][CONF-0096]</sup>
-
+On the other hand, if any sub-element is marked as *Must Support* or *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent.<sup>[§][CONF-0095]</sup> However, if the parent element is represented in the structure, Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** support the sub-elements labeled as *Additional USCDI*.<sup>,[§][CONF-0805]</sup>
 
 For example, the [US Core Patient Profile] `telecom` element is not labeled *Must Support*, but `telecom.system`, `telecom.value`, `telecom.use` are. When claiming conformance to this profile:
 
@@ -190,7 +188,7 @@ This section documents additional *Must Support* requirements for the [Reference
 
 ##### Must Support Targets for US Core Profiles
 
-When a Reference type element is labeled as *Must Support* and has a single target profile referenced, the target profile **SHALL** be supported. When a Reference type element is labeled as *Additional USCDI* and has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems.<sup>[§][CONF-0878]</sup>
+When a Reference type element is labeled as *Must Support* and has a single target profile referenced, the target profile **SHALL** be supported.<sup>[§][CONF-0808]</sup> When a Reference type element is labeled as *Additional USCDI* and has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems.<sup>[§][CONF-0809]</sup>
 
 For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to this profile:
 
@@ -199,7 +197,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 
 {% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 9: US Core AllergyIntolerance.patient" %}
 
-When a Reference type element is labeled as *Must Support*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported.When a Reference type element labeled as *Additional USCDI*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported by Certifying Systems.<sup>[§][CONF-0880]</sup>
+When a Reference type element is labeled as *Must Support*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported.<sup>[§][CONF-0810]</sup> When a Reference type element labeled as *Additional USCDI*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported by Certifying Systems.<sup>[§][CONF-0811]</sup>
 
 For example, the US Core DocumentReference Profile `DocumentReference.author` is a *Must Support* element, and six target profiles are displayed with only the US Core Practitioner Profile labeled *Must Support*. When claiming conformance to this profile:
 
@@ -284,16 +282,16 @@ For example:
 
 FHIR profiles use [slicing] to define repeating elements (elements that may occur more than once in an instance) by putting constraints on one or more of the repeating elements ("slices"). See Figure 14 below for how that is represented in the guide.
 
-The element that defines the slicing discriminator ("slicer") may define constraints that apply across all slices for the following element properties: max, type (code, profile, targetProfile, aggregation, and versioning), fixed[x], pattern[x], minValue[x], maxValue[x], maxLength, constraints, required and extensible bindings (including additional bindings), mustHaveValue, and valueAlternatives. However, the slicer's Must Support property *only* defines the element level *Must Support/Additional USCDI* property. In other words, the slicer's *Must Support/Additional USCDI* is not inherited by the slices, and each slice must be explicitly tagged with the *Must Support/Additional USCDI* property to define that slice's conformance strength. If no *Must Support/Additional USCDI* property is defined for the slice, then support for that slice's definition is optional.<sup>[§][CONF-0871]</sup>
+The element that defines the slicing discriminator ("slicer") may define constraints that apply across all slices for the following element properties: max, type (code, profile, targetProfile, aggregation, and versioning), fixed[x], pattern[x], minValue[x], maxValue[x], maxLength, constraints, required and extensible bindings (including additional bindings), mustHaveValue, and valueAlternatives. However, the slicer's Must Support property *only* defines the element level *Must Support/Additional USCDI* property. In other words, the slicer's *Must Support/Additional USCDI* is not inherited by the slices, and each slice must be explicitly tagged with the *Must Support/Additional USCDI* property to define that slice's conformance strength.<sup>[§][CONF-0814],[§][CONF-0872]</sup> If no *Must Support/Additional USCDI* property is defined for the slice, then support for that slice's definition is optional.<sup>[§][CONF-0813],[§][CONF-0871]</sup>
 
 For example, the [US Core Organization Profile] `Organization.identifier` element is a Must Support slicer element and defines three slices, "NPI", "CLIA", and "NAIC". Only the "NPI" slice is labeled as a Must Support element. When claiming conformance to this profile:
 
-- US Core Responders **SHALL** be capable of providing an `Organization.identifier` that conforms to the slicer constraints and the "NPI" slice's constraints. (note that in this case, these conformance requirements are the same -  by conforming to the "NPI" slice's constraints, the slicer constraints are met as well).<sup>[§][CONF-0872]</sup>
+- US Core Responders **SHALL** be capable of providing an `Organization.identifier` that conforms to the slicer constraints and the "NPI" slice's constraints. (note that in this case, these conformance requirements are the same -  by conforming to the "NPI" slice's constraints, the slicer constraints are met as well).
 - US Core Requestors **SHALL** be capable of processing an `Organization.identifier` that conforms to slicer constraints and the "NPI" slice's constraints.
 - Systems **MAY** support the "CLIA" and "NAIC" slices, but this is not a requirement for US Core.
 {% include img.html img="Must_Support_Organization_identifier.png" caption="Figure 14: US Core Organization.identifier" %}
 
-Note that if a slice is labeled as *Must Support/Additional USCDI* and the slicer element is not labeled as *Must Support/Additional USCDI*, then if the server/certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core.<sup>[§][CONF-0870]</sup>
+Note that if a slice is labeled as *Must Support/Additional USCDI* and the slicer element is not labeled as *Must Support/Additional USCDI*, then if the server/certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core.<sup>[§][CONF-0812]</sup>
 
 
 {% include link-list.md %}

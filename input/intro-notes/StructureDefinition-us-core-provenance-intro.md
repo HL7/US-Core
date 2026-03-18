@@ -44,7 +44,7 @@ The "black_list" below is manually updated as needed when new profiles are added
   {%- endunless -%}
 {%- endfor -%}
 <ul>
-<li> <sup>1</sup>The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types:
+<li> <sup>1</sup>The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types:<sup>[§][CONF-0490]</sup>
 <ul id="prov-white-list">
 {% assign resource_list = resource_list | split: "," | uniq | sort -%}
 {% for r in  resource_list %}
@@ -56,7 +56,7 @@ The "black_list" below is manually updated as needed when new profiles are added
 
 <!-- ========================== end liquid ====================== -->
 
-- <sup>2</sup>If a system receives a provider in `Provenance.agent.who` as free text, they must capture who sent them the information as the organization. On request, they  **SHALL** provide this organization as the source and **MAY** include the free text provider.
-- <span class="bg-success" markdown="1">Other information can be tracked such as what activity has occurred in `Provenance.activity`, and details about where the entity came from (for example, a document source's identity and role) in `Provenance.entity`.</span><!-- new-content -->
+- <sup>2</sup>If a system receives a provider in `Provenance.agent.who` as free text, they must capture who sent them the information as the organization. On request, they  **SHALL** provide this organization as the source and **MAY** include the free text provider.<sup>[§][CONF-0508],[§][CONF-0509]</sup>
+- <span class="bg-success" markdown="1">Other information can be tracked such as what activity has occurred in `Provenance.activity`, and details about where the entity came from (for example, a document source's identity and role) in `Provenance.entity`.<sup>[§][CONF-0893]</sup></span><!-- new-content -->
 
 {% include link-list.md %}

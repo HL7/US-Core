@@ -68,7 +68,7 @@ Screening and Assessments can be structured survey instruments consisting of que
 - Observation: [US Core Observation Screening Assessment Profile]
 - Questionnaire/QuestionnaireResponse: [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]
 
-Servers that support the USCDI Health Status/Assessments Data Class **SHALL** support the US Core Observation Screening Assessment Profile and **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile.
+Servers that support the USCDI Health Status/Assessments Data Class **SHALL** support the US Core Observation Screening Assessment Profile and **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile.<sup>[§][CONF-0821]</sup>
 
 
 The sections below provide additional guidance on when Observations and Questionnaire/QuestionnaireResponse can be used to represent the structured screenings and assessments.
@@ -168,11 +168,11 @@ The script retrieves, sorts, and selects the table data.
 <!-- ================== End Liquid ================================ -->
 
 
-For the US Core Simple Observation Profile and US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes listed above.
+For the US Core Simple Observation Profile and US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes listed above.<sup>[§][CONF-0822],[§][CONF-0823]</sup>
 
-For the US Core Condition Problems and Health Concerns Profile, Servers **SHALL** support the code ,"sdoh", and **SHOULD** support the other category codes listed above.
+For the US Core Condition Problems and Health Concerns Profile, Servers **SHALL** support the code ,"sdoh"<sup>[§][CONF-0824]</sup>, and **SHOULD** support the other category codes listed above.<sup>[§][CONF-0825]</sup>
 
-For the US Core ServiceRequest Profile, Servers **SHOULD** support all the above category codes.
+For the US Core ServiceRequest Profile, Servers **SHOULD** support all the above category codes.<sup>[§][CONF-0826]</sup>
 
 The category element is optional in US Core Procedure and US Core Goal, but implementers can categorize them using one of the above category codes or infer the context by inspecting the referenced ServiceRequest if available. Similarly, they can review the Questionnaire resource's metadata to determine the context of the US Core QuestionnaireResponse.
 

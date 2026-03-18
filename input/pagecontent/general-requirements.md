@@ -294,6 +294,8 @@ There are situations when information on a particular data element is missing, a
           - `DocumentReference.status`
           - `Immunization.status`
           - `Goal.lifecycleStatus`
+          - <span class="bg-success" markdown="1">`MedicationRequest.intent`</span><!-- new-content -->
+          - <span class="bg-success" markdown="1">`ServiceRequest.intent`</span><!-- new-content -->
 
         *The `clinicalStatus` element is conditionally mandatory based on resource-specific constraints.
 

@@ -26,8 +26,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- <sup>1</sup>Systems **SHALL** support National Provider Identifier (NPI) for organizations
-  and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories and the National Association of Insurance Commissioners NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.
+- <sup>1</sup>Systems **SHALL** support National Provider Identifier (NPI) for organizations<sup>[§][CONF-0455]</sup> and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories and the National Association of Insurance Commissioners NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.<sup>[§][CONF-0456],[§][CONF-0457]</sup>
 - <sup>2</sup>{% include should-3166-subdivision-codes.md type="Organization" %}
 
 {% include link-list.md %}

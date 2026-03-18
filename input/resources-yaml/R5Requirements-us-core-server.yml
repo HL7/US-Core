@@ -60,23 +60,38 @@ statement:
   - key: CONF-0013
     conformance:
       - SHALL
-    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition."
+    requirement: |-
+      [To claim conformance to a US Core Profile] a conformant Server:
+
+      **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
   - key: CONF-0014
     conformance:
       - SHOULD
-    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHOULD** declare conformance with the US [Core Server Capability Statement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`"
+    requirement: |-
+      [To claim conformance to a US Core Profile] a conformant Server:
+
+      **SHOULD** declare conformance with the US [Core Server Capability Statement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`
   - key: CONF-0015
     conformance:
       - SHALL
-    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement."
+    requirement: |-
+      [To claim conformance to a US Core Profile] a conformant Server:
+
+      **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
   - key: CONF-0016
     conformance:
       - SHALL
-    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL**… Declare support for the US Core Profile by including its official URL in the Server’s CapabilityStatement.rest.resource.supportedProfile element."
+    requirement: |-
+      [To claim conformance to a US Core Profile] a conformant Server:
+
+      **SHALL**… Declare support for the US Core Profile by including its official URL in the Server’s CapabilityStatement.rest.resource.supportedProfile element.
   - key: CONF-0017
     conformance:
       - SHALL
-    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHALL**… Declare support for the US Core Profile’s FHIR RESTful transactions."
+    requirement: |-
+      [To claim conformance to a US Core Profile] a conformant Server:
+
+      **SHALL**… Declare support for the US Core Profile’s FHIR RESTful transactions.
   - key: CONF-0018
     conformance:
       - SHALL
@@ -471,12 +486,18 @@ statement:
     conformance:
       - SHALL
     conditionality: true
-    requirement: "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] AllergyIntolerance [the] <patient|user|system>/AllergyIntolerance.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes] \n"
+    requirement: |
+      The following scopes that correspond directly to FHIR resource types **SHALL** be supported
+      ...
+      [For] AllergyIntolerance [the] <patient|user|system>/AllergyIntolerance.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]
   - key: CONF-0133
     conformance:
       - SHALL
     conditionality: true
-    requirement: "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] CarePlan [the] <patient|user|system>/CarePlan.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes] \n"
+    requirement: |
+      The following scopes that correspond directly to FHIR resource types **SHALL** be supported
+      ...
+      [For] CarePlan [the] <patient|user|system>/CarePlan.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]
   - key: CONF-0134
     conformance:
       - SHALL
@@ -983,7 +1004,9 @@ statement:
   - key: CONF-0220
     conformance:
       - SHALL
-    requirement: "To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server **SHALL** expose these overlapping scanned or narrative-only reports through both DiagnosticReport and DocumentReference by representing the same attachment URL [as] DocumentReference.content.attachment.url [and] \nDiagnosticReport.presentedForm.url"
+    requirement: |-
+      To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server **SHALL** expose these overlapping scanned or narrative-only reports through both DiagnosticReport and DocumentReference by representing the same attachment URL [as] DocumentReference.content.attachment.url [and]
+      DiagnosticReport.presentedForm.url
   - key: CONF-0221
     conformance:
       - SHALL
@@ -1091,22 +1114,30 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=outgoing for DiagnosticReport report content type discovery [for read operations]"
+    requirement: |-
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
+      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=outgoing for DiagnosticReport report content type discovery [for read operations]
   - key: CONF-0243
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=incoming for DiagnosticReport report content type discovery [for write operations]"
+    requirement: |-
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
+      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType&contextDirection=incoming for DiagnosticReport report content type discovery [for write operations]
   - key: CONF-0244
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing for DocumentReference note content type discovery [for read operations]"
+    requirement: |-
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
+      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing for DocumentReference note content type discovery [for read operations]
   - key: CONF-0245
     conformance:
       - SHOULD
     conditionality: true
-    requirement: "[If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows: \nGET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming for DocumentReference note content type discovery [for write operations]"
+    requirement: |-
+      [If Servers support the [$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation then] the note and report types for a particular Server [SHOULD be] discovered by invoking the #expand operation as follows:
+      GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming for DocumentReference note content type discovery [for write operations]
   - key: CONF-0246
     conformance:
       - MAY
@@ -1815,16 +1846,6 @@ statement:
     conformance:
       - SHOULD
     requirement: Systems … **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories
-  - key: CONF-0459
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: The Complex [Extension] for Race ... allow[s] for one or more codes of which [Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html) at least one category code from the OMB Race ... Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [for the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)].
-  - key: CONF-0460
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which [Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html) at least one category code from the OMB ... Ethnicity Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [for the [US Core Ethnicity Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-ethnicity.html)].
   - key: CONF-0461
     conformance:
       - MAY
@@ -1832,12 +1853,12 @@ statement:
     requirement: The Complex [Extension] for Race ... allow[s] for one or more codes of which **MAY**  include additional codes from the detailed ethnicity ... value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]
   - key: CONF-0462
     conformance:
-      - MAY
+      - SHALL
     conditionality: true
     requirement: The Complex [Extension] for Race ... allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]
   - key: CONF-0463
     conformance:
-      - SHALL
+      - MAY
     conditionality: true
     requirement: The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **MAY**  include additional codes from the detailed ... race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]
   - key: CONF-0464
@@ -1877,7 +1898,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: Although Practitioner.address is marked as Must Support, the Server system … [MAY choose not to] support it if they support the US Core PractitionerRole Profile
+    requirement: Although Practitioner.address is marked as Must Support, the Server system … [**MAY** choose not to] support it if they support the US Core PractitionerRole Profile
   - key: CONF-0475
     conformance:
       - SHALL
@@ -1887,29 +1908,11 @@ statement:
     conformance:
       - SHOULD
     requirement: Only professional/work contact information about the practitioner **SHOULD** be available to the patient
-  - key: CONF-0479
-    conformance:
-      - MAY
-    requirement: Procedure codes … [MAY] be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC [for procedure.code]
   - key: CONF-0480
     conformance:
       - SHOULD
     conditionality: true
     requirement: '[If using LOINC codes in procedure.code] only LOINC concepts that reflect actual procedures **SHOULD** be used'
-  - key: CONF-0481
-    conformance:
-      - SHOULD
-    requirement: communication.preferred **MAY**  designate a preferred language when multiple languages are represented
-  - key: CONF-0482
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program] Servers … **SHALL** support ... US Core Procedure Profile for communicating the reason or justification for a referral as Additional USCDI Requirements'
-  - key: CONF-0484
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program,] although both Procedure.reasonCode and Procedure.reasonReference are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements.'
   - key: CONF-0486
     conformance:
       - SHALL
@@ -1923,79 +1926,9 @@ statement:
   - key: CONF-0489
     conformance:
       - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type AllergyIntolerance
-  - key: CONF-0490
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type CarePlan
-  - key: CONF-0491
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type CareTeam
-  - key: CONF-0492
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Condition
-  - key: CONF-0493
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Coverage
-  - key: CONF-0494
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Device
-  - key: CONF-0495
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type DiagnosticReport
-  - key: CONF-0496
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Document Reference
-  - key: CONF-0497
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Encounter
-  - key: CONF-0498
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Goal
-  - key: CONF-0499
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Immunization
-  - key: CONF-0500
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type MedicationDispense
-  - key: CONF-0501
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type MedicationRequest
-  - key: CONF-0502
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Observation
-  - key: CONF-0503
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Patient
-  - key: CONF-0504
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type Procedure
-  - key: CONF-0505
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type QuestionnaireResponse
-  - key: CONF-0506
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type RelatedPerson
-  - key: CONF-0507
-    conformance:
-      - SHALL
-    requirement: The US Core Provenance resource **SHALL** be  supported for … [this] US Core resource type ServiceRequest
+    requirement: |-
+      The US Core Provenance resource **SHALL** be supported for these US Core resource types:
+      AllergyIntolerance, CarePlan, CareTeam, Condition, Coverage, Device, DiagnosticReport, DocumentReference, Encounter, Goal, Immunization, MedicationDispense, MedicationRequest, Observation, Patient, Procedure, QuestionnaireResponse, RelatedPerson, ServiceRequest
   - key: CONF-0508
     conformance:
       - SHALL
@@ -2006,16 +1939,6 @@ statement:
       - MAY
     conditionality: true
     requirement: If a system receives a provider in Provenance.agent.who as free text, … [upon request they] **MAY**  include the free text provider.
-  - key: CONF-0511
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: If the QuestionnaireResponse is based on a non-FHIR form [then a] ... FHIR Questionnaire [needs to] represent at least the relevant metadata
-  - key: CONF-0512
-    conformance:
-      - MAY
-    conditionality: true
-    requirement: If the QuestionnaireResponse is based on a non-FHIR form [then a] … FHIR Questionnaire's questions may be omitted
   - key: CONF-0514
     conformance:
       - MAY
@@ -2024,26 +1947,6 @@ statement:
     conformance:
       - SHOULD
     requirement: The ServiceRequest.code value ... **SHOULD** be constrained to a subset for a particular use case or domain
-  - key: CONF-0516
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program] Servers … **SHALL** support ... US Core Service Request Profile for communicating the reason or justification for a referral as Additional USCDI Requirements'
-  - key: CONF-0518
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program,] although both ServiceRequest.reasonCode and ServiceRequest.reasonReference are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements.'
-  - key: CONF-0520
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference Servers **SHALL** support at least one target resource in ServiceRequest.reasonReference'
-  - key: CONF-0522
-    conformance:
-      - SHOULD
-    conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference …The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles)'
   - key: CONF-0523
     conformance:
       - MAY
@@ -2053,66 +1956,6 @@ statement:
       - SHALL
     conditionality: true
     requirement: Although both Specimen.identifier and Specimen.accessionIdentifier are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.
-  - key: CONF-0532
-    conformance:
-      - SHOULD
-    requirement: |-
-      [Servers] **SHOULD** Support the ...
-      [SMART App Launch version 2.0.0 and later](http://hl7.org/fhir/smart-app-launch/history.html)
-  - key: CONF-0533
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL** support the US Core Patient resource profile
-  - key: CONF-0534
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL** support … at least one additional resource profile [in addition to the US Core Patient resource profile] from the list of US Core Profiles
-  - key: CONF-0535
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL**… Implement the RESTful behavior according to the FHIR specification.
-  - key: CONF-0536
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL**… return the following response class (Status 400) [for] invalid parameters
-  - key: CONF-0537
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL**… return the following response class (Status 401/4xx) [for] unauthorized request
-  - key: CONF-0538
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL**… return the following response class (Status 403) [for] insufficient scopes
-  - key: CONF-0539
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL**… return the following response class (Status 404) [for] unknown resource
-  - key: CONF-0540
-    conformance:
-      - SHALL
-    requirement: US Core Server **SHALL**… support JSON source formats for all US Core interactions.
-  - key: CONF-0541
-    conformance:
-      - SHOULD
-    requirement: US Core Server **SHOULD** … support XML source formats for all US Core interactions.
-  - key: CONF-0542
-    conformance:
-      - SHOULD
-    requirement: US Core Server **SHOULD** … identify the US Core profiles supported as part of the FHIR meta.profile attribute for each instance.
-  - key: CONF-0543
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: A Server **SHALL** reject any unauthorized requests by returning an HTTP 401 "Unauthorized", HTTP 403 "Forbidden", or HTTP 404 "Not Found"
-  - key: CONF-0548
-    conformance:
-      - SHOULD
-    requirement: '[US Core Servers] **SHOULD** support [$expand](http://hl7.org/fhir/OperationDefinition/ValueSet-expand) operation'
-  - key: CONF-0549
-    conformance:
-      - SHOULD
-    conditionality: true
-    requirement: If a Server supports DocumentReference for creating, using, and sharing clinical notes, it **SHOULD** also support the context and contextdirection parameters of the $expand operation
   - key: CONF-0550
     conformance:
       - SHALL
@@ -2177,24 +2020,6 @@ statement:
     conformance:
       - MAY
     requirement: Systems **MAY**  protect the confidentiality of data at rest via encryption and associated access controls.
-  - key: CONF-0583
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: The [additional] current binding [[FHIR R5 link](https://hl7.org/fhir/R5/terminologies.html#binding)] requires newly recorded, non-legacy data to be drawn from the [bound] value set.
-  - key: CONF-0584
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: If the QuestionnaireResponse is based on a non-FHIR form [then a] ... FHIR Questionnaire [will communicate] the identifier of the non-FHIR form instead of the canonical URI using the US Core Extension Questionnaire URI extension.
-  - key: CONF-0587
-    conformance:
-      - SHALL
-    requirement: 'Each AllergyIntolerance Must Support: a verification status'
-  - key: CONF-0588
-    conformance:
-      - SHALL
-    requirement: 'Each AllergyIntolerance Must Support: a reaction manifestation'
   - key: CONF-0804
     conformance:
       - SHALL
@@ -2214,7 +2039,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: '[If a] slicer''s Must Support property only defines the element level … Additional USCDI property[, i.e.,] no … Additional USCDI property is defined for the slice, then support for that slice''s definition is optional.'
+    requirement: '[If a] slicer''s Must Support property only defines the element level Must Support...[, i.e.,] no Must Support... property is defined for the slice, then support for that slice''s definition is optional.'
   - key: CONF-0818
     conformance:
       - SHALL
@@ -2257,15 +2082,6 @@ statement:
     conformance:
       - SHOULD
     requirement: For the US Core ServiceRequest Profile, Servers **SHOULD** support all the [[listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes)] category codes.
-  - key: CONF-0827
-    requirement: ' **SHALL NOT** be interpreted as search parameters for search. '
-    extension:
-      - url: http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot
-        valueBoolean: true
-  - key: CONF-0828
-    conformance:
-      - SHOULD
-    requirement: Servers ... **SHOULD** use the standard FHIR SearchParameters.
   - key: CONF-0831
     conformance:
       - SHALL
@@ -2326,57 +2142,14 @@ statement:
     conformance:
       - MAY
     requirement: Servers can use the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.
-  - key: CONF-0852
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: Although the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] is marked as an Additional USCDI Requirement on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one.
   - key: CONF-0855
     conformance:
       - SHOULD
     requirement: Systems **SHOULD** designate the patient's preferred language in the Patient.communication.preferred element.
-  - key: CONF-0856
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: The `Procedure.performed` is mandatory if `Procedure.status` is "completed" or "in-progress".
   - key: CONF-0857
     conformance:
       - SHOULD
-    requirement: |-
-      [In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI Laboratory Order, ... implementers **SHOULD** use the corresponding category codes listed ... below:
-      - [108252007 Laboratory procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=108252007&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-  - key: CONF-0858
-    conformance:
-      - SHOULD
-    requirement: |-
-      [In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI ... Clinical Test Order, ... implementers **SHOULD** use the corresponding category codes listed ... below:
-      - [386053000 Evaluation procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=386053000&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-      - [410606002 Social service procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-      - [387713003 Surgical procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-  - key: CONF-0859
-    conformance:
-      - SHOULD
-    requirement: |-
-      [In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI ... Imaging Order, ... implementers **SHOULD** use the corresponding category codes listed ... below:
-      - [363679005 Imaging (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=363679005&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-  - key: CONF-0860
-    conformance:
-      - SHOULD
-    requirement: |-
-      [In the [US Core ServiceRequest Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-servicerequest.html), for] the USCDI ... Procedure Order Data Elements, implementers **SHOULD** use the corresponding category codes listed ... below:
-      - [386053000 Evaluation procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=386053000&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-      - [410606002 Social service procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-      - [387713003 Surgical procedure (procedure)](https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false)
-  - key: CONF-0864
-    conformance:
-      - SHALL
-    requirement: 'An Observation without a value, **SHALL** include a reason why the data is absent unless there are 1) component observations, or 2) reporting panel observations using Observation.hasMember. '
-  - key: CONF-0865
-    conformance:
-      - MAY
-    conditionality: true
-    requirement: Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`.
+    requirement: For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table
   - key: CONF-0866
     conformance:
       - SHALL
@@ -2390,21 +2163,11 @@ statement:
     conformance:
       - SHALL
     requirement: Although 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but **SHALL** support at least one.
-  - key: CONF-0870
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[I]f a slice is labeled as Must Support... and the slicer element is not labeled as Must Support..., then if the Server... supports the element, it must support the slice''s definition. There are no examples of this structure in US Core.'
   - key: CONF-0871
     conformance:
       - MAY
     conditionality: true
-    requirement: '[If a] slicer''s Must Support property only defines the element level Must Support...[, i.e.,] no Must Support... property is defined for the slice, then support for that slice''s definition is optional.'
-  - key: CONF-0872
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[I]f a slice is labeled as Must Support... and the slicer element is ... labeled as Must Support..., then ... the Server... [**SHALL** support] the element[ and] the slice''s definition.'
+    requirement: '[If a] slicer''s Additional USCDI property only defines the element level Additional USCDI...[, i.e.,] no Additional USCDI... property is defined for the slice, then support for that slice''s definition is optional.'
   - key: CONF-0881
     conformance:
       - SHALL
@@ -2422,3 +2185,23 @@ statement:
     conformance:
       - SHALL
     requirement: Although 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but **SHALL** support at least one.
+  - key: CONF-0889
+    conformance:
+      - SHOULD
+    requirement: ' … this profile uses USPS Two Letter Alphabetic Codes for US states. When encoding addresses outside the US, systems **SHOULD**  use the [ISO 3166 subdivision codes](https://www.iso.org/iso-3166-country-codes.html).'
+  - key: CONF-0890
+    conformance:
+      - SHOULD
+    requirement: Due to implementer feedback, some US Core Profiles reference the base FHIR PractitionerRole resource instead of the US Core PractitionerRole Profile. However, the US Core PractitionerRole Profile **SHOULD** be used as the default profile if referenced by another US Core profile.
+  - key: CONF-0891
+    conformance:
+      - SHOULD
+    requirement: When selecting role codes...implementers **SHOULD** choose the code that reflects the specific duties performed within that role rather than the specialty unless the individual's professional specialization characterizes the role.
+  - key: CONF-0892
+    conformance:
+      - SHOULD
+    requirement: A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` referencing the US Core Device Profile
+  - key: CONF-0893
+    conformance:
+      - MAY
+    requirement: Other information can be tracked such as what activity has occurred in `Provenance.activity`, and details about where the entity came from (for example, a document source's identity and role) in `Provenance.entity`.

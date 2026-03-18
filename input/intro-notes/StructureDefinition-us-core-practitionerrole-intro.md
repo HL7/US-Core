@@ -25,10 +25,10 @@ This section provides detailed implementation guidance for the US Core Profile t
     - `PractitionerRole.healthcareService`
     - `PractitionerRole.location`
 
-- Due to implementer feedback, some US Core Profiles reference the [PractitionerRole] resource instead of the US Core PractitionerRole Profile. However, the US Core PractitionerRole Profile **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].
+- Due to implementer feedback, some US Core Profiles reference the [PractitionerRole] resource instead of the US Core PractitionerRole Profile. However, the US Core PractitionerRole Profile **SHOULD** be used as the default profile if referenced by another US Core profile.<sup>[§][CONF-0889]</sup> See this guidance on [Referencing US Core Profiles].
 - <sup>3</sup> A [Direct address] can be represented in the `telecom` element using the [US Core Direct email Extension] or in a referenced [Endpoint] as a "direct-project" endpoint connection type.
 - <sup>2</sup>When selecting role codes
-  - implementers **SHOULD** choose the code that reflects the specific duties performed within that role rather than the specialty unless the individual's professional specialization characterizes the role.
+  - implementers **SHOULD** choose the code that reflects the specific duties performed within that role rather than the specialty unless the individual's professional specialization characterizes the role.<sup>[§][CONF-0891]</sup>
   - Systems that primarily rely on NUCC codes instead of SNOMED CT to represent role codes can use the Da Vinci HRex [NUCC to SNOMED CT Mappings] to aid in translations.
 - Clients can request Servers return the Practitioner and Endpoint resources using `_include`. See the [Quick Start] section below for further guidance.
 

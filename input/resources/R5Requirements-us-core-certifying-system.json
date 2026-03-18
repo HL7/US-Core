@@ -108,6 +108,54 @@
       "requirement": "[Certifying systems](https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program) [, those that are participating in the ONC Health IT certification program,] **SHALL**... follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) as the standard style guide for Patient.address.line and Patient.address.city for new and updated records."
     },
     {
+      "key": "CONF-0482",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[For organizations participating in the ONC Health IT Certification program] Servers … **SHALL** support ... US Core Procedure Profile for communicating the reason or justification for a referral as Additional USCDI Requirements"
+    },
+    {
+      "key": "CONF-0484",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] although both Procedure.reasonCode and Procedure.reasonReference are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements."
+    },
+    {
+      "key": "CONF-0516",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[For organizations participating in the ONC Health IT Certification program] Servers … **SHALL** support ... US Core Service Request Profile for communicating the reason or justification for a referral as Additional USCDI Requirements"
+    },
+    {
+      "key": "CONF-0518",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] although both ServiceRequest.reasonCode and ServiceRequest.reasonReference are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements."
+    },
+    {
+      "key": "CONF-0520",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference Servers **SHALL** support at least one target resource in ServiceRequest.reasonReference"
+    },
+    {
+      "key": "CONF-0522",
+      "conformance": [
+        "SHOULD"
+      ],
+      "conditionality": true,
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference …The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles)"
+    },
+    {
       "key": "CONF-0801",
       "conformance": [
         "SHALL"
@@ -159,7 +207,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "[I]f a slice is labeled as ... Additional USCDI and the slicer element is not labeled as ... Additional USCDI, then if the ... certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core."
+      "requirement": "[I]f a slice is labeled as ... Must Support/Additional USCDI and the slicer element is not labeled as ... Additional USCDI, then if the ... certifying system supports the element, it must support the slice's definition. There are no examples of this structure in US Core."
     },
     {
       "key": "CONF-0814",
@@ -167,7 +215,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "[I]f a slice is labeled as … Additional USCDI and the slicer element is ... labeled as … Additional USCDI, then … certifying system [**SHALL** support] the element[ and] the slice's definition."
+      "requirement": "[I]f a slice is labeled as … Must Support and the slicer element is ... labeled as … Must Support/Additional USCDI, then … certifying system [**SHALL** support] the element[ and] the slice's definition."
     },
     {
       "key": "CONF-0833",
@@ -214,6 +262,14 @@
       "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **MAY** support other codes."
     },
     {
+      "key": "CONF-0852",
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "Although the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] is marked as an Additional USCDI Requirement on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one."
+    },
+    {
       "key": "CONF-0861",
       "conformance": [
         "SHOULD"
@@ -238,11 +294,12 @@
       "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **MAY** support other categories [in addition to  [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) and  [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html)]."
     },
     {
-      "key": "CONF-0873",
+      "key": "CONF-0872",
       "conformance": [
         "SHALL"
       ],
-      "requirement": "If an element is marked as *Additional USCDI* and defined by a pattern [as described by [ElementDefinition.pattern](http://hl7.org/fhir/R4/elementdefinition-definitions.html#ElementDefinition.pattern_x_)], then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing."
+      "conditionality": true,
+      "requirement": "[I]f a slice is labeled as Additional USCDI... and the slicer element is ... labeled as Must Support/Additional USCDI..., then ... the Certifying System... [**SHALL** support] the element[ and] the slice's definition."
     },
     {
       "key": "CONF-0874",
@@ -250,34 +307,6 @@
         "SHALL"
       ],
       "requirement": "If [an element is] ... marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement."
-    },
-    {
-      "key": "CONF-0875",
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values"
-    },
-    {
-      "key": "CONF-0876",
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "[For any complex element marked as *Additional USCDI*]. If any sub-element is marked as *Additional USCDI*, [the Certifying System **SHALL**] ... meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element."
-    },
-    {
-      "key": "CONF-0878",
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "When a Reference type element is labeled as *Additional USCDI* and has a single target profile referenced, the target profile **SHALL** be supported for Certifying Systems."
-    },
-    {
-      "key": "CONF-0880",
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "When a Reference type element labeled as *Additional USCDI*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*, the *Must Support* target profile(s) **SHALL** be supported by Certifying Systems"
     },
     {
       "key": "CONF-0883",

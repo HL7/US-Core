@@ -45,7 +45,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - See the [Medication List] section for guidance on accessing a patient's medications, including over-the-counter (OTC) medications and other substances taken for medical and recreational use.
-  - Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidance. It is always best practice to confirm this list with the patient or caregiver.
+  - Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidance.<sup>[§][CONF-0842]</sup> It is always best practice to confirm this list with the patient or caregiver.
   - When recording "self-prescribed" medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.<sup>[§][CONF-0407]</sup>
 
 {% include representing-meds.md %}

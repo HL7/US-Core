@@ -337,42 +337,6 @@ statement:
     conformance:
       - MAY
     requirement: Clients may request Specimen resources be included with the Observation or DiagnosticReport resource query.
-  - key: CONF-0527
-    conformance:
-      - SHOULD
-    requirement: '[Clients] **SHOULD** Support the Following Implementation Guide [SMART App Launch version 2.0.0 and later](http://hl7.org/fhir/smart-app-launch/history.html)'
-  - key: CONF-0528
-    conformance:
-      - MAY
-    requirement: '[Clients] **MAY** support the transaction interaction'
-  - key: CONF-0529
-    conformance:
-      - MAY
-    requirement: '[Clients] **MAY** support the batch interaction'
-  - key: CONF-0530
-    conformance:
-      - MAY
-    requirement: '[Clients] **MAY** support the search-system interaction'
-  - key: CONF-0531
-    conformance:
-      - MAY
-    requirement: '[Clients] **MAY** support the history-system interaction'
-  - key: CONF-0544
-    conformance:
-      - MAY
-    requirement: '[Server] **MAY** support the transaction interaction'
-  - key: CONF-0545
-    conformance:
-      - MAY
-    requirement: '[Server] **MAY** support the batch interaction'
-  - key: CONF-0546
-    conformance:
-      - MAY
-    requirement: '[Server] **MAY** support the search-system interaction'
-  - key: CONF-0547
-    conformance:
-      - MAY
-    requirement: '[Server] **MAY** support the history-system interaction'
   - key: CONF-0551
     conformance:
       - SHALL
@@ -437,11 +401,6 @@ statement:
     conformance:
       - MAY
     requirement: Systems **MAY**  protect the confidentiality of data at rest via encryption and associated access controls.
-  - key: CONF-0582
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: The [additional] current binding [[FHIR R5 link](https://hl7.org/fhir/R5/terminologies.html#binding)] requires newly recorded, non-legacy data to be drawn from the [bound] value set.
   - key: CONF-0800
     conformance:
       - MAY
@@ -464,15 +423,6 @@ statement:
       - SHOULD-NOT
     conditionality: true
     requirement: ' **SHOULD  NOT** search the same data within the time stated in the `Cache-Control` header.'
-  - key: CONF-0829
-    requirement: ' **SHALL NOT** be interpreted as search parameters for search. '
-    extension:
-      - url: http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot
-        valueBoolean: true
-  - key: CONF-0830
-    conformance:
-      - SHOULD
-    requirement: Clients **SHOULD** use the standard FHIR SearchParameters.
   - key: CONF-0849
     conformance:
       - SHALL

@@ -32,7 +32,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 ### Profile Specific Implementation Guidance
 
-This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
+This section provides detailed implementation guidance for the US Core Profile to support implementation and certification
 
 - The codes can be from LOINC or SNOMED CT.
 - The value for these types of observations may be:

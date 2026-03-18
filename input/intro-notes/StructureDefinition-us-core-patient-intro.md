@@ -48,22 +48,22 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - <sup>2</sup>Notes for *Race*, *Ethnicity*, *Date of Death*, *Name to Use*, *Previous Name*, *Suffix*, *Previous Address*, *Interpreter Needed*, and *Preferred Language* USCDI Data Elements:
   - The Complex Extensions for Race and Ethnicity allow for one or more codes of which: [Must Support] at least one category code from the OMB Race and Ethnicity Category Value Sets that draw from the [Race & Ethnicity - CDC (CDCREC)] code system.
-    - **MAY** include additional codes from the detailed ethnicity and detailed race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)] code system
-    - **SHALL** include a text description
+    - **MAY** include additional codes from the detailed ethnicity and detailed race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)] code system.<sup>[§][CONF-0461],[§][CONF-0463]</sup>
+    - **SHALL** include a text description.<sup>[§][CONF-0462],[§][CONF-0464]</sup>
   - *Date of Death* is communicated using the `Patient.deceasedDateTime` element.
-    - Although `Patient.deceased[x]` is marked as 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜, Certifying Systems are not required to support both, but **SHALL** support at least `Patient.deceasedDateTime`
-  - *Previous name* is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.
+    - Although `Patient.deceased[x]` is marked as 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜, Certifying Systems are not required to support both, but **SHALL** support at least `Patient.deceasedDateTime`.<sup>[§][CONF-0465]</sup>
+  - *Previous name* is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.<sup>[§][CONF-0466]</sup>
   - *Suffix* is represented using the `Patient.name.suffix` element.
-  - *Previous Address* is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.
-  - Servers can use the [US Core Interpreter Needed Extension] on this profile or the [US Core Encounter Profile] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.
-     - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.
+  - *Previous Address* is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.<sup>[§][CONF-0466]</sup>
+  - Servers can use the [US Core Interpreter Needed Extension] on this profile or the [US Core Encounter Profile] to communicate whether a patient needs an interpreter.<sup>[§][CONF-0851]</sup> Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one.<sup>[§][CONF-0852]</sup> The certifying Client application **SHALL** support the extension on both profiles.<sup>[§][CONF-0853],[§][CONF-0854]</sup>
+     - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.<sup>[§][CONF-0855]</sup>
   - The [Patient example] demonstrates how these elements are represented
-- <sup>1</sup>The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** enable the user who enters the address to follow it as the standard style guide for Patient addresses.
+- <sup>1</sup>The USCDI Patient Demographics Data Class requires following the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] for patient addresses.  For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** enable the user who enters the address to follow it as the standard style guide for Patient addresses.<sup>[§][CONF-0469],[§][CONF-0470]</sup>
    - Consult the style guide for details about the format for the Address datatypes elements, especially `Patient.address.line` and `Patient.address.city`.
-   - Note: historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.
+   - Note: historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.<sup>[§][CONF-0471]</sup>
 - <sup>1</sup>{% include should-3166-subdivision-codes.md type="Patient" %}
 - <sup>3</sup>The [US Core Individual Sex Extension] represents the [U.S. Core Data for Interoperability (USCDI)] data element "Sex". Refer to the FHIR R5 [Patient] Resource for other interoperability considerations with regards to patient sex
 - [Provenance] and the FHIR Extension [Target Element] can document how individual patient demographic data was captured. See [Element Level Provenance] on the [Basic Provenance] page for more information.
-- The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over using Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have purged them from their systems and filtered them out of incoming data.
+- The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`.<sup>[§][CONF-0472]</sup> There is increasing concern over using Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have purged them from their systems and filtered them out of incoming data.
 
 {% include link-list.md %}
