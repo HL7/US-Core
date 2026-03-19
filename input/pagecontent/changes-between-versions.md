@@ -155,7 +155,7 @@ In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4.<sup
        - See the guidance on the [Medication List] page for how to access a patient's medications
     - Care teams as represented by CarePlan in DSTU2 **SHOULD** be replaced by and the data mapped to CareTeam in R4.<sup>[§][CONF-0291],[§][CONF-0294]</sup>
 
-* Servers **SHOULD** make available the same information in DSTU2 and R4 where the more recent standard allows (e.g., patient Amy V. Shaw is available on both).<sup>[§][CONF-295]</sup>
+* Servers **SHOULD** make available the same information in DSTU2 and R4 where the more recent standard allows (e.g., patient Amy V. Shaw is available on both).<sup>[§][CONF-0295]</sup>
   - Exceptions
     - MedicationStatement data mapped to MedicationRequest.<sup>[§][CONF-0296]</sup>
     - care teams, as represented by CarePlan, **SHOULD** be mapped to CareTeam in R4.<sup>[§][CONF-0297]</sup>

@@ -6,7 +6,7 @@ The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USC
 
 ### Mandatory Elements
 
-*Mandatory* elements have a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected always to be present.<sup>[§][CONF-0074</sup> However, very rarely it may be missing, and the [Missing Data] section and the next section provide guidance when the data is missing. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
+*Mandatory* elements have a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected always to be present.<sup>[§][CONF-0074]</sup> However, very rarely it may be missing, and the [Missing Data] section and the next section provide guidance when the data is missing. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
@@ -124,7 +124,7 @@ This view includes the same flags and labels as described in Differential Table 
 
 #### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], used almost exclusively for the CodeableConcept and Coding datatypes. If an element is marked as *Must Support* and defined by a pattern, then the pattern defines the elements *and* element values that the Server **SHALL** be capable of providing.<sup>[§][CONF-0087]</sup> If an element is marked as *Additional USCDI* and defined by a pattern, then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing.<sup>[§][CONF-0802]</sup>
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], used almost exclusively for the CodeableConcept and Coding datatypes. If an element is marked as *Must Support* and defined by a pattern, then the pattern defines the elements *and* element values that the Server **SHALL** be capable of providing.<sup>[§][CONF-0087]</sup> If an element is marked as *Additional USCDI* and defined by a pattern, then the pattern defines the elements *and* element values that the Certifying System **SHALL** be capable of providing.<sup>[§][CONF-0801]</sup>
 
 
 For example, the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in `DiagnosticReport.category.coding.system`  and `DiagnosticReport.category.coding.code` for a Coding element. When claiming conformance to this profile:
@@ -136,7 +136,7 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 
 #### Must Support - Primitive Elements
 
-Primitive elements are single elements with a primitive value. If they are marked as *Must Support*, then the Server **SHALL** be capable of providing the element value to meet the *Must Support* requirement.<sup>[§][CONF-0090]</sup> If they are marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement.
+Primitive elements are single elements with a primitive value. If they are marked as *Must Support*, then the Server **SHALL** be capable of providing the element value to meet the *Must Support* requirement.<sup>[§][CONF-0090]</sup> If they are marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement.<sup>[§][CONF-0802]</sup>
 
 For example, the [US Core DiagnosticReport Profile for Laboratory Results Reporting] issued element is a primitive `instant` datatype. Therefore, when claiming conformance to this profile:
 
@@ -168,7 +168,7 @@ For example, the [US Core Patient Profile] `name` element is labeled *Must Suppo
 
 {% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
-On the other hand, if any sub-element is marked as *Must Support* or *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent.<sup>[§][CONF-0095]</sup> However, if the parent element is represented in the structure, Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** support the sub-elements labeled as *Additional USCDI*.<sup>,[§][CONF-0805]</sup>
+On the other hand, if any sub-element is marked as *Must Support* or *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent.<sup>[§][CONF-0095]</sup> However, if the parent element is represented in the structure, Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** support the sub-elements labeled as *Additional USCDI*.<sup>[§][CONF-0096],[§][CONF-0805]</sup>
 
 For example, the [US Core Patient Profile] `telecom` element is not labeled *Must Support*, but `telecom.system`, `telecom.value`, `telecom.use` are. When claiming conformance to this profile:
 

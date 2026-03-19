@@ -110,7 +110,7 @@ The following **SHOULD** be exposed via DiagnosticReport
 * Pathology Report Narrative<sup>[§][CONF-0229]</sup>
 * Procedure Note<sup>[§][CONF-0230]</sup>
 
-Servers that support DiagnosticReport will include the clinical note narrative content in `DiagnosticReport.presentedForm`.<sup>[§][CONF-231]</sup>
+Servers that support DiagnosticReport will include the clinical note narrative content in `DiagnosticReport.presentedForm`.<sup>[§][CONF-0231]</sup>
 
 A method for discovering the types of notes and reports that a server supports is described in the [Determining Server Note Type](#using-expand) section below.
 
