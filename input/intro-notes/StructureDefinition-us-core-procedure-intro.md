@@ -32,10 +32,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - <sup>2</sup>The `Procedure.performed` is mandatory if `Procedure.status` is "completed" or "in-progress".
-- <sup>1</sup>The `Procedure.code` has an *additional binding* of "[current]" and a base "preferred" binding.
-   - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.
-   - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.
-      - Only LOINC concepts that reflect actual procedures **SHOULD** be used.<sup>[§][CONF-0480]</sup>
+- <span class="bg-success" markdown="1"><sup>1</sup>Unless exchanging legacy or text-only data, procedure codes **SHOULD** be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.<sup>[§][CONF-0895]</sup></span><!-- new-content -->
+   - Only LOINC concepts that reflect actual procedures **SHOULD** be used.<sup>[§][CONF-0480]</sup>
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` referencing the [US Core Device Profile].<sup>[§][CONF-0892]</sup>
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
 - <sup>4</sup>Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements.<sup>[§][CONF-0482],[§][CONF-0483]</sup> Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`. Depending on the procedure being documented, a Server will select the appropriate Profile to use.

@@ -31,8 +31,7 @@ differential:
       min: 1
       mustSupport: true
 
-# ====  for USCDI 5 and V 8 add in Additional Bindings ===========================================
-
+# ====  for USCDI 5 and V 8 add in Additional Bindings removed in V9 ===========================================
 
     - id: Location.type
       path: Location.type
@@ -40,41 +39,8 @@ differential:
       mustSupport: true
       binding:
         strength: extensible
-      # description: ☞☞☞Extensible binding inherited from FHIR R4 `Location.type`☜☜☜
-        valueSet: http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType
-
-# ====== New R5 additional Binding Element Here for HSLOC and c80-facilitycodes: USCDI APPLICABLE VOCABULARY STANDARD ====
-
-        extension:
-          - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
-            extension:
-              - url: key
-                valueId: uscore-uscdi
-              - url: purpose
-                valueCode: extensible
-              - url: valueSet
-                valueCanonical: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.31
-              - url: documentation
-                valueMarkdown: Meets the USCDI applicable vocabulary standard Healthcare Service Location Codes(HSLOC) and SNOMED-CT.
-              - url: shortDoco
-                valueString: USCDI applicable vocabulary standard Healthcare Service Location Codes (HSLOC) or SNOMED-CT Healthcare Facility Type codes
-
-# ====== New R5 additional Binding Element Here for Place of Service (POS) ====
-
-          - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
-            extension:
-              - url: key
-                valueId: uscore-pos
-              - url: purpose
-                valueCode: extensible
-              - url: valueSet
-                valueCanonical: http://terminology.hl7.org/ValueSet/CMSPlaceOfServiceCodes
-              - url: documentation
-                valueMarkdown: CMS Place of Service (POS) codes meet the Health Insurance Portability and Accountability Act of 1996 (HIPAA) (POS Memorandum 2003).
-              - url: shortDoco
-                valueString: CMS Place of Service (POS) codes
-
-
+        # valueSet: http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType  <<<< replace Extensible binding inherited from FHIR R4 in V9 with grouped valueset
+        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-location-type
     - id: Location.type.coding
       path: Location.type.coding
       min: 1
@@ -87,7 +53,7 @@ differential:
       path: Location.type.coding.code
       min: 1
       mustSupport: true
-# =============================================================================
+
 
     - id: Location.telecom
       path: Location.telecom

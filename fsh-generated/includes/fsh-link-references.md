@@ -274,6 +274,7 @@
 [USCoreLaboratoryResultObservationProfile]: StructureDefinition-us-core-observation-lab.html
 [USCoreLaboratoryTestCodes]: ValueSet-us-core-laboratory-test-codes.html
 [USCoreLocationProfile]: StructureDefinition-us-core-location.html
+[USCoreLocationType]: ValueSet-us-core-location-type.html
 [USCoreMedicationAdherenceExtension]: StructureDefinition-us-core-medication-adherence.html
 [USCoreMedicationProfile]: StructureDefinition-us-core-medication.html
 [USCoreMedicationDispenseProfile]: StructureDefinition-us-core-medicationdispense.html
@@ -293,6 +294,7 @@
 [USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
 [USCorePractitionerProfile]: StructureDefinition-us-core-practitioner.html
+[USCorePractitionerSpecialty]: ValueSet-us-core-practitionerrole-specialty.html
 [USCorePractitionerRoleProfile]: StructureDefinition-us-core-practitionerrole.html
 [USCoreProblemOrHealthConcern]: ValueSet-us-core-problem-or-health-concern.html
 [USCoreProcedureCodes]: ValueSet-us-core-procedure-code.html

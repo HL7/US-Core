@@ -1487,6 +1487,11 @@ definition:
       exampleBoolean: false
       name: US Core Location Profile
     - reference:
+        reference: ValueSet/us-core-location-type
+      description: This value set represents the types of locations and organizational settings where healthcare services, encounters, or treatments occur, and is composed of several value sets to meet multiple industry needs. It includes HL7 Terminology (THO), SNOMED CT, National Healthcare Safety Network (NHSN), and CMS Place of Service Codes(POS) concepts.
+      exampleBoolean: false
+      name: US Core Location Type Codes
+    - reference:
         reference: StructureDefinition/us-core-medication-adherence
       description: The Medication Adherence Extension is used to report whether a medication has been consumed according to instructions as reported by a patient or on behalf of the patient.
       exampleBoolean: false
@@ -1584,6 +1589,11 @@ definition:
       description: The US Core Practitioner Profile inherits from the FHIR [Practitioner](https://hl7.org/fhir/R4/practitioner.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and administrative information about an individual practitioner. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Practitioner Profile
+    - reference:
+        reference: ValueSet/us-core-practitionerrole-specialty
+      description: This value set represents the "type" of health care provider individual or organization and is composed of two value sets. It include the National Uniform Claims Committee (NUCC) and SNOMED CT concepts.
+      exampleBoolean: false
+      name: US Core Practitioner Specialty Codes
     - reference:
         reference: StructureDefinition/us-core-practitionerrole
       description: The US Core PractitionerRole Profile inherits from the FHIR [PractitionerRole](https://hl7.org/fhir/R4/practitionerrole.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the PractitionerRole Resource to record, search, and fetch the practitioner role information. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. The requirements for the US Core Practitioner were drawn from the [Argonaut Provider Directory](http://www.fhir.org/guides/argonaut/pd//release1/index.html),  [IHE Healthcare Provider Directory](http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf)  and the [ONC Provider Directory Workshop](https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents).

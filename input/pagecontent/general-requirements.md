@@ -119,7 +119,10 @@ FHIR profiles use [slicing] when a coded element is a repeating elements and a p
 
 #### Extensible Binding for Coded Elements
 
-[Extensible Binding]  means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.<sup>[§][CONF-0023]</sup>  If no suitable code exists in the ValueSet, alternate code(s) may be provided.<sup>[§][CONF-0024]</sup>  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings. If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used.<sup>[§][CONF-0026]</sup>
+<div class="bg-success" markdown="1">
+
+[Extensible Binding] means that one of the codes from the specified value set **SHALL** be used when an appropriate concept exists; otherwise, alternate code(s) **MAY** be used.<sup>[§][CONF-0023],[§][CONF-0024]</sup>  This applies to *at least one* coding for elements with the `CodeableConcept` datatype, which permits multiple codings and a text element. Text-only representation **SHOULD NOT** be used - coded values are expected whenever possible to support interoperability.<sup>[§][CONF-0026]</sup>
+</div><!-- new-content -->
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for the CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
@@ -131,20 +134,12 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 3: US Core AllergyIntolerance.code" %}
 
+<div class="bg-success" markdown="1">
 
+Although the FHIR guidance for extensible bindings indicates that all conceptual overlaps including free text, be mapped to the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR guidance. This flexibility is sometimes necessary and expected for legacy and text-only data. However, for newly recorded, non-legacy data, a system **SHOULD** adhere to the extensible binding rules.<sup>[§][CONF-0896]</sup>
 
-#### Current Binding for Coded Elements
-
-The FHIR rules for extensible bindings state that *all conceptual overlaps*, including free text, should be mapped to the coded values in the bindings. US Core adopts the [current] additional binding from FHIR R5 for more flexibility in exchanging legacy and text-only data. The current binding requires newly recorded, non-legacy data to be drawn from the value set.
-
-For example, the [US Core Procedure Codes] and  [US Core Condition Codes] ValueSets cover the entire domain. For data not captured by fine-grained code, it is possible to provide a high-level abstract code, such as SNOMED CT "Procedure". Therefore, instead of requiring systems to map all legacy and text data to standard codes, the value set uses a "current" binding
-
-<div class="stu-note" markdown="1">
-
-The "current" binding corresponds to the US Core's interpretation of extensible bindings US Core version 6.1.0 and earlier.
-</div><!-- stu-note -->
-
-  {% include img.html img="Must_Support_Condition_code.png" caption="Figure 4: US Core Condition Problems and Health Concerns.code" %}
+For example, the US Core Procedure Codes and US Core Condition Codes ValueSets contain several high-level abstract codes. For data not captured by the system transmitting the information, the coded data **SHOULD** be automatically converted to fine-grained codes from the specified ValueSet.<sup>[§][CONF-0897]</sup> If this is not possible, the system **MAY** provide the existing code or the free text, and a high-level abstract code, such as the SNOMED CT code "71388002"(Procedure), to remain conformant with the extensible binding.<sup>[§][CONF-0898]</sup>
+</div><!-- new-content -->
 
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
