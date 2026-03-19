@@ -179,10 +179,21 @@ if [[ $GEN_REQ ]]; then
 
     yq -p=csv -oy --csv-auto-parse=f "
       [.[] |
-        pick([\"key\", \"conformance\", \"conditionality\", \"requirement\", \"certifiers_only\", \"actor\"]) |
+        .key as \$key |
+        select(.key != null and .key != \"\" and .conformance != \"DEPRECATED\") |
+        pick([\"key\", \"reference\", \"conformance\", \"conditionality\", \"requirement\", \"certifiers_only\", \"actor\"]) |
         select($filter) |
-        select(.conformance != \"DEPRECATED\") |
-
+        .reference = (.reference | split(\",\")| map(trim)) |
+        ._reference = (
+            [(.reference | to_entries[]) | {
+              \"extension\": [
+                {
+                  \"url\": \"http://hl7.org/fhir/StructureDefinition/narrativeLink\",
+                  \"valueUrl\": (.value | sub(\"#.*\", \"#\" + \$key))
+                }
+              ]
+            }]
+          ) |
         .conformance = (.conformance | split(\"|\")) |
         with(select(.conformance | contains([\"SHALL-NOT\"]));
           .extension = (.extension // []) + [{
@@ -202,7 +213,8 @@ if [[ $GEN_REQ ]]; then
           del(.conditionality)
         ) |
         del(.certifiers_only) |
-        del(.actor)
+        del(.actor) |
+        del(.context)
       ]
     " "$data"/us_core_reqs.csv > /tmp/statements.yaml
 

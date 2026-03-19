@@ -16,12 +16,12 @@ with the following columns:
 ================================================================== -->
 
 
-{% assign rows = site.data.us_core_reqs -%}
-{% for item in rows %}
-{% unless item.key == blank or item.key == "" %}
+{% assign rows = site.data.us_core_reqs
+  | where_exp: "item", "item.key.size > 0"
+  | where_exp: "item", "item.conformance != 'DEPRECATED'" -%}
+{% for item in rows -%}
 [{{item.key}}]: requirements.html#{{item.key}} "{{item.key}}"
 {: #{{item.key}}}
-{% endunless %}
 {% endfor %}
 
 <!-- =============================== end liquid =================================== -->

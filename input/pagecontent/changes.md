@@ -70,7 +70,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 40. **Applied:** Non-substantive (Correction) Add plain language summary [FHIR-54948](https://jira.hl7.org/browse/FHIR-54948) See Changes [Here](index.html)
 41. **Resolved - change required:** Non-substantive (Clarification) More guidance needed for what to represent in Requester field. [FHIR-54949](https://jira.hl7.org/browse/FHIR-54949) See Changes [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-pmo-servicerequest.html)
-42. **Resolved - change required:** Compatible, substantive (Enhancement)  New Requirements Table page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes:
+42. **Resolved - change required:** Compatible, substantive (Enhancement)  Add Requirements Page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes:
     -  [US Core Conformance Artifacts](general-requirements.html#us-core-conformance-artifacts)
     -  [Requirements Table](requirements.html)
     -  [Capability Statements and Requirements Resources ](capability-statements.html)

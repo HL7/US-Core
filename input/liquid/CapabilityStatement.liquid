@@ -133,7 +133,7 @@
     {% endif %}
   </ul>
 
-
+-->
 
   <!--  REST Capabilities -->
   {% for Arest in rest %}
@@ -235,17 +235,17 @@
 
 
     <!-- Resource Capabilities Summary Table -->
-    {% if Arest.resource %}
+    {% if Arest.resource.exists() %}
 
       <h4>Summary of Resource/Profile Capabilities</h4>
       <table class="grid" style="width: 100%;">
           <colgroup>
-            <col style="width: 15%;"></col>  <!-- First column: 20% -->
-            <col style="width: 25%;"></col>   <!-- Second: 20% -->
-            <col style="width: 15%;"></col>  <!-- Third: 15% -->
-            <col style="width: 20%;"></col>  <!-- fourth column: 20% -->
-            <col style="width: 15%;"></col>   <!-- fifth: 15% -->
-            <col style="width: 10%;"></col>   <!-- six: 10% -->
+            <col style="width: 15%;" />  <!-- First column: 20% -->
+            <col style="width: 25%;" />   <!-- Second: 20% -->
+            <col style="width: 15%;" />  <!-- Third: 15% -->
+            <col style="width: 20%;" />  <!-- fourth column: 20% -->
+            <col style="width: 15%;" />   <!-- fifth: 15% -->
+            <col style="width: 10%;" />   <!-- six: 10% -->
           </colgroup>
           <thead>
           <tr>
@@ -277,7 +277,7 @@
 
             <!-- Supported Profiles -->
             <td>
-              {% if r.supportedProfile %}
+              {% if r.supportedProfile.exists() %}
                       {% for supportedProfile in r.supportedProfile %}
                           {% assign display = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
                           {% assign rel_url = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
@@ -293,7 +293,7 @@
             </td>
 
             <!-- Supported Searches will need to do some sort of mapping instead of join to get the expectations printed out -->
-            <td>exist
+            <td>
               {% if r.searchParam %}
                 {{r.searchParam.name.join(', ')}}
                 {% if r.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination').exists() %}
@@ -347,13 +347,13 @@
 
           <p>Conformance Expectation:	<strong>{{resource.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong></p>
           <!-- Documenation -->
-          {% if resource.documentation %}<p>Resource Specific Documentation:</p>
+          {% if resource.documentation.exists() %}<p>Resource Specific Documentation:</p>
             <blockquote>{{ resource.documentation }}</blockquote>{% endif %}
 
-          {% if resource.profile %}<p>Base Profile: <a href="{{resource.profile}}">{{resource.profile}}</p>{% endif %}
+          {% if resource.profile.exists()  %}<p>Base Profile: <a href="{{resource.profile}}">{{resource.profile}}</p>{% endif %}
 
           <!-- supported profiles -->
-          {% if resource.supportedProfile %}<p>Supported Profiles:</p>
+          {% if resource.supportedProfile.exists() %}<p>Supported Profiles:</p>
             <ul>
               {% for supportedProfile in resource.supportedProfile %}
                  {% assign display = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
@@ -371,13 +371,13 @@
           {% endif %}
 
         <p>
-          {% if resource.referencePolicy %}Reference Policy: {% for rf in resource.referencePolicy %}<code>{{rf}}</code>,{% endfor %}{% endif %}
+          {% if resource.referencePolicy.exists() %}Reference Policy: {% for rf in resource.referencePolicy %}<code>{{rf}}</code>,{% endfor %}{% endif %}
 
-          {% comment %} {% if resource.versioning %}Versioning Policy: <code>{{resource.versioning}}</code>{% endif %} <<< TRIGGERS a NPE in BUILD see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/comparison.20parameters.20interferes.20with.20liquid.20parameter.2E/near/573431070 {% endcomment %}
+          {% if resource.versioning.exists() %}Versioning Policy: <code>{{resource.versioning}}</code>{% endif %}
 
-          {% if resource.readHistory %}Server returns past versions as part of the vRead operation.{% endif %}
+          {% if resource.readHistory.exists() %}Server returns past versions as part of the vRead operation.{% endif %}
 
-          {% if resource.updateCreate %}Server allows the client to create new identities on the server{% endif %}
+          {% if resource.updateCreate.exists() %}Server allows the client to create new identities on the server{% endif %}
         </p>
 
         <!-- Resource Interactions -->
@@ -401,8 +401,9 @@
               <li>{%for i in resource.interaction.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %} {{ i.code }}, {% endfor %}</li>
             {% endif %}
           </ul>
-        <!-- Rest interaction details -->
-        {% if resource.interaction.where(code='create' or code='update' or code='delete' or code='patch') %}
+
+        <!-- Rest Modify Criteria Details: interaction details -->
+        {% if resource.interaction.where(code='create' or code='update' or code='delete' or code='patch').exists() %}
           <br/>
           <p>Modify Criteria Details:</p>
           <ul>
@@ -411,7 +412,7 @@
                 <li>
                   A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}creating{% else %}posting{% endif %} a {{resource.type}} resource using:
                   <code class="highlighter-rouge">POST [base]/{{resource.type}} {?_format=[mime-type]}</code>
-                  {% if resource.conditionalCreate %}
+                  {% if resource.conditionalCreate.exists() %}
                     <ul>
                       <li>
                         A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.conditionalCreate.extension %}</strong> be capable of the conditional create of a {{resource.type}} resource using header:
@@ -427,7 +428,7 @@
                   <!-- TODO change note if server allows putting of a new one (with a specified ID) -->
                   A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}updating{% else %}putting{% endif %} a existing {{resource.type}} resource using:
                   <code class="highlighter-rouge">PUT [base]/{{resource.type}}/[id] {?_format=[mime-type]}</code>
-                  {% if resource.conditionalCreate %}
+                  {% if resource.conditionalCreate.exists() %}
                     <ul>
                       <li>
                         A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalUpdate.extension %}</strong> be capable of the conditional update of a {{resource.type}} resource using:
@@ -441,8 +442,8 @@
               {% if i.code = 'delete' %}
                 <li>
                   A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}deleting{% else %}deleting{% endif %} a {{resource.type}} resource using:
-                  <code class="highlighter-rouge">DELETE [base]/{{r.type}}/[id]</code>
-                  {% if resource.conditionalDelete %}
+                  <code class="highlighter-rouge">DELETE [base]/{{resource.type}}/[id]</code>
+                  {% if resource.conditionalDelete.exists() %}
                     <ul>
                       <li>
                         {% if resource.conditionalDelete = 'not-supported' %}
@@ -465,7 +466,9 @@
             {%endfor %}
           </ul>
         {% endif %}
-        {% if resource.interaction.where(code='read' or code='vread' or code='search-type' or code='history-instance' or code='history-type') %}
+
+        <!-- Rest Fetch and Search Criteria Details interaction details -->
+        {% if resource.interaction.where(code='read' or code='vread' or code='search-type' or code='history-instance' or code='history-type').exists() %}
           <br/>
           <p>Fetch and Search Criteria Details:</p>
           <ul>
@@ -806,6 +809,7 @@
           {% endif %}
 
           </ul>
+
           {% for o in resource.operation %}
             {% if o.documentation.exists() %}
               <blockquote>
@@ -820,7 +824,7 @@
     {% endif %}
   {% endfor %}
 
-  <!-- Messaging Capabilities -->
+  <!-- Messaging Capabilities  -->
   {% for Amsg in messaging %}
     <br/>
     <br/>

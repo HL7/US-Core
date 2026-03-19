@@ -2,17 +2,7 @@
   "resourceType": "Bundle",
   "id": "allergyintolerance-provenance-example2",
   "meta": {
-    "lastUpdated": "2019-07-09T18:49:01.235+00:00",
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "AllergyIntolerance Provenance Example 2"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This example show how  an \"inline\" search result parameter `_revinclude` will return a FHIR searchset Bundle resource.  It contains the AllergyIntolerance resource based on the `_id` search parameter and the last Provenance for the version named in the reference."
-      }
-    ]
+    "lastUpdated": "2019-07-09T18:49:01.235+00:00"
   },
   "type": "searchset",
   "total": 1,

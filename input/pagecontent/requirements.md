@@ -1,18 +1,13 @@
 {% include new_page.md %}
 This table lists the requirements defined in the US Core Implementation Guide’s narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv) and [Excel](tables/us_core_reqs.xlsx) file, as well as in [US Core Requirements Resources][Capability Statements and Requirements Resources] .
 
-Legend:
+**Legend:**
 
-* ID:  A requirement key that identifies the requirement and links it to the statement in the guide.
-* Context: The page or section topic that pertains to the requirement, for example, US Core Medication Request Profile, or Clinical Notes.
-* Actor: The roles to which this requirement applies. The actors are:
-  * Server: US Core Responder (Servers including Certifying Systems)
-  * Client: US Core Requester (Clients including Certifying Systems)
-  * Both: Both US Core Responder and Requester (including Certifying System).
-* Certifying Systems Only: A Flag to indicate whether the requirement is an additional USCDI certification requirement.
-* Conformance: The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD-NOT, or SHALL NOT. Note that there may be several conformance verbs in a single statement.
-* Conditional: A Flag to indicate whether the requirement is conditional. The condition is stated in the requirement statement.
-* Requirement: The actual requirements statement, which is a direct quote from the IG and may include helpful context in square brackets. Note that statements in the narrative section that contain multiple requirements in a single context are split into individual requirement statements.
+* **Key:**  An identifier for the requirement.
+* **Context:** The name and link to the narrative section that pertains to the requirement. There can be more than one narrative section that references the same requirement.
+* **Conformance:** The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD-NOT, or SHALL NOT.
+* **Certifying Systems Only**: A Flag for server requirements to indicate whether the requirement is an additional USCDI certification requirement.
+* **Requirement:** The actual requirements statement, which is a direct quote from the IG and may include helpful context in square brackets. Note that statements in the narrative section that contain multiple requirements in a single context are split into individual requirement statements.
 
 
 <!-- ==================================================================
@@ -29,14 +24,14 @@ added = added for US Core publication:
 - Is_New: (added) Flag for new or updated content for the current version. Defult is "FALSE"  or empty and set to "TRUE" for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
 - ID*: (inherited) The unique identifier for the requirement. IDs are short, meaningless (they do not contain context like section numbers), and numeric. An approach is incrementing integers. See below for how to handle IDs for child requirements.
 - key: (added) A requirement key that identifies the requirement and links it to the statement in the guide. The format is "CONF-NNNN" where NNNN is a sequentially increasing zero padded integer with the coresponding ID* value.  e.g, "CONF-0022" Mapping: key -> Requirements.statement.key"
-- URL*: (inherited) "The URL of the deepest section that contains the requirement. The URL provides context for the requirement text.
+- URL*: (inherited) "The list of URLs of the deepest section that contains the requirement. The URL provides context for the requirement text.
    Mapping: URL ->  Requirements.statement.reference"
-- rel_url: (added) Url of the page from where the requirements statement came from, this is use to create a link back to the page.
+- reference: (added)  the list of relative urls of the page from where the requirements statement came from, this is use to create a link back to the page.
 - requirement: (inherited changed columm name from Requirement*) "A direct quote from the IG. Add any clarifications or interpretations in a helper column like the Test Plan column. May include helpful context in square brackets.
   Mapping: requirement -> Requirements.statement.requirement" The format is Markdown and is either a sentence, one of more bullets, or even a paragraph to express a single requirement.
 - conformance: (inherited changed columm name from Conformance*) "The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD NOT [updated to SHOULD-NOT], SHALL NOT [updated to SHALL-NOT], and DEPRECATED [see  excel file]Further Consideration below for when to use DEPRECATED)."  Note   that there may be several conformance verbs in a single statement. The format is "<CONF>|<CONF>|etc" where "<CONF>" is a conformance verb.  If a requirement is removed for some reason, its ID is retired and its Conformance is updated to DEPRECATED - These are not published in the table or the resource.
    Mapping: conformance -> Requirements.statement.conformance.
-- update_verb: a field to indicate that a tracker needs to be created to update the conformance verb in the IG. default is empty format old verb to new verb  for example, must to **SHALL**
+- update_verb: a comment field to indicate that a tracker needs to be created to update the conformance verb in the IG. default is empty format old verb to new verb  for example, must to **SHALL**
 - actor: (inherited changed columm name from Actors*) "The actor, or actors, that the requirement constrains. The values will depend on the target specification, e.g., for Subscriptions (https://hl7.org/fhir/uv/subscriptions-backport/STU1.1/actors.html), Client and Server.
    Mapping: actor -> Requirements.actor"  NOTE updated to be "Server|Client|Both" since only a single actor supported in the R5 requirements resource.
 - certifiers_only:  (added) Flag to indicate whether the requirement is an additional USCDI certification requirement.  Default is empty or "FALSE" and set to "TRUE" for additional USCDI certification requirements. Mapping: certifiers_only -> Requirements.statement.extension:uscdi-requirements = true
@@ -47,10 +42,10 @@ added = added for US Core publication:
 - Verifiability Details: (inherited)  Not used
 - Planning To Test?: (inherited)  Not used
 - Planning To Test Details: (inherited)  Not used
-- Page: (inherited) "The page the requirement came from, extracted from the URL."
-- Section: (inherited) "The section the requirement came from, extracted from the URL."  Useful for context
-- context: (added) The page or section topic that pertains to the requirement, For example, US Core Medication Request Profile, or Clinical Notes.  Usually derived from the source location.\, but can be manually curated too. format = Page: Section
-- Verb Guess: (inherited)  Not used
+- Page: (inherited) "The list of pages the requirement came from, extracted from the URL."
+- Section: (inherited) "The liar of sections the requirement came from, extracted from the URL."  Useful for context
+- context: (added) The list of page " section topic that pertains to the requirement, For example, US Core Medication Request Profile, or Clinical Notes.  Usually derived from the source location.\, but can be manually curated too. format = Page: Section
+- Verb Guess: (inherited)  Not useds
 - Actor Guess: (inherited)  Not used
 - Section #: (inherited)  Not used
 - Grouping: (inherited)  Not used
@@ -63,34 +58,44 @@ added = added for US Core publication:
 The script sorts and selects the table data and allows for highlighting new and updated content.
 ================================================================== -->
 
+{% assign rows = site.data.us_core_reqs -%}
+{% assign actors = "Server,Client" | split: "," %}
+{% for actor in actors %}
+
+### {{ actor }} Requirements
 <table class="grid">
 <thead>
-<tr>
-<th>ID</th>
-<th>Context</th>
-<th>Actor</th>
-<th>Certifying Systems<br />
-Only</th>
-<th>Conformance</th>
-<th>Requirement</th>
-</tr>
+  <tr>
+    <th>Key</th>
+    <th>Context</th>
+    {% if actor == "Server" %}<th>Certifying Systems<br />
+     Only</th>{% endif %}
+    <th>Conformance</th>
+    <th>Requirement</th>
+  </tr>
 </thead>
 <tbody>
-{% assign rows = site.data.us_core_reqs %}
-{% for item in rows %}
-  {% unless item.conformance == "DEPRECATED" %}
-    <tr id="{{item.key}}" {% if item.Is_New == "TRUE" %}class="bg-success"{% endif %}>
-    <td><a href="{{item.Page}}.html#{{item.key}}">{{item.key}}</a></td>
-    <td>{{item.context}}</td>
-    <td>{{item.actor}}</td>
-    <td style="text-align: center;">{% if item.certifiers_only  == "TRUE" %}X{% endif %}</td>
-    <td>{{item.conformance}}</td>
-    <td>{{item.requirement | markdownify }}</td>
-    </tr>
-  {% endunless %}
+{% assign actor_rows = rows | where: "actor", actor | where_exp: "item", "item.conformance != 'DEPRECATED'" | where_exp: "item", "item.key != blank" -%}
+{% for item in actor_rows -%}
+  {% assign contexts = item.context | split: "," -%}
+  {% assign pages = item.Page | split: "," -%}
+  <tr id="{{ item.key }}"{% if item.Is_New == "TRUE" %} class="bg-success"{% endif %}>
+    <td>{{ item.key }}</td>
+    <td>
+      {% for context in contexts -%}
+        <span style="color: grey;">• </span><a href="{{ pages[forloop.index0] }}.html#{{ item.key }}">{{ context | strip }}</a>
+        {% unless forloop.last %}<br />{% endunless %}
+      {% endfor %}
+    </td>
+    {% if actor == "Server" %}<td style="text-align: center;">{% if item.certifiers_only  == "TRUE" %}<strong>X</strong>{% endif %}</td>{% endif %}
+    <td><strong>{{ item.conformance }}</strong></td>
+    <td>{{ item.requirement | markdownify }}</td>
+  </tr>
 {% endfor %}
 </tbody>
 </table>
+
+{% endfor %}
 
 <!-- =============================== end liquid =================================== -->
 

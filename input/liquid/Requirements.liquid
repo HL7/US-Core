@@ -2,18 +2,37 @@
 
 <p>These requirements apply to the actor: <i><strong>{{ Requirements.actor.extension('http://hl7.org/fhir/StructureDefinition/display').value }}</strong></i></p>
 
+<p><strong>Legend:</strong></p>
+<ul>
+<li><strong>Key:</strong>  An identifier for the requirement.</li>
+<li><strong>Context:</strong> The name and link to the narrative section that pertains to the requirement. There can be more than one narrative section that references the same requirement.</li>
+<li><strong>Conformance:</strong> The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD-NOT, or SHALL NOT.</li>
+<li><strong>Requirement:</strong> The actual requirements statement, which is a direct quote from the IG and may include helpful context in square brackets. Note that statements in the narrative section that contain multiple requirements in a single context are split into individual requirement statements.</li>
+</ul>
+
 <table class="grid">
   <thead>
     <tr>
     <th>Key</th>
+    <th>Context</th>
     <th>Conformance</th>
     <th>Requirement</th>
     </tr>
   </thead>
   <tbody>
     {% for i in Requirements.statement %}
-    <tr>
+    <tr id="{{i.key}}" >
     <td>{{ i.key }}</td>
+    <td>
+        {% for ref in i.reference %}
+            {% assign rel_url = ref.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
+          {% if rel_url %}
+            <span style="color: grey;">•</span><a href="{{ rel_url }}">{{ ref }}</a><br />
+          {% else %}
+            <span style="color: grey;">•</span>{{ ref }}<br />
+          {% endif %}
+        {% endfor %}
+    </td>
     <td style="text-align: center;">{{ i.conformance.join(', ') }}{% if i.extension('http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot').exists() %}SHALL-NOT{% endif %}</td>
     <td>{{ i.requirement | markdownify }}</td>
     </tr>
@@ -21,5 +40,3 @@
   </tbody>
 </table>
 </div>
-
-
