@@ -1,11 +1,11 @@
 {% include new_page.md %}
-This table lists the requirements defined in the US Core Implementation Guide’s narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv) and [Excel](tables/us_core_reqs.xlsx) file, as well as in [US Core Requirements Resources][Capability Statements and Requirements Resources] .
+These tables lists the requirements defined in the US Core Implementation Guide’s narrative sections. They represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv) and [Excel](tables/us_core_reqs.xlsx) file, as well as in [US Core Requirements Resources][Capability Statements and Requirements Resources] .
 
 **Legend:**
 
 * **Key:**  An identifier for the requirement.
 * **Context:** The name and link to the narrative section that pertains to the requirement. There can be more than one narrative section that references the same requirement.
-* **Conformance:** The conformance verb of the requirement: SHALL, SHOULD, MAY, SHOULD-NOT, or SHALL NOT.
+* **Conformance:** The conformance verb of the requirement: **SHALL**, **SHOULD**, **MAY**, **SHALL-NOT**, or **SHOULD-NOT**.
 * **Certifying Systems Only**: A Flag for server requirements to indicate whether the requirement is an additional USCDI certification requirement.
 * **Requirement:** The actual requirements statement, which is a direct quote from the IG and may include helpful context in square brackets. Note that statements in the narrative section that contain multiple requirements in a single context are split into individual requirement statements.
 
