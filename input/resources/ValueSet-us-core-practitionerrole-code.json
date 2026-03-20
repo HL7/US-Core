@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-core-practitionerrole-specialty",
+  "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-practitionerrole-specialty",
+  "name": "USCorePractitionerSpecialty",
+  "title": "US Core Practitioner Specialty Codes",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-19",
+  "description": "This value set represents the \"type\" of health care provider individual or organization and is composed of two value sets. It include the National Uniform Claims Committee (NUCC) and SNOMED CT concepts.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.30"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+        ]
+      }
+    ]
+  }
+}

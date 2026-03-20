@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-core-location-type",
+  "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-location-type",
+  "name": "USCoreLocationType",
+  "title": "US Core Location Type Codes",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-19",
+  "description": "This value set represents the types of locations and organizational settings where healthcare services, encounters, or treatments occur, and is composed of several value sets to meet multiple industry needs. It includes HL7 Terminology (THO), SNOMED CT, National Healthcare Safety Network (NHSN), and CMS Place of Service Codes(POS) concepts.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.31"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://terminology.hl7.org/ValueSet/CMSPlaceOfServiceCodes"
+        ]
+      }
+    ]
+  }
+}
