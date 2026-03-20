@@ -294,7 +294,7 @@
 [USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
 [USCorePractitionerProfile]: StructureDefinition-us-core-practitioner.html
-[USCorePractitionerSpecialty]: ValueSet-us-core-practitionerrole-specialty.html
+[USCorePractitionerRoleSpecialty]: ValueSet-us-core-practitionerrole-specialty.html
 [USCorePractitionerRoleProfile]: StructureDefinition-us-core-practitionerrole.html
 [USCoreProblemOrHealthConcern]: ValueSet-us-core-problem-or-health-concern.html
 [USCoreProcedureCodes]: ValueSet-us-core-procedure-code.html

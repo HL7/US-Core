@@ -59,9 +59,9 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 30. **Applied:** Non-substantive (Correction) Fix typos on the "Writing Clinical Notes" page. [FHIR-54396](https://jira.hl7.org/browse/FHIR-54396) See Changes [Here](writing-clinical-notes.html)
 31. **Applied:** Non-substantive (Clarification) Update definition of `Device.patient` [FHIR-54406](https://jira.hl7.org/browse/FHIR-54406) See Changes [Here](StructureDefinition-us-core-device-definitions.html#key_Device.patient)
 32. **Applied:**  Non-substantive (Correction) Update Must Support description of Coded Quantity Result [FHIR-54417](https://jira.hl7.org/browse/FHIR-54417) See Changes [Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
-33. **Resolved - change required:** Compatible, substantive (Enhancement) Remove Must Support Requirement for DocumentReference.attester [FHIR-54563](https://jira.hl7.org/browse/FHIR-54563) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#profile)
+33. **Applied:** Compatible, substantive (Clarification) Remove Must Support Requirement for DocumentReference.attester [FHIR-54563](https://jira.hl7.org/browse/FHIR-54563) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance)
 34. **Applied:** Non-substantive (Clarification) Update us-core-3 and us-core-22 constraint description [FHIR-54654](https://jira.hl7.org/browse/FHIR-54654) For example, see Changes [Here](StructureDefinition-us-core-observation-lab.html#constraints)
-35. **Resolved - change required:** Non-substantive (Clarification) Should explain what acronym PMO means  [FHIR-54657](https://jira.hl7.org/browse/FHIR-54657) See Changes [Here](StructureDefinition-us-core-pmo-servicerequest.html#root)
+35. **Applied:** Non-substantive (Clarification) Spell out PMO [FHIR-54657](https://jira.hl7.org/browse/FHIR-54657) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#root)
 36. **Applied:** Compatible, substantive (Correction) Correct URL for USCore Model Info Library resource and remove prior versions [FHIR-54705](https://jira.hl7.org/browse/FHIR-54705) See Changes [Here](Library-uscore-modelinfo.html)
 37. **Applied:** Non-substantive (Clarification) Clarify definition of "Direct Write" and "Mediated Submission" [FHIR-54934](https://jira.hl7.org/browse/FHIR-54934) See Changes [Here](writing-clinical-notes.html#modes-of-operation)
 38. **Applied:** Non-substantive (Enhancement) Update introductory text to UDI Specific Implementation Guidance.[FHIR-54939](https://jira.hl7.org/browse/FHIR-54939) See Changes [Here](StructureDefinition-us-core-device.html#udi--specific-implementation-guidance)
@@ -77,11 +77,11 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     -  [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html)
     -  [US Core Server Requirements](Requirements-us-core-server.html)
     -  [US Core Client Requirements](Requirements-us-core-client.html)
-43. **Resolved - change required:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597), FHIR-54271)](https://jira.hl7.org/browse/FHIR-54271), and [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919), [ See Changes Here:
+43. **Resolved - change required:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597), [FHIR-54271)](https://jira.hl7.org/browse/FHIR-54271), and [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919), [ See Changes Here:
     - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
     - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html)
 44. **Applied:**  Change the preferred binding for RelatedPerson.relationship to VSAC's Personal And Legal Relationship Role Type value set[FHIR-53376](https://jira.hl7.org/browse/FHIR-53376) See Changes [Here](StructureDefinition-us-core-relatedperson-definitions.html#RelatedPerson.relationship)
-45. **Resolved - change required:** Non-substantive (Clarification) Clarification on PMO formats [FHIR-53823](https://jira.hl7.org/browse/FHIR-53823) See Changes [Here]()
+45. **Applied:** Non-substantive (Clarification) Clarify PMO formats [FHIR-53823](https://jira.hl7.org/browse/FHIR-53823) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance)
 46. **Applied:** Compatible, substantive (Correction) Remove mappings from US Core StructureDefinitions [FHIR-54105](https://jira.hl7.org/browse/FHIR-54105) For Changes See previous versions 'StructureDefinitions.differential.element[].id.mapping' elements
 47. **Applied:** Non-substantive (Clarification) Update Basic Provenance Figure 3 and 4 [FHIR-54222](https://jira.hl7.org/browse/FHIR-54222) See Changes
     - [HIE Redistribution](basic-provenance.html#hie-redistribution)
