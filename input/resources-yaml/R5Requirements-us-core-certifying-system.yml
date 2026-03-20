@@ -409,16 +409,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: must-support.html#CONF-0872
-  - key: CONF-0874
-    reference:
-      - must-support.html#must-support---primitive-elements
-    conformance:
-      - SHALL
-    requirement: If [an element is] ... marked as *Additional USCDI*, then the Certifying System **SHALL** be capable of providing the element value to meet the *Additional USCDI* requirement.
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: must-support.html#CONF-0874
   - key: CONF-0883
     reference:
       - must-support.html#must-support---resource-references
@@ -439,3 +429,13 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: must-support.html#CONF-0884
+  - key: CONF-0902
+    reference:
+      - StructureDefinition-us-core-location.html#profile-specific-implementation-guidance
+    conformance:
+      - MAY
+    requirement: Healthcare Service Location Codes (HSLOC) and SNOMED-CT Healthcare Facility Type value sets meet the USCDI applicable vocabulary standard for the Encounter Location Data Element. Certifying Systems **MAY** use a code from either vocabulary.
+    _reference:
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-location.html#CONF-0902

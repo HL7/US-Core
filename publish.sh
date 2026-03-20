@@ -768,6 +768,21 @@ if [[ $IG_PUBLISH ]]; then
     sleep 1
   fi
 
+  echo ""
+  echo "===================================================================="
+  echo "Checking for JSON files with no corresponding YAML source ..."
+  echo "====================================================================="
+  echo ""
+  for json_file in "$resources"/*.json; do
+    base=$(basename "$json_file" .json)
+    if [ ! -f "$resources-yaml/${base}.yml" ]; then
+      echo "⚠️  No YAML source for $json_file"
+    fi
+  done
+  echo "====================================================================="
+  echo ""
+  sleep 1
+
 echo "================================================================="
 echo getting path = ...................................................
 path="$ig_path"/org.hl7.fhir.igpublisher.jar

@@ -39,7 +39,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * For Encounter Diagnosis, use the [US Core Condition Encounter Diagnosis Profile].<sup>[§][CONF-0330]</sup>
-* <span class="bg-success" markdown="1"><sup>1</sup>Unless exchanging legacy or text-only data, procedure codes **SHOULD** be taken from SNOMED CT and ICD-10-CM, USCDI's applicable vocabulary standards for the Problem Data Element.</span><!-- new-content -->
+* <span class="bg-success" markdown="1"><sup>1</sup>Unless exchanging legacy or text-only data, condition codes **SHOULD** be taken from SNOMED CT and ICD-10-CM, USCDI's applicable vocabulary standards for the Problem Data Element.<sup>[§][CONF-0900]</sup></span><!-- new-content -->
   - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.<sup>[§][CONF-0323]</sup>
   - The [US Core Condition Codes] value set supports ICD-9-CM for historical purposes only.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.

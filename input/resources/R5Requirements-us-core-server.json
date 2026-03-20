@@ -417,7 +417,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "[Extensible binding] (http://hl7.org/fhir/R4/terminologies.html#extensible) means that one of the codes from the specified ValueSet **SHALL** be used if an applicable concept is present.",
+      "requirement": "[Extensible binding] (http://hl7.org/fhir/R4/terminologies.html#extensible) means that one of the codes from the specified value set **SHALL** be used when an appropriate concept exists;…",
       "_reference": [
         {
           "extension": [
@@ -438,7 +438,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "[When using an [extensible Binding] (http://hl7.org/fhir/R4/terminologies.html#extensible)] If no suitable code exists in the [extensible] ValueSet, alternate code(s) may be provided.",
+      "requirement": "[When using an [extensible Binding] (http://hl7.org/fhir/R4/terminologies.html#extensible)] If no suitable code exists in the [extensible] ValueSet, alternate code(s) **MAY** be used..",
       "_reference": [
         {
           "extension": [
@@ -456,10 +456,10 @@
         "general-requirements.html#extensible-binding-for-coded-elements"
       ],
       "conformance": [
-        "MAY"
+        "SHOULD-NOT"
       ],
       "conditionality": true,
-      "requirement": "For `CodeableConcept` [with an [extensible binding] (http://hl7.org/fhir/R4/terminologies.html#extensible) … If only text is available and it has no conceptual overlap with the bound coded values, then just text may be used.",
+      "requirement": "For `CodeableConcept` [with an [extensible binding] (http://hl7.org/fhir/R4/terminologies.html#extensible) … Text-only representation **SHOULD NOT** be used - coded values are expected whenever possible to support interoperability.",
       "_reference": [
         {
           "extension": [
@@ -5220,66 +5220,6 @@
       ]
     },
     {
-      "key": "CONF-0321",
-      "reference": [
-        "StructureDefinition-us-core-condition-encounter-diagnosis.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "conditionality": true,
-      "requirement": "[Newly created Encounter Diagnosis records **SHALL** have a] Condition.code … [from the] [“current”](https://hl7.org/fhir/R5/terminologies.html#binding) … [value set] binding.",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-encounter-diagnosis.html#CONF-0321"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0321"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0322",
-      "reference": [
-        "StructureDefinition-us-core-condition-encounter-diagnosis.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "MAY"
-      ],
-      "conditionality": true,
-      "requirement": "[Historical Encounter Diagnosis records **MAY**  have a] Condition.code … [from the] base “preferred” … [value set] binding.",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-encounter-diagnosis.html#CONF-0322"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0322"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0323",
       "reference": [
         "StructureDefinition-us-core-condition-encounter-diagnosis.html#profile-specific-implementation-guidance",
@@ -8371,7 +8311,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "For Authentication and Authorization, Systems **SHALL** support any [SMART App Launch Version 2.0.0](http://hl7.org/fhir/smart-app-launch/history.html) for Client <-> Server interactions.",
+      "requirement": "For Authentication and Authorization, Systems **SHALL** support any [SMART App Launch Version 2.0.0](http://hl7.org/fhir/smart-app-launch/history.html) and later for Client <-> Server interactions.",
       "_reference": [
         {
           "extension": [
@@ -9346,6 +9286,286 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-provenance.html#CONF-0893"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0894",
+      "reference": [
+        "StructureDefinition-us-core-practitionerrole.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Unless exchanging legacy or text-only data, medical specialty codes **SHOULD** be taken from NUCC or SNOMED CT.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-practitionerrole.html#CONF-0894"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0895",
+      "reference": [
+        "StructureDefinition-us-core-procedure.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Unless exchanging legacy or text-only data, procedure codes **SHOULD** be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC*.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-procedure.html#CONF-0895"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0896",
+      "reference": [
+        "general-requirements.html#extensible-binding-for-coded-elements"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR guidance. This flexibility is sometimes necessary and expected for legacy and text-only data. However, for newly recorded, non-legacy data, a system **SHOULD** adhere to the extensible binding rules.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "general-requirements.html#CONF-0896"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0897",
+      "reference": [
+        "general-requirements.html#extensible-binding-for-coded-elements"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For data not captured by the system transmitting the information, the coded data **SHOULD** be automatically converted to fine-grained codes from the specified ValueSet.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "general-requirements.html#CONF-0897"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0898",
+      "reference": [
+        "general-requirements.html#extensible-binding-for-coded-elements"
+      ],
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "For data not captured by the system transmitting the information, ....the system **MAY** provide the existing code or the free text, and a high-level abstract code, such as the SNOMED CT code \"71388002\"(Procedure), to remain conformant with the extensible binding.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "general-requirements.html#CONF-0898"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0899",
+      "reference": [
+        "StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "To represent the patient and provider attestation metadata, the *optional* DocumentReference Attestor R5 Extension ... **SHOULD** be use",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-adi-documentreference.html#CONF-0899"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0900",
+      "reference": [
+        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Unless exchanging legacy or text-only data, condition codes **SHOULD** be taken from SNOMED CT and ICD-10-CM, USCDI's applicable vocabulary standards for the Problem Data Element.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0901",
+      "reference": [
+        "StructureDefinition-us-core-location.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "The Service Delivery Location Role Type value set is inherited from the base resource, and, although its binding strength is [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible) in the base resource, US Core implementers **MAY** treat it as [preferred](http://hl7.org/fhir/R4/terminologies.html#preferred).",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-location.html#CONF-0901"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0903",
+      "reference": [
+        "StructureDefinition-us-core-goal.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "When exchanging Social Determinants of Health (SDOH) data, implementers **SHOULD** use the [Social Determinants of Health Goals](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion) set which is curated by the Gravity Project to represent goals for all SDOH Domains.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-goal.html#CONF-0903"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0904",
+      "reference": [
+        "StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context...Laboratory Order|[LOINC Common Laboratory Orders Value Set]|extensible, Imaging Order|[LOINC Radiology Codes]|preferred, Clinical Test Order|[LOINC Clinical Test Codes]|preferred",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-servicerequest.html#CONF-0904"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0905",
+      "reference": [
+        "StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "MAY"
+      ],
+      "requirement": "the US Core ServiceRequest Profile **MAY** be used to represent a derived \"actionable\" order based on a portable Medical Order(PMO).",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-servicerequest.html#CONF-0905"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0906",
+      "reference": [
+        "StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When] used to represent a derived \"actionable\" order based on a PMO...The `ServiceRequest.category` **SHOULD** be bound to  [Portable Medical Order Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.34/Expansion)",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-servicerequest.html#CONF-0906"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0907",
+      "reference": [
+        "StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "[When] used to represent a derived \"actionable\" order based on a PMO...ServiceRequest.code` **SHOULD** be aligned with the appropriate Category",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-servicerequest.html#CONF-0907"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0908",
+      "reference": [
+        "StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "The `ServiceReqest.reasonReference` **SHOULD** be used to reference the US Core ADI DocumentReference Profile that indexes the PMO.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-servicerequest.html#CONF-0908"
             }
           ]
         }

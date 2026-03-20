@@ -2,18 +2,8 @@
   "resourceType": "Observation",
   "id": "pregnancy-status",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Pregnancy Status Observation Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a pregnancy status example for the *US Core Observation Pregnancy Status Profile*."
-      }
-    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|9.0.0"
     ]
   },
   "status": "final",

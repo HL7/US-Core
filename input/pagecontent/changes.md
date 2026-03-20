@@ -69,7 +69,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
     - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 40. **Applied:** Non-substantive (Correction) Add plain language summary [FHIR-54948](https://jira.hl7.org/browse/FHIR-54948) See Changes [Here](index.html)
-41. **Resolved - change required:** Non-substantive (Clarification) More guidance needed for what to represent in Requester field. [FHIR-54949](https://jira.hl7.org/browse/FHIR-54949) See Changes [Here](StructureDefinition-us-core-pmo-servicerequest.html)
+41. **Resolved - change required:** Non-substantive (Clarification) Clarify ServiceRequest.requester vs PMO author. [FHIR-54949](https://jira.hl7.org/browse/FHIR-54949) See Changes [Here](StructureDefinition-us-core-pmo-servicerequest.html)
 42. **Resolved - change required:** Compatible, substantive (Enhancement)  Add Requirements Page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes:
     -  [US Core Conformance Artifacts](general-requirements.html#us-core-conformance-artifacts)
     -  [Requirements Table](requirements.html)
@@ -77,7 +77,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     -  [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html)
     -  [US Core Server Requirements](Requirements-us-core-server.html)
     -  [US Core Client Requirements](Requirements-us-core-client.html)
-43. **Resolved - change required:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597), [FHIR-54271](https://jira.hl7.org/browse/FHIR-54271), and [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919), See Changes Here:
+43. **Applied:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597), [FHIR-54271](https://jira.hl7.org/browse/FHIR-54271), and [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919), See Changes Here:
     - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
     - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html)
 44. **Applied:**  Change the preferred binding for RelatedPerson.relationship to VSAC's Personal And Legal Relationship Role Type value set[FHIR-53376](https://jira.hl7.org/browse/FHIR-53376) See Changes [Here](StructureDefinition-us-core-relatedperson-definitions.html#RelatedPerson.relationship)
@@ -95,7 +95,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 54. **Applied:** Non-substantive (Enhancement) Clarify profile specific implementation guidance for Patient.address  [FHIR-54437](https://jira.hl7.org/browse/FHIR-54437) See Changes [Here](StructureDefinition-us-core-patient.htmll#profile-specific-implementation-guidance)
 55. **Applied:**  Non-substantive (Clarification) Update introduction to the US Core ADI DocumentReference Profile. [FHIR-54936](https://jira.hl7.org/browse/FHIR-54936) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
 56. **Resolve - change required:** Non-substantive (Correction) Unusual constraint language on backbone element [FHIR-54943](https://jira.hl7.org/browse/FHIR-54943) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
-57. **Triaged:** Non-compatible (Correction) Replace additional bindings with other structures to match intent [FHIR-55688](https://jira.hl7.org/browse/FHIR-55688) See Changes
+57. **Applied:** Non-compatible (Correction) Replace additional bindings with other structures to match intent [FHIR-55688](https://jira.hl7.org/browse/FHIR-55688) See Changes
     - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
     - [US Core Procedure Profile](StructureDefinition-us-core-procedure.html)
     - [US Core Location Profile](StructureDefinition-us-core-location.html)

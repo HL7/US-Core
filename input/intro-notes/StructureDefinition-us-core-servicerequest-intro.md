@@ -1,4 +1,3 @@
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
@@ -38,6 +37,21 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - For more information on exchanging Social Determinants of Health (SDOH) service requests, See the [Screening and Assessments] guidance page.
+
+
+- <sup>4</sup>Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements.<sup>[§][CONF-0516],[§][CONF-0517]</sup> Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`. Depending on the procedure being documented, a Server will select the appropriate Profile to use.
+   - Although both `ServiceRequest.reasonCode` and `ServiceRequest.reasonReference` are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0518]</sup> The certifying Client application **SHALL** support both elements.<sup>[§][CONF-0519]</sup>
+     - when using  `ServiceRequest.reasonReference`:
+       - Servers **SHALL** support *at least one* target resource in `ServiceRequest.reasonReference`.<sup>[§][CONF-0520]</sup> Clients **SHALL** support all target resources.<sup>[§][CONF-0521]</sup>
+       - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].<sup>[§][CONF-0522]</sup>
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
+
+<div class="bg-success" markdown="1">
+
+#### USCDI Laboratory Order, Imaging Order, Clinical Test Order, and Procedure Order Data Elements
+
+</div><!-- new-content -->
+
 - <sup>2</sup>The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes], and other category codes can be used.<sup>[§][CONF-0514]</sup> API consumers can query by category when accessing patient information. For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table below.<sup>[§][CONF-0857]</sup> For example, laboratory orders would have the category code "108252007" (Laboratory procedure).
 
   |USCDI Order Data Element|Category Codes|
@@ -48,20 +62,34 @@ This section provides detailed implementation guidance for the US Core Profile t
   |Procedure Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
   {:.grid #servicerequest-categorycodes}
 
-- <sup>1</sup>The `ServiceRequest.code` is bound to US Core Procedure Codes, a broadly defined value set that accommodates many healthcare domains. However, implementers **SHOULD** constrain the value set to a subset for a particular domain.<sup>[§][CONF-0515]</sup> The table below identifies additional value set bindings for the USCDI Laboratory Order, Imaging Order, and Clinical Test Order Data Elements. Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context. For example, laboratory orders have an [extensible] binding to the [LOINC Common Laboratory Orders Value Set]. Note that the USCDI Class Procedure Order Data Element has no additional binding.
+- <sup>1</sup>The `ServiceRequest.code` is bound to US Core Procedure Codes, a broadly defined value set that accommodates many healthcare domains. However, implementers **SHOULD** constrain the value set to a subset for a particular domain.<sup>[§][CONF-0515]</sup> The table below <span class="bg-success" markdown="1">identifies value set bindings</span><!-- new-content --> for the USCDI Laboratory Order, Imaging Order, and Clinical Test Order Data Elements. Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context.<sup>[§][CONF-0904]</sup> For example, laboratory orders have an [extensible] binding to the [LOINC Common Laboratory Orders Value Set]. Note that the USCDI Class Procedure Order Data Element <span class="bg-success" markdown="1">binding is unconsrained.</span><!-- new-content -->
 
-  |USCDI Order Data Element|Additional Binding|[Additional Binding Purpose](https://hl7.org/fhir/R5/valueset-additional-binding-purpose.html)|Comments|
+  |USCDI Order Data Element| <span class="bg-success" markdown="1">Binding</span><!-- new-content -->| <span class="bg-success" markdown="1">Binding Stength</span><!-- new-content --> |Comments|
   |---|---|---|---|
-  |Laboratory Order|[LOINC Common Laboratory Orders Value Set]|"extensible"|The LOINC Common Laboratory Orders Value Set is a ‘starter set’ for mapping commonly used laboratory orders. It does not attempt to include all possible laboratory order codes. For additional information on LOINC Common Laboratory Orders Value Set, refer to [www.loinc.org/usage/orders].|
-  |Imaging Order|[LOINC Radiology Codes]|"preferred"|The LOINC Radiology Codes include all imaging codes minus concepts that are deprecated or discouraged.|
-  |Clinical Test Order|[LOINC Clinical Test Codes]|"candidate"|LOINC Clinical Test Codes include non-laboratory and non-imaging clinical test codes that represent clinical tests.|
+  |Laboratory Order|[LOINC Common Laboratory Orders Value Set]|extensible|The LOINC Common Laboratory Orders Value Set is a ‘starter set’ for mapping commonly used laboratory orders. It does not attempt to include all possible laboratory order codes. For additional information on LOINC Common Laboratory Orders Value Set, refer to [www.loinc.org/usage/orders].|
+  |Imaging Order|[LOINC Radiology Codes]|preferred|The LOINC Radiology Codes include all imaging codes minus concepts that are deprecated or discouraged.|
+  |Clinical Test Order|[LOINC Clinical Test Codes]| <span class="bg-success" markdown="1">preferred</span><!-- new-content --> |LOINC Clinical Test Codes include non-laboratory and non-imaging clinical test codes that represent clinical tests.|
   {: #myTable .grid}
 
-- <sup>4</sup>Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements.<sup>[§][CONF-0516],[§][CONF-0517]</sup> Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`. Depending on the procedure being documented, a Server will select the appropriate Profile to use.
-   - Although both `ServiceRequest.reasonCode` and `ServiceRequest.reasonReference` are marked as Additional USCDI Requirements, the certifying Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0518]</sup> The certifying Client application **SHALL** support both elements.<sup>[§][CONF-0519]</sup>
-     - when using  `ServiceRequest.reasonReference`:
-       - Servers **SHALL** support *at least one* target resource in `ServiceRequest.reasonReference`.<sup>[§][CONF-0520]</sup> Clients **SHALL** support all target resources.<sup>[§][CONF-0521]</sup>
-       - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].<sup>[§][CONF-0522]</sup>
-{% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
+<div class="bg-success" markdown="1">
+
+#### USCDI Portable Medical Order (PMO) Data Element
+
+  - The [US Core ADI DocumentReference Profile] can communicate the contents of a PMO document, satisfying USCDI's *Portable Medical Order* Data Element. However, the US Core ServiceRequest Profile **MAY** be used to represent a derived "actionable" order based on a PMO.<sup>[§][CONF-0905]</sup> Unlike a PMO, this order would not follow the patient across care settings. The [ServiceRequest DNR Example] demonstrates this use case.
+  - The `ServiceRequest.category` **SHOULD** be bound to  [Portable Medical Order Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.34/Expansion)<sup>[§][CONF-0906]</sup>, and `ServiceRequest.code` **SHOULD** be aligned with the appropriate Category as follows:<sup>[§][CONF-0907]</sup>
+
+    |PMO Category Code|PMO Code Set|
+    |---|---|
+    |100822-6 (Cardiopulmonary resuscitation orders)|[Cardiopulmonary Resuscitation Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.28/expansion/Latest)<br /> <br /> [Cardiopulmonary Resuscitation Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.30/expansion/Latest)|
+    |100823-4 (Initial portable medical treatment orders)| [Initial Treatment portable medical Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.27/expansion/Latest)|
+    |100824-2 (Additional portable medical orders or instructions)|[Additional Portable Medical Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.32/expansion/Latest)|
+    |100825-9 (Medically assisted nutrition orders)|[Medically Assisted Nutrition Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.35/expansion/Latest)|
+    {:.grid}
+
+- The `ServiceRequest.requester` refers to the clinician who enters the derivative order. This clinician can differ from the author of the original PMO document.
+- The US Core ADI DocumentReference Profile indexing the PMO **SHOULD** be referenced in `ServiceRequest.reasonReference`.<sup>[§][CONF-0908]</sup>
+
+</div><!-- new-content -->
 
 {% include link-list.md %}
+
