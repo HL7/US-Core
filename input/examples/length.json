@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "length",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Length Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
     ]
   },
   "status": "final",

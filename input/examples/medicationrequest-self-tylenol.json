@@ -3,7 +3,17 @@
   "id": "self-tylenol",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "MedicationRequest Self Tylenol Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a \"self-prescribed\" tylenol example for the *MedicationRequest Profile*."
+      }
     ]
   },
   "extension": [

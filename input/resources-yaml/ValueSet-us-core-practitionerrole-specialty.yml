@@ -6,15 +6,14 @@ title: US Core Practitioner Role Specialty Codes
 status: active
 experimental: false
 date: 2026-03-19
-description: This value set represents the "type" of health care provider individual or organization and is composed of two value sets. It include the National Uniform Claims Committee (NUCC) and SNOMED CT concepts.
-copyright: "This value set includes content from SNOMED CT, which is copyright
-  \xA9 2002+ International Health Terminology Standards Development Organisation (IHTSDO),
-  and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT
-  is not covered by this agreement."
+description: This value set represents the clinical specialty or functional role played by a clinician or provider. It is composed of two value sets, and include the National Uniform Claims Committee (NUCC) and SNOMED CT concepts.
+copyright: |-
+
+   1. This value set includes content from SNOMED CT, which is copyright \xA9 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.
+   2. This value set includes content from NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association. For commercial use, including sales or licensing, a license must be obtained.
 compose:
   include:
   - valueSet:
      - http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.30
   - valueSet:
      - http://hl7.org/fhir/ValueSet/c80-practice-codes
-

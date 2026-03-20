@@ -25,7 +25,17 @@
   ],
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Encounter 1036 Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a encounter 1036 example for the *Encounter Profile*."
+      }
     ],
     "lastUpdated": "2024-01-28T16:06:21-08:00"
   },

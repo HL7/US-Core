@@ -77,7 +77,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     -  [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html)
     -  [US Core Server Requirements](Requirements-us-core-server.html)
     -  [US Core Client Requirements](Requirements-us-core-client.html)
-43. **Resolved - change required:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597), [FHIR-54271)](https://jira.hl7.org/browse/FHIR-54271), and [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919), [ See Changes Here:
+43. **Resolved - change required:** Compatible, substantive (Enhancement) Remove US Core PMO ServiceRequest Profile and use US Core ServiceRequest [FHIR-55597](https://jira.hl7.org/browse/FHIR-55597), [FHIR-54271](https://jira.hl7.org/browse/FHIR-54271), and [FHIR-53919](https://jira.hl7.org/browse/FHIR-53919), See Changes Here:
     - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html)
     - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html)
 44. **Applied:**  Change the preferred binding for RelatedPerson.relationship to VSAC's Personal And Legal Relationship Role Type value set[FHIR-53376](https://jira.hl7.org/browse/FHIR-53376) See Changes [Here](StructureDefinition-us-core-relatedperson-definitions.html#RelatedPerson.relationship)

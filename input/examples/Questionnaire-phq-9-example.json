@@ -1,6 +1,16 @@
 {
   "id": "phq-9-example",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Questionnaire PHQ-9 Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "An example of a SDC Questionnaire that represents the Hunger Vital Sign Example questionnaire defined in LOINC (code 44249-1). This example is generated using the LHC-Forms SDC Questionnaire App."
+      }
+    ],
     "profile": [
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
     ]

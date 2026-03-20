@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "simple-observation-functional-status",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Simple Observation Functional Status Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This *US Core Simple Observation Profile* is a functional status determination which is not based on any formal assessment tool or survey."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
     ]
   },
   "status": "final",

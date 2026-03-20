@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "pregnancy-intent",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Pregnancy Intent Observation Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a pregnancy intent example for the *US Core Observation Pregnancy Intent Profile*."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent"
     ]
   },
   "status": "final",
