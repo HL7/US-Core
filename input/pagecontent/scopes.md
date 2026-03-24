@@ -15,7 +15,7 @@ At least one of the following SMART on FHIR *Capability Sets* **SHOULD** be supp
 
 #### *Capabilities* for Implementations Supporting Backend Services
 
-Implementations supporting Backend Services -- for example, to meet US EHR certification requirements - **SHALL** include support for the `client-confidential-asymmetric` capability<sup>[§][CONF-0020]</sup> and `system/scopes`.<sup>[§][CONF-0121],[§][CONF-0122]</sup>
+Implementations supporting Backend Services -- for example, to meet US EHR certification requirements - **SHALL** include support for the `client-confidential-asymmetric` capability<sup>[§][CONF-0120]</sup> and `system/scopes`.<sup>[§][CONF-0121],[§][CONF-0122]</sup>
 
 ### US Core Servers SHALL Support Token Introspection
 
@@ -27,7 +27,7 @@ SMART's scopes, defined in Version 2.0.0 and later of the SMART App Launch imple
 
 The US Core required scopes listed below are named in the [HTI-1 final rule], which requires support for the Condition and Observation category scopes. (Note that although mentioned in HTI-1 final rule, there is no "Clinical Test" category for Observation in US Core.) The recommended granular scopes listed below are of particular interest to patients and health systems. Implementations meeting US EHR certification requirements must support all US Core's required scopes.<sup>[§][CONF-0124]</sup> Other systems only need to support scopes for the US Core APIs they support.<sup>[§][CONF-0125]</sup>
 
-Each US Core Profile page includes a "Quick Start" section summarizing each profile's supported search transactions and scopes. Servers **MAY** support other scopes in addition to those listed below and in the Quick Start sections.<sup>[§][CONF-0128]</sup> US Core Clients should follow the [principle of least privilege] and access only the necessary resources.<sup>[§][CONF-0127]</sup> In other words, if a Client needs only vital sign observations, it should request access only to Observations with a category of "vital-signs". Note that a granular scope grants access to all resources matching that granular scope *regardless of whether other categories* are present.
+Each US Core Profile page includes a "Quick Start" section summarizing each profile's supported search transactions and scopes. Servers **MAY** support other scopes in addition to those listed below and in the Quick Start sections.<sup>[§][CONF-0126]</sup> US Core Clients should follow the [principle of least privilege] and access only the necessary resources.<sup>[§][CONF-0127]</sup> In other words, if a Client needs only vital sign observations, it should request access only to Observations with a category of "vital-signs". Note that a granular scope grants access to all resources matching that granular scope *regardless of whether other categories* are present.
 
 #### Scopes Format
  SMART App Launch Version 2.0.0 introduced a scope syntax of: `<patient|user|system> / <fhir-resource>. <c | r | u | d |s> [?param=value]`
@@ -92,12 +92,13 @@ The script creates sorted arrays of required and optional resource and granular 
 {%- for item in rows -%}
   {%- if item.resource_scope_conf == "SHALL" -%}
     {%- assign resource_type = item.resource_type | strip  -%}
-    {%- assign scope = resource_type | append: ',' -%}
+    {%- assign scope = resource_type | append: '<sup><a id="' | append: item.conf_req |append: '" href="requirements.html#'| append: item.conf_req | append: '">§</a></sup>,' -%}
     {%- assign shall_scopes =  shall_scopes | append: scope -%}
       {% for i in (1..6) %}
         {%- assign cat =  'cat' | append: i |append: '_scope' -%}
         {%- assign cat_conf =  cat | append: '_conf' -%}
-        {%- assign category = item[cat] | strip | append: ',' -%}
+        {%- assign cat_conf_req =  cat_conf | append: '_req' -%}
+        {%- assign category = item[cat] | strip | append: ' <sup><a id="' | append: item[cat_conf_req] |append: '" href="requirements.html#'| append: item[cat_conf_req] | append: '">§</a></sup>,' -%}
         {%- assign scope =  resource_type | append: '.rs?category=' | append: category -%}
         {%- if item[cat] and item[cat_conf] == "SHALL" -%}
           {%- assign shall_granular_scopes = shall_granular_scopes | append: scope -%}
@@ -106,7 +107,7 @@ The script creates sorted arrays of required and optional resource and granular 
         {%- endif -%}
       {%- endfor -%}
   {%- elsif item.resource_scope_conf == "MAY" -%}
-    {%- assign scope = item.resource_type | strip | append: ',' -%}
+    {%- assign scope = item.resource_type | strip | append: '<sup><a id="' | append: item.conf_req |append: '" href="requirements.html#'| append: item.conf_req | append: '">§</a></sup>,' -%}
     {%- assign should_scopes =  should_scopes | append: scope -%}
   {%- endif -%}
 {%- endfor -%}
@@ -127,8 +128,8 @@ The following scopes that correspond directly to FHIR resource types **SHALL** b
 {% assign scope_array = shall_scopes | split: "," | uniq | sort -%}
 {% for resource_scope in scope_array -%}
 <tr>
-<td>{{resource_scope}}</td>
-<td><code>{{ resource_scope | prepend: '<patient|user|system>/' | append: '.rs' }}</code></td>
+<td>{{resource_scope | split: '<sup>' | first }}</td>
+<td><code>{{ resource_scope | split: '<sup>' | first | prepend: '<patient|user|system>/' | append: '.rs' }} {{resource_scope | split: '<sup>' | last | prepend: '<sup>' }}</code></td>
 </tr>
 {% endfor %}
 </tbody>
@@ -147,8 +148,8 @@ The following scopes that correspond directly to FHIR resource types **MAY** be 
 {% assign scope_array = should_scopes | split: "," | uniq | sort -%}
 {% for resource_scope in scope_array -%}
 <tr>
-<td>{{resource_scope}}</td>
-<td><code>{{ resource_scope | prepend: '<patient|user|system>/' | append: '.rs' }}</code></td>
+<td>{{resource_scope | split: '<sup>' | first }}</td>
+<td><code>{{ resource_scope | split: '<sup>' | first | prepend: '<patient|user|system>/' | append: '.rs' }} {{resource_scope | split: '<sup>' | last | prepend: '<sup>' }}</code></td>
 </tr>
 {% endfor %}
 </tbody>
@@ -175,6 +176,7 @@ The following *granular* scopes **SHALL** be supported:<sup>[§][CONF-0158]</sup
 </tr>
 {% endfor %}
 </tbody>
+
 </table>
 
 The following *granular* scopes **SHOULD** be supported:<sup>[§][CONF-0166]</sup>
@@ -281,15 +283,15 @@ Content-Type: application/json
     "offline_access",
 {% assign scope_array = shall_scopes | split: "," | uniq | sort -%}
 {% for resource_scope in scope_array -%}
-    {{ resource_scope | prepend: '    "patient/'| append: '.rs' }}",
-{{ resource_scope | prepend: '    "user/'| append: '.rs' }}",
-{{ resource_scope | prepend: '    "system/'| append: '.rs' }}",
+    {{ resource_scope | split: '<sup>' | first | prepend: '    "patient/'| append: '.rs' }}",
+{{ resource_scope | split: '<sup>' | first | prepend: '    "user/'| append: '.rs' }}",
+{{ resource_scope | split: '<sup>' | first | prepend: '    "system/'| append: '.rs' }}",
 {% endfor -%}
 {% assign scope_array = all_granular_scopes | split: "," | uniq | sort -%}
 {% for granular_scope in scope_array -%}
-    {{ granular_scope | prepend: '    "patient/'}}",
-{{ granular_scope | prepend: '    "user/'}}",
-{{ granular_scope | prepend: '    "system/'}}"{% unless forloop.last %},{% endunless %}
+    {{ granular_scope | split: '<sup>' | first | prepend: '    "patient/'}}",
+{{ granular_scope | split: '<sup>' | first | prepend: '    "user/'}}",
+{{ granular_scope | split: '<sup>' | first | prepend: '    "system/'}}"{% unless forloop.last %},{% endunless %}
 {% endfor -%}
   ],
   "response_types_supported": ["code"],

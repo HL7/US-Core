@@ -147,7 +147,7 @@ Servers **SHOULD** maintain a stable common identifier for a resource across ver
 
 ### Expectation that Data is Preserved Between Versions
 
-In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4.<sup>[§][CONF-0287]</sup> However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
+In an upgraded R4 endpoint, any data in FHIR DSTU2 **SHOULD** be in FHIR R4.<sup>[§][CONF-0288]</sup> However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
 
 * The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation.<sup>[§][CONF-0289],[§][CONF-0292]</sup>
   - Exceptions

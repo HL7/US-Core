@@ -291,7 +291,7 @@ However, neither specification defines how a user-facing provider app can seek r
 
 ### Searching Using lastUpdated
 
-Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles<sup>[§][CONF-0100]</sup> and **SHOULD** populate [Resource.meta.lastUpdated] for US Core Profiles as accurately as possible.<sup>[§][CONF-0201]</sup> Servers **SHALL** document in `CapabilityStatement.rest.resource.searchParam.documentation` the types of changes that can be detected using the `_lastUpdated` search parameter (see example snippet below).<sup>[§][CONF-0202]</sup>
+Servers **SHOULD** support the [`_lastUpdated`] search parameter for US Core Profiles<sup>[§][CONF-0200]</sup> and **SHOULD** populate [Resource.meta.lastUpdated] for US Core Profiles as accurately as possible.<sup>[§][CONF-0201]</sup> Servers **SHALL** document in `CapabilityStatement.rest.resource.searchParam.documentation` the types of changes that can be detected using the `_lastUpdated` search parameter (see example snippet below).<sup>[§][CONF-0202]</sup>
 
 Example CapabilityStatement snippet for a Server supporting the `_lastUpdated` search parameter for US Core Laboratory Result Observation Profile
 

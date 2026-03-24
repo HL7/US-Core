@@ -42,8 +42,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 * The Encounter resource can represent a reason using a code with `Encounter.reasonCode` or a reference with `Encounter.reasonReference` to  Condition or other resources.
    * Although both are marked as Must Support, Servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.<sup>[§][CONF-0375]</sup>
    * The Client application **SHALL** support both elements.<sup>[§][CONF-0376],[§][CONF-0377]</sup>
-   * If `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable.<sup>[§][CONF-0378
-   * ]</sup> For example, a laboratory result **SHOULD** conform to the [US Core Laboratory Result Observation Profile].
+   * If `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable.<sup>[§][CONF-0378]</sup> For example, a laboratory result **SHOULD** conform to the [US Core Laboratory Result Observation Profile].
 * This profile supports *where the encounter occurred*.  The location address can be represented by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.
   * Although both are marked as Must Support, Servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.<sup>[§][CONF-0379]</sup>
   * The Client application **SHALL** support both elements.<sup>[§][CONF-0380],[§][CONF-0381]</sup>

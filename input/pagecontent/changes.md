@@ -70,7 +70,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 40. **Applied:** Non-substantive (Correction) Add plain language summary [FHIR-54948](https://jira.hl7.org/browse/FHIR-54948) See Changes [Here](index.html)
 41. **Applied:** Non-substantive (Clarification) Clarify ServiceRequest.requester vs PMO author. [FHIR-54949](https://jira.hl7.org/browse/FHIR-54949) See Changes [Here](StructureDefinition-us-core-servicerequest.html#uscdi-portable-medical-order-pmo-data-element)
-42. **Resolved - change required:** Compatible, substantive (Enhancement)  Add Requirements Page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes:
+42. **Resolved - change required:** Compatible, substantive (Enhancement)  Add Requirements Page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes Here:
     -  [US Core Conformance Artifacts](general-requirements.html#us-core-conformance-artifacts)
     -  [Requirements Table](requirements.html)
     -  [Capability Statements and Requirements Resources ](capability-statements.html)
@@ -96,7 +96,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 54. **Applied:** Non-substantive (Enhancement) Clarify profile specific implementation guidance for Patient.address  [FHIR-54437](https://jira.hl7.org/browse/FHIR-54437) See Changes [Here](StructureDefinition-us-core-patient.htmll#profile-specific-implementation-guidance)
 55. **Applied:**  Non-substantive (Clarification) Update introduction to the US Core ADI DocumentReference Profile. [FHIR-54936](https://jira.hl7.org/browse/FHIR-54936) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
 56. **Resolve - change required:** Non-substantive (Correction) Unusual constraint language on backbone element [FHIR-54943](https://jira.hl7.org/browse/FHIR-54943) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
-57. **Applied:** Non-compatible (Correction) Replace additional bindings with other structures to match intent [FHIR-55688](https://jira.hl7.org/browse/FHIR-55688) See Changes
+57. **Applied:** Non-compatible (Correction) Replace additional bindings with other structures to match intent [FHIR-55688](https://jira.hl7.org/browse/FHIR-55688) See Changes Here:
     - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
     - [US Core Procedure Profile](StructureDefinition-us-core-procedure.html)
     - [US Core Location Profile](StructureDefinition-us-core-location.html)
@@ -167,7 +167,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 5.  **Applied:** Non-substantive (Enhancement) Relax US@ address requirements [FHIR-51159](https://jira.hl7.org/browse/FHIR-51159) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-patient.html)
 6.  **Applied:** Non-substantive (Clarification) Update client expectations for preserving resource IDs between versions [FHIR-51756](https://jira.hl7.org/browse/FHIR-51756) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/changes-between-versions.html#no-guarantee-that-resource-ids-are-preserved)
 7.  **Applied:** Non-substantive (Clarification) Update guidance on Authorization Across Versions Sections [FHIR-51757](https://jira.hl7.org/browse/FHIR-51757) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/changes-between-versions.html#authorization-across-versions)
-8.  **Applied:** Non-substantive (Clarification) Add implementer guidance for non-US addresses [FHIR-51791](https://jira.hl7.org/browse/FHIR-51791) See Changes:
+8.  **Applied:** Non-substantive (Clarification) Add implementer guidance for non-US addresses [FHIR-51791](https://jira.hl7.org/browse/FHIR-51791) See Changes Here:
     - [US Core Patient](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
     - [US Core Practitioner](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-practitioner.html#profile-specific-implementation-guidance)
     - [US Core Organization](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-organization.html#profile-specific-implementation-guidance)
@@ -179,7 +179,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 12. **Applied:**  Non-substantive (Enhancement) Updated main menu and menu items [FHIR-50345](https://jira.hl7.org/browse/FHIR-50345) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/index.html)
 13. **Applied:** Non-substantive (Enhancement) Reformat the profile pages' Implementation Guidance Sections [FHIR-50972](https://jira.hl7.org/browse/FHIR-50972) See Change [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
 14. **Applied:** Non-substantive (Correction) Remove Externally Published code systems section and table [FHIR-52980](https://jira.hl7.org/browse/FHIR-52980) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/terminology.html#code-systems)
-15. **Applied:** Compatible, Non-substantive (Correction) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes:
+15. **Applied:** Compatible, Non-substantive (Correction) Update US Core Race and Ethnicity Extension descriptions [FHIR-53113](https://jira.hl7.org/browse/FHIR-53113) See Changes Here:
     - [US Core Race Extension](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-race.html)
     - [US Core Ethnicity Extension](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-ethnicity.html)
 16. **Applied:** Non-substantive (Enhancement) Compare US Core Profiles with International Patient Summary Profiles [FHIR-53130](https://jira.hl7.org/browse/FHIR-53130) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/relationship-with-other-igs.html)
