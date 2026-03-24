@@ -2,8 +2,18 @@
   "resourceType": "Observation",
   "id": "pack-years-example",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Cigarette Pack-Years Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This example for the *US Core Smokingstatus Profile* shows a Quantitative result."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
     ]
   },
   "status": "final",

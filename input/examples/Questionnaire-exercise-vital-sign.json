@@ -4,6 +4,16 @@
   "meta": {
     "profile": [
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Exercise Vital Sign Questionnaire Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) Questionnaire Example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources."
+      }
     ]
   },
   "url": "http://hl7.org/fhir/us/core/Questionnaire/exercise-vital-sign",

@@ -3,7 +3,17 @@
   "id": "discharge-summary",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Clinician Authored Discharge Summary Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a clinician-authored discharge instructions example for the *US Core DocumentReference*. It demonstrates the \"clinical-note\" document category and is used in the [Write Note Example](StructureDefinition-us-core-documentreference.html#mandatory-operation)."
+      }
     ]
   },
   "status": "current",

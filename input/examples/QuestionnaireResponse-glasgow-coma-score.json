@@ -2,8 +2,18 @@
   "resourceType": "QuestionnaireResponse",
   "id": "glascow-coma-score",
   "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "QuestionnaireResponse Glascow Coma Score Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This example of a US Core QuestionnaireResponse references a non-FHIR survey instrument (in this case a pdf) instead of a FHIR Questionnaire."
+      }
+    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|9.0.0"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
     ]
   },
   "_questionnaire": {
