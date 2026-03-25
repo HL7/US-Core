@@ -75,7 +75,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 #### USCDI Portable Medical Order (PMO) Data Element
 
-  - The [US Core ADI DocumentReference Profile] can communicate the contents of a PMO document, satisfying USCDI's *Portable Medical Order* Data Element. However, the US Core ServiceRequest Profile **MAY** be used to represent a derived "actionable" order based on a PMO.<sup>[§][CONF-0905]</sup> Unlike a PMO, this order would not follow the patient across care settings. The [ServiceRequest DNR Example] demonstrates this use case.
+  - The [US Core ADI DocumentReference Profile] can communicate the contents of a PMO document, satisfying USCDI's *Portable Medical Order* Data Element. However, the US Core ServiceRequest Profile **MAY** be used to represent a derived "actionable" order based on a PMO.<sup>[§][CONF-0905]</sup> Unlike a PMO, this order is only relevant to the active encounter, and would not follow the patient across care settings. The [ServiceRequest DNR Example] demonstrates this use case.
   - The `ServiceRequest.category` **SHOULD** be bound to  [Portable Medical Order Categories](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.34/Expansion)<sup>[§][CONF-0906]</sup>, and `ServiceRequest.code` **SHOULD** be aligned with the appropriate Category as follows:<sup>[§][CONF-0907]</sup>
 
     |PMO Category Code|PMO Code Set|
