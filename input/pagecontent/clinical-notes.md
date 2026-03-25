@@ -41,6 +41,8 @@ The [US Core DocumentReference Profile] and [US Core DiagnosticReport Profile fo
 
 DocumentReference is the best choice when the narrative is broader than a specific order or report, such as a Progress Note or Discharge Summary Note. For example, the DocumentReference Resource can point to a short 2-3 sentence status of the patient or reference a complex CDA or Composition document, which can include *both* a narrative and discrete information.
 
+{% include docref-stu-note.md %}
+
 DiagnosticReport is the best choice when a system needs to share discrete information or coded interpretations. The `DiagnosticReport.result` element supports the discrete data, and the `DiagnosticReport.presentedForm` element can represent the entire narrative report.
 
 There is no single best practice for representing a scanned or narrative-only report due to the overlapping scope of the underlying resources and variability in system implementation. Reports may be represented by either a DocumentReference or a DiagnosticReport, as demonstrated by the green area in Figure 1. For example, some systems consider any scanned report or note a DocumentReference. Other systems allow users to categorize the scanned report as Lab and store it as DiagnosticReport.[^1]

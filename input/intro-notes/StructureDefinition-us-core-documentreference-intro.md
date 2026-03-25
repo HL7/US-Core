@@ -1,3 +1,4 @@
+{% include docref-stu-note.md %}
 
 **Example Usage Scenarios:**
 
