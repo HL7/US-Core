@@ -5,7 +5,6 @@ The current US Core DocumentReference category value set contains a single conce
 1. **structured-document**: Documents with predefined schemas, such as CDA or FHIR Composition, that allow for machine-readable headers and/or entries.
 1. **unstructured-document**: Unstructured content captured via digital upload or scanning, stored in a document management system, and not natively authored in the EHR.
 
-and updating the "clinical-note" definition. The addition of a complementary set of clinical content categories to enable client access by clinical domain was also discussed.
+Future consideration will also be given to a set of clinical content categories to enable client access by clinical domain.
 
-Further work is planned in the *2026 Argonaut FHIR Write – DocRef Project*.  Based on these efforts, future versions of US Core may expand the DocumentReference category value set.
 </div><!-- stu-note -->

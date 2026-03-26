@@ -35,11 +35,9 @@
 [chest-xray]: Media-chest-xray.html
 [pack-years-example]: Observation-pack-years-example.html
 [discharge-summary]: DocumentReference-discharge-summary.html
-[soap-note]: DocumentReference-soap-note.html
 [colonoscopy]: CarePlan-colonoscopy.html
 [condition-duodenal-ulcer-res]: Condition-condition-duodenal-ulcer-res.html
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
-[ccd]: DocumentReference-ccd.html
 [coverage-example]: Coverage-coverage-example.html
 [deceased-example]: Patient-deceased-example.html
 [udi-2]: Device-udi-2.html
@@ -94,7 +92,6 @@
 [HVS-item-example-88124-3]: Observation-HVS-item-example-88124-3.html
 [HVS-panel-example-88121-9]: Observation-HVS-panel-example-88121-9.html
 [imm-1]: Immunization-imm-1.html
-[ips]: DocumentReference-ips.html
 [jugular-vein-distension]: Observation-jugular-vein-distension.html
 [length]: Observation-length.html
 [cbc-leukocytes]: Observation-cbc-leukocytes.html
@@ -189,10 +186,6 @@
 [rehab]: Procedure-rehab.html
 [respiratory-rate]: Observation-respiratory-rate.html
 [saint-luke-w-endpoint]: Organization-saint-luke-w-endpoint.html
-[scanned-consent-form]: DocumentReference-scanned-consent-form.html
-[insurance-card]: DocumentReference-insurance-card.html
-[photo-id]: DocumentReference-photo-id.html
-[wound-image]: DocumentReference-wound-image.html
 [condition-SDOH-example]: Condition-condition-SDOH-example.html
 [serum-bun]: Observation-serum-bun.html
 [serum-calcium]: Observation-serum-calcium.html

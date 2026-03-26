@@ -2,18 +2,8 @@
   "resourceType": "Observation",
   "id": "ofc-percentile",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "OFC Percentile Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a OFC percentile example for the *Head Occipital Frontal Circumference Percentile Profile*."
-      }
-    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile"
+      "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile|9.0.0"
     ]
   },
   "status": "final",

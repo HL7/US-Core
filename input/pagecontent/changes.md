@@ -113,8 +113,8 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 63. **Applied:**  Non-substantive (Enhancement)Update US Core Provenance guidance to indicate other information that can be tracked. [FHIR-55961](https://jira.hl7.org/browse/FHIR-55961) See Changes [Here](StructureDefinition-us-core-provenance.html#profile-specific-implementation-guidance)
 64. **Applied:**  Update list of elements with no "unknown" concept code [FHIR-56037](https://jira.hl7.org/browse/FHIR-56037) See Changes [Here](general-requirements.html#missing-data)
 65. **Applied:**  Non-substantive (Correction) Update reference to CDA Table [FHIR-56094](https://jira.hl7.org/browse/FHIR-56094) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
-66.  **Applied:**   Update “Common substances for allergy and intolerance documentation including refutations” ValueSet [FHIR-56095](https://jira.hl7.org/browse/FHIR-56095) See Changes [Here](StructureDefinition-us-core-allergyintolerance.html)
-67. **Pre-Applied:**  Substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](security.html#patient-privacy-and-security)
+66. **Applied:**   Update “Common substances for allergy and intolerance documentation including refutations” ValueSet [FHIR-56095](https://jira.hl7.org/browse/FHIR-56095) See Changes [Here](StructureDefinition-us-core-allergyintolerance.html)
+67. **Applied:**  Substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](security.html#patient-privacy-and-security)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>

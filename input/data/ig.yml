@@ -267,11 +267,6 @@ definition:
       name: Clinician Authored Discharge Summary Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
     - reference:
-        reference: DocumentReference/soap-note
-      description: This is a Clinician Authored SOAP Note example for the *US Core DocumentReference*. It demonstrates the "clinical-note" document category.
-      name: Clinician Authored SOAP Note
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-    - reference:
         reference: CarePlan/colonoscopy
       description: This is a colonoscopy example for the *US Core CarePlan Profile*.
       name: Colonoscopy Example
@@ -286,11 +281,6 @@ definition:
       description: This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's active duodenal ulcer with a category of 'problem-list-item'.
       name: Condition Duodenal Ulcer Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
-    - reference:
-        reference: DocumentReference/ccd
-      description: This is a Continuity of Care Document (CCD) example for the *US Core DocumentReference*. It demonstrates the "structured-document" document category.
-      name: Continuity of Care Document (CCD)
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
     - reference:
         reference: Coverage/coverage-example
       description: This is a coverage example for the *US Core Coverage Profile*.
@@ -561,11 +551,6 @@ definition:
       description: This is an example for the *US Core Immunization Profile*.
       name: Immunization Example 1
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization
-    - reference:
-        reference: DocumentReference/ips
-      description: This is a International Patient Summary (IPS) example for the *US Core DocumentReference*. It demonstrates the "structured-document" document category.
-      name: International Patient Summary (IPS)
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
     - reference:
         reference: Observation/jugular-vein-distension
       description: This is a Jugular vein distension Example for the *Clinical Test Result Observation Profile*.
@@ -1036,26 +1021,6 @@ definition:
       description: This is a saint luke w endpoint example for the *US Core Organization Profile*.
       name: Saint Luke W Endpoint Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-    - reference:
-        reference: DocumentReference/scanned-consent-form
-      description: This is a Scanned Consent Form example for the *US Core DocumentReference*. It demonstrates the "scanned-document" document category.
-      name: Scanned Consent Form
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-    - reference:
-        reference: DocumentReference/insurance-card
-      description: This is a Scanned Insurance Card example for the *US Core DocumentReference*. It demonstrates the "scanned-document" document category.
-      name: Scanned Insurance Card
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-    - reference:
-        reference: DocumentReference/photo-id
-      description: This is a Scanned Photo ID example for the *US Core DocumentReference*. It demonstrates the "scanned-document" document category.
-      name: Scanned Photo ID
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-    - reference:
-        reference: DocumentReference/wound-image
-      description: This is a Scanned Wound Image example for the *US Core DocumentReference*. It demonstrates the "scanned-document" document category.
-      name: Scanned Wound Image
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
     - reference:
         reference: Condition/condition-SDOH-example
       description: This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's SDOH Problem/Health Concern.

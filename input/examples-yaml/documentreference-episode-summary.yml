@@ -1,32 +1,38 @@
 resourceType: DocumentReference
-id: ccd
+id: episode-summary
 meta:
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Continuity of Care Document (CCD)
+    valueString: Episode Summary Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Continuity of Care Document (CCD) example for the *US Core DocumentReference*.
-      It demonstrates the "structured-document" document category.
+    valueMarkdown: This is a episode summary example for the *US Core DocumentReference
+      Profile*.
+identifier:
+- system: urn:ietf:rfc:3986
+  value: urn:oid:2.16.840.1.113883.19.5.99999.1
 status: current
 type:
   coding:
   - system: http://loinc.org
     code: 34133-9
-    display: Summarization of episode note
+    display: Summary of episode note
   text: Continuity of Care Document (CCD)
 category:
 - coding:
   - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category
-    code: structured-document
-    display: Structured Document
-  text: Structured Document
+    code: clinical-note
+    display: Clinical Note
+  text: Clinical Note
 subject:
   reference: Patient/example
-date: '08/15/2026T22:01:00.612Z'
+  display: Amy Shaw
+date: '2026-08-15T22:01:00.612Z'
 author:
 - reference: Practitioner/practitioner-1
+  display: Ronald Bone, MD
+description: Pulmonology clinic acute visit
 content:
 - attachment:
     contentType: application/xml
@@ -34,6 +40,8 @@ content:
   format:
     system: http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode
     code: urn:hl7-org:sdwg:ccda-structuredBody:2.1
+    display: For documents following C-CDA 2.1 constraints using a structured body.
 context:
-  encounter:
-  - reference: Encounter/example-1
+  period:
+    start: '2025-09-27T13:00:00+11:00'
+    end: '2025-09-27T19:01:00+11:00'

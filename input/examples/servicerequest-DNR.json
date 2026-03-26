@@ -2,18 +2,8 @@
   "resourceType": "ServiceRequest",
   "id": "servicerequest-dnr-example1",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "ServiceRequest DNR Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is an example DNR request to demonstrate how to use the *US Core ServiceRequest Profile* to represent a derived, actionable order from a Plan of Medical Orders (PMO) document."
-      }
-    ],
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0"
     ]
   },
   "status": "active",
