@@ -54,7 +54,7 @@ This section provides detailed implementation guidance for the US Core Profile t
     - Although `Patient.deceased[x]` is marked as 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜, Certifying Systems are not required to support both, but **SHALL** support at least `Patient.deceasedDateTime`.<sup>[§][CONF-0465]</sup>
   - *Previous name* is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.<sup>[§][CONF-0466]</sup>
   - *Suffix* is represented using the `Patient.name.suffix` element.
-  - *Previous Address* is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.<sup>[§][CONF-0466]</sup>
+  - *Previous Address* is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.<sup>[§][CONF-0467]</sup>
   - Servers can use the [US Core Interpreter Needed Extension] on this profile or the [US Core Encounter Profile] to communicate whether a patient needs an interpreter.<sup>[§][CONF-0851]</sup> Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one.<sup>[§][CONF-0852]</sup> The certifying Client application **SHALL** support the extension on both profiles.<sup>[§][CONF-0853],[§][CONF-0854]</sup>
      - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.<sup>[§][CONF-0855]</sup>
   - The [Patient example] demonstrates how these elements are represented

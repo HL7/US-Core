@@ -32,11 +32,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * For Problems and Health Concerns, use the [US Core Condition Problems and Health Concerns Profile].<sup>[§][CONF-0320]</sup>
-* <sup>1</sup>The `Condition.code` has an *additional binding* of "[current]" and a base "preferred" binding.
-  - For the conformance rules on the current binding for coded data, review [this section](general-requirements.html#current-binding-for-coded-elements) in the General Requirements page.<sup>[§][CONF-0321],[§][CONF-0322]</sup>
-  - USCDI's applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM.
-    - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used as the primary code for current encounter diagnoses.<sup>[§][CONF-0323]</sup>
-    - The [US Core Condition Codes] only supports ICD-9-CM for historical purposes.
+* <span class="bg-success" markdown="1"><sup>1</sup>Unless exchanging legacy or text-only data, condition codes **SHOULD** be taken from SNOMED CT and ICD-10-CM, USCDI's applicable vocabulary standards for the Problem Data Element.<sup>[§][CONF-0900]</sup></span><!-- new-content -->
+  - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.<sup>[§][CONF-0323]</sup>
+  - The [US Core Condition Codes] value set supports ICD-9-CM for historical purposes only.
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.<sup>[§][CONF-0324]</sup>
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`. An example search is shown in the [Quick Start](#search) section below.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}

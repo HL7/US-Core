@@ -59,34 +59,7 @@
         "min": 1,
         "mustSupport": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
-              "extension": [
-                {
-                  "url": "key",
-                  "valueId": "us-core-condition-code-current"
-                },
-                {
-                  "url": "purpose",
-                  "valueCode": "current"
-                },
-                {
-                  "url": "valueSet",
-                  "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current"
-                },
-                {
-                  "url": "documentation",
-                  "valueMarkdown": "US Core uses the current additional binding for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis"
-                },
-                {
-                  "url": "shortDoco",
-                  "valueString": "Required for new records"
-                }
-              ]
-            }
-          ],
-          "strength": "preferred",
+          "strength": "extensible",
           "description": "Valueset to describe the actual problem experienced by the patient",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
         }

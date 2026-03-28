@@ -44,7 +44,7 @@ The "black_list" below is manually updated as needed when new profiles are added
   {%- endunless -%}
 {%- endfor -%}
 <ul>
-<li> <sup>1</sup>The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types:<sup>[§][CONF-0490]</sup>
+<li> <sup>1</sup>The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resource types:<sup>[§][CONF-0489]</sup>
 <ul id="prov-white-list">
 {% assign resource_list = resource_list | split: "," | uniq | sort -%}
 {% for r in  resource_list %}

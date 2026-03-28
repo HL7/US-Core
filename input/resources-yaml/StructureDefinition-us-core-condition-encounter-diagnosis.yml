@@ -67,27 +67,9 @@ differential:
       path: Condition.code
       min: 1
       mustSupport: true
+# ====== New R5 additional Binding Element removed in v9 ====
       binding:
-
-# ====== New R5 additional Binding Element Here ====
-
-        extension:
-          - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
-            extension:
-              - url: key
-                valueId: us-core-condition-code-current
-              - url: purpose
-                valueCode: current
-              - url: valueSet
-                valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code-current
-              - url: documentation
-                valueMarkdown: US Core uses the current additional binding for encoding newly recorded, non-legacy problem list items, health concerns and diagnosis
-              - url: shortDoco
-                valueString: Required for new records
-
-# ====== New R5 additional Binding Element Here ====
-
-        strength: preferred
+        strength: extensible
         description: Valueset to describe the actual problem experienced by the patient
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
     - id: Condition.subject

@@ -480,7 +480,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "When claiming conformance to ... [to a US Core profile extensible binding rule, a] US Core Responders Shall provide:\nA code from … [the] valueset 'DataElement.code.code' if the concept exists in the valueset [for a DataElement.code that has an extensible binding]\nOr an alternative code if the concept does not exist in the valueset [for a DataElement.code that has an extensible binding]\nOr text in ... `[DataElement.code.text]’ if only text is available [for a DataElement.code that has an extensible binding]",
+      "requirement": "When claiming conformance to ... [to a US Core profile extensible binding rule, a] US Core Responders **SHALL** provide:\nA code from … [the] valueset 'DataElement.code.code' if the concept exists in the valueset [for a DataElement.code that has an extensible binding]\nOr an alternative code if the concept does not exist in the valueset [for a DataElement.code that has an extensible binding]\nOr text in ... `[DataElement.code.text]’ if only text is available [for a DataElement.code that has an extensible binding]",
       "_reference": [
         {
           "extension": [
@@ -1669,7 +1669,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "An individual SMART Server will publish a granular list of its capabilities, and a set of these capabilities is combined to support a specific use, a Capability Set. See SMART App Launch’s [FHIR OAuth authorization Endpoints and Capabilities](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities) for more details. Servers **MAY** support ... [any] SMART on FHIR Capability Sets and capabilities [(see [FHIR OAuth authorization Endpoints and Capabilities](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities))]",
+      "requirement": "An individual SMART Server will publish a granular list of its capabilities, and a set of these capabilities is combined to support a specific use, a Capability Set. See SMART App Launch’s [FHIR OAuth authorization Endpoints and Capabilities](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities) for more details. Servers **MAY** support ... [any] SMART on FHIR Capability Sets and capabilities [(see [FHIR OAuth authorization Endpoints and Capabilities](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities))]",
       "_reference": [
         {
           "extension": [
@@ -1690,7 +1690,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "At least one of the following SMART on FHIR Capability Sets **SHOULD** be supported for US Core Servers that support User-Facing Applications ...\n[Patient Access Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#patient-access-for-standalone-apps)\n[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#clinician-access-for-standalone)",
+      "requirement": "At least one of the following SMART on FHIR Capability Sets **SHOULD** be supported for US Core Servers that support User-Facing Applications ...\n[Patient Access Standalone Apps](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#patient-access-for-standalone-apps)\n[Clinician Access for EHR Launch](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#clinician-access-for-standalone)",
       "_reference": [
         {
           "extension": [
@@ -1711,7 +1711,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "For certified systems[, those participating in the ONC IT Health Certification program], both **SHALL** be  supported:\n[Patient Access Standalone Apps](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#patient-access-for-standalone-apps)\n[Clinician Access for EHR Launch](http://hl7.org/fhir/smart-app-launch/STU2/conformance.html#clinician-access-for-standalone)",
+      "requirement": "For certified systems[, those participating in the ONC IT Health Certification program], both **SHALL** be  supported:\n[Patient Access Standalone Apps](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#patient-access-for-standalone-apps)\n[Clinician Access for EHR Launch](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#clinician-access-for-standalone)",
       "_reference": [
         {
           "extension": [
@@ -1771,7 +1771,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "US Core Server[s] **SHALL** support token introspection defined by the SMART App Launch Guide. For more details and additional consideration, see SMART App Launch’s [Token Introspection](http://hl7.org/fhir/smart-app-launch/STU2/token-introspection.html#token-introspection).",
+      "requirement": "US Core Server[s] **SHALL** support token introspection defined by the SMART App Launch Guide. For more details and additional consideration, see SMART App Launch’s [Token Introspection](https://hl7.org/fhir/smart-app-launch/STU2/token-introspection.html#token-introspection).",
       "_reference": [
         {
           "extension": [
@@ -4982,7 +4982,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "[When used No Known Allergies is documented the system Shall use an] appropriate negation code in AllergyIntolerence.code",
+      "requirement": "[When used No Known Allergies is documented the system **SHALL** use an] appropriate negation code in AllergyIntolerence.code",
       "_reference": [
         {
           "extension": [
@@ -5003,7 +5003,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "[When used No Known Allergies is documented the system Shall use an] verification status in AllergyIntolerance.verificationStatus",
+      "requirement": "[When used No Known Allergies is documented the system **SHALL** use an] verification status in AllergyIntolerance.verificationStatus",
       "_reference": [
         {
           "extension": [
@@ -6703,7 +6703,8 @@
     {
       "key": "CONF-0422",
       "reference": [
-        "StructureDefinition-us-core-care-experience-preference.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-care-experience-preference.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-treatment-intervention-preference.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHOULD"
@@ -6716,6 +6717,14 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-care-experience-preference.html#CONF-0422"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-treatment-intervention-preference.html#CONF-0422"
             }
           ]
         }
@@ -6874,8 +6883,7 @@
         "StructureDefinition-us-core-observation-clinical-result.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-observation-lab.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-observation-screening-assessment.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-simple-observation.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHALL"
@@ -6914,14 +6922,6 @@
               "valueUrl": "StructureDefinition-us-core-vital-signs.html#CONF-0427"
             }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-simple-observation.html#CONF-0427"
-            }
-          ]
         }
       ]
     },
@@ -6931,8 +6931,7 @@
         "StructureDefinition-us-core-observation-clinical-result.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-observation-lab.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-observation-screening-assessment.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-simple-observation.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "MAY"
@@ -6971,14 +6970,6 @@
               "valueUrl": "StructureDefinition-us-core-vital-signs.html#CONF-0428"
             }
           ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-simple-observation.html#CONF-0428"
-            }
-          ]
         }
       ]
     },
@@ -6988,8 +6979,7 @@
         "StructureDefinition-us-core-observation-clinical-result.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-observation-lab.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-observation-screening-assessment.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-simple-observation.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "MAY"
@@ -7026,14 +7016,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-vital-signs.html#CONF-0429"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-simple-observation.html#CONF-0429"
             }
           ]
         }
@@ -7327,27 +7309,6 @@
       ]
     },
     {
-      "key": "CONF-0446",
-      "reference": [
-        "StructureDefinition-us-core-treatment-intervention-preference.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHOULD"
-      ],
-      "conditionality": true,
-      "requirement": "[When using US Core Treatment Intervention Preference Profile] the context or precondition of a patient’s preference **SHOULD** be supplied in the Observation.valueString ... or an extension",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-treatment-intervention-preference.html#CONF-0446"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0447",
       "reference": [
         "StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance"
@@ -7586,126 +7547,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-organization.html#CONF-0457"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0461",
-      "reference": [
-        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-race.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "MAY"
-      ],
-      "conditionality": true,
-      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **MAY**  include additional codes from the detailed ethnicity ... value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0461"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-race.html#CONF-0461"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0462",
-      "reference": [
-        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-ethnicity.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "conditionality": true,
-      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0462"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-ethnicity.html#CONF-0462"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0463",
-      "reference": [
-        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-race.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "MAY"
-      ],
-      "conditionality": true,
-      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **MAY**  include additional codes from the detailed ... race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0463"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-race.html#CONF-0463"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0464",
-      "reference": [
-        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-ethnicity.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "conditionality": true,
-      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Ethnicity Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-ethnicity.html)]",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0464"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-ethnicity.html#CONF-0464"
             }
           ]
         }
@@ -8548,27 +8389,6 @@
       ]
     },
     {
-      "key": "CONF-0820",
-      "reference": [
-        "screening-and-assessments.html#structured-screening-and-assessments"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "conditionality": true,
-      "requirement": "Servers that support the USCDI Health Status/Assessments Data Class **SHALL** support the US Core Observation Screening Assessment Profile",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "screening-and-assessments.html#CONF-0820"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0821",
       "reference": [
         "screening-and-assessments.html#structured-screening-and-assessments"
@@ -9023,47 +8843,6 @@
       ]
     },
     {
-      "key": "CONF-0866",
-      "reference": [
-        "StructureDefinition-us-core-simple-observation.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "An `Observation.component` without a value, **SHALL**  include a reason why the data is absent. ",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-simple-observation.html#CONF-0866"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0867",
-      "reference": [
-        "StructureDefinition-us-core-simple-observation.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "MAY"
-      ],
-      "conditionality": true,
-      "requirement": "Systems that never provide a component observation without a component value are not required to support `Observation.component.dataAbsentReason`.",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-simple-observation.html#CONF-0867"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0868",
       "reference": [
         "StructureDefinition-us-core-simple-observation.html#profile-specific-implementation-guidance"
@@ -9167,7 +8946,7 @@
     {
       "key": "CONF-0889",
       "reference": [
-        "StructureDefinition-us-core-practitionerrole.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-practitioner.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-organization.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-relatedperson.html#profile-specific-implementation-guidance"
@@ -9181,7 +8960,7 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-practitionerrole.html#CONF-0889"
+              "valueUrl": "StructureDefinition-us-core-practitioner.html#CONF-0889"
             }
           ]
         },
@@ -9414,7 +9193,8 @@
     {
       "key": "CONF-0900",
       "reference": [
-        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-condition-encounter-diagnosis.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHOULD"
@@ -9426,6 +9206,14 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0900"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-condition-encounter-diagnosis.html#CONF-0900"
             }
           ]
         }
@@ -9566,6 +9354,26 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-servicerequest.html#CONF-0908"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0909",
+      "reference": [
+        "scopes.html#scopes-for-requesting-fhir-resources-by-type"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] RelatedPerson [the] <patient|user|system>/FamilyMemberHistory.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "scopes.html#CONF-0909"
             }
           ]
         }

@@ -13,7 +13,7 @@ The US Core Profile elements include *Mandatory*, *Must Support*, and *Additiona
 The [Capability Statements][Capability Statements and Requirements Resources] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resource specify how the Server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
 
 <div class="bg-success" markdown="1">
-The [Requirements Table] and [Requirements Resource][Capability Statements and Requirements Resources]  list the requirements defined in the US Core Implementation Guide's narrative sections. The <sup>[§](#.html)</sup> footnote associated with a narrative section’s sentence, phrase, or bullet indicates a requirement and links to the requirement in the requirements table.
+The [Requirements Table] and [Requirements Resource][Capability Statements and Requirements Resources]  list the requirements defined in the US Core Implementation Guide's narrative sections. The <sup>§</sup> footnote associated with a narrative section’s sentence, phrase, or bullet indicates a requirement and links to the requirement in the requirements table.
 </div><!-- new-content -->
 
 ### Conforming to US Core
@@ -126,7 +126,7 @@ FHIR profiles use [slicing] when a coded element is a repeating elements and a p
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for the CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
-- US Core Responders **SHALL** provide:<sup>[§][CONF-00]</sup>
+- US Core Responders **SHALL** provide:<sup>[§][CONF-0027]</sup>
   - A code from this valueset in `AllergyIntolerance.code.code` *if the concept exists* in the ValueSet
   - Or an alternative code *if the concept does not exist* in the ValueSet
   - Or text in `AllergyIntolerance.code. text' if only text is available.
@@ -294,7 +294,7 @@ There are situations when information on a particular data element is missing, a
 
         *The `clinicalStatus` element is conditionally mandatory based on resource-specific constraints.
 
-        If any of these status codes is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource.<sup>[§][CONF-0048]</sup> If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.<sup>[§][CONF-0049],[§][CONF-0049]</sup>
+        If any of these status codes is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource.<sup>[§][CONF-0048]</sup> If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.<sup>[§][CONF-0049],[§][CONF-0050]</sup>
 
 ### FHIR RESTful Search API Requirements
 

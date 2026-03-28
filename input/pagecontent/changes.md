@@ -95,10 +95,11 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 51. **Applied:** Non-substantive (Clarification) Update guidance for `Location.type` value sets.[FHIR-54411](https://jira.hl7.org/browse/FHIR-54411) See Changes [Here](StructureDefinition-us-core-location.html#profile-specific-implementation-guidance)
 52. **Applied:** Non-substantive (Correction) Change text from "NUBC Place of Service" to "CMS Place of Service" [FHIR-54414](https://jira.hl7.org/browse/FHIR-54414) See Changes [Here](StructureDefinition-us-core-location.html#profile-specific-implementation-guidance)
 53. **Applied:**  Non-substantive (Correction) Remove US@ guidance from non-Patient profiles. [FHIR-54435](https://jira.hl7.org/browse/FHIR-54435) For example, See Changes [Here](StructureDefinition-us-core-relatedperson.html#profile-specific-implementation-guidance)
-54. **Applied:** Non-substantive (Enhancement) Clarify profile specific implementation guidance for Patient.address  [FHIR-54437](https://jira.hl7.org/browse/FHIR-54437) See Changes [Here](StructureDefinition-us-core-patient.htmll#profile-specific-implementation-guidance)
+54. **Applied:** Non-substantive (Enhancement) Clarify profile specific implementation guidance for Patient.address  [FHIR-54437](https://jira.hl7.org/browse/FHIR-54437) See Changes [Here](StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
 55. **Applied:**  Non-substantive (Clarification) Update introduction to the US Core ADI DocumentReference Profile. [FHIR-54936](https://jira.hl7.org/browse/FHIR-54936) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#mandatory-and-must-support-data-elements)
 56. **Resolve - change required:** Non-substantive (Correction) Unusual constraint language on backbone element [FHIR-54943](https://jira.hl7.org/browse/FHIR-54943) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
 57. **Applied:** Non-compatible (Correction) Replace additional bindings with other structures to match intent [FHIR-55688](https://jira.hl7.org/browse/FHIR-55688) See Changes Here:
+    - [US Core Condition Encounter Diagnosis Profile](StructureDefinition-us-core-condition-encounter-diagnosis.html)
     - [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html)
     - [US Core Procedure Profile](StructureDefinition-us-core-procedure.html)
     - [US Core Location Profile](StructureDefinition-us-core-location.html)

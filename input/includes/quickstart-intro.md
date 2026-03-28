@@ -12,11 +12,11 @@ when new profiles are added, deprecated, etc.
         {%- if scope.resource_scope_conf == conf or scope.cat1_scope_conf == conf or scope.cat12_scope_conf == conf or scope.cat2_scope_conf == conf or scope.cat4_scope_conf == conf or scope.cat5_scope_conf == conf or scope_cat6_conf == conf %}
 Servers providing access to {{ scope.data_element }} data **{{conf}}** support these [US Core SMART Scopes]:
           {%- if scope.resource_scope_conf == conf %}
-  -  [resource level scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs`
+  -  [resource level scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs` <sup>[§][{{ scope.conf_req }}]</sup>
           {% endif -%}
-          {% for i in (1..6) %}{% assign category =  'cat' | append: i |append: '_scope' %}{% assign category_conformance =  category |append: '_conf' -%}
+          {% for i in (1..6) %}{% assign category =  'cat' | append: i |append: '_scope' %}{% assign category_conformance =  category |append: '_conf' -%}{% assign category_req =  category_conformance |append: '_req' %}
             {%- if scope[category] and scope[category_conformance] == conf %}
-  -  [granular scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs?category={{ scope[category] }}`
+  -  [granular scopes]\: `<patient|user|system>/{{ scope.resource_type }}.rs?category={{ scope[category] }}` <sup>[§][{{ scope[category_req] }}]</sup>
             {% endif -%}
           {% endfor -%}
         {% endif -%}
@@ -46,6 +46,7 @@ Below is an overview of the required Server RESTful FHIR interactions for this p
 #### US Core Scopes
 {{smart_scope}}
 {% endif %}
+
 
 
 
