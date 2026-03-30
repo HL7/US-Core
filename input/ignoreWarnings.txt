@@ -235,3 +235,16 @@ A definition could not be found for Canonical URL%
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0-ballot-tc1 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+
+#55 === The following Code Systems are defined by CDC.  However, the IG publisher's terminology server does not support CDC-based code systems. Note that the Codesystem URL is correct and listed on THO's External Code Systems page. ===
+
+A definition for CodeSystem 'https://nahdo.org/sopt' could not be found, so the code cannot be validated
+
+#56 === The following Code Systems are commonly used standard code system that support post-coordination, which means full expansion isn’t possible. We recognize that the the value set definitions where they are used need to be narrowed, but this work has been deferred. ===
+
+WARNING: ValueSet.where(id = 'us-core-goal-description'): Error from https://tx.fhir.org/r4: Error: The code System "http://snomed.info/sct" has a grammar, and cannot be enumerated directly
+WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from https://tx.fhir.org/r4: Error: The code System "http://www.ama-assn.org/go/cpt" has a grammar, and cannot be enumerated directly
+
+#57 ===  This extension is used to define the expectation for he following SearchParameter elements: multipleAnd, multipleOr, comparator, modifier, and chain.  It also used to render the SearchParameter narrative using custom templates. Since its context is not scoped outside of CapabilityStatement the validator is generating these errors. The tracker, FHIR-56196, has been logged to extend its context to these SearchParameter elements. ===
+
+The extension http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation v5.3.0-ballot-tc1 is not allowed to be used at this point%
