@@ -1,5 +1,10 @@
 resourceType: Questionnaire
 id: exercise-vital-sign
+extension:
+  - url: 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm'
+    valueCoding:
+      system: 'http://hl7.org/fhir/version-algorithm'
+      code: semve
 meta:
   profile:
     - 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire'
@@ -19,21 +24,21 @@ subjectType:
   - Patient
 date: '2023-08-03'
 code:
-    - 
+    -
         system: 'http://loinc.org'
         code: 89574-8
         display: Exercise Vital Sign (EVS)
 
 item:
-    - 
+    -
         type: decimal
         code:
-            - 
+            -
                 code: 89555-7
                 system: 'http://loinc.org'
                 display: How many days per week did you engage in moderate to strenuous physical activity in the last 30 days
         extension:
-            - 
+            -
                 url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit'
                 valueCoding:
                     code: d/wk
@@ -43,15 +48,15 @@ item:
         linkId: /89555-7
         text: How many days per week did you engage in moderate to strenuous physical activity in the last 30 days?
 
-    - 
+    -
         type: decimal
         code:
-            - 
+            -
                 code: 68516-4
                 system: 'http://loinc.org'
                 display: 'On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise'
         extension:
-            - 
+            -
                 url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit'
                 valueCoding:
                     code: min/d

@@ -22,7 +22,7 @@ WARNING: StructureDefinition.where(URL = 'http://hl7.org/fhir/us/core/StructureD
 
 # 05. === These questionnaires are created using NLM tooling based on LOINC LFORMs. They use standard FHIR Questionnaire Extensions that "extend" the base SDC profile ===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|3.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 06. === The code is from the US Core defined NUCC binding and not from base FHIR preferred c80-practice-codes value set (updated text from 7.0.0) ===
 
@@ -82,12 +82,13 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Constraint fail
 
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|5.0.0
-Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.34.0
+Reference to draft ValueSet http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1
+Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.36.0
+
 
 # 19. === The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked, and the identifiers are correct (updated text from 7.0.0) ===
 
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
-The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesn't provide any codes so the code cannot be validated
 
 # 20. === HL7 Terminology (THO) defines the ServiceDeliveryLocationRoleType and HealthcareServiceLocation value sets that compose this ValueSet. However, no codes are displayed in the HL7 Terminology for HealthcareServiceLocation value set, which is composed of NHSN Healthcare Facility Patient Care Location (HSLOC) and CMS Place of Service Codes (POS) codes. These codes are available at:ServiceDeliveryLocationRoleType: https://terminology.hl7.org/6.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html,HSLOC: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest,POS: https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets===
 
@@ -109,15 +110,9 @@ INFORMATION: CodeSystem/condition-category: CodeSystem: Most code systems define
 INFORMATION: CodeSystem/us-core-category: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/us-core-documentreference-category: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# 24. === These values are indeed large, and the ig-publisher informs the reader that the expansion is incomplete. ===
-
-INFORMATION: ValueSet.where(id = 'us-core-diagnosticreport-report-and-note-codes'): The value set expansion is too large, and only a subset has been displayed
-INFORMATION: ValueSet.where(id = 'us-core-documentreference-type'): The value set expansion is too large, and only a subset has been displayed
-INFORMATION: ValueSet.where(id = 'us-core-laboratory-test-codes'): The value set expansion is too large, and only a subset has been displayed
-
 # 26. === Using the standard CapabilityStatementExpectation extension in additional contexts to fully express intended capabilities: see FHIR-12419 (115) (updated text from 7.0.0-ballot) ===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.3.0-ballot-tc1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 27. === These Examples demonstrate the use of additional Codes or Identifiers not defined in US Core profiles  Updated in 9.0.0 ===
 
@@ -126,6 +121,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|9.0.0
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|9.0.0
 A definition for CodeSystem 'http://example.org/fhir/michigan.gov/lara/license-type' could not be found, so the code cannot be validated
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 28. === In this example, representing the concept clearly with human-readable annotations {pack-years} is not misleading. It clearly illustrates how to use the Observation with the code and demonstrates a clinical need outweighing concerns about using annotations. ===
 
@@ -164,13 +160,10 @@ The slice 'NCSBNID' on path 'Practitioner.identifier' is not marked as 'must-sup
 
 # 35. === These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider updating and/or adopting the recommended replacement in a future release. ===
 
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.2.0 is deprecated
-The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
-The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note: 'Replaced by [[[http://hl7.org/fhir/StructureDefinition/itemWeight]]]'
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
+The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.3.0-ballot-tc1 is deprecated with the note: 'Replaced by [[[http://hl7.org/fhir/StructureDefinition/itemWeight]]]'
 The concept 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is deprecated and its use should be reviewed
 The concept 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is deprecated and its use should be reviewed
-
 
 # 36. === These Extension StructureDefinitions were examined, and there are no substantive changes between versions and thus no reason to specify a version ===
 
@@ -187,18 +180,12 @@ There are multiple different potential matches for the url 'http://hl7.org/fhir/
 
 # 38. === As explained in the section "US Core ValueSet and CodeSystem versions" US Core does not "pin" the version of the terminology to a specific version of US Core. Instead US Core value set packages containing value sets expanded with the updated code system versions will be made available.
 
-There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/observation-category'.%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor'.%
-There are multiple different potential matches for the url 'http://hl7.org/fhir/narrative-status'.%
-There are multiple different potential matches for the url 'http://hl7.org/fhir/observation-status'.%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/condition-category'.%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-USEncounterDischargeDisposition'.%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/provenance-agent-type'.%
-There are multiple different potential matches for the url 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.19579'.%
-There are multiple different potential matches for the url 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.71'.%
-There are multiple different potential matches for the url 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.13'.%
-There are multiple different potential matches for the url 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.24'.%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'.%
+Pinned the version of http://terminology.hl7.org/CodeSystem/%
+Pinned the version of http://hl7.org/fhir/%
+There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem%
+There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet%
+There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem%
+There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet%
 
 # 39 === US Core reference the most recent published version of SDC. Ballot versions are released for public review and feedback during the HL7 balloting process and not intended for real-world implementation in production systems.
 
@@ -214,29 +201,37 @@ The html source contains the word 'SHOULD NOT' but it is not in a text phrase ma
 
 # 42.  === The following codes in the example are not in the extensible base binding, v3-ServiceDeliveryLocationRoleType, defined for the element, but are valid codes taken from valuesets that are defined as "additional bindings" for different use contexts. ===
 
-
 # 43 === The error is due to an issue with the terminology server, not the implementation guide. For details, see the Zulip chat at: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/whither.20ICD9cm.20in.20THO.207.2E0.2E0.3F/with/559122224 ===
-
-ERROR: ValueSet.where(id = 'us-core-condition-code'): Error from https://tx.fhir.org/r4: The code system definition for http://hl7.org/fhir/sid/icd-9-cm is a fragment, so this expansion is not permitted unless the expansion parameter "incomplete-ok" has a value of "true"
 
 # 44 === Although it may not be published before this ballot version is published, this link will resolve when US Core 8.0.1 is published. ===
 
-ERROR: changes-between-versions.html#/html/body/div/div/div/div/div/ul/li/a at Line 1141, column 8: The link 'comparison-v8.0.1/index.html' for "Comparison with version 8.0.1" cannot be resolved
-
 # 45 === This error will be present until the publication team can address it.  See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 ===
-
-ERROR: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide.definition.extension[96].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
 # 46 === The additional binding purpose code for this value set is  "Preferred"; therefore, it does not show up in all the provided examples.===
 
- None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1) specified in an additional binding, and a coding is recommended to come from this value set (codes = http://nucc.org/provider-taxonomy#208D00000X)
-
 # 47 === This NDC codes has been checked and is a valid Unit of Use NDC codes as described on the CDC's IIS website: https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_tableaccess.asp. There are issues with the NDC directory used for validation, because it is incomplete.  For details and the variance approval from the product director, see this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Immunization.20NDC.20Code.20error/with/562172015 ===
 
-INFORMATION: Immunization/imm-1: Immunization.vaccineCode.coding[1].code: Code "49281012188" not found in NDC
-ERROR: Immunization/imm-1: Immunization.vaccineCode.coding[1].code: Unknown code '49281012188' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version ''
+ERROR: Immunization/imm-1: Immunization.vaccineCode.coding[1].code: Unknown code '49281012188' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version '2021-11-01'
 
 # 49 === This guide uses a custom liquid script to generat the the CapabilityStatement narrative. To facilate rendering of displays and relative links to human readable content, the Capability statemnent uses the Display Name and Narrative Link extensions on the canonicals types - 'supportedProfiles', 'operation.definition', and 'implementationGuide' elements.  As a result, the relative links in the Narrative Link extensions will generate "No definition could be found" warnings wherever they are used. For example: "No definition could be found for URL value 'StructureDefinition-us-core-allergyintolerance.html'" The warning have been checked and are valid links internal to to guide or to other guides.
 
+# 50 === This ValueSet is set by the Sushi tooling stack when generating the ImplementationGuide resources from the configuration file. It will be updated when the tooling is updated ===
+
+Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+
+# 51 === There are no versions specified for these ValueSet in the examples. However, the validator and terminology server are referencing earlier versions of them that have been marked as retired and superseded by more recent and active version.  The publishing team is aware of this issue and reviewing how to fix it. ===
+
+Reference to retired ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/%
+
+# 52 === These URLs are generated by: 1) Requirements resource element `Requirements​.statement​.reference` ("A reference to another artifact that created this requirement. This could be a Profile, etc., or external regulation, or business requirements expressed elsewhere.")  2)  The originalNarrative Extension ("A human language representation of the concept (resource/element), as a url that is a reference to a portion of the narrative of a resource ...." for each element `Requirements​.statement​.reference` which provide a direct link to the text in the guide using the requirement's key as a page anchor.  These are all relative references within the IG and use to enhance the rendering to inform the reader what page and section the requirement came from. ===
+
 No definition could be found for URL value%
+
+# 53 === The informative message suggests using "http" instead of "https".  However these URLs are used in CapabilityStatement extension to render appropriate links in custom liquid generated narratives, and using "http" would lead to a bad link error. ===
+
 A definition could not be found for Canonical URL%
+
+#54 === These deprecated extensions are inherited from the base FHIR resources and not under the control of US Core editors. ===
+
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0-ballot-tc1 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'

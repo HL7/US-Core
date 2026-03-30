@@ -15,7 +15,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Observation Summary Table]: observation-summary.html
 [SMART on FHIR Obligations and Capabilities]: scopes.html
 [Security]: security.html
-[Requirements Table]: requirements.html
+[Requirements Tables]: requirements.html
 [Guidance]: guidance.html
 [USCDI]: uscdi.html
 [General Guidance]: general-guidance.html
@@ -1179,11 +1179,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Condition Codes - XML Representation]: ValueSet-us-core-condition-code.xml.html
 [US Core Condition Codes - JSON Representation]: ValueSet-us-core-condition-code.json.html
 [US Core Condition Codes - TTL Representation]: ValueSet-us-core-condition-code.ttl.html
-[US Core Condition Codes Current]: ValueSet-us-core-condition-code-current.html
-[US Core Condition Codes Current - Testing]: ValueSet-us-core-condition-code-current-testing.html
-[US Core Condition Codes Current - XML Representation]: ValueSet-us-core-condition-code-current.xml.html
-[US Core Condition Codes Current - JSON Representation]: ValueSet-us-core-condition-code-current.json.html
-[US Core Condition Codes Current - TTL Representation]: ValueSet-us-core-condition-code-current.ttl.html
 [US Core Diagnostic Report Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core Diagnostic Report Category Codes - Testing]: ValueSet-us-core-diagnosticreport-category-testing.html
 [US Core Diagnostic Report Category Codes - XML Representation]: ValueSet-us-core-diagnosticreport-category.xml.html
@@ -1209,6 +1204,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Laboratory Test Codes - XML Representation]: ValueSet-us-core-laboratory-test-codes.xml.html
 [US Core Laboratory Test Codes - JSON Representation]: ValueSet-us-core-laboratory-test-codes.json.html
 [US Core Laboratory Test Codes - TTL Representation]: ValueSet-us-core-laboratory-test-codes.ttl.html
+[US Core Location Type Codes]: ValueSet-us-core-location-type.html
+[US Core Location Type Codes - Testing]: ValueSet-us-core-location-type-testing.html
+[US Core Location Type Codes - XML Representation]: ValueSet-us-core-location-type.xml.html
+[US Core Location Type Codes - JSON Representation]: ValueSet-us-core-location-type.json.html
+[US Core Location Type Codes - TTL Representation]: ValueSet-us-core-location-type.ttl.html
 [US Core Narrative Status]: ValueSet-us-core-narrative-status.html
 [US Core Narrative Status - Testing]: ValueSet-us-core-narrative-status-testing.html
 [US Core Narrative Status - XML Representation]: ValueSet-us-core-narrative-status.xml.html
@@ -1219,6 +1219,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Non Laboratory Codes - XML Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.xml.html
 [US Core Non Laboratory Codes - JSON Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.json.html
 [US Core Non Laboratory Codes - TTL Representation]: ValueSet-us-core-diagnosticreport-report-and-note-codes.ttl.html
+[US Core Practitioner Role Specialty Codes]: ValueSet-us-core-practitionerrole-specialty.html
+[US Core Practitioner Role Specialty Codes - Testing]: ValueSet-us-core-practitionerrole-specialty-testing.html
+[US Core Practitioner Role Specialty Codes - XML Representation]: ValueSet-us-core-practitionerrole-specialty.xml.html
+[US Core Practitioner Role Specialty Codes - JSON Representation]: ValueSet-us-core-practitionerrole-specialty.json.html
+[US Core Practitioner Role Specialty Codes - TTL Representation]: ValueSet-us-core-practitionerrole-specialty.ttl.html
 [US Core Problem or Health Concern]: ValueSet-us-core-problem-or-health-concern.html
 [US Core Problem or Health Concern - Testing]: ValueSet-us-core-problem-or-health-concern-testing.html
 [US Core Problem or Health Concern - XML Representation]: ValueSet-us-core-problem-or-health-concern.xml.html
@@ -1429,6 +1434,10 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Cigarette Pack-Years Example - XML Representation]: Observation-pack-years-example.xml.html
 [Cigarette Pack-Years Example - JSON Representation]: Observation-pack-years-example.json.html
 [Cigarette Pack-Years Example - TTL Representation]: Observation-pack-years-example.ttl.html
+[Clinician Authored Discharge Summary Example]: DocumentReference-discharge-summary.html
+[Clinician Authored Discharge Summary Example - XML Representation]: DocumentReference-discharge-summary.xml.html
+[Clinician Authored Discharge Summary Example - JSON Representation]: DocumentReference-discharge-summary.json.html
+[Clinician Authored Discharge Summary Example - TTL Representation]: DocumentReference-discharge-summary.ttl.html
 [Colonoscopy Example]: CarePlan-colonoscopy.html
 [Colonoscopy Example - XML Representation]: CarePlan-colonoscopy.xml.html
 [Colonoscopy Example - JSON Representation]: CarePlan-colonoscopy.json.html
@@ -1469,10 +1478,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [DiagnosticReport Chest Xray Report Example - XML Representation]: DiagnosticReport-chest-xray-report.xml.html
 [DiagnosticReport Chest Xray Report Example - JSON Representation]: DiagnosticReport-chest-xray-report.json.html
 [DiagnosticReport Chest Xray Report Example - TTL Representation]: DiagnosticReport-chest-xray-report.ttl.html
-[Discharge Summary Example]: DocumentReference-discharge-summary.html
-[Discharge Summary Example - XML Representation]: DocumentReference-discharge-summary.xml.html
-[Discharge Summary Example - JSON Representation]: DocumentReference-discharge-summary.json.html
-[Discharge Summary Example - TTL Representation]: DocumentReference-discharge-summary.ttl.html
 [Docref Example 1]: Bundle-docref-example-1.html
 [Docref Example 1 - XML Representation]: Bundle-docref-example-1.xml.html
 [Docref Example 1 - JSON Representation]: Bundle-docref-example-1.json.html

@@ -9,6 +9,11 @@ meta:
       generated using the LHC-Forms SDC Questionnaire App.
   profile:
   - http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
+extension:
+  - url: 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm'
+    valueCoding:
+      system: 'http://hl7.org/fhir/version-algorithm'
+      code: semve
 date: '2023-03-31'
 code:
 - system: http://loinc.org

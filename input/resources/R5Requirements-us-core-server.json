@@ -7553,6 +7553,90 @@
       ]
     },
     {
+      "key": "CONF-0461",
+      "reference": [
+        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "MAY"
+      ],
+      "conditionality": true,
+      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **MAY**  include additional codes from the detailed ethnicity ... value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0461"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0462",
+      "reference": [
+        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0462"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0463",
+      "reference": [
+        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "MAY"
+      ],
+      "conditionality": true,
+      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **MAY**  include additional codes from the detailed ... race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0463"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0464",
+      "reference": [
+        "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Ethnicity Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-ethnicity.html)]",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-patient.html#CONF-0464"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "CONF-0466",
       "reference": [
         "StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance"

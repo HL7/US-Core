@@ -1,5 +1,10 @@
 resourceType: Questionnaire
 id: hunger-vital-sign-example
+extension:
+  - url: 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm'
+    valueCoding:
+      system: 'http://hl7.org/fhir/version-algorithm'
+      code: semve
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
