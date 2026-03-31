@@ -145,7 +145,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 ### Terminology
 
-* **Type.** `DocumentReference.type` **SHALL** use LOINC and support <span class="bg-success" markdown="1">,at minimum,</span><!-- new-content --> the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
+* **Type.** `DocumentReference.type` **SHALL** use LOINC and support <span class="bg-success" markdown="1">, at minimum,</span><!-- new-content --> the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
 
   - 11488-4: Consultation note
   - 11535-2: Discharge summary note

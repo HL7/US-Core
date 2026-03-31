@@ -41,7 +41,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 - <sup>1</sup>The `DiagnosticReport.category` binding Must Support, at a minimum, the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology.<sup>[§][CONF-0360]</sup> Other categories may be supported.<sup>[§][CONF-0361]</sup>
   - It is up to the data source to categorize the documents they send. Therefore, Clients need to understand that data categorization is somewhat subjective, and the categorization applied by the source may not align with the Client's expectations. Any linkages between specific LOINC codes and the LP-type codes may be used as guidance.<sup>[§][CONF-0362]</sup> If LOINC develops a hierarchy or categorization to align these concepts, US Core will be updated.
 - A Server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g., a system may categorize an orthopedic note as cardiology.)
-- <span class="bg-success" markdown="1">For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes listed Table 4: LOINC® Document Type Codes in [HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1]<sup>[§][CONF-0364]</sup></span><!-- new-content -->
+- <span class="bg-success" markdown="1">For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes listed in Table 4: LOINC® Document Type Codes in [HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1]<sup>[§][CONF-0364]</sup></span><!-- new-content -->
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access to the images.
 
@@ -50,7 +50,7 @@ This section provides detailed implementation guidance for the US Core Profile t
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifier` element to access the source images from external sources.
    * The [Argonaut SMART Imaging Access project](https://confluence.hl7.org/spaces/AP/pages/161060067/SMART+Imaging+Access) defined an approach to access imaging studies using a single authorization flow.
 
-- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.<sup>[§][CONF-0836]</sup>
+- The `DiagnosticReport.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.<sup>[§][CONF-0836]</sup>
 
 
 {% include link-list.md %}

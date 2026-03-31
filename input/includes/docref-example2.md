@@ -5,7 +5,7 @@
 
 **Request Procedure Notes and Discharge Summaries for 2019 using `POST` syntax**
 
-`POST [base]/DocumentReference/$docref}`
+`POST [base]/DocumentReference/$docref`
 
 **POST request body:**
 

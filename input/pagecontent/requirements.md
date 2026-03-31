@@ -21,9 +21,9 @@ with the following columns:
 inherited = from the ...us_core_test_kit/requirements/hl7.fhir.us.core_8.0.0_reqs.xlsx
 added = added for US Core publication:
 
-- Is_New: (added) Flag for new or updated content for the current version. Defult is "FALSE"  or empty and set to "TRUE" for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
+- Is_New: (added) Flag for new or updated content for the current version. Default is "FALSE"  or empty and set to "TRUE" for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
 - ID*: (inherited) The unique identifier for the requirement. IDs are short, meaningless (they do not contain context like section numbers), and numeric. An approach is incrementing integers. See below for how to handle IDs for child requirements.
-- key: (added) A requirement key that identifies the requirement and links it to the statement in the guide. The format is "CONF-NNNN" where NNNN is a sequentially increasing zero padded integer with the coresponding ID* value.  e.g, "CONF-0022" Mapping: key -> Requirements.statement.key"
+- key: (added) A requirement key that identifies the requirement and links it to the statement in the guide. The format is "CONF-NNNN" where NNNN is a sequentially increasing zero padded integer with the corresponding ID* value.  e.g, "CONF-0022" Mapping: key -> Requirements.statement.key"
 - URL*: (inherited) "The list of URLs of the deepest section that contains the requirement. The URL provides context for the requirement text.
    Mapping: URL ->  Requirements.statement.reference"
 - reference: (added)  the list of relative urls of the page from where the requirements statement came from, this is use to create a link back to the page.
@@ -43,7 +43,7 @@ added = added for US Core publication:
 - Planning To Test?: (inherited)  Not used
 - Planning To Test Details: (inherited)  Not used
 - Page: (inherited) "The list of pages the requirement came from, extracted from the URL."
-- Section: (inherited) "The liar of sections the requirement came from, extracted from the URL."  Useful for context
+- Section: (inherited) "The list of sections the requirement came from, extracted from the URL."  Useful for context
 - context: (added) The list of page " section topic that pertains to the requirement, For example, US Core Medication Request Profile, or Clinical Notes.  Usually derived from the source location.\, but can be manually curated too. format = Page: Section
 - Verb Guess: (inherited)  Not useds
 - Actor Guess: (inherited)  Not used

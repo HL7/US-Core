@@ -55,7 +55,7 @@ Whether based on simple observations or detailed assessments, clinicians may rec
 
 Local policies guide what is appropriate for the problem list and what is appropriate for an observation. For example, some clinics may consider social needs sensitive information inappropriate for the problem list. Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.
 
-Every Server <span class="bg-success" markdown="1">(including "Certifying Systems")</span><!-- new-content --> that supports the USDCI Data Class "Health Status/Assessments":
+Every Server <span class="bg-success" markdown="1">(including "Certifying Systems")</span><!-- new-content --> that supports the USCDI Data Class "Health Status/Assessments":
 
 -  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].<sup>[§][CONF-0269]</sup>
    -  The US Core Simple Observation Profile's `Observation.derivedFrom` element **SHOULD** reference the Structured Screening and Assessment upon which clinical judgment observations are made (see below).<sup>[§][CONF-0270]</sup> Likewise, the US Core Condition Profile's `Condition.evidence.detail` element **SHOULD** reference the Structured Screening and Assessment which assist in diagnosing problems or health concerns.<sup>[§][CONF-0271]</sup>
@@ -192,7 +192,7 @@ The following sections and <span class="bg-success" markdown="1">Health Status A
 
 - The Gravity project created and maintains the [Social Determinants of Health Screening Assessments And Questions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.206/expansion) value set for the SDOH USCDI Health Assessments Data Element. This value set contains both panel and panel item codes.
 
-   In addition to these concepts, implementers should consider using several SDOH value sets maintained and updated in VSAC by [Multiple Chronic Condition (MCC) Care Plan Implementation Guide] and the HL7 Patent Care work group with support from the National Institute of Health. These are panel item codes that may be part of a LOINC panel.
+   In addition to these concepts, implementers should consider using several SDOH value sets maintained and updated in VSAC by [Multiple Chronic Condition (MCC) Care Plan Implementation Guide] and the HL7 Patient Care work group with support from the National Institute of Health. These are panel item codes that may be part of a LOINC panel.
 
 <!-- ========================================================
 The liquid syntax below generates a list of SDOH screening and

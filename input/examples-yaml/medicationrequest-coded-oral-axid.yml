@@ -7,7 +7,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: MedicationRequest Coded Oral Axid Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is an prescribed oral solution example for the *US Core MedicationRequest
+    valueMarkdown: This is a prescribed oral solution example for the *US Core MedicationRequest
       Profile*.  It represents the medication and reason using codes.
 
 # === med adherence extension ===
@@ -17,6 +17,7 @@ extension:
       valueCodeableConcept:
         coding:
           - system: http://snomed.info/sct
+            version: http://snomed.info/sct/731000124108
             code: '275928001'
             display: Drugs - partial non-compliance (finding)
 
@@ -27,6 +28,7 @@ extension:
        valueCodeableConcept:
          coding:
            - system: http://snomed.info/sct
+             version: http://snomed.info/sct/731000124108
              code: '116154003'
              display: Patient (person)
     -  url: informationSource

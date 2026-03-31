@@ -1,5 +1,5 @@
 
-​This section provides implementers with important definitions, requirements, and guidance on creating, using, and sharing Clinical Notes.
+This section provides implementers with important definitions, requirements, and guidance on creating, using, and sharing Clinical Notes.
 
 ### Clinical Notes
 
@@ -155,7 +155,7 @@ Where:
 - [context] =
    - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category` for DiagnosticReport report category discovery<sup>[§][CONF-0234],[§][CONF-0235]</sup>
    -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code` for DiagnosticReport report type discovery<sup>[§][CONF-0236],[§][CONF-0237]</sup>
-   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category` for DocumentReference note category discovery<<sup>[§][CONF-0238],[§][CONF-0239]</sup>
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category` for DocumentReference note category discovery<sup>[§][CONF-0238],[§][CONF-0239]</sup>
    -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type` for DocumentReference note type discovery<sup>[§][CONF-0240],[§][CONF-0241]</sup>
 
 **Examples**

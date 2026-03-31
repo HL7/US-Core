@@ -8,13 +8,14 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Encounter 1 Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a encounter 1 example for the *US Core Encounter Profile*.
+    valueMarkdown: This is an encounter 1 example for the *US Core Encounter Profile*.
 #USCDI5
 extension:
     -
         url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-interpreter-needed
         valueCoding:
           system: http://snomed.info/sct
+          version: http://snomed.info/sct/731000124108
           code: '373066001' #<-- SNOMED CT "Yes (qualifier value)"
 status: finished
 class:

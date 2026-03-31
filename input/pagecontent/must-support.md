@@ -58,7 +58,7 @@ HOWEVER, the USCDI Data Elements data needs to be manually mapped to it from the
 additional-uscdi-requirements.csv columns:
 
 - 'Is_New': Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
-- 'AddlUSCDI':  USCDI Data Elements corresponding ot the add'l USCDI FHIR element. Note that this needs to be manually mapped using the the USCDI mapping table as a guide.
+- 'AddlUSCDI':  USCDI Data Elements corresponding to the add'l USCDI FHIR element. Note that this needs to be manually mapped using the USCDI mapping table as a guide.
 - 'Profile': US Core Profile name to which the add'l USCDI elements belongs. The format is markdown link brackets for reference-style links.  For example "[US Core Goal Profile]".
 - 'FHIRElement': FHIR element that is add'l USCDI
 - 'combo' : column for unique matching

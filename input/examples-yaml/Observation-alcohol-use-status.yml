@@ -8,7 +8,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Alcohol Use Status Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: 'This is an alcohol-use-status example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.'
+    valueMarkdown: 'This is an alcohol-use-status example for the *Simple Observation Profile*.  It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.'
 
 category:
   - coding:
@@ -36,6 +36,7 @@ performer:
 valueCodeableConcept:
   coding:
     - system: 'http://snomed.info/sct'
+      version: http://snomed.info/sct/731000124108
       code: '228276006'
       display: Occasional drinker
   text: other choices - non-drinker, former drinker, current drinker

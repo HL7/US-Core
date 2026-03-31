@@ -16,14 +16,14 @@ profile-metadata.csv columns:
 - current_fmm: FMM level in the current published version
 - proposed_fmm: Proposed FMM level for next version
 - added: Published version when the profile or extension was added to the guide.
-- deprecated: Published version when the profile or extension was deprerated.
+- deprecated: Published version when the profile or extension was deprecated.
 - retired: Published version when the profile or extension was retired.
 - ig_only: Used for extensions only. Flag to indicate if the extension is used only for US Core StructureDefinitions. It is not a USCDI nor Realm specific requirement.
 - realm_only:  Used for extensions only. Flag to indicate if the extension is defined for use in US Realm but is not a USCDI related requirement.
 - version_notes: Notes on changes between versions. Used to inform readers in plain human readable text.
 - dstu2_profile_title: Mapping of the profile or extensions to the Argonaut query DSTU2 profiles or extensions.
-- ipa_compatibility: Compliance with the International Patient Access (IPA) values: "OK" = Compliant, "MAYBE" = Additional requirements needed to meet all requirements , "NO" = Incompatble ,"NA" = No equivalent profile:
-- ips_compatibility: Compliance with the International Patient Summary (IPS) values: "OK" = Compliant, "MAYBE" = Additional requirements needed to meet all requirements , "NO" = Incompatble ,"NA" = No equivalent profile:
+- ipa_compatibility: Compliance with the International Patient Access (IPA) values: "OK" = Compliant, "MAYBE" = Additional requirements needed to meet all requirements , "NO" = Incompatible ,"NA" = No equivalent profile:
+- ips_compatibility: Compliance with the International Patient Summary (IPS) values: "OK" = Compliant, "MAYBE" = Additional requirements needed to meet all requirements , "NO" = Incompatible ,"NA" = No equivalent profile:
 - resource_scope_conf: Resource Level SMART Scope requirements, Values: "SHALL"|"SHOULD"|"MAY"
 - data_element: USCDI/HTI-1 defined scope contexts
 - resource_type: profile or extension's base resource type. It is "Extension" for extensions.

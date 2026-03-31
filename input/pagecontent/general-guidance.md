@@ -8,7 +8,7 @@ FHIR resource elements of the [Reference] datatype reference other FHIR resource
 
 ### Operations
 
-[FHIR RESTful operations] define a list of parameters and their definitions. If the operation parameter is a resource, it **SHOULD** conform to a US Core Profiles whenever possible.  However, Use Core Profiles are designed for the FHIR RESTful read and search API and may not fit the operation parameter scope.
+[FHIR RESTful operations] define a list of parameters and their definitions. If the operation parameter is a resource, it **SHOULD** conform to a US Core Profiles whenever possible.  However, US Core Profiles are designed for the FHIR RESTful read and search API and may not fit the operation parameter scope.
 
 ### Contained Resources
 

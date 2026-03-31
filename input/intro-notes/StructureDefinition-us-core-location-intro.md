@@ -16,7 +16,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 5. A Location address<sup>2</sup>
 6. The managing organization
 
-\<sup>1,2</sup> see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 

@@ -33,11 +33,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 * <span class="bg-success" markdown="1"><sup>1</sup> </span><!-- new-content -->The `AllergyIntolerance.clinicalStatus` element has the following constraints: **SHALL** be present if verification status is not "entered-in-error"<sup>[§][CONF-0302]</sup> and **SHALL NOT** be present if verification Status is "entered-in-error".<sup>[§][CONF-0303]</sup>
-* *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile<sup>[§][CONF-0305]</sup> with the appropriate negation code in `AllergyIntolerence.code`<sup>[§][CONF-0306]</sup> and the appropriate verification status in `AllergyIntolerance.verificationStatus`.<sup>[§][CONF-0307]</sup>
+* *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile<sup>[§][CONF-0305]</sup> with the appropriate negation code in `AllergyIntolerance.code`<sup>[§][CONF-0306]</sup> and the appropriate verification status in `AllergyIntolerance.verificationStatus`.<sup>[§][CONF-0307]</sup>
 
   If a patient has not been asked about their allergies, this would be represented as:<sup>[§][CONF-0308]</sup>
     * `AllergyIntolerance.code` = "1631000175102" (Patient not asked (contextual qualifier) (qualifier value))
-    * `AllergyIntolerance.verificationStatus` = "unconfirmed" or empty (in other words, then element omitted)
+    * `AllergyIntolerance.verificationStatus` = "unconfirmed" or empty (in other words, the element omitted)
 
   If a patient has been asked, but has indicated they have no known allergies, this would be represented as:<sup>[§][CONF-0309]</sup>
   * `AllergyIntolerance.code` = "716186003" (No known allergy (situation))

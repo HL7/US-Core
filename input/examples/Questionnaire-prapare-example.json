@@ -6,6 +6,15 @@
       "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
     ]
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "code": "semver"
+      }
+    }
+  ],
   "url": "http://hl7.org/fhir/us/core/Questionnaire/prapare-example",
   "name": "PRAPAREExample",
   "title": "Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]",

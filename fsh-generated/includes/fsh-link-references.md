@@ -6,7 +6,6 @@
 [10-minute-apgar-score]: Observation-10-minute-apgar-score.html
 [10-minute-apgar-score-panel]: Observation-10-minute-apgar-score-panel.html
 [ADI-example]: Observation-ADI-example.html
-[no-ADI-example]: Observation-no-ADI-example.html
 [AHC-HRSN-item-example-68517-2]: Observation-AHC-HRSN-item-example-68517-2.html
 [AUDIT-C]: Questionnaire-AUDIT-C.html
 [AUDIT-C]: QuestionnaireResponse-AUDIT-C.html
@@ -105,6 +104,7 @@
 [medicationrequest-referenced-oral-axid]: MedicationRequest-medicationrequest-referenced-oral-axid.html
 [self-tylenol]: MedicationRequest-self-tylenol.html
 [missing-coded-data-example]: CareTeam-missing-coded-data-example.html
+[no-ADI-example]: Observation-no-ADI-example.html
 [satO2-fiO2]: Observation-satO2-fiO2.html
 [observation-occupation]: Observation-observation-occupation.html
 [observation-occupation-industry-unknown]: Observation-observation-occupation-industry-unknown.html

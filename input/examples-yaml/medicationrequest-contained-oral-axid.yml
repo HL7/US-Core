@@ -7,7 +7,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: MedicationRequest Contained Oral Axid Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is an prescribed oral solution example for the *US Core MedicationRequest
+    valueMarkdown: This is a prescribed oral solution example for the *US Core MedicationRequest
       Profile*. It represents the medication as a contained Medication resource.
 contained:
 - resourceType: Medication
@@ -40,7 +40,7 @@ dosageInstruction:
       boundsPeriod:
         start: '2008-04-05'
 
- # USCDI5 data elemnent       
+ # USCDI5 data elemnent
   route:
     coding:
     - system: http://snomed.info/sct

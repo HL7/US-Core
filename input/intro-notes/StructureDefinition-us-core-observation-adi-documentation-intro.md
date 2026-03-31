@@ -31,7 +31,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- <sup>3</sup>The `Observation.value` element uses codes for "yes, "no", and "unknown" to answer the question posed by the fixed `Observation.code` - whether one or more advance directives are present.
+- <sup>3</sup>The `Observation.value` element uses codes for "yes", "no", and "unknown" to answer the question posed by the fixed `Observation.code` - whether one or more advance directives are present.
 - <sup>1</sup>If the system asserts the patient has ADI documents and the references to the (electronic) documents are known, it **SHOULD** reference them in the [Supporting Info Extension] using the [US Core ADI DocumentReference Profile] to exchange the ADI documents and their properties.
   - If the system asserts the patient has ADI documents, but the location of the  documents is unknown, there would be no reference.
 - <sup>2</sup>An `Observation.performer` of type Practitioner or Organization typically makes the observation, and an `Observation.performer` of Patient or RelatedPerson usually supplies the information (for example, a next of kin who answers questions about the patient's advance directives). Systems may use the standard [Performer function Extension] to distinguish the type of involvement of the performer in the Observation resource.

@@ -32,7 +32,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* <sup>1</sup>The original US Core CarePlan Profile was designed to support the "Assessment and Plan" from a narrative Progress Note. The future direction of US Core CarePlan Profile is continue to move from text-based content to discrete references to conditions/needs (`CarePlan.addresses`), goals (`CarePlan.goal`), and strategies (`CarePlan.activities`).
+* <sup>1</sup>The original US Core CarePlan Profile was designed to support the "Assessment and Plan" in a narrative Progress Note. Its future direction is to move from text-based content to discrete references to conditions/needs (`CarePlan.addresses`), goals (`CarePlan.goal`), and strategies (`CarePlan.activities`).
 
 * Additional considerations for systems aligning with [HL7 Consolidated (C-CDA)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements:
     - US Core Goal **SHOULD** be present in `CarePlan.goal`<sup>[§][CONF-0310]</sup>

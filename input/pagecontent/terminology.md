@@ -260,7 +260,7 @@ Code System Sources:
 This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)]), where applicable, using a RESTful API service to access the VSAC value sets and supported code systems. See the table above for a list of value sets used in US Core that VSAC defines.
 
 
-####   How to Acess Value Sets in VSAC
+####   How to Access Value Sets in VSAC
 
 
   -  VSAC requires login using your own *UMLS API Key* to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html). (See the screenshots below)

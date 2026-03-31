@@ -7,7 +7,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: AllergyIntolerance Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a allergyintolerance example for the *US Core AllergyIntolerance
+    valueMarkdown: This is an allergy example for the *US Core AllergyIntolerance
       Profile*.
 clinicalStatus:
   coding:
@@ -39,6 +39,6 @@ reaction:
       version: http://snomed.info/sct/731000124108
     text: skin rash
   severity: mild
-recorder: 
+recorder:
   reference: Practitioner/practitioner-1
   display: Dr Ronald Bone

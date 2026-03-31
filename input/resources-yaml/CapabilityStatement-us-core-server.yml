@@ -630,7 +630,7 @@ rest:
 
           * New problems and health concerns
 
-          * Changes in the clinical status or verifications status
+          * Changes in the clinical status or verification status
       of problems or health concern
     interaction:
     - extension:
@@ -1138,7 +1138,7 @@ rest:
       such as accession numbers in the `identifier` element to
       access the source images from external sources.
 
-      * The `DiagnosticRequest.basedOn` element connects the
+      * The `DiagnosticReport.basedOn` element connects the
       DiagnosticReport to the originating order in the EHR. Systems
       that initiate the lab order **SHOULD** use this element when
       reporting the results.

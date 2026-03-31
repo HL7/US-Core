@@ -87,7 +87,7 @@ If a Server determines that a vital sign is a duplicate of one it has already st
 
 ### Updating Previously Submitted Observations
 
-Servers **SHOULD** support the ability for patients-facing apps to update the `status` element of a vital sign resource the user previously wrote to the system from any app to `entered-in-error` through an `update` interaction. This capability **SHOULD** only be used by apps to address data mistakes in data submission.
+Servers **SHOULD** support the ability for patient-facing apps to update the `status` element of a vital sign resource the user previously wrote to the system from any app to `entered-in-error` through an `update` interaction. This capability **SHOULD** only be used by apps to address data mistakes in data submission.
 
 ### Including Provenance Information
 

@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Core Immunization
+The following are example usage scenarios for the US Core Immunization
 profile:
 
 -   Query for immunizations belonging to a Patient

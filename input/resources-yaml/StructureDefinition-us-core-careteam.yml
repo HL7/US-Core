@@ -23,7 +23,7 @@ differential:
       mustSupport: true
       binding:
         strength: required
-        description: Indicates whether the team is current , represents future intentions or is now a historical record.
+        description: Indicates whether the team is current,  represents future intentions or is now a historical record.
         valueSet: http://hl7.org/fhir/ValueSet/care-team-status
     - id: CareTeam.subject
       path: CareTeam.subject

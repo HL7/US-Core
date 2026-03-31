@@ -2,7 +2,7 @@ extension:
   - url: 'http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm'
     valueCoding:
       system: 'http://hl7.org/fhir/version-algorithm'
-      code: semve
+      code: semver
 code:
     -
         code: 96841-2
@@ -27,7 +27,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: 'Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] questionnaire example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.'
+    valueMarkdown: 'Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] questionnaire example. It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.'
 item:
     -
         type: choice

@@ -633,7 +633,7 @@ rest:
       application **SHALL** support all three elements.\n  * See the US Core General
       Guidance page for [Searching Using lastUpdated](general-guidance.html#searching-using-lastupdated).
       Updates to `Condition.meta.lastUpdated` **SHOULD** reflect:\n    * New problems
-      and health concerns\n    * Changes in the clinical status or verifications status
+      and health concerns\n    * Changes in the clinical status or verification status
       of problems or health concern"
     interaction:
     - extension:
@@ -1141,7 +1141,7 @@ rest:
       such as accession numbers in the `identifier` element to
       access the source images from external sources.
 
-      * The `DiagnosticRequest.basedOn` element connects the
+      * The `DiagnosticReport.basedOn` element connects the
       DiagnosticReport to the originating order in the EHR. Systems
       that initiate the lab order **SHOULD** use this element when
       reporting the results.

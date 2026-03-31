@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/us/core/Requirements/us-core-server",
   "name": "USCoreServerRequirements",
   "title": "US Core Server Requirements",
-  "description": "This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification.",
+  "description": "This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g)(10) certification.",
   "_actor": [
     {
       "extension": [
@@ -4982,7 +4982,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "[When used No Known Allergies is documented the system **SHALL** use an] appropriate negation code in AllergyIntolerence.code",
+      "requirement": "[When used No Known Allergies is documented the system **SHALL** use an] appropriate negation code in AllergyIntolerance.code",
       "_reference": [
         {
           "extension": [
@@ -5024,7 +5024,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "If a patient has not been asked about their allergies, this would be represented as:\nAllergyIntolerance.code = “1631000175102” (Patient not asked (contextual qualifier) (qualifier value))\nAllergyIntolerance.verificationStatus = “unconfirmed” or empty (in other words, then element omitted)",
+      "requirement": "If a patient has not been asked about their allergies, this would be represented as:\nAllergyIntolerance.code = “1631000175102” (Patient not asked (contextual qualifier) (qualifier value))\nAllergyIntolerance.verificationStatus = “unconfirmed” or empty (in other words, the element omitted)",
       "_reference": [
         {
           "extension": [
@@ -5338,7 +5338,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Updates to .meta.lastUpdated **SHOULD** reflect:\nChanges in the clinical status or verifications status of problems or health concerns.",
+      "requirement": "Updates to .meta.lastUpdated **SHOULD** reflect:\nChanges in the clinical status or verification status of problems or health concerns.",
       "_reference": [
         {
           "extension": [
@@ -5913,7 +5913,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes listed Table 4: LOINC® Document Type Codes in *HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1*",
+      "requirement": "For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes listed in Table 4: LOINC® Document Type Codes in *HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1*",
       "_reference": [
         {
           "extension": [
@@ -8642,7 +8642,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.",
+      "requirement": "The `DiagnosticReport.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the order **SHOULD** use this element when reporting the results.",
       "_reference": [
         {
           "extension": [
@@ -8703,7 +8703,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": " If the referenced a document or file [referenced by `DocumentReference.content.attachment.url`]  is hosted on a Server outside the FHIR Server, it should be securely accessible using the same authorization credentials that were used to access the FHIR Server. This reduces complexity for the Client and improves the user experience.",
+      "requirement": " If the referenced document or file [referenced by `DocumentReference.content.attachment.url`]  is hosted on a Server outside the FHIR Server, it should be securely accessible using the same authorization credentials that were used to access the FHIR Server. This reduces complexity for the Client and improves the user experience.",
       "_reference": [
         {
           "extension": [

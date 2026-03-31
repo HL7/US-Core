@@ -28,7 +28,7 @@
 
       `GET [base]/DocumentReference/$docref?{parameters}`
 
-   - Otherwise the POST transaction with used as follows:
+   - Otherwise, the POST transaction is used as follows:
 
       `POST [base]/DocumentReference/$docref`
 

@@ -8,7 +8,7 @@
 
 **Request the latest CCD for a patient using `POST` syntax**
 
-`POST [base]/DocumentReference/$docref}`
+`POST [base]/DocumentReference/$docref`
 
 **POST request body:**
 

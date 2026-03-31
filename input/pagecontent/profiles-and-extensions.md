@@ -37,7 +37,7 @@ profile-metadata.csv columns:
 - current_fmm: FMM level in the current published version
 - proposed_fmm: Proposed FMM level for next version
 - added: Published version when the profile or extension was added to the guide.
-- deprecated: Published version when the profile or extension was deprerated.
+- deprecated: Published version when the profile or extension was deprecated.
 - retired: Published version when the profile or extension was retired.
 - ig_only: Used for extensions only. Flag to indicate if the extension is used only for US Core StructureDefinitions. It is not a USCDI nor Realm specific requirement.
 - realm_only:  Used for extensions only. Flag to indicate if the extension is defined for use in US Realm but is not a USCDI related requirement.

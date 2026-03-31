@@ -118,13 +118,8 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
     - reference:
         reference: Observation/ADI-example
-      description: This is a Observation example for the USCDI5 ADI Observation Data Element to show whether and location of a patient has an advance directive using code 45473-6 (Advance healthcare directive completed) and a SNOMED CT value of "Yes" with Supporting info Extensions linking the to the documents
+      description: This is a USCDI5 ADI Observation example showing if a patient has an advance directive using code 45473-6 (Advance healthcare directive completed) and a SNOMED CT value of "Yes," with supporting info extensions linking to the documents.
       name: ADI Observation Presence ADI Example
-      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
-    - reference:
-        reference: Observation/no-ADI-example
-      description: This is a Observation example for the USCDI5 ADI Observation Data Element to show whether a patient has an advance directive using code 45473-6 (Advance healthcare directive completed). and a SNOMED CT value of "No".
-      name: ADI Observation Presence No ADI Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
     - reference:
         reference: Observation/AHC-HRSN-item-example-68517-2
@@ -133,42 +128,42 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
     - reference:
         reference: Questionnaire/AUDIT-C
-      description: Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] questionnaire example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
+      description: Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] questionnaire example. It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
       name: Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) Questionnaire Example
       exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
     - reference:
         reference: QuestionnaireResponse/AUDIT-C
-      description: This is the [LHC Form](https://loinc.org/lhc-forms/) Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
+      description: This is the [LHC Form](https://loinc.org/lhc-forms/) Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse example. It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
       name: Alcohol Use Disorder Identification Test - Consumption (AUDIT-C) QuestionnaireResponse Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
     - reference:
         reference: Observation/alcohol-use-status
-      description: This is an alcohol-use-status example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
+      description: This is an alcohol-use-status example for the *Simple Observation Profile*.  It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
       name: Alcohol Use Status Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
     - reference:
         reference: Observation/alcoholic-drinks-per-day
-      description: This is an Alcoholic Drinks Per Day example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
+      description: This is an Alcoholic Drinks Per Day example for the *Simple Observation Profile*.  It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
       name: Alcoholic Drinks Per Day Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
     - reference:
         reference: AllergyIntolerance/example
-      description: This is a allergyintolerance example for the *US Core AllergyIntolerance Profile*.
+      description: This is an allergy example for the *US Core AllergyIntolerance Profile*.
       name: AllergyIntolerance Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
     - reference:
         reference: AllergyIntolerance/non-pharmacologic-agent-example
-      description: This is a allergyintolerance example for the *US Core AllergyIntolerance Profile* representing a non-pharmacologic substance (latex) that the patient is allergic to.
+      description: This is an allergy example for the *US Core AllergyIntolerance Profile* representing a non-pharmacologic substance (latex) that the patient is allergic to.
       name: AllergyIntolerance Non-pharmacologic Agent Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
     - reference:
         reference: Bundle/allergyintolerance-provenance-example1
-      description: This example show how  an "inline" search result parameter `_revinclude` will return a FHIR searchset Bundle resource.  It contains the AllergyIntolerance resource based on the `patient` search parameter and the last Provenance for the version named in the reference.
+      description: This example shows how an "inline" search result parameter `_revinclude` will return a FHIR searchset Bundle resource.  It contains the AllergyIntolerance resource based on the `patient` search parameter and the last Provenance for the version named in the reference.
       name: AllergyIntolerance Provenance Example 1
       exampleBoolean: true
     - reference:
         reference: Bundle/allergyintolerance-provenance-example2
-      description: This example show how  an "inline" search result parameter `_revinclude` will return a FHIR searchset Bundle resource.  It contains the AllergyIntolerance resource based on the `_id` search parameter and the last Provenance for the version named in the reference.
+      description: This example shows how an "inline" search result parameter `_revinclude` will return a FHIR searchset Bundle resource.  It contains the AllergyIntolerance resource based on the `_id` search parameter and the last Provenance for the version named in the reference.
       name: AllergyIntolerance Provenance Example 2
       exampleBoolean: true
     - reference:
@@ -233,7 +228,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
     - reference:
         reference: Observation/care-experience-preference
-      description: This is an care experience preference example for the *Care Experience Profile*.  It is based on the *US Core Simple Observation Profile*.
+      description: This is a care experience preference example for the *Care Experience Profile*.  It is based on the *US Core Simple Observation Profile*.
       name: Care Experience Preference Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference
     - reference:
@@ -253,7 +248,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
     - reference:
         reference: Media/chest-xray
-      description: This is an example Media xray image that is reference by the *US Core DiagnosticReport Note Profile*.
+      description: This is an example Media xray image that is referenced by the *US Core DiagnosticReport Note Profile*.
       name: Chest Xray Example
       exampleBoolean: true
     - reference:
@@ -318,27 +313,27 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
     - reference:
         reference: Bundle/docref-example-1
-      description: 'This bundle is a the response to a $docref operation and contains an example *US Core DocumentReference*.  It is used in [Example 1: Request the latest CCD](StructureDefinition-us-core-documentreference.html#mandatory-operation).'
+      description: 'This bundle is the response to a $docref operation and contains an example *US Core DocumentReference*.  It is used in [Example 1: Request the latest CCD](StructureDefinition-us-core-documentreference.html#mandatory-operation).'
       name: Docref Example 1
       exampleBoolean: true
     - reference:
         reference: Bundle/docref-example-2
-      description: 'This bundle is a the response to a $docref operation and contains an examples of *US Core DocumentReference*.  It is used in [Example 2: Request Procedure Notes and Discharge Summaries for 2019](StructureDefinition-us-core-documentreference.html#mandatory-operation).'
+      description: 'This bundle is the response to a $docref operation and contains an example of *US Core DocumentReference*.  It is used in [Example 2: Request Procedure Notes and Discharge Summaries for 2019](StructureDefinition-us-core-documentreference.html#mandatory-operation).'
       name: Docref Example 2
       exampleBoolean: true
     - reference:
         reference: DocumentReference/adi-dnr
-      description: This is a an example of an DNR (Do Not Resuscitate) PDF attachment for the *US Core ADI DocumentReference Profile*
+      description: This is an example of an DNR (Do Not Resuscitate) PDF attachment for the *US Core ADI DocumentReference Profile*
       name: DocumentReference DNR
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
     - reference:
         reference: DocumentReference/living-will
-      description: This is a an example of Living Will PDF attachment for the *US Core ADI DocumentReference Profile*
+      description: This is an example of Living Will PDF attachment for the *US Core ADI DocumentReference Profile*
       name: DocumentReference Living Will
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
     - reference:
         reference: DocumentReference/polst
-      description: This is a an example of POLST (PDF) for the *US Core ADI DocumentReference Profile*
+      description: This is an example of POLST (PDF) for the *US Core ADI DocumentReference Profile*
       name: DocumentReference POLST (PDF)
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference
     - reference:
@@ -378,17 +373,17 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
     - reference:
         reference: Observation/ekg-impression
-      description: This is a EKG impression Example for the *Clinical Test Result Observation Profile*.
+      description: This is an EKG impression Example for the *Clinical Test Result Observation Profile*.
       name: EKG impression Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
     - reference:
         reference: Observation/ekg-lead
-      description: This is a EKG lead Example for the *Clinical Test Result Observation Profile*.
+      description: This is an EKG lead Example for the *Clinical Test Result Observation Profile*.
       name: EKG lead Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
     - reference:
         reference: Media/ekg-strip
-      description: This is an example Media image that is reference by the *US Core DiagnosticReport Note Profile*.
+      description: This is an example Media image that is referenced by the *US Core DiagnosticReport Note Profile*.
       name: EKG Strip Image
       exampleBoolean: true
     - reference:
@@ -398,12 +393,12 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
     - reference:
         reference: Encounter/example-1
-      description: This is a encounter 1 example for the *US Core Encounter Profile*.
+      description: This is an encounter 1 example for the *US Core Encounter Profile*.
       name: Encounter 1 Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     - reference:
         reference: Encounter/1036
-      description: This is a encounter 1036 example for the *Encounter Profile*.
+      description: This is an encounter 1036 example for the *Encounter Profile*.
       name: Encounter 1036 Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     - reference:
@@ -428,7 +423,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
     - reference:
         reference: Observation/cbc-erythrocytes
-      description: This is a erythrocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.
+      description: This is an erythrocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.
       name: Erythrocytes Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
     - reference:
@@ -448,27 +443,27 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
     - reference:
         reference: Observation/exercise-per-day
-      description: This is an minutes exercise per day example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
+      description: This is a minutes exercise per day example for the *Simple Observation Profile*.  It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
       name: Exercise Per Day Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
     - reference:
         reference: Observation/exercise-per-week
-      description: This is a days exercise per week example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
+      description: This is a days exercise per week example for the *Simple Observation Profile*.  It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
       name: Exercise Per Week Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
     - reference:
         reference: Questionnaire/exercise-vital-sign
-      description: This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) Questionnaire Example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
+      description: This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) Questionnaire Example. It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
       name: Exercise Vital Sign Questionnaire Example
       exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
     - reference:
         reference: QuestionnaireResponse/exercise-vital-sign
-      description: This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) QuestionnaireResponse Example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
+      description: This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) QuestionnaireResponse Example. It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
       name: Exercise Vital Sign QuestionnaireResponse Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
     - reference:
         reference: FamilyMemberHistory/familymemberhistory-example
-      description: This is a an example of FamilyMemberHistory for the *US Core FamilyMemberHistory Profile*
+      description: This is an example of FamilyMemberHistory for the *US Core FamilyMemberHistory Profile*
       name: FamilyMemberHistory Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory
     - reference:
@@ -518,7 +513,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
     - reference:
         reference: Location/hl7east
-      description: This is a HL7East example for the *US Core Location Profile*.
+      description: This is an HL7East example for the *US Core Location Profile*.
       name: HL7East Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
     - reference:
@@ -593,17 +588,17 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense
     - reference:
         reference: MedicationRequest/medicationrequest-coded-oral-axid
-      description: This is an prescribed oral solution example for the *US Core MedicationRequest Profile*.  It represents the medication and reason using codes.
+      description: This is a prescribed oral solution example for the *US Core MedicationRequest Profile*.  It represents the medication and reason using codes.
       name: MedicationRequest Coded Oral Axid Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
     - reference:
         reference: MedicationRequest/medicationrequest-contained-oral-axid
-      description: This is an prescribed oral solution example for the *US Core MedicationRequest Profile*. It represents the medication as a contained Medication resource.
+      description: This is a prescribed oral solution example for the *US Core MedicationRequest Profile*. It represents the medication as a contained Medication resource.
       name: MedicationRequest Contained Oral Axid Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
     - reference:
         reference: MedicationRequest/medicationrequest-referenced-oral-axid
-      description: This is an prescribed oral solution example for the *US Core MedicationRequest Profile*. It represents the medication and reason as reference Medication and Condition resources.
+      description: This is a prescribed oral solution example for the *US Core MedicationRequest Profile*. It represents the medication and reason as reference Medication and Condition resources.
       name: MedicationRequest Referenced Oral Axid Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
     - reference:
@@ -613,9 +608,14 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
     - reference:
         reference: CareTeam/missing-coded-data-example
-      description: This is an example to demonstrate the using 'unknown' from the *DataAbsentReason Code System* when data is missing for a CareTeam resource where the mandatory `CareTeam.participant.role` value is unknown.
+      description: This is an example to demonstrate the use of the concept 'unknown' from the *DataAbsentReason Code System* when data is missing for a CareTeam resource where the mandatory `CareTeam.participant.role` value is unknown.
       name: Missing Coded Data Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+    - reference:
+        reference: Observation/no-ADI-example
+      description: This is an Observation example for the USCDI5 ADI Observation Data Element, indicating whether a patient has an advance directive using code 45473-6 (Advance healthcare directive completed) and a SNOMED CT value of "No".
+      name: No ADI Observation Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation
     - reference:
         reference: Observation/satO2-fiO2
       description: This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen.
@@ -623,22 +623,22 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
     - reference:
         reference: Observation/observation-occupation
-      description: This example of the *US Core Observation Occupation Profile*  documents a nursing assistant's work type.
+      description: This example of the *US Core Observation Occupation Profile* documents a nursing assistant's work type.
       name: Occupation Observation Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation
     - reference:
         reference: Observation/observation-occupation-industry-unknown
-      description: This example of the *US Core Observation Occupation Profile*  represents a situation where the occupation is known, but the industry is not.
+      description: This example of the *US Core Observation Occupation Profile* represents a situation where the occupation is known, but the industry is not.
       name: 'Occupation Observation Example: Industry Unknown'
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation
     - reference:
         reference: Observation/observation-occupation-unknown
-      description: This example of the *US Core Observation Occupation Profile*  represents a situation where the industry is known, but the occupation is not.
+      description: This example of the *US Core Observation Occupation Profile* represents a situation where the industry is known, but the occupation is not.
       name: 'Occupation Observation Example: Unknown Occupation'
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation
     - reference:
         reference: Observation/ofc-percentile
-      description: This is a OFC percentile example for the *Head Occipital Frontal Circumference Percentile Profile*.
+      description: This is an OFC percentile example for the *Head Occipital Frontal Circumference Percentile Profile*.
       name: OFC Percentile Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
     - reference:
@@ -648,7 +648,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
     - reference:
         reference: Organization/acme-lab
-      description: This is an example laboratory example using the *US Core Organization Profile*.
+      description: This is an an example using the *US Core Organization Profile*.
       name: Organization Acme Lab Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
     - reference:
@@ -948,7 +948,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus
     - reference:
         reference: Procedure/defib-implant
-      description: This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code'.
+      description: This *US Core Procedure Profile* is an example of a Defibrillator implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code`.
       name: Procedure Defibrillator Implant Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
     - reference:
@@ -978,7 +978,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
     - reference:
         reference: Questionnaire/phq-9-example
-      description: An example of a SDC Questionnaire that represents the Hunger Vital Sign Example questionnaire defined in LOINC (code 44249-1). This example is generated using the LHC-Forms SDC Questionnaire App.
+      description: An example of a SDC Questionnaire that represents the PHQ-9 quick depression assessment panel defined by LOINC (code 44249-1). This example is generated using the LHC-Forms SDC Questionnaire App.
       name: Questionnaire PHQ-9 Example
       exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
     - reference:
@@ -1133,7 +1133,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
     - reference:
         reference: Observation/substance-use-status
-      description: This is an Substance-use-status example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
+      description: This is a Substance-use-status example for the *Simple Observation Profile*.  It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.
       name: Substance Use Status Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
     - reference:
@@ -1173,12 +1173,12 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature
     - reference:
         reference: Questionnaire/TAPS
-      description: Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] questionnaire example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
+      description: Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] questionnaire example. It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
       name: Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example
       exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
     - reference:
         reference: QuestionnaireResponse/TAPS
-      description: This is the [LHC Form](https://loinc.org/lhc-forms/)  Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] QuestionnaireResponse example. It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
+      description: This is the [LHC Form](https://loinc.org/lhc-forms/)  Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] QuestionnaireResponse example. It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.
       name: Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) QuestionnaireResponse Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
     - reference:
@@ -1213,7 +1213,7 @@ definition:
       name: US Core Authentication Time Extension
     - reference:
         reference: StructureDefinition/us-core-average-blood-pressure
-      description: The US Core Average Blood Pressure Profile inherits from the [Observation](https://hl7.org/fobservation.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for recording, searching, and fetching average diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Average Blood Pressure Profile inherits from the [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for recording, searching, and fetching average diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Average Blood Pressure Profile
     - reference:
@@ -1223,32 +1223,32 @@ definition:
       name: US Core Birth Sex Extension
     - reference:
         reference: StructureDefinition/us-core-blood-pressure
-      description: US Core Blood Pressure Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: US Core Blood Pressure Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Blood Pressure Profile
     - reference:
         reference: StructureDefinition/us-core-bmi
-      description: The US Core BMI Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch Body Mass Index (BMI) observations with a standard  LOINC codes and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core BMI Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch Body Mass Index (BMI) observations with standard LOINC codes and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core BMI Profile
     - reference:
         reference: StructureDefinition/us-core-body-height
-      description: The US Core Body Height Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch body height observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Body Height Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch body height observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Body Height Profile
     - reference:
         reference: StructureDefinition/us-core-body-temperature
-      description: The US Core Body Temperature Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch body temperature observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Body Temperature Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch body temperature observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Body Temperature Profile
     - reference:
         reference: StructureDefinition/us-core-body-weight
-      description: The US Core Body Weight Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch body weight observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Body Weight Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch body weight observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Body Weight Profile
     - reference:
         reference: StructureDefinition/us-core-care-experience-preference
-      description: The US Core Care Experience Preference Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to This profile provides guidance on how to record a care experience preference expressed by the patient regarding their care and treatment. Examples include, but are not limited to, religious preferences, dislikes and fears, preferred place for birth, preferred pharmacy, and thoughts and feelings to be shared. This profile does not represent an actual order, but it can guide caregivers and medical personnel about what is important for the person. This profile sets minimum expectations for the Observation resource to record, search, and fetch for a patient care experience preferences. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Care Experience Preference Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile provides guidance on how to record a care experience preference expressed by the patient regarding their care and treatment. Examples include, but are not limited to, religious preferences, dislikes and fears, preferred place for birth, preferred pharmacy, and thoughts and feelings to be shared. This profile does not represent an actual order, but it can guide caregivers and medical personnel about what is important for the person. This profile sets minimum expectations for the Observation resource to record, search, and fetch for a patient care experience preferences. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Care Experience Preference Profile
     - reference:
@@ -1308,17 +1308,17 @@ definition:
       name: US Core Condition Codes
     - reference:
         reference: StructureDefinition/us-core-condition-encounter-diagnosis
-      description: The US Core Condition Encounter Diagnosis Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Problems and Health Concerns Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Encounter Diagnosis* Data Element. It sets minimum expectations for the Condition resource to record, search, and fetch information about an encounter diagnosis. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Condition Encounter Diagnosis Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Problems and Health Concerns Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Encounter Diagnosis* Data Element. It sets minimum expectations for the Condition resource to record, search, and fetch information about an encounter diagnosis. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Condition Encounter Diagnosis Profile
     - reference:
         reference: StructureDefinition/us-core-condition-problems-health-concerns
-      description: The US Core Condition Problems and Health Concerns Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Encounter Diagnosis Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Problems*, *Health Concerns*, and *SDOH Problems/Health Concerns* Data Elements. It sets minimum expectations for the Condition resource to record, search, and fetch information about a condition, diagnosis, or another event, situation, issue, or clinical concept documented and categorized as a problem or health concern, including information about a Social Determinants of Health related condition. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Condition Problems and Health Concerns Profile inherits from the FHIR [Condition](https://hl7.org/fhir/R4/condition.html) resource; refer to it for scope and usage definitions. US Core version 5.0.0 split the US Core Condition Profile into this profile and the US Core Condition Encounter Diagnosis Profile. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Problems*, *Health Concerns*, and *SDOH Problems/Health Concerns* Data Elements. It sets minimum expectations for the Condition resource to record, search, and fetch information about a condition, diagnosis, or another event, situation, issue, or clinical concept documented and categorized as a problem or health concern, including information about a Social Determinants of Health related condition. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Condition Problems and Health Concerns Profile
     - reference:
         reference: StructureDefinition/us-core-coverage
-      description: The US Core Coverage Profile inherits from the FHIR [Coverage](https://hl7.org/fhir/R4/coverage.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the US Core Data for Interoperability (USCDI) *Health Insurance Information* Data Class. It sets minimum expectations for the Coverage resource to record, search, and fetch data related to an individual's insurance coverage for health care. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Coverage Profile inherits from the FHIR [Coverage](https://hl7.org/fhir/R4/coverage.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the US Core Data for Interoperability (USCDI) *Health Insurance Information* Data Class. It sets minimum expectations for the Coverage resource to record, search, and fetch data related to an individual's insurance coverage for health care. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Coverage Profile
     - reference:
@@ -1338,7 +1338,7 @@ definition:
       name: US Core DiagnosticReport Profile for Laboratory Results Reporting
     - reference:
         reference: StructureDefinition/us-core-diagnosticreport-note
-      description: The US Core DiagnosticReport Profile for Report and Note Exchange inherits from the FHIR [DiagnosticReport](https://hl7.org/fhir/R4/diagnosticreport.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the DiagnosticReport resource. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. Before reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of the US Core DiagnosticReport Profile for Report and Note exchange and the US Core DocumentReference Profile.
+      description: The US Core DiagnosticReport Profile for Report and Note Exchange inherits from the FHIR [DiagnosticReport](https://hl7.org/fhir/R4/diagnosticreport.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the DiagnosticReport resource. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. Before reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of the US Core DiagnosticReport Profile for Report and Note exchange and the US Core DocumentReference Profile.
       exampleBoolean: false
       name: US Core DiagnosticReport Profile for Report and Note Exchange
     - reference:
@@ -1428,7 +1428,7 @@ definition:
       name: US Core Gender Identity Extension
     - reference:
         reference: ValueSet/us-core-goal-description
-      description: Concepts from SNOMED CT  and LOINC code systems that can be used to indicate the goal.
+      description: Concepts from SNOMED CT and LOINC code systems that can be used to indicate the goal.
       exampleBoolean: false
       name: US Core Goal Codes
     - reference:
@@ -1438,12 +1438,12 @@ definition:
       name: US Core Goal Profile
     - reference:
         reference: StructureDefinition/us-core-head-circumference
-      description: The US Core Head Circumference Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch head circumference observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Head Circumference Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch head circumference observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Head Circumference Profile
     - reference:
         reference: StructureDefinition/us-core-heart-rate
-      description: The US Core Heart Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Heart Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Heart Rate Profile
     - reference:
@@ -1483,7 +1483,7 @@ definition:
       name: US Core Location Profile
     - reference:
         reference: ValueSet/us-core-location-type
-      description: This value set represents the types of locations and organizational settings where healthcare services, encounters, or treatments occur, and is composed of several value sets to meet multiple industry needs. It includes HL7 Terminology (THO), SNOMED CT, National Healthcare Safety Network (NHSN), and CMS Place of Service Codes(POS) concepts.
+      description: This value set represents the types of locations and organizational settings where healthcare services, encounters, or treatments occur, and is composed of several value sets to meet multiple industry needs. It includes HL7 Terminology (THO), SNOMED CT, National Healthcare Safety Network (NHSN), and CMS Place of Service Codes (POS) concepts.
       exampleBoolean: false
       name: US Core Location Type Codes
     - reference:
@@ -1518,7 +1518,7 @@ definition:
       name: US Core Non Laboratory Codes
     - reference:
         reference: StructureDefinition/us-core-observation-adi-documentation
-      description: The US Core Observation Advance Directive Information (ADI) Documentation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile and the [US Core Observation ADI DocumentationReference Profile](StructureDefinition-us-core-adi-documentreference.html) meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Advance Directive Observation* Data Element requirements. It is used to communicate whether a person has advance directive information (ADI) and, if one or more documents exist, their location. Examples of advance healthcare directive documents include physician order for life sustaining treatment (POLST), do not resuscitate order (DNR), and medical power of attorney. To communicate the type of advance directive document, the author, the verifier, and other properties, see the US Core ADI DocumentReference Profile. This profile sets minimum expectations for the Observation resource to record, search, and fetch findings about the presence of a patient's advance directives. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Observation Advance Directive Information (ADI) Documentation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile and the [US Core Observation ADI DocumentationReference Profile](StructureDefinition-us-core-adi-documentreference.html) meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Advance Directive Observation* Data Element requirements. It is used to communicate whether a person has advance directive information (ADI) and, if one or more documents exist, their location. Examples of advance healthcare directive documents include physician order for life sustaining treatment (POLST), do not resuscitate order (DNR), and medical power of attorney. To communicate the type of advance directive document, the author, the verifier, and other properties, see the US Core ADI DocumentReference Profile. This profile sets minimum expectations for the Observation resource to record, search, and fetch findings about the presence of a patient's advance directives. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Observation ADI Documentation Profile
     - reference:
@@ -1531,32 +1531,32 @@ definition:
       name: US Core Observation Clinical Result Profile
     - reference:
         reference: StructureDefinition/us-core-observation-occupation
-      description: The US Core Observation Occupation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Occupation* and *Occupation Industry* Data Elements. It sets minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job as occupation and industry, in other words, the type of work and type of business that compensates for work or assigns work to an unpaid worker or volunteer. In the context of this profile, a job is defined as a work situation or a training or volunteer position held for a specified period. This profile specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Observation Occupation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Occupation* and *Occupation Industry* Data Elements. It sets minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job as occupation and industry, in other words, the type of work and type of business that compensates for work or assigns work to an unpaid worker or volunteer. In the context of this profile, a job is defined as a work situation or a training or volunteer position held for a specified period. This profile specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Observation Occupation Profile
     - reference:
         reference: StructureDefinition/us-core-observation-pregnancyintent
-      description: The  US Core Observation Pregnancy Intent Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Pregnancy Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch the patient's intention to become pregnant. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The  US Core Observation Pregnancy Intent Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Pregnancy Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch the patient's intention to become pregnant. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Observation Pregnancy Intent Profile
     - reference:
         reference: StructureDefinition/us-core-observation-pregnancystatus
-      description: The  US Core Pregnancy Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Pregnancy Status* Data Element. It sets minimum expectations for the  Observation resource to record, search, and fetch the patient's state or condition of being pregnant. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The  US Core Pregnancy Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Pregnancy Status* Data Element. It sets minimum expectations for the  Observation resource to record, search, and fetch the patient's state or condition of being pregnant. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Observation Pregnancy Status Profile
     - reference:
         reference: StructureDefinition/us-core-observation-screening-assessment
-      description: The US Core Observation Screening Assessment Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. Beginning with US Core Version 6.0.0, this profile supersedes the US Core Observation Survey Profile (see the [Changes Between Versions](changes-between-versions.html) page for a summary of cross-version comparisons of US Core Profiles).  This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Health Status Assessments* Data Class. It sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. This profile specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. Before reviewing this profile, implementers are encouraged to read the Screening and Assessments guidance page, which documents the process of recording responses and capturing assertions/determinations resulting from surveys and questionnaires.
+      description: The US Core Observation Screening Assessment Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. Beginning with US Core Version 6.0.0, this profile supersedes the US Core Observation Survey Profile (see the [Changes Between Versions](changes-between-versions.html) page for a summary of cross-version comparisons of US Core Profiles).  This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Health Status Assessments* Data Class. It sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. This profile specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption. Before reviewing this profile, implementers are encouraged to read the Screening and Assessments guidance page, which documents the process of recording responses and capturing assertions/determinations resulting from surveys and questionnaires.
       exampleBoolean: false
       name: US Core Observation Screening Assessment Profile
     - reference:
         reference: StructureDefinition/us-core-observation-sexual-orientation
-      description: The US Core Observation Sexual Orientation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to refer to it for scope and usage definitions. This Profile sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Observation Sexual Orientation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This Profile sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Observation Sexual Orientation Profile
     - reference:
         reference: StructureDefinition/us-core-organization
-      description: The US Core Organization Profile inherits from the FHIR [Organization](https://hl7.org/fhir/R4/organization.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Organization resource to record, search, and fetch patient or provider organziation information. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Organization Profile inherits from the FHIR [Organization](https://hl7.org/fhir/R4/organization.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Organization resource to record, search, and fetch patient or provider organization information. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Organization Profile
     - reference:
@@ -1566,17 +1566,17 @@ definition:
       name: US Core Patient Profile
     - reference:
         reference: StructureDefinition/pediatric-bmi-for-age
-      description: The US Core Pediatric BMI for Age Observation Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20  observations in FHIR using a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Pediatric BMI for Age Observation Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20  observations in FHIR using a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Pediatric BMI for Age Observation Profile
     - reference:
         reference: StructureDefinition/head-occipital-frontal-circumference-percentile
-      description: The US Core Pediatric Head Occipital Frontal Circumference Percentile Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patient from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Pediatric Head Occipital Frontal Circumference Percentile Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patient from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Pediatric Head Occipital Frontal Circumference Percentile Profile
     - reference:
         reference: StructureDefinition/pediatric-weight-for-height
-      description: US Core Pediatric Weight for Height Observation Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric weight-for-length per age and sex observations in FHIR with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: US Core Pediatric Weight for Height Observation Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch pediatric weight-for-length per age and sex observations in FHIR with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Pediatric Weight for Height Observation Profile
     - reference:
@@ -1601,7 +1601,7 @@ definition:
       name: US Core Problem or Health Concern
     - reference:
         reference: ValueSet/us-core-procedure-code
-      description: Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the type of procedure performed.
+      description: Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS, CDT and LOINC code systems that can be used to indicate the type of procedure performed.
       exampleBoolean: false
       name: US Core Procedure Codes
     - reference:
@@ -1616,12 +1616,12 @@ definition:
       name: US Core Provenance Profile
     - reference:
         reference: StructureDefinition/us-core-pulse-oximetry
-      description: The US Core Pulse Oximetry Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and pulse oximetry and inspired oxygen observations with standard LOINC codes and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Pulse Oximetry Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search, and fetch pulse oximetry and inspired oxygen observations with standard LOINC codes and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Pulse Oximetry Profile
     - reference:
         reference: StructureDefinition/us-core-questionnaireresponse
-      description: The US Core QuestionaireResponse Profile inherits from the [Structured  Data Capture (SDC) Questionnaire Response Profile](https://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaireresponse.html).   This profile sets minimum expectations for the QuestionnaireResponse resource to record, search, and fetch retrieve captures the responses to form/survey and assessment tools such as the *Protocol for Responding to and Assessing Patients\u2019 Assets, Risks, and Experiences (PRAPARE) Survey*.  It specifies which core *additional* elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used.  Before reviewing this profile, implementers are encouraged to read the Screening and Assessments guidance page, which documents the process of recording responses and capturing assertions/determinations resulting from surveys and questionnaires.
+      description: The US Core QuestionnaireResponse Profile inherits from the [Structured Data Capture (SDC) Questionnaire Response Profile](https://hl7.org/fhir/uv/sdc/STU4/StructureDefinition-sdc-questionnaireresponse.html).   This profile sets minimum expectations for the QuestionnaireResponse resource to record, search, and fetch the responses to form/survey and assessment tools such as the *Protocol for Responding to and Assessing Patients\u2019 Assets, Risks, and Experiences (PRAPARE) Survey*.  It specifies which core *additional* elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used.  Before reviewing this profile, implementers are encouraged to read the Screening and Assessments guidance page, which documents the process of recording responses and capturing assertions/determinations resulting from surveys and questionnaires.
       exampleBoolean: false
       name: US Core QuestionnaireResponse Profile
     - reference:
@@ -1643,7 +1643,7 @@ definition:
       name: US Core RelatedPerson Profile
     - reference:
         reference: StructureDefinition/us-core-respiratory-rate
-      description: The US Core Respiratory Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Respiratory Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Respiratory Rate Profile
     - reference:
@@ -1668,7 +1668,7 @@ definition:
       name: US Core Server CapabilityStatement
     - reference:
         reference: Requirements/us-core-server
-      description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification.
+      description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g)(10) certification.
       exampleBoolean: false
       name: US Core Server Requirements
     - reference:
@@ -1698,7 +1698,7 @@ definition:
       name: US Core Simple Observation Profile
     - reference:
         reference: StructureDefinition/us-core-smokingstatus
-      description: The US Core Smoking Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Smoking Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Smoking Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Smoking Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Smoking Status Observation Profile
     - reference:
@@ -1713,12 +1713,12 @@ definition:
       name: US Core Specimen Profile
     - reference:
         reference: ValueSet/us-core-observation-smoking-status-status
-      description: Codes providing the status of an observation for smoking status. Constrained to `final`and `entered-in-error`.
+      description: Codes providing the status of an observation for smoking status. Constrained to `final` and `entered-in-error`.
       exampleBoolean: false
       name: US Core Status for Smoking Status Observation
     - reference:
         reference: StructureDefinition/us-core-treatment-intervention-preference
-      description: The US Core Treatment Intervention Preference Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile provides guidance on how to record a treatment intervention preference expressed by the patient regarding their personal health goals,  preferences, and priorities for medical treatments or interventions in the event of a future health scenario where a person is unable to make medical decisions because of a severe illness or injury. This profile does not represent an actual order, but it can guide caregivers and medical personnel about what is important for the person. This profile sets minimum expectations for the Observation resource to record, search, and fetch for patient treatment intervention preferences. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      description: The US Core Treatment Intervention Preference Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile provides guidance on how to record a treatment intervention preference expressed by the patient regarding their personal health goals,  preferences, and priorities for medical treatments or interventions in the event of a future health scenario where a person is unable to make medical decisions because of a severe illness or injury. This profile does not represent an actual order, but it can guide caregivers and medical personnel about what is important for the person. This profile sets minimum expectations for the Observation resource to record, search, and fetch for patient treatment intervention preferences. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Treatment Intervention Preference Profile
     - reference:
@@ -1728,7 +1728,7 @@ definition:
       name: US Core Tribal Affiliation Extension
     - reference:
         reference: StructureDefinition/uscdi-requirement
-      description: '**This extension is only used in the US Core Implementation Guide''''s Profile StructureDefinition elements.**  It flags elements that are *Additional* USCDI Requirements for certified systems. In other words, elements that are not marked as Must Support but are required for ASTP Health IT certification testing. See the [Conformance page](general-requirements.html) for more information.'
+      description: '**This extension is only used in the US Core Implementation Guide''s Profile StructureDefinition elements.**  It flags elements that are *Additional* USCDI Requirements for certified systems. In other words, elements that are not marked as Must Support but are required for ASTP Health IT certification testing. See the [Conformance page](general-requirements.html) for more information.'
       exampleBoolean: false
       name: US Core USCDI Requirement Extension
     - reference:
@@ -1738,7 +1738,7 @@ definition:
       exampleBoolean: true
     - reference:
         reference: StructureDefinition/us-core-vital-signs
-      description: This profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html)  and defines *additional* constraints on the Observation resource to represent vital  signs observations. It specifies which core elements, extensions,  vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.  This US Core profiles that are derived from this profile  are listed below.
+      description: This profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html)  and defines *additional* constraints on the Observation resource to represent vital  signs observations. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.  This US Core profiles that are derived from this profile  are listed below.
       exampleBoolean: false
       name: US Core Vital Signs Profile
     - reference:

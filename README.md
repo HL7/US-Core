@@ -870,7 +870,7 @@ Updated table and file contents
         PullCheck.sh
 ## Overview of US Core publication Process
 
-### Prepare IG for for new version:
+### Prepare IG for new version:
 
 - [ ] Run IG with latest publisher to get baseline qa report
 - [ ] Update `sushi-config.yaml` (For information on using this file for IG Configuration see: https://fshschool.org/docs/sushi/configuration/)
@@ -1034,7 +1034,7 @@ Updated table and file contents
 ## Misc topics
 
 2. Updating the Change Log
-   - For a discussion on adding a change log section for a new version. See "Update the Change Log page" item in the *Prepare IG for for new version* above"
+   - For a discussion on adding a change log section for a new version. See "Update the Change Log page" item in the *Prepare IG for new version* above"
    - The change log is updated as trackers are applied
       - The `Tracker Status` is updated from "Triaged" to "Resoved-Change Required" to "Applied" , etc
         - The Change log is updated to "Applied" ***before*** tracker QA

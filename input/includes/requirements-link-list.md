@@ -4,7 +4,7 @@ This liquid script creates a US Core requirements reference list using input dat
 which is manually updated when new narrative requirements are added to the guide.  Note that this table is used to create the Requirements Resources as well.
 with the following columns:
 
-- Is_New: Flag for new or updated content for the current version. Defult is "FALSE"  or empty and set to "TRUE" for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
+- Is_New: Flag for new or updated content for the current version. Default is "FALSE"  or empty and set to "TRUE" for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
 - key: A requirement key that identifies the requirement and links it to the statement in the guide. The format is "CONF-NNN" where NNN is a sequentially increasing zero padded integer.
 - context: The page or section topic that pertains to the requirement, For example, US Core Medication Request Profile, or Clinical Notes.  Usually derived from the source location.
 - actor: The roles to which this requirement applies. The actors are: "Server|Client|Both"

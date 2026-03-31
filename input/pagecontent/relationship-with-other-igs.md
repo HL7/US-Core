@@ -6,7 +6,7 @@
 {% capture MAYBE %}<span style="color:orange; font-size:1.5em">&#10133;</span>{% endcapture %}
 
 ### Scope and Context of US Core
-US Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient facing systems​ providing:
+US Core is intended to provide an implementable standard for FHIR based interfaces for provider and patient facing systems providing:
 
 - An exchange Standard for [U.S. Core Data for Interoperability (USCDI)] and comments and requests from the US Realm FHIR community.
 - A set of conformance requirements that enforce a set of 'minimum requirements' on FHIR resources to create the US Core Profiles specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.
@@ -78,7 +78,7 @@ profile-metadata.csv columns:
 - current_fmm: FMM level in the current published version
 - proposed_fmm: Proposed FMM level for next version
 - added: Published version when the profile or extension was added to the guide.
-- deprecated: Published version when the profile or extension was deprerated.
+- deprecated: Published version when the profile or extension was deprecated.
 - retired: Published version when the profile or extension was retired.
 - ig_only: Used for extensions only. Flag to indicate if the extension is used only for US Core StructureDefinitions. It is not a USCDI nor Realm specific requirement.
 - realm_only:  Used for extensions only. Flag to indicate if the extension is defined for use in US Realm but is not a USCDI related requirement.

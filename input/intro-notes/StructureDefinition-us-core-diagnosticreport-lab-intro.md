@@ -43,6 +43,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 - <sup>2</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New laboratory reports<sup>[§][CONF-0358]</sup>
   - Changes in the status of laboratory reports, including events that trigger the same status (e.g., amended → amended).<sup>[§][CONF-0359]</sup>
-- The `DiagnosticRequest.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.<sup>[§][CONF-0836]</sup>
+- The `DiagnosticReport.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.<sup>[§][CONF-0836]</sup>
 
 {% include link-list.md %}

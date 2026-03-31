@@ -9,7 +9,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Substance Use Status Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: 'This is an Substance-use-status example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.'
+    valueMarkdown: 'This is a Substance-use-status example for the *Simple Observation Profile*.  It is based on the US Core [Screening and Assessments](screening-and-assessments.html) guidance using Simple Observations.'
 
 category:
   - coding:
@@ -20,7 +20,7 @@ category:
 
 
 identifier:
-    - 
+    -
         system: http://example.org/fhir/Observation/identifiers
         value: 19a199c7-8fdf-11ec-9837-020000000000
 status: final
@@ -50,18 +50,18 @@ valueBoolean: true
 
 # valueCodeableConcept:
 #     coding:
-#         - 
+#         -
 #             system: 'http://snomed.info/sct'
 #             code: '44870007'
 #             display: Misused drugs in past (finding)
 #     text:  other possible values - Misuses drugs (finding), Does not misuse drugs (finding), Has never misused drugs
-note: 
+note:
     - text: At parties
 component:
-    - 
+    -
         code:
             coding:
-                - 
+                -
                     system: 'http://snomed.info/sct'
                     version: 'http://snomed.info/sct/731000124108'
                     code: '410942007'
@@ -69,32 +69,32 @@ component:
             text: Drug or medicament
         valueCodeableConcept:
             coding:
-                - 
+                -
                     system: 'http://snomed.info/sct'
                     version: 'http://snomed.info/sct/731000124108'
                     code: '703842006'
                     display: Amphetamine
             text: Amphetamine
-  
-    # - 
+
+    # -
     #     code:
     #         coding:
-    #             - 
+    #             -
     #                 system: 'http://snomed.info/sct'
     #                 code: '410675002'
     #                 display: Route of administration (attribute)
     #         text: Route of administration
     #     valueCodeableConcept:
     #         coding:
-    #             - 
+    #             -
     #                 system: 'urn:oid:2.16.840.1.113883.2.4.4.9'
     #                 code: '6'
     #                 display: NASAAL
-              
-    - 
+
+    -
         code:
             coding:
-                - 
+                -
                     system: 'http://snomed.info/sct'
                     version: 'http://snomed.info/sct/731000124108'
                     code: '228390007'

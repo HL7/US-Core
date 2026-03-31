@@ -40,7 +40,7 @@ This example uses a `patient/` prefix, but implementers may support `system/` an
 
 #### US Core Scopes
 
-The table below summarizes the US Core scope requirements (**SHALL**) and best practice recommendations (**SHOULD**) for resource-level adn granular scopes. This information can be found for each US Core Profile in the profile page's "Quick Start" section.
+The table below summarizes the US Core scope requirements (**SHALL**) and best practice recommendations (**SHOULD**) for resource-level and granular scopes. This information can be found for each US Core Profile in the profile page's "Quick Start" section.
 
  For "User-Facing Applications", a system's support for patient-level (`patient`) or user-level (`user`) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](#capability-sets) above).  For example, if a Server lists `permission-patient` and `permission-user` in its capabilities, it **SHALL** support both patient-level and user-level required scopes<sup>[§][CONF-0128]</sup> and **SHOULD** support both patient-level and user-level recommended best-practice scopes.<sup>[§][CONF-0129]</sup>
 
@@ -66,7 +66,7 @@ profile-metadata.csv columns:
 - current_fmm: FMM level in the current published version
 - proposed_fmm: Proposed FMM level for next version
 - added: Published version when the profile or extension was added to the guide.
-- deprecated: Published version when the profile or extension was deprerated.
+- deprecated: Published version when the profile or extension was deprecated.
 - retired: Published version when the profile or extension was retired.
 - ig_only: Used for extensions only. Flag to indicate if the extension is used only for US Core StructureDefinitions. It is not a USCDI nor Realm specific requirement.
 - realm_only:  Used for extensions only. Flag to indicate if the extension is defined for use in US Realm but is not a USCDI related requirement.

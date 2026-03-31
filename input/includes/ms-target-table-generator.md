@@ -11,7 +11,7 @@ with the following columns:
 - target1..target7: The  Must Support target profiles or resources (up to 7 for now may be more in future)
 -  include parameters: file = "ms_refs","addl_uscdi_refs", "ms_choice_refs", "adl_uscdi_choice_refs"
 
-example usage for MS MS Targets: {% include ms-target-table-generator.md file="ms_refs" %}
+example usage for MS Targets: {% include ms-target-table-generator.md file="ms_refs" %}
 {% endraw %} -->
 
 {% assign rows = site.data.[include.file] %}

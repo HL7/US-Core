@@ -4,7 +4,7 @@
 The following are example usage scenarios for this profile:
 
 -   Query for survey screening results for a patient.
--  [Record or update] screening results results belonging to a Patient
+-  [Record or update] screening results belonging to a Patient
 
 ### Mandatory and Must Support Data Elements
 
