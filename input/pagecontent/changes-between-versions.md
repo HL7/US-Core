@@ -9,7 +9,7 @@ US Core undergoes annual updates with new guidance, requirements, profiles, and 
 
 
 
-When a change is identified that impacts ASTP Certification, a tracker will be designated as "patch", which allows the certification tools to implement the change immediately. A new release of US Core will be considered if a large number of "patches" are required. Patches for prior US Core versions are managed by the [Cross Group Project patch process] with approved patches on this [HL7 Confluence page].
+When a change is identified that impacts ONC Certification, a tracker will be designated as "patch", which allows the certification tools to implement the change immediately. A new release of US Core will be considered if a large number of "patches" are required. Patches for prior US Core versions are managed by the [Cross Group Project patch process] with approved patches on this [HL7 Confluence page].
 
 ### US Core Maturity Levels
 
@@ -18,10 +18,10 @@ All US Core conformance and terminology artifacts are assigned a US Core Maturit
 #### Profiles, Extensions, and Operations
 The US Core Maturity Levels are assigned to US Core profiles, extensions, and operations based on the following criteria:
 
-- **US Core Maturity Level 5**: Level 5 is assigned to US Core profiles and extensions that have been present before the publication of US Core 3.1.1 in 2020, and have been thoroughly reviewed through the HL7 ballot and other processes, and widely implemented in production systems. Many of these artifacts are also identified in regulation and subject to ASTP certification testing. These artifacts are sufficiently stable, and forward compatibility is enforced.
+- **US Core Maturity Level 5**: Level 5 is assigned to US Core profiles and extensions that have been present before the publication of US Core 3.1.1 in 2020, and have been thoroughly reviewed through the HL7 ballot and other processes, and widely implemented in production systems. Many of these artifacts are also identified in regulation and subject to ONC certification testing. These artifacts are sufficiently stable, and forward compatibility is enforced.
 - **US Core Maturity Level 4**: Level 4 is assigned to US Core artifacts meeting all the US Core Maturity Level 5 Criteria, but were published after or significantly changed since US Core 3.1.1. These artifacts are sufficiently stable, and forward compatibility is enforced.
 - **US Core Maturity Level 3**: Level 3 is assigned to US Core artifacts meeting all the US Core Maturity Level 4 or US Core Maturity Level 5 Criteria, but not yet widely used in production systems. Forward compatibility is not enforced.
-- **US Core Maturity Level 2**: Level 2 is assigned to US Core artifacts that have not been identified in regulation or subject to ASTP certification, and not widely implemented in production systems. Forward compatibility is not enforced
+- **US Core Maturity Level 2**: Level 2 is assigned to US Core artifacts that have not been identified in regulation or subject to ONC certification, and not widely implemented in production systems. Forward compatibility is not enforced
 - **US Core Maturity Level 1**: There are no Level 1 artifacts in US Core
 
 #### SearchParameters

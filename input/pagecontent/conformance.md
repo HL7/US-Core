@@ -3,6 +3,6 @@
 - [Must Support]
 - [SMART on FHIR Obligations and Capabilities]
 - [Security]
-- [Requirements]
+- [Requirements Tables]
 
 {% include link-list.md %}

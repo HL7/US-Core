@@ -1,5 +1,5 @@
 
-* **USCDI-related Updates**: We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v6](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v6) Data Elements and Classes that the  Assistant Secretary for Technology Policy (ASTP) published:
+* **USCDI-related Updates**: We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v6](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v6) Data Elements and Classes that the  Office of the National Coordinator for Health Information Technology (ONC) published:
 
   * For the USCDI Care Plan data element, we added `CarePlan.addresses` to the [US Core CarePlan Profile](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-careplan.html) as an Additional USCDI element.
     * We documented the future direction to continue transitioning from text-based content to discrete references such as needs (`CarePlan.addresses`), goals (`CarePlan.goal`), and strategies (`CarePlan.activity`).

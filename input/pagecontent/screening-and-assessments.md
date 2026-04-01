@@ -129,7 +129,7 @@ are made manually.
 assessments-valuesets.csv columns:
 - Data Class Number: number to group by USCDI Data Element
 - USCoreStarterCodes: Whether the codes are a starter set
-- USCDI Data Element: ASTP assigned Data Element for the Health Status Assessments Data Class
+- USCDI Data Element: ONC assigned Data Element for the Health Status Assessments Data Class
 - Category Code: US Core assigned Observation category codes
 - ValueSet Name: US Core or VSAC assigned value set name
 - VSAC Link: url to VSAC value set
@@ -203,7 +203,7 @@ are made manually.
 assessments-valuesets.csv columns:
 - Data Class Number: number to group by USCDI Data Element
 - USCoreStarterCodes: Whether the codes are a starter set
-- USCDI Data Element: ASTP assigned Data Element for the Health Status Assessments Data Class
+- USCDI Data Element: ONC assigned Data Element for the Health Status Assessments Data Class
 - Category Code: US Core assigned Observation category codes
 - ValueSet Name: US Core or VSAC assigned value set name
 - VSAC Link: url to VSAC value set
@@ -276,7 +276,7 @@ are made manually.
 assessments-valuesets.csv columns:
 Data Class Number: number to group by USCDI Data Element
 USCoreStarterCodes: Whether the codes are a starter set
-USCDI Data Element: ASTP assigned Data Element for the Health Status Assessments Data Class
+USCDI Data Element: ONC assigned Data Element for the Health Status Assessments Data Class
 Category Code: US Core assigned Observation category codes
 ValueSet Name: US Core or VSAC assigned value set name
 VSAC Link: url to VSAC value set

@@ -116,6 +116,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 65. **Applied:**  Non-substantive (Correction) Update reference to CDA Table [FHIR-56094](https://jira.hl7.org/browse/FHIR-56094) See Changes [Here](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
 66. **Applied:**   Update “Common substances for allergy and intolerance documentation including refutations” ValueSet [FHIR-56095](https://jira.hl7.org/browse/FHIR-56095) See Changes [Here](StructureDefinition-us-core-allergyintolerance.html)
 67. **Applied:**  Substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](security.html#patient-privacy-and-security)
+68. **Applied:**  Non-substantive (Correction) Change "ASTP" to "ONC" to reflect 2026 HHS realignment [FHIR-56253](https://jira.hl7.org/browse/FHIR-56253) For example, see Changes [Here](index.html#introduction)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>

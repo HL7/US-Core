@@ -34,7 +34,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - Use the status code: `not-done` to represent that an immunization was *not* given.<sup>[§][CONF-0390]</sup>
-- <sup>1</sup>Based upon the ASTP U.S. Core Data for Interoperability (USCDI) requirements, [CVX vaccine codes]<sup>1</sup> are required,<sup>[§][CONF-0391]</sup> and the [NDC vaccine codes] **SHOULD** be supported as an additional code.<sup>[§][CONF-0392]</sup>
+- <sup>1</sup>Based upon the ONC U.S. Core Data for Interoperability (USCDI) requirements, [CVX vaccine codes]<sup>1</sup> are required,<sup>[§][CONF-0391]</sup> and the [NDC vaccine codes] **SHOULD** be supported as an additional code.<sup>[§][CONF-0392]</sup>
     - NDC codes are defined by the manufacturer, and CVX codes, which are much less granular, are often limited to a single product made by a single manufacturer.
     - In most cases, there are separate NDCs for the Unit of Use (primary) and Unit of Sale (secondary) packaging of a vaccine, but only the Unit of Use NDC codes should be used since they represent the product that is administered.
     - The preferred code system identifiers are `http://hl7.org/fhir/sid/cvx` for CVX and `http://hl7.org/fhir/sid/ndc` for NDC vaccine codes.<sup>[§][CONF-0393],[§][CONF-0394]</sup> Note that the `vaccineCode` binding link in the formal definition and the CDC links below use the associated OID as the code system identifiers.

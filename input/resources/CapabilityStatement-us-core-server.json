@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "This CapabilityStatement describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ASTP 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).",
+  "description": "This CapabilityStatement describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the Office of the National Coordinator for Health Information Technology (ONC) 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).",
   "jurisdiction": [
     {
       "coding": [
@@ -989,7 +989,7 @@
               ]
             }
           ],
-          "documentation": "* For Encounter Diagnosis use the *US Core Condition Encounter Diagnosis Profile*.\n\n  * When `Condition.category` is \"encounter-diagnosis\" the\nencounter, **SHOULD** be referenced in `Condition.encounter`.\n* For Problems and Health Concerns use the *US Core Condition Problems and Health Concerns Profile*.\n\n  * When `Condition.category` is a \"problems-list-item\", the\n`Condition.clinicalStatus **SHOULD** be present.\n\n * See the US Core General Guidance page for [Searching Using\nlastUpdated](general-guidance.html#searching-using-lastupdated). Updates to `Condition.meta.lastUpdated` **SHOULD** reflect:\n\n    * New problems and health concerns\n\n    * Changes in the clinical status or verification status\nof problems or health concern",
+          "documentation": "* For Encounter Diagnosis use the *US Core Condition Encounter Diagnosis Profile*.\n\n  * When `Condition.category` is \"encounter-diagnosis\" the\nencounter, **SHOULD** be referenced in `Condition.encounter`.\n* For Problems and Health Concerns use the *US Core Condition Problems and Health Concerns Profile*.\n\n  * When `Condition.category` is a \"problems-list-item\", the\n`Condition.clinicalStatus **SHOULD** be present.\n\n * See the US Core General Guidance page for [Searching Using\nlastUpdated](general-guidance.html#searching-using-lastupdated). Updates to `Condition.meta.lastUpdated` **SHOULD** reflect:\n\n    * New problems and health concerns\n\n    * Changes in the clinical status or verifications status\nof problems or health concern",
           "interaction": [
             {
               "extension": [
@@ -3240,7 +3240,7 @@
               ]
             }
           ],
-          "documentation": "* Based upon the ASTP U.S. Core Data for Interoperability (USCDI) requirements, CVX vaccine codes are required and the NDC vaccine codes **SHOULD** be supported as an additional code.",
+          "documentation": "* Based upon the Office of the National Coordinator for Health Information Technology (ONC) U.S. Core Data for Interoperability (USCDI) requirements, CVX vaccine codes are required and the NDC vaccine codes **SHOULD** be supported as an additional code.",
           "interaction": [
             {
               "extension": [

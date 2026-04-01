@@ -111,11 +111,11 @@
 [National Drug Codes (NDC)]: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
 [Normative]: {{site.data.fhir.path}}versions.html#maturity
 [Nurse Note (34746-8)]: https://loinc.org/34746-8
-[ASTP Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
+[ONC Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [Observation Category Codes]: {{site.data.fhir.path}}valueset-observation-category.html
 [Observation Grouping]: {{site.data.fhir.path}}observation.html#obsgrouping
 [Occupational Data for Health (ODH)]: http://hl7.org/fhir/us/odh/index.html
-[Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
+[Office of the National Coordinator for Health Information Technology (ONC)]: https://healthit.gov/
 [PHDSC Payer Type Committee User's Guide]: https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf
 [PHQ-9]: https://en.wikipedia.org/wiki/PHQ-9
 [Parameters]: {{site.data.fhir.path}}parameters.html
@@ -248,7 +248,6 @@
 [International Patient Access (IPA)]: https://hl7.org/fhir/uv/ipa/
 [International Patient Summary (IPS)]: https://hl7.org/fhir/uv/ips/
 [Race & Ethnicity - CDC (CDCREC)]: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
-[Assistant Secretary for Technology Policy (ASTP)]: https://www.healthit.gov/topic/about-astp
 [FHIR Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [model definition]: https://cql.hl7.org/07-physicalrepresentation.html#data-model-references
 [Using CQL With FHIR]: https://hl7.org/fhir/uv/cql/index.html

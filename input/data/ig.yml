@@ -1273,7 +1273,7 @@ definition:
       name: US Core Category
     - reference:
         reference: Requirements/us-core-certifying-system
-      description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the *additional requirements* for systems certifying for ASTP Health IT Certification (g(10) certification. These requirements represent the regulatory and technical specifications that design artifacts must meet to ensure interoperability.  See the [US Core Server Requirements](Requirements-us-core-server.html) for the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections.
+      description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the *additional requirements* for systems certifying for Office of the National Coordinator for Health Information Technology (ONC) Health IT Certification (g(10) certification. These requirements represent the regulatory and technical specifications that design artifacts must meet to ensure interoperability.  See the [US Core Server Requirements](Requirements-us-core-server.html) for the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections.
       exampleBoolean: false
       name: US Core Certifying System Requirements
     - reference:
@@ -1663,12 +1663,12 @@ definition:
       name: US Core Screening Assessment Observation Maximum Category
     - reference:
         reference: CapabilityStatement/us-core-server
-      description: This CapabilityStatement describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ASTP 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ASTP [U.S. Core Data for Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).
+      description: This CapabilityStatement describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the Office of the National Coordinator for Health Information Technology (ONC) 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 6 July 2025](https://www.healthit.gov/isp/sites/isp/files/2025-07/USCDI-Version-6-July-2025.pdf).
       exampleBoolean: false
       name: US Core Server CapabilityStatement
     - reference:
         reference: Requirements/us-core-server
-      description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for ASTP Health IT Certification (g)(10) certification.
+      description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections. These requirements represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. See the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html) for the *additional requirements* for systems certifying for Office of the National Coordinator for Health Information Technology (ONC) Health IT Certification (g)(10) certification.
       exampleBoolean: false
       name: US Core Server Requirements
     - reference:
@@ -1728,7 +1728,7 @@ definition:
       name: US Core Tribal Affiliation Extension
     - reference:
         reference: StructureDefinition/uscdi-requirement
-      description: '**This extension is only used in the US Core Implementation Guide''s Profile StructureDefinition elements.**  It flags elements that are *Additional* USCDI Requirements for certified systems. In other words, elements that are not marked as Must Support but are required for ASTP Health IT certification testing. See the [Conformance page](general-requirements.html) for more information.'
+      description: '**This extension is only used in the US Core Implementation Guide''s Profile StructureDefinition elements.**  It flags elements that are *Additional* USCDI Requirements for certified systems. In other words, elements that are not marked as Must Support but are required for Office of the National Coordinator for Health Information Technology (ONC) Health IT certification testing. See the [Conformance page](general-requirements.html) for more information.'
       exampleBoolean: false
       name: US Core USCDI Requirement Extension
     - reference:
