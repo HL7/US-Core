@@ -250,11 +250,10 @@ statement:
     conformance:
       - SHALL
     requirement: |-
-      In certain profiles, only specific resource references are labeled as Must Support.
-
+      When a Reference type element is labeled as *Must Support*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*,"
       ...
 
-      - US Core Requestors **SHALL** be capable of processing [such an element] with a valid reference to [all listed Must Support profile(s).]
+      - US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [all listed Must Support profile(s).]
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -275,11 +274,9 @@ statement:
     conformance:
       - SHALL
     requirement: |-
-      In specific profiles, only a single resource reference is present on an element labeled Must Support.
-
-      …
-
-      - US Core Requestors **SHALL** be capable of processing [such an element] with a valid reference to [the Must Support Profile.]
+      When a Reference type element is labeled as *Must Support* and has a single target profile referenced
+      ...
+      - US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [the Must Support Profile.]
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink

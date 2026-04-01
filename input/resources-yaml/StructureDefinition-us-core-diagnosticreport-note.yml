@@ -48,6 +48,9 @@ differential:
       sliceName: us-core
       mustSupport: true
       binding:
+        extension:
+        - url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet'
+          valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category
         strength: required
         description: Note that other codes are permitted in other slices, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category

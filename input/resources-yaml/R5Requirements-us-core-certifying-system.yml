@@ -61,28 +61,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-immunization.html#CONF-0392
-  - key: CONF-0405
-    reference:
-      - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organization participating in the ONC Health IT Certification program Servers **SHALL** support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):], The reason or indication for the prescription'
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0405
-  - key: CONF-0406
-    reference:
-      - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organization participating in the ONC Health IT Certification program Servers **SHALL** support the [additional USCDI requirement](https://hl7.org/fhir/us/core/STU8/must-support.html#additional-uscdi-requirements):] reported adherence to prescribed medication instructions'
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0406
   - key: CONF-0411
     reference:
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance

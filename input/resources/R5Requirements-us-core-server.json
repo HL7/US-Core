@@ -1548,7 +1548,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "In certain profiles, only specific resource references are labeled as Must Support.\n\n...\n\n- US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [all listed Must Support profile(s).]",
+      "requirement": "When a Reference type element is labeled as *Must Support*, has multiple target profiles referenced, and specific targets are labeled as *Must Support*,\"\n...\n\n- US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [all listed Must Support profile(s).]",
       "_reference": [
         {
           "extension": [
@@ -1588,7 +1588,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "In specific profiles, only a single resource reference is present on an element labeled Must Support.\n\n...\n\n- US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [the Must Support Profile.]",
+      "requirement": "When a Reference type element is labeled as *Must Support* and has a single target profile referenced\n...\n- US Core Responders **SHALL** be capable of providing [such an element] with a valid reference to [the Must Support Profile.]",
       "_reference": [
         {
           "extension": [

@@ -35,8 +35,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="MedicationRequest" plural="true" %}
 
-1. the reason or indication for the prescription<sup>4,[§][CONF-0405]</sup>
-2. reported adherence to prescribed medication instructions<sup>5,[§][CONF-0406]</sup>
+1. the reason or indication for the prescription<sup>4</sup>
+2. reported adherence to prescribed medication instructions<sup>5</sup>
 
 <sup>1,2,3,4,5</sup> see guidance below
 
