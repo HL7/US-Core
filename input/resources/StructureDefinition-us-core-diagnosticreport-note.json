@@ -66,15 +66,36 @@
         "sliceName": "us-core",
         "mustSupport": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
-              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
-            }
-          ],
           "strength": "required",
           "description": "Note that other codes are permitted in other slices, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "key",
+                  "valueId": "uscore-min-cat"
+                },
+                {
+                  "url": "purpose",
+                  "valueCode": "minimum"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
+                },
+                {
+                  "url": "documentation",
+                  "valueMarkdown": "Must Support, at a minimum, the US Core DiagnosticReport Category Codes of Cardiology, Radiology, and Pathology defined in the US Core [Clinical Notes](https://hl7.org/fhir/us/core/clinical-notes.html) guidance page."
+                },
+                {
+                  "url": "shortDoco",
+                  "valueString": "Must Support, at a minimum, Cardiology, Radiology, and Pathology category codes."
+                }
+              ]
+            }
+          ]
         }
       },
       {

@@ -42,7 +42,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - See [Clinical Notes]
-- The `DocumentReference.type` binding Must Support, at a minimum, the [10 Common Clinical Notes]<sup>[§][CONF-0365]</sup> and may extend to the whole [US Core DocumentReference Type Value Set]<sup>[§][CONF-0366]</sup>
+- The `DocumentReference.type` binding Must Support, at a minimum, the [10 Common Clinical Notes] and may extend to the whole [US Core DocumentReference Type Value Set]<sup>[§][CONF-0366]</sup>
 - In addition to the [US Core DocumentReference Category] value set, other category schemes such as the LOINC-based [Document Class Value Set] and [IHE XDSclassCode] may be used to facilitate the sharing of health documents.<sup>[§][CONF-0367]</sup>
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.

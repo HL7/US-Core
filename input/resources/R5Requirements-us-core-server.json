@@ -5199,27 +5199,6 @@
       ]
     },
     {
-      "key": "CONF-0320",
-      "reference": [
-        "StructureDefinition-us-core-condition-encounter-diagnosis.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHOULD"
-      ],
-      "conditionality": true,
-      "requirement": "For Problems and Health Concerns [records, systems **SHOULD**] use the [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html).",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-encounter-diagnosis.html#CONF-0320"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0323",
       "reference": [
         "StructureDefinition-us-core-condition-encounter-diagnosis.html#profile-specific-implementation-guidance",
@@ -5263,27 +5242,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-condition-encounter-diagnosis.html#CONF-0324"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0330",
-      "reference": [
-        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHOULD"
-      ],
-      "conditionality": true,
-      "requirement": "For Encounter Diagnosis [records, systems **SHOULD**] use the [US Core Condition Encounter Diagnosis Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-encounter-diagnosis.html).",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0330"
             }
           ]
         }
@@ -5845,26 +5803,6 @@
       ]
     },
     {
-      "key": "CONF-0360",
-      "reference": [
-        "StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "The DiagnosticReport.category binding Must Support, at a minimum, the US Core DiagnosticReport Category Codes of Cardiology, Radiology, and Pathology",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-diagnosticreport-note.html#CONF-0360"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0361",
       "reference": [
         "StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance"
@@ -5920,26 +5858,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-diagnosticreport-note.html#CONF-0364"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0365",
-      "reference": [
-        "StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "The DocumentReference.type binding Must Support, at a minimum, the 10 [Common Clinical Notes](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-documentreference.html#CONF-0365"
             }
           ]
         }
@@ -6338,66 +6256,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-immunization.html#CONF-0394"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0397",
-      "reference": [
-        "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "conditionality": true,
-      "requirement": "When using a code [to represent a medication for a medication dispense], RXNorm concepts are used.",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-medicationdispense.html#CONF-0397"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0397"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0398",
-      "reference": [
-        "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "MAY"
-      ],
-      "conditionality": true,
-      "requirement": "When using a code [to represent a medication for a medication dispense], USCDI recommends the [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)  as an *optional* terminology. They can be supplied as an additional coding element.",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-medicationdispense.html#CONF-0398"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0398"
             }
           ]
         }
@@ -7119,46 +6977,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-observation-occupation.html#CONF-0434"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0435",
-      "reference": [
-        "StructureDefinition-us-core-observation-pregnancyintent.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "To represent the patient’s pregnancy status, [Servers SHALL] use the [US Core Observation Pregnancy Status Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-pregnancystatus.html).",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-observation-pregnancyintent.html#CONF-0435"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0436",
-      "reference": [
-        "StructureDefinition-us-core-observation-pregnancystatus.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "To represent the patient’s intent to become pregnant, [Servers SHALL] use the [US Core Observation Pregnancy Intent Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-pregnancyintent.html).",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-observation-pregnancystatus.html#CONF-0436"
             }
           ]
         }

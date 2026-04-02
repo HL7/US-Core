@@ -40,17 +40,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: scopes.html#CONF-0124
-  - key: CONF-0391
-    reference:
-      - StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: '[For organization participating in the ONC Health IT Certification program] [CVX vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) are required'
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-immunization.html#CONF-0391
   - key: CONF-0392
     reference:
       - StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance

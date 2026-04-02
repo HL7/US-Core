@@ -48,7 +48,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 * <sup>2</sup>The assertedDate Extension represents the date of diagnosis. The `Condition.onsetDateTime` represents the date of onset, or the date or estimated date when signs or symptoms of a condition began. The `Condition.abatementdateTime` is the date of resolution or remission. And the `Condition.recordedDate` is the date the record was created in the system. Since users don't always capture these four values, they will not always be available for Servers to share with Clients.
 - <sup>2</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New problems and health concerns.<sup>[§][CONF-0332]</sup>
-  - Changes in the clinical status or verification status of problems or health concerns.<sup>[§][CONF-0333]</sup>
+  - Changes in the clinical status or verifications status of problems or health concerns.<sup>[§][CONF-0333]</sup>
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>4</sup>' %}
 
 {% include link-list.md %}
