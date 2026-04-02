@@ -29,7 +29,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 3. **Resolved - change required:** Compatible, substantive (Clarification) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876) See Changes [Here](https://www.hl7.org/fhir/us/core/search-parameters-and-operations.html#search-parameters)
 4. **Resolved - change required:** Compatible, substantive (Enhancement) This code system needs to have an OID defined, VS needs to be in THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here]()
 5. **Applied:** Non-substantive (Clarification) Clarify DocumentReference scope [FHIR-53490](https://jira.hl7.org/browse/FHIR-53490),[FHIR-55691](https://jira.hl7.org/browse/FHIR-55691) See Changes Here:
-   - [US Core DocumentReference Profile](https://hl7.org/fhir/us/core/2025Jan/StructureDefinition-us-core-documentreference.html)
+   - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html)
    - [Clinical Notes](clinical-notes.html)
 6. **Applied:** Compatible, substantive (Enhancement) Change the Tribal Affiliation binding strength to preferred [FHIR-53592](https://jira.hl7.org/browse/FHIR-53592) See Changes [Here](StructureDefinition-us-core-tribal-affiliation.html)
 7.  **Applied:** Non-substantive (Clarification) Clarification Around Slicing with Valuesets [FHIR-53597](https://jira.hl7.org/browse/FHIR-53597) For example, see Changes [Here](https://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html)
