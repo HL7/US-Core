@@ -269,4 +269,5 @@
 [TribalEntityUS]: https://terminology.hl7.org/5.5.0/ValueSet-v3-TribalEntityUS.html
 [Standard Code Book]: https://www.ihs.gov/scb/standard-code-book-tables/tribe/
 [HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1]: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=13
+[Health Status Assessments Value Sets Table]: screening-and-assessments.html#health-status-assessments-value-sets-table
 [Requirements Table]: requirements.html
