@@ -37,7 +37,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 9.  **Applied:**  Non-substantive (Correction) Correct typos in Note to Balloters [FHIR-54212](https://jira.hl7.org/browse/FHIR-54212) See Changes [Here](changes.html#version--900---ballot)
 10. **Applied:** Non-substantive (Correction) Update "How To Read This Guide" section to reflect the changes [FHIR-54213](https://jira.hl7.org/browse/FHIR-54213) See Changes [Here](index.html#how-to-read-this-guide)
 11. **Applied:**  Non-substantive (Correction) Correct typos on Must Support page [FHIR-54214](https://jira.hl7.org/browse/FHIR-54214) See Changes [Here](must-support.html)
-12. **Applied:** Non-substantive (Enhancement) Add Header to USCDI Mapping Table[FHIR-54216](https://jira.hl7.org/browse/FHIR-54216) See Changes [Here](uscdi.html#uscdi-to-us-core-mapping-table)
+12. **Applied:** Non-substantive (Enhancement) Add Header to USCDI Mapping Table [FHIR-54216](https://jira.hl7.org/browse/FHIR-54216) See Changes [Here](uscdi.html#uscdi-to-us-core-mapping-table)
 13. **Applied:** Non-substantive (Correction) Change MUST to SHALL [FHIR-54218](https://jira.hl7.org/browse/FHIR-54218) See Changes [Here](medication-list.html#options-for-representing-medication)
 14. **Applied:**  (Correction) Remove open markdown link [FHIR-54219](https://jira.hl7.org/browse/FHIR-54219) See Changes [Here](basic-provenance.html#clinical-information-reconciliation-and-incorporation)
 15. **Applied:** Non-substantive (Clarification) Update text referring to provenance use cases. [FHIR-54221](https://jira.hl7.org/browse/FHIR-54221) See Changes [Here](basic-provenance.html#hie-transformation)
