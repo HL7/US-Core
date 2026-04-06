@@ -32,7 +32,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
    - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html)
    - [Clinical Notes](clinical-notes.html)
 6. **Applied:** Compatible, substantive (Enhancement) Change the Tribal Affiliation binding strength to preferred [FHIR-53592](https://jira.hl7.org/browse/FHIR-53592) See Changes [Here](StructureDefinition-us-core-tribal-affiliation.html)
-7.  **Applied:** Non-substantive (Clarification) Clarification Around Slicing with Valuesets [FHIR-53597](https://jira.hl7.org/browse/FHIR-53597) For example, see Changes [Here](https://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html)
+7.  **Applied:** Non-substantive (Clarification) Clarification Around Slicing with Valuesets [FHIR-53597](https://jira.hl7.org/browse/FHIR-53597) For example, see Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 8.  **Applied:** Non-substantive (Enhancement) Convert example snippet from XML to JSON [FHIR-53612](https://jira.hl7.org/browse/FHIR-53612) See Changes[Here](general-guidance.html#language-support)
 9.  **Applied:**  Non-substantive (Correction) Correct typos in Note to Balloters [FHIR-54212](https://jira.hl7.org/browse/FHIR-54212) See Changes [Here](changes.html#version--900---ballot)
 10. **Applied:** Non-substantive (Correction) Update "How To Read This Guide" section to reflect the changes [FHIR-54213](https://jira.hl7.org/browse/FHIR-54213) See Changes [Here](index.html#how-to-read-this-guide)
