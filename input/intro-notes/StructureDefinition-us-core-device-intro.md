@@ -56,7 +56,7 @@ This section provides detailed implementation guidance for the US Core Profile t
     |UDI HRF string|`Device.udiCarrier.carrierHRF`|
     |DI|`Device.udiCarrier.deviceIdentifier`|
     |manufacture date (UDI-PI element)|`Device.manufactureDate`|
-    |expiration date (UDI-PI <span class="bg-success" markdown="1">element</span><!-- new-content -->|`Device.expirationDate`|
+    |expiration date (UDI-PI <span class="bg-success" markdown="1">element</span>)<!-- new-content -->|`Device.expirationDate`|
     |lot number (UDI-PI element)|`Device.lotNumber`|
     |serial number (UDI-PI element)|`Device.serialNumber`|
     |distinct identifier (UDI-PI element)|`Device.distinctIdentifier`|
