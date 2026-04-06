@@ -41,7 +41,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 13. **Applied:** Non-substantive (Correction) Change MUST to SHALL [FHIR-54218](https://jira.hl7.org/browse/FHIR-54218) See Changes [Here](medication-list.html#options-for-representing-medication)
 14. **Applied:**  (Correction) Remove open markdown link [FHIR-54219](https://jira.hl7.org/browse/FHIR-54219) See Changes [Here](basic-provenance.html#clinical-information-reconciliation-and-incorporation)
 15. **Applied:** Non-substantive (Clarification) Update text referring to provenance use cases. [FHIR-54221](https://jira.hl7.org/browse/FHIR-54221) See Changes [Here](basic-provenance.html#hie-transformation)
-16. **Applied:** Non-substantive (Clarification) Clarify USCDI support language[FHIR-54223](https://jira.hl7.org/browse/FHIR-54223) See Changes [Here](screening-and-assessments.html#clinical-judgments)
+16. **Applied:** Non-substantive (Clarification) Clarify USCDI support language [FHIR-54223](https://jira.hl7.org/browse/FHIR-54223) See Changes [Here](screening-and-assessments.html#clinical-judgments)
 17. **Applied:** Non-substantive (Enhancement) Entitle Health Status Assessments Value Sets Table [FHIR-54224](https://jira.hl7.org/browse/FHIR-54224) See Changes [Here](screening-and-assessments.html#uscdi-health-assessments-data-element-value-sets)
 18. **Applied:** Non-substantive (Correction) Correct typos and bad links [FHIR-54226](https://jira.hl7.org/browse/FHIR-54226) See Changes [Here](relationship-with-other-igs.html#relationship-of-us-core-with-other-igs)
 19. **Applied:**  Non-substantive (Correction) Bold Conformance verbs [FHIR-54229](https://jira.hl7.org/browse/FHIR-54229) See Changes [Here](writing-clinical-notes.html)
