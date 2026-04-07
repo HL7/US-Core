@@ -84,7 +84,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html#uscdi-portable-medical-order-pmo-data-element)
     - [USCDI to US Core Mapping Table](uscdi.html)
 44. **Applied:**  Change the preferred binding for RelatedPerson.relationship to VSAC's Personal And Legal Relationship Role Type value set [FHIR-53376](https://jira.hl7.org/browse/FHIR-53376) See Changes [Here](StructureDefinition-us-core-relatedperson-definitions.html#RelatedPerson.relationship)
-45. **Applied:** Non-substantive (Clarification) Simplify PNO document description. [FHIR-53823](https://jira.hl7.org/browse/FHIR-53823) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance)
+45. **Applied:** Non-substantive (Clarification) Simplify PMO document description. [FHIR-53823](https://jira.hl7.org/browse/FHIR-53823) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance)
 46. **Applied:** Compatible, substantive (Correction) Remove mappings from US Core StructureDefinitions [FHIR-54105](https://jira.hl7.org/browse/FHIR-54105) For Changes See previous versions 'StructureDefinitions.differential.element[].id.mapping' elements
 47. **Applied:** Non-substantive (Clarification) Update Basic Provenance Figure 3 and 4 [FHIR-54222](https://jira.hl7.org/browse/FHIR-54222) See Changes
     - [HIE Redistribution](basic-provenance.html#hie-redistribution)
