@@ -271,3 +271,4 @@
 [HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1]: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=13
 [Health Status Assessments Value Sets Table]: screening-and-assessments.html#health-status-assessments-value-sets-table
 [Requirements Table]: requirements.html
+[US Core Clinical Notes]: clinical-notes.html

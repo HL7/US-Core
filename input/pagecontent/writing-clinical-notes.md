@@ -133,7 +133,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 #### Capability discovery
 
-* Servers **SHOULD** support the FHIR `ValueSet/$expand` operation with `contextDirection=incoming` to enable client discovery of supported note and report categories/codes (e.g., LOINC for `DocumentReference.type`). See the US Core Clinical Notes IG for details on invocation (e.g., contexts for `us-core-documentreference` category/type and equivalent `DiagnosticReport` elements): https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html#using-expand. Note that discovery of supported MIME types (section 4.9) and content formats (section 4.6) is separate and out-of-band: Servers **SHALL** document these in their API documentation, including any limits or extensions beyond the minima in this specification.
+* Servers **SHOULD** support the FHIR `ValueSet/$expand` operation with `contextDirection=incoming` to enable client discovery of supported note and report categories/codes (e.g., LOINC for `DocumentReference.type`). See [US Core Clinical Notes] for details on invocation (e.g., contexts for `us-core-documentreference` category/type and equivalent `DiagnosticReport` elements): https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html#using-expand. Note that discovery of supported MIME types (section 4.9) and content formats (section 4.6) is separate and out-of-band: Servers **SHALL** document these in their API documentation, including any limits or extensions beyond the minima in this specification.
 
 #### Correction and Replacement
 
