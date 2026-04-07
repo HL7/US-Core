@@ -1,7 +1,6 @@
 resourceType: CapabilityStatement
 id: us-core-client
 url: 'http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client'
-version: 9.0.0-ballot
 name: UsCoreClientCapabilityStatement
 title: US Core Client CapabilityStatement
 status: active
@@ -106,7 +105,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: AllergyIntolerance
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -228,7 +227,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: CarePlan
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -368,7 +367,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: CareTeam
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -600,8 +599,8 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Condition
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -824,7 +823,7 @@ rest:
       valueCode: SHOULD
     type: Coverage
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -911,7 +910,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Device
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-device|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-device'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1083,8 +1082,8 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: DiagnosticReport
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1327,8 +1326,8 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: DocumentReference
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-adi-documentreference'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1606,7 +1605,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Encounter
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -1903,7 +1902,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: FamilyMemberHistory
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-familymemberhistory'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2011,7 +2010,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Goal
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2179,7 +2178,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Immunization
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2280,7 +2279,7 @@ rest:
       valueCode: SHOULD
     type: Location
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2408,7 +2407,7 @@ rest:
       valueCode: SHOULD
     type: Medication
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2480,7 +2479,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: MedicationDispense
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2641,7 +2640,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: MedicationRequest
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -2857,32 +2856,32 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Observation
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight|9.0.0-ballot'
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3217,7 +3216,7 @@ rest:
       valueCode: SHOULD
     type: Organization
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3317,7 +3316,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Patient
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3462,7 +3461,7 @@ rest:
       valueCode: SHOULD
     type: Practitioner
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3563,7 +3562,7 @@ rest:
       valueCode: SHOULD
     type: PractitionerRole
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3681,7 +3680,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: Procedure
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -3833,7 +3832,7 @@ rest:
       valueCode: SHOULD
     type: Provenance
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4028,7 +4027,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: QuestionnaireResponse
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4171,7 +4170,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: RelatedPerson
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4301,7 +4300,7 @@ rest:
       url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
     type: ServiceRequest
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
@@ -4492,7 +4491,7 @@ rest:
       valueCode: SHOULD
     type: Specimen
     supportedProfile:
-    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen|9.0.0-ballot'
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen'
     _supportedProfile:
     - extension:
       - url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'
