@@ -80,7 +80,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
     |PMO Category Code|PMO Code Set|
     |---|---|
-    |100822-6 (Cardiopulmonary resuscitation orders)|[Cardiopulmonary Resuscitation Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.28/expansion/Latest)<br /> <br /> [Cardiopulmonary Resuscitation Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.30/expansion/Latest)|
+    |100822-6 (Cardiopulmonary resuscitation orders)|[Cardiopulmonary Resuscitation Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.28/expansion/Latest)<br /> [Cardiopulmonary Resuscitation Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.30/expansion/Latest)|
     |100823-4 (Initial portable medical treatment orders)| [Initial Treatment portable medical Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.27/expansion/Latest)|
     |100824-2 (Additional portable medical orders or instructions)|[Additional Portable Medical Order Procedures](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.32/expansion/Latest)|
     |100825-9 (Medically assisted nutrition orders)|[Medically Assisted Nutrition Order Options](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.35/expansion/Latest)|
