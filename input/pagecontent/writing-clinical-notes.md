@@ -1,10 +1,10 @@
-### Purpose and Scope
-
 {% include conf_usage_boilerplate.md %}
+
+### Purpose and Scope
 
 This page defines a US Core approach to writing **clinical notes** using the FHIR R4 `DocumentReference` resource.
 
-It complements the US Core **[Clinical Notes (read)][1]** guidance (which exposes notes via `DocumentReference` and certain `DiagnosticReport` categories) and adopts conventions used in **[Writing Vital Signs][2]** (SMART scopes, CapabilityStatement documentation, error semantics).
+It complements the **[US Core Clinical Notes][1]** guidance and adopts conventions used in **[Writing Vital Signs][2]** (SMART scopes, CapabilityStatement documentation, error semantics).
 
 **In scope**
 
@@ -24,11 +24,11 @@ It complements the US Core **[Clinical Notes (read)][1]** guidance (which expose
 
 ---
 
-### Relationship to US Core Clinical Notes (read)
+### Relationship to US Core Clinical Notes
 
-US Core **Clinical Notes** requires servers to expose notes through `DocumentReference` and, for some content, also via `DiagnosticReport`.
+[US Core Clinical Notes][1] requires servers to expose notes through `DocumentReference` and, for some content, also via `DiagnosticReport`.
 
-This write guidance standardizes **writes via `DocumentReference`**. Servers **MAY** also create a paired `DiagnosticReport.presentedForm` to maintain read parity. ([US Core Clinical Notes][1])
+This write guidance standardizes **writes via `DocumentReference`**. Servers **MAY** also create a paired `DiagnosticReport.presentedForm` to maintain read parity.
 
 ---
 

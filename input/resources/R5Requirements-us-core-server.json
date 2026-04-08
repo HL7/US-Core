@@ -1172,26 +1172,6 @@
       ]
     },
     {
-      "key": "CONF-0074",
-      "reference": [
-        "must-support.html#must-support-elements"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "When an element is Mandatory, the data is expected always to be present.",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "must-support.html#CONF-0074"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0075",
       "reference": [
         "must-support.html#must-support-elements"
@@ -8953,26 +8933,6 @@
       ]
     },
     {
-      "key": "CONF-0893",
-      "reference": [
-        "StructureDefinition-us-core-provenance.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "MAY"
-      ],
-      "requirement": "Other information can be tracked such as what activity has occurred in `Provenance.activity`, and details about where the entity came from (for example, a document source's identity and role) in `Provenance.entity`.",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-provenance.html#CONF-0893"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0894",
       "reference": [
         "StructureDefinition-us-core-practitionerrole.html#profile-specific-implementation-guidance"
@@ -9080,7 +9040,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "To represent the patient and provider attestation metadata, the *optional* DocumentReference Attestor R5 Extension ... **SHOULD** be use",
+      "requirement": "To represent the patient and provider attestation metadata, the optional DocumentReference Attestor R5 Extension defined in the US Core DocumentReference Profile **SHOULD** be used",
       "_reference": [
         {
           "extension": [
