@@ -12,9 +12,9 @@ The US Core Profile elements include *Mandatory*, *Must Support*, and *Additiona
 
 The [Capability Statements][Capability Statements and Requirements Resources] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resource specify how the Server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
 
-<div class="bg-success" markdown="1">
+
 The [Requirements Table] and [Requirements Resource][Capability Statements and Requirements Resources]  list the requirements defined in the US Core Implementation Guide's narrative sections. The <sup>§</sup> footnote associated with a narrative section’s sentence, phrase, or bullet indicates a requirement and links to the requirement in the requirements table.
-</div><!-- new-content -->
+
 
 ### Conforming to US Core
 
@@ -119,10 +119,10 @@ FHIR profiles use [slicing] when a coded element is a repeating elements and a p
 
 #### Extensible Binding for Coded Elements
 
-<div class="bg-success" markdown="1">
+
 
 [Extensible Binding] means that one of the codes from the specified value set **SHALL** be used when an appropriate concept exists; otherwise, alternate code(s) **MAY** be used.<sup>[§][CONF-0023],[§][CONF-0024]</sup>  This applies to *at least one* coding for elements with the `CodeableConcept` datatype, which permits multiple codings and a text element. Text-only representation **SHOULD NOT** be used - coded values are expected whenever possible to support interoperability.<sup>[§][CONF-0026]</sup>
-</div><!-- new-content -->
+
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for the CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
@@ -134,12 +134,12 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 3: US Core AllergyIntolerance.code" %}
 
-<div class="bg-success" markdown="1">
+
 
 Although the FHIR guidance for extensible bindings indicates that all conceptual overlaps including free text, be mapped to the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR guidance. This flexibility is sometimes necessary and expected for legacy and text-only data. However, for newly recorded, non-legacy data, a system **SHOULD** adhere to the extensible binding rules.<sup>[§][CONF-0896]</sup>
 
 For example, the US Core Procedure Codes and US Core Condition Codes ValueSets contain several high-level abstract codes. For data not captured by the system transmitting the information, the coded data **SHOULD** be automatically converted to fine-grained codes from the specified ValueSet.<sup>[§][CONF-0897]</sup> If this is not possible, the system **MAY** provide the existing code or the free text, and a high-level abstract code, such as the SNOMED CT code "71388002"(Procedure), to remain conformant with the extensible binding.<sup>[§][CONF-0898]</sup>
-</div><!-- new-content -->
+
 
 ### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}
@@ -289,8 +289,8 @@ There are situations when information on a particular data element is missing, a
           - `DocumentReference.status`
           - `Immunization.status`
           - `Goal.lifecycleStatus`
-          - <span class="bg-success" markdown="1">`MedicationRequest.intent`</span><!-- new-content -->
-          - <span class="bg-success" markdown="1">`ServiceRequest.intent`</span><!-- new-content -->
+          - `MedicationRequest.intent`
+          - `ServiceRequest.intent`
 
         *The `clinicalStatus` element is conditionally mandatory based on resource-specific constraints.
 

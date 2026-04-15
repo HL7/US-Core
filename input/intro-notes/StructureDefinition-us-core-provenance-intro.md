@@ -57,6 +57,6 @@ The "black_list" below is manually updated as needed when new profiles are added
 <!-- ========================== end liquid ====================== -->
 
 - <sup>2</sup>If a system receives a provider in `Provenance.agent.who` as free text, they must capture who sent them the information as the organization. On request, they  **SHALL** provide this organization as the source and **MAY** include the free text provider.<sup>[§][CONF-0508],[§][CONF-0509]</sup>
-- <span class="bg-success" markdown="1">Other information can be tracked such as what activity has occurred in `Provenance.activity`, and details about where the entity came from (for example, a document source's identity and role) in `Provenance.entity`.<sup>[§][CONF-0893]</sup></span><!-- new-content -->
+- Other information can be tracked such as what activity has occurred in `Provenance.activity`, and details about where the entity came from (for example, a document source's identity and role) in `Provenance.entity`.<sup>[§][CONF-0893]</sup>
 
 {% include link-list.md %}

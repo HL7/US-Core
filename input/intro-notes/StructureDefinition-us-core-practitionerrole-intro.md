@@ -30,7 +30,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 - <sup>2</sup>When selecting role codes
   - implementers **SHOULD** choose the code that reflects the specific duties performed within that role rather than the specialty unless the individual's professional specialization characterizes the role.<sup>[§][CONF-0891]</sup>
   - Systems that primarily rely on NUCC codes instead of SNOMED CT to represent role codes can use the Da Vinci HRex [NUCC to SNOMED CT Mappings] to aid in translations.
-- <span class="bg-success" markdown="1"><sup>3</sup>Unless exchanging legacy or text-only data, medical specialty codes **SHOULD** be taken from NUCC or SNOMED CT.<sup>[§][CONF-0894]</sup></span><!-- new-content -->
+- <sup>3</sup>Unless exchanging legacy or text-only data, medical specialty codes **SHOULD** be taken from NUCC or SNOMED CT.<sup>[§][CONF-0894]</sup>
 - Clients can request Servers return the Practitioner and Endpoint resources using `_include`. See the [Quick Start] section below for further guidance.
 
 

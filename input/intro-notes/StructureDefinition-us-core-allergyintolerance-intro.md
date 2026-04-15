@@ -13,7 +13,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each AllergyIntolerance Must Have:**
 
-1. a clinical status of the allergy (e.g., active or resolved)<span class="bg-success" markdown="1"><sup>1</sup> </span><!-- new-content -->
+1. a clinical status of the allergy (e.g., active or resolved)<sup>1</sup> 
 1. a code that tells you what the patient is allergic to
 1. a patient
 
@@ -24,15 +24,15 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="AllergyIntolerance" plural="false" %}
 
-1. a recorder<span class="bg-success" markdown="1"><sup>2</sup></span><!-- new-content -->
+1. a recorder<sup>2</sup>
 
-<span class="bg-success" markdown="1"><sup>1,2</sup> see guidance below</span><!-- new-content -->
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* <span class="bg-success" markdown="1"><sup>1</sup> </span><!-- new-content -->The `AllergyIntolerance.clinicalStatus` element has the following constraints: **SHALL** be present if verification status is not "entered-in-error"<sup>[§][CONF-0302]</sup> and **SHALL NOT** be present if verification Status is "entered-in-error".<sup>[§][CONF-0303]</sup>
+* <sup>1</sup> The `AllergyIntolerance.clinicalStatus` element has the following constraints: **SHALL** be present if verification status is not "entered-in-error"<sup>[§][CONF-0302]</sup> and **SHALL NOT** be present if verification Status is "entered-in-error".<sup>[§][CONF-0303]</sup>
 * *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile<sup>[§][CONF-0305]</sup> with the appropriate negation code in `AllergyIntolerance.code`<sup>[§][CONF-0306]</sup> and the appropriate verification status in `AllergyIntolerance.verificationStatus`.<sup>[§][CONF-0307]</sup>
 
   If a patient has not been asked about their allergies, this would be represented as:<sup>[§][CONF-0308]</sup>
@@ -42,6 +42,6 @@ This section provides detailed implementation guidance for the US Core Profile t
   If a patient has been asked, but has indicated they have no known allergies, this would be represented as:<sup>[§][CONF-0309]</sup>
   * `AllergyIntolerance.code` = "716186003" (No known allergy (situation))
   * `AllergyIntolerance.verificationStatus` = "confirmed"
-{% include provenance-author-bullet-generator.md footnote-symbol='<span class="bg-success" markdown="1"><sup>2</sup> </span><!-- new-content -->' %}
+{% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup> ' %}
 
 {% include link-list.md %}

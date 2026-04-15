@@ -1,13 +1,3 @@
- <div class="bg-danger" markdown="1">
-<span style="background-color: yellow; color: black; padding: 2px 5px; display: inline;">**Note to Reviewers**</span>
-
-**What's new in the US Core STU 9**
-{% include whats-new/v9.md %}
-</div>
-
-Where possible, new and updated pre-publishing content is highlighted with green text and background- **This highlighting will be removed prior to publication.**
-{:.new-content}
-
 
 Key updates and detailed changes between this and prior versions are available on the US Core [Change Log] and [Changes Between Versions] pages.
 {:.stu-note}
@@ -34,8 +24,8 @@ This Guide is divided into several pages, which are listed at the top of each pa
 - [Conformance]\: These pages describe the set of rules to claim conformance to this guide
   - [General Requirements]\: This page defines requirements common to all actors and profiles used in this guide, including how CapabilityStatements are used to claim conformance.
   - [Must Support]\: This page defines the expectations for mandatory and Must Support elements in the US Core Profiles.
-  - <span class="bg-success" markdown="1">[Security]\: This page documents the general security requirements and recommendations for actors.</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">[Requirements Table]\: This table lists the requirements defined in the US Core Implementation Guide’s narrative sections.</span><!-- new-content -->
+  - [Security]\: This page documents the general security requirements and recommendations for actors.
+  - [Requirements Table]\: This table lists the requirements defined in the US Core Implementation Guide’s narrative sections.
 - [Guidance]\: The Guidance pages document best practices and how to use the profiles and transactions defined in this guide.
   - [USCDI]\: This page maps the US Core Profiles to the (USCDI) data classes and data elements.
   - [General Guidance]\: This page provides guidance, definitions, and requirements common to all actors and profiles used in this guide.
@@ -49,20 +39,20 @@ This Guide is divided into several pages, which are listed at the top of each pa
     - Each US Core Profile page includes a narrative description that lists all the [Mandatory] and [Must Support] data elements, profile-specific implementation guidance, and formal definitions. A "Quick Start" guide summarizes the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it also may cover un-profiled elements to aid with implementation and certification.
   - [Search Parameters and Operations]\: This page lists the defined US Core Operations and Search Parameters used in US Core transactions.
   - [Terminology]\: This page lists the US Core ValueSets, and CodeSystems defined for the profiles.
-  - <span class="bg-success" markdown="1">[Capability Statements and Requirements Resources]\: These pages define the expected FHIR capabilities and requirements of the US Core Servers and Clients.</span><!-- new-content -->
-  - [Examples]\: <span class="bg-success" markdown="1">This page lists all the examples used in this guide. {% include nonnormative-example-boilerplate.md -%}</span><!-- new-content -->
+  - [Capability Statements and Requirements Resources]\: These pages define the expected FHIR capabilities and requirements of the US Core Servers and Clients.
+  - [Examples]\: This page lists all the examples used in this guide. {% include nonnormative-example-boilerplate.md -%}
 - [Downloads]\: This page provides links to downloadable artifacts.
 
-<div class="bg-success" markdown="1">
+
 
 - [Version History]\: These pages document the changes across the versions of US Core.
   - [Change Log]\: The Change Log lists all the updates, enhancements, clarifications, and corrections  resulting from community feedback on US Core ballots and changes to align with evolving USCDI standards.
   - [Changes Between Versions]\: This page documents the changes between US Core versions and documents some considerations when transitioning between versions of FHIR and US Core.
-</div><!-- new-content -->
+
 
 - [Looking Ahead]\: These pages provide a preview of the future direction of US Core
    - [US Core Roadmap]\: This page outlines the approach to adding new content to US Core.
-   - [Writing Vital Signs]\: This page documents how to write vital sign <span class="bg-success" markdown="1">observations</span><!-- new-content --> using patient- and provider-facing apps.
+   - [Writing Vital Signs]\: This page documents how to write vital sign observations using patient- and provider-facing apps.
    - [Writing Clinical Notes]\: This page documents how to write clinical notes using patient- and provider-facing apps.
    - [Patient Data Feed]\: This page documents how to use FHIR Subscriptions to be notified when events related to US Core content occur.
 

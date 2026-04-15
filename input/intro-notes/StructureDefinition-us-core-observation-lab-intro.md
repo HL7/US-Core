@@ -20,7 +20,7 @@ The following are example usage scenarios for this profile:
 1. a timestamp when the resource last changed<sup>1</sup>
 2. a result value<sup>2</sup>
    - if the result value is a numeric quantity, a standard [UCUM] unit
-   - if the result value is a coded <span class="bg-success" markdown="1">value</span><!-- new-content -->, a standard [SNOMED CT]
+   - if the result value is a coded value, a standard [SNOMED CT]
 3. result interpretation
    -  if the result value is a numeric quantity, a standard [UCUM] unit
 4. result reference range

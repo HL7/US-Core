@@ -12,7 +12,7 @@ FHIR resource elements of the [Reference] datatype reference other FHIR resource
 
 ### Contained Resources
 
-When responding to a query, Servers <span class="bg-success" markdown="1">**SHOULD NOT**</span><!-- new-content --> use inline [contained] resources to represent the returned data.<sup>[§][CONF-0176]</sup> A contained resource can only be used when the source data exists within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used to represent the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.<sup>[§][CONF-0177]</sup>  Further guidance about the general use case for contained can be found in the base FHIR specification.
+When responding to a query, Servers **SHOULD NOT** use inline [contained] resources to represent the returned data.<sup>[§][CONF-0176]</sup> A contained resource can only be used when the source data exists within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used to represent the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.<sup>[§][CONF-0177]</sup>  Further guidance about the general use case for contained can be found in the base FHIR specification.
 
 ###  Suppressed Data
 
@@ -99,11 +99,11 @@ Some US Core Profiles bind the `Quantity.code` element in the Quantity datatype 
     "value": 26.0
  }
 ```
-<div class="bg-success" markdown="1">
+
 
 ### Representing Deleted and Entered in Error Information
 
-A FHIR Server <span class="bg-success" markdown="1">**SHOULD NOT**</span><!-- new-content --> delete records.<sup>[§][CONF-0187]</sup> A FHIR Server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive` (refer to the next section).<sup>[§][CONF-0188]</sup> If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.<sup>[§][CONF-0189]</sup>
+A FHIR Server **SHOULD NOT** delete records.<sup>[§][CONF-0187]</sup> A FHIR Server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive` (refer to the next section).<sup>[§][CONF-0188]</sup> If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.<sup>[§][CONF-0189]</sup>
 
 #### Entered in Error
 
@@ -115,14 +115,14 @@ Clinical information entered in error in the patient's record needs to be repres
     -  For *patient facing* applications, A FHIR Server **SHOULD** remove the resource's contents, leaving only an id and status. Note that this typically will not conform to the US Core or FHIR StructureDefinitions.<sup>[§][CONF-0191]</sup>
     - For *provider-facing* applications, the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.<sup>[§][CONF-0192]</sup>
 
-</div><!-- new-content -->
+
 ### Narrative
 
 The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile can include a human-readable narrative containing a summary of the resource and may be used to represent the resource's content to a human.  For further guidance, refer to the [Narrative documentation] in the FHIR Specification.
 
 ### Language Support
 
-<span class="bg-success" markdown="1">There is a need for patients to access their records in their preferred language,</span><!-- new-content --> and the data provider **SHOULD** do their best to translate (safely) to the requested language.<sup>[§][CONF-0193]</sup> Understand that this will be variably complete depending on the nature of the record. For example, translating the following elements is relatively straightforward:
+There is a need for patients to access their records in their preferred language, and the data provider **SHOULD** do their best to translate (safely) to the requested language.<sup>[§][CONF-0193]</sup> Understand that this will be variably complete depending on the nature of the record. For example, translating the following elements is relatively straightforward:
 
 - `Coding.display`
 - Generated narrative
@@ -130,7 +130,7 @@ The [US Core CarePlan Profile] requires a narrative summary of the patient asses
 
 The following guidelines outline requesting and returning a resource in the requested language.
 
-* Clients <span class="bg-success" markdown="1">**MAY**</span><!-- new-content --> request language/locale using the http [`Accept-Language`] header.<sup>[§][CONF-0194]</sup>
+* Clients **MAY** request language/locale using the http [`Accept-Language`] header.<sup>[§][CONF-0194]</sup>
 * Servers **SHOULD** make reasonable efforts to translate what can be safely translated.<sup>[§][CONF-0195]</sup>
 * Servers **SHOULD** populate the Resource's `language` element with a code based on the underlying language of record, *not* the requested language.<sup>[§][CONF-0196]</sup>
     * Using the [Human Language] Extension when the language of a display, etc, is known to differ from the stated (or inferred) language.<sup>[§][CONF-0197]</sup>

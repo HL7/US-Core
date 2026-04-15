@@ -106,7 +106,7 @@ echo "-l flag to add or update the page-link-list to the input/includes folder (
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
 echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE_PUB"
-echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
+echo "-q Claude QA differential report analysis  =  $VIEW_QA"
 echo "-r remove all generated json files = $CLEAR_JSON"
 echo "-s parameter for running only sushi = $SUSHI"
 echo "-t parameter for no terminology server (run faster and offline)= $NA"
@@ -121,7 +121,6 @@ echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
 sleep 1
-
 
 
 # TODO .. complete this script to compare CapabilityStatements
@@ -347,7 +346,7 @@ if [[ $REM_HIGHLIGHT ]]; then
     #     fi
     # done
     echo "================================================================="
-    echo "done! Check for any remaining tags or new content highlighting manually"
+    echo "done! Check for any remaining tags or new content highlighting manually and remove new content flags from the csv files"
     echo "================================================================="
     echo ""
     sleep 1
@@ -578,6 +577,9 @@ if [[ $APP_VERSION ]]; then
 fi
 
 if [[ $IG_PUBLISH ]]; then
+
+# Save previous QA report before build overwrites it
+[[ -f "$outpath"/qa.txt ]] && cp "$outpath"/qa.txt .qa_previous.txt
 
   files=()                                        # 1. Start with an empty array
   for dir in "$resources" "$fsh_resources" "$examples"; do  # 2. Loop over each directory
@@ -819,7 +821,33 @@ if [[ $VIEW_OUTPUT ]]; then
 fi
 
 if [[ $VIEW_QA ]]; then
-    echo "============ open $PWD/$outpath/qa.html ============"
-    open ./$outpath/qa.html
+  echo "================================================================="
+  echo "=== Claude QA report analysis ==="
+  echo "================================================================="
+
+  QA_PREV=".qa_previous.txt"
+  QA_CURRENT="$outpath"/qa.txt
+
+  if [[ -f "$QA_CURRENT" ]]; then
+    # Generate diff if a previous run exists
+    if [[ -f "$QA_PREV" ]]; then
+      QA_DIFF=$(diff "$QA_PREV" "$QA_CURRENT" || true)
+    else
+      QA_DIFF="(no previous run to compare against)"
+    fi
+
+    { echo "=== DIFF FROM LAST BUILD ==="; echo "$QA_DIFF"; } \
+    | claude -p "
+    You are reviewing changes to a FHIR IG publisher QA report.
+    The diff shows what changed since the last build ('+' = new, '-' = resolved).
+    List only:
+    - Issues resolved since last build
+    - New issues introduced since last build
+    Be concise, no analysis or recommendations.
+    "
+
+  else
+    echo "⚠️  "$QA_CURRENT" not found — skipping QA analysis."
+  fi
 fi
 

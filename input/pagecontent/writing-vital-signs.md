@@ -65,7 +65,7 @@ We are seeking feedback from the community on whether this more compact approach
 
 `encounter`
 - Client - If populating this element, apps **SHALL** use a reference to an Encounter resource in the Server, and **MAY** use the value returned by the `launch/encounter` SMART scope.
-- Server - Systems **SHOULD** document whether the `encounter` element is required to create a vital sign. When not required, Servers **MAY** determine this value based on context if it is omitted, <span class="bg-success" markdown="1"> and, if they do, **SHOULD** document the criteria used to make this determination.</span><!-- new-content -->
+- Server - Systems **SHOULD** document whether the `encounter` element is required to create a vital sign. When not required, Servers **MAY** determine this value based on context if it is omitted, and if they do, **SHOULD** document the criteria used to make this determination.
 
 `subject`
 - Client - Apps **SHALL** populate the `subject` reference with a reference to a Patient resource in the Server. Patient-facing apps **SHOULD** populate this element based on the value returned as part of the `launch/patient` SMART scope.

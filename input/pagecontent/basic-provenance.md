@@ -31,9 +31,9 @@ The HL7 Basic Provenance Informative implementation guide outlines four use case
 
 #### Clinical Information Reconciliation and Incorporation
 
-<span class="bg-success" markdown="1">Clinical Information Reconciliation and Incorporation (CIRI) allows clinicians to reconcile and incorporate patient
+Clinical Information Reconciliation and Incorporation (CIRI) allows clinicians to reconcile and incorporate patient
 health information sent in from external sources to maintain more accurate
-and up-to-date patient records.</span><!-- new-content --> Consolidated Clinical Document Architecture
+and up-to-date patient records. Consolidated Clinical Document Architecture
 (C-CDA) documents are often used to share clinical information with clinicians
 from external sources like hospitals, Health Information Exchanges (HIEs), or
 other clinicians, and allows the clinician to import and reconcile health care
@@ -91,7 +91,7 @@ Since no clinical content is changed in the HIE redistribution, the best scenari
 
 #### HIE Transformation
 
-<span class="bg-success" markdown="1">In contrast to HIE Redistribution, HIE Transformation includes a step to convert the source data format into a different data format.</span><!-- new-content --> Information is received (e.g., v2 lab, other CDs), transformed by a HIE, stored, and passed in a new format (e.g., CCD or FHIR).
+In contrast to HIE Redistribution, HIE Transformation includes a step to convert the source data format into a different data format. Information is received (e.g., v2 lab, other CDs), transformed by a HIE, stored, and passed in a new format (e.g., CCD or FHIR).
 
 {% include img.html img="Provenance_HIE_Transformation.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
 

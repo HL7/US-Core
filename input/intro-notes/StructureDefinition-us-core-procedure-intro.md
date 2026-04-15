@@ -32,7 +32,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - <sup>2</sup>The `Procedure.performed` is mandatory if `Procedure.status` is "completed" or "in-progress".
-- <span class="bg-success" markdown="1"><sup>1</sup>Unless exchanging legacy or text-only data, procedure codes **SHOULD** be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.<sup>[§][CONF-0895]</sup></span><!-- new-content -->
+- <sup>1</sup>Unless exchanging legacy or text-only data, procedure codes **SHOULD** be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.<sup>[§][CONF-0895]</sup>
    - Only LOINC concepts that reflect actual procedures **SHOULD** be used.<sup>[§][CONF-0480]</sup>
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` referencing the [US Core Device Profile].<sup>[§][CONF-0892]</sup>
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures

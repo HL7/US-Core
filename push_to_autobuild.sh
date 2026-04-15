@@ -66,11 +66,35 @@ echo "==================== you typed '$var1' ============================"
 echo "================================================================="
 
 if [ $var1 == "c" ]; then
-  git commit -a
-  git push
+  git add -u        # stages tracked files only, no commit yet
 elif [ $var1 == "a" ]; then
-  git add .
-  git commit
-  git push
+  git add .         # stages everything including untracked
 fi
+
+echo "================================================================="
+echo "=== running Claude grammar/typo check on staged .md files ==="
+echo "================================================================="
+
+DIFF=$(git diff --cached -- '*.md')
+
+if [[ -n "$DIFF" ]]; then
+  echo "$DIFF" | claude -p "
+You are a proofreader for a Jekyll static site.
+Review the following git diff of staged content files.
+Check ONLY added lines (starting with '+') for:
+- Spelling errors and typos
+- Grammar mistakes
+- Unclear or broken sentences
+Ignore: code blocks, liquid tags ({{ }}), front matter (---), HTML attributes, and JSON.
+For each issue output: FILE | LINE | ISSUE | SUGGESTION
+If no issues found, output: ✅ No issues found.
+"
+  echo ""
+  read -p "Proceed with commit? (y/n): " grammarcheck
+  [[ "$grammarcheck" != "y" ]] && echo "Commit aborted." && exit 1
+fi
+
+# Now commit and push for both cases
+# git commit < /dev/tty
+# git push
 

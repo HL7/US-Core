@@ -8,7 +8,7 @@ It complements the **[US Core Clinical Notes][1]** guidance and adopts conventio
 
 **In scope**
 
-* <span class="bg-success" markdown="1">Create (and optionally update) notes as `DocumentReference` resources.</span><!-- new-content -->
+* Create (and optionally update) notes as `DocumentReference` resources.
 * Two modes:
   * **Direct Write** (provider-initiated; immediate filing).
   * **Mediated Submission** (patient-asserted; server-governed review/promotion).
@@ -34,7 +34,7 @@ This write guidance standardizes **writes via `DocumentReference`**. Servers **M
 
 ### Modes of Operation
 
-<div class="bg-success" markdown="1">
+
 
 #### Direct Write
 Provider writes directly to the clinical system via a provider-facing app.
@@ -47,7 +47,7 @@ Provider writes directly to the clinical system via a provider-facing app.
 #### Mediated Submission (patient-asserted)
 Patient mediates the exchange of a clinical note from one provider to another via a patient-facing app or a note authored by a patient-facing app.
 
-* Client `POST`s a `DocumentReference` with a `meta.security` code <span class="bg-success" markdown="1">"PATAST"</span><!-- new-content -->.
+* Client `POST`s a `DocumentReference` with a `meta.security` code "PATAST".
 * Server **MAY** hold the note for review/promotion.
 * Server **MAY** add the `meta.security` code "PATAST" by policy (e.g., based on authorization context), even if it is omitted by the client, and **SHOULD** document this behavior.
 
@@ -55,7 +55,7 @@ Patient mediates the exchange of a clinical note from one provider to another vi
 
 1. A patient retrieves a consultation note from their specialist's EHR using a patient-facing app, then writes it to their primary care provider's EHR.
 1. A patient uses a wellness app to document symptoms and self-management activities. The app writes this information to the patient's EHR as a patient-asserted note (tagged with "PATAST").
-</div><!-- new-content -->
+
 
 ---
 
@@ -71,7 +71,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
   * a **resolvable relative reference** to a resource on the target server (e.g., `"Practitioner/123"`), or
   * a **contained resource** reference (e.g., `"#prac1"`) when a resolvable reference is not possible.
 * **Display.** Clients **SHOULD** also provide a `display` string for usability.
-* **Server handling.** Servers **SHALL** accept either approach. They **SHOULD** attempt to <span class="bg-success" markdown="1">match references to</span><!-- new-content --> to existing entities, and **MAY** persist contained resource content at their discretion.
+* **Server handling.** Servers **SHALL** accept either approach. They **SHOULD** attempt to match references to existing entities, and **MAY** persist contained resource content at their discretion.
 * **Non-blocking.** Servers **SHALL NOT** reject a submission solely because the reference cannot be resolved.
 
 #### Author
@@ -108,7 +108,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 #### Patient-asserted signaling
 
 * Clients **SHALL** include `meta.security` with code "PATAST" when data are patient-supplied.
-* Servers **MAY** <span class="bg-success" markdown="1">add a `meta.security` code "PATAST"</span><!-- new-content --> by policy.
+* Servers **MAY** add a `meta.security` code "PATAST" by policy.
 
 #### MIME support
 
@@ -118,7 +118,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 #### Size limits
 
 * Servers **SHALL** accept inline attachments up to at least **5 MiB**.
-* Servers **MAY** support <span class="bg-success" markdown="1">submissions via `.attachment.url` that points</span><!-- new-content --> to larger files than this
+* Servers **MAY** support submissions via `.attachment.url` that points to larger files than this
 * Servers **SHALL NOT** link to client-supplied URLs for subsequent readers.
 * Servers **SHALL** document size limits in their API documentation.
 
@@ -129,7 +129,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 #### Status correction
 
 * Servers **SHOULD** allow updates of `status` to "entered-in-error".
-* Clients **MAY** submit a partial `PUT` request to a `DocumentReference` resource, including only the `id`, `status` (set to "entered-in-error"), `subject` (for verification), and other top-level fields as needed—omitting the full content or context. <span class="bg-success" markdown="1">Servers **SHALL** accept such partial updates without requiring the original document content and **SHOULD** transition the resource's status accordingly. Servers **MAY** subsequently exclude the resource from search results (e.g., to limit visibility), but **SHALL** still support read access via direct ID lookup if authorized.</span><!-- new-content -->
+* Clients **MAY** submit a partial `PUT` request to a `DocumentReference` resource, including only the `id`, `status` (set to "entered-in-error"), `subject` (for verification), and other top-level fields as needed—omitting the full content or context. Servers **SHALL** accept such partial updates without requiring the original document content and **SHOULD** transition the resource's status accordingly. Servers **MAY** subsequently exclude the resource from search results (e.g., to limit visibility), but **SHALL** still support read access via direct ID lookup if authorized.
 
 #### Capability discovery
 
@@ -145,7 +145,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 ### Terminology
 
-* **Type.** `DocumentReference.type` **SHALL** use LOINC and support<span class="bg-success" markdown="1">, at minimum,</span><!-- new-content --> the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
+* **Type.** `DocumentReference.type` **SHALL** use LOINC and support, at minimum, the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
 
   - 11488-4: Consultation note
   - 11535-2: Discharge summary note
@@ -341,7 +341,7 @@ PUT [base]/DocumentReference/abc
 
 ☐ **SHOULD** populate `context.period`.
 
-☐ **SHOULD** include <span class="bg-success" markdown="1">a `meta.security` code "PATAST"</span><!-- new-content --> for patient-asserted notes.
+☐ **SHOULD** include a `meta.security` code "PATAST" for patient-asserted notes.
 
 ☐ **SHOULD** use `relatesTo` = "replaces" for superseding documents instead of in-place updates.
 

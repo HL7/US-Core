@@ -55,7 +55,7 @@ Whether based on simple observations or detailed assessments, clinicians may rec
 
 Local policies guide what is appropriate for the problem list and what is appropriate for an observation. For example, some clinics may consider social needs sensitive information inappropriate for the problem list. Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.
 
-Every Server <span class="bg-success" markdown="1">(including "Certifying Systems")</span><!-- new-content --> that supports the USCDI Data Class "Health Status/Assessments":
+Every Server (including "Certifying Systems") that supports the USCDI Data Class "Health Status/Assessments":
 
 -  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].<sup>[§][CONF-0269]</sup>
    -  The US Core Simple Observation Profile's `Observation.derivedFrom` element **SHOULD** reference the Structured Screening and Assessment upon which clinical judgment observations are made (see below).<sup>[§][CONF-0270]</sup> Likewise, the US Core Condition Profile's `Condition.evidence.detail` element **SHOULD** reference the Structured Screening and Assessment which assist in diagnosing problems or health concerns.<sup>[§][CONF-0271]</sup>
@@ -113,8 +113,6 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 
 ### Terminology
-
-
 
 #### Category Codes
 
@@ -186,7 +184,7 @@ The US Core Observation Screening Assessment Profile, SDC Base Questionnaire, an
 
 ##### USCDI Health Assessments Data Element Value Sets
 
-The following sections and <span class="bg-success" markdown="1">[Health Status Assessments Value Sets Table]</span><!-- new-content --> below identify the associated value sets for each USCDI Health Status Assessments Data Element. This guidance intends to promote interoperability by introducing "starter" value sets *where available* for the USCDI Data Elements covered by Screenings and Assessments. These value sets are divided into clinical judgment codes, structured screening and assessment panel codes, and structured screening and assessment panel item codes. Note that a suitable value set has yet to be identified in several instances. Implementers **SHOULD** treat these value sets as having an [extensible] binding.<sup>[§][CONF-0280]</sup> In other words, the *Clinical Judgement Codes* code sets are extensibly bound to the US Core Condition Problems and Health Concerns Profile and the US Core Simple Observation Profile when representing clinical judgments. Similarly, *Panel Codes* and *Panel Item Codes* are extensibly bound to the US Core Observation Screening Assessment Profile and SDC Base Questionnaire/US Core QuestionnaireResponse Profile when representing structured screening and assessments. Because the value sets in the <span class="bg-success" markdown="1">Health Status Assessments Value Sets Table</span><!-- new-content --> are not formally bound to a US Core Profile in the StructureDefinitions, "automatic" validation (confirmation) that a code is a member of a value set will not occur using the standard validation tools.
+The following sections and [Health Status Assessments Value Sets Table] below identify the associated value sets for each USCDI Health Status Assessments Data Element. This guidance intends to promote interoperability by introducing "starter" value sets *where available* for the USCDI Data Elements covered by Screenings and Assessments. These value sets are divided into clinical judgment codes, structured screening and assessment panel codes, and structured screening and assessment panel item codes. Note that a suitable value set has yet to be identified in several instances. Implementers **SHOULD** treat these value sets as having an [extensible] binding.<sup>[§][CONF-0280]</sup> In other words, the *Clinical Judgement Codes* code sets are extensibly bound to the US Core Condition Problems and Health Concerns Profile and the US Core Simple Observation Profile when representing clinical judgments. Similarly, *Panel Codes* and *Panel Item Codes* are extensibly bound to the US Core Observation Screening Assessment Profile and SDC Base Questionnaire/US Core QuestionnaireResponse Profile when representing structured screening and assessments. Because the value sets in the Health Status Assessments Value Sets Table are not formally bound to a US Core Profile in the StructureDefinitions, "automatic" validation (confirmation) that a code is a member of a value set will not occur using the standard validation tools.
 
 ###### SDOH value sets
 
@@ -265,7 +263,8 @@ The script retrieves, sorts, and selects the list data.
 - The [Drug Misuse](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.707/expansion) values set contains SNOMED CT clinical judgment codes
 to represent conclusions or diagnoses about drug misuse or abuse. In many cases, the value (answer) at `Observation.value` may be boolean true \| false.
 
-<span id="health-status-assessments-value-sets-table" class="bg-success" markdown="1">**Health Status Assessments Value Sets Table:**</span><!-- new-content -->
+**Health Status Assessments Value Sets Table:**
+{: #health-status-assessments-value-sets-table}
 
 <!-- ========================================================
 The liquid syntax below generates the screening and assessment
