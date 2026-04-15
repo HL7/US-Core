@@ -95,6 +95,6 @@ If no issues found, output: ✅ No issues found.
 fi
 
 # Now commit and push for both cases
-# git commit < /dev/tty
-# git push
+git commit
+git push
 

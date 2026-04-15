@@ -91,6 +91,7 @@
 [HVS-item-example-88124-3]: Observation-HVS-item-example-88124-3.html
 [HVS-panel-example-88121-9]: Observation-HVS-panel-example-88121-9.html
 [imm-1]: Immunization-imm-1.html
+[manifest]: Parameters-manifest.html
 [jugular-vein-distension]: Observation-jugular-vein-distension.html
 [length]: Observation-length.html
 [cbc-leukocytes]: Observation-cbc-leukocytes.html

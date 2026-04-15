@@ -1,0 +1,14 @@
+resourceType: Parameters
+id: manifest
+meta:
+    extension:
+        -
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+            valueString: Input Expansion Parameters
+        -
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+            valueMarkdown: 'The input expansion parameters resource for this implementation guide, specifying SNOMED Edition. This resource will be contained within the published implementation guide with all pinned references.'
+parameter:
+    -
+        name: system-version
+        valueUri: 'http://snomed.info/sct|http://snomed.info/sct/731000124108'

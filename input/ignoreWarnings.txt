@@ -227,10 +227,6 @@ Reference to retired ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/%
 
 No definition could be found for URL value%
 
-# 53 === The informative message suggests using "http" instead of "https".  However these URLs are used in CapabilityStatement extension to render appropriate links in custom liquid generated narratives, and using "http" would lead to a bad link error. ===
-
-A definition could not be found for Canonical URL%
-
 #54 === These deprecated extensions are inherited from the base FHIR resources and not under the control of US Core editors. ===
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
@@ -248,3 +244,7 @@ WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from https://tx.fh
 #57 ===  This extension is used to define the expectation for he following SearchParameter elements: multipleAnd, multipleOr, comparator, modifier, and chain.  It also used to render the SearchParameter narrative using custom templates. Since its context is not scoped outside of CapabilityStatement the validator is generating these errors. The tracker, FHIR-56196, has been logged to extend its context to these SearchParameter elements. ===
 
 The extension http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation v5.3.0-ballot-tc1 is not allowed to be used at this point%
+
+#58 === Confirms that this guide is pinned to all most recent versions used at the time this guide was published. For more guidance on pinning in US Core, see the Terminology Page. ===
+
+Pinned the version of%

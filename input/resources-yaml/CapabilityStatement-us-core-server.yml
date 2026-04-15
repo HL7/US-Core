@@ -3947,7 +3947,7 @@ rest:
         valueCode: SHALL
       - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
         valueUrl:
-          https://hl7.org/fhir/uv/sdc/StructureDefinition-sdc-questionnaire.html
+          http://hl7.org/fhir/uv/sdc/StructureDefinition-sdc-questionnaire.html
       - url: http://hl7.org/fhir/StructureDefinition/display
         valueString: SDC Base Questionnaire Profile
     documentation: >-
@@ -4574,7 +4574,7 @@ rest:
       _definition:
         extension:
         - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-          valueUrl: https://hl7.org/fhir/R4/valueset-operation-expand.html
+          valueUrl: http://hl7.org/fhir/R4/valueset-operation-expand.html
         - url: http://hl7.org/fhir/StructureDefinition/display
           valueString: '$expand'
       documentation: 'If a server supports DocumentReference for creating, using,

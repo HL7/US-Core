@@ -578,9 +578,6 @@ fi
 
 if [[ $IG_PUBLISH ]]; then
 
-# Save previous QA report before build overwrites it
-[[ -f "$outpath"/qa.txt ]] && cp "$outpath"/qa.txt .qa_previous.txt
-
   files=()                                        # 1. Start with an empty array
   for dir in "$resources" "$fsh_resources" "$examples"; do  # 2. Loop over each directory
     for f in "$dir"/*.json; do                    # 3. Loop over each .json glob match
@@ -825,13 +822,15 @@ if [[ $VIEW_QA ]]; then
   echo "=== Claude QA report analysis ==="
   echo "================================================================="
 
-  QA_PREV=".qa_previous.txt"
-  QA_CURRENT="$outpath"/qa.txt
+  QA_CURRENT="$outpath/qa-eslintcompact.txt"
+  QA_PREV=".qa-eslintcompact_previous.txt"
 
   if [[ -f "$QA_CURRENT" ]]; then
-    # Generate diff if a previous run exists
+    # sort and generate diff if a previous run exists
+    sort "$QA_CURRENT" > /tmp/qa_sorted.txt
+
     if [[ -f "$QA_PREV" ]]; then
-      QA_DIFF=$(diff "$QA_PREV" "$QA_CURRENT" || true)
+      QA_DIFF=$(diff "$QA_PREV" /tmp/qa_sorted.txt || true)
     else
       QA_DIFF="(no previous run to compare against)"
     fi
@@ -845,7 +844,8 @@ if [[ $VIEW_QA ]]; then
     - New issues introduced since last build
     Be concise, no analysis or recommendations.
     "
-
+   # Save QA report for next time
+   cp "$QA_CURRENT" .qa-eslintcompact_previous.txt
   else
     echo "⚠️  "$QA_CURRENT" not found — skipping QA analysis."
   fi

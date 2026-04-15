@@ -888,6 +888,14 @@
       },
       {
         "reference": {
+          "reference": "Parameters/manifest"
+        },
+        "description": "The input expansion parameters resource for this implementation guide, specifying SNOMED Edition. This resource will be contained within the published implementation guide with all pinned references.",
+        "exampleBoolean": false,
+        "name": "Input Expansion Parameters"
+      },
+      {
+        "reference": {
           "reference": "Observation/jugular-vein-distension"
         },
         "description": "This is a Jugular vein distension Example for the *Clinical Test Result Observation Profile*.",
@@ -4093,7 +4101,7 @@
       },
       {
         "code": "path-expansion-params",
-        "value": "../../input/_resources/exp-params.json"
+        "value": "../../input/resources/Parameters-manifest.json"
       },
       {
         "code": "active-tables",
@@ -4322,6 +4330,14 @@
       {
         "code": "ips-comparison",
         "value": "{current}"
+      },
+      {
+        "code": "pin-canonicals",
+        "value": "pin-all"
+      },
+      {
+        "code": "pin-manifest",
+        "value": "manifest"
       },
       {
         "code": "auto-oid-root",

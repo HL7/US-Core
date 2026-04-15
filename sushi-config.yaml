@@ -247,7 +247,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     #- input/summaries
   path-liquid: input/liquid
     # path-data: input/examples # A relative path in which data files can be found (will go in _data for Jekyll).
-  path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
+  path-expansion-params: '../../input/resources/Parameters-manifest.json' # relative path from fsh-generated/resources (hence the "../..?")for using US ed of SNOMED
   active-tables: false
   apply-contact: true
   apply-jurisdiction: true
@@ -325,6 +325,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   ips-comparison:
     - '{current}'
 
+  pin-canonicals: pin-all
+  pin-manifest: manifest
+  # pin-external: true  #<<<<<< documented, but not yet available
 
   # logging:
   #   - tx #tx: Messages describing the use of the terminology server (for debugging)
