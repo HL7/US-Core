@@ -65,7 +65,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Servers may deploy and support one or more US Core Profiles to represent clinical information",
+      "requirement": "Servers **MAY**deploy and support one or more US Core Profiles to represent clinical information",
       "_reference": [
         {
           "extension": [
@@ -86,7 +86,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server may deploy and support ... the following US Core interaction: “Quick Start” defined for each Profile",
+      "requirement": "Server **MAY**deploy and support ... the following US Core interaction: “Quick Start” defined for each Profile",
       "_reference": [
         {
           "extension": [
@@ -107,7 +107,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server may deploy and support ... the following US Core interaction: [Clinical Notes](https://hl7.org/fhir/us/core/clinical-notes.html)",
+      "requirement": "Server **MAY**deploy and support ... the following US Core interaction: [Clinical Notes](https://hl7.org/fhir/us/core/clinical-notes.html)",
       "_reference": [
         {
           "extension": [
@@ -128,7 +128,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server may deploy and support ... the following US Core interaction: [Medication List](https://hl7.org/fhir/us/core/medication-list.html)",
+      "requirement": "Server **MAY**deploy and support ... the following US Core interaction: [Medication List](https://hl7.org/fhir/us/core/medication-list.html)",
       "_reference": [
         {
           "extension": [
@@ -149,7 +149,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server may deploy and support ... the following US Core interaction: [Basic Provenance](https://hl7.org/fhir/us/core/basic-provenance.html)",
+      "requirement": "Server **MAY**deploy and support ... the following US Core interaction: [Basic Provenance](https://hl7.org/fhir/us/core/basic-provenance.html)",
       "_reference": [
         {
           "extension": [
@@ -170,7 +170,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server may deploy and support ... the following US Core interaction: [Screening and Assessments](https://hl7.org/fhir/us/core/screening-and-assessments.html)",
+      "requirement": "Server **MAY**deploy and support ... the following US Core interaction: [Screening and Assessments](https://hl7.org/fhir/us/core/screening-and-assessments.html)",
       "_reference": [
         {
           "extension": [
@@ -500,7 +500,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Alternate codes may be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called \"additional codings\".",
+      "requirement": "Alternate codes **MAY**be provided in addition to the standard codes defined in required or extensible ValueSets. These alternate codes are called \"additional codings\".",
       "_reference": [
         {
           "extension": [
@@ -520,7 +520,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "[The additional codings] may be equivalent to or narrower in meaning than the standard concept code.",
+      "requirement": "[The additional codings] **MAY**be equivalent to or narrower in meaning than the standard concept code.",
       "_reference": [
         {
           "extension": [
@@ -993,7 +993,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "For searches where the Client does not supply a status parameter, an implementation’s business rules may override the FHIR RESTful search expectations and require a status parameter to be provided",
+      "requirement": "For searches where the Client does not supply a status parameter, an implementation’s business rules **MAY**override the FHIR RESTful search expectations and require a status parameter to be provided",
       "_reference": [
         {
           "extension": [
@@ -1508,7 +1508,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "The U.S. Core Data for Interoperability (USCDI) may require additional elements, [which is a requirement for certification in the ONC IT Health Certification program, but not a requirement of US Core conformance for US Core Responders]",
+      "requirement": "The U.S. Core Data for Interoperability (USCDI) **MAY**require additional elements, [which is a requirement for certification in the ONC IT Health Certification program, but not a requirement of US Core conformance for US Core Responders]",
       "_reference": [
         {
           "extension": [
@@ -2644,7 +2644,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request.... The Server **SHALL** list all the required US Core Scopes for the US Core Profiles they support in the scopes_supported array",
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY**request.... The Server **SHALL** list all the required US Core Scopes for the US Core Profiles they support in the scopes_supported array",
       "_reference": [
         {
           "extension": [
@@ -2664,7 +2664,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request. The Server [MAY support] additional scopes (so Clients should not consider … [the required scopes] an exhaustive list).",
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY**request. The Server [MAY support] additional scopes (so Clients **SHOULD**not consider … [the required scopes] an exhaustive list).",
       "_reference": [
         {
           "extension": [
@@ -2684,7 +2684,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request. Servers **MAY**  limit Clients’ scopes to those configured at registration time.",
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY**request. Servers **MAY**  limit Clients’ scopes to those configured at registration time.",
       "_reference": [
         {
           "extension": [
@@ -2704,7 +2704,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request. … Servers **SHALL** allow users to select a subset of the requested scopes at the approval time.",
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY**request. … Servers **SHALL** allow users to select a subset of the requested scopes at the approval time.",
       "_reference": [
         {
           "extension": [
@@ -2928,7 +2928,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "[If a] US Core Profiles binds the Quantity.code element in the Quantity datatype to the [UCUM](http://unitsofmeasure.org/) code system, [then] systems should also use UCUM for the optional valueRange and valueRatio datatypes (which are complex datatypes with Quantity elements)",
+      "requirement": "[If a] US Core Profiles binds the Quantity.code element in the Quantity datatype to the [UCUM](http://unitsofmeasure.org/) code system, [then] systems **SHOULD**also use UCUM for the optional valueRange and valueRatio datatypes (which are complex datatypes with Quantity elements)",
       "_reference": [
         {
           "extension": [
@@ -3115,7 +3115,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "If the FHIR Server has updated the resource status to entered-in-error:\n...\nFor provider-facing applications, the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.",
+      "requirement": "If the FHIR Server has updated the resource status to entered-in-error:\n...\nFor provider-facing applications, the content **MAY**be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.",
       "_reference": [
         {
           "extension": [
@@ -3779,7 +3779,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Systems [Servers] may extend their capabilities [around types of clinical notes] to the complete US Core DocumentReference Type Value Set.",
+      "requirement": "Systems [Servers] **MAY**extend their capabilities [around types of clinical notes] to the complete US Core DocumentReference Type Value Set.",
       "_reference": [
         {
           "extension": [
@@ -3839,7 +3839,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Systems [Servers] may support other [DiagnosticReport] categories as well.",
+      "requirement": "Systems [Servers] **MAY**support other [DiagnosticReport] categories as well.",
       "_reference": [
         {
           "extension": [
@@ -4293,7 +4293,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "When referencing the Medication resource, the resource may be included in the returned bundle, as an external resource, or as a [contained](http://hl7.org/fhir/R4/references.html#contained) resource if it can’t stand alone. … The Server application **MAY** choose any combination of these methods",
+      "requirement": "When referencing the Medication resource, the resource **MAY**be included in the returned bundle, as an external resource, or as a [contained](http://hl7.org/fhir/R4/references.html#contained) resource if it can’t stand alone. … The Server application **MAY** choose any combination of these methods",
       "_reference": [
         {
           "extension": [
@@ -4515,7 +4515,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "To provide a list of a patient’s medications, it may be necessary to “de-duplicate” them. The de-duplication activity **MAY** be  supplied by the Server",
+      "requirement": "To provide a list of a patient’s medications, it **MAY**be necessary to “de-duplicate” them. The de-duplication activity **MAY** be  supplied by the Server",
       "_reference": [
         {
           "extension": [
@@ -4756,7 +4756,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation [with the] exception [of]\nMedicationStatement may be deprecated, and the data **SHOULD** be mapped to MedicationRequest.",
+      "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation [with the] exception [of]\nMedicationStatement **MAY**be deprecated, and the data **SHOULD** be mapped to MedicationRequest.",
       "_reference": [
         {
           "extension": [
@@ -4941,7 +4941,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Profile Specific Implementation Guidance:\n\nNo Known Allergies may be represented using the US Core-AllergyIntolerance profile",
+      "requirement": "Profile Specific Implementation Guidance:\n\nNo Known Allergies **MAY**be represented using the US Core-AllergyIntolerance profile",
       "_reference": [
         {
           "extension": [
@@ -5316,7 +5316,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Implementers should refer to the [PHDSC Payer Type Committee User’s Guide](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) for the Source of Payment Typology when selecting codes.",
+      "requirement": "Implementers **SHOULD**refer to the [PHDSC Payer Type Committee User’s Guide](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) for the Source of Payment Typology when selecting codes.",
       "_reference": [
         {
           "extension": [
@@ -5397,7 +5397,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "If Insurers issue unique member IDs for dependents, then the memberId Coverage.identifier should be used [with the unique dependent ID] instead of Coverage.dependent to uniquely refer to the dependent with respect to their insurance.",
+      "requirement": "If Insurers issue unique member IDs for dependents, then the memberId Coverage.identifier **SHOULD**be used [with the unique dependent ID] instead of Coverage.dependent to uniquely refer to the dependent with respect to their insurance.",
       "_reference": [
         {
           "extension": [
@@ -5790,7 +5790,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Other [diagnostic report] categories may be supported [when using US Core DiagnosticReport Profile for Report and Note Exchange]",
+      "requirement": "Other [diagnostic report] categories **MAY**be supported [when using US Core DiagnosticReport Profile for Report and Note Exchange]",
       "_reference": [
         {
           "extension": [
@@ -5810,7 +5810,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "[L]inkages between specific LOINC codes and the LP-type codes may be used as guidance [for a Server's categorization of diagnostic reports]",
+      "requirement": "[L]inkages between specific LOINC codes and the LP-type codes **MAY**be used as guidance [for a Server's categorization of diagnostic reports]",
       "_reference": [
         {
           "extension": [
@@ -5851,7 +5851,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "The DocumentReference.type binding may extend to the whole [US Core DocumentReference Type Value Set](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-documentreference-type.html)",
+      "requirement": "The DocumentReference.type binding **MAY**extend to the whole [US Core DocumentReference Type Value Set](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-documentreference-type.html)",
       "_reference": [
         {
           "extension": [
@@ -5871,7 +5871,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "[DocumentReference.type may also use] other category schemes such as the LOINC-based [Document Class Value Set](http://hl7.org/fhir/R4/valueset-document-classcodes.html) and [IHE XDSclassCode](https://wiki.ihe.net/index.php/XDS_classCode_Metadata_Coding_System)",
+      "requirement": "[DocumentReference.type **MAY**also use] other category schemes such as the LOINC-based [Document Class Value Set](http://hl7.org/fhir/R4/valueset-document-classcodes.html) and [IHE XDSclassCode](https://wiki.ihe.net/index.php/XDS_classCode_Metadata_Coding_System)",
       "_reference": [
         {
           "extension": [
@@ -6189,7 +6189,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "[Servers shall] use the status code: not-done to represent that an immunization was not given.",
+      "requirement": "[Servers **SHALL**] use the status code: not-done to represent that an immunization was not given.",
       "_reference": [
         {
           "extension": [
@@ -6250,7 +6250,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "When referencing a Medication resource in .medicationReference, the resource may be [contained](http://hl7.org/fhir/R4/references.html#contained)",
+      "requirement": "When referencing a Medication resource in .medicationReference, the resource **MAY**be [contained](http://hl7.org/fhir/R4/references.html#contained)",
       "_reference": [
         {
           "extension": [
@@ -6279,7 +6279,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "When referencing a Medication resource in .medicationReference, the resource may be an external resource",
+      "requirement": "When referencing a Medication resource in .medicationReference, the resource **MAY**be an external resource",
       "_reference": [
         {
           "extension": [
@@ -7094,7 +7094,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "[US Core] treatment intervention preferences expressed by a patient may be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.",
+      "requirement": "[US Core] treatment intervention preferences expressed by a patient **MAY**be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.",
       "_reference": [
         {
           "extension": [
@@ -7236,7 +7236,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Inspired oxygen therapy may be represented with [component](http://hl7.org/fhir/R4/observation.html#gr-comp) observations when measured at the same time as the pulse oximetry measurements [in the US Core Pulse Oximetry profile]",
+      "requirement": "Inspired oxygen therapy **MAY**be represented with [component](http://hl7.org/fhir/R4/observation.html#gr-comp) observations when measured at the same time as the pulse oximetry measurements [in the US Core Pulse Oximetry profile]",
       "_reference": [
         {
           "extension": [
@@ -7278,7 +7278,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "A pulse oximetry reading without inspired oxygen component observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component](http://hl7.org/fhir/R4/observation.html#gr-comp) observations **SHOULD** be used [when using the US Core Pulse Oximetry profile.]",
+      "requirement": "A pulse oximetry reading without inspired oxygen component observations **MAY**imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component](http://hl7.org/fhir/R4/observation.html#gr-comp) observations **SHOULD** be used [when using the US Core Pulse Oximetry profile.]",
       "_reference": [
         {
           "extension": [
@@ -8392,46 +8392,6 @@
       ]
     },
     {
-      "key": "CONF-0831",
-      "reference": [
-        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "[The Server **SHALL** support the] category of \"problem-list-item\"",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0831"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "key": "CONF-0832",
-      "reference": [
-        "StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance"
-      ],
-      "conformance": [
-        "SHALL"
-      ],
-      "requirement": "[The Server **SHALL** support the] category of \"health-concern\"",
-      "_reference": [
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
-              "valueUrl": "StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0832"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "key": "CONF-0836",
       "reference": [
         "StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance"
@@ -8501,7 +8461,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": " If the referenced document or file [referenced by `DocumentReference.content.attachment.url`]  is hosted on a Server outside the FHIR Server, it should be securely accessible using the same authorization credentials that were used to access the FHIR Server. This reduces complexity for the Client and improves the user experience.",
+      "requirement": " If the referenced document or file [referenced by `DocumentReference.content.attachment.url`]  is hosted on a Server outside the FHIR Server, it **SHOULD**be securely accessible using the same authorization credentials that were used to access the FHIR Server. This reduces complexity for the Client and improves the user experience.",
       "_reference": [
         {
           "extension": [

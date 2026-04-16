@@ -89,14 +89,6 @@ differential:
       requirements: Used for filtering condition
       mustSupport: false
       binding:
-
-# #=============== minimum binding extension here =================
-#       extension:
-#       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet
-#         valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
-
-#================================================================
-
         strength: required
         description: Note that other codes are permitted in other slices, see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
 #=============== new valueset here that id the ame as simple =================
@@ -106,15 +98,15 @@ differential:
           - url: http://hl7.org/fhir/tools/StructureDefinition/additional-binding
             extension:
               - url: key
-                valueId: us-core-screening-assessment-observation-category
+                valueId: us-core-screening-assessment-condition-category
               - url: purpose
                 valueCode: minimum
               - url: valueSet
-                valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category
+                valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
               - url: documentation
-                valueMarkdown: codes that any conformant certifying system SHALL support to help identify the type of USCDI Health Status Assessment data class' data elements being reported.
+                valueMarkdown: Certifying Systems must support, at a minimum, a category of "sdoh" and **SHOULD** support the other US Core Simple Observation Category codes.
               - url: shortDoco
-                valueString: USCDI Health Status/Assessments Data Elements
+                valueString: Certifying Systems must support a category of "sdoh".
 #===============================================================
 #======== US Core 8 change to add'l USCDI ==========
 # ===========================================================

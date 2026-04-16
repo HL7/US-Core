@@ -114,6 +114,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 64. **Applied:**   Update “Common substances for allergy and intolerance documentation including refutations” ValueSet [FHIR-56095](https://jira.hl7.org/browse/FHIR-56095) See Changes [Here](StructureDefinition-us-core-allergyintolerance.html)
 65. **Applied:**  Substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](security.html#patient-privacy-and-security)
 66. **Applied:**  Non-substantive (Correction) Change "ASTP" to "ONC" to reflect 2026 HHS realignment [FHIR-56253](https://jira.hl7.org/browse/FHIR-56253) For example, see Changes [Here](index.html#introduction)
+67. **Applied:**  Substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56253) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 
 ##### Pending
 The application of the following trackers are pending and will not be completed before publication.

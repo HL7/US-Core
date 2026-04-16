@@ -13,8 +13,6 @@ compose:
     - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
       concept:
         - code: sdoh
-
-
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 3

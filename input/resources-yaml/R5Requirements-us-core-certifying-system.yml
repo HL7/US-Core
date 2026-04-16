@@ -259,17 +259,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: must-support.html#CONF-0814
-  - key: CONF-0833
-    reference:
-      - StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance
-    conformance:
-      - SHALL
-    conditionality: true
-    requirement: Certifying Systems **SHALL** support, a category of "sdoh"
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0833
   - key: CONF-0834
     reference:
       - StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance
@@ -280,16 +269,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0834
-  - key: CONF-0835
-    reference:
-      - StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance
-    conformance:
-      - MAY
-    requirement: Certifying Systems ... **MAY** support other categories
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-condition-problems-health-concerns.html#CONF-0835
   - key: CONF-0846
     reference:
       - StructureDefinition-us-core-observation-screening-assessment.html#profile-specific-implementation-guidance

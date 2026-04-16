@@ -43,7 +43,8 @@ This section provides detailed implementation guidance for the US Core Profile t
   - When using ICD codes, only *non-header* ICD-10-CM codes **SHOULD** be used.<sup>[§][CONF-0323]</sup>
   - The [US Core Condition Codes] value set supports ICD-9-CM for historical purposes only.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
-* <sup>3</sup>The category of "problem-list-item" or "health-concern" is required <sup>[§][CONF-0831],[§][CONF-0832]</sup>, and, at a minimum, Certifying Systems **SHALL** support, a category of "sdoh",<sup>[§][CONF-0833]</sup> **SHOULD** support the other [US Core Simple Observation Category] codes,<sup>[§][CONF-0834]</sup> and **MAY** support other categories.<sup>[§][CONF-0835]</sup>
+* <sup>3</sup>The "problem-list-item" or "health-concern" category is required.
+  * Certifying Systems must support, at a minimum, a category of "sdoh" and **SHOULD** support the other [US Core Simple Observation Category] codes.<sup>[§][CONF-0834]</sup>
   * If the category is "problem-list-item", `Condition.clinicalStatus` **SHOULD** be present.<sup>[§][CONF-0331]</sup>
 * <sup>2</sup>The assertedDate Extension represents the date of diagnosis. The `Condition.onsetDateTime` represents the date of onset, or the date or estimated date when signs or symptoms of a condition began. The `Condition.abatementdateTime` is the date of resolution or remission. And the `Condition.recordedDate` is the date the record was created in the system. Since users don't always capture these four values, they will not always be available for Servers to share with Clients.
 - <sup>2</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:

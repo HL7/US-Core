@@ -47,7 +47,7 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: receivers SHOULD accept instances that ... contain unexpected data elements  [[definition](http://hl7.org/fhir/R4/conformance-rules.html#isModifier)]
+    requirement: receivers **SHOULD** accept instances that ... contain unexpected data elements  [[definition](http://hl7.org/fhir/R4/conformance-rules.html#isModifier)]
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -58,7 +58,7 @@ statement:
     conformance:
       - SHOULD-NOT
     conditionality: true
-    requirement: receivers SHOULD [NOT] accept instances that ... contain unexpected data elements … when those elements are modifier elements [[definition](http://hl7.org/fhir/R4/conformance-rules.html#isModifier)]
+    requirement: receivers **SHOULD NOT** accept instances that ... contain unexpected data elements … when those elements are modifier elements [[definition](http://hl7.org/fhir/R4/conformance-rules.html#isModifier)]
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -239,7 +239,7 @@ statement:
       - must-support.html#must-support---complex-elements
     conformance:
       - MAY
-    requirement: The U.S. Core Data for Interoperability (USCDI) may require additional elements, [which is a requirement for certification in the ONC IT Health Certification program, but not a requirement of US Core conformance for US Core Requestors]
+    requirement: The U.S. Core Data for Interoperability (USCDI) **MAY**require additional elements, [which is a requirement for certification in the ONC IT Health Certification program, but not a requirement of US Core conformance for US Core Requestors]
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -336,7 +336,7 @@ statement:
       - scopes.html#smart-scopes
     conformance:
       - SHOULD
-    requirement: US Core Clients should follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) and access only the necessary resources.
+    requirement: US Core Clients **SHOULD**follow the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) and access only the necessary resources.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -346,7 +346,7 @@ statement:
       - scopes.html#additional-us-core-requirements
     conformance:
       - SHOULD
-    requirement: 'US Core requires ... additional metadata [to be available through the Server''s [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client may request. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.'
+    requirement: 'US Core requires ... additional metadata [to be available through the Server''s [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY**request. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -367,7 +367,7 @@ statement:
       - clinical-notes.html#support-requirements
     conformance:
       - MAY
-    requirement: Systems [Clients] may support other [DiagnosticReport] categories as well.
+    requirement: Systems [Clients] **MAY**support other [DiagnosticReport] categories as well.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -398,7 +398,7 @@ statement:
       - medication-list.html#de-duplication-of-data
     conformance:
       - SHOULD
-    requirement: To provide a list of a patient’s medications, it may be necessary to “de-duplicate” them. The de-duplication activity ... **SHOULD** be provided by the Client.
+    requirement: To provide a list of a patient’s medications, it **MAY**be necessary to “de-duplicate” them. The de-duplication activity ... **SHOULD** be provided by the Client.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -441,7 +441,7 @@ statement:
       - SHOULD
     requirement: |-
       The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation [with the] exception [of]
-      MedicationStatement may be deprecated, and the data **SHOULD** be mapped to MedicationRequest.
+      MedicationStatement **MAY**be deprecated, and the data **SHOULD** be mapped to MedicationRequest.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -751,7 +751,7 @@ statement:
       - StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance
     conformance:
       - MAY
-    requirement: Clients may request Specimen resources be included with the Observation or DiagnosticReport resource query.
+    requirement: Clients **MAY**request Specimen resources be included with the Observation or DiagnosticReport resource query.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -924,7 +924,7 @@ statement:
     requirement: |-
       For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:
 
-      [The US Core Requesters processing of the resource instances] may result in a determination not to use the resource if the resource content does not meet business requirements.
+      [The US Core Requesters processing of the resource instances] **MAY**result in a determination not to use the resource if the resource content does not meet business requirements.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
