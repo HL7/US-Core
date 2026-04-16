@@ -320,7 +320,7 @@ The [FHIR RESTful Search API] requires that Servers that support search **SHALL*
 
 ### Search for Servers Requiring Status
 
-Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this, they **SHALL** follow the guidelines here.<sup>[§][CONF-0063],[§][CONF-0064]</sup>
+Servers **SHOULD** support a query for resources *without* requiring a status parameter.<sup>[§][CONF-0063]</sup>  However, if business requirements prohibit this, they **SHALL** follow the guidelines here.<sup>[§][CONF-0064]</sup>
 {: .highlight-note}
 
 For searches where the Client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.<sup>[§][CONF-0065]</sup>  These systems are allowed to reject such requests as follows:

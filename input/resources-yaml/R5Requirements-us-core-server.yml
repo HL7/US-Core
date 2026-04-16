@@ -496,7 +496,7 @@ statement:
       - general-requirements.html#search-for-Servers-requiring-status
     conformance:
       - SHOULD
-    requirement: Servers are strongly encouraged to support a query for resources without requiring a status parameter.
+    requirement: Servers **SHOULD** support a query for resources without requiring a status parameter.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -791,16 +791,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: must-support.html#CONF-0101
-  - key: CONF-0103
-    reference:
-      - must-support.html#must-support---complex-elements
-    conformance:
-      - MAY
-    requirement: The U.S. Core Data for Interoperability (USCDI) **MAY**require additional elements, [which is a requirement for certification in the ONC IT Health Certification program, but not a requirement of US Core conformance for US Core Responders]
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: must-support.html#CONF-0103
   - key: CONF-0105
     reference:
       - must-support.html#must-support---resource-references
@@ -2348,16 +2338,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: clinical-notes.html#CONF-0245
-  - key: CONF-0246
-    reference:
-      - medication-list.html#background-on-the-fhir-medications-resources
-    conformance:
-      - MAY
-    requirement: '[The [MedicationAdministration](http://hl7.org/fhir/R4/medicationadministration.html) and [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html)] medication resources are not profiled by US Core, and systems that support US Core are permitted to use them'
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: medication-list.html#CONF-0246
   - key: CONF-0247
     reference:
       - medication-list.html#options-for-representing-medication
@@ -2584,7 +2564,7 @@ statement:
       - SHOULD
     requirement: |-
       For API developers using US Core, it’s important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:
-      Observations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions ... anything that meets one of the preceding criteria must be surfaced as an Observation.
+      Observations represent specific point-in-time facts that need to be searched, trended, the subject of statistical analysis, and directly referenced in support of other actions ... anything that meets one of the preceding criteria **SHOULD** be surfaced as an Observation.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -2957,7 +2937,7 @@ statement:
       - StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance
     conformance:
       - SHOULD
-    requirement: 'To differentiate Medicare Parts A, B, C, and D systems can use the following codes [when sending Coverage.type]: [For] Part A and B [use] 121 (Medicare Fee For Service)'
+    requirement: 'To differentiate Medicare Parts A, B, C, and D systems **SHOULD** use the following codes [when sending Coverage.type]: [For] Part A and B [use] 121 (Medicare Fee For Service)'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -2967,7 +2947,7 @@ statement:
       - StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance
     conformance:
       - SHOULD
-    requirement: 'To differentiate Medicare Parts A, B, C, and D systems can use the following codes: [For] Part C (Medicare Advantage Plan) [use] 111 (Medicare HMO), 112 (Medicare PPO), 113 (Medicare POS)'
+    requirement: 'To differentiate Medicare Parts A, B, C, and D systems **SHOULD** use the following codes: [For] Part C (Medicare Advantage Plan) [use] 111 (Medicare HMO), 112 (Medicare PPO), 113 (Medicare POS)'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -2977,7 +2957,7 @@ statement:
       - StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance
     conformance:
       - SHOULD
-    requirement: 'To differentiate Medicare Parts A, B, C, and D systems can use the following codes: [For] Part D [use] 122 (Medicare Drug Benefit)'
+    requirement: 'To differentiate Medicare Parts A, B, C, and D systems **SHOULD** use the following codes: [For] Part D [use] 122 (Medicare Drug Benefit)'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -2998,7 +2978,7 @@ statement:
       - StructureDefinition-us-core-device.html#profile-specific-implementation-guidance
     conformance:
       - SHOULD
-    requirement: Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the [unique device ID] UDI
+    requirement: Implementers **SHOULD** use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the [unique device ID] UDI
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink

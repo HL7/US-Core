@@ -34,6 +34,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 - <sup>1</sup>Although both `Specimen.identifier` and `Specimen.accessionIdentifier` are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0524]</sup>
     - The Client application **SHALL** support both elements.<sup>[§][CONF-0525]</sup>
 - <sup>3</sup>The specimen condition is used by the laboratory to determine the acceptability of a specimen for the ordered test. An individual specimen condition may be acceptable for one test and not for another. The specimen condition is typically provided when the specimen does not meet the laboratory's criteria for acceptability, whether the test was performed or not. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient names. This element may include information about the contents of the container, the container, and the label.
-- in addition to Specimen search criteria, Clients may request Specimen resources be included with the Observation or DiagnosticReport resource query.<sup>[§][CONF-0526]</sup> An example query is provided in the [Notes](#notes) section below.
+- In addition to Specimen search criteria, Clients can request Specimen resources be included with the Observation or DiagnosticReport resource query. An example query is provided in the [Notes](#notes) section below.
 
 {% include link-list.md %}

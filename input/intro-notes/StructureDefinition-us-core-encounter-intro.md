@@ -49,7 +49,8 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 {% include encounter-location.md %}
 
-- <sup>2</sup>Servers can use the US Core Interpreter Needed Extension on this profile or the [US Core Patient Profile] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one.<sup>[§][CONF-0840]</sup> The certifying Client application **SHALL** support the extension on both profiles.<sup>[§][CONF-0886]</sup>
+- <sup>2</sup>Servers **SHOULD** and Certifying Systems **SHALL** use the [US Core Interpreter Needed Extension] on this profile or the [US Core Patient Profile] to communicate whether a patient needs an interpreter.<sup>[§][CONF-0851],[§][CONF-0910]</sup>
+  -  Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, Certifying Systems are not required to support the extension on both profiles, but **SHALL** support the extension on at least one.<sup>[§][CONF-0840]</sup> The certifying Client application **SHALL** support the extension on both profiles.<sup>[§][CONF-0886]</sup>
   - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.<sup>[§][CONF-0855]</sup>
 
 - <sup>1</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:

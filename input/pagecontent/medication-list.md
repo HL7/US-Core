@@ -13,7 +13,7 @@ The FHIR specification defines five FHIR pharmacy resources concerned with the o
   - [MedicationRequest]\: An order or request for the supply of the medication and the instructions for administration of the medication to a patient, and patient reported medications.
   - [MedicationDispense]\: Provision a medication with regards to dispensing in response to a prescription
 
-The following two medication resources are not profiled by US Core, and systems that support US Core are permitted to use them.<sup>[§][CONF-0246]</sup>  They are introduced here to provide background and define the relationships between the pharmacy resources. **However, as documented in the section below, the US Core Guidance for accessing a patient's medications does not use them:**
+The following two medication resources are not profiled by US Core.  They are introduced here to provide background and define the relationships between the pharmacy resources. **However, as documented in the section below, the US Core Guidance for accessing a patient's medications does not use them:**
 
   - [MedicationAdministration]
   - [MedicationStatement]
@@ -56,7 +56,7 @@ This IG focuses on access to a patient's medications. Therefore, it is essential
 1. A MedicationRequest resource query **SHALL** be all that is required to access "all medications" or "all active medications" for a patient. (In other words, no other medication resource type needs to be fetched)<sup>[§][CONF-0252]</sup>
 1. The query result **SHALL** include all MedicationRequest resources with a `MedicationRequest.intent` = "order" representing authorized medication orders directly derived from the system's orders.<sup>[§][CONF-0253]</sup>
 1. The query result **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with a `MedicationRequest.intent` = "plan" representing reported medications.<sup>[§][CONF-0254]</sup>
-1. Servers **SHALL** use the `MedicationRequest.reported[x]` element to indicate that the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record.<sup>[§][CONF-0256]</sup> It may also indicate the source of the report.<sup>[§][CONF-0257]</sup>
+1. Servers **SHALL** use the `MedicationRequest.reported[x]` element to indicate that the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record.<sup>[§][CONF-0256]</sup> It could also indicate the source of the report.
 1. When recording "self-prescribed" medication, Servers **SHOULD** use the `MedicationRequest.requester` element to indicate the Patient or RelatedPerson is the prescriber.<sup>[§][CONF-0258]</sup>
 1. Servers **SHOULD** support the encounter search parameter.<sup>[§][CONF-0259]</sup> Searching by encounter will return all medications ordered during that encounter, including medications administered in the hospital and prescribed or discharge medications intended to be taken at home.<sup>[§][CONF-0260]</sup>
 1. Servers **MAY** support the search parameters `category` and `encounter`. This search will return all medications ordered during an encounter for a given `MedicationRequest.category` such as "inpatient".<sup>[§][CONF-0262]</sup>

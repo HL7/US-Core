@@ -234,16 +234,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: must-support.html#CONF-0102
-  - key: CONF-0104
-    reference:
-      - must-support.html#must-support---complex-elements
-    conformance:
-      - MAY
-    requirement: The U.S. Core Data for Interoperability (USCDI) **MAY**require additional elements, [which is a requirement for certification in the ONC IT Health Certification program, but not a requirement of US Core conformance for US Core Requestors]
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: must-support.html#CONF-0104
   - key: CONF-0106
     reference:
       - must-support.html#must-support---resource-references

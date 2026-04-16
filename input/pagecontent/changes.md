@@ -114,7 +114,27 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 64. **Applied:**   Update “Common substances for allergy and intolerance documentation including refutations” ValueSet [FHIR-56095](https://jira.hl7.org/browse/FHIR-56095) See Changes [Here](StructureDefinition-us-core-allergyintolerance.html)
 65. **Applied:**  Substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](security.html#patient-privacy-and-security)
 66. **Applied:**  Non-substantive (Correction) Change "ASTP" to "ONC" to reflect 2026 HHS realignment [FHIR-56253](https://jira.hl7.org/browse/FHIR-56253) For example, see Changes [Here](index.html#introduction)
-67. **Applied:**  Substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56253) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
+67. **Applied:**  Substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56241) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
+68. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "can" to "MAY" and remove sentence [FHIR-56217](https://jira.hl7.org/browse/FHIR-56217) See Changes [Here](must-support.html#must-support---complex-elements)
+69. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and from requirements table [FHIR-56221](https://jira.hl7.org/browse/FHIR-56221) See Changes [Here](medication-list.html#background-on-the-fhir-medications-resources)
+69. **Applied:**  Non-substantive (Clarification) Requirements QA:  Change "encouraged", etc to SHOULD [FHIR-56244](https://jira.hl7.org/browse/FHIR-56244) See Changes:
+    - [General Requirements](general-requirements.html#search-for-Servers-requiring-status)
+    - [US Core Device Profile](StructureDefinition-us-core-device.html#udi--specific-implementation-guidance)
+    - [Screening and Assessments](screening-and-assessments.html#choosing-between-questionnaireresponse-and-observation)
+    - [US Core Coverage Profile](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
+69. **Applied:**  Non-substantive (Clarification) Requirements QA: replace text [FHIR-56246](https://jira.hl7.org/browse/FHIR-56246) See Changes [Here](must-support.html#must-support---complex-elements)
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and from requirements table [FHIR-56260](https://jira.hl7.org/browse/FHIR-56260) See Changes [Here](StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance)
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: change text from "may" or "MAY" to "can" or "might" and remove from requirements table [FHIR-56271](https://jira.hl7.org/browse/FHIR-56271) See Changes:
+    - [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
+    - [US Core Treatment Intervention Preference Profile](StructureDefinition-us-core-treatment-intervention-preference.html#profile-specific-implementation-guidance)
+    - [US Core Care Experience Preference Profile](StructureDefinition-us-core-care-experience-preference.html#profile-specific-implementation-guidance)
+    - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance)
+    - [Must Support](must-support.html#must-support-elements)
+    - [Medication List](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: change "Servers can use" to "SHALL/SHOULD" [FHIR-56272](https://jira.hl7.org/browse/FHIR-56272) See Changes
+    - [US Core Patient Profile](StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
+    - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html#profile-specific-implementation-guidance)
+
 
 ##### Pending
 The application of the following trackers are pending and will not be completed before publication.

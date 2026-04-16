@@ -62,7 +62,7 @@ This section provides detailed implementation guidance for the US Core Profile t
     |distinct identifier (UDI-PI element)|`Device.distinctIdentifier`|
     {:.grid}
 
-  -  Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:<sup>[§][CONF-0341]</sup>
+  -  Implementers **SHOULD** use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:<sup>[§][CONF-0341]</sup>
       - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID, including safety information and UDI. It includes APIs to query and download a complete list of medical devices registered in GUDID.
       - The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 

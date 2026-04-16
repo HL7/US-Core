@@ -13,7 +13,7 @@ The Profile elements consist of *Mandatory*, *Must Support*, and *Additional USC
 For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [US Core Roadmap] page for writing and updating US Core Profiles):
 
 * US Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server CapabilityStatement].<sup>[§][CONF-0075]</sup>
-* US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail.<sup>[§][CONF-0076]</sup> This processing may result in a determination not to use the resource if the resource content does not meet business requirements.<sup>[§][CONF-0800]</sup>
+* US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail.<sup>[§][CONF-0076]</sup> This processing might result in a determination not to use the resource if the resource content does not meet business requirements.
 * When information on a particular data element is not present, and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.<sup>[§][CONF-0078]</sup>
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.<sup>[§][CONF-0079]</sup>
 * When information on a particular data element is missing or suppressed, refer to the guidance for [Missing Data] and [Suppressed Data]. In cases where information on a specific data element is missing, *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.<sup>[§][CONF-0080]</sup> This is done by following the same methodology outlined in the [Missing Data] section but using the appropriate reason code instead of `unknown`.<sup>[§][CONF-0081]</sup>
@@ -168,7 +168,7 @@ For example, the [US Core Patient Profile] `name` element is labeled *Must Suppo
 
 {% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
-On the other hand, if any sub-element is marked as *Must Support* or *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent.<sup>[§][CONF-0095]</sup> However, if the parent element is represented in the structure, Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** support the sub-elements labeled as *Additional USCDI*.<sup>[§][CONF-0096],[§][CONF-0805]</sup>
+On the other hand, if any sub-element is marked as *Must Support* or *Additional USCDI* and the parent element is not, there is *no expectation* that you must support the parent.<sup>[§][CONF-0095]</sup> However, if the parent element is present in an instance, Servers **SHALL** support the sub-element(s) marked as *Must Support* and Certifying System  **SHALL** support the sub-elements labeled as *Additional USCDI*.<sup>[§][CONF-0096],[§][CONF-0805]</sup>
 
 For example, the [US Core Patient Profile] `telecom` element is not labeled *Must Support*, but `telecom.system`, `telecom.value`, `telecom.use` are. When claiming conformance to this profile:
 
@@ -178,8 +178,7 @@ For example, the [US Core Patient Profile] `telecom` element is not labeled *Mus
 {% include img.html img="Must_Support_Patient_telecom.png" caption="Figure 8: US Core Patient.telecom" %}
 
 
-Systems can support the other elements, but this is not a requirement of US Core.<sup>[§][CONF-0101],[§][CONF-0102]</sup> The [U.S. Core Data for Interoperability (USCDI)] may require additional elements such as `Patient.suffix`.<sup>[§][CONF-0103],[§][CONF-0104]</sup>
-
+Systems **MAY** support the other elements, but this is not a requirement of US Core.<sup>[§][CONF-0101],[§][CONF-0102]</sup>
 #### Must Support - Resource References
 
 This section documents additional *Must Support* requirements for the [Reference] type element.

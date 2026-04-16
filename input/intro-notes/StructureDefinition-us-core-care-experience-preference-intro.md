@@ -34,7 +34,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- Care experience preferences expressed by a patient may be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.
+- Care experience preferences expressed by a patient might be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.
 {% include conditional-goals-guidance.md %}
 {% include additional-codings.md example1=', for example, the more specific LOINC, "81364-2 (Religious or cultural beliefs [Reported])"  '%}
   - See the existing [Care Experience Preferences at End of Life Grouping] for more specific concepts representing an individual's care experience preferences
