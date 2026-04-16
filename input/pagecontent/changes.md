@@ -118,7 +118,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 68. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "can" to "MAY" and remove sentence [FHIR-56217](https://jira.hl7.org/browse/FHIR-56217) See Changes [Here](must-support.html#must-support---complex-elements)
 69. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and from requirements table [FHIR-56221](https://jira.hl7.org/browse/FHIR-56221) See Changes [Here](medication-list.html#background-on-the-fhir-medications-resources)
 69. **Applied:**  Non-substantive (Clarification) Requirements QA:  Change "encouraged", etc to SHOULD [FHIR-56244](https://jira.hl7.org/browse/FHIR-56244) See Changes:
-    - [General Requirements](general-requirements.html#search-for-Servers-requiring-status)
+    - [General Requirements](general-requirements.html#search-for-servers-requiring-status)
     - [US Core Device Profile](StructureDefinition-us-core-device.html#udi--specific-implementation-guidance)
     - [Screening and Assessments](screening-and-assessments.html#choosing-between-questionnaireresponse-and-observation)
     - [US Core Coverage Profile](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
