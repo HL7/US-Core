@@ -116,7 +116,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 66. **Applied:**  Non-substantive (Correction) Change "ASTP" to "ONC" to reflect 2026 HHS realignment [FHIR-56253](https://jira.hl7.org/browse/FHIR-56253) For example, see Changes [Here](index.html#introduction)
 67. **Applied:**  Substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56241) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 68. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "can" to "MAY" and remove sentence [FHIR-56217](https://jira.hl7.org/browse/FHIR-56217) See Changes [Here](must-support.html#must-support---complex-elements)
-69. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and remove from requirements table [FHIR-56221](https://jira.hl7.org/browse/FHIR-56221) See Changes [Here](medication-list.html#background-on-the-fhir-medications-resources)
+69. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text from narrative and requirements table [FHIR-56221](https://jira.hl7.org/browse/FHIR-56221) See Changes [Here](medication-list.html#background-on-the-fhir-medications-resources)
 69. **Applied:**  Non-substantive (Clarification) Requirements QA:  Change "encouraged", etc to SHOULD [FHIR-56244](https://jira.hl7.org/browse/FHIR-56244) See Changes Here:
     - [General Requirements](general-requirements.html#search-for-servers-requiring-status)
     - [US Core Device Profile](StructureDefinition-us-core-device.html#udi--specific-implementation-guidance)
@@ -149,7 +149,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     - [Screening and Assessments](screening-and-assessments.html#category-codes)
     - [Clinical Notes](clinical-notes.html#support-requirements)
     - [SMART on FHIR Obligations and Capabilities](scopes.html#smart-scopes)
-71. **Applied:**  Non-substantive (Clarification) Requirements QA: Replace documentation with Requirements Tables links[FHIR-56261](https://jira.hl7.org/browse/FHIR-56261) See Changes Here:
+71. **Applied:**  Non-substantive (Clarification) Requirements QA: Replace documentation with Requirements Tables links [FHIR-56261](https://jira.hl7.org/browse/FHIR-56261) See Changes Here:
     - [US Core Client CapabilityStatement](CapabilityStatement-us-core-client.html)
     - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html)
 72. **Applied:**  Non-substantive (Correction) Fix Episode Summary Example [FHIR-56076](https://jira.hl7.org/browse/FHIR-56076) See Changes [Here](DocumentReference-episode-summary.html)

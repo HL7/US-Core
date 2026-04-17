@@ -25,7 +25,7 @@ This Guide is divided into several pages, which are listed at the top of each pa
   - [General Requirements]\: This page defines requirements common to all actors and profiles used in this guide, including how CapabilityStatements are used to claim conformance.
   - [Must Support]\: This page defines the expectations for mandatory and Must Support elements in the US Core Profiles.
   - [Security]\: This page documents the general security requirements and recommendations for actors.
-  - [Requirements Table]\: These tables lists the the US Core Server and Client requirements defined in the US Core Implementation Guide’s narrative sections.
+  - [Requirements Table]\: These tables list the US Core Server and Client requirements defined in the US Core Implementation Guide’s narrative sections.
 - [Guidance]\: The Guidance pages document best practices and how to use the profiles and transactions defined in this guide.
   - [USCDI]\: This page maps the US Core Profiles to the (USCDI) data classes and data elements.
   - [General Guidance]\: This page provides guidance, definitions, and requirements common to all actors and profiles used in this guide.
