@@ -6,7 +6,7 @@
   "title": "US Core Server CapabilityStatement",
   "status": "active",
   "experimental": false,
-  "date": "2025-12-19T19:15:48.367775-08:00",
+  "date": "2026-04-16",
   "publisher": "HL7 International - Cross-Group Projects",
   "contact": [
     {
@@ -90,7 +90,7 @@
   "rest": [
     {
       "mode": "server",
-      "documentation": "The US Core Server **SHALL**:\n\n1. Support the US Core Patient resource profile AND at least one additional resource profile from the list of US Core Profiles AND and all *Must Support* US Core Profiles and resources it references.\n     -  A summary table listing all the *Must Support* references to other US Core Profiles and FHIR resources for each US Core Profile is located in the [Must Support - Resource References](must-support.html#must-support---resource-references) section of the guide.\n1. Follow the requirements documented in the [General Requirements](general-requirements.html) and [Must Support](must-support.html) pages\n1. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scopes\n   - (Status 404): unknown resource\n1. Support JSON source formats for all US Core interactions.\n\nThe US Core Server **SHOULD**:\n\n1. Follow the guidance documented in the [General Guidance](general-guidance.html) page\n1. Support XML source formats for all US Core interactions.\n1. Identify the US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n\n\n**NOTE**: US Core SearchParameters referenced in this CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document Server and Client expectations. They specify additional expectations for the following SearchParameter elements:\n \n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nThey **SHALL NOT** be interpreted as search parameters for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters.",
+      "documentation": "The US Core Server **SHALL**:\n\n1. Support the US Core Patient resource profile AND at least one additional resource profile from the list of US Core Profiles AND and all *Must Support* US Core Profiles and resources it references.\n    -  A summary table listing all the *Must Support* references to other US Core Profiles and FHIR resources for each US Core Profile is located in the [Must Support - Resource References](must-support.html#must-support---resource-references) section of the guide.\n1. Follow the narrative requirements documented in the:\n    - [Conformance](conformance.html) pages\n    - [Guidance](guidance.html) pages\n    - Profile Specific Implementation Guidance for each Profile that the US Core Server supports.\n\n    The [Server Requirements Table](requirements.html#server-requirements) and [US Core Server Requirements Resource](Requirements-us-core-server.html) and [US Core Certifying System Requirements Resource](Requirements-us-core-certifying-system.html) list the requirements defined in these pages and sections.\n1. Return the following response classes:\n  - (Status 400): invalid parameter\n  - (Status 401/4xx): unauthorized request\n  - (Status 403): insufficient scopes\n  - (Status 404): unknown resource\n1. Support JSON source formats for all US Core interactions.\n\nThe US Core Server **SHOULD**:\n\n1. Follow the guidance documented in the [General Guidance](general-guidance.html) page\n1. Support XML source formats for all US Core interactions.\n1. Identify the US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n\n\n**NOTE**: US Core SearchParameters referenced in this CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document Server and Client expectations. They specify additional expectations for the following SearchParameter elements:\n\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nThey **SHALL NOT** be interpreted as search parameters for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters.",
       "security": {
         "description": "1. See the [General Security Considerations](security.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` \"Unauthorized\", `HTTP 403` \"Forbidden\", or `HTTP 404` \"Not Found\""
       },
@@ -377,7 +377,6 @@
               ]
             }
           ],
-          "documentation": "* Additional considerations for systems aligning with [HL7 Consolidated (C-CDA)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements:\n\n    - US Core Goal **SHOULD** be present in CarePlan.goal\n\n    - US Core Condition **SHOULD** be present in\nCarePlan.addresses\n\n    - Assessment and Plan **MAY** be included as narrative\ntext",
           "interaction": [
             {
               "extension": [
@@ -588,7 +587,6 @@
               ]
             }
           ],
-          "documentation": "* In order to access care team member's names, identifiers, locations, and contact information, the CareTeam profile supports several types of care team participants. They are represented as references to other profiles and include the following four profiles which are marked as must support:\n\n  1. US Core Practitioner Profile\n\n  1. US Core PractitionerRole Profile\n\n  1. US Core Patient Profile\n\n  1. US Core RelatedPerson Profile\n\n* Although *both* US Core Practitioner Profile and US Core PractitionerRole are must support, the server system is not required to support both types of references, but **SHALL** support *at least* one of them.\n* The client application **SHALL** support all four profile references.\n* Bacause the *US Core PractitionerRole Profile* supplies the provider's location and contact information and a reference to the Practitioner, server systems **SHOULD** reference it instead of the *US Core Practitioner Profile*.\n* Servers that support only US Core Practitioner Profile and do not support the US Core PractitionerRole Profile **SHALL** provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource.",
           "interaction": [
             {
               "extension": [
@@ -988,7 +986,6 @@
               ]
             }
           ],
-          "documentation": "* For Encounter Diagnosis use the *US Core Condition Encounter Diagnosis Profile*.\n\n  * When `Condition.category` is \"encounter-diagnosis\" the\nencounter, **SHOULD** be referenced in `Condition.encounter`.\n* For Problems and Health Concerns use the *US Core Condition Problems and Health Concerns Profile*.\n\n  * When `Condition.category` is a \"problems-list-item\", the\n`Condition.clinicalStatus **SHOULD** be present.\n\n * See the US Core General Guidance page for [Searching Using\nlastUpdated](general-guidance.html#searching-using-lastupdated). Updates to `Condition.meta.lastUpdated` **SHOULD** reflect:\n\n    * New problems and health concerns\n\n    * Changes in the clinical status or verifications status\nof problems or health concern",
           "interaction": [
             {
               "extension": [
@@ -1411,7 +1408,6 @@
               ]
             }
           ],
-          "documentation": "* Medical devices with UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`. All five UDI-PI elements defined in the UDI code may not always be present in every UDI instance. However, those UDI-PI elements present **SHALL** be represented in the corresponding *US Core Device Profile elements.\n\n\n\n   UDI may not be present in all scenarios, such as\nhistorical medical devices, patient-reported implant information, payer-reported devices, or improperly documented implants. If UDI is not present and the manufacturer or model number information is available, they **SHOULD** be included to support historical reports of medical devices as follows:\n\n   >|medical device data element|US Core Device Profile element|\n   >|---|---|\n   >|manufacturer|`Device.manufacturer`|\n   >|model|`Device.model`|",
           "interaction": [
             {
               "extension": [
@@ -1707,7 +1703,6 @@
               ]
             }
           ],
-          "documentation": "* For laboratory result reports use the *US Core DiagnosticReport Profile for Laboratory Results Reporting Profile*.\n\n  * Updates to `.meta.lastUpdated` **SHOULD** reflect:\n\n    * New laboratory reports\n\n    * Changes in the status of laboratory reports including\nevents that trigger the same status (e.g., amended → amended).\n* For imaging and non-laboratory clinical test result reports use the *US Core DiagnosticReport Profile for Report and Note Exchange Profile*.\n\n  * Diagnostic imaging results in visual images requiring\ninterpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access to the images.\n\n     * The `DiagnosticReport.media.link` element **SHOULD**\nbe used to support links to various patient-friendly content, such as jpg images of x-rays (see the DiagnosticReport Chest X-ray Report Example).\n\n     * The `DiagnosticReport.imagingStudy` element **SHOULD**\nbe used to support exchange with systems that can view DICOM (Digital Imaging and Communications in Medicine) studies, series, and SOP (Service-Object Pair) instances referenced in the [ImagingStudy] resource.\n\n     * Alternatively, systems can use business identifiers\nsuch as accession numbers in the `identifier` element to access the source images from external sources.\n* The `DiagnosticReport.basedOn` element connects the DiagnosticReport to the originating order in the EHR. Systems that initiate the lab order **SHOULD** use this element when reporting the results.",
           "interaction": [
             {
               "extension": [
@@ -1717,7 +1712,7 @@
                 }
               ],
               "code": "create",
-              "documentation": "This conformance expectation applies **only**  to the *US Core DiagnosticReport Profile for Report and Note exchange* profile.  The conformance expectation for the *US Core DiagnosticReport Profile for Laboratory Results Reporting* is  **MAY**."
+              "documentation": "This conformance expectation applies **only**  to the *US Core DiagnosticReport Profile for Report and Note exchange* profile. The conformance expectation for the *US Core DiagnosticReport Profile for Laboratory Results Reporting* is  **MAY**."
             },
             {
               "extension": [
@@ -2019,7 +2014,6 @@
               ]
             }
           ],
-          "documentation": "* For Advance Directive Information (ADI) documents use the *US Core ADI DocumentReference Profile*.\n* For other clinical documents use the *US Core DiagnosticReport Profile for Report and Note Exchange*.\n\n  * See the [Clinical Notes](clinical-notes.html) page for\nimportant definitions, requirements, and guidance on creating, using, and sharing Clinical Notes.\n\n  * The `DocumentReference.type` binding Must Support at\na minimum the [10 Common Clinical Notes](ValueSet-us-core-clinical-note-type.html) and may extend to the full US Core DocumentReference Type Value Set\n* The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.\n\n    *  Although both are marked as must support, the server\nsystem is not required to support an address, and inline base64 encoded data, but **SHALL** support at least one of these elements.\n\n    *  The client application **SHALL** support both\nelements.\n\n    *  The `content.attachment.url` may refer to a FHIR\nBinary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e [base]/Bundle/[id] or another endpoint.\n\n   * If there are multiple `DocumentReference.content`\nelement repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`\n* Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.",
           "interaction": [
             {
               "extension": [
@@ -2375,7 +2369,6 @@
               ]
             }
           ],
-          "documentation": "* The Encounter resource can represent a reason using either a code with `Encounter.reasonCode`, or a reference with `Encounter.reasonReference` to  Condition or other resource.\n\n   * Although both are marked as must support, the server\nsystems are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.\n\n   * The client application **SHALL** support both elements.\n\n   * if `Encounter.reasonReference` references an\nObservation, it **SHOULD** conform to a US Core Observation if applicable. (for example, a laboratory result should conform to the US Core Laboratory Result Observation Profile)\n\n\n* The location address can be represented by either by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.\n\n   * Although both are marked as must support, the server\nsystems are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.\n\n   * The client application **SHALL** support both elements.\n\n* If the event facility/location differs from the `Encounter.location`, systems **SHOULD** reference it directly:\n* Servers can use the US Core Interpreter Needed Extension on this profile or the [US Core Patient Profile] to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirements* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles, but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.\n\n  - Systems **SHOULD** designate the patient's preferred\nlanguage in the `Patient.communication.preferred` element.\n* Updates to `.meta.lastUpdated` **SHOULD** reflect:\n\n  - New encounters/visits\n\n  - Changes in the status of encounters, including events\nthat trigger the same status (e.g., in-progress → in-progress). These status changes correspond to events that can initiate [HL7 V2] ADT messages.",
           "interaction": [
             {
               "extension": [
@@ -2602,7 +2595,7 @@
             }
           ],
           "type": "Endpoint",
-          "documentation": "The Media Resource is a Must Support referenced resource when using the US Core PractitionerRole Profile.",
+          "documentation": "The Endpoint Resource is a Must Support referenced resource when using the US Core PractitionerRole Profile.",
           "interaction": [
             {
               "extension": [
@@ -2936,7 +2929,6 @@
               ]
             }
           ],
-          "documentation": "* Although both `Goal.startDate` and `Goal.target.dueDate` are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements. The client application **SHALL** support both elements.",
           "interaction": [
             {
               "extension": [
@@ -3239,7 +3231,6 @@
               ]
             }
           ],
-          "documentation": "* Based upon the Office of the National Coordinator for Health Information Technology (ONC) U.S. Core Data for Interoperability (USCDI) requirements, CVX vaccine codes are required and the NDC vaccine codes **SHOULD** be supported as an additional code.",
           "interaction": [
             {
               "extension": [
@@ -3404,7 +3395,6 @@
               ]
             }
           ],
-          "documentation": "* Systems **SHOULD** enable the user who enters the address to follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for `Location.address.line` and  `Location.address.city`.",
           "interaction": [
             {
               "extension": [
@@ -3553,99 +3543,6 @@
               "valueCode": "SHALL"
             }
           ],
-          "type": "Media",
-          "documentation": "The Media Resource is a Must Support referenced resource when using the US Core DiagnosticReport Profile for Report and Note Exchange.",
-          "interaction": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "MAY"
-                }
-              ],
-              "code": "create"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "MAY"
-                }
-              ],
-              "code": "search-type"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
-                }
-              ],
-              "code": "read"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHOULD"
-                }
-              ],
-              "code": "vread"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "MAY"
-                }
-              ],
-              "code": "update"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "MAY"
-                }
-              ],
-              "code": "patch"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "MAY"
-                }
-              ],
-              "code": "delete"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "MAY"
-                }
-              ],
-              "code": "history-instance"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "MAY"
-                }
-              ],
-              "code": "history-type"
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHALL"
-            }
-          ],
           "type": "Medication",
           "supportedProfile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|9.0.0"
@@ -3668,7 +3565,6 @@
               ]
             }
           ],
-          "documentation": "* The  MedicationRequest resource can represent a medication, using an external reference to a Medication resource. If an external Medication Resource is used in a MedicationRequest, then the READ  **SHALL**  be supported.",
           "interaction": [
             {
               "extension": [
@@ -3820,7 +3716,6 @@
               ]
             }
           ],
-          "documentation": "* This Profile can represent a medication using a code or reference a Medication resource.\n\n  * The Server systems are not required to support both\na code and a reference, but **SHALL** support at least one of these methods.\n\n  * The Client application **SHALL** support all methods.\n\n  * Systems that primarily rely on NDC codes instead of\nRxNorm to represent medications can use the National Library of Medicine's (NLM) NDC to RxNorm mappings to aid in additional codings.\n\n  * When referencing a Medication resource in\n`.medicationReference`, the resource may be contained or an external resource. If an external reference to a Medication resource is used, the Server **SHALL** support the `_include` parameter for searching this element.",
           "interaction": [
             {
               "extension": [
@@ -4078,7 +3973,6 @@
               ]
             }
           ],
-          "documentation": "* This Profile can represent a medication using a code or reference a Medication resource.\n  * The Server systems are not required to support both a code and a reference, but **SHALL** support at least one of these methods.\n  * The Client application **SHALL** support all methods.\n  * Systems that primarily rely on NDC codes instead of RxNorm to represent medications can use the National Library of Medicine's (NLM) NDC to RxNorm mappings to aid in additional codings.\n  * When referencing a Medication resource in `.medicationReference`, the resource may be contained or an external resource. If an external reference to a Medication resource is used, the Server **SHALL** support the `_include` parameter for searching this element. \n\n* The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.\n   *  Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements.\n   *  The client application **SHALL** support both elements.\n\n* When recording “self-prescribed” medication, requester **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber. (See the Medication List section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.)\n\n* The MedicationRequest resource can communicate the reason or indication for treatment using either a code in MedicationRequest.reasonCode or a reference using MedicationRequest.reasonReference.\n  * Although both `MedicationRequest.reasonCode` and `MedicationRequest.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.\n  * when using MedicationRequest.reasonReference:\n      * Servers **SHALL** support at least one target resource in `MedicationRequest.reasonReference`. Clients **SHALL** support all target resources.\n      * The referenced resources **SHOULD** be a US Core Profile as documented in Referencing US Core Profiles.",
           "interaction": [
             {
               "extension": [
@@ -4823,7 +4717,6 @@
               ]
             }
           ],
-          "documentation": "* Systems **SHOULD** support `Observation.effectivePeriod` to accurately represent tests that are collected over a period of time (for example, a 24-Hour Urine Collection test).\n* An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it\n    * Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`\n*  An `Observation.component` without a value, **SHALL** include a reason why the data is absent.\n    * Systems that never provide an component observation without a component value are not required to support `Observation.component.dataAbsentReason`.\n * There are multiple Observation profiles.  Refer to the specific profile page for profile specific conformance rules and guidance ",
           "interaction": [
             {
               "extension": [
@@ -5024,7 +4917,6 @@
               ]
             }
           ],
-          "documentation": "* Systems **SHALL** support National Provider Identifier (NPI) for organizations and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) and the National Association of Insurance Commissioners NAIC Company code (sometimes called \"NAIC Number\" or \"cocode\")  for `Organization.Identifier`.\n* Systems **SHOULD** enable the user who enters the address to follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for `Organization.address.line` and  `Organization.address.city`.",
           "interaction": [
             {
               "extension": [
@@ -5213,7 +5105,6 @@
               ]
             }
           ],
-          "documentation": "* The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`.\n*  The Complex Extensions for Race and Ethnicity allow for one or more codes of which: Must Support at least one category code from the OMB Race and Ethnicity Category Value Sets that draw from the Race & Ethnicity - CDC (CDCREC] code system.\n    - **MAY** include additional codes from the detailed ethnicity and detailed race value sets drawn from the Race & Ethnicity - CDC (CDCREC) code system\n    - **SHALL** include a text description\n* Although Patient.deceased[x] is marked as *Additional USCDI Requirement*, certifying systems are not required to support both choices, but **SHALL** support at least `Patient.deceasedDateTime`.\n*  Servers can use the US Core Interpreter Needed Extension on this profile or the US Core Encounter Profile to communicate whether a patient needs an interpreter. Although the extension is marked as an *Additional USCDI Requirement* on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one. The certifying Client application **SHALL** support the extension on both profiles.\n     - Systems **SHOULD** designate the patient's preferred language in the `Patient.communication.preferred` element.\n* Certifying systems **SHALL** and non-certifying systems **SHOULD** enable the user who enters the address to follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for `Patient.address.line` and  `Patient.address.city` for new and updated records.",
           "interaction": [
             {
               "extension": [
@@ -5422,7 +5313,6 @@
               ]
             }
           ],
-          "documentation": "* Servers that support only US Core Practitioner Profile and do not support the US Core PractitionerRole Profile **SHALL** provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource.\n\n   * Although Practitioner.address is marked as Must Support,\nthe server system is not required to support it if they support the US Core PractitionerRole Profile, but **SHALL** support it if they do not support the US Core PractitionerRole Profile. The client application **SHALL** support both.\n* To balance the privacy of healthcare workers with the patient's right to access information. Only professional/work contact information about the practitioner **SHOULD** be available to the patient (such as a work address or office telephone number).\n* Systems **SHOULD** enable the user who enters the address to follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for `Practitioner.address.line` and  `Practitioner.address.city`.",
           "interaction": [
             {
               "extension": [
@@ -5572,7 +5462,6 @@
               ]
             }
           ],
-          "documentation": "* Due to implementer feedback, some US Core Profiles reference the PractitionerRole resource instead of the US Core PractitionerRole Profile. However the US Core PractitionerRole Profile **SHOULD** be used as the default profile if referenced by another US Core profile.",
           "interaction": [
             {
               "extension": [
@@ -5789,7 +5678,6 @@
               ]
             }
           ],
-          "documentation": "* Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT. LOINC.\n\n  * Only LOINC concepts that reflect actual procedures\n**SHOULD** be used\n* A procedure including a medical device **SHOULD** use `Procedure.focalDevice` with a reference to the *US Core Device Profile*.\n* Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements. Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`.  Depending on the procedure being documented, a server will select the appropriate Profile to use.\n\n   * Although both `Procedure.reasonCode` and\n`Procedure.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.\n\n      * when using  `Procedure.reasonReference`:\n\n         * Servers **SHALL** support *at least one* target\nresource in `Procedure.reasonReference`. Clients **SHALL** support all target resources .\n\n         * The referenced resources **SHOULD** be a US Core\nProfile.",
           "interaction": [
             {
               "extension": [
@@ -5966,7 +5854,6 @@
               ]
             }
           ],
-          "documentation": "* The US Core Provenance resource **SHALL** be supported for these US Core resources:\n\n    * AllergyIntolerance\n\n    * CarePlan\n\n    * CareTeam\n\n    * Condition\n\n    * Coverage\n\n    * Device\n\n    * DiagnosticReport\n\n    * DocumentReference\n\n    * Encounter\n\n    * FamilyMemberHistory\n\n    * Goal\n\n    * Immunization\n\n    * MedicationDispense\n\n    * MedicationRequest\n\n    * Observation\n\n    * Patient\n\n    * Procedure\n\n    * QuestionnaireResponse\n\n    * RelatedPerson\n\n    * ServiceRequest\n\n* If a system receives a provider in `Provenance.agent.who` as free text they must capture who sent them the information as the organization. On request they **SHALL** provide this organization as the source and **MAY** include the free text provider.\n* Systems that need to know the activity has occurred **SHOULD** populate the activity.",
           "interaction": [
             {
               "extension": [
@@ -6059,6 +5946,7 @@
             }
           ],
           "type": "Questionnaire",
+          "documentation": "* US Core defines two ways to represent the questions and responses to screening and assessment instruments:\n    - Observation: US Core Observation Screening Assessment Profile\n    - Questionnaire/QuestionnaireResponse: SDC Base Questionnaire/US Core QuestionnaireResponse Profile\n* US Core Servers **SHALL** support US Core Observation Screening Assessment Profile and **SHOULD** support the  SDC Base Questionnaire Profile/US Core QuestionnaireResponse Profile",
           "supportedProfile": [
             "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
           ],
@@ -6080,7 +5968,6 @@
               ]
             }
           ],
-          "documentation": "* US Core defines two ways to represent the questions and responses to screening and assessment instruments:\n\n\n\n  - Observation: US Core Observation Screening Assessment\nProfile\n\n  - Questionnaire/QuestionnaireResponse: SDC Base\nQuestionnaire/US Core QuestionnaireResponse Profile\n\n\n* US Core Servers **SHALL** support US Core Observation Screening Assessment Profile and **SHOULD** support the  SDC Base Questionnaire Profile/US Core QuestionnaireResponse Profile",
           "interaction": [
             {
               "extension": [
@@ -6245,7 +6132,6 @@
               ]
             }
           ],
-          "documentation": "* US Core defines two ways to represent the questions and responses to screening and assessment instruments:\n\n\n\n  - Observation: US Core Observation Screening Assessment\nProfile\n\n  - Questionnaire/QuestionnaireResponse: SDC Base\nQuestionnaire/US Core QuestionnaireResponse Profile\n\n\n* US Core Servers **SHALL** support US Core Observation Screening Assessment Profile and **SHOULD** support the  SDC Base Questionnaire Profile/US Core QuestionnaireResponse Profile",
           "interaction": [
             {
               "extension": [
@@ -6450,7 +6336,6 @@
               ]
             }
           ],
-          "documentation": "* Systems **SHOULD** enable the user who enters the address to follow the Project US@ Technical Specification for Patient Addresses Final Version 1.0 as the standard style guide for `RelatedPerson.address.line` and  `RelatedPerson.address.city`.",
           "interaction": [
             {
               "extension": [
@@ -6706,7 +6591,6 @@
               ]
             }
           ],
-          "documentation": "* The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes](ValueSet-us-core-servicerequest-category.html), and other category codes can be used. API consumers can query by category when accessing patient information. For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table on the US Core ServiceRequest Profile page. For example, laboratory orders would have the category code \"108252007\" (Laboratory procedure).\n\n\n* The `ServiceRequest.code` value set is broad to accommodate a wide variety of use cases and **SHOULD** be constrained to a subset for a particular use case or domain.  These value sets contain concepts that span many use cases and are not bound to any USCDI Data Element. However, the table on the US Core ServiceRequest Profile page identifies *additional* value set bindings for the USCDI *Laboratory Order, Imaging Order and Clinical Test Order* Data Elements. Implementers **SHOULD** conform to the binding strengths for each USCDI Order context listed in the table. For example, laboratory orders are extensibly bound to the LOINC Common Laboratory Orders Value Set. Note that the USCDI Class *Procedure Order* Data Element has no additional binding.\n\n\n* Servers and Clients **SHALL** support both US Core ServiceRequest and US Core Procedure Profiles for communicating the reason or justification for a referral as Additional USCDI Requirements. Typically, the reason or justification for a referral or consultation is communicated through `Procedure.basedOn` linking the Procedure to the US Core ServiceRequest Profile that includes either `ServiceRequest.reasonCode` or `ServiceRequest.reasonReference`. When the Procedure does not have an associated ServiceRequest, it is communicated through the US Core Procedure Profile's `Procedure.reasonCode` or `Procedure.reasonReference`. Depending on the procedure being documented, a server will select the appropriate Profile to use.\n\n   * Although both `ServiceRequest.reasonCode` and\n`ServiceRequest.reasonReference` are marked as Additional USCDI Requirements, the certifying server system is not required to support both, but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.\n\n     * when using  `ServiceRequest.reasonReference`:\n\n       * Servers **SHALL** support *at least one* target\nresource in `ServiceRequest.reasonReference`. Clients **SHALL** support all target resources.\n\n       * The referenced resources **SHOULD** be a US Core\nProfile as documented in Referencing US Core Profiles.",
           "interaction": [
             {
               "extension": [
@@ -6906,7 +6790,6 @@
               ]
             }
           ],
-          "documentation": "* Although both `Specimen.identifier` and `Specimen.accessionIdentifier` are marked as Must Support, the server system is not required to support both, but **SHALL** support at least one of these elements. The client application **SHALL** support both.",
           "interaction": [
             {
               "extension": [

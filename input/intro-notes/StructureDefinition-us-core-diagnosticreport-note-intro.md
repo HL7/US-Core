@@ -38,7 +38,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - See [Clinical Notes]
 - <sup>2</sup>`DiagnosticReport.effective[x]` has the following constraint: **SHALL** be present if status is 'partial', 'preliminary', 'final', 'amended', 'corrected', or 'appended'.<sup>[§][CONF-0356]</sup>
-- <sup>1</sup>The `DiagnosticReport.category` binding Must Support, at a minimum, the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.<sup>[§][CONF-0361]</sup>
+- <sup>1</sup>The `DiagnosticReport.category` binding Must Support, at a minimum, the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories **MAY** be supported.<sup>[§][CONF-0361]</sup>
   - It is up to the data source to categorize the documents they send. Therefore, Clients need to understand that data categorization is somewhat subjective, and the categorization applied by the source may not align with the Client's expectations. Any linkages between specific LOINC codes and the LP-type codes can be used as guidance. If LOINC develops a hierarchy or categorization to align these concepts, US Core will be updated.
 - A Server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g., a system may categorize an orthopedic note as cardiology.)
 - For Diagnostic Imaging Reports systems **SHOULD** support using the subset of LOINC codes listed in Table 4: LOINC® Document Type Codes in [HL7 Standard for CDA® Release 2: Imaging Integration; Basic Imaging Reports in CDA and DICOM, Release 1]<sup>[§][CONF-0364]</sup>

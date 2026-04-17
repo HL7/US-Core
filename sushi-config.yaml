@@ -325,8 +325,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   ips-comparison:
     - '{current}'
 
-  pin-canonicals: pin-all
-  pin-manifest: manifest
+  pin-canonicals: pin-all #<<<< comment out to speed up build by 30 minutes
+  pin-manifest: manifest #<<<< comment out to speed up build by 30 minutes
   # pin-external: true  #<<<<<< documented, but not yet available
 
   # logging:

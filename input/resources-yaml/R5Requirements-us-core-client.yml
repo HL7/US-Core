@@ -367,7 +367,7 @@ statement:
       - clinical-notes.html#support-requirements
     conformance:
       - MAY
-    requirement: a Client can determine the note and report types supported by a Server by invoking the standard FHIR Value Set Expansion ([$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html)) operation defined in the FHIR R4 specification.
+    requirement: a Client **MAY** determine the note and report types supported by a Server by invoking the standard FHIR Value Set Expansion ([$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html)) operation defined in the FHIR R4 specification.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -398,7 +398,7 @@ statement:
       - screening-and-assessments.html#category-codes
     conformance:
       - MAY
-    requirement: API consumers can query by category  when accessing patient information.
+    requirement: API consumers **MAY** query by category  when accessing patient information.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -736,16 +736,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-specimen.html#CONF-0525
-  - key: CONF-0526
-    reference:
-      - StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance
-    conformance:
-      - MAY
-    requirement: Clients **MAY**request Specimen resources be included with the Observation or DiagnosticReport resource query.
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-specimen.html#CONF-0526
   - key: CONF-0551
     reference:
       - security.html#patient-privacy-and-security
@@ -906,19 +896,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: security.html#CONF-0581
-  - key: CONF-0800
-    reference:
-      - must-support.html#must-support-elements
-    conformance:
-      - MAY
-    requirement: |-
-      For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:
-
-      [The US Core Requesters processing of the resource instances] **MAY**result in a determination not to use the resource if the resource content does not meet business requirements.
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: must-support.html#CONF-0800
   - key: CONF-0815
     reference:
       - general-guidance.html#client-best-practices-for-search
@@ -1029,3 +1006,13 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-observation-screening-assessment.html#CONF-0888
+  - key: CONF-0911
+    reference:
+      - StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance
+    conformance:
+      - MAY
+    requirement: API consumers **MAY** query by category when accessing patient information.
+    _reference:
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-servicerequest.html#CONF-0911

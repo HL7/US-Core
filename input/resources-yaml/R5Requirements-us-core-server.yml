@@ -941,7 +941,7 @@ statement:
       - scopes.html#smart-scopes
     conformance:
       - MAY
-    requirement: Other systems only need to support scopes for the US Core APIs they support [instead of all US Core's required scopes]
+    requirement: Other systems **MAY** support scopes for the US Core APIs they support [instead of all US Core's required scopes]
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -2352,13 +2352,25 @@ statement:
   - key: CONF-0248
     reference:
       - medication-list.html#options-for-representing-medication
+      - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medication.html#profile-specific-implementation-guidance
     conformance:
       - MAY
-    requirement: USCDI recommends the [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory) as an optional medication terminology. They can be supplied as an additional coding element [when representing a medication]
+    requirement: USCDI recommends the [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory) as an optional medication terminology. They **MAY** be supplied as an additional coding element [when representing a medication]
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: medication-list.html#CONF-0248
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationdispense.html#CONF-0248
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0248
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medication.html#CONF-0248
   - key: CONF-0249
     reference:
       - medication-list.html#options-for-representing-medication
@@ -2429,18 +2441,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: medication-list.html#CONF-0256
-  - key: CONF-0257
-    reference:
-      - medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter
-    conformance:
-      - MAY
-    requirement: |-
-      Requirements to access “all medications” [all historical, active, and future prescribed medications and medications entered in error and whose status is unknown.] and “all active medications” [all medications with an active status. Active medications do not include past, future, unknown status, and entered-in-error medications.] for a patient:
-      Servers [MAY] use the `MedicationRequest.reported[x]` element to indicate ... the source of the report.
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: medication-list.html#CONF-0257
   - key: CONF-0258
     reference:
       - medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter
@@ -2726,10 +2726,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: |-
-      Profile Specific Implementation Guidance:
-
-      No Known Allergies **MAY**be represented using the US Core-AllergyIntolerance profile
+    requirement: No Known Allergies **MAY**be represented using the US Core-AllergyIntolerance profile
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -3171,16 +3168,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-diagnosticreport-note.html#CONF-0361
-  - key: CONF-0362
-    reference:
-      - StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance
-    conformance:
-      - MAY
-    requirement: '[L]inkages between specific LOINC codes and the LP-type codes **MAY**be used as guidance [for a Server''s categorization of diagnostic reports]'
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-diagnosticreport-note.html#CONF-0362
   - key: CONF-0364
     reference:
       - StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance
@@ -3373,26 +3360,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-immunization.html#CONF-0390
-  - key: CONF-0393
-    reference:
-      - StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance
-    conformance:
-      - SHOULD
-    requirement: The preferred code system identifier … is [http://hl7.org/fhir/sid/cvx](http://hl7.org/fhir/sid/cvx) for CVX [vaccine codes]
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-immunization.html#CONF-0393
-  - key: CONF-0394
-    reference:
-      - StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance
-    conformance:
-      - SHOULD
-    requirement: The preferred code system identifier … is [http://hl7.org/fhir/sid/ndc](http://hl7.org/fhir/sid/ndc) for NDC vaccine codes]
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-immunization.html#CONF-0394
   - key: CONF-0399
     reference:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
@@ -3613,7 +3580,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: Systems that never provide a component observation without a component value … [MAY choose not] to support Observation.component.dataAbsentReason
+    requirement: Systems that never provide a component observation without a component value **MAY** choose not to support Observation.component.dataAbsentReason
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -3682,7 +3649,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: Systems that never provide an observation without a value ... [MAY choose not] to support Observation.dataAbsentReason
+    requirement: Systems that never provide an observation without a value **MAY** choose not to support Observation.dataAbsentReason
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -3812,17 +3779,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-simple-observation.html#CONF-0443
-  - key: CONF-0445
-    reference:
-      - StructureDefinition-us-core-treatment-intervention-preference.html#profile-specific-implementation-guidance
-    conformance:
-      - MAY
-    conditionality: true
-    requirement: '[US Core] treatment intervention preferences expressed by a patient **MAY**be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.'
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-treatment-intervention-preference.html#CONF-0445
   - key: CONF-0447
     reference:
       - StructureDefinition-us-core-vital-signs.html#profile-specific-implementation-guidance
@@ -4029,7 +3985,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: '[For systems participating in the ONC Health IT certification program,] this requirement [to follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) for Patient.address.line and Patient.address.city] does not apply to historical records or documents that are exposed through FHIR-based APIs. [Organizations **MAY** choose not to use use Project US@ Technical Specification for Patient Addresses Final Version 1.0 when sending historical records]'
+    requirement: '[For systems participating in the ONC Health IT certification program,] this requirement [to follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0](https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf) for Patient.address.line and Patient.address.city]. Both certifying and non-certifying systems **MAY** choose not to use Project US@ for historical records or documents that are not exposed through FHIR-based APIs.'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -4061,7 +4017,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: Although Practitioner.address is marked as Must Support, the Server system … [**MAY** choose not to] support it if they support the US Core PractitionerRole Profile
+    requirement: Although Practitioner.address is marked as Must Support, the Server system **MAY** choose not to support it if they support the US Core PractitionerRole Profile
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -4159,7 +4115,7 @@ statement:
       - StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance
     conformance:
       - MAY
-    requirement: The Must Support `ServiceRequest.category` is bound, at a minimum, to the [US Core ServiceRequest Category Codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-servicerequest-category.html), and other category codes can be used.
+    requirement: The Must Support `ServiceRequest.category` is bound, at a minimum, to the [US Core ServiceRequest Category Codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-servicerequest-category.html), and other category codes **MAY** be used.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -4177,13 +4133,17 @@ statement:
   - key: CONF-0523
     reference:
       - StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medication.html#profile-specific-implementation-guidance
     conformance:
       - MAY
-    requirement: Since the binding [for Specimen.type and additional USCDI elements] is [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible) when a code is unavailable, just text is allowed [and conformant].
+    requirement: Since the binding [for Specimen.type and additional USCDI elements] is [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible) when a code is unavailable, servers **MAY** use text.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-specimen.html#CONF-0523
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medication.html#CONF-0523
   - key: CONF-0524
     reference:
       - StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance
@@ -4601,13 +4561,17 @@ statement:
   - key: CONF-0851
     reference:
       - StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-encounter.html#profile-specific-implementation-guidance
     conformance:
-      - MAY
-    requirement: Servers can use the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.
+      - SHOULD
+    requirement: Servers **SHOULD** use the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-patient.html#CONF-0851
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-encounter.html#CONF-0851
   - key: CONF-0855
     reference:
       - StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance

@@ -8,7 +8,7 @@ example usage scenarios for the US Core Medication profile:
 
 ### Mandatory and Must Support Data Elements
 
-The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.  
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
 **Each Medication Must Have:**
 
@@ -18,8 +18,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* RXNorm concepts are defined as an [extensible] binding. USCDI recommends the [National Drug Codes (NDC)] as an *optional* terminology. They can be supplied as an additional coding element.
-* Since the binding is [extensible] when a code is unavailable, just text is allowed.
+* RXNorm concepts are defined as an [extensible] binding. USCDI recommends the [National Drug Codes (NDC)] as an *optional* terminology. They **MAY** be supplied as an additional coding element.<sup>[§][CONF-0248]</sup>
+* Since the binding is [extensible] when a code is unavailable, servers **MAY** use text.<sup>[§][CONF-0523]</sup>
 * When the medication is compounded and is a list of ingredients, the code is still present and may contain only the text.
 
 {% include link-list.md %}

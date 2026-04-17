@@ -94,7 +94,7 @@ Not all scanned information stored through DocumentReference will be exposed thr
 
 #### Support Requirements
 
-This guide requires systems to implement the [US Core DocumentReference Profile]<sup>[§][CONF-0223]</sup> and to support a *minimum* of all ten Common Clinical Notes listed above. Systems may extend their capabilities to the complete [US Core DocumentReference Type Value Set].<sup>[§][CONF-0222]</sup> This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+This guide requires systems to implement the [US Core DocumentReference Profile]<sup>[§][CONF-0223]</sup> and to support a *minimum* of all ten Common Clinical Notes listed above. Systems **MAY** extend their capabilities to the complete [US Core DocumentReference Type Value Set].<sup>[§][CONF-0222]</sup> This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
 This guide requires systems to implement the [US Core DiagnosticReport Profile for Report and Note exchange]<sup>[§][CONF-0224]</sup> and to support a *minimum* of the three report categories:
 
@@ -102,7 +102,7 @@ This guide requires systems to implement the [US Core DiagnosticReport Profile f
 * [Pathology (LP7839-6)]
 * [Radiology (LP29684-5)]
 
-Systems may support other categories as well.<sup>[§][CONF-0225],[§][CONF-0226]</sup>
+Systems **MAY** support other categories as well.<sup>[§][CONF-0225],[§][CONF-0226]</sup>
 
 The vendors that participated in developing this guide did not differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Therefore, Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
@@ -141,7 +141,7 @@ Common Client search scenarios include:
 ### Determining Server Note Type
 {: #using-expand}
 
-In addition to inspecting a server CapabilityStatement, a Client can determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**.<sup>[§][CONF-0232]</sup> Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.<sup>[§][CONF-0233]</sup>
+In addition to inspecting a server CapabilityStatement, a Client **MAY** determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**.<sup>[§][CONF-0232]</sup> Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.<sup>[§][CONF-0233]</sup>
 
 #### Discovering Note and Report Types
 

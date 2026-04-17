@@ -61,7 +61,7 @@ This section provides detailed implementation guidance for the US Core Profile t
   - The [Patient example] demonstrates how these elements are represented
 - <sup>1</sup>For new and updated records, [Certifying Systems] **SHALL** and non-Certifying Systems **SHOULD** enable the users who enter patient addresses to follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0], which is required by the USCDI Patient Demographics Data Class<sup>[§][CONF-0469],[§][CONF-0470]</sup>
    - Consult this specification for details about the format for the Address datatypes elements, especially `Patient.address.line` and `Patient.address.city`.
-   - Note: Historical records or documents that are not exposed through FHIR-based APIs may not meet this requirement.<sup>[§][CONF-0471]</sup>
+   - Note: Both certifying and non-certifying systems **MAY** choose not to use Project US@ for historical records or documents that are not exposed through FHIR-based APIs.<sup>[§][CONF-0471]</sup>
 - <sup>1</sup>{% include should-3166-subdivision-codes.md type="Patient" %}
 - <sup>3</sup>The [US Core Individual Sex Extension] represents the [U.S. Core Data for Interoperability (USCDI)] data element "Sex". Refer to the FHIR R5 [Patient] Resource for other interoperability considerations with regards to patient sex
 - [Provenance] and the FHIR Extension [Target Element] can document how individual patient demographic data was captured. See [Element Level Provenance] on the [Basic Provenance] page for more information.

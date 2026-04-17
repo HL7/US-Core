@@ -385,3 +385,17 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-location.html#CONF-0902
+  - key: CONF-0910
+    reference:
+      - StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-encounter.html#profile-specific-implementation-guidance
+    conformance:
+      - SHALL
+    requirement: Servers **SHALL** use the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.
+    _reference:
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-patient.html#CONF-0910
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-encounter.html#CONF-0910

@@ -52,7 +52,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 
 
-- <sup>2</sup>The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes], and other category codes can be used.<sup>[§][CONF-0514]</sup> API consumers can query by category when accessing patient information. For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table below.<sup>[§][CONF-0857]</sup> For example, laboratory orders would have the category code "108252007" (Laboratory procedure).
+- <sup>2</sup>The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes], and other category codes **MAY** be used.<sup>[§][CONF-0514]</sup> API consumers **MAY** query by category when accessing patient information.<sup>[§][CONF-0911]</sup> For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table below.<sup>[§][CONF-0857]</sup> For example, laboratory orders would have the category code "108252007" (Laboratory procedure).
 
   |USCDI Order Data Element|Category Codes|
   |---|---|

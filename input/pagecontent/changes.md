@@ -70,7 +70,7 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 38. **Applied:** Non-substantive (Correction) Add plain language summary [FHIR-54948](https://jira.hl7.org/browse/FHIR-54948) See Changes [Here](index.html)
 39. **Applied:** Non-substantive (Clarification) Clarify ServiceRequest.requester vs PMO author. [FHIR-54949](https://jira.hl7.org/browse/FHIR-54949) See Changes [Here](StructureDefinition-us-core-servicerequest.html#uscdi-portable-medical-order-pmo-data-element)
-40. **Resolved - change required:** Compatible, substantive (Enhancement)  Add Requirements Page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes Here:
+40. **Applied:** Compatible, substantive (Enhancement)  Add Requirements Page and Resources. [FHIR-55464](https://jira.hl7.org/browse/FHIR-55464) See Changes Here:
     -  [US Core Conformance Artifacts](general-requirements.html#us-core-conformance-artifacts)
     -  [Requirements Table](requirements.html)
     -  [Capability Statements and Requirements Resources ](capability-statements.html)
@@ -116,25 +116,43 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 66. **Applied:**  Non-substantive (Correction) Change "ASTP" to "ONC" to reflect 2026 HHS realignment [FHIR-56253](https://jira.hl7.org/browse/FHIR-56253) For example, see Changes [Here](index.html#introduction)
 67. **Applied:**  Substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56241) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 68. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "can" to "MAY" and remove sentence [FHIR-56217](https://jira.hl7.org/browse/FHIR-56217) See Changes [Here](must-support.html#must-support---complex-elements)
-69. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and from requirements table [FHIR-56221](https://jira.hl7.org/browse/FHIR-56221) See Changes [Here](medication-list.html#background-on-the-fhir-medications-resources)
-69. **Applied:**  Non-substantive (Clarification) Requirements QA:  Change "encouraged", etc to SHOULD [FHIR-56244](https://jira.hl7.org/browse/FHIR-56244) See Changes:
+69. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and remove from requirements table [FHIR-56221](https://jira.hl7.org/browse/FHIR-56221) See Changes [Here](medication-list.html#background-on-the-fhir-medications-resources)
+69. **Applied:**  Non-substantive (Clarification) Requirements QA:  Change "encouraged", etc to SHOULD [FHIR-56244](https://jira.hl7.org/browse/FHIR-56244) See Changes Here:
     - [General Requirements](general-requirements.html#search-for-servers-requiring-status)
     - [US Core Device Profile](StructureDefinition-us-core-device.html#udi--specific-implementation-guidance)
     - [Screening and Assessments](screening-and-assessments.html#choosing-between-questionnaireresponse-and-observation)
     - [US Core Coverage Profile](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
 69. **Applied:**  Non-substantive (Clarification) Requirements QA: replace text [FHIR-56246](https://jira.hl7.org/browse/FHIR-56246) See Changes [Here](must-support.html#must-support---complex-elements)
 70. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and from requirements table [FHIR-56260](https://jira.hl7.org/browse/FHIR-56260) See Changes [Here](StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance)
-70. **Applied:**  Non-substantive (Clarification) Requirements QA: change text from "may" or "MAY" to "can" or "might" and remove from requirements table [FHIR-56271](https://jira.hl7.org/browse/FHIR-56271) See Changes:
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: change text from "may" or "MAY" to "can" or "might" and remove from requirements table [FHIR-56271](https://jira.hl7.org/browse/FHIR-56271) See Changes Here:
     - [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
     - [US Core Treatment Intervention Preference Profile](StructureDefinition-us-core-treatment-intervention-preference.html#profile-specific-implementation-guidance)
     - [US Core Care Experience Preference Profile](StructureDefinition-us-core-care-experience-preference.html#profile-specific-implementation-guidance)
     - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance)
     - [Must Support](must-support.html#must-support-elements)
     - [Medication List](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
-70. **Applied:**  Non-substantive (Clarification) Requirements QA: change "Servers can use" to "SHALL/SHOULD" [FHIR-56272](https://jira.hl7.org/browse/FHIR-56272) See Changes
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: change "Servers can use" to "SHALL/SHOULD" [FHIR-56272](https://jira.hl7.org/browse/FHIR-56272) See Changes Here:
     - [US Core Patient Profile](StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
     - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html#profile-specific-implementation-guidance)
-
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "may", "can", etc to "MAY" [FHIR-56267](https://jira.hl7.org/browse/FHIR-56267) See Changes Here:
+    - [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
+    - [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance)
+    - [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance)
+    - [US Core Medication Profile](StructureDefinition-us-core-medication.html#profile-specific-implementation-guidance)
+    - [US Core Observation Clinical Result Profile](StructureDefinition-us-core-observation-clinical-result.html#profile-specific-implementation-guidance)
+    - [US Core Pulse Oximetry Profile](StructureDefinition-us-core-pulse-oximetry.html#profile-specific-implementation-guidance)
+    - [US Core Patient Profile](StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
+    - [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html#profile-specific-implementation-guidance)
+    - [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance)
+    - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance)
+    - [US Core AllergyIntolerance Profile](StructureDefinition-us-core-allergyintolerance.html#profile-specific-implementation-guidance)
+    - [Screening and Assessments](screening-and-assessments.html#category-codes)
+    - [Clinical Notes](clinical-notes.html#support-requirements)
+    - [SMART on FHIR Obligations and Capabilities](scopes.html#smart-scopes)
+71. **Applied:**  Non-substantive (Clarification) Requirements QA: Replace documentation with Requirements Tables links[FHIR-56261](https://jira.hl7.org/browse/FHIR-56261) See Changes Here:
+    - [US Core Client CapabilityStatement](CapabilityStatement-us-core-client.html)
+    - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html)
+72. **Applied:**  Non-substantive (Correction) Fix Episode Summary Example [FHIR-56076](https://jira.hl7.org/browse/FHIR-56076) See Changes [Here](DocumentReference-episode-summary.html)
 
 ##### Pending
 The application of the following trackers are pending and will not be completed before publication.

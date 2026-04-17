@@ -116,7 +116,7 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 #### Category Codes
 
-API consumers can query by category when accessing patient information.<sup>[§][CONF-0275]</sup> Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. US Core defined these USCDI Health Assessments Data Elements category codes:
+API consumers **MAY** query by category when accessing patient information.<sup>[§][CONF-0275]</sup> Each profile's *Quick Start* section shows searches by category if the category element is defined in the profile. US Core defined these USCDI Health Assessments Data Elements category codes:
 
 <!-- ========================================================
 The liquid syntax below generates the screening and assessment
