@@ -2187,11 +2187,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Urobilinogen Example - XML Representation]: Observation-urobilinogen.xml.html
 [Urobilinogen Example - JSON Representation]: Observation-urobilinogen.json.html
 [Urobilinogen Example - TTL Representation]: Observation-urobilinogen.ttl.html
-[US Core CQF Model Definition]: Library-USCore-ModelInfo.html
-[US Core CQF Model Definition - Testing]: Library-USCore-ModelInfo-testing.html
-[US Core CQF Model Definition - XML Representation]: Library-USCore-ModelInfo.xml.html
-[US Core CQF Model Definition - JSON Representation]: Library-USCore-ModelInfo.json.html
-[US Core CQF Model Definition - TTL Representation]: Library-USCore-ModelInfo.ttl.html
+[US Core Model Definition]: Library-USCore-ModelInfo.html
+[US Core Model Definition - Testing]: Library-USCore-ModelInfo-testing.html
+[US Core Model Definition - XML Representation]: Library-USCore-ModelInfo.xml.html
+[US Core Model Definition - JSON Representation]: Library-USCore-ModelInfo.json.html
+[US Core Model Definition - TTL Representation]: Library-USCore-ModelInfo.ttl.html
 [Uscore Med1 Example]: Medication-uscore-med1.html
 [Uscore Med1 Example - XML Representation]: Medication-uscore-med1.xml.html
 [Uscore Med1 Example - JSON Representation]: Medication-uscore-med1.json.html
