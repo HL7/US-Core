@@ -82,17 +82,12 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Constraint fail
 
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/narrative-status|5.0.0
-Reference to draft ValueSet http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1
-Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.36.0
-
 
 # 19. === The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked, and the identifiers are correct (updated text from 7.0.0) ===
 
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' could not be found, so the code cannot be validated
 
 # 20. === HL7 Terminology (THO) defines the ServiceDeliveryLocationRoleType and HealthcareServiceLocation value sets that compose this ValueSet. However, no codes are displayed in the HL7 Terminology for HealthcareServiceLocation value set, which is composed of NHSN Healthcare Facility Patient Care Location (HSLOC) and CMS Place of Service Codes (POS) codes. These codes are available at:ServiceDeliveryLocationRoleType: https://terminology.hl7.org/6.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html,HSLOC: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20275/expansion/Latest,POS: https://www.cms.gov/medicare/coding-billing/place-of-service-codes/code-sets===
-
-
 
 
 # 21. === The following code system is not discoverable because they are code systems in THO, but THO doesn't define the codes due to AHA NUBC Patient Discharge Status Codes IP issues. These codes were checked manually (updated text from 7.0.0)===
@@ -169,23 +164,14 @@ The concept 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is deprecated and its use
 
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate'.%
 There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo'.%
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/ordinalValue'.%
-
 
 # 37. === The following Extensions are in SDC, a dependent IG, or the FHIR R4 specification and not under the direct control of US Core editors ===
 
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature'.%
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/questionnaireresponse-completionMode'.%
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/display'.%
 
-# 38. === As explained in the section "US Core ValueSet and CodeSystem versions" US Core "pins" the published version to the latest versions of code systems and value sets.  A manifest of the "pinned" versions can be found at "Parameters-manifest.html"  Despite this, the validator produces the following warnings:
+# 38. === As explained in the section "US Core ValueSet and CodeSystem versions" US Core "pins" the published version to the latest versions of code systems and value sets.  A manifest of the "pinned" versions can be found at "Parameters-manifest.html"  Despite this, in addition the the informational message, the validator is producing the following warnings:
 
-Pinned the version of http://terminology.hl7.org/CodeSystem/%
-Pinned the version of http://hl7.org/fhir/%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem%
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet%
 There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet%
 There are multiple different potential matches for the url 'http://hl7.org/fhir/narrative-status'%
 There are multiple different potential matches for the url 'http://hl7.org/fhir/observation-status'%
 
@@ -229,29 +215,29 @@ Reference to retired ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/%
 
 No definition could be found for URL value%
 
-#54 === These deprecated extensions are inherited from the base FHIR resources and not under the control of US Core editors. ===
+# 54 === These deprecated extensions are inherited from the base FHIR resources and not under the control of US Core editors. ===
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0-ballot-tc1 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
 
-#55 === The following Code Systems are defined by CDC.  However, the IG publisher's terminology server does not support CDC-based code systems. Note that the Codesystem URL is correct and listed on THO's External Code Systems page. ===
+# 55 === The following Code Systems are defined by CDC.  However, the IG publisher's terminology server does not support CDC-based code systems. Note that the Codesystem URL is correct and listed on THO's External Code Systems page. ===
 
 A definition for CodeSystem 'https://nahdo.org/sopt' could not be found, so the code cannot be validated
 
-#56 === The following Code Systems are commonly used standard code system that support post-coordination, which means full expansion isn’t possible. We recognize that the the value set definitions where they are used need to be narrowed, but this work has been deferred. ===
+# 56 === The following Code Systems are commonly used standard code system that support post-coordination, which means full expansion isn’t possible. We recognize that the the value set definitions where they are used need to be narrowed, but this work has been deferred. ===
 
 WARNING: ValueSet.where(id = 'us-core-goal-description'): Error from https://tx.fhir.org/r4: Error: The code System "http://snomed.info/sct" has a grammar, and cannot be enumerated directly
 WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from https://tx.fhir.org/r4: Error: The code System "http://www.ama-assn.org/go/cpt" has a grammar, and cannot be enumerated directly
 
-#57 ===  This extension is used to define the expectation for he following SearchParameter elements: multipleAnd, multipleOr, comparator, modifier, and chain.  It also used to render the SearchParameter narrative using custom templates. Since its context is not scoped outside of CapabilityStatement the validator is generating these errors. The tracker, FHIR-56196, has been logged to extend its context to these SearchParameter elements. ===
+# 57 ===  This extension is used to define the expectation for he following SearchParameter elements: multipleAnd, multipleOr, comparator, modifier, and chain.  It also used to render the SearchParameter narrative using custom templates. Since its context is not scoped outside of CapabilityStatement the validator is generating these errors. The tracker, FHIR-56196, has been logged to extend its context to these SearchParameter elements. ===
 
 The extension http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation v5.3.0-ballot-tc1 is not allowed to be used at this point%
 
-#58 === This informational message confirms that this guide is pinned to all most recent versions used at the time this guide was published. For more guidance on pinning in US Core, see the Terminology Page. ===
+# 58 === This informational message confirms that this guide is pinned to all most recent versions used at the time this guide was published. For more guidance on pinning in US Core, see the Terminology Page. ===
 
-Pinned the version of%
+Pinned the version of http://terminology.hl7.org/CodeSystem/%
+Pinned the version of http://hl7.org/fhir/%
 
 # 59 === These warnings are valid "the parameters system-version, default-valueset-version, and default-canonical-version which are all documented as part of R6 [valueset-operation-expand.html], but are applied by the tooling eco-system in the context of earlier versions". However, the implementation guide editors are unable to correct the Parameters Manifest resource because it is generated by the build. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/pin-canonicals.20not.20working.3F/near/585774849 ===
 
 If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
-If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
