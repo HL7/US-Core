@@ -47,6 +47,10 @@ _implementationGuide:
 - extension:
   - url: http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
     valueCode: SHOULD
+  - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+    valueUrl: https://hl7.org/fhir/smart-app-launch/STU2/index.html
+  - url: http://hl7.org/fhir/StructureDefinition/display
+    valueString: SMART App Launch version 2.0.0 and later
 rest:
 - mode: client
   documentation: |-
@@ -60,15 +64,14 @@ rest:
 
          The [Client Requirements Table](requirements.html#client-requirements) and [US Core Client Requirements Resource](Requirements-us-core-client.html) list the requirements defined in these pages and sections.
 
-      **NOTE**: US Core SearchParameters referenced in this CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document Server and Client expectations. They specify additional expectations for the following SearchParameter elements:
-
-      - `multipleAnd`
-      - `multipleOr`
-      - `comparator`
-      - `modifier`
-      - `chain`
-
-      They **SHALL NOT** be interpreted as search parameters for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters.
+      > **NOTE**: US Core SearchParameters referenced in this CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document Server and Client expectations. They specify additional expectations for the following SearchParameter elements:
+      > - `multipleAnd`
+      > - `multipleOr`
+      > - `comparator`
+      > - `modifier`
+      > - `chain`
+      >
+      > They **SHALL NOT** be interpreted as search parameters for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters.
   security:
     description: 1. See the [General Security Considerations](security.html)
       section for requirements and recommendations.

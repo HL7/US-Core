@@ -57,64 +57,44 @@
 
 
 
-  {% if instantiates.exists() or imports.exists() or implementationGuide.exists() %}
+<!-- remove to see if breaking build
+{% if instantiates.exists() or imports.exists() or implementationGuide.exists() %}
     <h3>Support and Requirements for Other Artifacts</h3>
-    <table>
-     <tbody>
     {% if instantiates.exists() %}
-      <tr>
-        <th>Instantiates other capabilities:</th>
-       <td>
+        <h4>Instantiates other capabilities:</h4>
           <ul>
          {% for ig in instantiates %}
           {% assign display = ig.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
           {% assign rel_url = ig.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
           {% assign conf = ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}
-          {% if rel_url and display %}
             <li><strong>{{ conf }}</strong> support {% if rel_url and display %}<a href="{{ rel_url }}">{{ display }}</a>{% else %}{{ ig }}{% endif %}</li>
-           {% endif %}
         {%  endfor %}
           </ul>
-        </td>
-      </tr>
     {% endif %}
     {% if imports.exists() %}
-      <tr>
-        <th>Imports other capabilities:</th>
-        <td>
+        <h4>Imports other capabilities:</h4>
           <ul>
          {% for ig in imports %}
           {% assign display = ig.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
           {% assign rel_url = ig.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
           {% assign conf = ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}
-          {% if rel_url and display %}
             <li><strong>{{ conf }}</strong> support {% if rel_url and display %}<a href="{{ rel_url }}">{{ display }}</a>{% else %}{{ ig }}{% endif %}</li>
-          {% endif %}
         {%  endfor %}
           </ul>
-        </td>
-      </tr>
     {% endif %}
     {% if implementationGuide.exists() %}
-      <tr>
-        <th>Supports other guides:</th>
-        <td>
+        <h4>Supports other guides:</h4>
           <ul>
          {% for ig in implementationGuide %}
           {% assign display = ig.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
           {% assign rel_url = ig.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
           {% assign conf = ig.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}
-          {% if rel_url and display %}
             <li><strong>{{ conf }}</strong> support {% if rel_url and display %}<a href="{{ rel_url }}">{{ display }}</a>{% else %}{{ ig }}{% endif %}</li>
-         {% endif %}
          {% endfor %}
           </ul>
-        </td>
-      </tr>
     {% endif %}
-    </tbody>
-   </table>
   {% endif %}
+-->
 
   <!-- <br/>
    TODO - Make this a summary of capabilities, including system wide and each paradigm

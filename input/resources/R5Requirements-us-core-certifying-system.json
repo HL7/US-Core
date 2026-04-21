@@ -24,7 +24,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "A Server that certifies to the [21st Century Cures Act for accessing patient data](https://www.federalregister.gov/d/2020-07419/p-1177) **SHALL** implement all components in the USCDI [[USCDI link](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)]",
+      "requirement": "Certifying Systems **SHALL** implement all components in the USCDI [[USCDI link](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)]",
       "_reference": [
         {
           "extension": [
@@ -44,7 +44,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "A Server that certifies to the [21st Century Cures Act for accessing patient data](https://www.federalregister.gov/d/2020-07419/p-1177) **SHALL** implement all components in the ... the US Core CapabilityStatement [[Definition](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html)] .",
+      "requirement": "Certifying Systems **SHALL** implement all components in the ... the US Core CapabilityStatement [[Definition](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html)] .",
       "_reference": [
         {
           "extension": [
@@ -65,7 +65,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "Implementations meeting US EHR certification [of the ONC IT Health Certification program] requirements must support all US Core’s required scopes.",
+      "requirement": "Certifying systems **SHALL** support all US Core’s required scopes.",
       "_reference": [
         {
           "extension": [
@@ -396,7 +396,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "[I]f any sub-element is marked as *Additional USCDI* [for a complex element] and the parent element is not… [and] the parent element is represented in the structure, Certifying System **SHALL** support the sub-elements labeled as *Additional USCDI*.",
+      "requirement": "[I]f any sub-element is marked as *Additional USCDI* [for a complex element] and the parent element is not… [and] the parent element is present in an instance, Certifying System **SHALL** support the sub-elements labeled as *Additional USCDI*.",
       "_reference": [
         {
           "extension": [
@@ -561,7 +561,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **MAY** support other codes.",
+      "requirement": "[For the US Core Observation Screening Assessment Profile,] Certifying Systems **MAY**  support other codes.",
       "_reference": [
         {
           "extension": [
@@ -645,7 +645,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **MAY** support other categories [in addition to  [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) and  [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html)].",
+      "requirement": "[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **MAY**  support other categories [in addition to  [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) and  [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html)].",
       "_reference": [
         {
           "extension": [
@@ -726,7 +726,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Healthcare Service Location Codes (HSLOC) and SNOMED-CT Healthcare Facility Type value sets meet the USCDI applicable vocabulary standard for the Encounter Location Data Element. Certifying Systems **MAY** use a code from either vocabulary.",
+      "requirement": "Healthcare Service Location Codes (HSLOC) and SNOMED-CT Healthcare Facility Type value sets meet the USCDI applicable vocabulary standard for the Encounter Location Data Element. Certifying Systems **MAY**  use a code from either vocabulary.",
       "_reference": [
         {
           "extension": [

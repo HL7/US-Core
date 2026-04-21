@@ -20,12 +20,12 @@ The [Requirements Table] and [Requirements Resource][Capability Statements and R
 
 There are two different ways to implement US Core:
 
-1. Profile Only Support:  Systems may support *only* the US Core Profiles to represent clinical information.
-1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
+1. Profile Only Support:  Systems **MAY** support *only* the US Core Profiles to represent clinical information.<sup>[§][CONF-0915]</sup>
+2. Profile Support + Interaction Support: Systems **MAY** support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.<sup>[§][CONF-0916]</sup>
 
 #### Profile Only Support
 
-Systems may deploy and support one or more US Core Profiles to represent clinical information. They use the profile's content model without any expectations to implement the US Core interactions.
+Systems **MAY** deploy and support one or more US Core Profiles to represent clinical information. They use the profile's content model without any expectations to implement the US Core interactions.
 
 An example scenario would be a Server using only the [FHIR Bulk Data Access (Flat FHIR)] approach to export the US Core Data for Interoperability resources.  For this Server, the US Core interactions are unnecessary.
 
@@ -61,7 +61,7 @@ To support a US Core Profile, a Server:
 
 #### Profile Support + Interaction Support
 
-Servers may deploy and support one or more US Core Profiles to represent clinical information<sup>[§][CONF-0003]</sup> *and* one or more of the following US Core interactions:
+Servers **MAY** deploy and support one or more US Core Profiles to represent clinical information<sup>[§][CONF-0003]</sup> *and* one or more of the following US Core interactions:
 
 - "Quick Start" defined for each Profile<sup>[§][CONF-0004]</sup>
 - [Clinical Notes]<sup>[§][CONF-0005]</sup>
@@ -70,7 +70,7 @@ Servers may deploy and support one or more US Core Profiles to represent clinica
 - [Screening and Assessments]<sup>[§][CONF-0008]</sup>
 
 Servers implementing both can claim conformance to the US Core Profile content structure and the RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities as described below.<sup>[§][CONF-0009],[§][CONF-0010]</sup>
-A Server that certifies to the [21st Century Cures Act for accessing patient data] **SHALL** implement all components in the USCDI and the US Core CapabilityStatement.<sup>[§][CONF-0011],[§][CONF-0012]</sup>
+Certifying Systems **SHALL** implement all components in the USCDI and the US Core CapabilityStatement.<sup>[§][CONF-0011],[§][CONF-0012]</sup>
 
 ##### Claiming conformance to a US Core Profile
 

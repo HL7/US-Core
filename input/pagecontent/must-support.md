@@ -149,7 +149,7 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 
 Complex elements are composed of primitive and other complex elements.   Note that coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) also have additional binding rules documented in the [Coded Elements] section.
 
-For any complex element marked as *Must Support*, the Server **SHALL** be capable of providing at least one of the sub-element values.<sup>[§][CONF-0093]</sup> If any sub-element is marked as *Must Support*, it must also meet the *Must Support* requirements and satisfy the *Must Support* requirements for the parent element.<sup>[§][CONF-0094]</sup>
+For any complex element marked as *Must Support*, the Server **SHALL** be capable of providing at least one of the sub-element values.<sup>[§][CONF-0093]</sup> If any sub-element is marked as *Must Support*, it **SHALL** also meet the *Must Support* requirements and satisfy the *Must Support* requirements for the parent element.<sup>[§][CONF-0094]</sup>
 
 
 For any complex element marked as *Additional USCDI*, the Certifying System **SHALL** be capable of providing at least one of the sub-element values.<sup>[§][CONF-0803]</sup> If any sub-element is marked as *Additional USCDI*, it must also meet the *Additional USCDI* requirements and satisfy the *Additional USCDI* requirements for the parent element.<sup>[§][CONF-0804]</sup>

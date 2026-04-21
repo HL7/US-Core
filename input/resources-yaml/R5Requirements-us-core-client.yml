@@ -88,7 +88,7 @@ statement:
       - general-requirements.html#fhir-restful-search-api-requirements
     conformance:
       - MAY
-    requirement: When searching using the `token` type searchparameter [(how to search by token)](http://hl7.org/fhir/R4/search.html#token) The Client … **MAY** provide both the system and code values.
+    requirement: When searching using the `token` type searchparameter [(how to search by token)](http://hl7.org/fhir/R4/search.html#token) The Client … **MAY**  provide both the system and code values.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -108,7 +108,7 @@ statement:
       - general-requirements.html#fhir-restful-search-api-requirements
     conformance:
       - MAY
-    requirement: When searching using the `reference` type searchparameter [(how to search by reference)](http://hl7.org/fhir/R4/search.html#reference) The Client … **MAY** provide both the Type and id values.
+    requirement: When searching using the `reference` type searchparameter [(how to search by reference)](http://hl7.org/fhir/R4/search.html#reference) The Client … **MAY**  provide both the Type and id values.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -295,7 +295,7 @@ statement:
 
       …
 
-      [US Core Requestors] **MAY** support ... processing other [data type] choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.
+      [US Core Requestors] **MAY**  support ... processing other [data type] choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -336,7 +336,7 @@ statement:
       - scopes.html#additional-us-core-requirements
     conformance:
       - SHOULD
-    requirement: 'US Core requires ... additional metadata [to be available through the Server''s [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY**request. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.'
+    requirement: 'US Core requires ... additional metadata [to be available through the Server''s [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY** request. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -347,7 +347,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: '[When Clients request a resource in a specific language] Clients **MAY**  request language/locale using the http [Accept-Language](https://www.ietf.org/rfc/rfc2616.txt) header.'
+    requirement: '[When Clients request a resource in a specific language] Clients **MAY**   request language/locale using the http [Accept-Language](https://www.ietf.org/rfc/rfc2616.txt) header.'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -357,7 +357,7 @@ statement:
       - clinical-notes.html#support-requirements
     conformance:
       - MAY
-    requirement: Systems [Clients] **MAY**support other [DiagnosticReport] categories as well.
+    requirement: Systems [Clients] **MAY** support other [DiagnosticReport] categories as well.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -367,7 +367,7 @@ statement:
       - clinical-notes.html#support-requirements
     conformance:
       - MAY
-    requirement: a Client **MAY** determine the note and report types supported by a Server by invoking the standard FHIR Value Set Expansion ([$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html)) operation defined in the FHIR R4 specification.
+    requirement: a Client **MAY**  determine the note and report types supported by a Server by invoking the standard FHIR Value Set Expansion ([$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html)) operation defined in the FHIR R4 specification.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -388,7 +388,7 @@ statement:
       - medication-list.html#de-duplication-of-data
     conformance:
       - SHOULD
-    requirement: To provide a list of a patient’s medications, it **MAY**be necessary to “de-duplicate” them. The de-duplication activity ... **SHOULD** be provided by the Client.
+    requirement: To provide a list of a patient’s medications, it **MAY** be necessary to “de-duplicate” them. The de-duplication activity ... **SHOULD** be provided by the Client.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -398,7 +398,7 @@ statement:
       - screening-and-assessments.html#category-codes
     conformance:
       - MAY
-    requirement: API consumers **MAY** query by category  when accessing patient information.
+    requirement: API consumers **MAY**  query by category  when accessing patient information.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -431,7 +431,7 @@ statement:
       - SHOULD
     requirement: |-
       The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation [with the] exception [of]
-      MedicationStatement **MAY**be deprecated, and the data **SHOULD** be mapped to MedicationRequest.
+      MedicationStatement **MAY** be deprecated, and the data **SHOULD** be mapped to MedicationRequest.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -491,6 +491,7 @@ statement:
   - key: CONF-0369
     reference:
       - StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance
     conformance:
       - SHALL
     requirement: The Client application **SHALL** support [DocumentReference.attachment.url]
@@ -498,9 +499,13 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-documentreference.html#CONF-0369
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-adi-documentreference.html#CONF-0369
   - key: CONF-0370
     reference:
       - StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance
     conformance:
       - SHALL
     requirement: The Client application **SHALL** support [DocumentReference.attachment.data]
@@ -508,6 +513,9 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-documentreference.html#CONF-0370
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-adi-documentreference.html#CONF-0370
   - key: CONF-0376
     reference:
       - StructureDefinition-us-core-encounter.html#profile-specific-implementation-guidance
@@ -881,7 +889,7 @@ statement:
       - security.html#patient-privacy-and-security
     conformance:
       - MAY
-    requirement: Systems **MAY**  implement the [FHIR Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)
+    requirement: Systems **MAY**   implement the [FHIR Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -891,7 +899,7 @@ statement:
       - security.html#patient-privacy-and-security
     conformance:
       - MAY
-    requirement: Systems **MAY**  protect the confidentiality of data at rest via encryption and associated access controls.
+    requirement: Systems **MAY**   protect the confidentiality of data at rest via encryption and associated access controls.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -1011,7 +1019,7 @@ statement:
       - StructureDefinition-us-core-servicerequest.html#profile-specific-implementation-guidance
     conformance:
       - MAY
-    requirement: API consumers **MAY** query by category when accessing patient information.
+    requirement: API consumers **MAY**  query by category when accessing patient information.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink

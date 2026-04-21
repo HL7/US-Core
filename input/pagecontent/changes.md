@@ -11,7 +11,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 - url: <https://hl7.org/fhir/us/core/STU9/>
 - Based on FHIR version: 4.0.1
 
-The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2025 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments.
+The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2026 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments.
 #### What's new in Version 9.0.0 of US Core:
 
 Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 9.0.0 version of US Core and each previous major release on [Changes Between Versions] page. Below is an overview of significant changes between Version 9.0.0 and Version 9.0.0-ballot of US Core.
@@ -36,14 +36,14 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 8.  **Applied:** Non-substantive (Correction) Update "How To Read This Guide" section to reflect the changes [FHIR-54213](https://jira.hl7.org/browse/FHIR-54213) See Changes [Here](index.html#how-to-read-this-guide)
 9.  **Applied:**  Non-substantive (Correction) Correct typos on Must Support page [FHIR-54214](https://jira.hl7.org/browse/FHIR-54214) See Changes [Here](must-support.html)
 10. **Applied:** Non-substantive (Enhancement) Add Header to USCDI Mapping Table [FHIR-54216](https://jira.hl7.org/browse/FHIR-54216) See Changes [Here](uscdi.html#uscdi-to-us-core-mapping-table)
-11. **Applied:** Non-substantive (Correction) Change MUST to SHALL [FHIR-54218](https://jira.hl7.org/browse/FHIR-54218) See Changes [Here](medication-list.html#options-for-representing-medication)
+11. **Applied:** Non-substantive (Correction) Change MUST to **SHALL** [FHIR-54218](https://jira.hl7.org/browse/FHIR-54218) See Changes [Here](medication-list.html#options-for-representing-medication)
 12. **Applied:**  (Correction) Remove open markdown link [FHIR-54219](https://jira.hl7.org/browse/FHIR-54219) See Changes [Here](basic-provenance.html#clinical-information-reconciliation-and-incorporation)
 13. **Applied:** Non-substantive (Clarification) Update text referring to provenance use cases. [FHIR-54221](https://jira.hl7.org/browse/FHIR-54221) See Changes [Here](basic-provenance.html#hie-transformation)
 14. **Applied:** Non-substantive (Clarification) Clarify USCDI support language [FHIR-54223](https://jira.hl7.org/browse/FHIR-54223) See Changes [Here](screening-and-assessments.html#clinical-judgments)
 15. **Applied:** Non-substantive (Enhancement) Entitle Health Status Assessments Value Sets Table [FHIR-54224](https://jira.hl7.org/browse/FHIR-54224) See Changes [Here](screening-and-assessments.html#uscdi-health-assessments-data-element-value-sets)
 16. **Applied:** Non-substantive (Correction) Correct typos and bad links [FHIR-54226](https://jira.hl7.org/browse/FHIR-54226) See Changes [Here](relationship-with-other-igs.html#relationship-of-us-core-with-other-igs)
 17. **Applied:**  Non-substantive (Correction) Bold Conformance verbs [FHIR-54229](https://jira.hl7.org/browse/FHIR-54229) See Changes [Here](writing-clinical-notes.html)
-18. **Resolved - change required:** Compatible, substantive (Enhancement) 7.0.1.0.1 Value Set Package Links [FHIR-54230](https://jira.hl7.org/browse/FHIR-54230) See Changes [Here](terminology.html#value-set-packages)
+18. **Applied:** Compatible, substantive (Enhancement) Create Value Set Package Links [FHIR-54230](https://jira.hl7.org/browse/FHIR-54230) See Changes [Here](terminology.html#value-set-packages)
 19. **Applied:** Non-substantive (Correction) Fix Link: ​Comparison with version 8.0.1 [FHIR-54248](https://jira.hl7.org/browse/FHIR-54248) See Changes [Here](changes-between-versions.html#cross-version-comparisons)
 20. **Applied:** Non-substantive (Correction) Un-deprecate the US Core QuestionnaireResponse Profile in Jira [FHIR-55391](https://jira.hl7.org/browse/FHIR-55391), [FHIR-54254](https://jira.hl7.org/browse/FHIR-54254)
 21. **Applied:** Non-substantive (Correction) Fix LOINC code links [FHIR-54257](https://jira.hl7.org/browse/FHIR-54257) See Changes [Here](https://hl7.org/fhir/us/core/clinical-notes.html)
@@ -115,26 +115,26 @@ The ballot-related comments resulted in over 100 changes to this specification, 
 65. **Applied:**  Substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](security.html#patient-privacy-and-security)
 66. **Applied:**  Non-substantive (Correction) Change "ASTP" to "ONC" to reflect 2026 HHS realignment [FHIR-56253](https://jira.hl7.org/browse/FHIR-56253) For example, see Changes [Here](index.html#introduction)
 67. **Applied:**  Substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56241) See Changes [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
-68. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "can" to "MAY" and remove sentence [FHIR-56217](https://jira.hl7.org/browse/FHIR-56217) See Changes [Here](must-support.html#must-support---complex-elements)
+68. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "can" to "**MAY**" and remove sentence [FHIR-56217](https://jira.hl7.org/browse/FHIR-56217) See Changes [Here](must-support.html#must-support---complex-elements)
 69. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text from narrative and requirements table [FHIR-56221](https://jira.hl7.org/browse/FHIR-56221) See Changes [Here](medication-list.html#background-on-the-fhir-medications-resources)
-69. **Applied:**  Non-substantive (Clarification) Requirements QA:  Change "encouraged", etc to SHOULD [FHIR-56244](https://jira.hl7.org/browse/FHIR-56244) See Changes Here:
+69. **Applied:**  Non-substantive (Clarification) Requirements QA:  Change "encouraged", etc to **SHOULD** [FHIR-56244](https://jira.hl7.org/browse/FHIR-56244) See Changes Here:
     - [General Requirements](general-requirements.html#search-for-servers-requiring-status)
     - [US Core Device Profile](StructureDefinition-us-core-device.html#udi--specific-implementation-guidance)
     - [Screening and Assessments](screening-and-assessments.html#choosing-between-questionnaireresponse-and-observation)
     - [US Core Coverage Profile](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
 69. **Applied:**  Non-substantive (Clarification) Requirements QA: replace text [FHIR-56246](https://jira.hl7.org/browse/FHIR-56246) See Changes [Here](must-support.html#must-support---complex-elements)
 70. **Applied:**  Non-substantive (Clarification) Requirements QA: remove text and from requirements table [FHIR-56260](https://jira.hl7.org/browse/FHIR-56260) See Changes [Here](StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance)
-70. **Applied:**  Non-substantive (Clarification) Requirements QA: change text from "may" or "MAY" to "can" or "might" and remove from requirements table [FHIR-56271](https://jira.hl7.org/browse/FHIR-56271) See Changes Here:
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: change text from "may" or "**MAY**" to "can" or "might" and remove from requirements table [FHIR-56271](https://jira.hl7.org/browse/FHIR-56271) See Changes Here:
     - [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
     - [US Core Treatment Intervention Preference Profile](StructureDefinition-us-core-treatment-intervention-preference.html#profile-specific-implementation-guidance)
     - [US Core Care Experience Preference Profile](StructureDefinition-us-core-care-experience-preference.html#profile-specific-implementation-guidance)
     - [US Core Specimen Profile](StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance)
     - [Must Support](must-support.html#must-support-elements)
     - [Medication List](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
-70. **Applied:**  Non-substantive (Clarification) Requirements QA: change "Servers can use" to "SHALL/SHOULD" [FHIR-56272](https://jira.hl7.org/browse/FHIR-56272) See Changes Here:
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: change "Servers can use" to "**SHALL**/**SHOULD**" [FHIR-56272](https://jira.hl7.org/browse/FHIR-56272) See Changes Here:
     - [US Core Patient Profile](StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
     - [US Core Encounter Profile](StructureDefinition-us-core-encounter.html#profile-specific-implementation-guidance)
-70. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "may", "can", etc to "MAY" [FHIR-56267](https://jira.hl7.org/browse/FHIR-56267) See Changes Here:
+70. **Applied:**  Non-substantive (Clarification) Requirements QA: Change "may", "can", etc to "**MAY**" [FHIR-56267](https://jira.hl7.org/browse/FHIR-56267) See Changes Here:
     - [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html#profile-specific-implementation-guidance)
     - [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance)
     - [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance)
@@ -153,14 +153,29 @@ The ballot-related comments resulted in over 100 changes to this specification, 
     - [US Core Client CapabilityStatement](CapabilityStatement-us-core-client.html)
     - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html)
 72. **Applied:**  Non-substantive (Correction) Fix Episode Summary Example [FHIR-56076](https://jira.hl7.org/browse/FHIR-56076) See Changes [Here](DocumentReference-episode-summary.html)
+73. **Applied:** Compatible, substantive (Clarification) Requirements QA:  Change "is represented by" to "Systems **SHALL** represent": [FHIR-56245](https://jira.hl7.org/browse/FHIR-56245) See Changes [Here](StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
+74. **Applied:**  Non-substantive, (Correction) Requirements QA: change "should" to "**SHOULD**" [FHIR-56243](https://jira.hl7.org/browse/FHIR-56243) See Changes Here:
+    - [SMART Scopes](scopes.html#smart-scopes)
+    - [Using UCUM codes in the Quantity Datatype](general-guidance.html#using-ucum-codes-in-the-quantity-datatype)
+    - [US Core Coverage Profile](StructureDefinition-us-core-coverage.html#profile-specific-implementation-guidance)
+    - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance)
+    - [US Core ADI DocumentReference Profile](StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance)
+75. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "use" to "systems **SHALL**" [FHIR-56239](https://jira.hl7.org/browse/FHIR-56239) See Changes [Here](StructureDefinition-us-core-observation-occupation.html#profile-specific-implementation-guidance)
+76. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "Use" to "Servers **SHALL**" [FHIR-56236](https://jira.hl7.org/browse/FHIR-56236) See Changes [Here](StructureDefinition-us-core-immunization.html#profile-specific-implementation-guidance)
+77. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "will" to "**SHALL**" [FHIR-56233](https://jira.hl7.org/browse/FHIR-56233) See Changes [Here](clinical-notes.html#support-requirements)
+78. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "This guide requires systems" to "Systems **SHALL** use" [FHIR-56232](https://jira.hl7.org/browse/FHIR-56232) See Changes [Here](clinical-notes.html#support-requirements)
+79. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "Implementations meeting US EHR certification requirements must" to "Certifying Systems **SHALL**" [FHIR-56231](https://jira.hl7.org/browse/FHIR-56231) See Changes [Here](scopes.html#smart-scopes)
+80. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "must" to "**SHALL**" [FHIR-56230](https://jira.hl7.org/browse/FHIR-56230) See Changes [Here](must-support.html#must-support---complex-elements)
+81. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "must" to "**SHALL**" [FHIR-56228](https://jira.hl7.org/browse/FHIR-56228) See Changes [Here](general-requirements.html#profile-support--interaction-support)
+
 
 ##### Pending
 The application of the following trackers are pending and will not be completed before publication.
 
-1. **Resolved - change required:** Non-compatible (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/changes.html)
-2. **Resolved - change required:** Compatible, substantive (Clarification) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/search-parameters-and-operations.html#search-parameters)
-3. **Resolved - change required:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143) See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-patient.html)
-4. **Resolve - change required:** Non-substantive (Correction) Unusual constraint language on backbone element [FHIR-54943](https://jira.hl7.org/browse/FHIR-54943) See Changes [Here](StructureDefinition-us-core-adi-documentreference.html)
+1. **Resolved - change required:** Non-compatible (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065)
+2. **Resolved - change required:** Compatible, substantive (Clarification) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876)
+3. **Resolved - change required:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143)
+4. **Resolved - change required:** Non-substantive (Correction) Unusual constraint language on backbone element [FHIR-54943](https://jira.hl7.org/browse/FHIR-54943)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>

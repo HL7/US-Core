@@ -1327,11 +1327,6 @@ definition:
       exampleBoolean: false
       name: US Core Coverage Profile
     - reference:
-        reference: Library/USCore-ModelInfo
-      description: The CQL Model Information for US Core Version 9.0.0
-      name: US Core CQF Model Definition
-      exampleBoolean: true
-    - reference:
         reference: StructureDefinition/us-core-device
       description: The US Core Device Profile inherits from the FHIR [Device](https://hl7.org/fhir/R4/device.html) resource; refer to it for scope and usage definitions. It sets minimum expectations for the Device resource to record, search, and fetch medical and non-medical devices (for example, software or crutches). This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Medical Device* Data Class, including FDA Unique Device Identification (UDI) information associated with a patient's medical device(s). It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used and provides the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
@@ -1516,6 +1511,11 @@ definition:
       description: The US Core MedicationRequest Profile inherits from the FHIR [MedicationRequest](https://hl7.org/fhir/R4/medicationrequest.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi)  *Medications* Data Class. This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication prescriptions or orders. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core MedicationRequest Profile
+    - reference:
+        reference: Library/USCore-ModelInfo
+      description: The CQL Model Information for US Core Version 9.0.0
+      name: US Core Model Definition
+      exampleBoolean: true
     - reference:
         reference: ValueSet/us-core-narrative-status
       description: The US Core Narrative Status Value Set limits the text status for the resource narrative.
@@ -2552,7 +2552,7 @@ definition:
     - code: copyrightyear
       value: 2026+
     - code: releaselabel
-      value: CI Build
+      value: STU 9
     - code: path-resource
       value: input/resources
     - code: path-resource

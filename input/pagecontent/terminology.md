@@ -6,33 +6,13 @@ This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part 
 
 Terminology is central to US Core. Code systems and value sets change over time, independent of or due to the US Core's annual updates. These changes include adding, deprecating, or retiring code, as well as updating code definitions. In large code systems or value sets, these changes may go unnoticed; however, for smaller enumerated terminologies, they can be obvious and lead to breaking changes.
 
-Every published version of US Core also publishes a snapshot of the latest versions of code systems and value sets, along with their expansions, at the time of publication.  This snapshot of these versions can be viewed in the [Input Expansion Parameters] resource. However, US Core does not require a specific version of terminology to be used with a specific version of US Core. For example, in US Core version 6.1.0, the US Core Laboratory Test Codes link to version 6.1.0 of the ValueSet. However, its canonical URI, `http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes`, resolves to the latest published version of the valueset; in other words, it links to this more recent version of US Core's valueset. This flexibility more accurately reflects real-world usage of US Core. When implementing US Core, implementers **SHOULD** use the published versions or later versions of the value sets and code systems. In some cases, implementers **MAY** need to use terminology from earlier versions to preserve legacy data.
+Every published version of US Core also publishes a snapshot of the latest versions of code systems and value sets, along with their expansions, at the time of publication.  This snapshot of these versions can be viewed in the [Input Expansion Parameters] resource. However, US Core does not require a specific version of terminology to be used with a specific version of US Core. For example, in US Core version 6.1.0, the US Core Laboratory Test Codes link to version 6.1.0 of the ValueSet. However, its canonical URI, `http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes`, resolves to the latest published version of the valueset; in other words, it links to this more recent version of US Core's valueset. This flexibility better reflects real-world use of US Core. When implementing US Core, implementers **SHOULD** use the published versions or later versions of the value sets and code systems.<sup>[§][CONF-0912]</sup> In some cases, implementers **MAY** need to use terminology from earlier versions to preserve legacy data.<sup>[§][CONF-0913]</sup>
 
 ##### Value Set Packages
 
-The packages will be available by the US Core 9.0.0 publication date.
-{: .note-to-balloters}
+In addition to the terminology published with each version of US Core, the link below provides annual value set package updates for US Core Versions 6.1.0, 8.0.1, and 9.0.0 to assist implementers who require them.  These packages contain all the expanded value sets required for an implementation guide, and are based on the current code system and value set versions.
 
-A Value Set Package contains all the expanded value sets required for an implementation guide. In addition to the packages published with US Core, annual value set packages containing value sets expanded with the updated code system versions will be available for the following US Core Versions to assist implementers who require them.
-
-US Core 6.1.0 (published June 2023)
-
-  - [US Core 6.1.0 Value Set Package - 2023-06](#)
-  - [US Core 6.1.0 Value Set Package - 2024-05](#)
-  - [US Core 6.1.0 Value Set Package - 2025-05](#)
-  - [US Core 6.1.0 Value Set Package - 2026-05](#)
-
-US Core 8.0.1 (published June 2025)
-
-  - [US Core 8.0.1 Value Set Package - 2023-06](#)
-  - [US Core 8.0.1 Value Set Package - 2026-05](#)
-
-US Core 9.0.0 (published June 2026)
-
-  - [US Core 9.0.0 Value Set Package - 2026-05](#)
-
-For more information on Value Set Package and how they are created and used, see the [Value Set Package Implementation Guide](https://build.fhir.org/ig/cqframework/vsp-ig/)
-
+- [US Core Value Set Packages]
 
 
 ### Value Sets

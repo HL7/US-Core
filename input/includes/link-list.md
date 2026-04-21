@@ -272,3 +272,4 @@
 [Health Status Assessments Value Sets Table]: screening-and-assessments.html#health-status-assessments-value-sets-table
 [Requirements Table]: requirements.html
 [US Core Clinical Notes]: clinical-notes.html
+[US Core Value Set Packages]: https://confluence.hl7.org/spaces/CGP/pages/453907194/Value+Set+Packages

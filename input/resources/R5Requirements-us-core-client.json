@@ -168,7 +168,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "When searching using the `token` type searchparameter [(how to search by token)](http://hl7.org/fhir/R4/search.html#token) The Client … **MAY** provide both the system and code values.",
+      "requirement": "When searching using the `token` type searchparameter [(how to search by token)](http://hl7.org/fhir/R4/search.html#token) The Client … **MAY**  provide both the system and code values.",
       "_reference": [
         {
           "extension": [
@@ -208,7 +208,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "When searching using the `reference` type searchparameter [(how to search by reference)](http://hl7.org/fhir/R4/search.html#reference) The Client … **MAY** provide both the Type and id values.",
+      "requirement": "When searching using the `reference` type searchparameter [(how to search by reference)](http://hl7.org/fhir/R4/search.html#reference) The Client … **MAY**  provide both the Type and id values.",
       "_reference": [
         {
           "extension": [
@@ -530,7 +530,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "[If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support[, or a profile has] an Additional USCDI element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Additional USCDI\n\n…\n\n[US Core Requestors] **MAY** support ... processing other [data type] choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.",
+      "requirement": "[If a profile has] a Must Support element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Must Support[, or a profile has] an Additional USCDI element [with] a choice of datatypes for its content [and some of] the datatypes … are labeled as Additional USCDI\n\n…\n\n[US Core Requestors] **MAY**  support ... processing other [data type] choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.",
       "_reference": [
         {
           "extension": [
@@ -611,7 +611,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY**request. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.",
+      "requirement": "US Core requires ... additional metadata [to be available through the Server's [Well-Known Uniform Resource Identifier (URI)](https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known)]: ... [in] `scopes_supported` [the] array of scopes a Client **MAY** request. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it asked for and registered.",
       "_reference": [
         {
           "extension": [
@@ -632,7 +632,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "[When Clients request a resource in a specific language] Clients **MAY**  request language/locale using the http [Accept-Language](https://www.ietf.org/rfc/rfc2616.txt) header.",
+      "requirement": "[When Clients request a resource in a specific language] Clients **MAY**   request language/locale using the http [Accept-Language](https://www.ietf.org/rfc/rfc2616.txt) header.",
       "_reference": [
         {
           "extension": [
@@ -652,7 +652,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Systems [Clients] **MAY**support other [DiagnosticReport] categories as well.",
+      "requirement": "Systems [Clients] **MAY** support other [DiagnosticReport] categories as well.",
       "_reference": [
         {
           "extension": [
@@ -672,7 +672,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "a Client **MAY** determine the note and report types supported by a Server by invoking the standard FHIR Value Set Expansion ([$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html)) operation defined in the FHIR R4 specification.",
+      "requirement": "a Client **MAY**  determine the note and report types supported by a Server by invoking the standard FHIR Value Set Expansion ([$expand](http://hl7.org/fhir/R4/valueset-operation-expand.html)) operation defined in the FHIR R4 specification.",
       "_reference": [
         {
           "extension": [
@@ -713,7 +713,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "To provide a list of a patient’s medications, it **MAY**be necessary to “de-duplicate” them. The de-duplication activity ... **SHOULD** be provided by the Client.",
+      "requirement": "To provide a list of a patient’s medications, it **MAY** be necessary to “de-duplicate” them. The de-duplication activity ... **SHOULD** be provided by the Client.",
       "_reference": [
         {
           "extension": [
@@ -733,7 +733,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "API consumers **MAY** query by category  when accessing patient information.",
+      "requirement": "API consumers **MAY**  query by category  when accessing patient information.",
       "_reference": [
         {
           "extension": [
@@ -794,7 +794,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation [with the] exception [of]\nMedicationStatement **MAY**be deprecated, and the data **SHOULD** be mapped to MedicationRequest.",
+      "requirement": "The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation [with the] exception [of]\nMedicationStatement **MAY** be deprecated, and the data **SHOULD** be mapped to MedicationRequest.",
       "_reference": [
         {
           "extension": [
@@ -909,7 +909,8 @@
     {
       "key": "CONF-0369",
       "reference": [
-        "StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHALL"
@@ -923,13 +924,22 @@
               "valueUrl": "StructureDefinition-us-core-documentreference.html#CONF-0369"
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-adi-documentreference.html#CONF-0369"
+            }
+          ]
         }
       ]
     },
     {
       "key": "CONF-0370",
       "reference": [
-        "StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-documentreference.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-adi-documentreference.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHALL"
@@ -941,6 +951,14 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-documentreference.html#CONF-0370"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-adi-documentreference.html#CONF-0370"
             }
           ]
         }
@@ -1682,7 +1700,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Systems **MAY**  implement the [FHIR Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)",
+      "requirement": "Systems **MAY**   implement the [FHIR Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)",
       "_reference": [
         {
           "extension": [
@@ -1702,7 +1720,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "Systems **MAY**  protect the confidentiality of data at rest via encryption and associated access controls.",
+      "requirement": "Systems **MAY**   protect the confidentiality of data at rest via encryption and associated access controls.",
       "_reference": [
         {
           "extension": [
@@ -1927,7 +1945,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "API consumers **MAY** query by category when accessing patient information.",
+      "requirement": "API consumers **MAY**  query by category when accessing patient information.",
       "_reference": [
         {
           "extension": [

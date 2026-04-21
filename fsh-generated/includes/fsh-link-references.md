@@ -247,7 +247,6 @@
 [USCoreConditionEncounterDiagnosisProfile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
 [USCoreConditionProblemsHealthConcernsProfile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreCoverageProfile]: StructureDefinition-us-core-coverage.html
-[USCore-ModelInfo]: Library-USCore-ModelInfo.html
 [USCoreDeviceProfile]: StructureDefinition-us-core-device.html
 [USCoreDiagnosticReportCategory]: ValueSet-us-core-diagnosticreport-category.html
 [USCoreDiagnosticReportProfileLaboratoryReporting]: StructureDefinition-us-core-diagnosticreport-lab.html
@@ -280,6 +279,7 @@
 [USCoreMedicationProfile]: StructureDefinition-us-core-medication.html
 [USCoreMedicationDispenseProfile]: StructureDefinition-us-core-medicationdispense.html
 [USCoreMedicationRequestProfile]: StructureDefinition-us-core-medicationrequest.html
+[USCore-ModelInfo]: Library-USCore-ModelInfo.html
 [NarrativeStatus]: ValueSet-us-core-narrative-status.html
 [USCoreNonLaboratoryCodes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
 [USCoreObservationADIDocumentationProfile]: StructureDefinition-us-core-observation-adi-documentation.html

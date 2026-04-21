@@ -68,10 +68,10 @@ rest:
 
         The [Server Requirements Table](requirements.html#server-requirements) and [US Core Server Requirements Resource](Requirements-us-core-server.html) and [US Core Certifying System Requirements Resource](Requirements-us-core-certifying-system.html) list the requirements defined in these pages and sections.
     1. Return the following response classes:
-      - (Status 400): invalid parameter
-      - (Status 401/4xx): unauthorized request
-      - (Status 403): insufficient scopes
-      - (Status 404): unknown resource
+        - (Status 400): invalid parameter
+        - (Status 401/4xx): unauthorized request
+        - (Status 403): insufficient scopes
+        - (Status 404): unknown resource
     1. Support JSON source formats for all US Core interactions.
 
     The US Core Server **SHOULD**:
@@ -80,16 +80,14 @@ rest:
     1. Support XML source formats for all US Core interactions.
     1. Identify the US Core profiles supported as part of the FHIR `meta.profile` attribute for each instance.
 
-
-    **NOTE**: US Core SearchParameters referenced in this CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document Server and Client expectations. They specify additional expectations for the following SearchParameter elements:
-
-    - `multipleAnd`
-    - `multipleOr`
-    - `comparator`
-    - `modifier`
-    - `chain`
-
-    They **SHALL NOT** be interpreted as search parameters for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters.
+    > **NOTE**: US Core SearchParameters referenced in this CapabilityStatement that are derived from standard FHIR SearchParameters are only defined to document Server and Client expectations. They specify additional expectations for the following SearchParameter elements:
+    > - `multipleAnd`
+    > - `multipleOr`
+    > - `comparator`
+    > - `modifier`
+    > - `chain`
+    >
+    > They **SHALL NOT** be interpreted as search parameters for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameters.
   security:
     description: >-
       1. See the [General Security Considerations](security.html)

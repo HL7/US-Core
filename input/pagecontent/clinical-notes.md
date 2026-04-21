@@ -45,7 +45,7 @@ DocumentReference is the best choice when the narrative is broader than a specif
 
 DiagnosticReport is the best choice when a system needs to share discrete information or coded interpretations. The `DiagnosticReport.result` element supports the discrete data, and the `DiagnosticReport.presentedForm` element can represent the entire narrative report.
 
-There is no single best practice for representing a scanned or narrative-only report due to the overlapping scope of the underlying resources and variability in system implementation. Reports may be represented by either a DocumentReference or a DiagnosticReport, as demonstrated by the green area in Figure 1. For example, some systems consider any scanned report or note a DocumentReference. Other systems allow users to categorize the scanned report as Lab and store it as DiagnosticReport.[^1]
+There is no single best practice for representing a scanned or narrative-only report due to the overlapping scope of the underlying resources and variability in system implementation. Reports might be represented by either a DocumentReference or a DiagnosticReport, as demonstrated by the green area in Figure 1. For example, some systems consider any scanned report or note a DocumentReference. Other systems allow users to categorize the scanned report as Lab and store it as DiagnosticReport.[^1]
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
@@ -94,9 +94,9 @@ Not all scanned information stored through DocumentReference will be exposed thr
 
 #### Support Requirements
 
-This guide requires systems to implement the [US Core DocumentReference Profile]<sup>[§][CONF-0223]</sup> and to support a *minimum* of all ten Common Clinical Notes listed above. Systems **MAY** extend their capabilities to the complete [US Core DocumentReference Type Value Set].<sup>[§][CONF-0222]</sup> This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+Systems **SHALL** implement the [US Core DocumentReference Profile]<sup>[§][CONF-0223]</sup> and support a *minimum* of all ten Common Clinical Notes listed above. Systems **MAY** extend their capabilities to the complete [US Core DocumentReference Type Value Set].<sup>[§][CONF-0222]</sup> This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
-This guide requires systems to implement the [US Core DiagnosticReport Profile for Report and Note exchange]<sup>[§][CONF-0224]</sup> and to support a *minimum* of the three report categories:
+Systems **SHALL** implement the [US Core DiagnosticReport Profile for Report and Note exchange]<sup>[§][CONF-0224]</sup> and support a *minimum* of the three report categories:
 
 * [Cardiology (LP29708-2)]
 * [Pathology (LP7839-6)]
@@ -112,11 +112,11 @@ The following **SHOULD** be exposed via DiagnosticReport
 * Pathology Report Narrative<sup>[§][CONF-0229]</sup>
 * Procedure Note<sup>[§][CONF-0230]</sup>
 
-Servers that support DiagnosticReport will include the clinical note narrative content in `DiagnosticReport.presentedForm`.<sup>[§][CONF-0231]</sup>
+Servers that support DiagnosticReport **SHALL** include the clinical note narrative content in `DiagnosticReport.presentedForm`.<sup>[§][CONF-0231]</sup>
 
 A method for discovering the types of notes and reports that a server supports is described in the [Determining Server Note Type](#using-expand) section below.
 
-Note that this guide focuses on exposing existing information, not how systems allow users to capture data. The contents of the notes or reports, even using standard LOINC concepts, may vary widely by the health system or location. For example, CT Spleen WO contrast (LOINC 30621-7) may include individual sections for history, impressions, conclusions, or just an impressions section. In addition, discharge Summaries may have different facility or regulatory content requirements.
+Note that this guide focuses on exposing existing information, not how systems allow users to capture data. The contents of the notes or reports, even using standard LOINC concepts, can vary widely by the health system or location. For example, CT Spleen WO contrast (LOINC 30621-7) might include individual sections for history, impressions, conclusions, or just an impressions section. In addition, discharge Summaries might have different facility or regulatory content requirements.
 
 #### Search
 
@@ -141,7 +141,7 @@ Common Client search scenarios include:
 ### Determining Server Note Type
 {: #using-expand}
 
-In addition to inspecting a server CapabilityStatement, a Client **MAY** determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**.<sup>[§][CONF-0232]</sup> Because servers may support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.<sup>[§][CONF-0233]</sup>
+In addition to inspecting a server CapabilityStatement, a Client **MAY** determine the note and report types supported by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**.<sup>[§][CONF-0232]</sup> Because servers can support different read and write formats, it is also used to determine the formats (for example, text, pdf) the server supports read and write transactions. Therefore, a FHIR server claiming support to this guide **SHOULD** support the $expand operation.<sup>[§][CONF-0233]</sup>
 
 #### Discovering Note and Report Types
 
@@ -213,7 +213,7 @@ The server returns either a pointer to the Composition or the Binary resource. I
 [ClinicalImpression] resource supports the record of a clinical assessment.
 
 >
-A record of a clinical assessment performed to determine what problem(s) may affect the patient before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation or encounter, but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score
+A record of a clinical assessment performed to determine what problem(s) might affect the patient before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation or encounter, but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score
 >
 
 However, in existing EHRs, the clinical impression is often contained within a broader note construct, and the Argonauts did not find the boundary between a clinical note and ClinicalImpression clear enough to leverage the resources to share clinical notes.
