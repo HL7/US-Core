@@ -63,7 +63,7 @@
           "display": "Brian Z"
         },
         "encounter": {
-          "reference": "Encounter/outpatien-Example-1"
+          "reference": "Encounter/outpatient-Example-1"
         },
         "authoredOn": "2016-01-15",
         "requester": {
