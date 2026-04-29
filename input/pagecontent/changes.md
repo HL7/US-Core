@@ -181,7 +181,6 @@ The application of the following trackers are pending and will not be completed 
 1. **Resolved - change required:** Non-compatible (Enhancement) Deprecate every version before 3.1.1  [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065)
 2. **Resolved - change required:** Compatible, substantive (Clarification) How to deal with searchparameters in the package that only convey expectations [FHIR-48876](https://jira.hl7.org/browse/FHIR-48876)
 3. **Resolved - change required:** Compatible, substantive (Enhancement) Move USPS value set to THO [FHIR-50143](https://jira.hl7.org/browse/FHIR-50143)
-4. **Resolved - change required:** Non-substantive (Correction) Unusual constraint language on backbone element [FHIR-54943](https://jira.hl7.org/browse/FHIR-54943)
 
 ### Version = 9.0.0 - ballot
 - url: <https://hl7.org/fhir/us/core/2026Jan/>
