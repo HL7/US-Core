@@ -893,4 +893,4 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Whole Blood Specimen Example]: Specimen-specimen-example-whole-blood.html
 [Xray Chest Findings Example]: Observation-xray-chest-findings.html
 [Xray Chest Impression Example]: Observation-xray-chest-impression.html
-[Input Expansion Parameters]: Parameters-manifest.html
+[Expansion Parameters]: Parameters-manifest.html

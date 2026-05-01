@@ -467,7 +467,7 @@ fi
 
 if [[ $NO_META ]]
 then
-  if compgen -G "$examples/*.json" = /dev/null
+  if compgen -G "$examples/*.json" > /dev/null
   then
     echo "================================================================="
     echo "===remove the meta extension element from all the examples in $examples==="
@@ -491,7 +491,7 @@ fi
 
 if [[ $NO_PROFILE ]]
 then
-  if compgen -G "$examples/*.json" = /dev/null
+  if compgen -G "$examples/*.json" > /dev/null
   then
     echo "=========================================================================="
     echo "===remove the meta profile element from all the examples in $examples ==="
@@ -783,6 +783,14 @@ if [[ $IG_PUBLISH ]]; then
   echo "====================================================================="
   echo ""
   sleep 1
+
+echo "# ====================================================================="
+echo "# ==== remove meta from input/resources/Parameters-manifest.json  ====="
+echo "# ==== to make the rendering all nice n pretty like  ====="
+echo "# ====================================================================="
+
+jq 'del(.meta)' input/resources/Parameters-manifest.json > /tmp/p.json \
+&& mv /tmp/p.json input/resources/Parameters-manifest.json
 
 echo "================================================================="
 echo getting path = ...................................................

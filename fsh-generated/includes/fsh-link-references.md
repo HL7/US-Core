@@ -74,6 +74,7 @@
 [exercise-per-week]: Observation-exercise-per-week.html
 [exercise-vital-sign]: Questionnaire-exercise-vital-sign.html
 [exercise-vital-sign]: QuestionnaireResponse-exercise-vital-sign.html
+[manifest]: Parameters-manifest.html
 [familymemberhistory-example]: FamilyMemberHistory-familymemberhistory-example.html
 [goal-1]: Goal-goal-1.html
 [goal-sdoh-2]: Goal-goal-sdoh-2.html
@@ -91,7 +92,6 @@
 [HVS-item-example-88124-3]: Observation-HVS-item-example-88124-3.html
 [HVS-panel-example-88121-9]: Observation-HVS-panel-example-88121-9.html
 [imm-1]: Immunization-imm-1.html
-[manifest]: Parameters-manifest.html
 [jugular-vein-distension]: Observation-jugular-vein-distension.html
 [length]: Observation-length.html
 [cbc-leukocytes]: Observation-cbc-leukocytes.html

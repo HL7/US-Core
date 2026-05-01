@@ -461,6 +461,11 @@ definition:
       name: Exercise Vital Sign QuestionnaireResponse Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
     - reference:
+        reference: Parameters/manifest
+      description: The expansion parameters resource for this implementation guide, specifying SNOMED Edition and version, as well as pinned versions for versionless references used in this IG.
+      exampleBoolean: false
+      name: Expansion Parameters
+    - reference:
         reference: FamilyMemberHistory/familymemberhistory-example
       description: This is an example of FamilyMemberHistory for the *US Core FamilyMemberHistory Profile*
       name: FamilyMemberHistory Example
@@ -545,11 +550,6 @@ definition:
       description: This is an example for the *US Core Immunization Profile*.
       name: Immunization Example 1
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization
-    - reference:
-        reference: Parameters/manifest
-      description: The input expansion parameters resource for this implementation guide, specifying SNOMED Edition. This resource will be contained within the published implementation guide with all pinned references.
-      exampleBoolean: false
-      name: Input Expansion Parameters
     - reference:
         reference: Observation/jugular-vein-distension
       description: This is a Jugular vein distension Example for the *Clinical Test Result Observation Profile*.
@@ -2590,6 +2590,18 @@ definition:
       value: Bundle/docref-example-2
     - code: version-comparison-master
       value: 8.0.1
+    - code: version-comparison
+      value: 8.0.1
+    - code: version-comparison
+      value: 7.0.0
+    - code: version-comparison
+      value: 6.1.0
+    - code: version-comparison
+      value: 5.0.1
+    - code: version-comparison
+      value: 4.0.0
+    - code: version-comparison
+      value: 3.1.1
     - code: html-exempt
       value: comparison-argo/vs-manifestation-or-symptom-manifestation-or-symptom.html
     - code: html-exempt

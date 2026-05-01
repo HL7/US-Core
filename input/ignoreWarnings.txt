@@ -189,57 +189,72 @@ The html source contains the word 'SHOULD NOT' but it is not in a text phrase ma
 
 # 42.  === The following codes in the example are not in the extensible base binding, v3-ServiceDeliveryLocationRoleType, defined for the element, but are valid codes taken from valuesets that are defined as "additional bindings" for different use contexts. ===
 
-# 43 === The error is due to an issue with the terminology server, not the implementation guide. For details, see the Zulip chat at: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/whither.20ICD9cm.20in.20THO.207.2E0.2E0.3F/with/559122224 ===
+# 43. === The error is due to an issue with the terminology server, not the implementation guide. For details, see the Zulip chat at: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/whither.20ICD9cm.20in.20THO.207.2E0.2E0.3F/with/559122224 ===
 
-# 44 === Although it may not be published before this ballot version is published, this link will resolve when US Core 8.0.1 is published. ===
+# 44. === Although it may not be published before this ballot version is published, this link will resolve when US Core 8.0.1 is published. ===
 
-# 45 === This error will be present until the publication team can address it.  See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 ===
+# 45. === This error will be present until the publication team can address it.  See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 ===
 
-# 46 === The additional binding purpose code for this value set is  "Preferred"; therefore, it does not show up in all the provided examples.===
+# 46. === The additional binding purpose code for this value set is  "Preferred"; therefore, it does not show up in all the provided examples.===
 
-# 47 === This NDC codes has been checked and is a valid Unit of Use NDC codes as described on the CDC's IIS website: https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_tableaccess.asp. There are issues with the NDC directory used for validation, because it is incomplete.  For details and the variance approval from the product director, see this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Immunization.20NDC.20Code.20error/with/562172015 ===
+# 47. === This NDC codes has been checked and is a valid Unit of Use NDC codes as described on the CDC's IIS website: https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_tableaccess.asp. There are issues with the NDC directory used for validation, because it is incomplete.  For details and the variance approval from the product director, see this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Immunization.20NDC.20Code.20error/with/562172015 ===
 
 ERROR: Immunization/imm-1: Immunization.vaccineCode.coding[1].code: Unknown code '49281012188' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version '2021-11-01'
 
-# 49 === This guide uses a custom liquid script to generat the the CapabilityStatement narrative. To facilate rendering of displays and relative links to human readable content, the Capability statemnent uses the Display Name and Narrative Link extensions on the canonicals types - 'supportedProfiles', 'operation.definition', and 'implementationGuide' elements.  As a result, the relative links in the Narrative Link extensions will generate "No definition could be found" warnings wherever they are used. For example: "No definition could be found for URL value 'StructureDefinition-us-core-allergyintolerance.html'" The warning have been checked and are valid links internal to to guide or to other guides.
+# 49. === This guide uses a custom liquid script to generat the the CapabilityStatement narrative. To facilate rendering of displays and relative links to human readable content, the Capability statemnent uses the Display Name and Narrative Link extensions on the canonicals types - 'supportedProfiles', 'operation.definition', and 'implementationGuide' elements.  As a result, the relative links in the Narrative Link extensions will generate "No definition could be found" warnings wherever they are used. For example: "No definition could be found for URL value 'StructureDefinition-us-core-allergyintolerance.html'" The warning have been checked and are valid links internal to to guide or to other guides.
 
-# 50 === This ValueSet is set by the Sushi tooling stack when generating the ImplementationGuide resources from the configuration file. It will be updated when the tooling is updated ===
+# 50. === This ValueSet is set by the Sushi tooling stack when generating the ImplementationGuide resources from the configuration file. It will be updated when the tooling is updated ===
 
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
 
-# 51 === There are no versions specified for these ValueSet in the examples. However, the validator and terminology server are referencing earlier versions of them that have been marked as retired and superseded by more recent and active version.  The publishing team is aware of this issue and reviewing how to fix it. ===
+# 51. === There are no versions specified for these ValueSet in the examples. However, the validator and terminology server are referencing earlier versions of them that have been marked as retired and superseded by more recent and active version.  The publishing team is aware of this issue and reviewing how to fix it. ===
 
-Reference to retired ValueSet http://cts.nlm.nih.gov/fhir/ValueSet/%
 
-# 52 === These URLs are generated by: 1) Requirements resource element `Requirements​.statement​.reference` ("A reference to another artifact that created this requirement. This could be a Profile, etc., or external regulation, or business requirements expressed elsewhere.")  2)  The originalNarrative Extension ("A human language representation of the concept (resource/element), as a url that is a reference to a portion of the narrative of a resource ....") for each element `Requirements​.statement​.reference` which provide a direct link to the text in the guide using the requirement's key as a page anchor.  These are all relative references within the IG and use to enhance the rendering to inform the reader what page and section the requirement came from. ===
+# 52. === These URLs are generated by: 1) Requirements resource element `Requirements​.statement​.reference` ("A reference to another artifact that created this requirement. This could be a Profile, etc., or external regulation, or business requirements expressed elsewhere.")  2)  The originalNarrative Extension ("A human language representation of the concept (resource/element), as a url that is a reference to a portion of the narrative of a resource ....") for each element `Requirements​.statement​.reference` which provide a direct link to the text in the guide using the requirement's key as a page anchor.  These are all relative references within the IG and use to enhance the rendering to inform the reader what page and section the requirement came from. ===
 
 No definition could be found for URL value%
 
-# 54 === These deprecated extensions are inherited from the base FHIR resources and not under the control of US Core editors. ===
+# 54. === These deprecated extensions are inherited from the base FHIR resources and not under the control of US Core editors. ===
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0-ballot-tc1 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
 
-# 55 === The following Code Systems are defined by CDC.  However, the IG publisher's terminology server does not support CDC-based code systems. Note that the Codesystem URL is correct and listed on THO's External Code Systems page. ===
+# 55. === The following Code Systems are defined by CDC.  However, the IG publisher's terminology server does not support CDC-based code systems. Note that the Codesystem URL is correct and listed on THO's External Code Systems page. ===
 
 A definition for CodeSystem 'https://nahdo.org/sopt' could not be found, so the code cannot be validated
 
-# 56 === The following Code Systems are commonly used standard code system that support post-coordination, which means full expansion isn’t possible. We recognize that the the value set definitions where they are used need to be narrowed, but this work has been deferred. ===
+# 56. === The following Code Systems are commonly used standard code system that support post-coordination, which means full expansion isn’t possible. We recognize that the the value set definitions where they are used need to be narrowed, but this work has been deferred. ===
 
 WARNING: ValueSet.where(id = 'us-core-goal-description'): Error from https://tx.fhir.org/r4: Error: The code System "http://snomed.info/sct" has a grammar, and cannot be enumerated directly
 WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from https://tx.fhir.org/r4: Error: The code System "http://www.ama-assn.org/go/cpt" has a grammar, and cannot be enumerated directly
 
-# 57 ===  This extension is used to define the expectation for he following SearchParameter elements: multipleAnd, multipleOr, comparator, modifier, and chain.  It also used to render the SearchParameter narrative using custom templates. Since its context is not scoped outside of CapabilityStatement the validator is generating these errors. The tracker, FHIR-56196 to extend its context to these SearchParameter elements was approved and applied. We anticipate the next release of the HL7 Extensions IG will resolve these errors.===
+# 57. ===  This extension is used to define the expectation for he following SearchParameter elements: multipleAnd, multipleOr, comparator, modifier, and chain.  It also used to render the SearchParameter narrative using custom templates. Since its context is not scoped outside of CapabilityStatement the validator is generating these errors. The tracker, FHIR-56196 to extend its context to these SearchParameter elements was approved and applied. We anticipate the next release of the HL7 Extensions IG will resolve these errors.===
 
 The extension http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation v5.3.0-ballot-tc1 is not allowed to be used at this point%
 
-# 58 === This informational message confirms that this guide is pinned to all most recent versions used at the time this guide was published. For more guidance on pinning in US Core, see the Terminology Page. ===
+# 58. === This informational message confirms that this guide is pinned to all most recent versions used at the time this guide was published. For more guidance on pinning in US Core, see the Terminology Page. ===
 
 Pinned the version of http://terminology.hl7.org/CodeSystem/%
 Pinned the version of http://terminology.hl7.org/ValueSet/%
 Pinned the version of http://hl7.org/fhir/%
 Pinned the version of http://phinvads.cdc.gov/fhir/ValueSet/%
 
-# 59 === These warnings are valid "the parameters system-version, default-valueset-version, and default-canonical-version which are all documented as part of R6 [valueset-operation-expand.html], but are applied by the tooling eco-system in the context of earlier versions". However, the implementation guide editors are unable to correct the Parameters Manifest resource because it is generated by the build. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/pin-canonicals.20not.20working.3F/near/585774849 ===
+# 59. === These warnings are valid "the parameters system-version, default-valueset-version, and default-canonical-version which are all documented as part of R6 [valueset-operation-expand.html], but are applied by the tooling eco-system in the context of earlier versions". However, the implementation guide editors are unable to correct the Parameters Manifest resource because it is generated by the build. See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/pin-canonicals.20not.20working.3F/near/585774849 ===
 
-If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found string
+If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
+
+# 60. === The preferred US Core defined binding is defined intentionally in VSAC. Although this code is a legitimate assessment code, it does not fit the valueset's definition, because its class attribute is not "survey".  We logged tracker FHIR-56786 to review and update the ValueSet definition in the next version of US Core. ===
+
+None of the codings provided are in the value set 'Screening and Assessment Survey Codes' (http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.13|20260422), and a coding is recommended to come from this value set%
+
+# 61. === These category cods are from the US Core Observation Screening Assessment Profile's minimum required binding and not from base FHIR Observation's preferred binding.  ===
+
+None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set%
+
+# 62. === The US Core Simple Observation Profiles have preferred or example bindings to broadly defined LOINC value sets. These value sets contain concepts that span many use cases and are not bound to any USCDI Health Assessments Data Element. The code in these cases that triggered this message are created and recommnended by The Gravity project for the SDOH USCDI Health Assessments Data Element. ===
+
+None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/fhir/ValueSet/observation-codes|4.0.1), and a coding is recommended to come from this value set%
+
+
+
+
