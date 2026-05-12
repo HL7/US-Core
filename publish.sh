@@ -39,7 +39,7 @@ do
 done
 
 # ========= Globals  =================
-NA='http://tx.fhir.org'
+[[ "$NA" != "N/A" ]] && NA='http://tx.fhir.org'
 ig_path="$HOME/Downloads" # **THE LOCATION OF `org.hl7.fhir.igpublisher.jar` NEEDS TO BE CONFIGURED FOR YOUR LOCAL INSTALL **  ====
 inpath=input
 examples="$inpath"/examples
@@ -458,6 +458,8 @@ if [[ $SUSHI ]]; then
     ig_yaml='input/data/ig.yml'
     echo ""
     echo "========================================================================"
+    echo " copy $ig_json to root ..."
+    cp $ig_json .
     echo " Using yq convert $ig_json and copy to $ig_yaml ..."
     yq -p=json -o=yaml < $ig_json > $ig_yaml
     done
@@ -523,7 +525,7 @@ if [[ $APP_VERSION ]]; then
     echo "=== and update IG.yml file example Canonicals to the current version =="
     echo "=== and update CapabilityStatement canonicals to the current version =="
     echo "================================================================="
-    IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
+    IGJSON=$(echo ImplementationGuide*.json)
     echo "========= IGJSON is $IGJSON ==========="
     tmp=$(mktemp -d _examples)
 

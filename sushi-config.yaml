@@ -235,9 +235,9 @@ pages:
       valueCode: informative
     title: US Core ImplementationGuide Resource
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-  path-resource:
-    - input/resources
-    - fsh-generated/resources
+  # path-resource:
+  #   - input/resources
+  #   - fsh-generated/resources
   path-pages:
     - input/pagecontent
     - input/intro-notes
@@ -245,7 +245,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     #- input/summaries
   path-liquid: input/liquid
     # path-data: input/examples # A relative path in which data files can be found (will go in _data for Jekyll).
-  path-expansion-params: '../../input/resources/Parameters-manifest.json' # relative path from fsh-generated/resources (hence the "../..?")for using US ed of SNOMED
+  path-expansion-params: 'input/resources/Parameters-manifest.json' # relative path from ig resource for using US ed of SNOMED
   active-tables: false
   apply-contact: true
   apply-jurisdiction: true

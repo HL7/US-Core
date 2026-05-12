@@ -2552,10 +2552,6 @@ definition:
       value: 2026+
     - code: releaselabel
       value: STU 9
-    - code: path-resource
-      value: input/resources
-    - code: path-resource
-      value: fsh-generated/resources
     - code: path-pages
       value: input/pagecontent
     - code: path-pages
@@ -2563,7 +2559,7 @@ definition:
     - code: path-liquid
       value: input/liquid
     - code: path-expansion-params
-      value: ../../input/resources/Parameters-manifest.json
+      value: input/resources/Parameters-manifest.json
     - code: active-tables
       value: "false"
     - code: apply-contact

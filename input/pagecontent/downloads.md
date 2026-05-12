@@ -10,6 +10,13 @@ A downloadable version of this IG is available so it can be hosted locally:
 
 - [Downloadable Copy(compressed folder)](full-ig.zip)
 
+### LLM-Ready View
+
+This is an "LLM-ready" view of the IG pages in Markdown format created from the static HTML pages. This format reduces the IG size and is designed to help an LLM handle the IG contents more easily.
+
+* [llms.txt](llms.txt): An llms.txt manifest — a machine-readable index of the IG's Markdown files.
+* [ai.zip](ai.zip): Markdown version of each HTML page bundled in a zip file.
+
 ### Examples
 
 All the examples in this Implementation Guide are available for download:

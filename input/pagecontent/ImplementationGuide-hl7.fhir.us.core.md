@@ -3,7 +3,6 @@
 |---|---|
 |*Official URL*: {{ site.data.ig.url }}|*Version*: {{ site.data.ig.version }}|
 |*NPM package name*: {{ site.data.ig.packageId }}|*ComputableName*: {{ site.data.ig.name }}|
-|*Copyright/Legal*: Used by permission of HL7 International, all rights reserved Creative Commons License|
 {:.grid}
 
 {{ site.data.ig.description }}

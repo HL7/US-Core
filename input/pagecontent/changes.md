@@ -33,7 +33,8 @@ The ballot-related comments resulted in over 80 changes to this specification, w
     - [US Core PractitionerRole Profile](StructureDefinition-us-core-practitionerrole.html)
     - [US Core Goal Profile](StructureDefinition-us-core-goal.html)
     - [General Requirements](general-requirements.html#extensible-binding-for-coded-elements)
-5. **Applied:**   Non-compatible (Enhancement) Update “Common substances for allergy and intolerance documentation including refutations” ValueSet [FHIR-56095](https://jira.hl7.org/browse/FHIR-56095) See Changes [Here](StructureDefinition-us-core-allergyintolerance.html)
+2. **Applied:**   Non-compatible (Enhancement) Update “Common substances for allergy and intolerance documentation including refutations” ValueSet [FHIR-56095](https://jira.hl7.org/browse/FHIR-56095) See Changes [Here](StructureDefinition-us-core-allergyintolerance.html)
+3. **Applied:** Non-compatible (Correction) Preserve US Core OIDs across releases[FHIR-56878](https://jira.hl7.org/browse/FHIR-56878) For example, see [Version 9.0.0 US Core Diagnostic Report Category Codes](ValueSet-us-core-diagnosticreport-category.html) (compare with [Version 8.0.1 US Core Diagnostic Report Category Codes](https://hl7.org/fhir/us/core/STU8.0.1/ValueSet-us-core-diagnosticreport-category.html))
 
 ##### Compatible, substantive
 1. **Applied:** Compatible, substantive (Enhancement) Change the Tribal Affiliation binding strength to preferred [FHIR-53592](https://jira.hl7.org/browse/FHIR-53592) See Changes [Here](StructureDefinition-us-core-tribal-affiliation.html)
