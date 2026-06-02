@@ -99,9 +99,14 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
   - [Overview of US Core publication Process](#overview-of-us-core-publication-process)
-    - [Prepare IG for for new version:](#prepare-ig-for-for-new-version)
+    - [Prepare IG for new version:](#prepare-ig-for-new-version)
     - [Prepublication checklists](#prepublication-checklists)
   - [Misc topics](#misc-topics)
+    - [Updating the Change Log](#updating-the-change-log)
+    - [New content highlighting](#new-content-highlighting)
+    - [QA tricks and tips](#qa-tricks-and-tips)
+    - [Version comparisons](#version-comparisons)
+    - [Update the History Page Introducion](#update-the-history-page-introducion)
 
 
 
@@ -1033,7 +1038,7 @@ Updated table and file contents
 
 ## Misc topics
 
-2. Updating the Change Log
+### Updating the Change Log
    - For a discussion on adding a change log section for a new version. See "Update the Change Log page" item in the *Prepare IG for new version* above"
    - The change log is updated as trackers are applied
       - The `Tracker Status` is updated from "Triaged" to "Resoved-Change Required" to "Applied" , etc
@@ -1044,13 +1049,16 @@ Updated table and file contents
       - The `Updated Content [Link](#)` is edited to link to the relevant section(s) that have been updated
         - These are *relative* links so they point to the current version (As documented above, they are updated to absolute links *before* adding a new section to the change log)
  -  Before publication group and reorder list by change impact using an AI chat tool.
-3. New content highlighting
+### New content highlighting
    - csv files
    - yaml files
    - md files
      - snippets in VS codes
    - removal of new content highlighting
-4. QA tricks and tips
+### QA tricks and tips
    - ignoreWarnings.text
-5. Version comparisons
+### Version comparisons
     - Argo DSTU2 Comparisons - see inline instructions
+### Update the History Page Introducion
+  1. The master for the US core introduction is now here: https://hl7.org/fhir/us/core/package-list-introduction.md  ( not in local - autobuild only )
+  2. Send Grahame Grieve changes to that file directly
