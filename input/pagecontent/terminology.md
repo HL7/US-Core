@@ -8,7 +8,7 @@ Terminology is central to US Core. Code systems and value sets change over time,
 
 Every published version of US Core also publishes a snapshot of the latest versions of code systems and value sets, along with their expansions, at the time of publication.  This snapshot of these versions can be viewed in the [Expansion Parameters] resource. However, US Core does not require a specific version of terminology to be used with a specific version of US Core. For example, in US Core version 6.1.0, the US Core Laboratory Test Codes link to version 6.1.0 of the ValueSet. However, its canonical URI, `http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes`, resolves to the latest published version of the valueset; in other words, it links to this more recent version of US Core's valueset. This flexibility better reflects real-world use of US Core. When implementing US Core, implementers **SHOULD** use the published versions or later versions of the value sets and code systems.<sup>[§][CONF-0912]</sup> In some cases, implementers **MAY** need to use terminology from earlier versions to preserve legacy data.<sup>[§][CONF-0913]</sup>
 
-##### Value Set Packages
+#### Value Set Packages
 
 In addition to the terminology published with each version of US Core, the link below provides annual value set package updates for US Core Versions 6.1.0, 8.0.1, and 9.0.0 to assist implementers who require them.  These packages contain all the expanded value sets required for an implementation guide, and are based on the current code system and value set versions.
 
@@ -262,7 +262,7 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
 For more information, refer to the [FHIR Terminology Service for VSAC Resources](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html)
 
-##### Example
+#### Example
 
 For example, the [US Core Smoking Status Observation Profile] `valueCodeableConcept` element has a preferred binding to the Smoking Status value set. To access it in VSAC, click on the link to `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`:
 
