@@ -1,0 +1,373 @@
+Date: Wed, 8 Jul 2026 19:46:00 +0000 (UTC)
+Message-ID: <2058850240.18068.1783539960437@EC2AMAZ-338T6P0.awsactivedirectory.hl7.org>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_18067_321050037.1783539960435"
+
+------=_Part_18067_321050037.1783539960435
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Value Set Packages</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-link-pressed, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Value Set Packages</h1>
+    <div class=3D"Section1">
+        <p style=3D"text-align: left;"><span>A Value Set Package contains a=
+ll the expanded value sets required for an implementation guide. US Core pu=
+blishes annual value set packages that contain value sets expanded with upd=
+ated code system versions for each release year. These packages are availab=
+le for several US Core Versions to help implementers. To download, click th=
+e appropriate link below for your desired US Core Version and file format (=
+JSON, XML, or CSV). Each link provides a zip file containing the selected V=
+alue Set Package.</span></p>
+<h4 id=3D"ValueSetPackages-USCore6.1.0(publishedJune2023)">US Core 6.1.0 (p=
+ublished June 2023)</h4>
+<ul>
+ <li data-uuid=3D"c17f462b-7b84-4f56-a4c2-94203b392b50">US Core 6.1.0 Value=
+ Set Package - 2023-06:&nbsp; :arrow_down: JSON | XML | CSV</li>
+ <li data-uuid=3D"4c3bc5d2-ed65-45b6-92a7-1621ea724d20">US Core 6.1.0 Value=
+ Set Package - 2024-05:&nbsp; :arrow_down: <a href=3D"/download/attachments=
+/453907194/US-Core-610-2024-05-Value-Set-Package-bundle.json.zip?version=3D=
+1&amp;modificationDate=3D1783497417312&amp;api=3Dv2" data-linked-resource-i=
+d=3D"474745427" data-linked-resource-version=3D"1" data-linked-resource-typ=
+e=3D"attachment" data-linked-resource-default-alias=3D"US-Core-610-2024-05-=
+Value-Set-Package-bundle.json.zip" data-nice-type=3D"Zip Archive" data-link=
+ed-resource-content-type=3D"application/zip" data-linked-resource-container=
+-id=3D"453907194" data-linked-resource-container-version=3D"10">JSON</a> | =
+<a href=3D"/download/attachments/453907194/US-Core-610-2024-05-Value-Set-Pa=
+ckage-bundle.xml.zip?version=3D1&amp;modificationDate=3D1783497417990&amp;a=
+pi=3Dv2" data-linked-resource-id=3D"474745428" data-linked-resource-version=
+=3D"1" data-linked-resource-type=3D"attachment" data-linked-resource-defaul=
+t-alias=3D"US-Core-610-2024-05-Value-Set-Package-bundle.xml.zip" data-nice-=
+type=3D"Zip Archive" data-linked-resource-content-type=3D"application/zip" =
+data-linked-resource-container-id=3D"453907194" data-linked-resource-contai=
+ner-version=3D"10">XML</a> | CSV</li>
+ <li data-uuid=3D"eaa908f9-407a-4933-ad33-49f54407709c">US Core 6.1.0 Value=
+ Set Package - 2025-05:&nbsp; :arrow_down: <a href=3D"/download/attachments=
+/453907194/US-Core-610-2025-04-Value-Set-Package-bundle.json.zip?version=3D=
+1&amp;modificationDate=3D1783480951598&amp;api=3Dv2" data-linked-resource-i=
+d=3D"474745376" data-linked-resource-version=3D"1" data-linked-resource-typ=
+e=3D"attachment" data-linked-resource-default-alias=3D"US-Core-610-2025-04-=
+Value-Set-Package-bundle.json.zip" data-nice-type=3D"Zip Archive" data-link=
+ed-resource-content-type=3D"application/zip" data-linked-resource-container=
+-id=3D"453907194" data-linked-resource-container-version=3D"10">JSON</a> | =
+<a href=3D"/download/attachments/453907194/US-Core-610-2025-04-Value-Set-Pa=
+ckage-bundle.xml.zip?version=3D1&amp;modificationDate=3D1783480956573&amp;a=
+pi=3Dv2" data-linked-resource-id=3D"474745377" data-linked-resource-version=
+=3D"1" data-linked-resource-type=3D"attachment" data-linked-resource-defaul=
+t-alias=3D"US-Core-610-2025-04-Value-Set-Package-bundle.xml.zip" data-nice-=
+type=3D"Zip Archive" data-linked-resource-content-type=3D"application/zip" =
+data-linked-resource-container-id=3D"453907194" data-linked-resource-contai=
+ner-version=3D"10">XML</a> | <a href=3D"/download/attachments/453907194/US-=
+Core-610-2025-04-Value-Set-Package-bundle.csv.zip?version=3D1&amp;modificat=
+ionDate=3D1783480958713&amp;api=3Dv2" data-linked-resource-id=3D"474745378"=
+ data-linked-resource-version=3D"1" data-linked-resource-type=3D"attachment=
+" data-linked-resource-default-alias=3D"US-Core-610-2025-04-Value-Set-Packa=
+ge-bundle.csv.zip" data-nice-type=3D"Zip Archive" data-linked-resource-cont=
+ent-type=3D"application/zip" data-linked-resource-container-id=3D"453907194=
+" data-linked-resource-container-version=3D"10">CSV</a></li>
+ <li data-uuid=3D"9bc8eb49-7678-4ff7-afdb-9ed3dd18ef88">US Core 6.1.0 Value=
+ Set Package - 2026-05:&nbsp; :arrow_down: <a href=3D"/download/attachments=
+/453907194/US-Core-610-2026-05-Value-Set-Package-bundle.json.zip?version=3D=
+1&amp;modificationDate=3D1783480890498&amp;api=3Dv2" data-linked-resource-i=
+d=3D"474744709" data-linked-resource-version=3D"1" data-linked-resource-typ=
+e=3D"attachment" data-linked-resource-default-alias=3D"US-Core-610-2026-05-=
+Value-Set-Package-bundle.json.zip" data-nice-type=3D"Zip Archive" data-link=
+ed-resource-content-type=3D"application/zip" data-linked-resource-container=
+-id=3D"453907194" data-linked-resource-container-version=3D"10">JSON</a> | =
+<a href=3D"/download/attachments/453907194/US-Core-610-2026-05-Value-Set-Pa=
+ckage-bundle.xml.zip?version=3D1&amp;modificationDate=3D1783480859462&amp;a=
+pi=3Dv2" data-linked-resource-id=3D"474744710" data-linked-resource-version=
+=3D"1" data-linked-resource-type=3D"attachment" data-linked-resource-defaul=
+t-alias=3D"US-Core-610-2026-05-Value-Set-Package-bundle.xml.zip" data-nice-=
+type=3D"Zip Archive" data-linked-resource-content-type=3D"application/zip" =
+data-linked-resource-container-id=3D"453907194" data-linked-resource-contai=
+ner-version=3D"10">XML</a> | <a href=3D"/download/attachments/453907194/US-=
+Core-610-2026-05-Value-Set-Package-bundle.csv.zip?version=3D1&amp;modificat=
+ionDate=3D1783480831840&amp;api=3Dv2" data-linked-resource-id=3D"474744711"=
+ data-linked-resource-version=3D"1" data-linked-resource-type=3D"attachment=
+" data-linked-resource-default-alias=3D"US-Core-610-2026-05-Value-Set-Packa=
+ge-bundle.csv.zip" data-nice-type=3D"Zip Archive" data-linked-resource-cont=
+ent-type=3D"application/zip" data-linked-resource-container-id=3D"453907194=
+" data-linked-resource-container-version=3D"10">CSV</a></li>
+</ul>
+<h4 id=3D"ValueSetPackages-USCore8.0.1(publishedJune2025)">US Core 8.0.1 (p=
+ublished June 2025)</h4>
+<ul>
+ <li style=3D"color:#172b4d;" data-uuid=3D"9828703b-11ab-4a4c-b41f-1f8440e5=
+7791"><span style=3D"color:#172b4d;"><a style=3D"text-decoration: none;colo=
+r:#172b4d;" href=3D"#" rel=3D"nofollow">US Core 8.0.1 Value Set Package - 2=
+025-06</a>: </span>:arrow_down: <a href=3D"/download/attachments/453907194/=
+US-Core-801-2025-05-Value-Set-Package-bundle.json.zip?version=3D1&amp;modif=
+icationDate=3D1783497402111&amp;api=3Dv2" data-linked-resource-id=3D"474745=
+426" data-linked-resource-version=3D"1" data-linked-resource-type=3D"attach=
+ment" data-linked-resource-default-alias=3D"US-Core-801-2025-05-Value-Set-P=
+ackage-bundle.json.zip" data-nice-type=3D"Zip Archive" data-linked-resource=
+-content-type=3D"application/zip" data-linked-resource-container-id=3D"4539=
+07194" data-linked-resource-container-version=3D"10">JSON</a> | XML | CSV</=
+li>
+ <li style=3D"color:#172b4d;" data-uuid=3D"0d1a79e0-7b8b-4d9a-bed4-d2d89e86=
+f68c"><span style=3D"color:#172b4d;"><a style=3D"text-decoration: none;colo=
+r:#172b4d;" href=3D"#" rel=3D"nofollow">US Core 8.0.1 Value Set Package - 2=
+026-05</a>: </span>:arrow_down: <a href=3D"/download/attachments/453907194/=
+US-Core-801-2026-05-Value-Set-Package-bundle.json.zip?version=3D1&amp;modif=
+icationDate=3D1783479893956&amp;api=3Dv2" data-linked-resource-id=3D"474745=
+346" data-linked-resource-version=3D"1" data-linked-resource-type=3D"attach=
+ment" data-linked-resource-default-alias=3D"US-Core-801-2026-05-Value-Set-P=
+ackage-bundle.json.zip" data-nice-type=3D"Zip Archive" data-linked-resource=
+-content-type=3D"application/zip" data-linked-resource-container-id=3D"4539=
+07194" data-linked-resource-container-version=3D"10">JSON</a> | <a href=3D"=
+/download/attachments/453907194/US-Core-801-2026-05-Value-Set-Package-bundl=
+e.xml.zip?version=3D1&amp;modificationDate=3D1783480099937&amp;api=3Dv2" da=
+ta-linked-resource-id=3D"474745345" data-linked-resource-version=3D"1" data=
+-linked-resource-type=3D"attachment" data-linked-resource-default-alias=3D"=
+US-Core-801-2026-05-Value-Set-Package-bundle.xml.zip" data-nice-type=3D"Zip=
+ Archive" data-linked-resource-content-type=3D"application/zip" data-linked=
+-resource-container-id=3D"453907194" data-linked-resource-container-version=
+=3D"10">XML</a> | <a href=3D"/download/attachments/453907194/US-Core-801-20=
+26-05-Value-Set-Package-bundle.csv.zip?version=3D1&amp;modificationDate=3D1=
+783480798941&amp;api=3Dv2" data-linked-resource-id=3D"474745344" data-linke=
+d-resource-version=3D"1" data-linked-resource-type=3D"attachment" data-link=
+ed-resource-default-alias=3D"US-Core-801-2026-05-Value-Set-Package-bundle.c=
+sv.zip" data-nice-type=3D"Zip Archive" data-linked-resource-content-type=3D=
+"application/zip" data-linked-resource-container-id=3D"453907194" data-link=
+ed-resource-container-version=3D"10">CSV</a></li>
+</ul>
+<h4 id=3D"ValueSetPackages-USCore9.0.0(publishedJune2026)">US Core 9.0.0 (p=
+ublished June 2026)</h4>
+<ul>
+ <li style=3D"color:#172b4d;" data-uuid=3D"f749179e-058a-45da-b81c-185c87f2=
+12b3"><span style=3D"color:#172b4d;"><a style=3D"text-decoration: none;colo=
+r:#172b4d;" href=3D"#" rel=3D"nofollow">US Core 9.0.0 Value Set Package - 2=
+026-05</a>:&nbsp;</span>:arrow_down: JSON | XML | CSV</li>
+</ul>
+<p style=3D"color:#172b4d;"><br></p>
+<p><span style=3D"color:#333333;">For more information on Value Set Package=
+ and how they are created and used, see the<span>&nbsp;</span></span><a sty=
+le=3D"text-decoration: none;" href=3D"https://build.fhir.org/ig/cqframework=
+/vsp-ig/" class=3D"external-link" rel=3D"nofollow">Value Set Package Implem=
+entation Guide</a>.</p>
+    </div>
+</body>
+</html>
+------=_Part_18067_321050037.1783539960435--
