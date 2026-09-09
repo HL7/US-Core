@@ -7,7 +7,7 @@ meta:
             valueString: Expansion Parameters
         -
             url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
-            valueMarkdown: The expansion parameters resource for this implementation guide, specifying SNOMED Edition and version, as well as pinned versions for versionless references used in this IG.
+            valueMarkdown: This Parameters resource represents a manifest to the versions of the [canonical artifacts](https://hl7.org/fhir/canonicalresource.html), such as  *CodeSystem*, *ValueSet*, *StructureDefinition* and *SearchParameter* used in this IG. It also specifies the [SNOMED CT Edition](https://terminology.hl7.org/en/SNOMEDCT.html).
 parameter:
     -
         name: system-version

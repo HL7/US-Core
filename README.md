@@ -1057,6 +1057,10 @@ Updated table and file contents
    - removal of new content highlighting
 ### QA tricks and tips
    - ignoreWarnings.text
+     - To suppress a QA message, copy the entire message line from `output/qa-eslintcompact.txt` into `input/ignoreWarnings.txt`, omitting only the trailing classification in parentheses (e.g. `(EXCEPTION)`, `(INFORMATIONAL)`, `(BUSINESSRULE)`, `(NOTFOUND)`, `(CODEINVALID)`, `(STRUCTURE)`).
+     - The IG Publisher matches each entry as a prefix of the validator message, so copy the whole message from the start. Do not truncate the beginning; for example, terminology value set expansion errors begin with `Error from https://tx.fhir.org/r4: Error:` and that prefix must be included or the entry will not match.
+     - Group related suppressions under a numbered `# NN. === explanation ===` comment that documents why the message is safe to ignore.
+     - Version-pinned messages (those ending in `...|N.0.0`) must be updated to the current version each publication cycle.
 ### Version comparisons
     - Argo DSTU2 Comparisons - see inline instructions
 ### Update the History Page Introducion

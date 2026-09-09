@@ -838,11 +838,12 @@ if [[ $VIEW_QA ]]; then
   QA_PREV=".qa-eslintcompact_previous.txt"
 
   if [[ -f "$QA_CURRENT" ]]; then
-    # sort and generate diff if a previous run exists
+    # sort current report for a stable, order-independent comparison
     sort "$QA_CURRENT" > /tmp/qa_sorted.txt
 
     if [[ -f "$QA_PREV" ]]; then
-      QA_DIFF=$(diff "$QA_PREV" /tmp/qa_sorted.txt || true)
+      # diff -u so output uses +/- markers matching the prompt (- = resolved, + = new)
+      QA_DIFF=$(diff -u "$QA_PREV" /tmp/qa_sorted.txt || true)
     else
       QA_DIFF="(no previous run to compare against)"
     fi
@@ -856,8 +857,8 @@ if [[ $VIEW_QA ]]; then
     - New issues introduced since last build
     Be concise, no analysis or recommendations.
     "
-   # Save QA report for next time
-   cp "$QA_CURRENT" .qa-eslintcompact_previous.txt
+   # Save the SORTED report as the baseline for next time (keeps future diffs sorted-vs-sorted)
+   cp /tmp/qa_sorted.txt .qa-eslintcompact_previous.txt
   else
     echo "⚠️  "$QA_CURRENT" not found — skipping QA analysis."
   fi

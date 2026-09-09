@@ -8,11 +8,11 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 3
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 9.0.0
+version: 10.0.0-ballot
 name: USCore
 title: US Core Implementation Guide
 status: active
-date: "2026-05-01"
+date: "2026-09-09"
 publisher: HL7 International / Cross-Group Projects
 contact:
   - name: HL7 International / Cross-Group Projects
@@ -45,7 +45,7 @@ dependsOn:
     version: 0.12.0
   - packageId: hl7.fhir.uv.extensions.r4
     version: 5.3.0
-    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+    uri: http://hl7.org/fhir/extensions
     id: hl7_fhir_uv_extensions_r4
   - packageId: hl7.fhir.uv.xver-r5.r4
     version: 0.1.0
@@ -54,9 +54,9 @@ dependsOn:
 definition:
   extension:
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-      valueCode: hl7.fhir.us.core#8.0.1
+      valueCode: hl7.fhir.us.core#9.0.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-      valueCode: hl7.fhir.us.core#8.0.0-ballot
+      valueCode: hl7.fhir.us.core#8.0.1
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
       valueCode: hl7.fhir.us.core#7.0.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
@@ -65,8 +65,6 @@ definition:
       valueCode: hl7.fhir.us.core#6.1.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
       valueCode: hl7.fhir.us.core#6.0.0
-    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-      valueCode: hl7.fhir.us.core#6.0.0-ballot
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
       valueCode: hl7.fhir.us.core#5.0.1
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
@@ -462,7 +460,7 @@ definition:
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
     - reference:
         reference: Parameters/manifest
-      description: The expansion parameters resource for this implementation guide, specifying SNOMED Edition and version, as well as pinned versions for versionless references used in this IG.
+      description: This Parameters resource represents a manifest to the versions of the [canonical artifacts](https://hl7.org/fhir/canonicalresource.html), such as  *CodeSystem*, *ValueSet*, *StructureDefinition* and *SearchParameter* used in this IG. It also specifies the [SNOMED CT Edition](https://terminology.hl7.org/en/SNOMEDCT.html).
       exampleBoolean: false
       name: Expansion Parameters
     - reference:
@@ -2549,17 +2547,15 @@ definition:
             valueCode: informative
   parameter:
     - code: copyrightyear
-      value: 2026+
+      value: 2027+
     - code: releaselabel
-      value: STU 9
+      value: STU 10 Ballot
     - code: path-pages
       value: input/pagecontent
     - code: path-pages
       value: input/intro-notes
     - code: path-liquid
       value: input/liquid
-    - code: path-expansion-params
-      value: input/resources/Parameters-manifest.json
     - code: active-tables
       value: "false"
     - code: apply-contact
@@ -2585,7 +2581,9 @@ definition:
     - code: no-narrative
       value: Bundle/docref-example-2
     - code: version-comparison-master
-      value: 8.0.1
+      value: 9.0.0
+    - code: version-comparison
+      value: 9.0.0
     - code: version-comparison
       value: 8.0.1
     - code: version-comparison
@@ -2694,6 +2692,8 @@ definition:
       value: '{current}'
     - code: ips-comparison
       value: '{current}'
+    - code: path-expansion-params
+      value: input/resources/Parameters-manifest.json
     - code: pin-canonicals
       value: pin-all
     - code: pin-manifest
