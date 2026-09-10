@@ -48,7 +48,7 @@ valueset-ref-all-list.csv columns:
 - OIDs: Assigned OID for code system
 - Name: Computer friendly PascalCase Value Set name
 - Title: Human friendly Value Set name
-- Description (mispelled as "Descriptino"): Value Set description
+- Description (misspelled as "Descriptino"): Value Set description
 - Uses: What IG artifacts use this Value Set. For example StructureDefinitions or ValueSets
 - Used: Comma separated string of the code system, used in the Value Set. For example, SCT, LOINC,THO
 - Sources: Unknown (not used here)

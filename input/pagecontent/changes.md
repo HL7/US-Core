@@ -861,7 +861,7 @@ This ballot addresses the following:
 6. **APPLIED:** Compatible, substantive (Enhancement) Add Procedure.reasonCode and Procedure.reasonReference as Reason for Referral [FHIR-42136](https://jira.hl7.org/browse/FHIR-42136) and [FHIR-41761](https://jira.hl7.org/browse/FHIR-41761) See Changes:
     -  [US Core Procedure](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-procedure.html)
     -  [US Core ServiceRequest](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-servicerequest.html)
-    -  [Procedre Example](https://hl7.org/fhir/us/core/2024Jan/Procedure-defib-implant.html)
+    -  [Procedure Example](https://hl7.org/fhir/us/core/2024Jan/Procedure-defib-implant.html)
     -  [USCDI](https://hl7.org/fhir/us/core/2024Jan/uscdi.html)
 7. **APPLIED:** Compatible, substantive (Correction)  Change ASKU in value set to asked-declined [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-observation-sexual-orientation.html#terminology-bindings-differential) and [Here](https://hl7.org/fhir/us/core/2024Jan/Observation-sexual-orientation-example.html)
 8. **APPLIED:** Compatible, substantive (Clarification)  update canonical urls in examples and capability statements to include the version [FHIR-41256](https://jira.hl7.org/browse/FHIR-41256) See Changes [Here](https://hl7.org/fhir/us/core/2024Jan/AllergyIntolerance-example.html) and [Here](https://hl7.org/fhir/us/core/2024Jan/CapabilityStatement-us-core-server.json.html)
@@ -1173,7 +1173,7 @@ This ballot addresses the following:
       - Occupation and Occupation Industry [See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-observation-occupation.html)
   - **Applied**: **Procedures:** Reason for Referral [See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-servicerequest.html) and [See Change Here](https://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-procedure.html)
 
-- Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* in this version to accommodate the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The [Cross Version Comparisions Table](https://hl7.org/fhir/us/core/2023Jan/changes-between-versions.html#cross-version-comparisons) summarized these significant revisions.
+- Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* in this version to accommodate the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The [Cross Version Comparisons Table](https://hl7.org/fhir/us/core/2023Jan/changes-between-versions.html#cross-version-comparisons) summarized these significant revisions.
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA].
 - Implementers submitted over 70 trackers since the publication of US Core ver 5.0.0 and 5.0.1. We have addressed them and applied over 50 changes listed below:
 
@@ -1616,7 +1616,7 @@ Listed below are the resolved trackers for this version:
     - [Here](https://hl7.org/fhir/us/core/STU4/conformance-expectations.html#extensible-binding-for-codeableconcept-datatype)
     - [Here](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-condition.html#profile)
     - [Here](https://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html#profile)
-27. **Applied:** Non-substantive (Clarification) Reference to 3 new document types     - addressing corresponding metadat ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](https://hl7.org/fhir/us/core/STU4/clinical-notes-guidance.html#clinical-notes) AND [See Change Here](https://hl7.org/fhir/us/core/STU4/clinical-notes-guidance.html#support-requirements)
+27. **Applied:** Non-substantive (Clarification) Reference to 3 new document types     - addressing corresponding metadata ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](https://hl7.org/fhir/us/core/STU4/clinical-notes-guidance.html#clinical-notes) AND [See Change Here](https://hl7.org/fhir/us/core/STU4/clinical-notes-guidance.html#support-requirements)
 28. **Applied:** Non-substantive (Correction) Typo ([FHIR-30113](https://jira.hl7.org/browse/FHIR-30113))
 29. **Applied:** Non-substantive (Enhancement) Clarify Must Support of Complex elements ([FHIR-30321](https://jira.hl7.org/browse/FHIR-30321)) [See Change Here](https://hl7.org/fhir/us/core/STU4/conformance-expectations.html#must-support---complex-elements)
 30. **Applied:** Non-substantive (Enhancement) Clarify that VSAC FHIR API only retrieves a definition ([FHIR-30344](https://jira.hl7.org/browse/FHIR-30344)) [See Change Here](https://hl7.org/fhir/us/core/STU4/terminology.html#using-value-set-authority-center-vsac)

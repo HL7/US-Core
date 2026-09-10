@@ -132,7 +132,7 @@ This liquid script creates a US Core provenance requirements table using input d
 which is manually updated when new profiles are added to the guide.
 with the following columns:
 
-- Is_New: Flag for new or updated content for the current version. Deafult is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
+- Is_New: Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
 - Row
 - Is_Source : boolean flag if is provenance source element
 - Survey1, Survey2 : results of online vendor surveys
