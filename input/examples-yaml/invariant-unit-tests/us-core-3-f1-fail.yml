@@ -1,0 +1,22 @@
+resourceType: Observation
+id: us-core-3-f1-fail
+status: final
+category:
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: vital-signs
+    display: Vital Signs
+code:
+  coding:
+  - system: http://loinc.org
+    code: 8302-2
+    display: Body height
+subject:
+  reference: Patient/example
+effectiveDateTime: 1999-07-02
+# Quantity value with a non-UCUM system -> violates us-core-3
+valueQuantity:
+  value: 111.506
+  unit: cm
+  system: http://snomed.info/sct
+  code: "258672001"
