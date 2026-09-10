@@ -4,8 +4,7 @@
 - [Clinical Notes]
 - [Medication List]
 - [Basic Provenance]
-- [Social Determinants of Health (SDOH)]
-- [Changes Between Versions]
+- [Screening and Assessments]
 - [Relationship With Other IGs]
 
 
