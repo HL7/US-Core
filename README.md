@@ -997,7 +997,46 @@ Updated table and file contents
 
 
     ### Current publication
-    ### addition or update to Profile
+### IG Updates
+
+#### New USCDI Data Element
+
+##### Existing US Core element
+    - [ ] Update USCDI Mapping Table
+    - [ ] Add to the "What's new" file
+    - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
+
+##### New US Core element in existing US Core profile
+    - [ ] Update USCDI Mapping Table
+    - [ ] Add to the "What's new" file
+    - [ ] Update US Core Profile
+        - [ ] Update Profile Introduction
+        - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
+        - [ ] New or Updated Example(s)
+        - [ ] Update Additional USCDI table if the design team decides element is Additional USCDI
+    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )        
+    - [ ] New Search if the design team decides it is needed
+         - [ ] Update the Search API table
+         - [ ] Update the Profile Notes page
+         - [ ] Update the CapabilityStatement
+##### New US Core profile
+    - [ ] Update USCDI Mapping Table
+    - [ ] Add to the "What's new" file
+    - [ ] Create US Core Profile
+        - [ ] Create Profile Introduction
+        - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
+        - [ ] New Example(s)
+        - [ ] Update Additional USCDI table if the design team decides elemens are Additional USCDI
+    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )        
+    - [ ] New Search
+         - [ ] Update the Search API table
+         - [ ] Update the Profile Notes page
+    - [ ] Update the Profile table
+        - [ ] add scopes
+        - [ ] year added
+     - [ ] Update the CapabilityStatement
+        
+    
 ### Prepublication checklists
 
 - [ ] Apply trackers
