@@ -72,14 +72,14 @@ This documentation provides a comprehensive guide to the technical stack and wor
     - [What It Does](#what-it-does-6)
     - [Documentation](#documentation-7)
   - [US Core Python Scripts](#us-core-python-scripts)
-    - [What is Does](#what-is-does)
+    - [What it Does](#what-it-does-7)
       - [US Core Python Scripts' Key Dependencies](#us-core-python-scripts-key-dependencies)
     - [Documentation](#documentation-8)
       - [How to update the files Using The US Core Python Scripts](#how-to-update-the-files-using-the-us-core-python-scripts)
       - [Python Installation](#python-installation)
       - [VSCode and Jupyter Installation](#vscode-and-jupyter-installation)
-  - [Publish.sh Bash Script](#publishsh-bash-script)
-    - [What is Does](#what-is-does-1)
+  - [Publishsh Bash Script](#publishsh-bash-script)
+    - [What it does](#what-it-does-8)
     - [Documentation](#documentation-9)
       - [Key Tools It Uses](#key-tools-it-uses)
       - [Bash Installation](#bash-installation)
@@ -93,20 +93,25 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Build IG no changes/updates (just IG Publisher, no SUSHI)](#build-ig-no-changesupdates-just-ig-publisher-no-sushi)
       - [Update IG Publisher, then build](#update-ig-publisher-then-build)
       - [Build IG after changes/updates (Convert YAML to JSON, then run SUSHI, then run IG Publisher removing meta extension and adding versions to canonicicals)](#build-ig-after-changesupdates-convert-yaml-to-json-then-run-sushi-then-run-ig-publisher-removing-meta-extension-and-adding-versions-to-canonicicals)
-      - [Delete temp/cache (Run build after deleting an artifacts or example)](#delete-tempcache-run-build-after-deleting-an-artifacts-or-example)
+      - [Delete temp/cache (Run build after deleting artifacts or examples)](#delete-tempcache-run-build-after-deleting-artifacts-or-examples)
       - [Update the requirements resource (run after updating the us\_core\_reqs.csv file)](#update-the-requirements-resource-run-after-updating-the-us_core_reqscsv-file)
       - [Prepublication Steps](#prepublication-steps)
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
   - [Overview of US Core publication Process](#overview-of-us-core-publication-process)
     - [Prepare IG for new version:](#prepare-ig-for-new-version)
+    - [IG Updates](#ig-updates)
+      - [Adding New USCDI Data Element](#adding-new-uscdi-data-element)
+        - [Existing US Core element](#existing-us-core-element)
+        - [New US Core element in existing US Core profile](#new-us-core-element-in-existing-us-core-profile)
+        - [New US Core profile](#new-us-core-profile)
     - [Prepublication checklists](#prepublication-checklists)
   - [Misc topics](#misc-topics)
     - [Updating the Change Log](#updating-the-change-log)
     - [New content highlighting](#new-content-highlighting)
     - [QA tricks and tips](#qa-tricks-and-tips)
     - [Version comparisons](#version-comparisons)
-    - [Update the History Page Introducion](#update-the-history-page-introducion)
+    - [Update the History Page Introduction](#update-the-history-page-introduction)
 
 
 
@@ -1010,20 +1015,14 @@ Updated table and file contents
 -  [ ]  Review the QA log and debug errors, warnings, and bad links.  (see debugging QA errors)
 
 
-
-
-
-
-
-    ### Current publication
 ### IG Updates
 
-#### New USCDI Data Element
+#### Adding New USCDI Data Element
 
 ##### Existing US Core element
     - [ ] Update USCDI Mapping Table
     - [ ] Add to the "What's new" file
-    - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
+    - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed (see Hackmd notes)
 
 ##### New US Core element in existing US Core profile
     - [ ] Update USCDI Mapping Table
@@ -1033,7 +1032,7 @@ Updated table and file contents
         - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
         - [ ] New or Updated Example(s)
         - [ ] Update Additional USCDI table if the design team decides element is Additional USCDI
-    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )        
+    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
     - [ ] New Search if the design team decides it is needed
          - [ ] Update the Search API table
          - [ ] Update the Profile Notes page
@@ -1046,7 +1045,7 @@ Updated table and file contents
         - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
         - [ ] New Example(s)
         - [ ] Update Additional USCDI table if the design team decides elements are Additional USCDI
-    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )        
+    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
     - [ ] New Search
          - [ ] Update the Search API table
          - [ ] Update the Profile Notes page
@@ -1054,8 +1053,8 @@ Updated table and file contents
         - [ ] add scopes
         - [ ] year added
      - [ ] Update the CapabilityStatement
-        
-    
+
+
 ### Prepublication checklists
 
 - [ ] Apply trackers
