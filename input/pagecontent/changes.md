@@ -41,6 +41,8 @@ The application of the following trackers is pending and will not be completed b
 
 ##### Publishing
 The following trackers have been identified as publishing issues, and we are working with HL7 publishing to resolve them.
+1. **Publishing:** Non-substantive (Correction) Resolve the version 8.0.1 package load failure caused by its R5 hl7.fhir.uv.extensions dependency [FHIR-56274](https://jira.hl7.org/browse/FHIR-56274)
+2. **Publishing:** Non-substantive (Correction) Resolve the version 7.0.0 package load failure caused by its R5 hl7.fhir.uv.extensions dependency [FHIR-56273](https://jira.hl7.org/browse/FHIR-56273)
 
 
 ### Version = 9.0.0  (Meets USCDI v6 Requirements)
