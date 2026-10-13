@@ -401,35 +401,59 @@ if [[ $YAML_JSON ]]; then
 
     if test -d $inpath/$dir-yaml; then
 
-    echo ""
-    echo "========================================================================"
-    echo "Check for any $dir JSON files commited after $dir YAML files "
-    echo "if not, overwrite all yaml created json files in $dirs directory with"
-    echo "the yaml files from the $dirs-yaml directory"
-    echo "using yq see https://github.com/mikefarah/yq"
-    echo "========================================================================"
-    echo ""
-
-
-    for json_file in $inpath/$dir/*.json; do
-        base=$(basename "$json_file" .json)
-        yaml_file="$inpath/$dir-yaml/${base}.yaml"
-
-        [[ ! -f "$yaml_file" ]] && continue
-
-        json_time=$(git log -1 --format="%ct" -- "$json_file" 2>/dev/null || echo 0)
-        yaml_time=$(git log -1 --format="%ct" -- "$yaml_file" 2>/dev/null || echo 0)
-
-    # Check for committed changes (staged or unstaged)
-        if [[ "$json_time" -gt "$yaml_time" ]]; then
-            echo "⚠️  $json_file was committed MORE RECENTLY than $yaml_file"
-            echo "   JSON: $(git log -1 --format='%ci %s' -- "$json_file")"
-            echo "   YAML: $(git log -1 --format='%ci %s' -- "$yaml_file")"
-            echo ""
-            echo "❌ Aborting! Reconcile this file before regenerating."
-            exit 1
-        fi
-    done
+    # ---------------------------------------------------------------------
+    # DISABLED 2026-10-13. This check never ran, and fixing it would not help.
+    #
+    # It was intended to catch a JSON file edited directly instead of its YAML
+    # source, so -y would not silently overwrite a collaborator's work.
+    #
+    # Why it never ran: it looks for "${base}.yaml" while every source file in
+    # this repo is ".yml". The existence test below therefore failed for all
+    # 332 files and "continue" fired every time, so zero comparisons were ever
+    # performed and the "Aborting!" branch was unreachable.
+    #
+    # Why fixing the extension would not help: the heuristic is "JSON committed
+    # more recently than its YAML", but -e stamps version canonicals and -n
+    # strips meta extensions, both of which rewrite the JSON after generation.
+    # The JSON being newer is therefore the normal state after any -ien build,
+    # not evidence of a hand edit. With the extension corrected, 254 of 332
+    # files flag, 217 of them from a single version-bump commit.
+    #
+    # The orphaned-JSON check further down ("Checking for JSON files with no
+    # corresponding YAML source") covers the failure that actually occurs: a
+    # renamed YAML leaving its old JSON behind. Detecting a genuine hand edit
+    # would need a content comparison (regenerate from YAML into a temp file
+    # and diff, allowing for the -e and -n transformations), not a timestamp.
+    # ---------------------------------------------------------------------
+#    echo ""
+#    echo "========================================================================"
+#    echo "Check for any $dir JSON files commited after $dir YAML files "
+#    echo "if not, overwrite all yaml created json files in $dirs directory with"
+#    echo "the yaml files from the $dirs-yaml directory"
+#    echo "using yq see https://github.com/mikefarah/yq"
+#    echo "========================================================================"
+#    echo ""
+#
+#
+#    for json_file in $inpath/$dir/*.json; do
+#        base=$(basename "$json_file" .json)
+#        yaml_file="$inpath/$dir-yaml/${base}.yaml"
+#
+#        [[ ! -f "$yaml_file" ]] && continue
+#
+#        json_time=$(git log -1 --format="%ct" -- "$json_file" 2>/dev/null || echo 0)
+#        yaml_time=$(git log -1 --format="%ct" -- "$yaml_file" 2>/dev/null || echo 0)
+#
+#    # Check for committed changes (staged or unstaged)
+#        if [[ "$json_time" -gt "$yaml_time" ]]; then
+#            echo "⚠️  $json_file was committed MORE RECENTLY than $yaml_file"
+#            echo "   JSON: $(git log -1 --format='%ci %s' -- "$json_file")"
+#            echo "   YAML: $(git log -1 --format='%ci %s' -- "$yaml_file")"
+#            echo ""
+#            echo "❌ Aborting! Reconcile this file before regenerating."
+#            exit 1
+#        fi
+#    done
 
       for yaml_file in $(find $inpath/$dir-yaml/*.yml -type f) # -mtime -$days)
       do
