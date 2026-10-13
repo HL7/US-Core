@@ -5,7 +5,7 @@
 
 Authors:  Eric Haas, Brett Marquard, Gay Dolin
 
-All issues should be logged using the official [Jira tracker system](http://hl7.org/fhir-issues) so they can be reviewed and voted upon by the  HL7 International Cross Groups Projects Workgroup.
+Log all issues in the official [Jira tracker system](http://hl7.org/fhir-issues) so the HL7 International Cross Groups Projects Workgroup can review and vote on them.
 
 ## US Core Publication Documentation
 
@@ -94,7 +94,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Update IG Publisher, then build](#update-ig-publisher-then-build)
       - [Build IG after changes/updates (Convert YAML to JSON, then run SUSHI, then run IG Publisher removing meta extension and adding versions to canonicicals)](#build-ig-after-changesupdates-convert-yaml-to-json-then-run-sushi-then-run-ig-publisher-removing-meta-extension-and-adding-versions-to-canonicicals)
       - [Delete temp/cache (Run build after deleting an artifacts or example)](#delete-tempcache-run-build-after-deleting-an-artifacts-or-example)
-      - [Update the requirements resource (run after update to the us\_core\_reqs.csv file)](#update-the-requirements-resource-run-after-update-to-the-us_core_reqscsv-file)
+      - [Update the requirements resource (run after updating the us\_core\_reqs.csv file)](#update-the-requirements-resource-run-after-updating-the-us_core_reqscsv-file)
       - [Prepublication Steps](#prepublication-steps)
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
@@ -114,14 +114,14 @@ This documentation provides a comprehensive guide to the technical stack and wor
 
 ### What It Does
 
-The FHIR IG Publisher is a tool that takes implementation guide source content and transforms it into a complete published implementation guide, including human-readable HTML files and a machine-processable NPM package (package.tgz). It validates all resources in the IG, generates renderings for each artifact, and produces an HTML QA file with any errors encountered.
+The FHIR IG Publisher takes implementation guide source content and transforms it into a complete published implementation guide, including human-readable HTML files and a machine-processable NPM package (package.tgz). It validates all resources in the IG, generates renderings for each artifact, and produces an HTML QA file with any errors encountered.
 
 The IG Publisher's key dependencies include:
 
 - **Java runtime** - Required to execute the publisher JAR file
 - **Jekyll** - Website generation tool for producing final HTML output
 - **Ruby** - Ruby requirements for Jekyll
-- **SUSHI** - you need this to configure the Implementation Guide resource and optionally to author implementation guide artifacts using the FSH Domain-Specific Language (DSL).
+- **SUSHI** - You need this to configure the Implementation Guide resource and optionally to author implementation guide artifacts using the FSH Domain-Specific Language (DSL).
 - **HL7 IG Templates** -  Packages referenced by the IG Publisher that control the visual styling, page structure, and navigation of published FHIR Implementation Guides.
 - **FHIRPath** - Path-based navigation and extraction language that IG authors use to define constraints, invariants, search parameters, and slicing logic.
 - **Terminology Server** (tx.fhir.org) - Handles terminology operations with local caching
@@ -148,11 +148,11 @@ https://confluence.hl7.org/spaces/FHIR/pages/35718627/IG+Publisher+Documentation
 
 ### What It Does
 
-HL7 IG Templates are packages referenced by the IG Publisher that control the visual styling, page structure, and navigation of published FHIR Implementation Guides. They define how FHIR resources are rendered as pages and provide a framework into which authors integrate their narrative content.
+HL7 IG Templates are packages referenced by the IG Publisher that control the visual styling, page structure, and navigation of published FHIR Implementation Guides. They define how FHIR resources render as pages and provide a framework for authors to integrate narrative content.
 
 ### Documentation (including installation)
 
-The HL7 IG Templates is reference in the `ig.ini` with the key-value pair "template = hl7.fhir.template#[version]"  where "[version]" is the template's version:
+The HL7 IG Templates are referenced in the `ig.ini` with the key-value pair "template = hl7.fhir.template#[version]"  where "[version]" is the template's version:
 
 ```ini
  Use a specific version
@@ -161,13 +161,13 @@ template = hl7.fhir.template#1.0.0
  Use the current CI build version
 template = hl7.fhir.template#current
 
- If no version specified, defaults to latest release
+ If no version is specified, it defaults to the latest release
 template = hl7.fhir.template
 ```
 
 - "#current" refers to the *Continuous Integration Build* (latest in version control) maintained on build.fhir.org.  The "#current" version is useful during development,but **for official HL7 publications use a specific released version** (e.g., "#1.0.0")
 
-These documents provides more details describing how to specify and use templates.
+These documents provide more details describing how to specify and use templates.
 
   - https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html
   - https://build.fhir.org/ig/FHIR/ig-guidance/template.html
@@ -179,18 +179,18 @@ These documents provides more details describing how to specify and use template
 
 Jekyll serves as the website generation tool that takes the processed FHIR artifacts, templates, and page content produced by the IG Publisher and compiles them into the final static HTML output that forms the publishable Implementation Guide. It also makes IG metadata (version, canonical URL, dependencies, etc.) available through data variables that can be referenced in page templates.
 
-The Jekyll's key dependencies include:
+Jekyll's key dependencies include:
 
 - **Ruby** (version 2.7.0+; 3.1.3+ recommended)
-- **RubyGems** - Ruby's package manager including...
+- **RubyGems** - Ruby's package manager, including...
   - **liquid** - Templating engine for dynamic content (e.g., `{{ site.data.fhir.version }}`)
-  - **kramdown**- - Markdown parser that converts .md files to HTML for pages and include files.*
+  - **kramdown** - Markdown parser that converts .md files to HTML for pages and include files.*
 
 \*kramdown markdown cannot be used for markdown datatype elements in FHIR resources which "*...requires and uses the [GFM (Github Flavored Markdown)](https://github.github.com/gfm/) extensions on [CommonMark](http://spec.commonmark.org/0.28/) format, with the exception of support for inline HTML which is not supported.*"
 
 ###  Documentation (including installation)
 
-For a comprehensive documentation of static website creation using Jekyll and installation instructions.
+For comprehensive documentation on static website creation using Jekyll and installation instructions.
 
 https://jekyllrb.com/
 
@@ -198,7 +198,7 @@ https://jekyllrb.com/
 
 ## Jekyll Include files
 
-A feature that is used extensively in US Core pages is Jekyll Include files.  Jekyll Include files allow reusable content fragments to be defined once and inserted into multiple pages using the {% include filename %} syntax. This promotes consistency across the IG by ensuring common elements (like navigation, boilerplate text, or repeated guidance) remain synchronized, and simplifies maintenance since updates only need to be made in one location rather than across every page that uses the content.
+Jekyll include files are used extensively in US Core pages.  Jekyll include files let you define reusable content fragments once and insert them into multiple pages using the {% include filename %} syntax. This promotes consistency across the IG by keeping common elements (like navigation, boilerplate text, or repeated guidance) synchronized, and simplifies maintenance because updates only need to be made in one place rather than across every page that uses the content.
 
 ###  Documentation
 
@@ -238,9 +238,9 @@ Accessing parameters within the include file:
 This profile is for {{ include.name }} with status {{ include.status }}.
 ```
 
-Wherever includes are used with parameters the include file's inline comments document whether the parameters are required or optional and what there values are...
+Wherever includes are used with parameters, the include file's inline comments document whether the parameters are required or optional and what their values are...
 
-For examples,the include file: `input/includes/observation_guidance_1.md` content:
+For example,the include file: `input/includes/observation_guidance_1.md` content:
 
 ~~~
 <!--
@@ -271,9 +271,9 @@ example usage:
 
 ## Jekyll Collections
 
-Another feature that is used extensively in US Core pages is Jekyll Collections.  Jekyll Collections allow grouping related content (such as profiles metadata) into named sets that can be iterated over and rendered programmatically using liquid scripts (see below). Although US Core's collections are either CSV of YAML files, Jekyll allows CSV,YAML, and JSON files. This enables IG authors to generate consistent pages for similar artifacts automatically, such as creating a summary table listing data, without manually maintaining each entry.
+Another feature that is used extensively in US Core pages is Jekyll Collections.  Jekyll Collections allow grouping related content (such as profile metadata) into named sets that can be iterated over and rendered programmatically using Liquid scripts (see below). Although US Core's collections are either CSV of YAML files, Jekyll allows CSV, YAML, and JSON files. This lets IG authors automatically generate consistent pages for similar artifacts, such as a summary table listing data, without manually maintaining each entry.
 
- For documentation on using Collections in Jekyll see: https://jekyllrb.com/docs/collections/
+ For documentation on using Collections in Jekyll, see: https://jekyllrb.com/docs/collections/
 
 ###  Documentation
 
@@ -306,7 +306,7 @@ The `input/data/` directory is the standard location to *add and edit* US Core a
 
 ####  Managing Collections
 
-The US Core PageContent file or include documents the Collection's contents and whether it is generated by the IG Publisher, manually updated or a uses python scripts to update it (discussed in detail below). The US Core PageContent file or include file and the Collections they use are listed below :
+The US Core PageContent file or include documents the Collection's contents and whether the IG Publisher generates it, editors manually update it, or a user uses Python scripts to update it (discussed in detail below). The US Core PageContent file or include file and the Collections they use are listed below :
 
 
 PageContent/includes file|US Core Collection|IG Publisher-Generated Collection
@@ -347,7 +347,7 @@ Collection data files are stored in `temp/pages/_data`, and are accessed using "
 
 - Jekyll collections group related content (like profile metadata) into named sets stored as CSV, YAML, or JSON files in `input/data/`, enabling IG authors to generate consistent pages programmatically without manually maintaining each entry.
 
-- Collections are managed in different ways — some are generated by the IG Publisher, some are manually updated, and some use Python scripts — with the managing approach documented in the associated PageContent or include file.
+- Collections are managed in different ways — some are generated by the IG Publisher, some are manually updated, and some use Python scripts — the approach for each table is documented in the associated PageContent or include file.
 
 - Collection data is accessed in Liquid templates via `site.data.[filename]` syntax (e.g., `{% for row in site.data.profile_metadata %}`) from the `temp/pages/_data` directory where both authored and IG Publisher-generated collections reside.
 
@@ -358,21 +358,21 @@ Collection data files are stored in `temp/pages/_data`, and are accessed using "
 
 Jekyll/Shopify Liquid is a templating language that enables dynamic content generation within static web pages using tags ({% %}) for logic and output ({{ }}) for variables. It allows IG authors to insert dynamic values (like {{ site.data.fhir.version }}), create conditional content, loop through collections, and apply filters to transform data—all at build time rather than runtime. This enables FHIR IGs to maintain consistency across pages, automatically reflect dependency versions, and generate repetitive content programmatically while still producing fast, static HTML output.
 
-Liquid is a Ruby Gem that is installed as a dependency when you install Jekyll.  For documentation on using Liquid with Jekyll see:
+Liquid is a Ruby gem installed as a dependency when you install Jekyll.  For documentation on using Liquid with Jekyll, see:
 
 https://jekyllrb.com/docs/liquid/
 
 ### Documentation
 
-Jekyll Liquid scripts is used extensively in US Core pages to create page content including lists and tables with collections.  As documented above, the US Core PageContent file or include documents the Collection's contents and whether it is generated by the IG Publisher, manually updated or a uses python scripts to update it (discussed in detail below).
+Jekyll Liquid scripts are used extensively in US Core pages to create page content, including lists and tables with collections.  As documented above, the US Core PageContent file or include documents the Collection's contents and whether it is generated by the IG Publisher, manually updated, or updated using Python scripts (discussed in detail below).
 
 #### Creating Tables, Lists, and Examples
 
- As documented above, US Core create lists and tables and examples in page content by leveraging liquid with collections.  The PageContent or include files document the Collection's contents and source. In General the liquid accesses the collection data stored at `temp/pages/_data` using `site.[collection_name]` syntax and loops through it to create the content from the row data. In most cases, simple markdown or XHTML content is created. However for input/pagecontent/uscdi.md there is extensive styling applied to the XHTML.
+ As documented above, US Core creates lists, tables, and examples in page content by leveraging Liquid with collections.  The PageContent or include files document the Collection's contents and source. In general, Liquid accesses the collection data stored at `temp/pages/_data` using `site.[collection_name]` syntax and loops through it to create the content from the row data. In most cases, it creates simple Markdown or XHTML content. However, for input/pagecontent/uscdi..md, extensive styling is applied to the XHTML.
 
 General syntax for a Liquid table from a CSV:
 
-assume `my_csv.csv` contains columns with headers "title" and "url"
+Assume `my_csv.csv` contains columns with headers "title" and "url"
 
 ~~~xhtml
 <table class="grid">
@@ -396,26 +396,26 @@ assume `my_csv.csv` contains columns with headers "title" and "url"
 
 #### Creating Page Contents
 
-US Core uses Liquid templating to generate a custom "Notes" file for each profile documenting the required and optional FHIR RESTful search APIs for US Core certification. However, explaining this advanced use of Liquid is beyond the scope of this document.
+US Core uses Liquid templating to generate a custom "Notes" file for each profile documenting the required and optional FHIR RESTful search APIs for US Core certification. However, explaining this advanced use of Liquid is beyond this document's scope.
 
 ### Key Points
 
 - Jekyll Liquid is a templating language that enables dynamic content generation using tags (`{% %}`) for logic and output (`{{ }}`) for variables, allowing IG authors to insert dynamic values, create conditional content, loop through collections, and apply filters—all at build time to produce static HTML.
 
-- US Core extensively uses Liquid with collections to create tables, lists, and examples by accessing collection data via `site.data.[collection_name]` syntax and looping through rows to generate markdown or XHTML content.
+- US Core extensively uses Liquid with collections to create tables, lists, and examples by accessing collection data via `site.data.[collection_name]` syntax and looping through rows to generate Markdown or XHTML content.
 
 - US Core also uses Liquid templating to generate custom profile notes documenting required and optional FHIR RESTful search APIs for certification, though this advanced usage is beyond the scope of the document.
 
 
 ## "Intro|Notes" Files
 
-Another feature that is used extensively in US Core pages are the "Intro and Notes" files. They are similar to the Jekyll Include files, but these fragments are included into artifact pages (e.g., US Core Patient Profile) by the HL7 templates and not directly includes using Jekyll includes syntax described above.
+Another feature that is used extensively in US Core pages is the "Intro and Notes" files. They are similar to the Jekyll Include files, but these fragments are included into artifact pages (e.g., US Core Patient Profile) by the HL7 templates and not directly included using Jekyll includes syntax described above.
 
 ### Documentation
 
 #### US Core Only Uses Sushi to Produce The FHIR Implementation Guide Resource.
 
-These markdown file use a special naming syntax of "[artifact file name]" + "intro|notes" + ".md". For example, for the introduction to the US Core Patient Profile: `input/intro-notes/StructureDefinition-us-core-patient-intro.md`)
+These Markdown files use a special naming syntax of "[artifact file name]" + "intro|notes" + ".md". For example, for the introduction to the US Core Patient Profile: `input/intro-notes/StructureDefinition-us-core-patient-intro.md`)
 
 #### Repository Structure
 
@@ -437,7 +437,7 @@ They are defined in the `input/intro-notes/` directory
 
 #### IG Configuration
 
-Using SUSHI and `sushi-config.yaml` file to create the Implementation Guide resource, the following [Implementation Guide Parameter](https://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html) defines relative path that contains these fragments for generating the introductions and notes section on FHIR artifacts
+Using SUSHI and the `sushi-config.yaml` file to create the Implementation Guide resource, the following [Implementation Guide Parameter](https://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html) defines the relative path that contains these fragments for generating the introductions and notes section on FHIR artifacts
 
 ~~~
   path-pages:
@@ -447,7 +447,7 @@ Using SUSHI and `sushi-config.yaml` file to create the Implementation Guide reso
 
 ### Key Points
 
-- "Intro and Notes" files are markdown fragments that get automatically included into artifact pages (like profile pages) by HL7 templates, rather than being manually inserted using Jekyll include syntax.
+- "Intro and Notes" files are Markdown fragments that get automatically included into artifact pages (like profile pages) by HL7 templates, rather than being manually inserted using Jekyll include syntax.
 
 - These files follow a specific naming convention of `[artifact file name]-intro.md` or `[artifact file name]-notes.md` and are stored in the `input/intro-notes/` directory.
 
@@ -457,7 +457,7 @@ Using SUSHI and `sushi-config.yaml` file to create the Implementation Guide reso
 
 ### What It Does
 
-FHIR Liquid is a templating language used to build human-readable narratives for FHIR resources (`text.div`) (it also can transform external data sources like V2 and CDA into FHIR resources).  It uses a very limited subset of the standard Liquid syntax and replaces Liquid expressions and functions with FHIRPath expressions and functions.
+FHIR Liquid is a templating language used to build human-readable narratives for FHIR resources (`text.div`) (it can also transform external data sources like V2 and CDA into FHIR resources).  It uses a very limited subset of the standard Liquid syntax and replaces Liquid expressions and functions with FHIRPath expressions and functions.
 
 ### Documentation
 
@@ -483,7 +483,7 @@ US Core uses FHIR Liquid to build custom narratives for:
 
 #### IG Configuration
 
-Using SUSHI and `sushi-config.yaml` file to create the Implementation Guide resource, the following [Implementation Guide Parameter](https://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html) defines relative path that contains liquid templates for generating narrative:
+Using SUSHI and the `sushi-config.yaml` file to create the Implementation Guide resource, the following [Implementation Guide Parameter](https://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html) defines the relative path that contains Liquid templates for generating narrative:
 
 ~~~
   path-liquid: input/liquid
@@ -491,7 +491,7 @@ Using SUSHI and `sushi-config.yaml` file to create the Implementation Guide reso
 
 #### FHIR Liquid Profile Documentation
 
-For documentation on using Liquid in FHIR see (Note the documented features not fully implemented!):
+For documentation on using Liquid in FHIR.
 
 https://confluence.hl7.org/spaces/FHIR/pages/66938964/FHIR+Liquid+Profile
 
@@ -499,8 +499,8 @@ https://confluence.hl7.org/spaces/FHIR/pages/66938964/FHIR+Liquid+Profile
 ### Key Points
 
 - Templates execute against a single FHIR resource as the "focus" object.
-- Supports `if/else`, `for` loops.
-- ⚠️ Documentation is spotty and learning curve steep.
+- Supports `if/else` and `for` loops.
+- ⚠️ Documentation is spotty, and the learning curve is steep.
 
 
 ## Sushi
@@ -513,7 +513,7 @@ https://confluence.hl7.org/spaces/FHIR/pages/66938964/FHIR+Liquid+Profile
 
 #### US Core Only Uses Sushi to Produce The FHIR Implementation Guide Resource.
 
-US Core Only Uses Sushi to Produce The FHIR Implementation Guide Resource from the `sushi-config.yaml` file.  It is possible generate FHIR artifacts from a `input/fsh/` folder containing `.fsh` files, but US Core does not author in fsh.  Artifact authoring is done manually using text/JSON/YAML editors.
+US Core Only Uses Sushi to Produce The FHIR Implementation Guide Resource from the `sushi-config.yaml` file.  It is possible generate FHIR artifacts from a `input/fsh/` folder containing `.fsh` files, but US Core does not author in fsh.  Authors create artifacts manually using text/JSON/YAML editors.
 
 
 #### Repository Structure
@@ -547,28 +547,28 @@ The IG Auto-Build is a continuous integration service provided by HL7 that autom
 
 ##### The Pipeline
 
-1. **Auto-build detects FSH content** by looking for a `input/fsh/` folder containing `.fsh` files
+1. **Auto-build detects FSH content** by looking for an `input/fsh/` folder containing `.fsh` files
 
 1. **SUSHI runs first** — The build server executes SUSHI to compile all FSH files into FHIR JSON artifacts, placing them in the appropriate output directories (typically `fsh-generated/`)
 
 2. **IG Publisher runs second** — Takes the SUSHI-generated resources plus any hand-authored resources and compiles the full Implementation Guide (HTML pages, validation, narrative generation, etc.)
 
 
-US Core *only* runs the HL7 IG Publisher in the autobuild since US Core does not contain an `input/fsh/` folder.  In a subsequent section, we document the `push_to_autobuild.sh` bash script that temporarily renames the `input/fsh/` folder that overrides this default behavior as well.
+US Core *only* runs the HL7 IG Publisher in the autobuild because it does not contain an `input/fsh/` folder.  In a subsequent section, we document the `push_to_autobuild.sh` bash script that temporarily renames the `input/fsh/` folder, which overrides this default behavior as well.
 
 #### Sushi Documentation
 
-For documentation on using Sushi including installation and updates, see:
+For documentation on using Sushi, including installation and updates, see:
 
 https://fshschool.org/docs/sushi/installation/
 
-For documentation on populating the the `sushi-config.yaml` file, see:
+For documentation on populating the `sushi-config.yaml` file, see:
 
 https://fshschool.org/docs/sushi/installation/
 
 ### Key Points
 
-- US Core *only* uses SUSHI and `sushi-config.yaml` file to create the Implementation Guide resource.
+- US Core *only* uses SUSHI and the `sushi-config.yaml` file to create the Implementation Guide resource.
 - US Core does not use SUSHI to author artifacts
 
 ## Sushi Configuration File: Pages
@@ -581,11 +581,11 @@ https://fshschool.org/docs/sushi/installation/
 
 ### What It Does
 
-The HL7 Jira (hosted at jira.hl7.org) is the official issue tracking and change management system used by Health Level Seven International to manage feedback, bug reports, change requests, and proposals across all HL7 standards—including FHIR. HL7 Jira is tightly integrated into the Implementation Guide development lifecycle, serving as the central hub for feedback, change management, and community collaboration.
+The HL7 Jira (hosted at jira.hl7.org) is the official issue-tracking and change-management system Health Level Seven International uses to manage feedback, bug reports, change requests, and proposals across all HL7 standards, including FHIR. HL7 Jira is tightly integrated into the Implementation Guide development lifecycle and serves as the central hub for feedback, change management, and community collaboration.
 
 ### Documentation
 
-The IG Publisher automatically generates "Propose a Change" links on every page of a published IG. In addition, Jira is prepopulated with the ig context (page URL, IG version, etc.) that allows readers to submit feedback without having navigating Jira and manually enter all the data.  This is configured for this and any IG Based on the JIRA-Spec-Artifacts repository. It documentation is at:
+The IG Publisher automatically generates "Propose a Change" links on every page of a published IG. In addition, Jira is prepopulated with the IG context (page URL, IG version, etc.), allowing readers to submit feedback without navigating Jira and manually entering all the data.  This is configured for this and any IG based on the JIRA-Spec-Artifacts repository. Its documentation is at:
 
 https://github.com/HL7/JIRA-Spec-Artifacts
 
@@ -593,9 +593,9 @@ This is typically done *right before* final publication and takes 1 to 2 days fo
 
 ## US Core Python Scripts
 
-### What is Does
+### What it Does
 
-US Core uses several Python scripts, written as [Jupyter files](https://jupyter-notebook.readthedocs.io/en/latest/), to update collection data for the Jekyll Collections documented in the next section.  The complex logic to do this make it infeasible to perform with inline Jekyll liquid scripting.
+US Core uses several Python scripts, written as [Jupyter files](https://jupyter-notebook.readthedocs.io/en/latest/), to update collection data for the Jekyll Collections documented in the next section.  This complex logic makes it infeasible to do with inline Jekyll Liquid scripting.
 
 #### US Core Python Scripts' Key Dependencies
 
@@ -616,7 +616,7 @@ US Core uses several Python scripts, written as [Jupyter files](https://jupyter-
 
 #### How to update the files Using The US Core Python Scripts
 
-The US Core PageContent file or include documents the Collection's contents and whether it is manually updated or a uses python script to update and the location of the Python Scripts that modifies it. Similarly each Python Scripts documents what is does and how to use it.  The Collections that use the scripts are listed below:
+The US Core PageContent file or include documents the Collection's contents and whether it is manually updated or uses a Python script to update it, and the location of the Python Scripts that modify it. Similarly, each Python script documents what it does and how to use it.  The Collections that use the scripts are listed below:
 
 PageContent/includes file|US Core Collection|Python Script
 ---|---|---|
@@ -628,32 +628,32 @@ input/pagecontent/must-support.md|input/data/additional-uscdi-requirements.csv|h
 
 #### Python Installation
 
-For Python Installation see:
+For Python installation, see:
 
 https://www.python.org/
 
-For Python package management and installation see:
+For Python package management and installation, see:
 
 https://packaging.python.org/en/latest/tutorials/installing-packages/
 
 #### VSCode and Jupyter Installation
 
-For VS Code installation see:
+For VS Code installation, see:
 
 https://code.visualstudio.com/docs/setup/setup-overview
 
-For setting up Jupyter on VSCode see:
+For setting up Jupyter on VS Code, see:
 
 https://code.visualstudio.com/docs/datascience/jupyter-notebooks
 
 
-## Publish.sh Bash Script
+## Publishsh Bash Script
 
-### What is Does
+### What it does
 
 This is a bash script for building and publishing **HL7 FHIR Implementation Guides (IGs)**. It automates the process of validating, transforming, and publishing FHIR resources using SUSHI (a FHIR Shorthand compiler) and the HL7 IG Publisher.
 
-Among its many functions it:
+Among its many functions, it:
 
 1. **Validates data files** — Checks that CSV metadata files contain all expected FHIR resources
 2. **Transforms YAML to JSON** — Converts YAML resource definitions to JSON format
@@ -667,7 +667,7 @@ Among its many functions it:
 
 ### Documentation
 
-This is a build automation script for **HL7 FHIR Implementation Guides**. It wraps the IG Publisher toolchain with pre-processing, validation, and convenience features.
+This build automation script supports **HL7 FHIR Implementation Guides**. It wraps the IG Publisher toolchain with pre-processing, validation, and convenience features.
 
 #### Key Tools It Uses
 
@@ -683,7 +683,7 @@ This is a build automation script for **HL7 FHIR Implementation Guides**. It wra
 
 ##### Mac
 
-Bash is the native to linux and MAC OS terminal language. to install yq, and jq on Mac
+Bash is the native terminal language on Linux and macOS. To install yq and jq on Mac
 
 Using Homebrew (recommended)
 
@@ -771,14 +771,14 @@ yq --version
 #### Configuration
 
 1. The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.
-update line 41 in the `publish.sh` script:
+Update line 41 in the `publish.sh` script:
 ~~~
 41   ig_path="<ig publisher location>" # **THE LOCATION OF `org.hl7.fhir.igpublisher.jar` NEEDS TO BE CONFIGURED FOR YOUR LOCAL INSTALL **  ====
 ~~~
 
 For example:
 1. local ig folder:`ig_path="$PWD"
-2. for mac OS' downloads folder: `ig_path="$HOME/Downloads"`
+2. for mac OS' Downloads folder: `ig_path="$HOME/Downloads"`
 
 
 #### Command-Line Options
@@ -786,30 +786,30 @@ For example:
 | Flag | Purpose | common editor option | prepublication step | use with Caution|
 |------|---------| ----- | ---|---|
 | `-b` | IG publisher option: Enable debug mode (verbose logging) - may slow down build |||⚠️|
-| `-c` | Copy CSV files from the `input/data` folder to `/input/images/tables` folder as downloadable CSV/Excel files. This step should be executed after the final edits to all the CSV files the `input/data` folder||✅|
-| `-d` | IG publisher option: Output to `docs` folder instead of default `output` folder.  This was originally used to render on Github pages instead of using the autobuild. (TODO - check if still needed, if not remove) |||
+| `-c` | Copy CSV files from the `input/data` folder to `/input/images/tables` folder as downloadable CSV/Excel files. Run this step after you finish editing all CSV files in the `input/data` folder. | | ✅|
+| `-d` | IG publisher option: Output to `docs` folder instead of default `output` folder.  This was originally used to render on GitHub Pages instead of using the autobuild. (TODO - check if still needed; if not, remove) |||
 | `-e` | JQ script to append current version to canonical URLs in the `meta.profile" values for examples and `rest.resource.supporterProfiles` and other canonical URLs in CapabilityStatements. This step is done after Sushi processing and before the IG Publisher executes. |✅|✅|
 | `-f` | Copy the ig-publisher generated temp/pages/valueset-ref-all-list.csv and temp/pages/codesystem-ref-all-list.csv to `input/data' folder.  This step should be executed after a successful build, and the IG publisher needs to be run again to update the rendered tables at /terminology.html ||✅|
-| `-g` | IG publisher option: Turn off narrative generation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
-| `-h` | IG publisher option: Turn off validation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
-| `-i` | Run the IG Publisher — executes the Java-based HL7 FHIR IG Publisher tool. Execute this after running Sushi and conversion of YAML resource definitions to JSON format ( `-sy` options) **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.|✅||
-| `-j` | IG publisher option: Enable "rapido" mode (faster build) (TODO - metrics to see how much it actually speed it up or even works- consider removal) |||⚠️|
+| `-g` | IG publisher option: Turn off narrative generation (speeds up build) (TODO - metrics to see how much it actually speeds it up) |||⚠️|
+| `-h` | IG publisher option: Turn off validation (speeds up build) (TODO - metrics to see how much it actually speeds it up) |||⚠️|
+| `-i` | Run the IG Publisher — executes the Java-based HL7 FHIR IG Publisher tool. Execute this after running Sushi and converting YAML resource definitions to JSON format ( `-sy` options). ** NOTE: ** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.|✅||
+| `-j` | IG publisher option: Enable "rapido" mode (faster build) (TODO - metrics to see how much it actually speeds it up or even works- consider removal) |||⚠️|
 | `-k` | JQ script to remove `meta.profile` elements from examples (but not from the YAML source files). This step is done after Sushi processing and before the IG Publisher executes. NOT USED IN US CORE |||⚠️|
 | `-l` | The -l flag generates a markdown link reference list that makes it easy to create internal links between pages in your Implementation Guide. It is included in the `input/includes/link_list.md` file that is included at the end of every page. This step should be executed after the addition of pages and artifacts to the `input` folder and can be postponed until right before the QA process ||✅|
 | `-n` |  JQ script to remove `meta.extension:instance_name` and `meta.extension.instance_description` extensions from the JSON examples (but not from the YAML source files). This step is done after Sushi processing and before the IG Publisher executes.|✅|✅|
-| `-o` | Revert back to the previous/old version of the IG Publisher.  This useful when the latest version of the IG Publisher is buggy and prevents editing. **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.||||
-| `-p` | Download the latest version of the IG Publisher. Periodically the IG Publisher is updated and needs to be downloaded. **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.||||
+| `-o` | Revert back to the previous/old version of the IG Publisher.  This is useful when the latest version of the IG Publisher is buggy and prevents editing. **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.||||
+| `-p` | Download the latest version of the IG Publisher. The IG Publisher is updated periodically and needs to be downloaded. **NOTE** The location of `org.hl7.fhir.igpublisher.jar` needs to be configured for your local install.||||
 | `-q` | IG publisher option:  After execution, automatically open the built IG in a browser to the QA report page (`qa.html`) ||||
 | `-r` | Remove all generated JSON files (TODO: review this code and consider removing)|||⚠️|
-| `-s` | Executes Sushi to create the Implementation Guide resource from the `sushi-config.yaml` file). This is executed before running the ig-publisher and often combined with conversion of YAML resource definitions to JSON format ( `-sy` options) |✅||
+| `-s` | Executes Sushi to create the Implementation Guide resource from the `sushi-config.yaml` file). This runs before ig-publisher and is often combined with converting YAML resource definitions to JSON (the `-sy` option). |✅||
 | `-t` | IG publisher option:  Run without a terminology server (offline mode). |||⚠️|
 | `-v` | IG publisher option:  After execution, automatically open the built IG in a browser to the IG home page (`index.html`) ||||
-| `-x` | Remove change highlighting from markdown filesm, comments out all items in `input/data/new_stuff.yml`, and removes all `Is_New` columns data from `input/data/additional-uscdi-requirements.csv`, `input/data/profile_metadata.csv`, `input/data/provenance-elements.csv`,and `input/data/search_requirements.csv`. This one-time step is executed after publication of a Ballot version or before publication of a new version to remove all the html highlighting use to identify new an updated text in the ig. A manual review is still needed afterwards to ensure the removal is complete and there are no side effects.  |||⚠️|
-| `-y` | Delete all JSON files and regenerate from YAML. This option removes all examples and conformance artifacts types that use YAML as source files prior to regenerating them from the YAML source files. Before converting, the script checks if anyone edited the JSON files directly (instead of editing the YAML source). If the safety check passes, it converts all .yml files to .json files using yq. |✅||
-| `-z` | Delete template/temp directories before publishing . Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build is behaving unexpectedly due to cached state. You're switching between different IG template versions|
+| `-x` | Remove change highlighting from markdown files, comment out all items in `input/data/new_stuff.yml`, and remove all `Is_New` column data from `input/data/additional-uscdi-requirements.csv`, `input/data/profile_metadata.csv`, `input/data/provenance-elements.csv`, and `input/data/search_requirements.csv`. This one-time step is executed after publication of a Ballot version or before publication of a new version to remove all the html highlighting used to identify new and updated text in the ig. A manual review is still needed afterward to ensure the removal is complete and there are no side effects.  |||⚠️|
+| `-y` | Delete all JSON files and regenerate from YAML. This option removes all examples and conformance artifact types that use YAML as source files prior to regenerating them from the YAML source files. Before converting, the script checks if anyone edited the JSON files directly (instead of editing the YAML source). If the safety check passes, it converts all .yml files to .json files using yq. |✅||
+| `-z` | Delete template/temp directories before publishing. Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build behaves unexpectedly because of cached state. You're switching between different IG template versions.
 | `-C` | Delete input-cache before publishing. -C does the same thing as `-z` but for the input-cache/ directory, which stores downloaded dependencies (packages, terminology, etc.).|
-| `-V` | Update the VSAC name-to-FHIR-URI mapping CSV. This is executed prior to publication of a new version, it downloads the latest VSAC (Value Set Authority Center) metadata from the NLM (National Library of Medicine) and creates a CSV mapping file that links VSAC code system names to their FHIR URIs, and outputs a sorted CSV to `input/data/vsacname-fhiruri-map.csv` ||✅|
-| `-R` | Create Requirements Resources from the us_core_reqs.csv file. This is executed after updates to the csv file. The csv file is manually updated using the excel file input/images-source/~$hl7.fhir.us.core_8.0.0_reqs.xlsx which is derived the US Core Server v8.0.0 Specification Requirements, created by Inferno and its open-source testing framework to support the ONC Health IT Certification Program. The goal is to share this data with the inferno team in future releases.
+| `-V` | Update the VSAC name-to-FHIR-URI mapping CSV. This is executed prior to publication of a new version; it downloads the latest VSAC (Value Set Authority Center) metadata from the NLM (National Library of Medicine) and creates a CSV mapping file that links VSAC code system names to their FHIR URIs, and outputs a sorted CSV to `input/data/vsacname-fhiruri-map.csv` ||✅|
+| `-R` | Create Requirements Resources from the us_core_reqs.csv file. This runs after updates to the CSV file. The CSV file is manually updated using the Excel file input/images-source/~$hl7.fhir.us.core_8.0.0_reqs.xlsx, which is derived from the US Core Server v8.0.0 Specification Requirements, created by Inferno and its open-source testing framework to support the ONC Health IT Certification Program. The goal is to share this data with the Inferno team in future releases.
 
 
 
@@ -837,7 +837,7 @@ Flags can be combined in any order:
 ./publish.sh -ien
 ```
 
-####  Delete temp/cache (Run build after deleting an artifacts or example)
+####  Delete temp/cache (Run build after deleting artifacts or examples)
 ```bash
 ./publish.sh -zC
 ...
@@ -847,7 +847,7 @@ Flags can be combined in any order:
 ./publish.sh -ien
 ```
 
-#### Update the requirements resource (run after update to the us_core_reqs.csv file)
+#### Update the requirements resource (run after updating the us_core_reqs.csv file)
 
 ```bash
 ./publish.sh -R
@@ -856,7 +856,7 @@ Flags can be combined in any order:
 ####  Prepublication Steps
 
 Updated table and file contents
-1. remove meta extensions from examples (`-n` option)
+1. Remove meta extensions from examples (`-n` option)
 2. Update terminology table (`-f` option)
 3. update page link list ((`-l` option)
 4. Add Excel and CVS to the images/table folder (`-c` option)
@@ -867,7 +867,7 @@ Updated table and file contents
 
 ## Git
     ### Used for
-    ### where located
+    ### Where located
     ### Documentation reference (Bash, Git Bash for Windows installation)
     #### Pushing
         Push_to_autobuild.sh
@@ -877,29 +877,29 @@ Updated table and file contents
 
 ### Prepare IG for new version:
 
-- [ ] Run IG with latest publisher to get baseline qa report
-- [ ] Update `sushi-config.yaml` (For information on using this file for IG Configuration see: https://fshschool.org/docs/sushi/configuration/)
-  - [ ] Add latest versions of US Core to `definition.extension` list : (for example
+- [ ] Run IG with the latest publisher to get a baseline qa report
+- [ ] Update `sushi-config.yaml` (For information on using this file for IG Configuration, see: https://fshschool.org/docs/sushi/configuration/)
+  - [ ] Add latest versions of US Core to `definition.extension` list (for example
      ~~~
       - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
         valueCode: hl7.fhir.us.core#8.0.1
      ~~~
-     these are to inform the publisher link checker that links to this IG in the change log are valid
-  - [ ] Update the `date`: (e.g.,"2026-01-21") to current date
+     These are to inform the publisher link checker that links to this IG in the change log are valid
+  - [ ] Update the `date` (e.g., "2026-01-21") to the current date
   - [ ] Change `version` element to new version
       - This IG follows the [FHIR Releases and Versioning](https://hl7.org/fhir/versions.html#versions)versioning identification.
-        - If updating to a new ballot version the version will "N.0.0-ballot" where "N" is the new *major* release (e.g. "9.0.0-ballot")
-        - If updating to a new publication post ballot the version will "N.0.0" where "N" is the new major release (e.g. "9.0.0")
-        - If updating to a new [STU Update](https://confluence.hl7.org/pages/viewpage.action?pageId=107217093) publication post ballot the version will be "N.M.0" where "N" is the major release, and "M" is the new *minor* release (e.g. "9.1.0")
-        - If updating to a new [Technical Correction](https://confluence.hl7.org/spaces/ARB/pages/76164490/Definition+Errata+Technical+Correction) publication post ballot the version will be "N.M.T" where "N" is the major release, and "M" is the minor release and  "T" is the technical correction release  (e.g. "9.0.1")
-  - [ ] Update the dependencies latest version as needed ( TODO document the dependencies topic)
+        - If updating to a new ballot version, the version will be "N.0.0-ballot" where "N" is the new *major* release (e.g. "9.0.0-ballot")
+        - If updating to a new publication post-ballot, the version will be "N.0.0" where "N" is the new major release (e.g. "9.0.0")
+        - If updating to a new [STU Update](https://confluence.hl7.org/pages/viewpage.action?pageId=107217093) publication post-ballot, the version will be "N.M.0" where "N" is the major release, and "M" is the new *minor* release (e.g. "9.1.0")
+        - If updating to a new [Technical Correction](https://confluence.hl7.org/spaces/ARB/pages/76164490/Definition+Errata+Technical+Correction) publication post-ballot, the version will be "N.M.T" where "N" is the major release, and "M" is the minor release, and  "T" is the technical correction release  (e.g. "9.0.1")
+  - [ ] Update the dependencies to the latest version as needed ( TODO: document the dependencies topic)
   - [ ] Update the `version-comparison-master` to the last published version: (e.g., "8.0.1")
   - [ ] Add the last published version to the `version-comparison` list : (e.g., "- 8.0.1")
   - [ ] Update the `releaselabel`
         - "CI Build": default release label that refers to a non-stable release that changes with each commit.
         - "STU <N> Ballot: (e.g., "STU 9 Ballot") - a frozen release used in the ballot process
         - "STU <N>: (e.g., "STU 9") - a frozen release used for
-  - [ ] Update the `copyrightyear`: (e.g., '2025+') to latest year
+  - [ ] Update the `copyrightyear`: (e.g., '2025+') to the latest year
 
 - [ ] Update the change log markdown inline relative links to absolute references. Scope the replacement to the **previous version's section only**. Every section below it was absolutized in an earlier cycle and must not be touched, and each section takes a different `<lastversion>` path, so a whole-file run is always wrong.
    1. Select the previous version's section: from its `### Version = ` heading down to the line before the next `### Version = ` heading.
@@ -925,25 +925,25 @@ Updated table and file contents
 
       "...See Changes [Here](https://hl7.org/fhir/us/core/2026Jan/StructureDefinition-us-core-adi-documentreference.html)")
     ```
-- [ ] Update the `publication-request.json` file: for more information about this file see: https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation
-  - [ ] update the `version` to the updated version:(e.g., "9.0.0")   (see the discussion of versioning in updating the `sushi-config.yaml` checkbox above)
+- [ ] Update the `publication-request.json` file: for more information about this file, see: https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation
+  - [ ] update the `version` to the updated version (e.g., "9.0.0")   (see the discussion of versioning in updating the `sushi-config.yaml` checkbox above)
   - [ ] update the `path` to the updated path:
-    -  for ballot publications this is "http://hl7.org/fhir/us/core/yyyymmm" where "yyyymmm" is the ballot cycle (e.g., "2026Jan")
-    -  for published versions this is "http://hl7.org/fhir/us/core/STU<N[.M.T]>" where "N" is the major version and "[.M.T]" is stu and technical update only if present (e.g., "STU9", "STU6.1, and "STU8.0.1")
+    -  For ballot publications, this is "http://hl7.org/fhir/us/core/yyyymmm" where "yyyymmm" is the ballot cycle (e.g., "2026Jan")
+    -  For published versions, this is "http://hl7.org/fhir/us/core/STU<N[.M.T]>" where "N" is the major version and "[.M.T]" is stu and technical update only if present (e.g., "STU9", "STU6.1, and "STU8.0.1")
   - [ ] Update the `mode`
        -  For ballot change to  "working"
-       -  For publication change to  "milestone"
-       -  For technical correction change to "technical-correction"
+       -  For publication, change to  "milestone"
+       -  For technical correction, change to "technical-correction"
   - [ ] Update the `status`
        -  For ballot change to  "ballot"
-       -  For publication change to "trial-use"
+       -  For publication, change to "trial-use"
   - [ ] Update the `sequence`
-        -  Should be the same as in the ReleaseLabel in `sushi-config.yaml` **without** a space (US Core only) (e.g.,"STU9" )
-  - [ ] Update both `desc` and `descmd` with the same content using markdown formatting for `descmd`  refer to previuos versions at https://hl7.org/fhir/us/core/history.html for  suggested content.
+        -  Should be the same as in the ReleaseLabel in `sushi-config.yaml` **without** a space (US Core only) (e.g., "STU9" )
+  - [ ] Update both `desc` and `descmd` with the same content using Markdown formatting for `descmd`; refer to previous versions at https://hl7.org/fhir/us/core/history.html for suggested content.
 - [ ] Update the Home page (`input\pagencontent\index.html`)
-  -  Replace the includes what's new section with new page (usually a template stub) from `input/includes/whats-new` folder
+  -  Replace the includes what's new section with a new page (usually a template stub) from the `input/includes/whats-new` folder
 - [ ] Update the Change Log page (`input\pagencontent\changes.html`)
-  - [ ] Add the introductory text for latest version after the how-to-read-the-page section  at the top of the page:
+  - [ ] Add the introductory text for the latest version after the how-to-read-the-page section  at the top of the page:
      -  copy and paste the most recent ballot or publication introduction sections
 
         e.g.:
@@ -952,10 +952,10 @@ Updated table and file contents
         - url: <https://hl7.org/fhir/us/core/STU9/>
         - Based on FHIR version: 4.0.1
 
-        The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2025 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments.
+        The public reviewed and commented on the changes in this annual update to US Core through the January 2025 HL7 balloting process. The HL7 International Cross-Group Projects work group members have agreed to and voted on the resolution of the community comments.
         #### What's new in Version 9.0.0 of US Core:
 
-        Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 9.0.0 version of US Core and each previous major release on [Changes Between Versions] page. Below is an overview of significant changes between Version 9.0.0 and Version 9.0.0-ballot of US Core.
+        Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 9.0.0 version of US Core and each previous major release on the [Changes Between Versions] page. Below is an overview of significant changes between Version 9.0.0 and Version 9.0.0-ballot of US Core.
 
         {% include whats-new/v9.md %}
 
@@ -967,11 +967,11 @@ Updated table and file contents
         ~~~
         -  update the version
         -  update the USCDI version if applicable
-        -  Replace the includes what's new section with new page (usually a template stub) from `input/includes/whats-new` folder
-  - [ ] Add the trackers items for the new version
+        -  Replace the includes what's new section with a new page (usually a template stub) from `input/includes/whats-new` folder
+  - [ ] Add the tracker items for the new version
      - Use Jira Search `https://jira.hl7.org/issues/?filter=23999#`
      -  Export Search as a ";" separated CSV file using Jira's "exporter" function
-     -  Use following VS Code find and replace regex to create the markdown text in VS Code (or equivalent regex in other text editor):
+     -  Use the following VS Code find and replace regex to create the markdown text in VS Code (or an equivalent regex in another text editor):
         ~~~
         find: "(.*?)";"(.*?)";"(.*?)";"(.*?)";"(.*?)";"(.*?)";.*
 
@@ -987,7 +987,7 @@ Updated table and file contents
   - [ ] Revisit the row at publication. Rows are corrected after the fact (the USCDI v5 row moved from `8.0.0` to `8.0.1` for the technical correction, and `[v3]` was later refined to `[v3.1]`).
 -  [ ]  Remove change highlighting if prior build is Ballot
    -  [ ]  using the publish.sh `-x` option to remove the new-content highlighting from all markdown files
-   -  [ ]  manually clears all the "Is_New" column data from:
+   -  [ ]  Manually clear all the "Is_New" column data from:
          - `input/data/additional-uscdi-requirements.csv`
          - `input/data/profile_metadata.csv`
          - `input/data/provenance-elements.csv`
@@ -1001,8 +1001,8 @@ Updated table and file contents
       -  Target_Resource_6_is_new
       -  Target_Resource_7_is_new
       -  Target_Resource_8_is_new
-   -  [ ]  manually conform the highlighting removed and no formatting issues ( white space errors)
--  [ ]  Review the QA log and debug errors, warnings and bad links.  (see debugging QA errors)
+   -  [ ]  Manually confirm the highlighting is removed and there are no formatting issues (whitespace errors)
+-  [ ]  Review the QA log and debug errors, warnings, and bad links.  (see debugging QA errors)
 
 
 
@@ -1010,33 +1010,72 @@ Updated table and file contents
 
 
 
-    ### current publication
-    ### addition or update to Profile
+    ### Current publication
+### IG Updates
+
+#### New USCDI Data Element
+
+##### Existing US Core element
+    - [ ] Update USCDI Mapping Table
+    - [ ] Add to the "What's new" file
+    - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
+
+##### New US Core element in existing US Core profile
+    - [ ] Update USCDI Mapping Table
+    - [ ] Add to the "What's new" file
+    - [ ] Update US Core Profile
+        - [ ] Update Profile Introduction
+        - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
+        - [ ] New or Updated Example(s)
+        - [ ] Update Additional USCDI table if the design team decides element is Additional USCDI
+    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )        
+    - [ ] New Search if the design team decides it is needed
+         - [ ] Update the Search API table
+         - [ ] Update the Profile Notes page
+         - [ ] Update the CapabilityStatement
+##### New US Core profile
+    - [ ] Update USCDI Mapping Table
+    - [ ] Add to the "What's new" file
+    - [ ] Create US Core Profile
+        - [ ] Create Profile Introduction
+        - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
+        - [ ] New Example(s)
+        - [ ] Update Additional USCDI table if the design team decides elements are Additional USCDI
+    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )        
+    - [ ] New Search
+         - [ ] Update the Search API table
+         - [ ] Update the Profile Notes page
+    - [ ] Update the Profile table
+        - [ ] add scopes
+        - [ ] year added
+     - [ ] Update the CapabilityStatement
+        
+    
 ### Prepublication checklists
 
 - [ ] Apply trackers
 - [ ] Review the Application of trackers
 - [ ] Copy Editing
-  - [ ] typos, grammar -mostly done when applied changes (full Grammerly review when publish)
-  - [ ] Screen scrape for open links ([, ]) repeating words etc
+  - [ ] Typos, grammar -mostly done when applying changes (full Grammarly review when publish)
+  - [ ] Screen scrape for open links ([, ]) repeating words, etc
   - [ ] read through
 - [ ] Observation profile comparison table (part of publisher - review when publish)
-- [ ] Version comparison tables (part of publisher - review, will update argo when publish)
+- [ ] Version comparison tables (part of publisher - review, will update argo when published)
 - [ ] Technical QA
   - [ ] Terminology (add ignorewarning notes for these )
   - [ ] Open Issues
   - [ ] Variance request for QA Issues: 
   - [ ] Update IgnoreWarnings.txt file
-    - [ ] remove unused items
+    - [ ] Remove unused items
     - [ ] Grammar check IgnoreWarnings comments
-- [ ] Review CababilityStatements (when publish)
+- [ ] Review CapabilityStatements (when publishing)
 - [ ] Updated table and file contents
   - [ ] meta stripped (custom bash script when build)
   - [ ] Update terminology table (custom bash script when build)
   - [ ] Update mustsupport target tables (python scripts)
-  - [ ] page link list (custom bash script when build)
+  - [ ] Page link list (custom bash script when building)
   - [ ] Add Excel and CVS to the images/table folder (custom bash script when build)
-  - [ ] Append version to meta. profiles in examples and Capstatements - - (part of custom bash script when build)
+  - [ ] Append version to meta. profiles in examples and Capstatements (part of custom bash script when building)
 - [ ] Confirm change log links for the last cycle updated to the published version  (needs us core 8.0.1 to be published first)
 - [ ] Update the Jira file
 - [ ] Update US Core History Page Introduction (The master for the US core introduction is at https://hl7.org/fhir/us/core/package-list-introduction.md send GG changes to that file directly)
@@ -1053,30 +1092,30 @@ Updated table and file contents
 ## Misc topics
 
 ### Updating the Change Log
-   - For a discussion on adding a change log section for a new version. See "Update the Change Log page" item in the *Prepare IG for new version* above"
+   - For a discussion on adding a change log section for a new version. See "Update the Change Log page" item in the *Prepare IG for new version* above
    - The change log is updated as trackers are applied
-      - The `Tracker Status` is updated from "Triaged" to "Resoved-Change Required" to "Applied" , etc
+      - The `Tracker Status` is updated from "Triaged" to "Resolved-Change Required" to "Applied", etc
         - The Change log is updated to "Applied" ***before*** tracker QA
         - Jira is updated to "Applied" ***after*** tracker QA.
-      - The `Change Impact` and `Change Category` are updated if missing or incorrect (usually when updating the status from "Triaged" to "Resoved-Change Required").
+      - The `Change Impact` and `Change Category` are updated if missing or incorrect (usually when updating the status from "Triaged" to "Resolved-Change Required").
       - The `Change Summary` is edited to reflect what changes we actually made vs the tracker summary.
       - The `Updated Content [Link](#)` is edited to link to the relevant section(s) that have been updated
         - These are *relative* links so they point to the current version (As documented above, they are updated to absolute links *before* adding a new section to the change log)
- -  Before publication group and reorder list by change impact using an AI chat tool.
+ - Before publication, group and reorder the list by change impact using an AI chat tool.
 ### New content highlighting
 
 New and updated content is highlighted green while a version is in development and the highlighting is removed before publication. There are three independent mechanisms, and all three are maintained by hand as each artifact or change is applied.
 
-   - md files
+   - Markdown files
      - Wrap new or updated narrative in `<span class="bg-success" markdown="1">...</span>` (or a `<div>` for block content) and close it with a `<!-- new-content -->` marker. The marker is what `publish.sh -x` keys on when stripping highlighting.
      - VS Code snippets are available for the span and div forms.
-   - csv files
+   - CSV files
      - Set `Is_New = TRUE` on the affected row as each artifact is applied, in `input/data/additional-uscdi-requirements.csv`, `profile_metadata.csv`, `search_requirements.csv`, `us_core_reqs.csv`, and `provenance-elements.csv`.
      - The value is compared in Liquid with `{% if item.Is_New == "TRUE" %}`, which is case-sensitive. It must be `TRUE`. `True`, `Y`, or any other value fails silently and highlights nothing. The column comment in `must-support.md` is the authoritative description: default `FALSE`, set to `TRUE` for new or updated content, and set back to `FALSE` before publishing a new version.
      - `!` in an `Is_New` cell is a separate convention meaning *ignore this row*, not a highlight value. The Liquid loops do not filter on it, so a row marked `!` still renders unhighlighted; the marker is read by the Python notebook that regenerates the table.
      - In `provenance-elements.csv` the `Target_Resource_<N>_is_new` columns carry an explicit `TRUE` or `FALSE` on every row rather than being left blank. Set the relevant column to `TRUE` and leave the others `FALSE`.
      - These columns drive the `bg-success` conditionals already present in `input/pagecontent/` and `input/includes/`. Those conditionals are build machinery, not leftover highlighting, and are dormant while the columns are empty. Do not strip them.
-   - yaml files
+   - YAML files
      - Add the artifact *name* to `input/data/new_stuff.yml` as each new artifact is applied. The generated artifact lists match on name (`p.name == new_stuff`) to highlight new entries on the Examples, Terminology, Search Parameters and Operations, and profile list pages.
    - removal of new content highlighting
      - `publish.sh -x` strips the markdown spans and divs and comments out every line of `new_stuff.yml`.
@@ -1089,6 +1128,6 @@ New and updated content is highlighted green while a version is in development a
      - Version-pinned messages (those ending in `...|N.0.0`) must be updated to the current version each publication cycle.
 ### Version comparisons
     - Argo DSTU2 Comparisons - see inline instructions
-### Update the History Page Introducion
+### Update the History Page Introduction
   1. The master for the US core introduction is now here: https://hl7.org/fhir/us/core/package-list-introduction.md  ( not in local - autobuild only )
   2. Send Grahame Grieve changes to that file directly
