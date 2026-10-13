@@ -34,6 +34,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 2. **Applied:** Non-substantive (Correction) Remove the relocated Changes Between Versions link and rename the Social Determinants of Health link to Screening and Assessments on the Guidance landing page [FHIR-57912](https://jira.hl7.org/browse/FHIR-57912) See Changes [Here](guidance.html)
 3. **Applied:** Non-substantive (Correction) Correct footnote markers and supply missing footnote definitions in the profile intro notes [FHIR-57899](https://jira.hl7.org/browse/FHIR-57899) See Changes [Here](profiles-and-extensions.html#profiles)
 4. **Applied:** Non-substantive (Correction) Align the USCDI mapping labels for Weight-for-length Percentile, Head Occipital-frontal Circumference Percentile, and BMI Percentile with USCDI [FHIR-57863](https://jira.hl7.org/browse/FHIR-57863) See Changes [Here](uscdi.html)
+5. **Applied:** Non-substantive (Correction) Remove the duplicate DocumentReference and Observation rows from the resource-level scopes table [FHIR-57531](https://jira.hl7.org/browse/FHIR-57531) See Changes [Here](scopes.html)
 
 ##### Pending
 The application of the following trackers is pending and will not be completed before publication.
