@@ -17,11 +17,11 @@ In addition to the Mandatory and Must Support data elements in the [US Core Vita
 
 **Each Observation Must Support:**
 
-1. a value for oxygen saturation
+1. a value for oxygen saturation<sup>1</sup>
 2. a code for inspired oxygen concentration<sup>2</sup>
 3. a value for inspired oxygen concentration
 
-<sup>2</sup> see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
