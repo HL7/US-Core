@@ -788,12 +788,31 @@ if [[ $IG_PUBLISH ]]; then
   echo "Checking for JSON files with no corresponding YAML source ..."
   echo "====================================================================="
   echo ""
-  for json_file in "$resources"/*.json; do
-    base=$(basename "$json_file" .json)
-    if [ ! -f "$resources-yaml/${base}.yml" ]; then
-      echo "⚠️  No YAML source for $json_file"
-    fi
+  # Both YAML-sourced directories. SearchParameters are authored directly as
+  # JSON and have no YAML source by design, so skip them; without that, all 110
+  # of them report every run and a real orphan is lost in the noise.
+  orphan_count=0
+  for dir in resources examples; do
+    for json_file in "$inpath/$dir"/*.json; do
+      [ -e "$json_file" ] || continue
+      base=$(basename "$json_file" .json)
+      case "$base" in SearchParameter-*) continue;; esac
+      if [ ! -f "$inpath/$dir-yaml/${base}.yml" ]; then
+        echo "⚠️  No YAML source for $json_file"
+        ((orphan_count++))
+      fi
+    done
   done
+  if [ $orphan_count -eq 0 ]; then
+    echo "✅ Every generated JSON has a YAML source."
+  else
+    echo ""
+    echo "⚠️  Found $orphan_count orphaned JSON file(s)."
+    echo "   -y regenerates but never deletes, so a renamed or removed YAML"
+    echo "   source leaves its JSON behind. The orphan keeps the same resource"
+    echo "   id as the file now generated under the new name, which the IG"
+    echo "   Publisher sees as a duplicate id. Delete the orphan, then re-run -y."
+  fi
   echo "====================================================================="
   echo ""
   sleep 1
