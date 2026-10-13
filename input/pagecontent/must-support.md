@@ -58,7 +58,7 @@ HOWEVER, the USCDI Data Elements data needs to be manually mapped to it from the
 additional-uscdi-requirements.csv columns:
 
 - 'Is_New': Flag for new or updated content for the current version. Default is "FALSE" and set to "TRUE for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to "FALSE" before publishing new versions of the guide.
-- 'AddlUSCDI':  USCDI Data Elements corresponding to the add'l USCDI FHIR element. Note that this needs to be manually mapped using the USCDI mapping table as a guide.
+- 'AddlUSCDI':  USCDI Data Elements corresponding to the add'l USCDI FHIR element. Note that this needs to be manually mapped using the USCDI mapping table as a guide.  It actually holds an element name or a class name, depending on what the FHIR element identifies.
 - 'Profile': US Core Profile name to which the add'l USCDI elements belongs. The format is markdown link brackets for reference-style links.  For example "[US Core Goal Profile]".
 - 'FHIRElement': FHIR element that is add'l USCDI
 - 'combo' : column for unique matching
@@ -66,13 +66,10 @@ additional-uscdi-requirements.csv columns:
 ================================================================ -->
 
 {% assign rows = site.data.additional-uscdi-requirements %}
-{% for item in rows -%}
-{% if forloop.first -%}
 | Additional USCDI Requirements | Profile | FHIR Element |
 |---|---|---|
-{% else -%}
+{% for item in rows -%}
 {% if item.Is_New == "TRUE" %}|<span data-note="highlight text" class="bg-success" markdown="1">{{item.Addl_USCDI}}</span><!-- new-content highlight text -->|<span data-note="highlight text" class="bg-success" markdown="1">[{{item.Profile}}]</span><!-- new-content highlight text -->|<span data-note="highlight text" class="bg-success" markdown="1">`{{item.FHIR_Element}}`</span><!-- new-content highlight text -->|{% else %}|{{item.Addl_USCDI}}|[{{item.Profile}}]|`{{item.FHIR_Element}}`|{% endif %}
-{% endif -%}
 {% if forloop.last %}{:.grid}{% endif -%}
 {% endfor %}
 

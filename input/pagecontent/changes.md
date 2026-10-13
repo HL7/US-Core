@@ -37,6 +37,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 4. **Applied:** Non-substantive (Correction) Align the USCDI mapping labels for Weight-for-length Percentile, Head Occipital-frontal Circumference Percentile, and BMI Percentile with USCDI [FHIR-57863](https://jira.hl7.org/browse/FHIR-57863) See Changes [Here](uscdi.html)
 5. **Applied:** Non-substantive (Correction) Remove the duplicate DocumentReference and Observation rows from the resource-level scopes table [FHIR-57531](https://jira.hl7.org/browse/FHIR-57531) See Changes [Here](scopes.html)
 6. **Pre-Applied:**  Non-substantive (Correction) Reconcile the USCDI mapping table with USCDI v7: rename the data elements and data classes, move Indication and Performance Date and Time to the new Healthcare Information Attributes data class, and remove the Imaging Narrative row, which is a US Core clinical note type rather than a USCDI data element [FHIR-59628](https://jira.hl7.org/browse/FHIR-59628) See Changes [Here](uscdi.html)
+7. **Pre-Applied:**  Non-substantive (Correction) Reconcile the Additional USCDI Requirements table's data element column with the published USCDI data element names, and correct the Liquid script that dropped the table's first row [FHIR-59629](https://jira.hl7.org/browse/FHIR-59629) See Changes [Here](must-support.html#additional-uscdi-requirements)
 
 ##### Pending
 The application of the following trackers is pending and will not be completed before publication.
