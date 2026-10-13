@@ -105,6 +105,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
         - [Existing US Core element](#existing-us-core-element)
         - [New US Core element in existing US Core profile](#new-us-core-element-in-existing-us-core-profile)
         - [New US Core profile](#new-us-core-profile)
+        - [Updated Guidance (e.g. Surveys and Assessments)](#updated-guidance-eg-surveys-and-assessments)
     - [Prepublication checklists](#prepublication-checklists)
   - [Misc topics](#misc-topics)
     - [Updating the Change Log](#updating-the-change-log)
@@ -810,7 +811,7 @@ For example:
 | `-t` | IG publisher option:  Run without a terminology server (offline mode). |||⚠️|
 | `-v` | IG publisher option:  After execution, automatically open the built IG in a browser to the IG home page (`index.html`) ||||
 | `-x` | Remove change highlighting from markdown files, comment out all items in `input/data/new_stuff.yml`, and remove all `Is_New` column data from `input/data/additional-uscdi-requirements.csv`, `input/data/profile_metadata.csv`, `input/data/provenance-elements.csv`, and `input/data/search_requirements.csv`. This one-time step is executed after publication of a Ballot version or before publication of a new version to remove all the html highlighting used to identify new and updated text in the ig. A manual review is still needed afterward to ensure the removal is complete and there are no side effects.  |||⚠️|
-| `-y` | Delete all JSON files and regenerate from YAML. This option removes all examples and conformance artifact types that use YAML as source files prior to regenerating them from the YAML source files. Before converting, the script checks if anyone edited the JSON files directly (instead of editing the YAML source). If the safety check passes, it converts all .yml files to .json files using yq. |✅||
+| `-y` | Regenerate the JSON from the YAML sources. For each `.yml` in `input/resources-yaml` and `input/examples-yaml`, the script writes the matching `.json` in `input/resources` or `input/examples` using yq. Before converting, it checks whether anyone committed a JSON file more recently than its YAML source (that is, edited the JSON directly) and aborts if so. **It overwrites; it deliberately does not delete.** Blanket-deleting the JSON would destroy work by a collaborator who edited a JSON file directly instead of its YAML source, which is also what the commit-time safety check guards against. The cost of that choice is that a JSON file whose YAML source has been renamed or removed is left behind. See *Renaming a YAML source file* below. |✅||
 | `-z` | Delete template/temp directories before publishing. Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build behaves unexpectedly because of cached state. You're switching between different IG template versions.
 | `-C` | Delete input-cache before publishing. -C does the same thing as `-z` but for the input-cache/ directory, which stores downloaded dependencies (packages, terminology, etc.).|
 | `-V` | Update the VSAC name-to-FHIR-URI mapping CSV. This is executed prior to publication of a new version; it downloads the latest VSAC (Value Set Authority Center) metadata from the NLM (National Library of Medicine) and creates a CSV mapping file that links VSAC code system names to their FHIR URIs, and outputs a sorted CSV to `input/data/vsacname-fhiruri-map.csv` ||✅|
@@ -1017,42 +1018,92 @@ Updated table and file contents
 
 ### IG Updates
 
+#### Renaming a YAML source file
+
+`publish.sh -y` regenerates `input/resources` and `input/examples` by writing one
+JSON per YAML source. It overwrites files and never deletes them, and its safety
+check skips any JSON with no matching YAML.
+
+That is intentional. This is a collaborative repo, and a co-maintainer may have
+edited a JSON file directly rather than its YAML source; deleting the JSON
+wholesale would throw that work away. The same concern drives the check that
+aborts when a JSON file was committed more recently than its YAML. **Do not
+"fix" `-y` by making it delete.**
+
+The trade-off is that renaming or deleting a YAML source leaves its old JSON
+behind forever.
+
+That orphan still carries the same `id` as the resource now generated under the
+new name, so the IG Publisher loads **two resources with the same id** and fails
+or publishes a duplicate. Nothing in the build warns about it.
+
+- [ ] After renaming or deleting a file in `input/resources-yaml` or
+      `input/examples-yaml`, delete the matching JSON in `input/resources` or
+      `input/examples` by hand, then run `-y`.
+- [ ] The generated JSON is named after the **YAML filename**, not the resource
+      `id`. `Specimen-example-serum-hemolyzed.yml` produces
+      `Specimen-example-serum-hemolyzed.json` even when the resource inside is
+      `id: example-serum-lipemic`.
+- [ ] Renaming an artifact also needs `-z` and `-C` (delete `template/`,
+      `temp/`, and `input-cache/`) so stale output does not survive the rebuild.
+
 #### Adding New USCDI Data Element
 
+For all changes
+
+   - [ ] Highlight the new content where possible
+     - [ ] new_stuff.yml
+     - [ ] Is_New columns in the tables
+         -  profile_metadata.csv
+         -  search_requirements.csv
+         -  us_core_reqs.csv
+         -  provenance-elements.csv
+      - Profile introduction
+      - Profile notes
+      - Guidance Pages
+
+
 ##### Existing US Core element
-    - [ ] Update USCDI Mapping Table
-    - [ ] Add to the "What's new" file
-    - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed (see Hackmd notes)
+ - [ ] Update USCDI Mapping Table
+ - [ ] Add to the "What's new" file
+ - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed (see Hackmd notes)
 
 ##### New US Core element in existing US Core profile
-    - [ ] Update USCDI Mapping Table
-    - [ ] Add to the "What's new" file
-    - [ ] Update US Core Profile
-        - [ ] Update Profile Introduction
-        - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
-        - [ ] New or Updated Example(s)
-        - [ ] Update Additional USCDI table if the design team decides element is Additional USCDI
-    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
-    - [ ] New Search if the design team decides it is needed
-         - [ ] Update the Search API table
-         - [ ] Update the Profile Notes page
-         - [ ] Update the CapabilityStatement
+  - [ ] Update USCDI Mapping Table
+  - [ ] Add to the "What's new" file
+  - [ ] Update US Core Profile
+      - [ ] Update Profile Introduction
+      - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
+      - [ ] New or Updated Example(s)
+  - [ ] Update Additional USCDI table if the design team decides element is Additional USCDI
+  - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
+  - [ ] New Search if the design team decides it is needed
+       - [ ] Update the Search API table
+       - [ ] Update the Profile Notes page
+       - [ ] Update the CapabilityStatement
+
 ##### New US Core profile
-    - [ ] Update USCDI Mapping Table
-    - [ ] Add to the "What's new" file
-    - [ ] Create US Core Profile
-        - [ ] Create Profile Introduction
-        - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
-        - [ ] New Example(s)
-        - [ ] Update Additional USCDI table if the design team decides elements are Additional USCDI
-    - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
-    - [ ] New Search
-         - [ ] Update the Search API table
-         - [ ] Update the Profile Notes page
-    - [ ] Update the Profile table
-        - [ ] add scopes
-        - [ ] year added
-     - [ ] Update the CapabilityStatement
+  - [ ] Update USCDI Mapping Table
+  - [ ] Add to the "What's new" file
+  - [ ] Create US Core Profile
+      - [ ] Create Profile Introduction
+      - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
+      - [ ] New Example(s)
+      - [ ] Update Additional USCDI table if the design team decides elements are Additional USCDI
+  - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
+  - [ ] New Search
+       - [ ] Update the Search API table
+       - [ ] Update the Profile Notes page
+  - [ ] Update the Profile table
+      - [ ] add scopes
+      - [ ] year added
+   - [ ] Update the CapabilityStatement
+
+
+##### Updated Guidance (e.g. Surveys and Assessments)
+ - [ ] Update USCDI Mapping Table
+ - [ ] Add to the "What's new" file
+ - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed (see Hackmd notes)
 
 
 ### Prepublication checklists
