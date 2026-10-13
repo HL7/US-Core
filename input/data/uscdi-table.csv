@@ -90,6 +90,8 @@ data_class_number,data_class,uscore_profile,data_element,resource_type,extension
 ,Laboratory,US Core Specimen Profile,Specimen Identifier,Specimen,,,Specimen.identifier,,,,,,,,,,
 ,Laboratory,US Core Specimen Profile,Specimen Source Site,Specimen,,,Specimen.collection.bodySite,,,,,,,,,,
 ,Laboratory,US Core Specimen Profile,Specimen Condition Acceptability,Specimen,,,Specimen.condition,,,,,,,,,,
+,Laboratory,US Core Specimen Profile| US Core Laboratory Result Observation Profile,Specimen Collection Date and Time,Specimen | Observation,,,Specimen.collection.collected[x] | Observation.effective[x],,,,,,,,,,
+,Laboratory,US Core Specimen Profile,Specimen Collection Method,Specimen,,,Specimen.collection.method,,,,,,,,,,
 16,Medical Devices,US Core Device Profile,,,,,Device,,,,,,,,,,
 ,Medical Devices,US Core Device Profile,Unique Device Identifier,Device,,,Device,,,,,,,,,,
 ,Medical Devices,US Core Device Profile,Device Type,Device,,,Device.type,,,,,,,,,,

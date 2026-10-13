@@ -28,6 +28,30 @@
   "subject": {
     "reference": "Patient/example"
   },
+  "collection": {
+    "collectedDateTime": "2022-09-27T18:07:12Z",
+    "method": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "28520004",
+          "display": "Venipuncture for blood test (procedure)"
+        }
+      ]
+    },
+    "bodySite": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "368209003",
+          "display": "Right arm",
+          "version": "http://snomed.info/sct/731000124108"
+        }
+      ],
+      "text": "Right arm"
+    }
+  },
   "container": [
     {
       "type": {

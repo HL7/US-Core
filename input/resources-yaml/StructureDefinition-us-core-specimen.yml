@@ -66,6 +66,21 @@ differential:
           valueBoolean: true
       path: Specimen.collection
       short: '𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Collection details'
+    - id: Specimen.collection.collected[x]
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: Specimen.collection.collected[x]
+      short: '𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Time when specimen was collected from subject - the physiologically relevant time.'
+    - id: Specimen.collection.method
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: Specimen.collection.method
+      short: '𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Specimen Collection Method'
+      binding:
+        strength: preferred
+        valueSet: http://hl7.org/fhir/ValueSet/specimen-collection-method
     - id: Specimen.collection.bodySite
       extension:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

@@ -21,8 +21,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Specimen" plural="true" %}
 
-1. specimen collection source site
-2. specimen condition<sup>3</sup>
+1. <span class="bg-success" markdown="1">specimen collection date and time</span><!-- new-content -->
+2. <span class="bg-success" markdown="1">specimen collection method</span><!-- new-content -->
+3. specimen collection source site
+4. specimen condition<sup>3</sup>
 
 <sup>1,2,3</sup> see guidance below
 

@@ -30,6 +30,12 @@ subject:
   reference: Patient/example
 collection:
   collectedDateTime: '2022-09-27T18:07:12Z'
+  method:
+    coding:
+      - system: http://snomed.info/sct
+        version: http://snomed.info/sct/731000124108
+        code: '70777001'
+        display: Urine specimen collection, catheterized (procedure)
 container:
 - type:
     text: 100mL Sterile Polycup
