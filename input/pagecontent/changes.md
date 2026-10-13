@@ -30,6 +30,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 ##### Substantive
 
 ##### Non-substantive
+1. **Applied:** Non-substantive (Correction) Remove duplicated words from the Observation.hasMember short description and the Observation.derivedFrom definition [FHIR-58155](https://jira.hl7.org/browse/FHIR-58155) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
 
 ##### Pending
 The application of the following trackers is pending and will not be completed before publication.

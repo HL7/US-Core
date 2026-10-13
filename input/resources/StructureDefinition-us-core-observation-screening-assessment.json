@@ -365,7 +365,7 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "short": "Reference to panel members or multi-select responses or multi-select responses",
+        "short": "Reference to panel members or multi-select responses",
         "definition": "Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions.",
         "comment": "This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the \"panel\" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation \"panels\" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern.",
         "type": [
@@ -409,7 +409,7 @@
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
-        "definition": "Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived.",
+        "definition": "Observations or other resource such as a QuestionnaireResponse from which this observation value is derived.",
         "type": [
           {
             "code": "Reference",
