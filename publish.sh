@@ -40,6 +40,18 @@ done
 
 # ========= Globals  =================
 [[ "$NA" != "N/A" ]] && NA='http://tx.fhir.org'
+
+# A run that skipped generation (-g), validation (-h), used -rapido (-j), or ran
+# without a terminology server (-t) reports fewer QA messages than a full run.
+# Its report is not comparable with a full run's, so -q must not diff it against
+# the baseline or overwrite the baseline with it. Measured 2026-10-13: a full
+# run reports 2 errors / 4 warnings / 1 info / 1 broken link; the same tree with
+# generation and validation off reports 1 / 2 / 0 / 0.
+if [[ -n "$GEN_OFF" || -n "$VAL_OFF" || -n "$RAPIDO" || "$NA" == "N/A" ]]; then
+  QA_RUN_KIND="partial"
+else
+  QA_RUN_KIND="full"
+fi
 ig_path="$HOME/Downloads" # **THE LOCATION OF `org.hl7.fhir.igpublisher.jar` NEEDS TO BE CONFIGURED FOR YOUR LOCAL INSTALL **  ====
 inpath=input
 examples="$inpath"/examples
@@ -841,6 +853,19 @@ if [[ $VIEW_QA ]]; then
     # sort current report for a stable, order-independent comparison
     sort "$QA_CURRENT" > /tmp/qa_sorted.txt
 
+    if [[ "$QA_RUN_KIND" == "partial" ]]; then
+      echo "====================================================================="
+      echo "SKIPPING the QA comparison: this was a partial build"
+      [[ "$NA" == "N/A" ]] && TX_NOTE="-tx N/A" || TX_NOTE=""
+      echo "  flags:$GEN_OFF$VAL_OFF$RAPIDO${TX_NOTE:+ $TX_NOTE}"
+      echo "  A partial run reports fewer checks, so the diff would list"
+      echo "  suppressed checks as resolved issues, and the baseline would be"
+      echo "  overwritten with a weaker report."
+      echo "  The baseline was left unchanged. Re-run a full build (no -g -h -j"
+      echo "  -t) and then -q to compare and update it."
+      echo "====================================================================="
+    else
+
     if [[ -f "$QA_PREV" ]]; then
       # diff -u so output uses +/- markers matching the prompt (- = resolved, + = new)
       QA_DIFF=$(diff -u "$QA_PREV" /tmp/qa_sorted.txt || true)
@@ -859,6 +884,7 @@ if [[ $VIEW_QA ]]; then
     "
    # Save the SORTED report as the baseline for next time (keeps future diffs sorted-vs-sorted)
    cp /tmp/qa_sorted.txt .qa-eslintcompact_previous.txt
+    fi
   else
     echo "⚠️  "$QA_CURRENT" not found — skipping QA analysis."
   fi

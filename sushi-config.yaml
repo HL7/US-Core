@@ -270,7 +270,18 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   #   - 'StructureDefinition/*'
   version-comparison-master: 9.0.0
 
-  version-comparison:    # significantly increases build time - comment out to speed it up
+  # Do NOT disable the comparisons to speed up a build. Measured 2026-10-13 on
+  # an 11m44s full run: the whole comparison block is 141.7s, of which
+  # ipa/ips is 72.6s (finish ipa version alone is 59.6s) and the six
+  # version-comparison entries are 55.7s. Disabling them does save ~3m25s,
+  # but changes-between-versions.md and other pages build their links from
+  # these same parameters, so the output then carries 81,007 broken links
+  # and 1,336 errors. Commenting out here and running the publisher without
+  # re-running SUSHI is worse again: input/data/ig.yml keeps the old values
+  # and Jekyll renders links to comparison pages that were never generated.
+  # To speed up a development build use the publish.sh -F or -A profile,
+  # which skips generation and validation and leaves the content intact.
+  version-comparison:
     - 9.0.0
     - 8.0.1
     - 7.0.0
@@ -327,6 +338,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - comparison-argo/vs-narrative-status-us-core-narrative-status.html
 
   # ======== ID Comparison Parameters ==========
+  # The costliest part of the build's comparison work (72.6s of 141.7s).
+  # Still required: the IG narrative links to the generated comparison
+  # pages. See the note on version-comparison above before changing these.
   ipa-comparison:
     - '{current}'
   ips-comparison:
