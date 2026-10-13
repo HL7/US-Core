@@ -1,3 +1,13 @@
+ <div class="note-to-balloters" markdown="1">
+
+**The January 2027 ballot addresses the following**
+
+{% include whats-new/v10-ballot.md %}
+</div>
+
+Where possible, new and updated pre-publishing content is highlighted with green text and background. **This highlighting will be removed prior to publication.**
+{:.new-content}
+
 
 Key updates and detailed changes between this and prior versions are available on the US Core [Change Log] and [Changes Between Versions] pages.
 {:.stu-note}

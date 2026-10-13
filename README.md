@@ -94,7 +94,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Update IG Publisher, then build](#update-ig-publisher-then-build)
       - [Build IG after changes/updates (Convert YAML to JSON, then run SUSHI, then run IG Publisher removing meta extension and adding versions to canonicicals)](#build-ig-after-changesupdates-convert-yaml-to-json-then-run-sushi-then-run-ig-publisher-removing-meta-extension-and-adding-versions-to-canonicicals)
       - [Delete temp/cache (Run build after deleting an artifacts or example)](#delete-tempcache-run-build-after-deleting-an-artifacts-or-example)
-      - [Update the requirments resource (run after update to the us\_core\_reqs.csv file)](#update-the-requirments-resource-run-after-update-to-the-us_core_reqscsv-file)
+      - [Update the requirements resource (run after update to the us\_core\_reqs.csv file)](#update-the-requirements-resource-run-after-update-to-the-us_core_reqscsv-file)
       - [Prepublication Steps](#prepublication-steps)
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
@@ -121,7 +121,7 @@ The IG Publisher's key dependencies include:
 - **Java runtime** - Required to execute the publisher JAR file
 - **Jekyll** - Website generation tool for producing final HTML output
 - **Ruby** - Ruby requirements for Jekyll
-- **SUSHI** - you need this to configure the Implementation Guide resource adn optionally to author implementation guide artifacts using the FSH Domain-Specific Language (DSL).
+- **SUSHI** - you need this to configure the Implementation Guide resource and optionally to author implementation guide artifacts using the FSH Domain-Specific Language (DSL).
 - **HL7 IG Templates** -  Packages referenced by the IG Publisher that control the visual styling, page structure, and navigation of published FHIR Implementation Guides.
 - **FHIRPath** - Path-based navigation and extraction language that IG authors use to define constraints, invariants, search parameters, and slicing logic.
 - **Terminology Server** (tx.fhir.org) - Handles terminology operations with local caching
@@ -653,7 +653,7 @@ https://code.visualstudio.com/docs/datascience/jupyter-notebooks
 
 This is a bash script for building and publishing **HL7 FHIR Implementation Guides (IGs)**. It automates the process of validating, transforming, and publishing FHIR resources using SUSHI (a FHIR Shorthand compiler) and the HL7 IG Publisher.
 
-Amongs its many functions it:
+Among its many functions it:
 
 1. **Validates data files** — Checks that CSV metadata files contain all expected FHIR resources
 2. **Transforms YAML to JSON** — Converts YAML resource definitions to JSON format
@@ -787,7 +787,7 @@ For example:
 |------|---------| ----- | ---|---|
 | `-b` | IG publisher option: Enable debug mode (verbose logging) - may slow down build |||⚠️|
 | `-c` | Copy CSV files from the `input/data` folder to `/input/images/tables` folder as downloadable CSV/Excel files. This step should be executed after the final edits to all the CSV files the `input/data` folder||✅|
-| `-d` | IG publisher option: Output to `docs` folder instead of default `output` folder.  This was orginally used to render on Github pages instead of using the autobuild. (TODO - check if still needed, if not remove) |||
+| `-d` | IG publisher option: Output to `docs` folder instead of default `output` folder.  This was originally used to render on Github pages instead of using the autobuild. (TODO - check if still needed, if not remove) |||
 | `-e` | JQ script to append current version to canonical URLs in the `meta.profile" values for examples and `rest.resource.supporterProfiles` and other canonical URLs in CapabilityStatements. This step is done after Sushi processing and before the IG Publisher executes. |✅|✅|
 | `-f` | Copy the ig-publisher generated temp/pages/valueset-ref-all-list.csv and temp/pages/codesystem-ref-all-list.csv to `input/data' folder.  This step should be executed after a successful build, and the IG publisher needs to be run again to update the rendered tables at /terminology.html ||✅|
 | `-g` | IG publisher option: Turn off narrative generation (speeds up build) (TODO - metrics to see how much it actually speed it up) |||⚠️|
@@ -809,7 +809,7 @@ For example:
 | `-z` | Delete template/temp directories before publishing . Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build is behaving unexpectedly due to cached state. You're switching between different IG template versions|
 | `-C` | Delete input-cache before publishing. -C does the same thing as `-z` but for the input-cache/ directory, which stores downloaded dependencies (packages, terminology, etc.).|
 | `-V` | Update the VSAC name-to-FHIR-URI mapping CSV. This is executed prior to publication of a new version, it downloads the latest VSAC (Value Set Authority Center) metadata from the NLM (National Library of Medicine) and creates a CSV mapping file that links VSAC code system names to their FHIR URIs, and outputs a sorted CSV to `input/data/vsacname-fhiruri-map.csv` ||✅|
-| `-R` | Createa Requirements Resources from the us_core_reqs.csv file. This is executed after updates to the csv file. The csv file is manually updated using the excel file input/images-source/~$hl7.fhir.us.core_8.0.0_reqs.xlsx which is derived the US Core Server v8.0.0 Specification Requirements, created by Inferno and its open-source testing framework to support the ONC Health IT Certification Program. The goal is to share this data with the inferno team in future releases.
+| `-R` | Create Requirements Resources from the us_core_reqs.csv file. This is executed after updates to the csv file. The csv file is manually updated using the excel file input/images-source/~$hl7.fhir.us.core_8.0.0_reqs.xlsx which is derived the US Core Server v8.0.0 Specification Requirements, created by Inferno and its open-source testing framework to support the ONC Health IT Certification Program. The goal is to share this data with the inferno team in future releases.
 
 
 
@@ -847,7 +847,7 @@ Flags can be combined in any order:
 ./publish.sh -ien
 ```
 
-#### Update the requirments resource (run after update to the us_core_reqs.csv file)
+#### Update the requirements resource (run after update to the us_core_reqs.csv file)
 
 ```bash
 ./publish.sh -R
@@ -892,7 +892,7 @@ Updated table and file contents
         - If updating to a new publication post ballot the version will "N.0.0" where "N" is the new major release (e.g. "9.0.0")
         - If updating to a new [STU Update](https://confluence.hl7.org/pages/viewpage.action?pageId=107217093) publication post ballot the version will be "N.M.0" where "N" is the major release, and "M" is the new *minor* release (e.g. "9.1.0")
         - If updating to a new [Technical Correction](https://confluence.hl7.org/spaces/ARB/pages/76164490/Definition+Errata+Technical+Correction) publication post ballot the version will be "N.M.T" where "N" is the major release, and "M" is the minor release and  "T" is the technical correction release  (e.g. "9.0.1")
-  - [ ] Update the dependencies latest version as needed ( TODO document teh dependencies topic)
+  - [ ] Update the dependencies latest version as needed ( TODO document the dependencies topic)
   - [ ] Update the `version-comparison-master` to the last published version: (e.g., "8.0.1")
   - [ ] Add the last published version to the `version-comparison` list : (e.g., "- 8.0.1")
   - [ ] Update the `releaselabel`
@@ -901,12 +901,21 @@ Updated table and file contents
         - "STU <N>: (e.g., "STU 9") - a frozen release used for
   - [ ] Update the `copyrightyear`: (e.g., '2025+') to latest year
 
-- [ ] Update the change log change markdown inline relative links to to absolute references in change log using this regex find and replace string:
-   ~~~
-      find: \]\((?!http)(.*)\)
+- [ ] Update the change log markdown inline relative links to absolute references. Scope the replacement to the **previous version's section only**. Every section below it was absolutized in an earlier cycle and must not be touched, and each section takes a different `<lastversion>` path, so a whole-file run is always wrong.
+   1. Select the previous version's section: from its `### Version = ` heading down to the line before the next `### Version = ` heading.
+   2. In VS Code open Find/Replace (`Cmd+Alt+F` / `Ctrl+H`), turn on regex (the `.*` button) **and** Find in Selection (`Alt+L`), then run:
+
+      ~~~
+      find: \]\((?!http|#)([^)]*)\)
 
       replace: ](https://hl7.org/fhir/us/core/<lastversion>/$1)
-   ~~~
+      ~~~
+
+      `<lastversion>` is the previous version's own published path: `STU<N>` when that version was a publication (e.g. `STU9`), or the ballot cycle `yyyymmm` when it was a ballot (e.g. `2026Jan`).
+   3. Confirm the replacement count equals the number of relative links in the section, then check that the section has no relative links left, no `/<lastversion>/#)`, and no `/<lastversion>/https`.
+
+   Use the character class `[^)]*`, not `.*`: most lines carry two or more links, and a greedy `.*` matches from the first `](` to the last `)` and merges them into one broken link. The `|#` alternation protects the `](#)` placeholders in the "Tracker Status" header line.
+
    e.g.,
     ```
     from
@@ -971,6 +980,11 @@ Updated table and file contents
      -  Review the markdown in a markdown viewer like
      -  Copy and paste this markdown text into the change log under the "Changes" header
      -  Note that the change log is updated as trackers are applied, see the  *Updating the Change Log* item below.
+- [ ] Update the USCDI-to-US Core version table (`input/includes/uscdi-uscore-version-table.md`). This hand-maintained table is included by `uscdi.md` and is not generated, so it does not pick up the version bump on its own.
+  - [ ] Add a row for the USCDI version this release meets, above the `{:.grid}` line: `| [vN] | <new US Core version> |`
+     -  Use the **next publication version**, without the `-ballot` suffix, even when scaffolding a ballot. For example, the v10 ballot cycle meets USCDI v7, so the row is `| [v7] | 10.0.0 |`, not `10.0.0-ballot`. The row is the USCDI-to-US Core mapping, and the ballot and its publication map the same USCDI version.
+  - [ ] Add the matching `[vN]:` reference-style link definition at the bottom of the file, pointing to the ONC Standards Bulletin that announces that USCDI version. Look the URL up rather than extrapolating it: recent entries use `https://www.healthit.gov/topic/standardsbulletin_<yy>-<n>`, but earlier ones are direct PDF links on other paths.
+  - [ ] Revisit the row at publication. Rows are corrected after the fact (the USCDI v5 row moved from `8.0.0` to `8.0.1` for the technical correction, and `[v3]` was later refined to `[v3.1]`).
 -  [ ]  Remove change highlighting if prior build is Ballot
    -  [ ]  using the publish.sh `-x` option to remove the new-content highlighting from all markdown files
    -  [ ]  manually clears all the "Is_New" column data from:
@@ -1043,18 +1057,30 @@ Updated table and file contents
    - The change log is updated as trackers are applied
       - The `Tracker Status` is updated from "Triaged" to "Resoved-Change Required" to "Applied" , etc
         - The Change log is updated to "Applied" ***before*** tracker QA
-        - Jira is updatd to "Applied" ***after*** tracker QA.
+        - Jira is updated to "Applied" ***after*** tracker QA.
       - The `Change Impact` and `Change Category` are updated if missing or incorrect (usually when updating the status from "Triaged" to "Resoved-Change Required").
       - The `Change Summary` is edited to reflect what changes we actually made vs the tracker summary.
       - The `Updated Content [Link](#)` is edited to link to the relevant section(s) that have been updated
         - These are *relative* links so they point to the current version (As documented above, they are updated to absolute links *before* adding a new section to the change log)
  -  Before publication group and reorder list by change impact using an AI chat tool.
 ### New content highlighting
-   - csv files
-   - yaml files
+
+New and updated content is highlighted green while a version is in development and the highlighting is removed before publication. There are three independent mechanisms, and all three are maintained by hand as each artifact or change is applied.
+
    - md files
-     - snippets in VS codes
+     - Wrap new or updated narrative in `<span class="bg-success" markdown="1">...</span>` (or a `<div>` for block content) and close it with a `<!-- new-content -->` marker. The marker is what `publish.sh -x` keys on when stripping highlighting.
+     - VS Code snippets are available for the span and div forms.
+   - csv files
+     - Set `Is_New = TRUE` on the affected row as each artifact is applied, in `input/data/additional-uscdi-requirements.csv`, `profile_metadata.csv`, `search_requirements.csv`, `us_core_reqs.csv`, and `provenance-elements.csv`.
+     - The value is compared in Liquid with `{% if item.Is_New == "TRUE" %}`, which is case-sensitive. It must be `TRUE`. `True`, `Y`, or any other value fails silently and highlights nothing. The column comment in `must-support.md` is the authoritative description: default `FALSE`, set to `TRUE` for new or updated content, and set back to `FALSE` before publishing a new version.
+     - `!` in an `Is_New` cell is a separate convention meaning *ignore this row*, not a highlight value. The Liquid loops do not filter on it, so a row marked `!` still renders unhighlighted; the marker is read by the Python notebook that regenerates the table.
+     - In `provenance-elements.csv` the `Target_Resource_<N>_is_new` columns carry an explicit `TRUE` or `FALSE` on every row rather than being left blank. Set the relevant column to `TRUE` and leave the others `FALSE`.
+     - These columns drive the `bg-success` conditionals already present in `input/pagecontent/` and `input/includes/`. Those conditionals are build machinery, not leftover highlighting, and are dormant while the columns are empty. Do not strip them.
+   - yaml files
+     - Add the artifact *name* to `input/data/new_stuff.yml` as each new artifact is applied. The generated artifact lists match on name (`p.name == new_stuff`) to highlight new entries on the Examples, Terminology, Search Parameters and Operations, and profile list pages.
    - removal of new content highlighting
+     - `publish.sh -x` strips the markdown spans and divs and comments out every line of `new_stuff.yml`.
+     - The CSV `Is_New` columns are not cleared by `-x`. Clear them by hand, per the version-bump checklist above.
 ### QA tricks and tips
    - ignoreWarnings.text
      - To suppress a QA message, copy the entire message line from `output/qa-eslintcompact.txt` into `input/ignoreWarnings.txt`, omitting only the trailing classification in parentheses (e.g. `(EXCEPTION)`, `(INFORMATIONAL)`, `(BUSINESSRULE)`, `(NOTFOUND)`, `(CODEINVALID)`, `(STRUCTURE)`).

@@ -63,7 +63,7 @@ It create a list, grouped by type, sorted alphabetically by title, adds relative
         {% endfor %}
 
         {%- assign profile_meta_row = site.data.profile_metadata | where:"title", sd1.title | first -%}
-          {%- if profile_meta_row.Is_New  == "TRUE" -%}
+          {%- if profile_meta_row.Is_New == "TRUE" -%}
                 {%- assign new = true -%}
           {%- endif -%}
 
@@ -87,7 +87,7 @@ It create a list, grouped by type, sorted alphabetically by title, adds relative
                   {% if sd1.name == sd3.basename %}
                     {%- assign new = false -%}
                     {%- assign profile_meta_row = site.data.profile_metadata | where:"title", sd3.title | first -%}
-                     {%- if profile_meta_row.Is_New  == "TRUE" -%}
+                     {%- if profile_meta_row.Is_New == "TRUE" -%}
                            {%- assign new = true -%}
                       {%- endif -%}
                       {%- if new -%}
