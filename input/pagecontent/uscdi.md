@@ -50,6 +50,23 @@ input/data/uscdi-table.csv columns:
 - comment: Additional US Core guidance for implementing USCDI
 - comment_link: Relative link to US Core's additional guidance
 
+Deliberate differences from the published USCDI element names. These are not
+drift, and a reconciliation against a USCDI element list will flag them. Leave
+them as they are:
+
+- "Middle Name (including middle initial)" - USCDI v7 capitalises the "I" in
+  "(Including". Ours stays lower case.
+- "BMI Percentile (2-20 years)" - USCDI v7 writes "(2 - 20 years)" with spaces
+  around the hyphen.
+- "Head Occipital-frontal Circumference Percentile (Birth - 36 Months)" - USCDI
+  v7 writes "(Birth- 36 Months)", missing the space after "Birth".
+- "Related Person's Name" - USCDI v7 uses a typographic apostrophe. Ours uses
+  the ASCII apostrophe, since this file is read by Liquid and converted by yq,
+  which have given trouble with non-ASCII characters before.
+
+The first three were corrected under FHIR-57863; reverting them to match USCDI
+would reintroduce the spacing and capitalisation errors.
+
 This script groups the data by the  USCDI data class, sorts alphabetically by title,
 and adds relative links.
 

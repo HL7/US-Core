@@ -2524,7 +2524,7 @@ statement:
     conformance:
       - SHALL
     requirement: |-
-      Every Server that supports the USDCI Data Class “Health Status/Assessments”:
+      Every Server that supports the USDCI Data Class “Health Status Assessments”:
 
       **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html) or [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html).
     _reference:
@@ -2537,7 +2537,7 @@ statement:
     conformance:
       - SHOULD
     requirement: |-
-      Every Server that supports the USDCI Data Class “Health Status/Assessments”:
+      Every Server that supports the USDCI Data Class “Health Status Assessments”:
       ...
       The US Core Simple Observation Profile's Observation.derivedFrom element **SHOULD** reference the [Structured Screening and Assessment](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#structured-screening-and-assessments) upon which clinical judgment observations are made
     _reference:
@@ -2550,7 +2550,7 @@ statement:
     conformance:
       - SHOULD
     requirement: |-
-      Every Server that supports the USDCI Data Class “Health Status/Assessments”:
+      Every Server that supports the USDCI Data Class “Health Status Assessments”:
       ...
       the US Core Condition Profile's Condition.evidence.detail element **SHOULD** reference the [Structured Screening and Assessment](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#structured-screening-and-assessments) which assist in diagnosing problems or health concerns.
     _reference:
@@ -4395,7 +4395,7 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: Servers that support the USCDI Health Status/Assessments Data Class ... **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile."
+    requirement: Servers that support the USCDI Health Status Assessments Data Class ... **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile."
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink

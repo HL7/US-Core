@@ -25,11 +25,11 @@ The figure below shows how screening and assessments lead to providing services 
     - [US Core Simple Observation Profile]
     - The [US Core Observation Screening Assessment Profile]
     - The [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]
-- **Problems/Health Concerns**: The identified health-related conditions (for example, homelessness or disability) are represented by:
+- **Problem/Health Concern**: The identified health-related conditions (for example, homelessness or disability) are represented by:
   - [US Core Simple Observation Profile]
   - [US Core Condition Problems and Health Concerns Profile].
-- **Interventions**:  The [US Core ServiceRequest Profile] communicates services offered to patients to address problems/health concerns. The [US Core Procedure Profile] can also record a completed service or intervention.
-- **Goals**: Identifying and defining a future desired condition or change in condition (for example, "Has adequate quality meals and snacks") is represented by [US Core Goal Profile].
+- **Procedure**:  The [US Core ServiceRequest Profile] communicates services offered to patients to address problems and health concerns. The [US Core Procedure Profile] can also record a completed service or intervention.
+- **Patient Goal**: Identifying and defining a future desired condition or change in condition (for example, "Has adequate quality meals and snacks") is represented by [US Core Goal Profile].
 
 
 {% include img.html img="screening_and_assessments.svg" caption="Screening and Assessment Activities" %}
@@ -55,7 +55,7 @@ Whether based on simple observations or detailed assessments, clinicians may rec
 
 Local policies guide what is appropriate for the problem list and what is appropriate for an observation. For example, some clinics may consider social needs sensitive information inappropriate for the problem list. Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.
 
-Every Server (including "Certifying Systems") that supports the USCDI Data Class "Health Status/Assessments":
+Every Server (including "Certifying Systems") that supports the USCDI Data Class "Health Status Assessments":
 
 -  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].<sup>[§][CONF-0269]</sup>
    -  The US Core Simple Observation Profile's `Observation.derivedFrom` element **SHOULD** reference the Structured Screening and Assessment upon which clinical judgment observations are made (see below).<sup>[§][CONF-0270]</sup> Likewise, the US Core Condition Profile's `Condition.evidence.detail` element **SHOULD** reference the Structured Screening and Assessment which assist in diagnosing problems or health concerns.<sup>[§][CONF-0271]</sup>
@@ -68,7 +68,7 @@ Screening and Assessments can be structured survey instruments consisting of que
 - Observation: [US Core Observation Screening Assessment Profile]
 - Questionnaire/QuestionnaireResponse: [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]
 
-Servers that support the USCDI Health Status/Assessments Data Class **SHALL** support the US Core Observation Screening Assessment Profile and **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile.<sup>[§][CONF-0821]</sup>
+Servers that support the USCDI Health Status Assessments Data Class **SHALL** support the US Core Observation Screening Assessment Profile and **SHOULD** support the SDC Base Questionnaire and the US Core QuestionnaireResponse Profile.<sup>[§][CONF-0821]</sup>
 
 
 The sections below provide additional guidance on when Observations and Questionnaire/QuestionnaireResponse can be used to represent the structured screenings and assessments.
