@@ -6,7 +6,6 @@
 {% include page-link-list.md %}
 [$docref operation]: OperationDefinition-docref.html
 [$expand]: {{site.data.fhir.path}}valueset-operation-expand.html
-[$expand]: {{site.data.fhir.path}}valueset-operation-expand.html
 [(how to search by date)]: {{site.data.fhir.path}}search.html#date
 [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
 [(how to search by token)]: {{site.data.fhir.path}}search.html#token
@@ -18,7 +17,7 @@
 [386053000 Evaluation procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=386053000&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [387713003 Surgical procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [410606002 Social service procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
-[10 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
+[11 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
 [Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
 [American Heart Association]: http://heart.org/
 [Apgar score]: https://en.wikipedia.org/wiki/Apgar_score
@@ -51,7 +50,6 @@
 [Document Class Value Set]: {{site.data.fhir.path}}valueset-document-classcodes.html
 [Element Level Provenance]: element-level-provenance.html
 [ElementDefinition.pattern]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.pattern_x_
-[Emergency Department Note (34111-5)]: https://loinc.org/34111-5
 [Emergency Department Note (34111-5)]: https://loinc.org/34111-5
 [Enclosed Precondition Extension]: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/adi-enclosedPrecondition-extension
 [Event Location Extension]: http://hl7.org/fhir/StructureDefinition/event-location

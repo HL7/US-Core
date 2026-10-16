@@ -2043,18 +2043,6 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: clinical-notes.html#CONF-0216
-  - key: CONF-0217
-    reference:
-      - clinical-notes.html#clinical-notes
-    conformance:
-      - SHOULD
-    requirement: |-
-      systems are encouraged to support other common notes types, such as:
-      [Referral Note (57133-1)](https://loinc.org/57133-1.html)
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: clinical-notes.html#CONF-0217
   - key: CONF-0219
     reference:
       - clinical-notes.html#clinical-notes
@@ -4921,3 +4909,15 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: general-requirements.html#CONF-0916
+  - key: CONF-0917
+    reference:
+      - clinical-notes.html#clinical-notes
+    conformance:
+      - SHALL
+    requirement: |-
+      Servers **SHALL** support, at minimum, these … "Common Clinical Notes":
+      [Referral Note (57133-1)](https://loinc.org/57133-1.html)
+    _reference:
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: clinical-notes.html#CONF-0917

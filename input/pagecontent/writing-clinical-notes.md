@@ -12,7 +12,7 @@ It complements the **[US Core Clinical Notes][1]** guidance and adopts conventio
 * Two modes:
   * **Direct Write** (provider-initiated; immediate filing).
   * **Mediated Submission** (patient-asserted; server-governed review/promotion).
-* Interoperable note typing (LOINC; at least the ten “Common Clinical Notes”).
+* Interoperable note typing (LOINC; at least the eleven “Common Clinical Notes”).
 * MIME and size expectations.
 * “Little-p provenance” via native `DocumentReference` fields.
 * SMART scopes and server capability discovery.
@@ -145,20 +145,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 ### Terminology
 
-* **Type.** `DocumentReference.type` **SHALL** use LOINC and support, at minimum, the ten **Common Clinical Notes**. Servers **SHALL** support at minimum the following LOINC codes for `DocumentReference.type` (the 'Common Clinical Notes' from US Core):
-
-  - 11488-4: Consultation note
-  - 11535-2: Discharge summary note
-  - 11502-2: Operative note
-  - 11506-3: Progress note
-  - 34133-9: Summary of episode note
-  - 34132-1: Summary of death note
-  - 28655-1: History and physical
-  - 18842-5: Diagnostic imaging report
-  - 34745-8: Continuity of care document
-  - 51848-0: Functional status assessment note
-
-  Clients **SHALL** use these where applicable. For other note types, clients **SHOULD** use LOINC codes when available; servers **MAY** accept additional terminology (e.g., SNOMED) if no suitable LOINC exists, but **SHALL** round-trip them. ([US Core Clinical Notes][1])
+* **Type.** <span class="bg-success" markdown="1">Servers **SHALL** support `DocumentReference.type`, **SHALL** use LOINC, and support, at minimum, the eleven *Common Clinical Notes*.  Clients **SHALL** use the *Common Clinical Notes* where applicable. For other note types, clients **SHOULD** use LOINC codes when available; servers **MAY** accept additional terminology (e.g., SNOMED) if no suitable LOINC exists, but **SHALL** round-trip them.</span><!-- new-content --> ([US Core Clinical Notes][1])
 * **Category.** Servers **SHALL** support the US Core DocumentReference Category (`clinical-note`). ([US Core DocRef][3])
 
 ---
@@ -356,6 +343,7 @@ PUT [base]/DocumentReference/abc
 * [US Core DocumentReference Profile][3]
 * [FHIR R4 DocumentReference][4]
 * [SMART App Launch v2.2.0 Scopes][5]
+* [US Core Clinical Note Type value set][6]
 
 ---
 
@@ -364,6 +352,7 @@ PUT [base]/DocumentReference/abc
 [3]: StructureDefinition-us-core-documentreference.html
 [4]: https://hl7.org/fhir/R4/documentreference.html
 [5]: https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html
+[6]: ValueSet-us-core-clinical-note-type.html
 [formatcodes]: https://hl7.org/fhir/R4/valueset-formatcodes.html
 
 ---

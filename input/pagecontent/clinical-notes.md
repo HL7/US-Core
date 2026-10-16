@@ -5,9 +5,9 @@ This section provides implementers with important definitions, requirements, and
 
 Clinical notes are a key component in communicating a patient's current status. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing, and even handwritten notes by providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-This implementation guide defines how systems exchange ten "Common Clinical Notes" and three DiagnosticReport categories.
+This implementation guide defines how systems exchange <span class="bg-success">eleven</span><!-- new-content --> "Common Clinical Notes" and three DiagnosticReport categories.
 
-Servers **SHALL** support, at *minimum*, these ten "Common Clinical Notes":
+Servers **SHALL** support, at *minimum*, these <span class="bg-success">eleven</span><!-- new-content --> "Common Clinical Notes":
 
   1. [Consultation Note (11488-4)]<sup>[§][CONF-0206]</sup>
   1. [Discharge Summary (18842-5)]<sup>[§][CONF-0207]</sup>
@@ -19,6 +19,7 @@ Servers **SHALL** support, at *minimum*, these ten "Common Clinical Notes":
   1. [Pathology Report Narrative (11526-1)]<sup>[§][CONF-0213]</sup>
   1. [Surgical Operation Note (11504-8)]<sup>[§][CONF-0818]</sup>
   1. [Emergency Department Note (34111-5)]<sup>[§][CONF-0819]</sup>
+  1. <span class="bg-success">[Referral Note (57133-1)]<sup>[§][CONF-0917]</sup></span><!-- new-content -->
 
 Servers **SHALL** support, at *minimum*, these three DiagnosticReport categories:
 
@@ -30,7 +31,6 @@ A DiagnosticReport category query allows a Client to retrieve multiple documents
 
 The Argonaut project team provided this initial list to HL7 after surveying the Argonaut and the US Veterans Administration (VA) participants. They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types, such as:
 
-* [Referral Note (57133-1)]<sup>[§][CONF-0217]</sup>
 * [Nurse Note (34746-8)]<sup>[§][CONF-0219]</sup>
 
 The complete list of note (document) types is available in the [US Core DocumentReference Type Value Set].
@@ -94,7 +94,7 @@ Not all scanned information stored through DocumentReference will be exposed thr
 
 #### Support Requirements
 
-Systems **SHALL** implement the [US Core DocumentReference Profile]<sup>[§][CONF-0223]</sup> and support a *minimum* of all ten Common Clinical Notes listed above. Systems **MAY** extend their capabilities to the complete [US Core DocumentReference Type Value Set].<sup>[§][CONF-0222]</sup> This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+Systems **SHALL** implement the [US Core DocumentReference Profile]<sup>[§][CONF-0223]</sup> and support a *minimum* of all <span class="bg-success">eleven</span><!-- new-content --> Common Clinical Notes listed above. Systems **MAY** extend their capabilities to the complete [US Core DocumentReference Type Value Set].<sup>[§][CONF-0222]</sup> This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
 Systems **SHALL** implement the [US Core DiagnosticReport Profile for Report and Note exchange]<sup>[§][CONF-0224]</sup> and support a *minimum* of the three report categories:
 
