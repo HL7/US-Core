@@ -2,12 +2,12 @@
   "resourceType": "ValueSet",
   "id": "us-core-observation-smoking-status-status",
   "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status",
-  "name": "USCoreObservationSmokingStatusStatus",
-  "title": "US Core Status for Smoking Status Observation",
+  "name": "USCoreTobaccoAndNicotineObservationStatus",
+  "title": "US Core Tobacco And Nicotine Observation Status",
   "status": "active",
   "experimental": false,
   "date": "2022-09-29",
-  "description": "Codes providing the status of an observation for smoking status. Constrained to `final` and `entered-in-error`.",
+  "description": "Codes providing the status of an observation for tobacco and nicotine product use. Constrained to `final` and `entered-in-error`.",
   "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
   "compose": {
     "include": [

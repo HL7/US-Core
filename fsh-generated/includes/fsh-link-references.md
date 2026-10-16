@@ -321,10 +321,10 @@
 [USCoreSexExtension]: StructureDefinition-us-core-sex.html
 [USCoreSimpleObservationCategory]: ValueSet-us-core-simple-observation-category.html
 [USCoreSimpleObservationProfile]: StructureDefinition-us-core-simple-observation.html
-[USCoreSmokingStatusProfile]: StructureDefinition-us-core-smokingstatus.html
 [USCoreSpecimenCondition]: ValueSet-us-core-specimen-condition.html
 [USCoreSpecimenProfile]: StructureDefinition-us-core-specimen.html
-[USCoreObservationSmokingStatusStatus]: ValueSet-us-core-observation-smoking-status-status.html
+[USCoreTobaccoAndNicotineObservationStatus]: ValueSet-us-core-observation-smoking-status-status.html
+[USCoreTobaccoAndNicotineUseObservationProfile]: StructureDefinition-us-core-smokingstatus.html
 [USCoreTreatmentInterventionPreferenceProfile]: StructureDefinition-us-core-treatment-intervention-preference.html
 [USCoreTribalAffiliationExtension]: StructureDefinition-us-core-tribal-affiliation.html
 [USCDIRequirement]: StructureDefinition-uscdi-requirement.html

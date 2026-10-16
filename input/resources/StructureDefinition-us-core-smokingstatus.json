@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "us-core-smokingstatus",
   "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus",
-  "name": "USCoreSmokingStatusProfile",
-  "title": "US Core Smoking Status Observation Profile",
+  "name": "USCoreTobaccoAndNicotineUseObservationProfile",
+  "title": "US Core Tobacco And Nicotine Use Observation Profile",
   "status": "active",
   "experimental": false,
   "date": "2024-03-22",
-  "description": "The US Core Smoking Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Smoking Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "description": "The US Core Tobacco And Nicotine Use Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Tobacco and Nicotine Product Use* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch a patient's tobacco and nicotine product use, which can include smokeless tobacco, cigarettes, cigars, pipe tobacco, waterpipes, nicotine pouches, heated tobacco products, e-cigarettes, and other electronic nicotine delivery systems, and excludes prescribed nicotine replacement therapies. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -82,7 +82,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Smoking Status",
+        "short": "Tobacco And Nicotine Use",
         "condition": [
           "us-core-24",
           "us-core-25"
@@ -90,7 +90,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "description": "Smoking status type",
+          "description": "Tobacco And Nicotine Use Status",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.6"
         }
       },
@@ -241,7 +241,7 @@
         ],
         "binding": {
           "strength": "extensible",
-          "description": "Smoking status comprehensive",
+          "description": "Tobacco And Nicotine Use",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.3"
         },
         "mustSupport": true

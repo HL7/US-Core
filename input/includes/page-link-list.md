@@ -527,16 +527,16 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Simple Observation Profile - Mappings]: StructureDefinition-us-core-simple-observation-mappings.html
 [US Core Simple Observation Profile - Testing]: StructureDefinition-us-core-simple-observation-testing.html
 [US Core Simple Observation Profile - Examples]: StructureDefinition-us-core-simple-observation-examples.html
-[US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
-[US Core Smoking Status Observation Profile - Definitions]: StructureDefinition-us-core-smokingstatus-definitions.html
-[US Core Smoking Status Observation Profile - Mappings]: StructureDefinition-us-core-smokingstatus-mappings.html
-[US Core Smoking Status Observation Profile - Testing]: StructureDefinition-us-core-smokingstatus-testing.html
-[US Core Smoking Status Observation Profile - Examples]: StructureDefinition-us-core-smokingstatus-examples.html
 [US Core Specimen Profile]: StructureDefinition-us-core-specimen.html
 [US Core Specimen Profile - Definitions]: StructureDefinition-us-core-specimen-definitions.html
 [US Core Specimen Profile - Mappings]: StructureDefinition-us-core-specimen-mappings.html
 [US Core Specimen Profile - Testing]: StructureDefinition-us-core-specimen-testing.html
 [US Core Specimen Profile - Examples]: StructureDefinition-us-core-specimen-examples.html
+[US Core Tobacco And Nicotine Use Observation Profile]: StructureDefinition-us-core-smokingstatus.html
+[US Core Tobacco And Nicotine Use Observation Profile - Definitions]: StructureDefinition-us-core-smokingstatus-definitions.html
+[US Core Tobacco And Nicotine Use Observation Profile - Mappings]: StructureDefinition-us-core-smokingstatus-mappings.html
+[US Core Tobacco And Nicotine Use Observation Profile - Testing]: StructureDefinition-us-core-smokingstatus-testing.html
+[US Core Tobacco And Nicotine Use Observation Profile - Examples]: StructureDefinition-us-core-smokingstatus-examples.html
 [US Core Treatment Intervention Preference Profile]: StructureDefinition-us-core-treatment-intervention-preference.html
 [US Core Treatment Intervention Preference Profile - Definitions]: StructureDefinition-us-core-treatment-intervention-preference-definitions.html
 [US Core Treatment Intervention Preference Profile - Mappings]: StructureDefinition-us-core-treatment-intervention-preference-mappings.html
@@ -646,8 +646,8 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Simple Observation Category - Testing]: ValueSet-us-core-simple-observation-category-testing.html
 [US Core Specimen Condition]: ValueSet-us-core-specimen-condition.html
 [US Core Specimen Condition - Testing]: ValueSet-us-core-specimen-condition-testing.html
-[US Core Status for Smoking Status Observation]: ValueSet-us-core-observation-smoking-status-status.html
-[US Core Status for Smoking Status Observation - Testing]: ValueSet-us-core-observation-smoking-status-status-testing.html
+[US Core Tobacco And Nicotine Observation Status]: ValueSet-us-core-observation-smoking-status-status.html
+[US Core Tobacco And Nicotine Observation Status - Testing]: ValueSet-us-core-observation-smoking-status-status-testing.html
 [US Core CarePlan Category Extension Codes]: CodeSystem-careplan-category.html
 [US Core CarePlan Category Extension Codes - Testing]: CodeSystem-careplan-category-testing.html
 [US Core Category]: CodeSystem-us-core-category.html
@@ -739,6 +739,9 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Goal 2 Example]: Goal-goal-sdoh-2.html
 [Head Circumference Example]: Observation-head-circumference.html
 [Health Concern Example]: Condition-health-concern-example.html
+[Healthcare Agent CareTeam Example]: CareTeam-healthcare-agent.html
+[Healthcare Agent CareTeam Example Using the Durable Power of Attorney Role Code]: CareTeam-healthcare-agent-dpowatt.html
+[Healthcare Agent CareTeam Example Using the Healthcare Power of Attorney Role Code]: CareTeam-healthcare-agent-hpowatt.html
 [Heart Rate Example]: Observation-heart-rate.html
 [Heart rate rhythm Example]: Observation-heart-rate-rhythm.html
 [Height Example]: Observation-height.html
@@ -779,6 +782,8 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Patient Child Example]: Patient-child-example.html
 [Patient Example]: Patient-example.html
 [Patient Infant Example]: Patient-infant-example.html
+[Patient Niece As Durable Power Of Attorney Example]: RelatedPerson-shaw-niece-dpowatt.html
+[Patient Niece As Healthcare Power Of Attorney Example]: RelatedPerson-shaw-niece-hpowatt.html
 [Patient Niece Example]: RelatedPerson-shaw-niece.html
 [Pediatric BMI Example]: Observation-pediatric-bmi-example.html
 [Pediatric Wt Example]: Observation-pediatric-wt-example.html

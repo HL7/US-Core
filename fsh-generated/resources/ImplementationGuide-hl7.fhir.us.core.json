@@ -629,7 +629,7 @@
         "reference": {
           "reference": "Observation/e-cig-user"
         },
-        "description": "This example for the *US Core SmokingStatus Profile* shows how it is used to capture an observation of electronic cigarette use.",
+        "description": "This example for the *US Core Tobacco And Nicotine Use Observation Profile* shows how it is used to capture an observation of electronic cigarette use.",
         "name": "Electronic Cigarette User Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
       },
@@ -2723,14 +2723,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-smokingstatus"
-        },
-        "description": "The US Core Smoking Status Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI)  *Smoking Status* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Observation Profile"
-      },
-      {
-        "reference": {
           "reference": "ValueSet/us-core-specimen-condition"
         },
         "description": "This value set contains concepts the provide information regarding a specimen, including the container, that does not meet a laboratory’s criteria for acceptability.",
@@ -2749,9 +2741,17 @@
         "reference": {
           "reference": "ValueSet/us-core-observation-smoking-status-status"
         },
-        "description": "Codes providing the status of an observation for smoking status. Constrained to `final` and `entered-in-error`.",
+        "description": "Codes providing the status of an observation for tobacco and nicotine product use. Constrained to `final` and `entered-in-error`.",
         "exampleBoolean": false,
-        "name": "US Core Status for Smoking Status Observation"
+        "name": "US Core Tobacco And Nicotine Observation Status"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-smokingstatus"
+        },
+        "description": "The US Core Tobacco And Nicotine Use Observation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Tobacco and Nicotine Product Use* Data Element. This profile sets minimum expectations for the Observation resource to record, search, and fetch a patient's tobacco and nicotine product use, which can include smokeless tobacco, cigarettes, cigars, pipe tobacco, waterpipes, nicotine pouches, heated tobacco products, e-cigarettes, and other electronic nicotine delivery systems, and excludes prescribed nicotine replacement therapies. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+        "exampleBoolean": false,
+        "name": "US Core Tobacco And Nicotine Use Observation Profile"
       },
       {
         "reference": {

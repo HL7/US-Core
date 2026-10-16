@@ -147,7 +147,7 @@ The following US Core resources are compatible to the IPA profiles, but the IPA 
    - `Observation.value[x]` Element maximum cardinalities differ: '1' vs '0'
    - `Observation.dataAbsentReason` Elements differ in definition for mustSupport: 'true' vs 'false'
 
-1. [US Core Care Experience Preference Profile], [US Core Simple Observation Profile], [US Core Smoking Status Observation Profile], [US Core Treatment Intervention Preference Profile]
+1. [US Core Care Experience Preference Profile], [US Core Simple Observation Profile], [US Core Tobacco And Nicotine Use Observation Profile], [US Core Treatment Intervention Preference Profile]
 
    Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation):
 
@@ -351,7 +351,7 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
    - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
 
-1. [US Core Smoking Status Observation Profile]
+1. [US Core Tobacco And Nicotine Use Observation Profile]
 
     Additional requirements in [IPS Observation Tobacco Use](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips):
 
