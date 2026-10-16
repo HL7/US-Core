@@ -40,6 +40,17 @@
         }
       },
       {
+        "id": "AllergyIntolerance.criticality",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "AllergyIntolerance.criticality",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: low | high | unable-to-assess"
+      },
+      {
         "id": "AllergyIntolerance.code",
         "path": "AllergyIntolerance.code",
         "min": 1,

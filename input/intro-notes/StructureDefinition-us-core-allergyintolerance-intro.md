@@ -22,9 +22,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a verification status
 2. a reaction manifestation
 
-{% include additional-requirements-intro.md type="AllergyIntolerance" plural="false" %}
+{% include additional-requirements-intro.md type="AllergyIntolerance" plural="true" %}
 
-1. a recorder<sup>2</sup>
+1. <span class="bg-success" markdown="1">a criticality of the allergy or intolerance (e.g., low or high)</span><!-- new-content -->
+2. a recorder<sup>2</sup>
 
 <sup>1,2</sup> see guidance below
 

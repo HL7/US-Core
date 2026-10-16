@@ -1,4 +1,4 @@
-{% include img-small.html img="todo.png" caption="coming soon..." %}
+{% include img-small.html img="todo.png" %}
 
 * **USCDI-related Updates**: We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v7](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v7) Data Elements and Classes that the  Office of the National Coordinator for Health Information Technology (ONC) published.  USCDI v7 includes 30 new data elements and one significantly revised data element (Tobacco and Nicotine Product Use, an evolution of the Smoking Status data element) for a total of 31 overall new data elements across multiple data classes:
 
@@ -21,5 +21,7 @@
     | Patient Identifier | [US Core Patient Profile](StructureDefinition-us-core-patient.html) | `Patient.identifier` |
     | Procedure Status | [US Core Procedure Profile](StructureDefinition-us-core-procedure.html) | `Procedure.status` |
     {:.grid}
+
+  * For the USCDI Allergy Intolerance Criticality data element, we added `AllergyIntolerance.criticality` to the [US Core AllergyIntolerance Profile](StructureDefinition-us-core-allergyintolerance.html) as an *Additional USCDI* element. The element inherits its required binding to the [AllergyIntoleranceCriticality](https://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html) value set (low | high | unable-to-assess) from the base FHIR resource, and no new search parameter was added.
 
   * For the USCDI Specimen Collection Date and Time and Specimen Collection Method data elements, we added `Specimen.collection.collected[x]` and `Specimen.collection.method` to the [US Core Specimen Profile](StructureDefinition-us-core-specimen.html) as *Additional USCDI* elements. Note that `Observation.effective[x]` on the [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html) is already a *Must Support* element and also maps to Specimen Collection Date and Time.
