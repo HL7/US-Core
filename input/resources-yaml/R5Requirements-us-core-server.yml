@@ -4941,13 +4941,3 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-careteam.html#CONF-0919
-  - key: CONF-0920
-    reference:
-      - StructureDefinition-us-core-procedure.html#profile-specific-implementation-guidance
-    conformance:
-      - SHALL
-    requirement: 'Servers **SHALL** use the status code: not-done to represent that a procedure was not performed.'
-    _reference:
-      - extension:
-          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
-            valueUrl: StructureDefinition-us-core-procedure.html#CONF-0920
