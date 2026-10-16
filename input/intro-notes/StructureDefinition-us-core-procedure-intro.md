@@ -20,17 +20,22 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Procedure Must Support:**
 
 1. the encounter associated with the procedure
+1. <span class="bg-success" markdown="1">a statusReason if the procedure was not performed<sup>5</sup></span><!-- new-content -->
 
-{% include additional-requirements-intro.md type="Procedure" %}
+{% include additional-requirements-intro.md type="Procedure" plural="true" %}
 
 1. who was involved in the procedure<sup>3</sup>
 2. a reason or indication for referral or consultation<sup>4</sup>
+3. <span class="bg-success" markdown="1">when the procedure was first captured in the patient's record<sup>6</sup></span><!-- new-content -->
 
-<sup>1,2,3,4</sup> see guidance below
+<sup>1,2,3,4</sup><span class="bg-success">,<sup>5,6</sup></span><!-- new-content --> see guidance below
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
+- <span class="bg-success" markdown="1">Servers **SHALL** use the status code: `not-done` to represent that a procedure was *not* performed.<sup>[§][CONF-0920]</sup></span><!-- new-content -->
+   - <span class="bg-success" markdown="1"><sup>5</sup>For the USCDI *Reason Not Performed* Data Element, `Procedure.statusReason` communicates why the procedure was not performed, and its binding to the FHIR [Procedure Not Performed Reason (SNOMED-CT)](http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html) value set is *extensible*. **Note that this binding is provisional, pending the review of the terminology aligned with the HL7 FHIR US Quality Core Implementation Guide.**</span><!-- new-content -->
+- <span class="bg-success" markdown="1"><sup>6</sup>A `Procedure.status` of `not-done` leaves the meaning of `Procedure.performed[x]` ambiguous, since no procedure took place. The FHIR R5 `Procedure.recorded` element, preadopted here as the cross-version extension [extension-Procedure.recorded](http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded), records when the procedure was first captured in the patient's record, which is unambiguous when the procedure was not performed.</span><!-- new-content -->
 - <sup>2</sup>The `Procedure.performed` is mandatory if `Procedure.status` is "completed" or "in-progress".
 - <sup>1</sup>Unless exchanging legacy or text-only data, procedure codes **SHOULD** be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.<sup>[§][CONF-0895]</sup>
    - Only LOINC concepts that reflect actual procedures **SHOULD** be used.<sup>[§][CONF-0480]</sup>

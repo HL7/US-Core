@@ -9229,6 +9229,66 @@
           ]
         }
       ]
+    },
+    {
+      "key": "CONF-0918",
+      "reference": [
+        "StructureDefinition-us-core-relatedperson.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For the USCDI *Healthcare Agent* Data Element, systems **SHOULD** use the durable power of attorney code DPOWATT or the healthcare power of attorney code HPOWATT in `RelatedPerson.relationship`",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-relatedperson.html#CONF-0918"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0919",
+      "reference": [
+        "StructureDefinition-us-core-careteam.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "For the USCDI *Healthcare Agent* Data Element, systems **SHOULD** use the LOINC code 81335-2 (Patient Healthcare agent), the durable power of attorney code DPOWATT, or the healthcare power of attorney code HPOWATT in `CareTeam.participant.role`",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-careteam.html#CONF-0919"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0920",
+      "reference": [
+        "StructureDefinition-us-core-procedure.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "requirement": "Servers **SHALL** use the status code: not-done to represent that a procedure was not performed.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-procedure.html#CONF-0920"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,26 @@ differential:
           human: Performed SHALL be present if the status is 'completed' or 'in-progress'
           expression: (status='completed' or status='in-progress') implies performed.exists()
       mustSupport: false
+
+# ====== New for USCDI 7 Reason Not Performed: preadopt R5 Procedure.recorded ======
+
+    - id: Procedure.extension:recorded
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: Procedure.extension
+      sliceName: recorded
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: When the procedure was first captured in the patient's record"
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+          profile:
+            - 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Procedure.recorded'
+      mustSupport: false
+
+# =================================================================================
+
     - id: Procedure.basedOn
       extension:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -51,6 +71,21 @@ differential:
       binding:
         strength: required
         valueSet: http://hl7.org/fhir/ValueSet/event-status
+
+# ====== New for USCDI 7 Reason Not Performed ======
+# TODO: provisional binding. The terminology review may replace this with a
+# US Core value set aligned with HL7 FHIR US Quality Core.
+
+    - id: Procedure.statusReason
+      path: Procedure.statusReason
+      short: Reason the procedure was not performed
+      mustSupport: true
+      binding:
+        strength: extensible
+        valueSet: http://hl7.org/fhir/ValueSet/procedure-not-performed-reason
+
+# =================================================
+
     - id: Procedure.code
       path: Procedure.code
       min: 1

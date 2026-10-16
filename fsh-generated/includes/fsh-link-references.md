@@ -95,6 +95,7 @@
 [HVS-item-example-88124-3]: Observation-HVS-item-example-88124-3.html
 [HVS-panel-example-88121-9]: Observation-HVS-panel-example-88121-9.html
 [imm-1]: Immunization-imm-1.html
+[immunization-not-done]: Immunization-immunization-not-done.html
 [jugular-vein-distension]: Observation-jugular-vein-distension.html
 [length]: Observation-length.html
 [cbc-leukocytes]: Observation-cbc-leukocytes.html
@@ -178,6 +179,7 @@
 [pregnancy-intent]: Observation-pregnancy-intent.html
 [pregnancy-status]: Observation-pregnancy-status.html
 [defib-implant]: Procedure-defib-implant.html
+[procedure-not-done]: Procedure-procedure-not-done.html
 [udi-3]: Device-udi-3.html
 [pulse-intensity-palpation]: Observation-pulse-intensity-palpation.html
 [q-t-interval-ekg-lead]: Observation-q-t-interval-ekg-lead.html

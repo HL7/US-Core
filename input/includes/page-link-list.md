@@ -754,6 +754,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [HVS Item Example 88124-3]: Observation-HVS-item-example-88124-3.html
 [HVSPanel Example 88121-9]: Observation-HVS-panel-example-88121-9.html
 [Immunization Example 1]: Immunization-imm-1.html
+[Immunization Not Done Example]: Immunization-immunization-not-done.html
 [Jugular vein distension Example]: Observation-jugular-vein-distension.html
 [Length Example]: Observation-length.html
 [Leukocytes Example]: Observation-cbc-leukocytes.html
@@ -837,6 +838,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Pregnancy Intent Observation Example]: Observation-pregnancy-intent.html
 [Pregnancy Status Observation Example]: Observation-pregnancy-status.html
 [Procedure Defibrillator Implant Example]: Procedure-defib-implant.html
+[Procedure Not Done Example]: Procedure-procedure-not-done.html
 [Prosthetic Knee Example]: Device-udi-3.html
 [Pulse intensity Palpation Example]: Observation-pulse-intensity-palpation.html
 [Q-T interval {EKG lead} Example]: Observation-q-t-interval-ekg-lead.html

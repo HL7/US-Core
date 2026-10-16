@@ -36,8 +36,11 @@ differential:
     - id: Immunization.statusReason
       path: Immunization.statusReason
       mustSupport: true
+      # ====== USCDI 7 Reason Not Performed: strength raised from example in V10 ======
+      # TODO: provisional binding. The terminology review may replace this with a
+      # US Core value set aligned with HL7 FHIR US Quality Core.
       binding:
-        strength: example
+        strength: extensible
         valueSet: http://hl7.org/fhir/ValueSet/immunization-status-reason
     - id: Immunization.vaccineCode
       path: Immunization.vaccineCode

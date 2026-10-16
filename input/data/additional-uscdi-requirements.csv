@@ -24,6 +24,7 @@ Is_New,Addl_USCDI,Profile,FHIR_Element,combo
 ,Indication,US Core MedicationRequest Profile,MedicationRequest.reasonReference,US Core MedicationRequest Profile-MedicationRequest.reasonReference
 ,Medication Adherence,US Core MedicationRequest Profile,MedicationRequest.extension:medicationAdherence,US Core MedicationRequest Profile-MedicationRequest.extension:medicationAdherence
 ,Reason for Referral,US Core Procedure Profile,Procedure.basedOn,US Core Procedure Profile-Procedure.basedOn
+TRUE,Reason Not Performed,US Core Procedure Profile,Procedure.extension:recorded,US Core Procedure Profile-Procedure.extension:recorded
 ,Clinical Notes,US Core DocumentReference Profile,DocumentReference.category:uscore,US Core DocumentReference Profile-DocumentReference.category:uscore
 ,Health Status Assessments,US Core Simple Observation Profile,Observation.derivedFrom,US Core Simple Observation Profile-Observation.derivedFrom
 ,Specimen Source Site,US Core Specimen Profile,Specimen.collection,US Core Specimen Profile-Specimen.collection

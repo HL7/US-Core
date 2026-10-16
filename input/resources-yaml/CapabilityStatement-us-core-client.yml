@@ -2268,7 +2268,7 @@ rest:
     - extension:
       - url:
           http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
-        valueCode: SHOULD
+        valueCode: SHALL
       - url: required
         valueString: patient
       - url: required
@@ -3900,7 +3900,7 @@ rest:
     - extension:
       - url:
           http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
-        valueCode: SHOULD
+        valueCode: SHALL
       - url: required
         valueString: patient
       - url: required

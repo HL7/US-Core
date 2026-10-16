@@ -564,6 +564,11 @@ definition:
       name: Immunization Example 1
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization
     - reference:
+        reference: Immunization/immunization-not-done
+      description: This is a not done example for the *US Core Immunization Profile*. It shows the USCDI *Reason Not Performed* Data Element, where `Immunization.status` is "not-done" and `Immunization.statusReason` records that the patient refused the vaccine.
+      name: Immunization Not Done Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization
+    - reference:
         reference: Observation/jugular-vein-distension
       description: This is a Jugular vein distension Example for the *Clinical Test Result Observation Profile*.
       name: Jugular vein distension Example
@@ -977,6 +982,11 @@ definition:
         reference: Procedure/defib-implant
       description: This *US Core Procedure Profile* is an example of a Defibrillator implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code`.
       name: Procedure Defibrillator Implant Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
+    - reference:
+        reference: Procedure/procedure-not-done
+      description: This is a not done example for the *US Core Procedure Profile*. It shows the USCDI *Reason Not Performed* Data Element, where `Procedure.status` is "not-done" and `Procedure.statusReason` records that the patient refused the procedure. `Procedure.performed[x]` is absent because no procedure took place, and the preadopted FHIR R5 `Procedure.recorded` element records when the refusal was captured in the patient's record.
+      name: Procedure Not Done Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
     - reference:
         reference: Device/udi-3
