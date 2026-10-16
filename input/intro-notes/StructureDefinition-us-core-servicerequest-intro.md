@@ -48,11 +48,11 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 
 
-#### USCDI Laboratory Order, Imaging Order, Clinical Test Order, and Procedure Order Data Elements
+#### USCDI Laboratory Order, Imaging Order, Clinical Test Order, Procedure Order, and <span class="bg-success">Referral Order</span><!-- new-content --> Data Elements
 
 
 
-- <sup>2</sup>The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes], and other category codes **MAY** be used.<sup>[§][CONF-0514]</sup> API consumers **MAY** query by category when accessing patient information.<sup>[§][CONF-0911]</sup> For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, and *Procedure Order* Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table below.<sup>[§][CONF-0857]</sup> For example, laboratory orders would have the category code "108252007" (Laboratory procedure).
+- <sup>2</sup>The Must Support `ServiceRequest.category` is bound, *at a minimum*, to the [US Core ServiceRequest Category Codes], and other category codes **MAY** be used.<sup>[§][CONF-0514]</sup> API consumers **MAY** query by category when accessing patient information.<sup>[§][CONF-0911]</sup> For the USCDI *Laboratory Order*, *Imaging Order*, *Clinical Test Order*, *Procedure Order*, and <span class="bg-success">*Referral Order*</span><!-- new-content --> Data Elements, implementers **SHOULD** use the corresponding category codes listed in the table below.<sup>[§][CONF-0857]</sup> For example, laboratory orders would have the category code "108252007" (Laboratory procedure).
 
   |USCDI Order Data Element|Category Codes|
   |---|---|
@@ -60,9 +60,10 @@ This section provides detailed implementation guidance for the US Core Profile t
   |Imaging Order|[363679005 Imaging (procedure)]|
   |Clinical Test Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
   |Procedure Order|[386053000 Evaluation procedure (procedure)],<br />[410606002 Social service procedure (procedure)], or<br />[387713003 Surgical procedure (procedure)]|
+  |<span class="bg-success">Referral Order</span><!-- new-content -->|<span class="bg-success">[3457005 Patient referral (procedure)]</span><!-- new-content -->|
   {:.grid #servicerequest-categorycodes}
 
-- <sup>1</sup>The `ServiceRequest.code` is bound to US Core Procedure Codes, a broadly defined value set that accommodates many healthcare domains. However, implementers **SHOULD** constrain the value set to a subset for a particular domain.<sup>[§][CONF-0515]</sup> The table below identifies value set bindings for the USCDI Laboratory Order, Imaging Order, and Clinical Test Order Data Elements. Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context.<sup>[§][CONF-0904]</sup> For example, laboratory orders have an [extensible] binding to the [LOINC Common Laboratory Orders Value Set]. Note that the USCDI Class Procedure Order Data Element binding is unconstrained.
+- <sup>1</sup>The `ServiceRequest.code` is bound to US Core Procedure Codes, a broadly defined value set that accommodates many healthcare domains. However, implementers **SHOULD** constrain the value set to a subset for a particular domain.<sup>[§][CONF-0515]</sup> The table below identifies value set bindings for the USCDI Laboratory Order, Imaging Order, and Clinical Test Order Data Elements. Implementers **SHOULD** conform to the binding strengths listed for each USCDI Order context.<sup>[§][CONF-0904]</sup> For example, laboratory orders have an [extensible] binding to the [LOINC Common Laboratory Orders Value Set]. Note that the USCDI Class Procedure Order <span class="bg-success">and Referral Order</span><!-- new-content --> Data Element bindings are unconstrained.
 
   |USCDI Order Data Element| Binding| Binding Strength |Comments|
   |---|---|---|---|

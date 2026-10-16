@@ -5,7 +5,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: ServiceRequest Food Pantry Referral Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a food pantry referral request example using the *US Core ServiceRequest Profile*.  
+    valueMarkdown: This is a food pantry referral request example using the *US Core ServiceRequest Profile*.  It demonstrates the USCDI *Referral Order* Data Element using the Patient referral category code.  
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
 status: active
@@ -22,6 +22,14 @@ category:
     display: Social service procedure 
 
   text: Social Determinants Of Health/Social Service Procedure
+
+- coding:
+  - system: http://snomed.info/sct
+    version: http://snomed.info/sct/731000124108
+    code: '3457005'
+    display: Patient referral
+
+  text: Patient Referral
 code:
   coding:
   - system: http://snomed.info/sct

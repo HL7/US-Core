@@ -112,6 +112,7 @@ data_class_number,data_class,uscore_profile,data_element,resource_type,extension
 ,Orders,US Core ServiceRequest Profile,Clinical Test Order,ServiceRequest,,,ServiceRequest,,,,,,,,,,
 ,Orders,US Core ServiceRequest Profile,Procedure Order,ServiceRequest,,,ServiceRequest,,,,,,,,,,
 ,Orders,US Core ADI DocumentReference Profile,Portable Medical Order,ServiceRequest | DocumentReference,,,ServiceRequest | DocumentReference,,,,,,,,,,
+,Orders,US Core ServiceRequest Profile,Referral Order,ServiceRequest,,,ServiceRequest,,,,,,,,,,
 19,Patient Demographics/Information,US Core Patient Profile | US Core RelatedPerson Profile | US Core Observation Occupation Profile,,,,,Patient | Observation,,,,,,,,,,
 ,Patient Demographics/Information,US Core Patient Profile,First Name,Patient,,,Patient.name.given,,,,,,,,,,
 ,Patient Demographics/Information,US Core Patient Profile,Last Name,Patient,,,Patient.name.family,,,,,,,,,,

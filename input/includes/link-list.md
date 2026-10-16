@@ -13,6 +13,7 @@
 [2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
 [21st Century Cures Act for accessing patient data]: https://www.federalregister.gov/d/2020-07419/p-1177
 [34133-9]: http://s.details.loinc.org/LOINC/34133-9.html?sections=Comprehensive
+[3457005 Patient referral (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=3457005&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [363679005 Imaging (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=363679005&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [386053000 Evaluation procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=386053000&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [387713003 Surgical procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
