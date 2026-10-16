@@ -22,6 +22,6 @@
     | Procedure Status | [US Core Procedure Profile](StructureDefinition-us-core-procedure.html) | `Procedure.status` |
     {:.grid}
 
-  * For the USCDI Allergy Intolerance Criticality data element, we added `AllergyIntolerance.criticality` to the [US Core AllergyIntolerance Profile](StructureDefinition-us-core-allergyintolerance.html) as an *Additional USCDI* element. The element inherits its required binding to the [AllergyIntoleranceCriticality](https://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html) value set (low | high | unable-to-assess) from the base FHIR resource, and no new search parameter was added.
+  * For the USCDI Allergy Intolerance Criticality data element, we added `AllergyIntolerance.criticality` to the [US Core AllergyIntolerance Profile](StructureDefinition-us-core-allergyintolerance.html) as an *Additional USCDI* element.
 
   * For the USCDI Specimen Collection Date and Time and Specimen Collection Method data elements, we added `Specimen.collection.collected[x]` and `Specimen.collection.method` to the [US Core Specimen Profile](StructureDefinition-us-core-specimen.html) as *Additional USCDI* elements. Note that `Observation.effective[x]` on the [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html) is already a *Must Support* element and also maps to Specimen Collection Date and Time.
