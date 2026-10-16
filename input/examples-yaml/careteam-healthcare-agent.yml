@@ -1,0 +1,27 @@
+resourceType: CareTeam
+id: healthcare-agent
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Healthcare Agent CareTeam Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This example of a *US Core CareTeam Profile* identifies the patient's
+      healthcare agent - a related person legally authorized to make healthcare decisions
+      on behalf of the patient if the patient cannot communicate with medical personnel.
+      It meets the USCDI *Healthcare Agent* Data Element.
+status: active
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+participant:
+- role:
+  - coding:
+    - system: http://loinc.org
+      code: 81335-2
+      display: Patient Healthcare agent
+    text: 81335-2 (LOINC) Patient Healthcare agent
+  member:
+    reference: RelatedPerson/shaw-niece-hpowatt
+    display: Sarah van Putten

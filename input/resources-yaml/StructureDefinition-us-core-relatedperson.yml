@@ -40,7 +40,8 @@ differential:
 
 #============  pre-applied new binding FHIR-53376============
       binding:
-        strength: preferred
+# USCDI v7 Healthcare Agent: strength raised preferred -> extensible (Sept 23 WGM)
+        strength: extensible
         description: >-
           Personal And Legal Relationship Role Type
         valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.12.1

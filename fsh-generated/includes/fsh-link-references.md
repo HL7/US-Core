@@ -80,6 +80,9 @@
 [goal-sdoh-2]: Goal-goal-sdoh-2.html
 [head-circumference]: Observation-head-circumference.html
 [health-concern-example]: Condition-health-concern-example.html
+[healthcare-agent]: CareTeam-healthcare-agent.html
+[healthcare-agent-dpowatt]: CareTeam-healthcare-agent-dpowatt.html
+[healthcare-agent-hpowatt]: CareTeam-healthcare-agent-hpowatt.html
 [heart-rate]: Observation-heart-rate.html
 [heart-rate-rhythm]: Observation-heart-rate-rhythm.html
 [height]: Observation-height.html
@@ -120,6 +123,8 @@
 [child-example]: Patient-child-example.html
 [example]: Patient-example.html
 [infant-example]: Patient-infant-example.html
+[shaw-niece-dpowatt]: RelatedPerson-shaw-niece-dpowatt.html
+[shaw-niece-hpowatt]: RelatedPerson-shaw-niece-hpowatt.html
 [shaw-niece]: RelatedPerson-shaw-niece.html
 [pediatric-bmi-example]: Observation-pediatric-bmi-example.html
 [pediatric-wt-example]: Observation-pediatric-wt-example.html

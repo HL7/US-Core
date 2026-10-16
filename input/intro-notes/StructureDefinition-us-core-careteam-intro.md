@@ -37,5 +37,6 @@ In order to access care team member's names, identifiers, locations, and contact
   * The Client application **SHALL** support all three profile references.<sup>[§][CONF-0314],[§][CONF-0315],[§][CONF-0316]</sup>
   * Because the US Core PractitionerRole Profile supplies the provider's location and contact information and a reference to the Practitioner, Server systems **SHOULD** reference it instead of the US Core Practitioner Profile. The quick start section below shows an example of how to access the practitioner name and identifier.<sup>[§][CONF-0317]</sup>
   * Servers that support only US Core Practitioner Profile and do not support the US Core PractitionerRole Profile **SHALL** provide implementation-specific guidance on how to access a provider's location and contact information using only the Practitioner resource.<sup>[§][CONF-0318],[§][CONF-0319]</sup>
+  * <span class="bg-success" markdown="1">For the USCDI *Healthcare Agent* Data Element, systems **SHOULD** use the LOINC code [81335-2 Patient Healthcare agent], the durable power of attorney code [DPOWATT], or the healthcare power of attorney code [HPOWATT] in `CareTeam.participant.role`.<sup>[§][CONF-0919]</sup></span><!-- new-content -->
 
 {% include link-list.md %}

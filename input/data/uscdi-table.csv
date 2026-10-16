@@ -14,6 +14,7 @@ data_class_number,data_class,uscore_profile,data_element,resource_type,extension
 ,Care Team Members,US Core PractitionerRole Profile| US Core Practitioner Profile| US Core Patient Profile| US Core RelatedPerson Profile,Care Team Member Location,CareTeam,,,PractitionerRole.address | Practitioner.address | RelatedPerson.address,,,,,,,,,,
 ,Care Team Members,US Core PractitionerRole Profile| US Core Practitioner Profile| US Core Patient Profile| US Core RelatedPerson Profile,Care Team Member Telecom,CareTeam,,,PractitionerRole.telecom | Practitioner.telecom | RelatedPerson.telecom,,,,,,,,,,
 ,Care Team Members,US Core CareTeam Profile,Care Team Member Role,CareTeam,,,CareTeam.participant.role,,,,,,,,,,
+,Care Team Members,US Core CareTeam Profile| US Core RelatedPerson Profile,Healthcare Agent,CareTeam | RelatedPerson,,,CareTeam.participant.role | RelatedPerson.relationship,,,,,,,,,,
 4,Clinical Notes,US Core DocumentReference Profile|US Core DiagnosticReport Profile for Report and Note Exchange,,,,,DocumentReference | DiagnosticReport,See Clinical Notes Guidance,clinical-notes.html,,,,,,,,
 ,Clinical Notes,US Core DocumentReference Profile,Consultation Note,DocumentReference,,,DocumentReference,,,,,,,,,,
 ,Clinical Notes,US Core DocumentReference Profile,Discharge Summary Note,DocumentReference,,,DocumentReference,,,,,,,,,,

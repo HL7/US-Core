@@ -31,4 +31,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 - <sup>1</sup>{% include should-3166-subdivision-codes.md type="RelatedPerson" %}
 
+- <span class="bg-success" markdown="1">For the USCDI *Healthcare Agent* Data Element, systems **SHOULD** use the durable power of attorney code [DPOWATT] or the healthcare power of attorney code [HPOWATT] in `RelatedPerson.relationship`.<sup>[§][CONF-0918]</sup> For a more detailed model that builds on the US Core RelatedPerson Profile to represent a healthcare agent, including consent-based delegation and role and priority coding, see the [PACIO ADI PACP Guidance] and the [ADI Healthcare Agent Participant] profile.</span><!-- new-content -->
+
 {% include link-list.md %}

@@ -795,6 +795,30 @@
       },
       {
         "reference": {
+          "reference": "CareTeam/healthcare-agent"
+        },
+        "description": "This example of a *US Core CareTeam Profile* identifies the patient's healthcare agent - a related person legally authorized to make healthcare decisions on behalf of the patient if the patient cannot communicate with medical personnel. It meets the USCDI *Healthcare Agent* Data Element.",
+        "name": "Healthcare Agent CareTeam Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "CareTeam/healthcare-agent-dpowatt"
+        },
+        "description": "This example of a *US Core CareTeam Profile* identifies the patient's healthcare agent using the durable power of attorney role code. It records the same role as the corresponding US Core RelatedPerson Profile example.",
+        "name": "Healthcare Agent CareTeam Example Using the Durable Power of Attorney Role Code",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "CareTeam/healthcare-agent-hpowatt"
+        },
+        "description": "This example of a *US Core CareTeam Profile* identifies the patient's healthcare agent using the healthcare power of attorney role code. It records the same role as the corresponding US Core RelatedPerson Profile example.",
+        "name": "Healthcare Agent CareTeam Example Using the Healthcare Power of Attorney Role Code",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam|10.0.0-ballot"
+      },
+      {
+        "reference": {
           "reference": "Observation/heart-rate"
         },
         "description": "This is a heart rate example for the *Vitalsigns Profile*.",
@@ -1112,6 +1136,22 @@
         "description": "This is a patient infant example for the *US Core Patient Profile*.",
         "name": "Patient Infant Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/shaw-niece-dpowatt"
+        },
+        "description": "This example of a *US Core RelatedPerson Profile* records the patient's niece in the durable power of attorney role, meeting the USCDI *Healthcare Agent* Data Element.",
+        "name": "Patient Niece As Durable Power Of Attorney Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/shaw-niece-hpowatt"
+        },
+        "description": "This example of a *US Core RelatedPerson Profile* records the patient's niece in the legally authorized healthcare power of attorney role, meeting the USCDI *Healthcare Agent* Data Element.",
+        "name": "Patient Niece As Healthcare Power Of Attorney Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|10.0.0-ballot"
       },
       {
         "reference": {

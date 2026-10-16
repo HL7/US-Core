@@ -53,7 +53,12 @@ differential:
       binding:
         strength: extensible
         description: Indicates specific responsibility of an individual within the care team, such as Primary physician, Team coordinator, Caregiver, etc.
-        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.30
+# TODO SHAM OID - this value set does not exist yet and WILL FAIL VALIDATION.
+# Replace with the real VSAC OID once the US Core Care Team Member Function value set
+# is authored in VSAC. It extends Care Team Member Function (2.16.840.1.113762.1.4.1099.30)
+# with HPOWATT, DPOWATT, and LOINC 81335-2 for the USCDI v7 Healthcare Agent Data
+# Element (Sept 23 WGM decision).
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.9999
     - id: CareTeam.participant.member
       path: CareTeam.participant.member
       min: 1

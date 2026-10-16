@@ -19,7 +19,9 @@
 [387713003 Surgical procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [410606002 Social service procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [11 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
+[81335-2 Patient Healthcare agent]: https://loinc.org/81335-2.html
 [Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
+[ADI Healthcare Agent Participant]: https://build.fhir.org/ig/HL7/fhir-pacio-adi/StructureDefinition-ADI-HealthcareAgentParticipant.html
 [American Heart Association]: http://heart.org/
 [Apgar score]: https://en.wikipedia.org/wiki/Apgar_score
 [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]: https://www.healthit.gov/sites/default/files/page/2021-10/2021-09-09_USCDI_TF_2021_HITAC_Phase%203_%20Recommendations%20Report_Signed_508.pdf
@@ -49,12 +51,15 @@
 [Directory of published versions]: {{site.data.fhir.canonical}}/history.html
 [Discharge Summary (18842-5)]: https://loinc.org/18842-5
 [Document Class Value Set]: {{site.data.fhir.path}}valueset-document-classcodes.html
+[DPOWATT]: https://terminology.hl7.org/CodeSystem-v3-RoleCode.html#v3-RoleCode-DPOWATT
 [Element Level Provenance]: element-level-provenance.html
 [ElementDefinition.pattern]: {{site.data.fhir.path}}elementdefinition-definitions.html#ElementDefinition.pattern_x_
 [Emergency Department Note (34111-5)]: https://loinc.org/34111-5
 [Enclosed Precondition Extension]: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/adi-enclosedPrecondition-extension
 [Event Location Extension]: http://hl7.org/fhir/StructureDefinition/event-location
 [Extensible Binding]: {{site.data.fhir.path}}terminologies.html#extensible
+[HPOWATT]: https://terminology.hl7.org/CodeSystem-v3-RoleCode.html#v3-RoleCode-HPOWATT
+[PACIO ADI PACP Guidance]: https://build.fhir.org/ig/HL7/fhir-pacio-adi/pacp_guidance.html
 [Required Binding]: {{site.data.fhir.path}}terminologies.html#required
 [Extensions]: {{site.data.fhir.path}}extensibility.html
 [FHIR Artifacts]: artifacts.html

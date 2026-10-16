@@ -1,0 +1,27 @@
+resourceType: CareTeam
+id: healthcare-agent-dpowatt
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Healthcare Agent CareTeam Example Using the Durable Power of Attorney
+      Role Code
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This example of a *US Core CareTeam Profile* identifies the patient's
+      healthcare agent using the durable power of attorney role code. It records the
+      same role as the corresponding US Core RelatedPerson Profile example.
+status: active
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+participant:
+- role:
+  - coding:
+    - system: http://terminology.hl7.org/CodeSystem/v3-RoleCode
+      code: DPOWATT
+      display: durable power of attorney
+    text: DPOWATT (V3-RoleCode) durable power of attorney
+  member:
+    reference: RelatedPerson/shaw-niece-dpowatt
+    display: Sarah van Putten
