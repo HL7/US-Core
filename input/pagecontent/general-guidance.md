@@ -265,10 +265,10 @@ All the search interactions in this guide use the `GET` command with the followi
        - When searching using the `token` type searchparameter [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the Client* to supply.:
        - When searching using the `reference` type SearchParameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the Client* to supply:
        - When searching using the `date` type SearchParameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a Server does not support the comparator.
-    - \{:m1|m2|...}: The list of supported search parameter modifiers
-    - {c1|c2|...}: The list of supported search parameter comparators
-    - {,value2,...}: Optional multiple 'OR' Values
-    - {&parameter2={:m1|m2|...}={c1|c2|...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
+    - `{:m1|m2|...}`: The list of supported search parameter modifiers
+    - `{c1|c2|...}`: The list of supported search parameter comparators
+    - `{,value2,...}`: Optional multiple 'OR' Values
+    - `{&parameter2={:m1|m2|...}={c1|c2|...}[value1{,value2,...}&...}`: Optional multiple 'AND' search parameters
 
 
 In the simplest case, a search is executed by performing a GET operation in the RESTful framework:
