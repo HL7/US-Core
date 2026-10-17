@@ -13,9 +13,14 @@
 # until 2026-10-16 because two FHIRPath expressions had a stray ")".
 #
 # This renders each input/liquid/<ResourceType>.liquid against every matching
-# resource using the IG Publisher's own LiquidEngine. Parsing alone is not
+# resource using the IG Publisher's own LiquidEngine, then parses the result as
+# an XHTML fragment the way the publisher does. Parsing the template alone is not
 # enough: an expression is compiled when its code path is first reached, so a
-# bad expression inside an {% if %} branch parses clean and fails at render.
+# bad expression inside an {% if %} branch parses clean and fails at render. And
+# a template can render without erroring yet still produce a narrative the
+# publisher throws away -- a filter written with a single "|" is a FHIRPath
+# union, silently ignored, so markdown reaches the page unrendered and text like
+# <patient|user|system> parses as a bogus tag.
 #
 # Takes a few seconds. Run it before a build, or let publish.sh -i run it.
 #
@@ -72,9 +77,11 @@ echo "====================================================================="
 if [ $status -eq 0 ]; then
   echo "✅ Every Liquid template rendered without erroring."
 else
-  echo "❌ A Liquid template failed to render. The build will NOT report this:"
-  echo "   the affected pages will show \"Exception generating Narrative\""
-  echo "   in place of their content, and QA will stay clean."
+  echo "❌ A Liquid template failed. The build will NOT report this: the affected"
+  echo "   pages will show \"Exception generating Narrative\" (the template errored)"
+  echo "   or \"Exception parsing generated Narrative\" (it rendered invalid XHTML,"
+  echo "   usually markdown that reached the page unrendered) in place of their"
+  echo "   content, and QA will stay clean."
 fi
 echo "====================================================================="
 exit $status

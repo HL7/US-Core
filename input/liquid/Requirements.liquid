@@ -34,7 +34,7 @@
         {% endfor %}
     </td>
     <td style="text-align: center;">{{ i.conformance.join(', ') }}{% if i.extension('http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot').exists() %}SHALL-NOT{% endif %}</td>
-    <td>{{ i.requirement | markdownify }}</td>
+    <td>{{ i.requirement || markdownify }}</td>
     </tr>
     {% endfor %}
   </tbody>

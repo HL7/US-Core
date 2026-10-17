@@ -41,10 +41,25 @@ import java.util.Set;
 public class LiquidRenderCheck {
 
   /**
-   * Parsing and rendering a template needs no terminology or package context, so the
-   * worker context is a no-op proxy returning empty values. That keeps the check to a
-   * few seconds instead of loading the FHIR core packages.
+   * The real R5 structure definitions, loaded from the package cache. A stub context
+   * is not good enough: without model information FHIRPath silently resolves many
+   * paths to empty, so statements never reach the filter that would have failed and
+   * the check passes while the build does not. Measured on 2026-10-16 -- a stub
+   * context rendered CapabilityStatement.liquid clean while the publisher died with
+   * an NPE in the same template.
+   *
+   * No terminology server and no IG packages: this only has to resolve element paths.
    */
+  static IWorkerContext realContext() throws Exception {
+    org.hl7.fhir.utilities.npm.FilesystemPackageCacheManager pcm =
+        new org.hl7.fhir.utilities.npm.FilesystemPackageCacheManager.Builder().build();
+    org.hl7.fhir.utilities.npm.NpmPackage npm = pcm.loadPackage("hl7.fhir.r5.core", "5.0.0");
+    return new org.hl7.fhir.r5.context.SimpleWorkerContext.SimpleWorkerContextBuilder()
+        .withAllowLoadingDuplicates(true)
+        .fromPackage(npm);
+  }
+
+  /** Fallback when the R5 core package is not in the cache. */
   static IWorkerContext stubContext() {
     return (IWorkerContext) Proxy.newProxyInstance(
         LiquidRenderCheck.class.getClassLoader(),
@@ -83,6 +98,24 @@ public class LiquidRenderCheck {
     }
   }
 
+  /**
+   * Markdown markers that should never survive into a rendered narrative: bold
+   * runs, inline code spans, and inline links. A hit means either the field was
+   * emitted without "|| markdownify", or the source markdown is malformed so the
+   * processor left it alone -- "** SHOULD**" does not bold, because the space
+   * after the opening marker breaks the emphasis run. Returns a short excerpt
+   * around the first hit, or null when the narrative looks clean.
+   */
+  static String unrenderedMarkdown(String narrative) {
+    java.util.regex.Pattern p = java.util.regex.Pattern.compile(
+        "\\*\\*[^*\\n]{1,80}\\*\\*|`[^`\\n]{1,80}`|\\[[^\\]\\n]{1,80}\\]\\([^)\\n]{1,120}\\)");
+    java.util.regex.Matcher m = p.matcher(narrative);
+    if (!m.find()) return null;
+    int from = Math.max(0, m.start() - 60);
+    int to = Math.min(narrative.length(), m.end() + 60);
+    return "..." + narrative.substring(from, to).replaceAll("\\s+", " ") + "...";
+  }
+
   public static void main(String[] args) throws Exception {
     if (args.length < 2) {
       System.err.println("usage: LiquidRenderCheck <liquid-dir> <resource.json> ...");
@@ -90,7 +123,17 @@ public class LiquidRenderCheck {
     }
     Path liquidDir = Paths.get(args[0]);
 
-    LiquidEngine engine = new LiquidEngine(stubContext(), null);
+    IWorkerContext ctx;
+    try {
+      ctx = realContext();
+    } catch (Throwable t) {
+      System.out.println("   (!) could not load hl7.fhir.r5.core#5.0.0 from the package cache: "
+          + t.getMessage());
+      System.out.println("   (!) falling back to a stub context -- expressions will under-resolve"
+          + " and a real failure can be missed");
+      ctx = stubContext();
+    }
+    LiquidEngine engine = new LiquidEngine(ctx, null);
     engine.setIncludeResolver(new LiquidEngine.ILiquidEngineIncludeResolver() {
       public String fetchInclude(LiquidEngine eng, String name) {
         try {
@@ -106,6 +149,7 @@ public class LiquidRenderCheck {
     Map<String, Integer> rendered = new LinkedHashMap<>();
     Map<String, String> failures = new LinkedHashMap<>();
     Map<String, Integer> failed = new LinkedHashMap<>();
+    Map<String, String> warnings = new LinkedHashMap<>();
     int skipped = 0;
 
     for (int i = 1; i < args.length; i++) {
@@ -137,8 +181,23 @@ public class LiquidRenderCheck {
         // the node, so a document reused after a failure can report the next
         // resource as OK on a half-compiled statement
         LiquidEngine.LiquidDocument doc = engine.parse(templates.get(type), type + ".liquid");
-        engine.evaluate(doc, (Base) r5, null);
+        String narrative = engine.evaluate(doc, (Base) r5, null);
+        // The publisher parses the rendered narrative as an XHTML fragment and
+        // discards it if that fails, with a second silent message on the page:
+        // "Exception parsing generated Narrative ... Unable to read attribute on
+        // <x>". That happens when markdown reaches the page unrendered -- a filter
+        // written with a single "|" is a FHIRPath union and is silently ignored,
+        // so text like <patient|user|system> arrives as a bogus tag.
+        new org.hl7.fhir.utilities.xhtml.XhtmlParser().parseFragment(narrative);
         rendered.merge(type, 1, Integer::sum);
+        // Valid XHTML is not the same as rendered markdown. A markdown-valued
+        // element emitted without "|| markdownify" lands on the page as source
+        // text, which is legal XHTML and so passes the parse above. Flag the
+        // markers that survive, so the next field nobody filtered is visible.
+        String leftover = unrenderedMarkdown(narrative);
+        if (leftover != null) {
+          warnings.putIfAbsent(type + ".liquid", leftover);
+        }
       } catch (Throwable t) {
         String msg = t.getMessage();
         if (msg == null || msg.isEmpty()) msg = t.getClass().getSimpleName();
@@ -149,6 +208,12 @@ public class LiquidRenderCheck {
 
     for (Map.Entry<String, Integer> e : rendered.entrySet()) {
       System.out.println("   OK   " + e.getKey() + ".liquid rendered " + e.getValue() + " resource(s)");
+    }
+    for (Map.Entry<String, String> e : warnings.entrySet()) {
+      System.out.println("   WARN " + e.getKey()
+          + " left markdown source in the narrative. Either a markdown-valued field"
+          + " is missing \"|| markdownify\", or the source markdown is malformed and"
+          + " cannot render: " + e.getValue());
     }
     for (Map.Entry<String, String> e : failures.entrySet()) {
       String type = e.getKey().substring(0, e.getKey().length() - ".liquid".length());
