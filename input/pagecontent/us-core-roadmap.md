@@ -43,9 +43,6 @@ A new US Regulatory requirement may skip some of these steps. However, regulator
 
 Past Balloters, STU commenters, and Accelerator Project teams submitted the following items for consideration for adding US Core. Additional requirements gathering is required before testing may occur on these items:
 
-#### Additional pilot Testing of UDI elements
-In the January ballot 2019, we tested this process with the FDA, requesting that US Core include all the parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components.
-
 #### [MedicationAdministration]
 The US Core design assumes that access to the Active Medication List is through searching MedicationRequest. (See: https://build.fhir.org/ig/HL7/US-Core/medication-list-guidance.html.)  The orders (MedicationRequest) capture all the medications and whether they have been fulfilled. Medication Administration can be used as well, but systems will need to be careful to link to the appropriate MedicationRequest. Future versions of US Core may test and add MedicationAdministration.
 
@@ -56,13 +53,6 @@ Searching for multiple patients has been called out in the ONC Health IT Certifi
 - currently in the Emergency Department
 - with an Allergy to X
 - being seen by a provider for the day
-
-#### Timezones and Time Offsets
-Clients face challenges displaying the source data's times and timezone regardless of the end user's current timezone. A solution is to define requirements and best practices for servers to preserve and represent time offsets and time zones.
-
->A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
-
-A common practice is to preserve the source data time offsets as the original offset or convert them to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration. Another is adding server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third is providing a Client algorithm for resolving time offsets and time zones.
 
 #### Record or Update Data
 
@@ -91,12 +81,6 @@ The Argonaut project has defined:
 FHIR Subscriptions enable real-time data exchange by allowing systems to subscribe to patient-specific or population-level updates, ensuring timely access to critical healthcare information. As US Core continues to evolve, Subscriptions will play a key role in supporting event-driven workflows, such as notifications for lab results, medication changes, or care plan updates. This functionality aligns with the push toward interoperable, proactive care delivery across the US healthcare ecosystem. Future US Core implementations may expand Subscription use cases, improving integration between EHRs, payer systems, and public health platforms.
 
 The Argonaut project has defined the [Patient Data Feed] as an optional feature for servers implementing US Core. It allows clients to receive FHIR Subscription Notifications when events occur related to US Core content.
-
-
-------------------------------------------------------------------------
-Footnotes
-
-[^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
 
 
 {% include link-list.md %}
