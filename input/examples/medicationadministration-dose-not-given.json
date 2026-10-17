@@ -1,0 +1,60 @@
+{
+  "resourceType": "MedicationAdministration",
+  "id": "medicationadministration-dose-not-given",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration|10.0.0-ballot"
+    ]
+  },
+  "status": "not-done",
+  "statusReason": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "182895007",
+          "display": "Drug declined by patient"
+        }
+      ],
+      "text": "Drug declined by patient"
+    }
+  ],
+  "medicationReference": {
+    "reference": "Medication/uscore-med2",
+    "display": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy V. Baxter"
+  },
+  "effectiveDateTime": "2026-05-13T07:00:00Z",
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Ronald Bone, MD"
+      }
+    }
+  ],
+  "request": {
+    "reference": "MedicationRequest/medicationrequest-referenced-oral-axid"
+  },
+  "dosage": {
+    "text": "10 mL PO bid (scheduled morning dose not administered)",
+    "route": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "26643006",
+          "display": "Oral route"
+        }
+      ]
+    },
+    "dose": {
+      "value": 10,
+      "unit": "mL",
+      "system": "http://unitsofmeasure.org",
+      "code": "mL"
+    }
+  }
+}

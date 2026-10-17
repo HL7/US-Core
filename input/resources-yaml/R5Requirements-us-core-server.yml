@@ -2343,6 +2343,7 @@ statement:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medication.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance
     conformance:
       - MAY
     requirement: USCDI recommends the [National Drug Codes (NDC)](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory) as an optional medication terminology. They **MAY**  be supplied as an additional coding element [when representing a medication]
@@ -2359,6 +2360,9 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-medication.html#CONF-0248
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationadministration.html#CONF-0248
   - key: CONF-0249
     reference:
       - medication-list.html#options-for-representing-medication
@@ -3358,6 +3362,7 @@ statement:
     reference:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance
     conformance:
       - MAY
     requirement: When referencing a Medication resource in .medicationReference, the resource **MAY** be [contained](http://hl7.org/fhir/R4/references.html#contained)
@@ -3368,10 +3373,14 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0399
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationadministration.html#CONF-0399
   - key: CONF-0400
     reference:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance
     conformance:
       - MAY
     requirement: When referencing a Medication resource in .medicationReference, the resource **MAY** be an external resource
@@ -3382,10 +3391,14 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0400
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationadministration.html#CONF-0400
   - key: CONF-0401
     reference:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance
     conformance:
       - SHALL
     conditionality: true
@@ -3397,10 +3410,14 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0401
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationadministration.html#CONF-0401
   - key: CONF-0402
     reference:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance
     conformance:
       - SHALL
     conditionality: true
@@ -3412,6 +3429,9 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0402
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationadministration.html#CONF-0402
   - key: CONF-0407
     reference:
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
@@ -4955,3 +4975,17 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: scopes.html#CONF-0921
+  - key: CONF-0922
+    reference:
+      - scopes.html#scopes-for-requesting-fhir-resources-by-type
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: |-
+      The following scopes that correspond directly to FHIR resource types **SHALL** be supported
+      ...
+      [For] MedicationAdministration [the] <patient|user|system>/MedicationAdministration.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]
+    _reference:
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: scopes.html#CONF-0922

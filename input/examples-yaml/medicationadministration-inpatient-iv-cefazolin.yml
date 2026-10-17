@@ -1,0 +1,41 @@
+resourceType: MedicationAdministration
+id: medicationadministration-inpatient-iv-cefazolin
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: MedicationAdministration Inpatient IV Cefazolin Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a completed inpatient administration example for the *US
+      Core MedicationAdministration Profile*. It records an intravenous infusion of
+      cefazolin 1 g given over 30 minutes and represents the medication as a code.
+status: completed
+medicationCodeableConcept:
+  coding:
+  - system: http://www.nlm.nih.gov/research/umls/rxnorm
+    code: '1665050'
+    display: cefazolin 1000 MG Injection
+  text: Cefazolin 1 g IV
+subject:
+  reference: Patient/example
+  display: Amy V. Baxter
+effectivePeriod:
+  start: '2026-05-13T08:00:00Z'
+  end: '2026-05-13T08:30:00Z'
+performer:
+- actor:
+    reference: Practitioner/practitioner-1
+    display: Ronald Bone, MD
+dosage:
+  text: 1 g IV over 30 minutes
+  route:
+    coding:
+    - system: http://snomed.info/sct
+      code: '47625008'
+      display: Intravenous route
+  dose:
+    value: 1
+    unit: g
+    system: http://unitsofmeasure.org
+    code: g

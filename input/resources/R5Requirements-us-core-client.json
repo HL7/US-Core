@@ -1088,7 +1088,8 @@
       "key": "CONF-0403",
       "reference": [
         "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHALL"
@@ -1110,6 +1111,14 @@
               "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0403"
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-medicationadministration.html#CONF-0403"
+            }
+          ]
         }
       ]
     },
@@ -1117,7 +1126,8 @@
       "key": "CONF-0404",
       "reference": [
         "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHALL"
@@ -1137,6 +1147,14 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0404"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-medicationadministration.html#CONF-0404"
             }
           ]
         }

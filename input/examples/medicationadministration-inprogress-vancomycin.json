@@ -1,0 +1,53 @@
+{
+  "resourceType": "MedicationAdministration",
+  "id": "medicationadministration-inprogress-vancomycin",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration|10.0.0-ballot"
+    ]
+  },
+  "status": "in-progress",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1807513",
+        "display": "vancomycin 1000 MG Injection"
+      }
+    ],
+    "text": "Vancomycin 1 g IV"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy V. Baxter"
+  },
+  "effectivePeriod": {
+    "start": "2026-05-13T14:30:00Z"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Ronald Bone, MD"
+      }
+    }
+  ],
+  "dosage": {
+    "text": "1 g IV over 90 minutes",
+    "route": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "47625008",
+          "display": "Intravenous route"
+        }
+      ]
+    },
+    "dose": {
+      "value": 1,
+      "unit": "g",
+      "system": "http://unitsofmeasure.org",
+      "code": "g"
+    }
+  }
+}

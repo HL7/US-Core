@@ -580,6 +580,7 @@ statement:
     reference:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance
     conformance:
       - SHALL
     requirement: The Client application **SHALL** support [using a code in .medicationCodeableConcept to represent medications when supporting the US Core MedicationDispense profile]
@@ -590,10 +591,14 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0403
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationadministration.html#CONF-0403
   - key: CONF-0404
     reference:
       - StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance
+      - StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance
     conformance:
       - SHALL
     requirement: The Client application **SHALL** support [referencing a Medication resource in .medicationReferencet to represent medications when supporting the US Core MedicationDispense profile]
@@ -604,6 +609,9 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-medicationrequest.html#CONF-0404
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-medicationadministration.html#CONF-0404
   - key: CONF-0409
     reference:
       - StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance

@@ -1,0 +1,39 @@
+resourceType: MedicationAdministration
+id: medicationadministration-prn-acetaminophen-given
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: MedicationAdministration PRN Acetaminophen Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a completed as needed (PRN) administration example for the
+      *US Core MedicationAdministration Profile*. It records an oral dose of acetaminophen
+      650 mg given for pain at a single point in time, so `effectiveDateTime` is used.
+status: completed
+medicationCodeableConcept:
+  coding:
+  - system: http://www.nlm.nih.gov/research/umls/rxnorm
+    code: '313782'
+    display: acetaminophen 325 MG Oral Tablet
+  text: Acetaminophen 325 mg oral tablet, two tablets
+subject:
+  reference: Patient/example
+  display: Amy V. Baxter
+effectiveDateTime: '2026-05-13T13:15:00Z'
+performer:
+- actor:
+    reference: Practitioner/practitioner-1
+    display: Ronald Bone, MD
+dosage:
+  text: 650 mg PO prn for pain
+  route:
+    coding:
+    - system: http://snomed.info/sct
+      code: '26643006'
+      display: Oral route
+  dose:
+    value: 650
+    unit: mg
+    system: http://unitsofmeasure.org
+    code: mg

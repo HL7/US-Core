@@ -4210,7 +4210,8 @@
         "medication-list.html#options-for-representing-medication",
         "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
         "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medication.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-medication.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "MAY"
@@ -4246,6 +4247,14 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-medication.html#CONF-0248"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-medicationadministration.html#CONF-0248"
             }
           ]
         }
@@ -6148,7 +6157,8 @@
       "key": "CONF-0399",
       "reference": [
         "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "MAY"
@@ -6170,6 +6180,14 @@
               "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0399"
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-medicationadministration.html#CONF-0399"
+            }
+          ]
         }
       ]
     },
@@ -6177,7 +6195,8 @@
       "key": "CONF-0400",
       "reference": [
         "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "MAY"
@@ -6199,6 +6218,14 @@
               "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0400"
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-medicationadministration.html#CONF-0400"
+            }
+          ]
         }
       ]
     },
@@ -6206,7 +6233,8 @@
       "key": "CONF-0401",
       "reference": [
         "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHALL"
@@ -6229,6 +6257,14 @@
               "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0401"
             }
           ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-medicationadministration.html#CONF-0401"
+            }
+          ]
         }
       ]
     },
@@ -6236,7 +6272,8 @@
       "key": "CONF-0402",
       "reference": [
         "StructureDefinition-us-core-medicationdispense.html#profile-specific-implementation-guidance",
-        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance"
+        "StructureDefinition-us-core-medicationrequest.html#profile-specific-implementation-guidance",
+        "StructureDefinition-us-core-medicationadministration.html#profile-specific-implementation-guidance"
       ],
       "conformance": [
         "SHALL"
@@ -6257,6 +6294,14 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-medicationrequest.html#CONF-0402"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-medicationadministration.html#CONF-0402"
             }
           ]
         }
@@ -9286,6 +9331,27 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "scopes.html#CONF-0921"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0922",
+      "reference": [
+        "scopes.html#scopes-for-requesting-fhir-resources-by-type"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] MedicationAdministration [the] <patient|user|system>/MedicationAdministration.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "scopes.html#CONF-0922"
             }
           ]
         }

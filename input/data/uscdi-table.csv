@@ -107,6 +107,7 @@ data_class_number,data_class,uscore_profile,data_element,resource_type,extension
 ,Medications,US Core MedicationRequest Profile | US Core MedicationDispense Profile,Route of Administration,MedicationRequest | MedicationDispense,,,MedicationRequest.dosageInstruction.route | MedicationDispense.dosageInstruction.route,,,,,,,,,,
 ,Medications,US Core MedicationRequest Profile,Medication Instructions,MedicationRequest,,,MedicationRequest.dosageInstruction,,,,,,,,,,
 ,Medications,US Core MedicationRequest Profile | US Core Medication Adherence Extension,Medication Adherence,MedicationRequest,US Core Medication Adherence Extension,,MedicationRequest.extension.where(url='Patient.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence'),,,,,,,,,,
+,Medications,US Core MedicationAdministration Profile,Medication Administration,MedicationAdministration,,,MedicationAdministration,,,,,,,,,,
 ,Medications,US Core MedicationDispense Profile,Medication Dispense Status,MedicationDispense,,,MedicationDispense,,,,,,,,,,
 ,Medications,US Core MedicationRequest Profile | US Core MedicationDispense Profile,Medication Dispense Quantity,MedicationRequest | MedicationDispense,,,MedicationRequest.dispenseRequest.quantity | MedicationDispense.quantity,,,,,,,,,,
 18,Orders,US Core MedicationRequest Profile | US Core ServiceRequest Profile | US Core ADI DocumentReference Profile,,,,,MedicationRequest | ServiceRequest,,,,,,,,,,

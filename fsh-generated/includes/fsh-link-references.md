@@ -109,6 +109,10 @@
 [cbc-mchc]: Observation-cbc-mchc.html
 [cbc-mcv]: Observation-cbc-mcv.html
 [medicationdispense-example]: MedicationDispense-medicationdispense-example.html
+[medicationadministration-dose-not-given]: MedicationAdministration-medicationadministration-dose-not-given.html
+[medicationadministration-inprogress-vancomycin]: MedicationAdministration-medicationadministration-inprogress-vancomycin.html
+[medicationadministration-inpatient-iv-cefazolin]: MedicationAdministration-medicationadministration-inpatient-iv-cefazolin.html
+[medicationadministration-prn-acetaminophen-given]: MedicationAdministration-medicationadministration-prn-acetaminophen-given.html
 [medicationrequest-coded-oral-axid]: MedicationRequest-medicationrequest-coded-oral-axid.html
 [medicationrequest-contained-oral-axid]: MedicationRequest-medicationrequest-contained-oral-axid.html
 [medicationrequest-referenced-oral-axid]: MedicationRequest-medicationrequest-referenced-oral-axid.html
@@ -302,6 +306,7 @@
 [USCoreLocationType]: ValueSet-us-core-location-type.html
 [USCoreMedicationAdherenceExtension]: StructureDefinition-us-core-medication-adherence.html
 [USCoreMedicationProfile]: StructureDefinition-us-core-medication.html
+[USCoreMedicationAdministrationProfile]: StructureDefinition-us-core-medicationadministration.html
 [USCoreMedicationDispenseProfile]: StructureDefinition-us-core-medicationdispense.html
 [USCoreMedicationRequestProfile]: StructureDefinition-us-core-medicationrequest.html
 [USCore-ModelInfo]: Library-USCore-ModelInfo.html
@@ -417,6 +422,10 @@
 [USCoreLocationAddressPostalcode]: SearchParameter-us-core-location-address-postalcode.html
 [USCoreLocationAddressState]: SearchParameter-us-core-location-address-state.html
 [USCoreLocationName]: SearchParameter-us-core-location-name.html
+[USCoreMedicationadministrationEffectiveTime]: SearchParameter-us-core-medicationadministration-effective-time.html
+[USCoreMedicationadministrationId]: SearchParameter-us-core-medicationadministration-id.html
+[USCoreMedicationadministrationPatient]: SearchParameter-us-core-medicationadministration-patient.html
+[USCoreMedicationadministrationStatus]: SearchParameter-us-core-medicationadministration-status.html
 [USCoreMedicationdispensePatient]: SearchParameter-us-core-medicationdispense-patient.html
 [USCoreMedicationdispenseStatus]: SearchParameter-us-core-medicationdispense-status.html
 [USCoreMedicationdispenseType]: SearchParameter-us-core-medicationdispense-type.html

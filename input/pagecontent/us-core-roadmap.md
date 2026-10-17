@@ -43,9 +43,6 @@ A new US Regulatory requirement may skip some of these steps. However, regulator
 
 Past Balloters, STU commenters, and Accelerator Project teams submitted the following items for consideration for adding US Core. Additional requirements gathering is required before testing may occur on these items:
 
-#### [MedicationAdministration]
-The US Core design assumes that access to the Active Medication List is through searching MedicationRequest. (See: https://build.fhir.org/ig/HL7/US-Core/medication-list-guidance.html.)  The orders (MedicationRequest) capture all the medications and whether they have been fulfilled. Medication Administration can be used as well, but systems will need to be careful to link to the appropriate MedicationRequest. Future versions of US Core may test and add MedicationAdministration.
-
 #### Searching for Multiple Patients
 Searching for multiple patients has been called out in the ONC Health IT Certification Program. Defining capabilities for multiple patient access would focus on querying real-time data for a user-facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
 

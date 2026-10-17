@@ -1027,6 +1027,38 @@
       },
       {
         "reference": {
+          "reference": "MedicationAdministration/medicationadministration-dose-not-given"
+        },
+        "description": "This is a dose not given example for the *US Core MedicationAdministration Profile*. It records a scheduled morning dose of Axid oral solution that was not administered because the patient declined it, and references the authorizing prescription and a Medication resource.",
+        "name": "MedicationAdministration Dose Not Given Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "MedicationAdministration/medicationadministration-inprogress-vancomycin"
+        },
+        "description": "This is an in progress administration example for the *US Core MedicationAdministration Profile*. It records an intravenous infusion of vancomycin 1 g over 90 minutes that is still running, so `effectivePeriod` has a start time and no end time.",
+        "name": "MedicationAdministration In Progress Vancomycin Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "MedicationAdministration/medicationadministration-inpatient-iv-cefazolin"
+        },
+        "description": "This is a completed inpatient administration example for the *US Core MedicationAdministration Profile*. It records an intravenous infusion of cefazolin 1 g given over 30 minutes and represents the medication as a code.",
+        "name": "MedicationAdministration Inpatient IV Cefazolin Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "MedicationAdministration/medicationadministration-prn-acetaminophen-given"
+        },
+        "description": "This is a completed as needed (PRN) administration example for the *US Core MedicationAdministration Profile*. It records an oral dose of acetaminophen 650 mg given for pain at a single point in time, so `effectiveDateTime` is used.",
+        "name": "MedicationAdministration PRN Acetaminophen Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationadministration|10.0.0-ballot"
+      },
+      {
+        "reference": {
           "reference": "MedicationRequest/medicationrequest-coded-oral-axid"
         },
         "description": "This is a prescribed oral solution example for the *US Core MedicationRequest Profile*.  It represents the medication and reason using codes.",
@@ -2571,6 +2603,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-medicationadministration"
+        },
+        "description": "The US Core MedicationAdministration Profile inherits from the FHIR [MedicationAdministration](https://hl7.org/fhir/R4/medicationadministration.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Medication Administration Data Element of the Medications Data Class*. It sets minimum expectations for the MedicationAdministration resource to record, search, and fetch information about the event of a patient consuming or otherwise being given a medication. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+        "exampleBoolean": false,
+        "name": "US Core MedicationAdministration Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-medicationdispense"
         },
         "description": "The US Core MedicationDispense Profile inherits from the FHIR [MedicationDispense](https://hl7.org/fhir/R4/medicationdispense.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the state of a patients medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)  It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
@@ -3488,6 +3528,38 @@
         "description": "**A portion of the location's name or alias**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
         "exampleBoolean": false,
         "name": "USCoreLocationName"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-medicationadministration-effective-time"
+        },
+        "description": "**Date administration happened (or did not happen)**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreMedicationadministrationEffectiveTime"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-medicationadministration-id"
+        },
+        "description": "**Logical id of this artifact**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreMedicationadministrationId"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-medicationadministration-patient"
+        },
+        "description": "**The identity of a patient to list administrations  for**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreMedicationadministrationPatient"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-medicationadministration-status"
+        },
+        "description": "**MedicationAdministration event status (for example one of active/paused/completed/nullified)**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreMedicationadministrationStatus"
       },
       {
         "reference": {

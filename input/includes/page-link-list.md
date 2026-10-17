@@ -185,6 +185,14 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [USCoreLocationAddressState - Testing]: SearchParameter-us-core-location-address-state-testing.html
 [USCoreLocationName]: SearchParameter-us-core-location-name.html
 [USCoreLocationName - Testing]: SearchParameter-us-core-location-name-testing.html
+[USCoreMedicationadministrationEffectiveTime]: SearchParameter-us-core-medicationadministration-effective-time.html
+[USCoreMedicationadministrationEffectiveTime - Testing]: SearchParameter-us-core-medicationadministration-effective-time-testing.html
+[USCoreMedicationadministrationId]: SearchParameter-us-core-medicationadministration-id.html
+[USCoreMedicationadministrationId - Testing]: SearchParameter-us-core-medicationadministration-id-testing.html
+[USCoreMedicationadministrationPatient]: SearchParameter-us-core-medicationadministration-patient.html
+[USCoreMedicationadministrationPatient - Testing]: SearchParameter-us-core-medicationadministration-patient-testing.html
+[USCoreMedicationadministrationStatus]: SearchParameter-us-core-medicationadministration-status.html
+[USCoreMedicationadministrationStatus - Testing]: SearchParameter-us-core-medicationadministration-status-testing.html
 [USCoreMedicationdispensePatient]: SearchParameter-us-core-medicationdispense-patient.html
 [USCoreMedicationdispensePatient - Testing]: SearchParameter-us-core-medicationdispense-patient-testing.html
 [USCoreMedicationdispenseStatus]: SearchParameter-us-core-medicationdispense-status.html
@@ -423,6 +431,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Medication Profile - Mappings]: StructureDefinition-us-core-medication-mappings.html
 [US Core Medication Profile - Testing]: StructureDefinition-us-core-medication-testing.html
 [US Core Medication Profile - Examples]: StructureDefinition-us-core-medication-examples.html
+[US Core MedicationAdministration Profile]: StructureDefinition-us-core-medicationadministration.html
+[US Core MedicationAdministration Profile - Definitions]: StructureDefinition-us-core-medicationadministration-definitions.html
+[US Core MedicationAdministration Profile - Mappings]: StructureDefinition-us-core-medicationadministration-mappings.html
+[US Core MedicationAdministration Profile - Testing]: StructureDefinition-us-core-medicationadministration-testing.html
+[US Core MedicationAdministration Profile - Examples]: StructureDefinition-us-core-medicationadministration-examples.html
 [US Core MedicationDispense Profile]: StructureDefinition-us-core-medicationdispense.html
 [US Core MedicationDispense Profile - Definitions]: StructureDefinition-us-core-medicationdispense-definitions.html
 [US Core MedicationDispense Profile - Mappings]: StructureDefinition-us-core-medicationdispense-mappings.html
@@ -783,6 +796,10 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [MCHC Example]: Observation-cbc-mchc.html
 [MCV Example]: Observation-cbc-mcv.html
 [Medication Dispense Example]: MedicationDispense-medicationdispense-example.html
+[MedicationAdministration Dose Not Given Example]: MedicationAdministration-medicationadministration-dose-not-given.html
+[MedicationAdministration In Progress Vancomycin Example]: MedicationAdministration-medicationadministration-inprogress-vancomycin.html
+[MedicationAdministration Inpatient IV Cefazolin Example]: MedicationAdministration-medicationadministration-inpatient-iv-cefazolin.html
+[MedicationAdministration PRN Acetaminophen Example]: MedicationAdministration-medicationadministration-prn-acetaminophen-given.html
 [MedicationRequest Coded Oral Axid Example]: MedicationRequest-medicationrequest-coded-oral-axid.html
 [MedicationRequest Contained Oral Axid Example]: MedicationRequest-medicationrequest-contained-oral-axid.html
 [MedicationRequest Referenced Oral Axid Example]: MedicationRequest-medicationrequest-referenced-oral-axid.html
