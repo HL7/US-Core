@@ -4,7 +4,7 @@ set -e
 trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
 trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
 
-while getopts bcdefghijklmnopqrstuvwxyzCVR option;
+while getopts bcdefghijklmnopqrstuvwxyzCVRL option;
 do
  case "${option}"
  in
@@ -33,6 +33,7 @@ do
  C) DEL_CACHE=1;;
  V) VSACURI=1;;
  R) GEN_REQ=1;;
+ L) CHECK_LIQUID=1;;
 
  esac
 
@@ -129,6 +130,7 @@ echo "-z delete the template and temp directories before publishing (slows build
 echo "-C delete the input-cache before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
 echo "-V update the vsacname-fhiruri-map.csv file for US Core = $VSACURI"
 echo "-R create Requirements Resources from csv file = $GEN_REQ"
+echo "-L render the Liquid narrative templates and report any that error = $CHECK_LIQUID"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -616,7 +618,20 @@ if [[ $APP_VERSION ]]; then
     # rm -rf "$tmp"
 fi
 
+if [[ $CHECK_LIQUID ]]; then
+  ./check_liquid.sh
+  echo ""
+fi
+
 if [[ $IG_PUBLISH ]]; then
+
+  # Preflight: a broken Liquid narrative template does not fail the build and
+  # emits no QA message -- the publisher silently replaces the resource's whole
+  # narrative with one "Exception generating Narrative" line. Catch it here, in
+  # a couple of seconds, rather than after a twelve minute build. Advisory only:
+  # it must not stop a build over a missing jar or a java version.
+  ./check_liquid.sh || echo "⚠️  continuing the build with a broken Liquid template"
+  echo ""
 
   files=()                                        # 1. Start with an empty array
   for dir in "$resources" "$fsh_resources" "$examples"; do  # 2. Loop over each directory

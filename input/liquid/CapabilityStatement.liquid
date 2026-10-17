@@ -335,7 +335,7 @@
               {% for supportedProfile in resource.supportedProfile %}
                  {% assign display = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
                  {% assign rel_url = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
-                 {% assign conf = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value) %}
+                 {% assign conf = supportedProfile.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}
                 <li>{% if conf %}<strong>{{conf}}</strong> support {% endif %}
                        {% if display and rel_url %}
                           <a href="{{ rel_url }}">{{ display }}</a>
@@ -774,7 +774,7 @@
            </li>
           {% endif %}
 
-           {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').empty())) %}
+           {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').empty()) %}
           {% if conf_op %}
             <li> support
             {% for op in conf_op %}

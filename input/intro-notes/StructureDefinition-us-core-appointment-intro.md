@@ -33,7 +33,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* <sup>1</sup>Service types codes are typically drawn from a local service catalog, and instances are not expected to draw from a specified value set.  Therefore, `Appointment.serviceType` uses an [example binding].
+* <sup>1</sup>Service type codes are typically drawn from a local service catalog, and instances are not expected to draw from a specified value set.  Therefore, `Appointment.serviceType` uses an [example binding].
 
 * <sup>2</sup>The base FHIR invariant `app-2` requires that either both the start and end time or neither are supplied. When a system knows only when an appointment starts, follow the [Missing Data] guidance and supply the end time with the [DataAbsentReason Extension] using the code "unknown":
 
