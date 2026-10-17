@@ -100,7 +100,8 @@ public class LiquidRenderCheck {
 
   /**
    * Markdown markers that should never survive into a rendered narrative: bold
-   * runs, inline code spans, and inline links. A hit means either the field was
+   * runs, inline code spans, and inline links. HTML comments are stripped first,
+   * because Liquid renders inside them and the publisher then discards them. A hit means either the field was
    * emitted without "|| markdownify", or the source markdown is malformed so the
    * processor left it alone -- "** SHOULD**" does not bold, because the space
    * after the opening marker breaks the emphasis run. Returns a short excerpt
@@ -109,7 +110,11 @@ public class LiquidRenderCheck {
   static String unrenderedMarkdown(String narrative) {
     java.util.regex.Pattern p = java.util.regex.Pattern.compile(
         "\\*\\*[^*\\n]{1,80}\\*\\*|`[^`\\n]{1,80}`|\\[[^\\]\\n]{1,80}\\]\\([^)\\n]{1,120}\\)");
-    java.util.regex.Matcher m = p.matcher(narrative);
+    // Liquid runs inside HTML comments -- it is text-level templating and knows
+    // nothing about <!-- -->. So a commented-out block still renders into the
+    // narrative, and the publisher's XHTML parse then drops it. Scanning it would
+    // report dead code: strip comments before looking for markdown markers.
+    java.util.regex.Matcher m = p.matcher(narrative.replaceAll("(?s)<!--.*?-->", ""));
     if (!m.find()) return null;
     int from = Math.max(0, m.start() - 60);
     int to = Math.min(narrative.length(), m.end() + 60);

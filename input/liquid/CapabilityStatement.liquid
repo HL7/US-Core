@@ -6,53 +6,10 @@
   <!-- set include_symbols = false to turn off confonrmance symbols and legend, true to turn on -->
   {% assign include_symbols = false %}
 
- <!--  This is already rendered by the ig publisher in the header and footer
-  <h2 id="title">{{title}}</h2>
-  <ul>
-    {% if title %}<li><b>Title:</b>{{title}}</li>{% endif %}
-    <li><b>Implementation Guide Version:</b> {{version}}</li>
-    <li><b>FHIR Version:</b> {{fhirVersion}}</li>
-    <li><b>Intended Use:</b> {{kind}}</li>
-    <li><b>Supported Formats: </b>
-
-    {% for frm in format %}
-      {% if forloop.first = false %}, {% endif %}
-      {% if frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
-        <strong>{{frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support
-      {% endif %}
-      {{frm}};
-    {% endfor %}
-
-    </li>
-    {% if patchFormat.exists() %}
-      <li><b>Supported Patch Formats:</b>
-      {% for frm in patchFormat %}
-        {% if forloop.first = false %}, {% endif %}
-        {% if frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
-          <strong>{{frm.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong> support
-        {% endif %}
-        {{frm}};
-      {% endfor %}
-      </li>
-    {% endif %}
-    <li><b>Published:</b> {{date}}</li>
-
-    <li><b>Published by:</b> {{publisher}}</li>
-    <li><b>Status:</b> {{status}}{% if experimental %} (experimental){%endif%}</li>
-    {%if copyright%}<li><b>Copyright:</b> {{copyright}}</li>{%endif%}
-  </ul>
-  <br/>
-
-
-
-  {% if description.exists() %}
-    <strong>Description:</strong> <div>{{description}}</div>
-  {% endif %}
-  <br/>
-  -->
+  <!-- The title, version, FHIR version, formats, publication metadata, copyright and description are rendered by the IG Publisher in the page header and footer, so this template does not repeat them. Note that Liquid is evaluated inside HTML comments, so a block has to be deleted rather than commented out to disable it. -->
 
   {% if purpose.exists() %}
-    <strong>Purpose:</strong> <div>{{purpose}}</div>
+    <strong>Purpose:</strong> <div>{{purpose.toString() || markdownify}}</div>
   {% endif %}
 
 
@@ -93,28 +50,12 @@
     {% endif %}
   {% endif %}
 
-  <!-- <br/>
-   TODO - Make this a summary of capabilities, including system wide and each paradigm
-  <p>
-    <b>Jump to:</b>
-  </p>
-  <ul>
-    {% for Arest in rest %}
-      <li><a href="#{{Arest.mode}}">REST {{Arest.mode}}</a></li>
-    {% endfor %}
-    {% if messaging %}
-      <li><a href="#messaging">Messaging</a></li>
-    {% endif %}
-    {% if documents %}
-      <li><a href="#documents">Documents</a></li>
-    {% endif %}
-  </ul>
-
--->
+  <!-- TODO - make this a summary of capabilities, including system wide and each
+       paradigm, with a "Jump to" list of the REST modes, messaging and documents.
+       Deleted rather than commented out: Liquid is evaluated inside HTML comments. -->
 
   <!--  REST Capabilities -->
   {% for Arest in rest %}
-   <!-- <br/> -->
     <a name="{{Arest.mode}}"> </a>
     <h3 id="behavior">FHIR {{Arest.mode || capitalize }} RESTful Capabilities</h3>
     {% if Arest.documentation.exists() %}
@@ -227,7 +168,6 @@
           <thead>
           <tr>
             <th>Resource Type</th>
-           <!-- <th>Supported Interactions</th> -->
             <th>Supported Profiles</th>
             <th>Supported Searches</th>
             <th>Supported <code>_includes</code></th>
@@ -242,15 +182,8 @@
               <a href="#{{Arest.mode}}_{{r.type}}"><span style="white-space: nowrap;">{{r.type}}</span></a>
             </td>
 
-            <!-- Supported Interactions
-            <td>
-              {% if r.interaction %}
-                {% for i in r.interaction %}
-                <span style="white-space: nowrap;">{{i.code}}{% include expectation_handler.html action='symbol' show_symbol=include_symbols expectation=i.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value %}</span>,
-                {% endfor %}
-              {% endif %}
-            </td>
-            -->
+            <!-- The Supported Interactions column is not shown in this table; the
+                 interactions are listed in the per-resource detail below. -->
 
             <!-- Supported Profiles -->
             <td>
@@ -675,7 +608,6 @@
                     {% elsif s.name = '_query' %}=[name]&amp;[parameters]
                     {% elsif s.name = '_format' %}=[mime-type]
                     {% elsif s.name = '_pretty' %}=[true|false]
-                    <!-- % elif s.name in ['us-core-includeprovenance'] % -->
                     {% elsif s.type = 'reference' %}=[type]/[id]
                     {% elsif s.type = 'status' %}=[status]
                     {% elsif s.type = 'composite' %}=[code]&amp;[value]
@@ -714,7 +646,6 @@
 
         {% if resource.searchParam.documentation.exists() %}
           <div>
-            <!--<p>Search Parameter Requirements (When Used Alone or in Combination):</p>-->
             <ul>
               {% for s in resource.searchParam.where(documentation.exists()) %}
                 <li><a href="{{ 'SearchParameter-' + s.definition.value.split('|').first().split('/').last() + '.html' }}">{{s.name}}</a> ({{s.type}}):{{s.documentation || markdownify}}</li>
@@ -727,13 +658,11 @@
        {% endif %}
 
         {% if resource.operation.exists() %}<p>FHIR Operations:</p>
-        {% assign  ops = resource.operation %}
 
                <ul>
-          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "SHALL")) %}
-          {% if conf_op %}
+          {% if resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'SHALL').exists() %}
             <li> <strong>SHALL</strong> support
-            {% for op in conf_op %}
+            {% for op in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'SHALL') %}
               {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
               {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
               {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
@@ -741,10 +670,9 @@
            </li>
           {% endif %}
 
-          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "SHOULD")) %}
-          {% if conf_op %}
+          {% if resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'SHOULD').exists() %}
             <li> <strong>SHOULD</strong> support
-            {% for op in conf_op %}
+            {% for op in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'SHOULD') %}
               {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
               {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
               {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
@@ -752,10 +680,9 @@
            </li>
           {% endif %}
 
-          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "MAY")) %}
-          {% if conf_op %}
+          {% if resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'MAY').exists() %}
             <li> <strong>MAY</strong> support
-            {% for op in conf_op %}
+            {% for op in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'MAY') %}
               {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
               {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
               {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
@@ -763,10 +690,9 @@
            </li>
           {% endif %}
 
-          {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = "SHALL-NOT")) %}
-          {% if conf_op %}
+          {% if resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'SHALL-NOT').exists() %}
             <li> <strong>SHALL-NOT</strong> support
-            {% for op in conf_op %}
+            {% for op in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value = 'SHALL-NOT') %}
               {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
               {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
               {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
@@ -774,10 +700,9 @@
            </li>
           {% endif %}
 
-           {% assign conf_op = ops.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').empty()) %}
-          {% if conf_op %}
+          {% if resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').empty()).exists() %}
             <li> support
-            {% for op in conf_op %}
+            {% for op in resource.operation.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').empty()) %}
               {% assign display = op.definition.extension('http://hl7.org/fhir/StructureDefinition/display').value %}
               {% assign rel_url = op.definition.extension('http://hl7.org/fhir/StructureDefinition/narrativeLink').value.toString() %}
               {% if display and rel_url %}<a href="{{ rel_url }}"><code>{{ display }}</code></a>{% else %}<code>{{ op.name }}</code>{% endif %}
@@ -801,135 +726,8 @@
     {% endif %}
   {% endfor %}
 
-  <!-- Messaging Capabilities  -->
-  {% for Amsg in messaging %}
-    <br/>
-    <br/>
-    <a name="messaging"> </a>
-    <h2>Messaging</h2>
-    {% if Amsg.endpoint.exists() %}
-      <h3>End point(s): </h3>
-      <div class="table-wrapper">
-        <table class="grid">
-          <tbody>
-            <tr>
-              <th>Address</th>
-              <th>Protocol(s)</th>
-            </tr>
-            {% for Aendpoint in Amsg.endpoint %}
-              <tr>
-                <td>{{Aendpoint.address}}</td>
-                <td>
-                  {% for Aprotocol in Aendpoint.protocol %}
-                    {% if forloop.first = false %}, {% endif %}
-                    {% if Aprotocol.display.exists() %}
-                      {{Aprotocol.display}}
-                    {% else %}
-                      {{Aprotocol.code}}
-                    {% endif %}
-                  {% endfor %}
-                </td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    {% endif %}
-
-    {% if Amsg.event.exists() %}
-      <div class="table-wrapper">
-        <table class="grid">
-          <thead>
-            <tr>
-              <th>Event</th>
-              <th>Category</th>
-              <th>Mode</th>
-              <th>Focus</th>
-              <th>Request</th>
-              <th>Response</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for Aevent in Amsg.event %}
-              <tr>
-                <td>{{Aevent.code}}</td>
-                <td>{{Aevent.category}}</td>
-                <td>{{Aevent.mode}}</td>
-                <td>{{Aevent.focus}}</td>
-                <td>
-                  {%for Aref in Aevent.request.reference %}
-                    <a href="{{Aref.value}}.html">{{Aref}}</a>
-                  {% endfor %}
-                </td>
-                <td>
-                  {%for Aref in Aevent.response.reference %}
-                    <a href="{{Aref.value}}.html">{{Aref}}</a>
-                  {% endfor %}
-                </td>
-                <td>{{Aevent.documentation || markdownify}}</td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    {% endif %}
-
-    {% if Amsg.supportedMessage.exists() %}
-      <h3>Supported Message(s): </h3>
-      <div class="table-wrapper">
-        <table class="grid">
-          <thead>
-            <tr>
-              <th>Mode</th>
-              <th>Definition</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for AsupportedMessage in Amsg.supportedMessage %}
-              <tr>
-                <td>{{AsupportedMessage.mode}}</td>
-                <td>{{AsupportedMessage.definition}}</td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    {% endif %}
-
-    {{Amsg.documentation || markdownify}}
-  {% endfor %}
-
-  <!-- Document Capabilities -->
-  {% if document.exists() %}
-    <br/>
-    <br/>
-    <a name="documents"> </a>
-    <h2>Documents</h2>
-    <div class="table-wrapper">
-      <table class="grid">
-        <thead>
-          <tr>
-            <th>Mode</th>
-            <th>Profile</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for Adoc in document %}
-            <tr>
-              <td>{{Adoc.mode}}</td>
-              <td>
-                {% for Aprofile in Adoc.profile %}
-                  {{Aprofile}}
-                {% endfor %}
-              </td>
-              <td>{{Adoc.documentation || markdownify}}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  {% endif %}
+  <!-- The messaging and document paradigms are not used by US Core: neither
+       CapabilityStatement declares CapabilityStatement.messaging or .document,
+       so the blocks that rendered them were removed. -->
 
 </div>

@@ -1,9 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
- <!--      <h4>Custom liquid Version</h4> -->
     <hr/>
     <p><b>id</b> {{ SearchParameter.id }}</p>
-<!--    <p><b>url</b> : <code>{{ SearchParameter.url }}}</code></p>>
-    <p><b>name</b> : {{ SearchParameter.name }}</p> -->
     {% if SearchParameter.derivedFrom %}
         <p><b>derivedFrom</b> : <code>{{ SearchParameter.derivedFrom.replace('http://', ' http://') }}</code></p> <!-- added leading space to prevent build from trying to create link -->
     {% endif %}
@@ -12,11 +9,6 @@
         <p><b>experimental</b>  {{ SearchParameter.experimental }}</p>
     {% endif %}
     <p><b>date</b> : {{ SearchParameter.date }}</p>
- <!-- <p><b>publisher</b> : {{ SearchParameter.publisher }}</p>
-    <p><b>contact</b> : {{ SearchParameter.contact[0].telecom[0].value }}</p>
-    <p><b>jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
-           States of America (the)'})</span>
-    </p> -->
     <p><b>code</b> : "{{ SearchParameter.code }}"</p>
     <p><b>base</b> : {{SearchParameter.base}} </p>
     <p><b>type</b> : {{ SearchParameter.type }}</p>
