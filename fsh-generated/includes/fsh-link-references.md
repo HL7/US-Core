@@ -15,6 +15,8 @@
 [non-pharmacologic-agent-example]: AllergyIntolerance-non-pharmacologic-agent-example.html
 [allergyintolerance-provenance-example1]: Bundle-allergyintolerance-provenance-example1.html
 [allergyintolerance-provenance-example2]: Bundle-allergyintolerance-provenance-example2.html
+[from-referral]: Appointment-from-referral.html
+[resulted-encounter]: Appointment-resulted-encounter.html
 [at-home-in-vitro-test]: Observation-at-home-in-vitro-test.html
 [AUDIT-C-item-example-68517-2]: Observation-AUDIT-C-item-example-68517-2.html
 [AUDIT-C-item-example-68519-8]: Observation-AUDIT-C-item-example-68519-8.html
@@ -25,7 +27,9 @@
 [metabolic-panel]: DiagnosticReport-metabolic-panel.html
 [blood-pressure]: Observation-blood-pressure.html
 [bmi]: Observation-bmi.html
+[booked-physical]: Appointment-booked-physical.html
 [bp-data-absent]: Observation-bp-data-absent.html
+[cancelled]: Appointment-cancelled.html
 [capillary-refill-time-nail-bed]: Observation-capillary-refill-time-nail-bed.html
 [care-experience-preference]: Observation-care-experience-preference.html
 [careplan-ulcer-example]: CarePlan-careplan-ulcer-example.html
@@ -65,6 +69,7 @@
 [delivery]: Encounter-delivery.html
 [encounter-diagnosis-example1]: Condition-encounter-diagnosis-example1.html
 [encounter-diagnosis-example2]: Condition-encounter-diagnosis-example2.html
+[from-appointment]: Encounter-from-appointment.html
 [episode-summary]: DocumentReference-episode-summary.html
 [cbc-erythrocytes]: Observation-cbc-erythrocytes.html
 [EVS-item-example-68516-4]: Observation-EVS-item-example-68516-4.html
@@ -123,6 +128,7 @@
 [observation-occupation-industry-unknown]: Observation-observation-occupation-industry-unknown.html
 [observation-occupation-unknown]: Observation-observation-occupation-unknown.html
 [ofc-percentile]: Observation-ofc-percentile.html
+[fulfilled-followup]: Appointment-fulfilled-followup.html
 [example-organization-2]: Organization-example-organization-2.html
 [acme-lab]: Organization-acme-lab.html
 [acme-payer]: Organization-acme-payer.html
@@ -233,6 +239,7 @@
 [TAPS-item-example-96843-8]: Observation-TAPS-item-example-96843-8.html
 [TAPS-item-example-96844-6]: Observation-TAPS-item-example-96844-6.html
 [TAPS-panel-example-96841-2]: Observation-TAPS-panel-example-96841-2.html
+[telehealth]: Appointment-telehealth.html
 [temperature]: Observation-temperature.html
 [TAPS]: Questionnaire-TAPS.html
 [TAPS]: QuestionnaireResponse-TAPS.html
@@ -241,6 +248,7 @@
 [urobilinogen]: Observation-urobilinogen.html
 [USCoreADIDocumentReferenceProfile]: StructureDefinition-us-core-adi-documentreference.html
 [USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html
+[USCoreAppointmentProfile]: StructureDefinition-us-core-appointment.html
 [USCoreAuthenticationTimeExtension]: StructureDefinition-us-core-authentication-time.html
 [USCoreAverageBloodPressureProfile]: StructureDefinition-us-core-average-blood-pressure.html
 [USCoreBirthSexExtension]: StructureDefinition-us-core-birthsex.html
@@ -346,6 +354,10 @@
 [uscore-med2]: Medication-uscore-med2.html
 [USCoreAllergyintoleranceClinicalStatus]: SearchParameter-us-core-allergyintolerance-clinical-status.html
 [USCoreAllergyintolerancePatient]: SearchParameter-us-core-allergyintolerance-patient.html
+[USCoreAppointmentDate]: SearchParameter-us-core-appointment-date.html
+[USCoreAppointmentId]: SearchParameter-us-core-appointment-id.html
+[USCoreAppointmentPatient]: SearchParameter-us-core-appointment-patient.html
+[USCoreAppointmentStatus]: SearchParameter-us-core-appointment-status.html
 [USCoreCareplanCategory]: SearchParameter-us-core-careplan-category.html
 [USCoreCareplanDate]: SearchParameter-us-core-careplan-date.html
 [USCoreCareplanPatient]: SearchParameter-us-core-careplan-patient.html

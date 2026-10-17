@@ -1,0 +1,42 @@
+{
+  "resourceType": "Appointment",
+  "id": "telehealth",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment|10.0.0-ballot"
+    ]
+  },
+  "status": "booked",
+  "serviceType": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "448337001",
+          "display": "Telemedicine consultation with patient"
+        }
+      ],
+      "text": "Telehealth Visit"
+    }
+  ],
+  "start": "2026-06-22T13:00:00Z",
+  "end": "2026-06-22T13:30:00Z",
+  "participant": [
+    {
+      "actor": {
+        "reference": "Patient/example"
+      },
+      "required": "required",
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Dr Ronald Bone"
+      },
+      "required": "required",
+      "status": "accepted"
+    }
+  ]
+}

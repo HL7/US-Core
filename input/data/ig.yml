@@ -164,6 +164,16 @@ definition:
       name: AllergyIntolerance Provenance Example 2
       exampleBoolean: true
     - reference:
+        reference: Appointment/from-referral
+      description: This example of a *US Core Appointment Profile* illustrates a booked appointment created in response to a referral ServiceRequest.
+      name: Appointment From Referral Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
+    - reference:
+        reference: Appointment/resulted-encounter
+      description: This example of a *US Core Appointment Profile* illustrates a fulfilled appointment paired with the resulting Encounter that references it in `Encounter.appointment`.
+      name: Appointment Resulting In An Encounter Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
+    - reference:
         reference: Observation/at-home-in-vitro-test
       description: This is an At home in vitro test example for the *US Core Observation Lab Profile*, with a coded result value.
       name: At Home In Vitro Test Example
@@ -214,10 +224,20 @@ definition:
       name: BMI Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi
     - reference:
+        reference: Appointment/booked-physical
+      description: This is a booked future annual physical exam appointment example for the *US Core Appointment Profile*.
+      name: Booked Future Appointment Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
+    - reference:
         reference: Observation/bp-data-absent
       description: This is a bp data absent example for the *Vitalsigns Profile* showing how to reprsesent blood pressure with a missing diastolic measurement.
       name: BP Data Absent Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
+    - reference:
+        reference: Appointment/cancelled
+      description: This is a cancelled annual physical exam appointment example for the *US Core Appointment Profile*.
+      name: Cancelled Appointment Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
     - reference:
         reference: Observation/capillary-refill-time-nail-bed
       description: This is a Capillary refill Time Nail Bed Example for the *Clinical Test Result Observation Profile*.
@@ -413,6 +433,11 @@ definition:
       description: This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.
       name: Encounter Diagnosis Example 2
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
+    - reference:
+        reference: Encounter/from-appointment
+      description: This is an encounter example for the *US Core Encounter Profile* that records the visit resulting from a scheduled appointment, referenced in `Encounter.appointment`.
+      name: Encounter From Appointment Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     - reference:
         reference: DocumentReference/episode-summary
       description: This is a episode summary example for the *US Core DocumentReference Profile*.
@@ -703,6 +728,11 @@ definition:
       description: This is an OFC percentile example for the *Head Occipital Frontal Circumference Percentile Profile*.
       name: OFC Percentile Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
+    - reference:
+        reference: Appointment/fulfilled-followup
+      description: This is a fulfilled follow-up office visit appointment example for the *US Core Appointment Profile*.
+      name: Office Visit Follow-up Appointment Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
     - reference:
         reference: Organization/example-organization-2
       description: This is a organization 2 example for the *US Core Organization Profile*.
@@ -1254,6 +1284,11 @@ definition:
       name: Taps Panel Example 96841-2
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
     - reference:
+        reference: Appointment/telehealth
+      description: This is a booked telehealth consultation appointment example for the *US Core Appointment Profile*.
+      name: Telehealth Appointment Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
+    - reference:
         reference: Observation/temperature
       description: This is a temperature example for the *Vitalsigns Profile*.
       name: Temperature Example
@@ -1293,6 +1328,11 @@ definition:
       description: The US Core AllergyIntolerance Profile inherits from the FHIR [AllergyIntolerance](https://hl7.org/fhir/R4/allergyintolerance.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core AllergyIntolerance Profile
+    - reference:
+        reference: StructureDefinition/us-core-appointment
+      description: The US Core Appointment Profile inherits from the FHIR [Appointment](https://hl7.org/fhir/R4/appointment.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Appointment Data Element of the Encounter Information Data Class*. It sets minimum expectations for the Appointment resource to record, search, and fetch information about a healthcare event scheduled for a past, current, or future date and time. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      exampleBoolean: false
+      name: US Core Appointment Profile
     - reference:
         reference: StructureDefinition/us-core-authentication-time
       description: This extension indicates when the information in the document was verified.
@@ -1853,6 +1893,26 @@ definition:
       description: "**Who the sensitivity is for**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n"
       exampleBoolean: false
       name: USCoreAllergyintolerancePatient
+    - reference:
+        reference: SearchParameter/us-core-appointment-date
+      description: "**Appointment date/time**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n"
+      exampleBoolean: false
+      name: USCoreAppointmentDate
+    - reference:
+        reference: SearchParameter/us-core-appointment-id
+      description: "**Logical id of this artifact**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n"
+      exampleBoolean: false
+      name: USCoreAppointmentId
+    - reference:
+        reference: SearchParameter/us-core-appointment-patient
+      description: "**One of the individuals of the appointment is this patient**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n"
+      exampleBoolean: false
+      name: USCoreAppointmentPatient
+    - reference:
+        reference: SearchParameter/us-core-appointment-status
+      description: "**proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error | checked-in | waitlist**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n"
+      exampleBoolean: false
+      name: USCoreAppointmentStatus
     - reference:
         reference: SearchParameter/us-core-careplan-category
       description: "**Type of plan**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n"

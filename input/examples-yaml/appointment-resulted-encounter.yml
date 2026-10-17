@@ -1,0 +1,35 @@
+resourceType: Appointment
+id: resulted-encounter
+meta:
+  profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
+  extension:
+    - url: http://hl7.org/fhir/StructureDefinition/instance-name
+      valueString: Appointment Resulting In An Encounter Example
+    - url: http://hl7.org/fhir/StructureDefinition/instance-description
+      valueMarkdown: This example of a *US Core Appointment Profile* illustrates a fulfilled appointment paired with the resulting Encounter that references it in `Encounter.appointment`.
+status: fulfilled
+serviceType:
+  - coding:
+      - system: http://snomed.info/sct
+        version: http://snomed.info/sct/731000124108
+        code: '185349003'
+        display: Encounter for check up
+    text: Annual Physical Exam
+start: '2026-03-12T16:00:00Z'
+end: '2026-03-12T16:30:00Z'
+participant:
+  - actor:
+      reference: Patient/example
+    required: required
+    status: accepted
+  - actor:
+      reference: Practitioner/practitioner-1
+      display: Dr Ronald Bone
+    required: required
+    status: accepted
+  - actor:
+      reference: Location/hospital
+      display: Holy Family Hospital
+    required: required
+    status: accepted

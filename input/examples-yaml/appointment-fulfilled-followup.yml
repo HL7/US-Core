@@ -1,0 +1,43 @@
+resourceType: Appointment
+id: fulfilled-followup
+meta:
+  profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
+  extension:
+    - url: http://hl7.org/fhir/StructureDefinition/instance-name
+      valueString: Office Visit Follow-up Appointment Example
+    - url: http://hl7.org/fhir/StructureDefinition/instance-description
+      valueMarkdown: This is a fulfilled follow-up office visit appointment example for the *US Core Appointment Profile*.
+identifier:
+  - system: http://example.org/appointment/identifiers
+    value: 'appt-2025-0317-014'
+status: fulfilled
+serviceType:
+  - coding:
+      - system: http://snomed.info/sct
+        version: http://snomed.info/sct/731000124108
+        code: '185389009'
+        display: Follow-up visit
+    text: Office Call
+start: '2025-03-17T00:45:00Z'
+end: '2025-03-17T01:00:00Z'
+participant:
+  - actor:
+      reference: Patient/example
+    required: required
+    status: accepted
+  - type:
+      - coding:
+          - system: http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+            code: ATND
+            display: attender
+    actor:
+      reference: Practitioner/practitioner-1
+      display: Dr Ronald Bone
+    required: required
+    status: accepted
+  - actor:
+      reference: Location/hospital
+      display: Holy Family Hospital
+    required: required
+    status: accepted

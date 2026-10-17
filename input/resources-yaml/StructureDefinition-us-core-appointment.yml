@@ -1,0 +1,147 @@
+# US Core Appointment Profile - FHIR StructureDefinition
+# Notes:
+#   * Appointment.participant.actor: Use the US Core Profiles for Patient, Practitioner, PractitionerRole,
+#     RelatedPerson, Device, and Location.
+#   * Use the Must Support extension ("http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support")
+#     on the targetProfile elements to indicate the US Core Patient, US Core Practitioner, and US Core Location
+#     Profiles are Must Support targets.
+
+resourceType: StructureDefinition
+id: us-core-appointment
+#============= Update when version named in regs ====================
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
+#======================================================================
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
+name: USCoreAppointmentProfile
+title: US Core Appointment Profile
+status: active
+experimental: false
+date: '2026-10-16'
+description: >-
+  The US Core Appointment Profile inherits from the FHIR
+  [Appointment](https://hl7.org/fhir/R4/appointment.html) resource; refer to it
+  for scope and usage definitions. This profile meets the requirements of the
+  U.S. Core Data for Interoperability (USCDI) *Appointment Data Element of the
+  Encounter Information Data Class*. It sets minimum expectations for the
+  Appointment resource to record, search, and fetch information about a
+  healthcare event scheduled for a past, current, or future date and time. It
+  specifies which core elements, extensions, vocabularies, and value sets
+  **SHALL** be present in the resource and constrains how the elements are used.
+  Providing the floor for standards development for specific use cases promotes
+  interoperability and adoption.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Appointment
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Appointment
+derivation: constraint
+
+differential:
+  element:
+
+    # ---- identifier ---------------------------------------------------------
+    - id: Appointment.identifier
+      path: Appointment.identifier
+      min: 0
+      max: '*'
+      mustSupport: true
+
+    # ---- status -------------------------------------------------------------
+    - id: Appointment.status
+      path: Appointment.status
+      min: 1
+      max: '1'
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: http://hl7.org/fhir/ValueSet/appointmentstatus
+
+    # ---- serviceType --------------------------------------------------------
+    # The binding is example. Local service catalogs are the norm, and the
+    # profile introduction says so.
+    - id: Appointment.serviceType
+      path: Appointment.serviceType
+      min: 0
+      max: '*'
+      mustSupport: true
+      binding:
+        strength: example
+        description: Value Sets are typically bound to local service catalogs, and mapping to standard vocabularies can not be expected.
+        valueSet: https://profiles.ihe.net/ITI/Scheduling/ValueSet/sct-services
+
+    # ---- start --------------------------------------------------------------
+    - id: Appointment.start
+      path: Appointment.start
+      min: 0
+      max: '1'
+      mustSupport: true
+
+    # ---- end ----------------------------------------------------------------
+    # app-2 requires start and end together or neither.
+    - id: Appointment.end
+      path: Appointment.end
+      min: 0
+      max: '1'
+      mustSupport: true
+
+    # ---- participant --------------------------------------------------------
+    - id: Appointment.participant
+      path: Appointment.participant
+      min: 1
+      max: '*'
+      mustSupport: true
+
+    # ---- participant.type ---------------------------------------------------
+    # app-1 requires either the type or the actor on the participant.
+    - id: Appointment.participant.type
+      path: Appointment.participant.type
+      mustSupport: true
+      binding:
+        strength: extensible
+        valueSet: http://hl7.org/fhir/ValueSet/encounter-participant-type
+
+    - id: Appointment.participant.actor
+      path: Appointment.participant.actor
+      min: 1
+      max: '1'
+      mustSupport: true
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-device
+            - http://hl7.org/fhir/StructureDefinition/HealthcareService
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+
+    - id: Appointment.participant.status
+      path: Appointment.participant.status
+      min: 1
+      max: '1'
+      mustSupport: true

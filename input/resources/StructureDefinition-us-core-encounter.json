@@ -195,6 +195,26 @@
         "mustSupport": true
       },
       {
+        "id": "Encounter.appointment",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Encounter.appointment",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: The appointment that scheduled this encounter",
+        "min": 0,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Encounter.period",
         "path": "Encounter.period",
         "mustSupport": true

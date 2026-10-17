@@ -1,0 +1,67 @@
+{
+  "resourceType": "Appointment",
+  "id": "booked-physical",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment|10.0.0-ballot"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://example.org/appointment/identifiers",
+      "value": "appt-2026-0915-001"
+    }
+  ],
+  "status": "booked",
+  "serviceType": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/731000124108",
+          "code": "185349003",
+          "display": "Encounter for check up"
+        }
+      ],
+      "text": "Annual Physical Exam"
+    }
+  ],
+  "start": "2026-09-15T14:00:00Z",
+  "end": "2026-09-15T14:30:00Z",
+  "participant": [
+    {
+      "actor": {
+        "reference": "Patient/example"
+      },
+      "required": "required",
+      "status": "accepted"
+    },
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "PPRF",
+              "display": "primary performer"
+            }
+          ]
+        }
+      ],
+      "actor": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Dr Ronald Bone"
+      },
+      "required": "required",
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "reference": "Location/hospital",
+        "display": "Holy Family Hospital"
+      },
+      "required": "required",
+      "status": "accepted"
+    }
+  ]
+}

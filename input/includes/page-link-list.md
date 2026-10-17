@@ -59,6 +59,14 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [USCoreAllergyintoleranceClinicalStatus - Testing]: SearchParameter-us-core-allergyintolerance-clinical-status-testing.html
 [USCoreAllergyintolerancePatient]: SearchParameter-us-core-allergyintolerance-patient.html
 [USCoreAllergyintolerancePatient - Testing]: SearchParameter-us-core-allergyintolerance-patient-testing.html
+[USCoreAppointmentDate]: SearchParameter-us-core-appointment-date.html
+[USCoreAppointmentDate - Testing]: SearchParameter-us-core-appointment-date-testing.html
+[USCoreAppointmentId]: SearchParameter-us-core-appointment-id.html
+[USCoreAppointmentId - Testing]: SearchParameter-us-core-appointment-id-testing.html
+[USCoreAppointmentPatient]: SearchParameter-us-core-appointment-patient.html
+[USCoreAppointmentPatient - Testing]: SearchParameter-us-core-appointment-patient-testing.html
+[USCoreAppointmentStatus]: SearchParameter-us-core-appointment-status.html
+[USCoreAppointmentStatus - Testing]: SearchParameter-us-core-appointment-status-testing.html
 [USCoreCareplanCategory]: SearchParameter-us-core-careplan-category.html
 [USCoreCareplanCategory - Testing]: SearchParameter-us-core-careplan-category-testing.html
 [USCoreCareplanDate]: SearchParameter-us-core-careplan-date.html
@@ -285,6 +293,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core AllergyIntolerance Profile - Mappings]: StructureDefinition-us-core-allergyintolerance-mappings.html
 [US Core AllergyIntolerance Profile - Testing]: StructureDefinition-us-core-allergyintolerance-testing.html
 [US Core AllergyIntolerance Profile - Examples]: StructureDefinition-us-core-allergyintolerance-examples.html
+[US Core Appointment Profile]: StructureDefinition-us-core-appointment.html
+[US Core Appointment Profile - Definitions]: StructureDefinition-us-core-appointment-definitions.html
+[US Core Appointment Profile - Mappings]: StructureDefinition-us-core-appointment-mappings.html
+[US Core Appointment Profile - Testing]: StructureDefinition-us-core-appointment-testing.html
+[US Core Appointment Profile - Examples]: StructureDefinition-us-core-appointment-examples.html
 [US Core Average Blood Pressure Profile]: StructureDefinition-us-core-average-blood-pressure.html
 [US Core Average Blood Pressure Profile - Definitions]: StructureDefinition-us-core-average-blood-pressure-definitions.html
 [US Core Average Blood Pressure Profile - Mappings]: StructureDefinition-us-core-average-blood-pressure-mappings.html
@@ -676,6 +689,8 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [AllergyIntolerance Non-pharmacologic Agent Example]: AllergyIntolerance-non-pharmacologic-agent-example.html
 [AllergyIntolerance Provenance Example 1]: Bundle-allergyintolerance-provenance-example1.html
 [AllergyIntolerance Provenance Example 2]: Bundle-allergyintolerance-provenance-example2.html
+[Appointment From Referral Example]: Appointment-from-referral.html
+[Appointment Resulting In An Encounter Example]: Appointment-resulted-encounter.html
 [At Home In Vitro Test Example]: Observation-at-home-in-vitro-test.html
 [Audit-C Item Example 68517-2]: Observation-AUDIT-C-item-example-68517-2.html
 [Audit-C Item Example 68519-8]: Observation-AUDIT-C-item-example-68519-8.html
@@ -686,7 +701,9 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Basic Metabolic Panel Example]: DiagnosticReport-metabolic-panel.html
 [Blood Pressure Example]: Observation-blood-pressure.html
 [BMI Example]: Observation-bmi.html
+[Booked Future Appointment Example]: Appointment-booked-physical.html
 [BP Data Absent Example]: Observation-bp-data-absent.html
+[Cancelled Appointment Example]: Appointment-cancelled.html
 [Capillary refill Time Nail Bed Example]: Observation-capillary-refill-time-nail-bed.html
 [Care Experience Preference Example]: Observation-care-experience-preference.html
 [CarePlan Ulcer Example]: CarePlan-careplan-ulcer-example.html
@@ -726,6 +743,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Encounter Delivery Example]: Encounter-delivery.html
 [Encounter Diagnosis Example 1]: Condition-encounter-diagnosis-example1.html
 [Encounter Diagnosis Example 2]: Condition-encounter-diagnosis-example2.html
+[Encounter From Appointment Example]: Encounter-from-appointment.html
 [Episode Summary Example]: DocumentReference-episode-summary.html
 [Erythrocytes Example]: Observation-cbc-erythrocytes.html
 [Evs Item Example 68516-4]: Observation-EVS-item-example-68516-4.html
@@ -784,6 +802,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Occupation Observation Example: Industry Unknown]: Observation-observation-occupation-industry-unknown.html
 [Occupation Observation Example: Unknown Occupation]: Observation-observation-occupation-unknown.html
 [OFC Percentile Example]: Observation-ofc-percentile.html
+[Office Visit Follow-up Appointment Example]: Appointment-fulfilled-followup.html
 [Organization 2 Example]: Organization-example-organization-2.html
 [Organization Acme Lab Example]: Organization-acme-lab.html
 [Organization Acme Payer Example]: Organization-acme-payer.html
@@ -897,6 +916,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Taps Item Example 96843-8]: Observation-TAPS-item-example-96843-8.html
 [Taps Item Example 96844-6]: Observation-TAPS-item-example-96844-6.html
 [Taps Panel Example 96841-2]: Observation-TAPS-panel-example-96841-2.html
+[Telehealth Appointment Example]: Appointment-telehealth.html
 [Temperature Example]: Observation-temperature.html
 [Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example]: Questionnaire-TAPS.html
 [Tobacco, Alcohol, Prescription medications, and other Substance use screen (TAPS) Questionnaire Example - Testing]: Questionnaire-TAPS-testing.html

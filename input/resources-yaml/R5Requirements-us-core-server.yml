@@ -4941,3 +4941,17 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: StructureDefinition-us-core-careteam.html#CONF-0919
+  - key: CONF-0921
+    reference:
+      - scopes.html#scopes-for-requesting-fhir-resources-by-type
+    conformance:
+      - SHALL
+    conditionality: true
+    requirement: |-
+      The following scopes that correspond directly to FHIR resource types **SHALL** be supported
+      ...
+      [For] Appointment [the] <patient|user|system>/Appointment.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]
+    _reference:
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: scopes.html#CONF-0921
