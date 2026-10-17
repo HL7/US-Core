@@ -61,6 +61,11 @@ differential:
     # ---- serviceType --------------------------------------------------------
     # The binding is example. Local service catalogs are the norm, and the
     # profile introduction says so.
+    # TODO: this value set lives in the IHE ITI Scheduling IG, which US Core does not
+    # depend on, so it does not resolve and the build reports eight "ValueSet not
+    # found" warnings (six examples, two here). Deliberately not suppressed in
+    # ignoreWarnings.txt. Resolve before publication by either adding the IHE package
+    # as a dependency or choosing a resolvable example value set. See plan section 3f.
     - id: Appointment.serviceType
       path: Appointment.serviceType
       min: 0
