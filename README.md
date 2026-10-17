@@ -1092,12 +1092,13 @@ For all changes
       - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
       - [ ] New Example(s)
       - [ ] Update Additional USCDI table if the design team decides elements are Additional USCDI
+      - [ ] Update the Provenance table with Five Ws author or the prose list in input/pagecontent/basic-provenance.md to exclude it.
   - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
   - [ ] New Search
        - [ ] Update the Search API table
        - [ ] Update the Profile Notes page
   - [ ] Create SearchParameter resources for each new search parameter, `_id` included. They are authored directly as JSON in `input/resources/` and have no YAML source.
-  - [ ] Update the Profile table
+  - [ ] Update the Profile metadata table
       - [ ] add scopes
       - [ ] year added
    - [ ] Add a requirement key for the resource level scope to `input/data/us_core_reqs.csv`, then regenerate the Requirements resources with `publish.sh -R`

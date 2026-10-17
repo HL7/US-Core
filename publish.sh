@@ -685,22 +685,63 @@ if [[ $IG_PUBLISH ]]; then
   fi
 
   CSV_FILE="$data"/provenance-elements.csv
+  prov_page="$inpath"/pagecontent/basic-provenance.md
   echo "CSV = $CSV_FILE"
   if [ -f "$CSV_FILE" ]; then
     echo ""
     echo "===================================================================="
     echo "Checking for missing profiles in $CSV_FILE..."
     echo ""
+    # A profile belongs in one of two places: a row in provenance-elements.csv giving
+    # its Five Ws author element, or the "omitted because they are typically not
+    # associated with individual authorship" list on the Basic Provenance page. That
+    # prose list is the exclude list, so read it here instead of reporting those
+    # profiles every run. Extensions are skipped outright - they are not profiles and
+    # never carry an author.
+    #
+    # Before this, the check reported 22 StructureDefinitions every build: 15
+    # extensions and 7 already on that list. A genuinely missing profile could not be
+    # picked out of that, and one was missed - the US Core Appointment Profile was
+    # added in 10.0.0-ballot with no row and no exclude-list entry.
+    if [ -f "$prov_page" ]; then
+      excluded=$(awk '
+        /^The following US Core Profiles were omitted/ { inlist = 1; next }
+        inlist && /^[[:space:]]*-[[:space:]]/ {
+          line = $0
+          gsub(/<[^>]*>/, "", line)                       # span wrappers and <!-- new-content -->
+          sub(/^[[:space:]]*-[[:space:]]*/, "", line)
+          gsub(/^[[:space:]]+|[[:space:]]+$/, "", line)
+          if (line != "") print line
+          next
+        }
+        inlist && /^[[:space:]]*$/ { next }               # blank lines within the block
+        inlist { exit }                                   # first non-bullet ends the list
+      ' "$prov_page")
+    else
+      excluded=""
+      echo "⚠️  $prov_page not found - the exclude list cannot be read"
+    fi
     missing_count=0
+    excluded_count=0
     for filepath in "$resources"/StructureDefinition-*.json; do
+        [ "$(jq -r '.type' "$filepath")" = "Extension" ] && continue
         resource_url=$(jq -r '.url' "$filepath")
         resource_title=$(jq -r '.title' "$filepath")
-        if ! awk -F',' -v id="$resource_url" '$8 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
-            echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
-            ((missing_count++))
+        if awk -F',' -v id="$resource_url" '$8 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+            continue
         fi
+        if [ -n "$excluded" ] && printf '%s\n' "$excluded" | grep -qxF "$resource_title"; then
+            excluded_count=$((excluded_count + 1))
+            continue
+        fi
+        echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
+        echo "      either add a row to $(basename "$CSV_FILE") with its Five Ws author element,"
+        echo "      or add it to the \"not associated with individual authorship\" list in $(basename "$prov_page")"
+        missing_count=$((missing_count + 1))
     done
-    [ $missing_count -eq 0 ] && echo "✅ All profiles are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+    echo ""
+    echo "   $excluded_count profile(s) excluded by $(basename "$prov_page"); extensions not checked"
+    [ $missing_count -eq 0 ] && echo "✅ Every profile is either in the CSV_FILE or on the exclude list!" || echo "⚠️  Found $missing_count profile(s) in neither place"
     echo "====================================================================="
     echo ""
     sleep 1

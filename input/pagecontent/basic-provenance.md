@@ -110,6 +110,7 @@ The following US Core Profiles were omitted because they are typically not assoc
 
 
 
+- <span class="bg-success" markdown="1">US Core Appointment Profile</span><!-- new-content -->
 - US Core CareTeam Profile
 - US Core Coverage Profile
 - US Core Encounter Profile
