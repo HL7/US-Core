@@ -53,7 +53,8 @@ title = {{ include.title }}
 then run through the csv file for all the data
 
 
-TODO: add highlighting for new and updated content
+New and updated searches are highlighted by 'search-requirement-handler.md' from the
+Is_New column of input/data/search_requirements.csv.
 =============================================================================
 {% endcomment %}
 

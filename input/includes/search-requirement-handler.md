@@ -1,4 +1,5 @@
 {%- comment %} invoke with {% include search-requirement-handler.md conf_verb="SHOULD|SHALL" search=search %}  note that the parent variables are inherited  e.g resource_type,fixed_category , and code1, code2 , code3 {% endcomment -%}
+{%- comment %} The requirement statement is wrapped in a bg-success span when the row's Is_New column is "TRUE", so a new or updated search in input/data/search_requirements.csv is highlighted on the profile notes page. It uses the data-note span form, which publish.sh -x leaves alone, because this is build machinery rather than hand-added highlighting: it goes dormant when the Is_New column is cleared. {% endcomment -%}
 
 {% assign conf_verb = include.conf_verb -%}
 {% assign search_row = include.search -%}
@@ -6,13 +7,13 @@
 {% assign search_types = search_row.type | split: "," -%}
 
 {%- comment %} search requirement details {% endcomment -%}
-1. **{{conf_verb}}** {% if search_row.description %}{{search_row.description}} using {% else %}support searching using {% endif %}{% if search_codes.size > 1 %}the combination of {% endif %}the {% comment %}preserve space{% endcomment -%}
+1. {% if search_row.Is_New == "TRUE" %}<span data-note="highlight text" class="bg-success" markdown="1">{% endif %}**{{conf_verb}}** {% if search_row.description %}{{search_row.description}} using {% else %}support searching using {% endif %}{% if search_codes.size > 1 %}the combination of {% endif %}the {% comment %}preserve space{% endcomment -%}
 {%- for search_code in search_codes -%}
 {%- assign search_code_row = site.data.search_requirements | where:"code", search_code |  where: "base", resource_type | first -%}
 {%- assign search_code_link = search_code_row.rel_url -%}
 [{{ search_code }}]({{ search_code_link }}) {% unless forloop.last %} and {% endunless -%}
 {% endfor -%}
-search parameter{% if search_codes.size > 1 %}s{% endif -%}
+search parameter{% if search_codes.size > 1 %}s{% endif %}{% if search_row.Is_New == "TRUE" %}</span><!-- new-content highlight text -->{% endif -%}
 
    {% for search_code in search_codes %}
      {%- assign search_code_row = site.data.search_requirements | where:"code", search_code |  where: "base", resource_type | first -%}

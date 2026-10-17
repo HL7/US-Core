@@ -22,8 +22,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-- [US Core Encounter Profile] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
-- <span class="bg-success" markdown="1">The [US Core Appointment Profile] links directly to US Core Location via `Appointment.participant.actor`, which conveys the facility where a scheduled healthcare event is to take place.</span><!-- new-content -->
+<div class="bg-success" markdown="1">
+
+- The following Profiles link directly to US Core Location to convey the facility where the healthcare event occurs.
+  - [US Core Encounter Profile]
+  - [US Core Immunization Profile]
+  - [US Core Appointment Profile]
+</div><!-- new-content -->
 {% include encounter-location.md%}
 - <sup>1</sup>`Location.type` is a grouped value set composed of four value sets to meet multiple industry needs for identifying service locations:
    - The Service Delivery Location Role Type value set is inherited from the base resource, and, although its binding strength is [extensible] in the base resource, US Core implementers **MAY** treat it as [preferred].<sup>[§][CONF-0901]</sup>

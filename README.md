@@ -1087,6 +1087,7 @@ For all changes
   - [ ] Add to the "What's new" file
   - [ ] Create US Core Profile
       - [ ] Create Profile Introduction
+      - [ ] Add `{% include new_page.md %}` as its first line, so the page carries the "new artifact" banner
       - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
       - [ ] New Example(s)
       - [ ] Update Additional USCDI table if the design team decides elements are Additional USCDI
@@ -1094,9 +1095,11 @@ For all changes
   - [ ] New Search
        - [ ] Update the Search API table
        - [ ] Update the Profile Notes page
+  - [ ] Create SearchParameter resources for each new search parameter, `_id` included. They are authored directly as JSON in `input/resources/` and have no YAML source.
   - [ ] Update the Profile table
       - [ ] add scopes
       - [ ] year added
+   - [ ] Add a requirement key for the resource level scope to `input/data/us_core_reqs.csv`, then regenerate the Requirements resources with `publish.sh -R`
    - [ ] Update the CapabilityStatement
 
 
@@ -1159,7 +1162,7 @@ For all changes
  - Before publication, group and reorder the list by change impact using an AI chat tool.
 ### New content highlighting
 
-New and updated content is highlighted green while a version is in development and the highlighting is removed before publication. There are three independent mechanisms, and all three are maintained by hand as each artifact or change is applied.
+New and updated content is highlighted green while a version is in development and the highlighting is removed before publication. There are four independent mechanisms, and all four are maintained by hand as each artifact or change is applied.
 
    - Markdown files
      - Wrap new or updated narrative in `<span class="bg-success" markdown="1">...</span>` (or a `<div>` for block content) and close it with a `<!-- new-content -->` marker. The marker is what `publish.sh -x` keys on when stripping highlighting.
@@ -1170,11 +1173,15 @@ New and updated content is highlighted green while a version is in development a
      - `!` in an `Is_New` cell is a separate convention meaning *ignore this row*, not a highlight value. The Liquid loops do not filter on it, so a row marked `!` still renders unhighlighted; the marker is read by the Python notebook that regenerates the table.
      - In `provenance-elements.csv` the `Target_Resource_<N>_is_new` columns carry an explicit `TRUE` or `FALSE` on every row rather than being left blank. Set the relevant column to `TRUE` and leave the others `FALSE`.
      - These columns drive the `bg-success` conditionals already present in `input/pagecontent/` and `input/includes/`. Those conditionals are build machinery, not leftover highlighting, and are dormant while the columns are empty. Do not strip them.
+     - The `search_requirements.csv` column is read by `input/includes/search-requirement-handler.md`, which wraps the requirement statement on the profile notes page Quick Start. Set it on the row, not on the page; no per-page edit is needed.
    - YAML files
      - Add the artifact *name* to `input/data/new_stuff.yml` as each new artifact is applied. The generated artifact lists match on name (`p.name == new_stuff`) to highlight new entries on the Examples, Terminology, Search Parameters and Operations, and profile list pages.
+   - Whole-artifact banner
+     - Add `{% include new_page.md %}` as the first line of the artifact's `-intro.md` fragment when the artifact itself is new in this version. It renders "This artifact is new for US Core Version N" with the `new-content` class, the same banner style the home page uses. Remove it at the next version bump; `publish.sh -x` does not strip it.
    - removal of new content highlighting
      - `publish.sh -x` strips the markdown spans and divs and comments out every line of `new_stuff.yml`.
      - The CSV `Is_New` columns are not cleared by `-x`. Clear them by hand, per the version-bump checklist above.
+     - The `new_page.md` include is not removed by `-x` either. Delete the include line by hand from each artifact introduction that carries it.
 ### QA tricks and tips
    - ignoreWarnings.text
      - To suppress a QA message, copy the entire message line from `output/qa-eslintcompact.txt` into `input/ignoreWarnings.txt`, omitting only the trailing classification in parentheses (e.g. `(EXCEPTION)`, `(INFORMATIONAL)`, `(BUSINESSRULE)`, `(NOTFOUND)`, `(CODEINVALID)`, `(STRUCTURE)`).

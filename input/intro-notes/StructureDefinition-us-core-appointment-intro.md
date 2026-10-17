@@ -1,3 +1,5 @@
+{% include new_page.md %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core Appointment Profile:
@@ -31,13 +33,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
-* This profile represents a healthcare event scheduled for a past, current, or future date and time. An Encounter represents the event itself once it takes place. When an appointment results in an encounter, the encounter records the link back to the appointment in `Encounter.appointment`, an [Additional USCDI Requirements] element on the [US Core Encounter Profile].
+* <sup>1</sup>Service types codes are typically drawn from a local service catalog, and instances are not expected to draw from a specified value set.  Therefore, `Appointment.serviceType` uses an [example binding].
 
-* `Appointment.participant.actor` references the [US Core Patient Profile], the [US Core Practitioner Profile], and the [US Core Location Profile] as *Must Support* targets. The US Core Location Profile target also conveys the facility where the appointment is scheduled to take place, so it meets the USCDI *Facility Information* Data Class requirements for a scheduled event.
-
-* <sup>1</sup>The `Appointment.serviceType` binding is [example] because appointment service types are typically drawn from a local service catalog, and mapping those local concepts to a standard vocabulary cannot be expected. Any code system that identifies the service to be performed can be used, and `Appointment.serviceType.text` conveys the service when no suitable code is available.
-
-* <sup>2</sup>`Appointment.start` and `Appointment.end` are each optional, but the base FHIR invariant `app-2` requires that either both are present or neither is. When a system knows when the appointment starts but does not know when it ends, omitting `Appointment.end` breaks `app-2`. Follow the [Missing Data] guidance instead and supply `Appointment.end` with the [DataAbsentReason Extension] using the code `unknown`:
+* <sup>2</sup>The base FHIR invariant `app-2` requires that either both the start and end time or neither are supplied. When a system knows only when an appointment starts, follow the [Missing Data] guidance and supply the end time with the [DataAbsentReason Extension] using the code "unknown":
 
   ~~~
   {

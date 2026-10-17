@@ -31,9 +31,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include additional-requirements-intro.md type="Encounter" plural="true" %}
 
 1. Interpreter Needed flag<sup>2</sup>
-1. <span class="bg-success" markdown="1">The appointment that scheduled the encounter<sup>3</sup></span><!-- new-content -->
+1. <span class="bg-success" markdown="1">The appointment that scheduled the encounter</span><!-- new-content -->
 
-<sup>1,2,3</sup> see guidance below
+<sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -57,12 +57,5 @@ This section provides detailed implementation guidance for the US Core Profile t
 - <sup>1</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New encounters/visits<sup>[§][CONF-0385]</sup>
   - Changes in the status of encounters, including events that trigger the same status (e.g., in-progress → in-progress).<sup>[§][CONF-0386]</sup> These status changes correspond to events that can initiate [HL7 V2] ADT messages.
-
-<div class="bg-success" markdown="1">
-
-- <sup>3</sup>For the USCDI *Appointment* Data Element, `Encounter.appointment` references the [US Core Appointment Profile] and records the appointment that scheduled the encounter. An appointment and the encounter that results from it are separate resources: the appointment records the scheduled event, and the encounter records the event once it takes place.
-
-</div>
-<!-- new-content -->
 
 {% include link-list.md %}
