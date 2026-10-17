@@ -1,0 +1,277 @@
+resourceType: ValueSet
+id: us-core-nutrition-assessment
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-nutrition-assessment
+name: USCoreNutritionAssessment
+title: US Core Nutrition Assessment
+status: active
+experimental: false
+date: 2026-10-16
+description: >-
+  This value set is a 'starter set' of LOINC panel and panel item codes for the
+  USCDI Nutrition Assessment data element. It is the set of panel items of the
+  LOINC Nutrition assessment panel (75282-4), which LOINC created for the
+  Nutrition Section of the HL7 Implementation Guide for CDA Release 2:
+  Consolidated CDA Templates for Clinical Notes. The codes are used in the US
+  Core Observation Screening Assessment Profile and the SDC Base
+  Questionnaire/US Core QuestionnaireResponse Profile to record the questions
+  and responses of a structured nutrition assessment.
+copyright: This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc
+# TODO: PLACEHOLDER. The terminology for the USCDI Nutrition Assessment data
+# element is still pending a decision. The LOINC Nutrition assessment panel
+# (75282-4) panel items below stand in until that decision is made; the other
+# candidates under review are Nutrition assessment Narrative (75303-8),
+# Physical findings of nutrition assessment (75293-1), and the Mini nutritional
+# assessment - short form (MNA-SF) panel (107107-5).
+compose:
+  include:
+    - system: http://loinc.org
+      concept:
+        - code: '75282-4' # Nutrition assessment panel
+        - code: '74013-4' # Alcohol drinks per D
+        - code: '75283-2' # Food nutr history Pnl
+        - code: '75284-0' # Food and Nutr intake Pnl
+        - code: '75285-7' # Compare Nutrt Std Pnl
+        - code: '75286-5' # Nutrition Anthrop meas Pnl
+        - code: '75287-3' # Food and bev intake Pnl
+        - code: '75288-1' # Carb need 24h mRate Est
+        - code: '75289-9' # Fat need 24h mRate Est
+        - code: '75290-7' # Protein need 24h mRate Est
+        - code: '75291-5' # Fluid need 24h Est
+        - code: '75292-3' # Weight usual Reported
+        - code: '75293-1' # Nutrition Focused Physical Findings
+        - code: '75296-4' # Carbohydrate intake 24h Est
+        - code: '75297-2' # Fat intake 24h Est
+        - code: '75298-0' # Calorie intake 24h Est
+        - code: '75299-8' # Protein intake 24h Est
+        - code: '75301-2' # Fluid intake 24h Est
+        - code: '75302-0' # Calorie intake 24h
+        - code: '75303-8' # Nutr assess
+        - code: '80439-3' # Alcohol intake Pnl
+        - code: '80440-1' # Bioactive compound intake Pnl
+        - code: '80441-9' # Breast milk +or formula intake Pnl
+        - code: '80442-7' # Breast milk intake Pnl
+        - code: '80443-5' # Calorie in Pnl
+        - code: '80444-3' # Fluid in Pnl
+        - code: '80445-0' # Food amt Pnl
+        - code: '80446-8' # Inf formula intake Pnl
+        - code: '80447-6' # Meal +or snack pattern Pnl
+        - code: '80448-4' # Enteral tube flush vol 24h
+        - code: '80449-2' # Adeq infant formula intake
+        - code: '80450-0' # Beer intake 24h Measured
+        - code: '80451-8' # B glucan intake 24h Est
+        - code: '80452-6' # B glucan intake 24h Measured
+        - code: '80453-4' # Food in Pnl
+        - code: '80454-2' # Enteral tube.nutr int Pnl
+        - code: '80455-9' # Grain 24h nRate Est
+        - code: '80456-7' # Grain 24h nRate Measured
+        - code: '80457-5' # Fruit serving 24h nRate Est
+        - code: '80458-3' # Fruit serving 24h nRate Measured
+        - code: '80459-1' # Vegetable serv 24h nRate Est
+        - code: '80460-9' # Vegetable serv 24h nRate Measured
+        - code: '80461-7' # Dairy servings 24h nRate Est
+        - code: '80462-5' # Dairy servings 24h nRate Measured
+        - code: '80463-3' # Protein servings 24h nRate Est
+        - code: '80464-1' # Protein servings 24h nRate Measured
+        - code: '80465-8' # Oil serv 24h nRate Est
+        - code: '80466-6' # Oil serv 24h nRate Measured
+        - code: '80467-4' # Empty calorie serv 24h nRate Est
+        - code: '80468-2' # Empty calorie serv 24h nRate Measured
+        - code: '80469-0' # Inf formula int 24h Measured
+        - code: '80470-8' # Plnt stanol ester int 24h Est
+        - code: '80471-6' # Plnt stanol ester int 24h Measured
+        - code: '80472-4' # Psyllium intake 24h Est
+        - code: '80473-2' # Psyllium intake 24h Measured
+        - code: '80474-0' # Inf formula int 24h Est
+        - code: '80475-7' # Fluid intake ET nutr formula comp
+        - code: '80476-5' # Enteral tube.nutr formula conc EngCnc
+        - code: '80477-3' # Fluid intake ET nutr formula vol 24h
+        - code: '80478-1' # Dist alcohol int 24h Measured
+        - code: '80479-9' # Wine intake 24h
+        - code: '80480-7' # Soy protein intake 24h Est
+        - code: '80481-5' # Soy protein intake 24h Measured
+        - code: '80482-3' # Breast milk feed attmpts 24h nRate
+        - code: '80483-1' # Breast milk intake vol 24h Est
+        - code: '80484-9' # Breast milk intake vol 24h Measured
+        - code: '80485-6' # Breast milk int adeq
+        - code: '80486-4' # Snacks 24h nRate Est
+        - code: '80487-2' # Snacks 24h nRate Measured
+        - code: '80488-0' # Infant formula feed 24h nRate
+        - code: '80489-8' # Caffeine intake 24h Est
+        - code: '80490-6' # Caffeine intake 24h Measured
+        - code: '80491-4' # Meals 24h nRate Est
+        - code: '80492-2' # Meals 24h nRate Measured
+        - code: '80494-8' # Calorie intake 24h Measured
+        - code: '80899-8' # Plnt sterol ester int 24h Est
+        - code: '80900-4' # Plnt sterol ester int 24h Measured
+        - code: '80975-6' # Calcium intake 24h Measured
+        - code: '80983-0' # Chloride intake 24h Measured
+        - code: '80984-8' # Fluoride intake 24h Measured
+        - code: '81003-6' # Iodine intake 24h Est
+        - code: '81004-4' # Iodine intake 24h Measured
+        - code: '81005-1' # Magnesium intake 24h Est
+        - code: '81006-9' # Magnesium intake 24h Measured
+        - code: '81007-7' # Manganese intake 24h Est
+        - code: '81008-5' # Manganese intake 24h Measured
+        - code: '81009-3' # Potassium intake 24h Measured
+        - code: '81010-1' # Potassium intake 24h Est
+        - code: '81011-9' # Sodium intake 24h Est
+        - code: '81012-7' # Sodium intake 24h Measured
+        - code: '81013-5' # A-linolenate intake 24h Est
+        - code: '81014-3' # A-linolenate intake 24h Measured
+        - code: '81015-0' # Arginine intake 24h Est
+        - code: '81016-8' # Arginine intake 24h Measured
+        - code: '81017-6' # Vit B7 intake 24h Est
+        - code: '81018-4' # Vit B7 intake 24h Measured
+        - code: '81019-2' # Casein intake 24h Est
+        - code: '81020-0' # Casein intake 24h Measured
+        - code: '81021-8' # Cholesterol intake 24h Est
+        - code: '81022-6' # Cholesterol intake 24h Measured
+        - code: '81023-4' # Chromium intake 24h Est
+        - code: '81024-2' # Chromium intake 24h Measured
+        - code: '81025-9' # Complex carb intake 24h Est
+        - code: '81026-7' # Complex carb intake 24h Measured
+        - code: '81027-5' # Copper intake 24h Est
+        - code: '81028-3' # Copper intake 24h Measured
+        - code: '81029-1' # Eicosapentaenoate intake 24h Est
+        - code: '81030-9' # Eicosapentaenoate intake 24h Measured
+        - code: '81031-7' # Alpha-linoate+Linoleate intake 24h Est
+        - code: '81032-5' # Drinking days nRate
+        - code: '81033-3' # Sat fat intake 24h Est
+        - code: '81034-1' # Trans fat intake 24h Est
+        - code: '81035-8' # Trans fat intake 24h Measured
+        - code: '81036-6' # Polyunsat fat intake 24h Measured
+        - code: '81037-4' # DHA intake 24h Est
+        - code: '81038-2' # DHA intake 24h Measured
+        - code: '81039-0' # Gluten intake 24h Est
+        - code: '81040-8' # Gluten intake 24h Measured
+        - code: '81041-6' # Isoleucine intake 24h Est
+        - code: '81042-4' # Isoleucine intake 24h Measured
+        - code: '81043-2' # Leucine intake 24h Est
+        - code: '81044-0' # Leucine intake 24h Measured
+        - code: '81045-7' # Threonine intake 24h Est
+        - code: '81046-5' # Threonine intake 24h Measured
+        - code: '81047-3' # Valine intake 24h Est
+        - code: '81048-1' # Valine intake 24h Measured
+        - code: '81049-9' # Sucrose intake 24h Est
+        - code: '81050-7' # Sucrose intake 24h Measured
+        - code: '81051-5' # Lactose intake 24h Est
+        - code: '81052-3' # Lactose intake 24h Measured
+        - code: '81053-1' # Galactose intake 24h Est
+        - code: '81054-9' # Galactose intake 24h Measured
+        - code: '81055-6' # Fructose intake 24h Est
+        - code: '81056-4' # Fructose intake 24h Measured
+        - code: '81057-2' # Fiber intake 24h Measured
+        - code: '81058-0' # Fiber sol intake 24h Est
+        - code: '81059-8' # Fiber sol intake 24h Measured
+        - code: '81060-6' # Fiber insol intake 24h Est
+        - code: '81061-4' # Fiber insol intake 24h Measured
+        - code: '81062-2' # Vit B12 intake 24h Est
+        - code: '81063-0' # Vit B12 intake 24h Measured
+        - code: '81064-8' # Vit B6 intake 24h Est
+        - code: '81065-5' # Vit B6 intake 24h Measured
+        - code: '81066-3' # Vit B9 intake 24h Est
+        - code: '81067-1' # Vit B3 intake 24h Measured
+        - code: '81068-9' # Vit B5 24h Est
+        - code: '81069-7' # Vit B5 24h Measured
+        - code: '81070-5' # Vit B2 intake 24h Est
+        - code: '81071-3' # Vit B2 intake 24h Measured
+        - code: '81072-1' # Vit A intake 24h Est
+        - code: '81073-9' # Vit A intake 24h Measured
+        - code: '81074-7' # Vit C intake 24h Est
+        - code: '81075-4' # Vit C intake 24h Measured
+        - code: '81076-2' # Vit E intake 24h Est
+        - code: '81077-0' # Vit E intake 24h Measured
+        - code: '81078-8' # Vit K intake 24h Est
+        - code: '81079-6' # Vit K intake 24h Measured
+        - code: '81080-4' # Chloride intake 24h Est
+        - code: '81081-2' # Fluoride intake 24h Est
+        - code: '81082-0' # Iron intake 24h Est
+        - code: '81083-8' # Iron intake 24h Measured
+        - code: '81084-6' # Molybdenum intake 24h Est
+        - code: '81085-3' # Molybdenum intake 24h Measured
+        - code: '81086-1' # Selenium intake 24h Measured
+        - code: '81087-9' # Selenium intake 24h Est
+        - code: '81088-7' # Zinc intake 24h Measured
+        - code: '81089-5' # Zinc intake 24h Est
+        - code: '81126-5' # Cobalt intake 24h Measured
+        - code: '81127-3' # Cobalt intake 24h Est
+        - code: '81128-1' # Alpha-linoate+Linoleate intake 24h Meas
+        - code: '81129-9' # Glutamine intake 24h Est
+        - code: '81130-7' # Glutamine intake 24h Measured
+        - code: '81131-5' # Polyunsat fat intake 24h Est
+        - code: '81132-3' # Phosphorus intake 24h Est
+        - code: '81133-1' # Fiber intake 24h Est
+        - code: '81134-9' # Vit B9 intake 24h Measured
+        - code: '81135-6' # Vit B3 intake 24h Est
+        - code: '81136-4' # Sat fat intake 24h Measured
+        - code: '81137-2' # Calcium intake 24h Est
+        - code: '81197-6' # Amino acid intake 24h Est
+        - code: '81198-4' # Amino acid intake 24h Measured
+        - code: '81202-4' # Micronutrient form
+        - code: '81895-5' # Macronutr intake Pnl
+        - code: '81896-3' # Fat intake Pnl
+        - code: '81897-1' # MUFA intake 24h Est
+        - code: '81899-7' # MUFA intake 24h Measured
+        - code: '81900-3' # Omega-3 fatty acid intake 24h Est
+        - code: '81901-1' # Omega-3 fatty acid intake 24h Measured
+        - code: '81902-9' # MCT intake 24h Est
+        - code: '81903-7' # MCT intake 24h Measured
+        - code: '81904-5' # Protein intake Pnl
+        - code: '81905-2' # High bio value protein intake 24h Est
+        - code: '81906-0' # High bio value protein intake 24h Meas
+        - code: '81908-6' # Whey intake 24h Est
+        - code: '81909-4' # Whey intake 24h Measured
+        - code: '81910-2' # Protein intake/BW 24h Est
+        - code: '81911-0' # Protein intake/BW 24h Measured
+        - code: '81912-8' # Amino acid intake Pnl
+        - code: '81913-6' # Amino acid essential intake Pnl
+        - code: '81914-4' # Amino acid essential intake 24h Est
+        - code: '81915-1' # Amino acid essential intake 24h Measured
+        - code: '81916-9' # Histidine intake 24h Est
+        - code: '81917-7' # Histidine intake 24h Measured
+        - code: '81918-5' # Methionine intake 24h Est
+        - code: '81919-3' # Methionine intake 24h Measured
+        - code: '81920-1' # Lysine intake 24h Est
+        - code: '81921-9' # Lysine intake 24h Measured
+        - code: '81922-7' # Tryptophan intake 24h Est
+        - code: '81923-5' # Tryptophan intake 24h Measured
+        - code: '81924-3' # Phe intake 24h Est
+        - code: '81925-0' # Phe intake 24h Measured
+        - code: '81926-8' # Fiber intake Pnl
+        - code: '81927-6' # Vit B1 intake 24h Est
+        - code: '81928-4' # Vit B1 intake 24h Measured
+        - code: '81929-2' # Vit D intake 24h Est
+        - code: '81930-0' # Vit D intake 24h Measured
+        - code: '81931-8' # Amino acid nonessent intake Pnl
+        - code: '81932-6' # Amino acid nonessent intake 24h Est
+        - code: '81933-4' # Amino acid nonessent intake 24h Measured
+        - code: '81934-2' # Hcys intake 24h Est
+        - code: '81935-9' # Hcys intake 24h Measured
+        - code: '81936-7' # Tyramine intake 24h Est
+        - code: '81937-5' # Tyramine intake 24h Measured
+        - code: '81938-3' # Tyrosine intake 24h Est
+        - code: '81939-1' # Tyrosine intake 24h Measured
+        - code: '81940-9' # Carb intake Pnl
+        - code: '81941-7' # Micronutrient intake Pnl
+        - code: '81942-5' # Vitamin intake Pnl
+        - code: '81943-3' # Mineral +or trace element intake Pnl
+        - code: '81944-1' # Boron intake 24h Est
+        - code: '81945-8' # Boron intake 24h Measured
+        - code: '81946-6' # Phosphorus intake 24h Measured
+        - code: '81947-4' # Sulfate intake 24h Measured
+        - code: '81948-2' # Sulfate intake 24h Est
+        - code: '81949-0' # Multi-trace element intake 24h
+        - code: '81950-8' # Multivit +or mineral intake 24h
+        - code: '81951-6' # Fluid intake 24h Measured
+        - code: '81952-4' # Fat intake 24h Measured
+        - code: '81953-2' # Carbohydrate intake 24h Measured
+        - code: '82156-1' # Protein intake 24h Measured
+        - code: '8990-4' # Fluid intake 24h
+        - code: '9007-6' # Fluid intake oral 24h
+        - code: '9058-9' # Calorie need 24h Est
+        - code: '9065-4' # Carbohydrate intake 24h
+        - code: '9072-0' # Fat intake 24h
+        - code: '9085-2' # Protein intake 24h
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 1

@@ -16,6 +16,7 @@ compose:
         - code: functional-status
         - code: disability-status
         - code: cognitive-status
+        - code: nutrition-assessment # USCDI v7 Nutrition Assessment data element
     - system: http://terminology.hl7.org/CodeSystem/observation-category
       concept:
         - code: activity

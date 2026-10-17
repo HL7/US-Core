@@ -1,0 +1,37 @@
+resourceType: Observation
+id: MNA-SF-item-example-107114-1
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: MNA-SF Item Example 107114-1
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is an MNA-SF Item Example 107114-1 (Total score) for the
+      *US Core Observation Screening Assessment Profile*. It is the screening score
+      of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI
+      Nutrition Assessment data element. A score of 12-14 points indicates normal
+      nutritional status, 8-11 points at risk of malnutrition, and 0-7 points
+      malnourished.
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+status: final
+category:
+- coding:
+  - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+    code: nutrition-assessment
+    display: Nutrition Assessment
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 107114-1
+    display: Total score Reported.MNA-SF
+  text: Total score
+subject:
+  reference: Patient/example
+effectiveDateTime: '2026-09-14T15:30:00Z'
+performer:
+- reference: Practitioner/practitioner-1
+valueInteger: 8

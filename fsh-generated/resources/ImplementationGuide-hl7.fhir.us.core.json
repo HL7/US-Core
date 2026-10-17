@@ -1027,6 +1027,70 @@
       },
       {
         "reference": {
+          "reference": "Observation/MNA-SF-item-example-107108-3"
+        },
+        "description": "This is an MNA-SF Item Example 107108-3 (Has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing or swallowing difficulties?) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
+        "name": "MNA-SF Item Example 107108-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/MNA-SF-item-example-107109-1"
+        },
+        "description": "This is an MNA-SF Item Example 107109-1 (Weight loss during the last 3 months) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
+        "name": "MNA-SF Item Example 107109-1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/MNA-SF-item-example-107110-9"
+        },
+        "description": "This is an MNA-SF Item Example 107110-9 (Mobility) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
+        "name": "MNA-SF Item Example 107110-9",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/MNA-SF-item-example-107111-7"
+        },
+        "description": "This is an MNA-SF Item Example 107111-7 (Has suffered psychological stress or acute disease in the past 3 months?) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
+        "name": "MNA-SF Item Example 107111-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/MNA-SF-item-example-107113-3"
+        },
+        "description": "This is an MNA-SF Item Example 107113-3 (Neuropsychological problems) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
+        "name": "MNA-SF Item Example 107113-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/MNA-SF-item-example-107114-1"
+        },
+        "description": "This is an MNA-SF Item Example 107114-1 (Total score) for the *US Core Observation Screening Assessment Profile*. It is the screening score of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element. A score of 12-14 points indicates normal nutritional status, 8-11 points at risk of malnutrition, and 0-7 points malnourished.",
+        "name": "MNA-SF Item Example 107114-1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/MNA-SF-item-example-39156-5"
+        },
+        "description": "This is an MNA-SF Item Example 39156-5 (Body mass index (BMI)) for the *US Core Observation Screening Assessment Profile*. It is the body mass index question of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element. Because the observation is also a body mass index, it carries the \"vital-signs\" category alongside the \"survey\" and \"nutrition-assessment\" categories so that it conforms to the FHIR body mass index profile as well.",
+        "name": "MNA-SF Item Example 39156-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/MNA-SF-panel-example-107107-5"
+        },
+        "description": "This is an MNA-SF Panel Example 107107-5 (Mini Nutritional Assessment - Short Form) for the *US Core Observation Screening Assessment Profile*. The MNA-SF is a six-question validated screening tool that identifies patients who are malnourished or at risk of malnutrition, and is an example of a structured screening and assessment for the USCDI Nutrition Assessment data element. The individual questions and responses are the member Observations.",
+        "name": "MNA-SF Panel Example 107107-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
           "reference": "Observation/no-ADI-example"
         },
         "description": "This is an Observation example for the USCDI5 ADI Observation Data Element, indicating whether a patient has an advance directive using code 45473-6 (Advance healthcare directive completed) and a SNOMED CT value of \"No\".",
@@ -1867,6 +1931,22 @@
       },
       {
         "reference": {
+          "reference": "Observation/simple-observation-nutrition-status"
+        },
+        "description": "This *US Core Simple Observation Profile* is a nutrition status determination which is not based on any formal assessment tool or survey.",
+        "name": "Simple Observation Nutrition Status Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/simple-observation-nutrition-status-mna-sf"
+        },
+        "description": "This *US Core Simple Observation Profile* is a nutrition status clinical judgment based on a formal assessment tool. `Observation.derivedFrom` references the Mini Nutritional Assessment - Short Form (MNA-SF) screening assessment the clinician based the judgment on, whose total score of 8 of a possible 14 points indicates the patient is at risk of malnutrition.",
+        "name": "Simple Observation Nutrition Status MNA-SF Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
           "reference": "Observation/simple-observation-sdoh"
         },
         "description": "This *US Core Simple Observation Profile* is a SDOH determination which is not based on any formal assessment tool or survey.",
@@ -2464,6 +2544,14 @@
         "description": "This value set includes All LOINC codes defined as type \"clinical,\" therefore excluding laboratory tests, survey instruments, and claims documents. This includes observables such as vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, and cardiac echo, and includes discrete and narrative diagnostic observations and reports.",
         "exampleBoolean": false,
         "name": "US Core Non Laboratory Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-nutrition-assessment"
+        },
+        "description": "This value set is a 'starter set' of LOINC panel and panel item codes for the USCDI Nutrition Assessment data element. It is the set of panel items of the LOINC Nutrition assessment panel (75282-4), which LOINC created for the Nutrition Section of the HL7 Implementation Guide for CDA Release 2: Consolidated CDA Templates for Clinical Notes. The codes are used in the US Core Observation Screening Assessment Profile and the SDC Base Questionnaire/US Core QuestionnaireResponse Profile to record the questions and responses of a structured nutrition assessment.",
+        "exampleBoolean": false,
+        "name": "US Core Nutrition Assessment"
       },
       {
         "reference": {

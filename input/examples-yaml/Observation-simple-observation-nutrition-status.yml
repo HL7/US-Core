@@ -1,0 +1,34 @@
+resourceType: Observation
+id: simple-observation-nutrition-status
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Simple Observation Nutrition Status Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This *US Core Simple Observation Profile* is a nutrition status
+      determination which is not based on any formal assessment tool or survey.
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+status: final
+category:
+- coding:
+  - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+    code: nutrition-assessment
+    display: Nutrition Assessment
+code:
+  coding:
+  - system: http://loinc.org
+    code: 75305-3
+    display: Nutrition status
+subject:
+  reference: Patient/example
+effectiveDateTime: '2026-09-14T15:30:00Z'
+performer:
+- reference: Practitioner/practitioner-1
+  display: Dr. Ronald Bone
+valueCodeableConcept:
+  coding:
+  - system: http://snomed.info/sct
+    version: http://snomed.info/sct/731000124108
+    code: '248324001'
+    display: Well nourished

@@ -109,6 +109,14 @@
 [medicationrequest-referenced-oral-axid]: MedicationRequest-medicationrequest-referenced-oral-axid.html
 [self-tylenol]: MedicationRequest-self-tylenol.html
 [missing-coded-data-example]: CareTeam-missing-coded-data-example.html
+[MNA-SF-item-example-107108-3]: Observation-MNA-SF-item-example-107108-3.html
+[MNA-SF-item-example-107109-1]: Observation-MNA-SF-item-example-107109-1.html
+[MNA-SF-item-example-107110-9]: Observation-MNA-SF-item-example-107110-9.html
+[MNA-SF-item-example-107111-7]: Observation-MNA-SF-item-example-107111-7.html
+[MNA-SF-item-example-107113-3]: Observation-MNA-SF-item-example-107113-3.html
+[MNA-SF-item-example-107114-1]: Observation-MNA-SF-item-example-107114-1.html
+[MNA-SF-item-example-39156-5]: Observation-MNA-SF-item-example-39156-5.html
+[MNA-SF-panel-example-107107-5]: Observation-MNA-SF-panel-example-107107-5.html
 [no-ADI-example]: Observation-no-ADI-example.html
 [satO2-fiO2]: Observation-satO2-fiO2.html
 [observation-occupation]: Observation-observation-occupation.html
@@ -214,6 +222,8 @@
 [simple-observation-cognitive-status]: Observation-simple-observation-cognitive-status.html
 [simple-observation-disability-status]: Observation-simple-observation-disability-status.html
 [simple-observation-functional-status]: Observation-simple-observation-functional-status.html
+[simple-observation-nutrition-status]: Observation-simple-observation-nutrition-status.html
+[simple-observation-nutrition-status-mna-sf]: Observation-simple-observation-nutrition-status-mna-sf.html
 [simple-observation-sdoh]: Observation-simple-observation-sdoh.html
 [some-day-smoker]: Observation-some-day-smoker.html
 [substance-use-status]: Observation-substance-use-status.html
@@ -289,6 +299,7 @@
 [USCore-ModelInfo]: Library-USCore-ModelInfo.html
 [NarrativeStatus]: ValueSet-us-core-narrative-status.html
 [USCoreNonLaboratoryCodes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
+[USCoreNutritionAssessment]: ValueSet-us-core-nutrition-assessment.html
 [USCoreObservationADIDocumentationProfile]: StructureDefinition-us-core-observation-adi-documentation.html
 [USCoreObservationClinicalResultProfile]: StructureDefinition-us-core-observation-clinical-result.html
 [USCoreObservationOccupationProfile]: StructureDefinition-us-core-observation-occupation.html

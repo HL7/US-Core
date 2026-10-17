@@ -12,6 +12,7 @@ With the addition of the USCDI Health Status Assessments data elements, US Core 
 - Physical Activity
 - Alcohol Use
 - Substance Use
+- <span class="bg-success" markdown="1">Nutrition Assessment</span><!-- new-content -->
 
 However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.<sup>[§][CONF-0268]</sup>
 
@@ -263,6 +264,14 @@ The script retrieves, sorts, and selects the list data.
 - The [Drug Misuse](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.707/expansion) values set contains SNOMED CT clinical judgment codes
 to represent conclusions or diagnoses about drug misuse or abuse. In many cases, the value (answer) at `Observation.value` may be boolean true \| false.
 
+###### Nutrition Assessment
+
+- <span class="bg-success" markdown="1">A value set has not yet been selected for the USCDI Nutrition Assessment Data Element. The [US Core Nutrition Assessment](ValueSet-us-core-nutrition-assessment.html) value set is a placeholder that contains the panel and panel item codes of the LOINC Nutrition assessment panel (75282-4), which LOINC created for the Nutrition Section of the HL7 Implementation Guide for CDA Release 2: Consolidated CDA Templates for Clinical Notes. The other candidates under review are Nutrition assessment Narrative (LOINC 75303-8), Physical findings of nutrition assessment (LOINC 75293-1), and the Mini Nutritional Assessment - Short Form (MNA-SF) panel (LOINC 107107-5). This guidance changes once the terminology is decided.</span><!-- new-content -->
+
+- <span class="bg-success" markdown="1">A standardized nutrition screening tool is represented as a panel of US Core Observation Screening Assessment Profile observations. The [MNA-SF Panel Example 107107-5](Observation-MNA-SF-panel-example-107107-5.html) shows the six-question Mini Nutritional Assessment - Short Form and its total score.</span><!-- new-content -->
+
+- <span class="bg-success" markdown="1">A nutrition status clinical judgment is represented as a US Core Simple Observation Profile observation with the category code "nutrition-assessment", `Observation.code` of Nutrition status (LOINC 75305-3), and an `Observation.value[x]` from SNOMED CT, such as Well nourished (SNOMED CT 248324001), Nutritionally compromised (SNOMED CT 284670008), or Undernourished (SNOMED CT 248325000). The [Simple Observation Nutrition Status MNA-SF Example](Observation-simple-observation-nutrition-status-mna-sf.html) is a judgment derived from a screening tool and references it in `Observation.derivedFrom`; the [Simple Observation Nutrition Status Example](Observation-simple-observation-nutrition-status.html) is a judgment that is not based on any formal assessment tool or survey.</span><!-- new-content -->
+
 **Health Status Assessments Value Sets Table:**
 {: #health-status-assessments-value-sets-table}
 
@@ -363,7 +372,7 @@ to create the ig resource.) to filter out extraneous examples
 ================================================================ -->
 
 {% assign
-assessments = "SDOH,Functional,Disability,Mental,PE,Booze,Drugs" %}
+assessments = "SDOH,Functional,Disability,Mental,PE,Booze,Drugs,Nutrition" %}
 {% for group in site.data.uscdi-examples.groups %}
 {%- if assessments contains group[0] -%}
 #### {{ group[1].description }}

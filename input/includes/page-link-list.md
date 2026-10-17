@@ -628,6 +628,8 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Narrative Status - Testing]: ValueSet-us-core-narrative-status-testing.html
 [US Core Non Laboratory Codes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
 [US Core Non Laboratory Codes - Testing]: ValueSet-us-core-diagnosticreport-report-and-note-codes-testing.html
+[US Core Nutrition Assessment]: ValueSet-us-core-nutrition-assessment.html
+[US Core Nutrition Assessment - Testing]: ValueSet-us-core-nutrition-assessment-testing.html
 [US Core Practitioner Role Specialty Codes]: ValueSet-us-core-practitionerrole-specialty.html
 [US Core Practitioner Role Specialty Codes - Testing]: ValueSet-us-core-practitionerrole-specialty-testing.html
 [US Core Problem or Health Concern]: ValueSet-us-core-problem-or-health-concern.html
@@ -768,6 +770,14 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [MedicationRequest Referenced Oral Axid Example]: MedicationRequest-medicationrequest-referenced-oral-axid.html
 [MedicationRequest Self Tylenol Example]: MedicationRequest-self-tylenol.html
 [Missing Coded Data Example]: CareTeam-missing-coded-data-example.html
+[MNA-SF Item Example 107108-3]: Observation-MNA-SF-item-example-107108-3.html
+[MNA-SF Item Example 107109-1]: Observation-MNA-SF-item-example-107109-1.html
+[MNA-SF Item Example 107110-9]: Observation-MNA-SF-item-example-107110-9.html
+[MNA-SF Item Example 107111-7]: Observation-MNA-SF-item-example-107111-7.html
+[MNA-SF Item Example 107113-3]: Observation-MNA-SF-item-example-107113-3.html
+[MNA-SF Item Example 107114-1]: Observation-MNA-SF-item-example-107114-1.html
+[MNA-SF Item Example 39156-5]: Observation-MNA-SF-item-example-39156-5.html
+[MNA-SF Panel Example 107107-5]: Observation-MNA-SF-panel-example-107107-5.html
 [No ADI Observation Example]: Observation-no-ADI-example.html
 [Observation SatO2 FiO2 Example]: Observation-satO2-fiO2.html
 [Occupation Observation Example]: Observation-observation-occupation.html
@@ -876,6 +886,8 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Simple Observation Cognitive Status Example]: Observation-simple-observation-cognitive-status.html
 [Simple Observation Disability Status Example]: Observation-simple-observation-disability-status.html
 [Simple Observation Functional Status Example]: Observation-simple-observation-functional-status.html
+[Simple Observation Nutrition Status Example]: Observation-simple-observation-nutrition-status.html
+[Simple Observation Nutrition Status MNA-SF Example]: Observation-simple-observation-nutrition-status-mna-sf.html
 [Simple Observation SDOH Example]: Observation-simple-observation-sdoh.html
 [Some Day Smoker Example]: Observation-some-day-smoker.html
 [Substance Use Status Example]: Observation-substance-use-status.html
