@@ -7,18 +7,13 @@ This section provides specific guidance on accessing "all medications" and "all 
 #### Pharmacy FHIR Resources
 {:.no_toc}
 
-The FHIR specification defines five FHIR pharmacy resources concerned with the ordering, dispensing, administering, and recording of medications. This guide profiles the following <span class="bg-success" markdown="1">four</span><!-- new-content --> resources:
+The FHIR specification defines five FHIR pharmacy resources concerned with the ordering, dispensing, administering, and recording of medications. This guide documents the following <span class="bg-success" markdown="1">five</span><!-- new-content --> resources:
 
-  - [Medication]\:  Represents the medication itself
-  - [MedicationRequest]\: An order or request for the supply of the medication and the instructions for administration of the medication to a patient, and patient reported medications.
-  - [MedicationDispense]\: Provision a medication with regards to dispensing in response to a prescription
+  - [Medication]\: Represents the medication itself.
+  - [MedicationRequest]\: An order or request for the supply of the medication and the instructions for administration of the medication to a patient, and patient-reported medications.
+  - [MedicationDispense]\: Provision of a supply of a medication in response to a prescription.
   - <span class="bg-success" markdown="1">[MedicationAdministration]\: The event of a patient consuming or otherwise being administered a medication</span><!-- new-content -->
-
-<span class="bg-success" markdown="1">The remaining medication resource is not profiled by US Core. It is introduced here to provide background and define the relationships between the pharmacy resources. **However, as documented in the section below, the US Core guidance for accessing a patient's medications does not use it:**</span><!-- new-content -->
-
-  - [MedicationStatement]
-
-<span class="bg-success" markdown="1">The [US Core MedicationAdministration Profile] records the event of a medication being given to a patient and meets the USCDI Medication Administration data element. The guidance below for accessing a patient's medications is unchanged: a MedicationAdministration query is not a substitute for the MedicationRequest query. A system links an administration to the order that authorized it through `MedicationAdministration.request`.</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">[MedicationStatement]\: The MedicationStatement resource is not profiled by US Core, and, **as documented in the section below, the US Core guidance for accessing a patient's medications does not use it.** It is introduced here to provide background and define the relationships between the pharmacy resources.</span><!-- new-content -->
 
 The FHIR specification details each resource. The FHIR [Medications Module] and the [Guide to Resources] Sections describe the interaction between these resources in general.
 
