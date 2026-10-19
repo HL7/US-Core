@@ -23,7 +23,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a time indicating when the preference was made
 3. treatment intervention preference value
 
-{% include additional-requirements-intro.md type="Observation" plural="false" %}
+{% include additional-requirements-intro.md type="Observation" plural=false %}
 
 1. a performer<sup>1</sup>
 

@@ -21,7 +21,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a narrative summary of the patient assessment and plan of treatment<sup>1</sup>
 2. a category
 
-{% include additional-requirements-intro.md type="CarePlan" plural="false" %}
+{% include additional-requirements-intro.md type="CarePlan" plural=true %}
 
 1. a contributor<sup>2</sup>
 2. references to health issues this plan addresses<sup>1</sup>

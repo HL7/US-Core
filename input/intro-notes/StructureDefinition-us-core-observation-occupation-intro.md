@@ -25,7 +25,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. a code for the job history industry
 4. the industry code or text
 
-{% include additional-requirements-intro.md type="Observation" plural="false" %}
+{% include additional-requirements-intro.md type="Observation" plural=false %}
 
 1. a performer<sup>1</sup>
 
