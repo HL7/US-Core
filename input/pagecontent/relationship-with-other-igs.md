@@ -49,7 +49,7 @@ The table below summarizes comparisons between the US Core profiles and the Inte
 As part of profile comparison, the requirements, constraints, and standards specified in a particular FHIR profile are evaluated. These requirements can include mandatory elements, *Must Support* elements, cardinality constraints, data types, terminology bindings, usage rules, extensions, and rules on missing or suppressed data. Detailed comparisons between the FHIR artifacts between US Core and IPA and IPS are provided in the links below:
 
 - [IPA Comparison V1.1.0](ipa-comparison-v1.1.0/index.html)
-- [IPS Comparison V2.0.0](ips-comparison-v2.0.0/index.html)
+- [IPS Comparison V2.0.1](ips-comparison-v2.0.1/index.html)
 
 
 **Legend:**
