@@ -125,7 +125,7 @@ The following US Core resources are compatible to the IPA profiles, but the IPA 
 
 1. [US Core ADI DocumentReference Profile]
 
-   Additional requirements in [IPA DocumentReference](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-documentreference):
+   Additional requirements in [IPA DocumentReference](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-documentreference) (IPA vs US Core):
 
     - `DocumentReference.content.attachment.contentType`	Element minimum cardinalities differ: '1' vs '0'
     -	`DocumentReference.context`	Elements differ in definition for mustSupport: 'true' vs 'false'
@@ -135,13 +135,13 @@ The following US Core resources are compatible to the IPA profiles, but the IPA 
 
 1. [US Core DocumentReference Profile]
 
-   Additional requirements in [IPA DocumentReference](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-documentreference):
+   Additional requirements in [IPA DocumentReference](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-documentreference) (IPA vs US Core):
 
    - `DocumentReference.content.attachment.contentType`	Element minimum cardinalities differ: '1' vs '0'
 
 1. [US Core Average Blood Pressure Profile]
 
-   Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation)
+   Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation) (IPA vs US Core):
 
    - `Observation.value[x]` Elements differ in definition for mustSupport: 'true' vs 'false'
    - `Observation.value[x]` Element maximum cardinalities differ: '1' vs '0'
@@ -149,20 +149,20 @@ The following US Core resources are compatible to the IPA profiles, but the IPA 
 
 1. [US Core Care Experience Preference Profile], [US Core Simple Observation Profile], [US Core Tobacco And Nicotine Use Observation Profile], [US Core Treatment Intervention Preference Profile]
 
-   Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation):
+   Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation) (IPA vs US Core):
 
    - `Observation.dataAbsentReason` Elements differ in definition for mustSupport: 'true' vs 'false'
 
 1. [US Core Observation ADI Documentation Profile], [US Core Observation Occupation Profile]
 
-   Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation):
+   Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation) (IPA vs US Core):
 
    - `Observation.value[x]` Elements differ in definition for mustSupport: 'true' vs 'false'
    - `Observation.dataAbsentReason` Elements differ in definition for mustSupport: 'true' vs 'false'
 
 1. [US Core Patient Profile]
 
-    Additional requirements in [IPA Patient](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-patient):
+    Additional requirements in [IPA Patient](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-patient) (IPA vs US Core):
 
    - `Patient.active`	Element minimum cardinalities differ: '1' vs '0'
    - `Patient.active`	Elements differ in definition for mustSupport: 'true' vs 'false'
@@ -188,7 +188,7 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
 
 1. [US Core AllergyIntolerance Profile]
 
-    Additional requirements in [IPS AllergyIntolerance](http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips):
+    Additional requirements in [IPS AllergyIntolerance](http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips) (IPS vs US Core):
 
    - `AllergyIntolerance.patient.reference` Element minimum cardinalities differ: '1' vs '0'
    - `AllergyIntolerance.type` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -199,9 +199,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `AllergyIntolerance.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `AllergyIntolerance.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Condition Problems and Health Concerns Profile]
+2. [US Core Condition Problems and Health Concerns Profile]
 
-    Additional requirements in [IPS Condition](http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips):
+    Additional requirements in [IPS Condition](http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips) (IPS vs US Core):
 
    - `Condition.subject.reference` Element minimum cardinalities differ: '1' vs '0'
    - `Condition.clinicalStatus.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -222,18 +222,18 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Condition.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Condition.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Device Profile]
+3. [US Core Device Profile]
 
-    Additional requirements in [IPS Device](http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips):
+    Additional requirements in [IPS Device](http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips) (IPS vs US Core):
 
    - `Device.type.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Device.type.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Device.type.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Device.type.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core DiagnosticReport Profile for Report and Note Exchange] and  [US Core DiagnosticReport Profile for Laboratory Results Reporting]
+4. [US Core DiagnosticReport Profile for Report and Note Exchange] and  [US Core DiagnosticReport Profile for Laboratory Results Reporting]
 
-    Additional requirements in [IPS DiagnosticReport](http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips):
+    Additional requirements in [IPS DiagnosticReport](http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips) (IPS vs US Core):
 
    - `DiagnosticReport.subject.reference` Element minimum cardinalities differ: '1' vs '0'
    - `DiagnosticReport.effective[x]` Element minimum cardinalities differ: '1' vs '0'
@@ -242,12 +242,11 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `DiagnosticReport.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `DiagnosticReport.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. <span class="bg-success" markdown="1">[US Core ImagingStudy Profile]</span><!-- new-content -->
+5. <span class="bg-success" markdown="1">[US Core ImagingStudy Profile]</span><!-- new-content -->
 
-    Additional requirements in [IPS ImagingStudy](http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips):
+    Additional requirements in [IPS ImagingStudy](http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips) (IPS vs US Core):
 
    - `ImagingStudy.subject.reference` Element minimum cardinalities differ: '1' vs '0'
-   - `ImagingStudy.status` Element differ in valueset: 'http://hl7.org/fhir/uv/ips/ValueSet/imaging-study-status-uv-ips (required)' vs 'http://hl7.org/fhir/ValueSet/imagingstudy-status (required)'
    - `ImagingStudy.started` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `ImagingStudy.procedureCode` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `ImagingStudy.reasonCode` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -258,9 +257,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `ImagingStudy.series.instance.uid` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `ImagingStudy.series.instance.sopClass` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Immunization Profile]
+6. [US Core Immunization Profile]
 
-    Additional requirements in [IPS Immunization](http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips):
+    Additional requirements in [IPS Immunization](http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips) (IPS vs US Core):
 
    - `Immunization.patient.reference` Element minimum cardinalities differ: '1' vs '0'
    - `Immunization.vaccineCode.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -268,9 +267,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Immunization.vaccineCode.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Immunization.vaccineCode.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Medication Profile]
+7. [US Core Medication Profile]
 
-    Additional requirements in [IPS Medication](http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips):
+    Additional requirements in [IPS Medication](http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips) (IPS vs US Core):
 
    - `Medication.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Medication.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -289,9 +288,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Medication.ingredient.item[x].text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Medication.ingredient.strength` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core MedicationRequest Profile]
+8. [US Core MedicationRequest Profile]
 
-   Additional requirements in [IPS MedicationRequest](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips):
+   Additional requirements in [IPS MedicationRequest](http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips) (IPS vs US Core):
 
    - `MedicationRequest.medication[x].coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `MedicationRequest.medication[x].coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -299,9 +298,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `MedicationRequest.medication[x].text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `MedicationRequest.subject.reference` Element minimum cardinalities differ: '1' vs '0'
 
-1. [US Core Observation Pregnancy Status Profile]
+9. [US Core Observation Pregnancy Status Profile]
 
-    Additional requirements in [IPS Observation Pregnancy Status](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips):
+    Additional requirements in [IPS Observation Pregnancy Status](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips) (IPS vs US Core):
 
    - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -317,9 +316,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Observation.hasMember.reference` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
 
-1. [US Core Observation Clinical Result Profile] and [US Core Laboratory Result Observation Profile]
+10. [US Core Observation Clinical Result Profile] and [US Core Laboratory Result Observation Profile]
 
-    Additional requirements in [IPS Observation Results - Laboratory/Pathology](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips):
+    Additional requirements in [IPS Observation Results - Laboratory/Pathology](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips) (IPS vs US Core):
 
    - `Observation.status` Element differ in valueset: 'http://hl7.org/fhir/uv/ips/ValueSet/results-status-uv-ips (required)' vs 'http://hl7.org/fhir/ValueSet/observation-status (required)'
    - `Observation.category.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -339,9 +338,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Observation.valueCodeableConcept.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Observation.component` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Observation Clinical Result Profile]
+11. [US Core Observation Clinical Result Profile]
 
-    Additional requirements in [IPS Observation Results - Radiology](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips):
+    Additional requirements in [IPS Observation Results - Radiology](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips) (IPS vs US Core):
 
    - `Observation.category:radiology` Element minimum cardinalities differ: '1' vs '0'
    - `Observation.category:radiology` Element maximum cardinalities differ: '1' vs '*'
@@ -354,9 +353,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Observation.performer` Element minimum cardinalities differ: '1' vs '0'
    - `Observation.component` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Simple Observation Profile]
+12. [US Core Simple Observation Profile]
 
-    Additional requirements in [IPS Observation Alcohol Use](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips):
+    Additional requirements in [IPS Observation Alcohol Use](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips) (IPS vs US Core):
 
    - `Observation.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -367,9 +366,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
    - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
 
-1. [US Core Tobacco And Nicotine Use Observation Profile]
+13. [US Core Tobacco And Nicotine Use Observation Profile]
 
-    Additional requirements in [IPS Observation Tobacco Use](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips):
+    Additional requirements in [IPS Observation Tobacco Use](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips) (IPS vs US Core):
 
    - `Observation.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -379,9 +378,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
    - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
 
-1. [US Core Patient Profile]
+14. [US Core Patient Profile]
 
-    Additional requirements in [IPS Patient](http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips):
+    Additional requirements in [IPS Patient](http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips) (IPS vs US Core):
 
    - `Patient.name.use` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Patient.name.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -390,15 +389,15 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Patient.birthDate` Element minimum cardinalities differ: '1' vs '0'
    - `Patient.generalPractitioner` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Practitioner Profile]
+15. [US Core Practitioner Profile]
 
-    Additional requirements in [IPS Practitioner](http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips):
+    Additional requirements in [IPS Practitioner](http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips) (IPS vs US Core):
 
    - `Practitioner.name.given` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
-1. [US Core Procedure Profile]
+16. [US Core Procedure Profile]
 
-    Additional requirements in [IPS Procedure](http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips):
+    Additional requirements in [IPS Procedure](http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips) (IPS vs US Core):
 
    - `Procedure.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Procedure.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
@@ -407,9 +406,9 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `Procedure.subject.reference` Element minimum cardinalities differ: '1' vs '0'
    - `Procedure.performed[x]` Element minimum cardinalities differ: '1' vs '0'
 
-1. [US Core Specimen Profile]
+17. [US Core Specimen Profile]
 
-    Additional requirements in [IPS Specimen](http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips):
+    Additional requirements in [IPS Specimen](http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips) (IPS vs US Core):
 
    - `Specimen.type.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `Specimen.type.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'

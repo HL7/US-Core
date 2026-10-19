@@ -41,6 +41,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 8. **Pre-Applied:** Non-substantive (Correction) Add the USCDI Phone Number Type Data Element, missing since US Core 3.1.1, to the USCDI mapping table and map it to `Patient.telecom.use` [FHIR-59653](https://jira.hl7.org/browse/FHIR-59653) See Changes [Here](uscdi.html)
 9. **Pre-Applied:** Non-substantive (Correction) Fix Common Clinical Notes names and LOINC [FHIR-59655](https://jira.hl7.org/browse/FHIR-59655) See Changes [Here](writing-clinical-notes.html#terminology)
 10. **Pre-Applied:** Non-substantive (Correction) Removed "Pilot testing of UDI elements" and "Timezones and Time Offsets" from the Future Candidate Under Consideration [FHIR-59671](https://jira.hl7.org/browse/FHIR-59671) See Changes [Here](us-core-roadmap.html#future-candidate-requirements-under-consideration)
+11. **Resolved - change required:** Non-substantive (Correction) Update the Relationship With Other IGs page for US Core 10: label the comparison direction on the additional requirements headers, correct the US Core Device Profile IPS compatibility rating, and point the IPS comparison link at the generated v2.0.1 directory [FHIR-59676](https://jira.hl7.org/browse/FHIR-59676) See Changes [Here](relationship-with-other-igs.html)
 
 
 ##### Pending
