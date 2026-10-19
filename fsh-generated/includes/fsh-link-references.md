@@ -46,6 +46,8 @@
 [udi-2]: Device-udi-2.html
 [udi-4]: Device-udi-4.html
 [udi-5]: Device-udi-5.html
+[devicerequest-cpap]: DeviceRequest-devicerequest-cpap.html
+[devicerequest-walker]: DeviceRequest-devicerequest-walker.html
 [cardiology-report]: DiagnosticReport-cardiology-report.html
 [chest-xray-report]: DiagnosticReport-chest-xray-report.html
 [docref-example-1]: Bundle-docref-example-1.html
@@ -277,6 +279,7 @@
 [USCoreConditionProblemsHealthConcernsProfile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreCoverageProfile]: StructureDefinition-us-core-coverage.html
 [USCoreDeviceProfile]: StructureDefinition-us-core-device.html
+[USCoreDeviceRequestProfile]: StructureDefinition-us-core-devicerequest.html
 [USCoreDiagnosticReportCategory]: ValueSet-us-core-diagnosticreport-category.html
 [USCoreDiagnosticReportProfileLaboratoryReporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [USCoreDiagnosticReportProfileNoteExchange]: StructureDefinition-us-core-diagnosticreport-note.html
@@ -382,6 +385,11 @@
 [USCoreConditionRecordedDate]: SearchParameter-us-core-condition-recorded-date.html
 [USCoreCoveragePatient]: SearchParameter-us-core-coverage-patient.html
 [USCoreDevicePatient]: SearchParameter-us-core-device-patient.html
+[USCoreDevicerequestAuthoredOn]: SearchParameter-us-core-devicerequest-authored-on.html
+[USCoreDevicerequestCode]: SearchParameter-us-core-devicerequest-code.html
+[USCoreDevicerequestId]: SearchParameter-us-core-devicerequest-id.html
+[USCoreDevicerequestPatient]: SearchParameter-us-core-devicerequest-patient.html
+[USCoreDevicerequestStatus]: SearchParameter-us-core-devicerequest-status.html
 [USCoreDeviceStatus]: SearchParameter-us-core-device-status.html
 [USCoreDeviceType]: SearchParameter-us-core-device-type.html
 [USCoreDiagnosticreportCategory]: SearchParameter-us-core-diagnosticreport-category.html

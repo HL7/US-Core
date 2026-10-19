@@ -1,0 +1,24 @@
+resourceType: DeviceRequest
+id: devicerequest-walker
+meta:
+  extension:
+    - url: http://hl7.org/fhir/StructureDefinition/instance-name
+      valueString: DeviceRequest Walker Example
+    - url: http://hl7.org/fhir/StructureDefinition/instance-description
+      valueMarkdown: This is an example order for a folding walker using the *US
+        Core DeviceRequest Profile*. It illustrates the `DeviceRequest.codeReference`
+        choice, which names the device with a reference to the *US Core Device
+        Profile* instead of a code.
+  profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-devicerequest
+status: active
+intent: order
+codeReference:
+  reference: Device/udi-5
+  display: ACME basics folding walker
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+authoredOn: '2026-05-19T15:05:00-05:00'
+requester:
+  reference: Practitioner/practitioner-1

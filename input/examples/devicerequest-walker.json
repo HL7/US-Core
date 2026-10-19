@@ -1,0 +1,23 @@
+{
+  "resourceType": "DeviceRequest",
+  "id": "devicerequest-walker",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-devicerequest|10.0.0-ballot"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "codeReference": {
+    "reference": "Device/udi-5",
+    "display": "ACME basics folding walker"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  },
+  "authoredOn": "2026-05-19T15:05:00-05:00",
+  "requester": {
+    "reference": "Practitioner/practitioner-1"
+  }
+}

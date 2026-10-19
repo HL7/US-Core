@@ -1,0 +1,26 @@
+resourceType: DeviceRequest
+id: devicerequest-cpap
+meta:
+  extension:
+    - url: http://hl7.org/fhir/StructureDefinition/instance-name
+      valueString: DeviceRequest CPAP Example
+    - url: http://hl7.org/fhir/StructureDefinition/instance-description
+      valueMarkdown: This is an example order for a continuous positive airway
+        pressure (CPAP) device for a patient with obstructive sleep apnea using
+        the *US Core DeviceRequest Profile*.
+  profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-devicerequest
+status: active
+intent: order
+codeCodeableConcept:
+  coding:
+    - system: http://snomed.info/sct
+      code: '1284824006'
+      display: Sleep apnea breathing therapy equipment (physical object)
+  text: CPAP device
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+authoredOn: '2026-01-22T13:45:00-05:00'
+requester:
+  reference: Practitioner/practitioner-1

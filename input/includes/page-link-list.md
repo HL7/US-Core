@@ -105,6 +105,16 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [USCoreCoveragePatient - Testing]: SearchParameter-us-core-coverage-patient-testing.html
 [USCoreDevicePatient]: SearchParameter-us-core-device-patient.html
 [USCoreDevicePatient - Testing]: SearchParameter-us-core-device-patient-testing.html
+[USCoreDevicerequestAuthoredOn]: SearchParameter-us-core-devicerequest-authored-on.html
+[USCoreDevicerequestAuthoredOn - Testing]: SearchParameter-us-core-devicerequest-authored-on-testing.html
+[USCoreDevicerequestCode]: SearchParameter-us-core-devicerequest-code.html
+[USCoreDevicerequestCode - Testing]: SearchParameter-us-core-devicerequest-code-testing.html
+[USCoreDevicerequestId]: SearchParameter-us-core-devicerequest-id.html
+[USCoreDevicerequestId - Testing]: SearchParameter-us-core-devicerequest-id-testing.html
+[USCoreDevicerequestPatient]: SearchParameter-us-core-devicerequest-patient.html
+[USCoreDevicerequestPatient - Testing]: SearchParameter-us-core-devicerequest-patient-testing.html
+[USCoreDevicerequestStatus]: SearchParameter-us-core-devicerequest-status.html
+[USCoreDevicerequestStatus - Testing]: SearchParameter-us-core-devicerequest-status-testing.html
 [USCoreDeviceStatus]: SearchParameter-us-core-device-status.html
 [USCoreDeviceStatus - Testing]: SearchParameter-us-core-device-status-testing.html
 [USCoreDeviceType]: SearchParameter-us-core-device-type.html
@@ -371,6 +381,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Device Profile - Mappings]: StructureDefinition-us-core-device-mappings.html
 [US Core Device Profile - Testing]: StructureDefinition-us-core-device-testing.html
 [US Core Device Profile - Examples]: StructureDefinition-us-core-device-examples.html
+[US Core DeviceRequest Profile]: StructureDefinition-us-core-devicerequest.html
+[US Core DeviceRequest Profile - Definitions]: StructureDefinition-us-core-devicerequest-definitions.html
+[US Core DeviceRequest Profile - Mappings]: StructureDefinition-us-core-devicerequest-mappings.html
+[US Core DeviceRequest Profile - Testing]: StructureDefinition-us-core-devicerequest-testing.html
+[US Core DeviceRequest Profile - Examples]: StructureDefinition-us-core-devicerequest-examples.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting - Definitions]: StructureDefinition-us-core-diagnosticreport-lab-definitions.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting - Mappings]: StructureDefinition-us-core-diagnosticreport-lab-mappings.html
@@ -733,6 +748,8 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Defibrillator Device Example]: Device-udi-2.html
 [Device Infusion Pump Example]: Device-udi-4.html
 [Device Walker Example]: Device-udi-5.html
+[DeviceRequest CPAP Example]: DeviceRequest-devicerequest-cpap.html
+[DeviceRequest Walker Example]: DeviceRequest-devicerequest-walker.html
 [DiagnosticReport Cardiology Report Example]: DiagnosticReport-cardiology-report.html
 [DiagnosticReport Chest Xray Report Example]: DiagnosticReport-chest-xray-report.html
 [Docref Example 1]: Bundle-docref-example-1.html
