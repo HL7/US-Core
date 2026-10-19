@@ -36,7 +36,14 @@ import java.util.Set;
  * twelve minutes into a build.
  *
  * Usage: LiquidRenderCheck <liquid-dir> <resource.json> [<resource.json> ...]
+ *        LiquidRenderCheck --render <template.liquid> <resource.json>
  * Exit:  0 all rendered, 1 at least one failed, 2 bad invocation.
+ *
+ * --render is the iterate-on-a-template mode: it prints the narrative the publisher
+ * would put on the page to stdout, and the XHTML-parse and unrendered-markdown
+ * findings to stderr, so the narrative can be redirected or diffed on its own. The
+ * template may live anywhere, so a candidate can be tried without touching
+ * input/liquid; its includes resolve against its own directory.
  */
 public class LiquidRenderCheck {
 
@@ -121,7 +128,101 @@ public class LiquidRenderCheck {
     return "..." + narrative.substring(from, to).replaceAll("\\s+", " ") + "...";
   }
 
+  /** Reads a resource as R4 and converts to R5, falling back to reading it as R5.
+   *  An R4 IG can still carry preadopted R5 resources -- US Core ships the
+   *  Requirements resources that way. Returns null when it is neither. */
+  static Resource load(String file) {
+    try {
+      org.hl7.fhir.r4.model.Resource r4 = (org.hl7.fhir.r4.model.Resource)
+          new org.hl7.fhir.r4.formats.JsonParser().parse(new FileInputStream(file));
+      return VersionConvertorFactory_40_50.convertResource(r4);
+    } catch (Exception e4) {
+      try {
+        return (Resource) new org.hl7.fhir.r5.formats.JsonParser().parse(new FileInputStream(file));
+      } catch (Exception e5) {
+        return null;
+      }
+    }
+  }
+
+  /** The engine the publisher uses, with includes resolved against one directory. */
+  static LiquidEngine engineFor(final Path includeDir) throws Exception {
+    IWorkerContext ctx;
+    try {
+      ctx = realContext();
+    } catch (Throwable t) {
+      System.err.println("   (!) could not load hl7.fhir.r5.core#5.0.0 from the package cache: "
+          + t.getMessage());
+      System.err.println("   (!) falling back to a stub context -- expressions will under-resolve"
+          + " and a real failure can be missed");
+      ctx = stubContext();
+    }
+    LiquidEngine engine = new LiquidEngine(ctx, null);
+    engine.setIncludeResolver(new LiquidEngine.ILiquidEngineIncludeResolver() {
+      public String fetchInclude(LiquidEngine eng, String name) {
+        try {
+          return new String(Files.readAllBytes(includeDir.resolve(name)), StandardCharsets.UTF_8);
+        } catch (Exception e) {
+          throw new RuntimeException("liquid include not found: " + name);
+        }
+      }
+    });
+    return engine;
+  }
+
+  /** --render: print one template rendered against one resource. */
+  static int render(String templateArg, String resourceArg) throws Exception {
+    Path tpl = Paths.get(templateArg);
+    if (!Files.exists(tpl)) {
+      System.err.println("no such template: " + tpl);
+      return 2;
+    }
+    Resource r5 = load(resourceArg);
+    if (r5 == null) {
+      System.err.println("not a parseable R4 or R5 resource: " + resourceArg);
+      return 2;
+    }
+    Path dir = tpl.toAbsolutePath().getParent();
+    LiquidEngine engine = engineFor(dir);
+    String narrative;
+    try {
+      LiquidEngine.LiquidDocument doc = engine.parse(
+          new String(Files.readAllBytes(tpl), StandardCharsets.UTF_8), tpl.getFileName().toString());
+      narrative = engine.evaluate(doc, (Base) r5, null);
+    } catch (Throwable t) {
+      String msg = t.getMessage();
+      System.err.println("FAIL render: " + (msg == null || msg.isEmpty()
+          ? t.getClass().getSimpleName() : msg));
+      System.err.println("     the publisher would replace the whole narrative with"
+          + " \"Exception generating Narrative\" and emit no QA message");
+      return 1;
+    }
+    System.out.print(narrative);          // stdout: the narrative only, so it can be piped
+    System.err.println("---- " + tpl.getFileName() + " on " + r5.fhirType()
+        + "/" + (r5.getId() == null ? "(no id)" : r5.getId()) + " ----");
+    try {
+      new org.hl7.fhir.utilities.xhtml.XhtmlParser().parseFragment(narrative);
+      System.err.println("  xhtml parse: OK");
+    } catch (Throwable t) {
+      System.err.println("  xhtml parse: FAIL -- " + t.getMessage());
+      System.err.println("  the publisher would show \"Exception parsing generated"
+          + " Narrative\" instead of the content");
+      return 1;
+    }
+    String leftover = unrenderedMarkdown(narrative);
+    System.err.println("  unrendered markdown: " + (leftover == null ? "none" : leftover));
+    System.err.println("  " + narrative.length() + " chars");
+    return 0;
+  }
+
   public static void main(String[] args) throws Exception {
+    if (args.length > 0 && "--render".equals(args[0])) {
+      if (args.length != 3) {
+        System.err.println("usage: LiquidRenderCheck --render <template.liquid> <resource.json>");
+        System.exit(2);
+      }
+      System.exit(render(args[1], args[2]));
+    }
     if (args.length < 2) {
       System.err.println("usage: LiquidRenderCheck <liquid-dir> <resource.json> ...");
       System.exit(2);
