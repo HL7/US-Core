@@ -1,0 +1,28 @@
+resourceType: NutritionOrder
+id: nutritionorder-whole-food-diet
+meta:
+  extension:
+    - url: http://hl7.org/fhir/StructureDefinition/instance-name
+      valueString: NutritionOrder Whole Food Diet Example
+    - url: http://hl7.org/fhir/StructureDefinition/instance-description
+      valueMarkdown: This is an example order for a whole food diet for general
+        health promotion using the *US Core NutritionOrder Profile*. It
+        illustrates a diet recorded as text, because the preferred Diet Type
+        value set has no concept for a whole food diet.
+  profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder
+status: active
+intent: order
+patient:
+  reference: Patient/example
+  display: Amy V. Shaw
+dateTime: '2026-05-19T08:30:00-05:00'
+orderer:
+  reference: Practitioner/practitioner-1
+  display: Dr Ronald Bone
+oralDiet:
+  type:
+    - text: Whole food diet
+  instruction: Emphasize minimally processed foods. Include vegetables, fruits,
+    whole grains, legumes, and lean proteins. Avoid added sugars and
+    ultra-processed foods.

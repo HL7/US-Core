@@ -9377,6 +9377,27 @@
           ]
         }
       ]
+    },
+    {
+      "key": "CONF-0924",
+      "reference": [
+        "scopes.html#scopes-for-requesting-fhir-resources-by-type"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "The following scopes that correspond directly to FHIR resource types **SHALL** be supported\n...\n[For] NutritionOrder [the] <patient|user|system>/NutritionOrder.rs [see [SMART Clinical Scope Syntax](https://hl7.org/fhir/smart-app-launch/STU2/scopes-and-launch-context.html#clinical-scope-syntax) for details on clinical data scopes]",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "scopes.html#CONF-0924"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

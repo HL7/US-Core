@@ -1,0 +1,136 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-nutritionorder",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder",
+  "name": "USCoreNutritionOrderProfile",
+  "title": "US Core NutritionOrder Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-19",
+  "description": "The US Core NutritionOrder Profile inherits from the FHIR [NutritionOrder](https://hl7.org/fhir/R4/nutritionorder.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Nutrition Order Data Element of the Orders Data Class*. It sets minimum expectations for the NutritionOrder resource to record, search, and fetch oral diet orders for a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "NutritionOrder",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "NutritionOrder.status",
+        "path": "NutritionOrder.status",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/request-status"
+        }
+      },
+      {
+        "id": "NutritionOrder.intent",
+        "path": "NutritionOrder.intent",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/request-intent"
+        }
+      },
+      {
+        "id": "NutritionOrder.patient",
+        "path": "NutritionOrder.patient",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.dateTime",
+        "path": "NutritionOrder.dateTime",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "NutritionOrder.orderer",
+        "path": "NutritionOrder.orderer",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "NutritionOrder.oralDiet",
+        "path": "NutritionOrder.oralDiet",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "NutritionOrder.oralDiet.type",
+        "path": "NutritionOrder.oralDiet.type",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diet-type"
+        }
+      },
+      {
+        "id": "NutritionOrder.oralDiet.instruction",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "NutritionOrder.oralDiet.instruction",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Instructions or additional information about the oral diet",
+        "min": 0,
+        "max": "1"
+      }
+    ]
+  }
+}

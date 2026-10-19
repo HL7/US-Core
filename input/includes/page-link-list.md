@@ -219,6 +219,16 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [USCoreMedicationrequestPatient - Testing]: SearchParameter-us-core-medicationrequest-patient-testing.html
 [USCoreMedicationrequestStatus]: SearchParameter-us-core-medicationrequest-status.html
 [USCoreMedicationrequestStatus - Testing]: SearchParameter-us-core-medicationrequest-status-testing.html
+[USCoreNutritionorderDatetime]: SearchParameter-us-core-nutritionorder-datetime.html
+[USCoreNutritionorderDatetime - Testing]: SearchParameter-us-core-nutritionorder-datetime-testing.html
+[USCoreNutritionorderId]: SearchParameter-us-core-nutritionorder-id.html
+[USCoreNutritionorderId - Testing]: SearchParameter-us-core-nutritionorder-id-testing.html
+[USCoreNutritionorderOraldiet]: SearchParameter-us-core-nutritionorder-oraldiet.html
+[USCoreNutritionorderOraldiet - Testing]: SearchParameter-us-core-nutritionorder-oraldiet-testing.html
+[USCoreNutritionorderPatient]: SearchParameter-us-core-nutritionorder-patient.html
+[USCoreNutritionorderPatient - Testing]: SearchParameter-us-core-nutritionorder-patient-testing.html
+[USCoreNutritionorderStatus]: SearchParameter-us-core-nutritionorder-status.html
+[USCoreNutritionorderStatus - Testing]: SearchParameter-us-core-nutritionorder-status-testing.html
 [USCoreObservationCategory]: SearchParameter-us-core-observation-category.html
 [USCoreObservationCategory - Testing]: SearchParameter-us-core-observation-category-testing.html
 [USCoreObservationCode]: SearchParameter-us-core-observation-code.html
@@ -461,6 +471,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core MedicationRequest Profile - Mappings]: StructureDefinition-us-core-medicationrequest-mappings.html
 [US Core MedicationRequest Profile - Testing]: StructureDefinition-us-core-medicationrequest-testing.html
 [US Core MedicationRequest Profile - Examples]: StructureDefinition-us-core-medicationrequest-examples.html
+[US Core NutritionOrder Profile]: StructureDefinition-us-core-nutritionorder.html
+[US Core NutritionOrder Profile - Definitions]: StructureDefinition-us-core-nutritionorder-definitions.html
+[US Core NutritionOrder Profile - Mappings]: StructureDefinition-us-core-nutritionorder-mappings.html
+[US Core NutritionOrder Profile - Testing]: StructureDefinition-us-core-nutritionorder-testing.html
+[US Core NutritionOrder Profile - Examples]: StructureDefinition-us-core-nutritionorder-examples.html
 [US Core Observation ADI Documentation Profile]: StructureDefinition-us-core-observation-adi-documentation.html
 [US Core Observation ADI Documentation Profile - Definitions]: StructureDefinition-us-core-observation-adi-documentation-definitions.html
 [US Core Observation ADI Documentation Profile - Mappings]: StructureDefinition-us-core-observation-adi-documentation-mappings.html
@@ -831,6 +846,9 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [MNA-SF Item Example 39156-5]: Observation-MNA-SF-item-example-39156-5.html
 [MNA-SF Panel Example 107107-5]: Observation-MNA-SF-panel-example-107107-5.html
 [No ADI Observation Example]: Observation-no-ADI-example.html
+[NutritionOrder Cardiac Diet Example]: NutritionOrder-nutritionorder-cardiac-diet.html
+[NutritionOrder Clear Liquid Diet Example]: NutritionOrder-nutritionorder-clear-liquid-diet.html
+[NutritionOrder Whole Food Diet Example]: NutritionOrder-nutritionorder-whole-food-diet.html
 [Observation SatO2 FiO2 Example]: Observation-satO2-fiO2.html
 [Occupation Observation Example]: Observation-observation-occupation.html
 [Occupation Observation Example: Industry Unknown]: Observation-observation-occupation-industry-unknown.html

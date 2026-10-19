@@ -1,0 +1,137 @@
+# US Core NutritionOrder Profile - FHIR StructureDefinition
+# Notes:
+#   * Only the NutritionOrder.oralDiet branch is profiled, per the October 15 design call.
+#     NutritionOrder.supplement and NutritionOrder.enteralFormula are left unconstrained.
+#   * NutritionOrder.oralDiet.type: the binding is strengthened from the base FHIR example to
+#     preferred. The value set is the base FHIR Diet Type value set, which selects the SNOMED CT
+#     descendants of 182922004 (Dietary regime). The HL7 Terminology (THO) is expected to host
+#     these value sets in the future; see the profile introduction.
+#   * NutritionOrder.oralDiet.instruction is an Additional USCDI Requirement, not Must Support.
+#   * NutritionOrder.patient and NutritionOrder.orderer: use the US Core Profiles for Patient,
+#     Practitioner, and PractitionerRole. The base resource allows only Practitioner and
+#     PractitionerRole on orderer, so those are the only two targets available here.
+#   * Use the Must Support extension ("http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support")
+#     on the targetProfile elements to indicate the US Core Practitioner Profile is a Must Support
+#     NutritionOrder.orderer target.
+
+resourceType: StructureDefinition
+id: us-core-nutritionorder
+#============= Update when version named in regs ====================
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
+#======================================================================
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder
+name: USCoreNutritionOrderProfile
+title: US Core NutritionOrder Profile
+status: active
+experimental: false
+date: '2026-10-19'
+description: >-
+  The US Core NutritionOrder Profile inherits from the FHIR
+  [NutritionOrder](https://hl7.org/fhir/R4/nutritionorder.html) resource; refer
+  to it for scope and usage definitions. This profile meets the requirements of
+  the U.S. Core Data for Interoperability (USCDI) *Nutrition Order Data Element
+  of the Orders Data Class*. It sets minimum expectations for the NutritionOrder
+  resource to record, search, and fetch oral diet orders for a patient. It
+  specifies which core elements, extensions, vocabularies, and value sets
+  **SHALL** be present in the resource and constrains how the elements are used.
+  Providing the floor for standards development for specific use cases promotes
+  interoperability and adoption.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: NutritionOrder
+baseDefinition: http://hl7.org/fhir/StructureDefinition/NutritionOrder
+derivation: constraint
+
+differential:
+  element:
+
+    # ---- status -------------------------------------------------------------
+    - id: NutritionOrder.status
+      path: NutritionOrder.status
+      min: 1
+      max: '1'
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: http://hl7.org/fhir/ValueSet/request-status
+
+    # ---- intent -------------------------------------------------------------
+    - id: NutritionOrder.intent
+      path: NutritionOrder.intent
+      min: 1
+      max: '1'
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: http://hl7.org/fhir/ValueSet/request-intent
+
+    # ---- patient ------------------------------------------------------------
+    - id: NutritionOrder.patient
+      path: NutritionOrder.patient
+      min: 1
+      max: '1'
+      mustSupport: true
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+
+    # ---- dateTime -----------------------------------------------------------
+    - id: NutritionOrder.dateTime
+      path: NutritionOrder.dateTime
+      min: 1
+      max: '1'
+      mustSupport: true
+
+    # ---- orderer ------------------------------------------------------------
+    # Individual-level provenance for this profile; see the Basic Provenance page.
+    - id: NutritionOrder.orderer
+      path: NutritionOrder.orderer
+      min: 0
+      max: '1'
+      mustSupport: true
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+
+    # ---- oralDiet -----------------------------------------------------------
+    - id: NutritionOrder.oralDiet
+      path: NutritionOrder.oralDiet
+      min: 0
+      max: '1'
+      mustSupport: true
+
+    # ---- oralDiet.type ------------------------------------------------------
+    # The binding is strengthened from the base FHIR example to preferred.
+    - id: NutritionOrder.oralDiet.type
+      path: NutritionOrder.oralDiet.type
+      min: 0
+      max: '*'
+      mustSupport: true
+      binding:
+        strength: preferred
+        valueSet: http://hl7.org/fhir/ValueSet/diet-type
+
+    # ---- oralDiet.instruction -----------------------------------------------
+    #===================  new for USCDI 7====================================
+    - id: NutritionOrder.oralDiet.instruction
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: NutritionOrder.oralDiet.instruction
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Instructions or additional information about the oral diet"
+      min: 0
+      max: '1'
+    #===================  new for USCDI 7====================================

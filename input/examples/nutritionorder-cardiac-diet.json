@@ -1,0 +1,35 @@
+{
+  "resourceType": "NutritionOrder",
+  "id": "nutritionorder-cardiac-diet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder|10.0.0-ballot"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "patient": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  },
+  "dateTime": "2026-05-19T08:00:00-05:00",
+  "orderer": {
+    "reference": "Practitioner/practitioner-1",
+    "display": "Dr Ronald Bone"
+  },
+  "oralDiet": {
+    "type": [
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "437421000124105",
+            "display": "Decreased sodium diet"
+          }
+        ],
+        "text": "Cardiac diet (low sodium)"
+      }
+    ],
+    "instruction": "Limit sodium to 2 grams per day. Avoid added salt, processed foods, and high-sodium condiments."
+  }
+}

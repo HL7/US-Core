@@ -1187,6 +1187,22 @@
       },
       {
         "reference": {
+          "reference": "NutritionOrder/nutritionorder-cardiac-diet"
+        },
+        "description": "This is an example order for a low sodium cardiac diet for a patient with congestive heart failure using the *US Core NutritionOrder Profile*.",
+        "name": "NutritionOrder Cardiac Diet Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder"
+      },
+      {
+        "reference": {
+          "reference": "NutritionOrder/nutritionorder-whole-food-diet"
+        },
+        "description": "This is an example order for a whole food diet for general health promotion using the *US Core NutritionOrder Profile*. It illustrates a diet recorded as text, because the preferred Diet Type value set has no concept for a whole food diet.",
+        "name": "NutritionOrder Whole Food Diet Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder"
+      },
+      {
+        "reference": {
           "reference": "Observation/satO2-fiO2"
         },
         "description": "This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen.",
@@ -2683,6 +2699,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-nutritionorder"
+        },
+        "description": "The US Core NutritionOrder Profile inherits from the FHIR [NutritionOrder](https://hl7.org/fhir/R4/nutritionorder.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Nutrition Order Data Element of the Orders Data Class*. It sets minimum expectations for the NutritionOrder resource to record, search, and fetch oral diet orders for a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+        "exampleBoolean": false,
+        "name": "US Core NutritionOrder Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-observation-adi-documentation"
         },
         "description": "The US Core Observation Advance Directive Information (ADI) Documentation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile and the [US Core Observation ADI DocumentationReference Profile](StructureDefinition-us-core-adi-documentreference.html) meet the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Advance Directive Observation* Data Element requirements. It is used to communicate whether a person has advance directive information (ADI) and, if one or more documents exist, their location. Examples of advance healthcare directive documents include physician order for life sustaining treatment (POLST), do not resuscitate order (DNR), and medical power of attorney. To communicate the type of advance directive document, the author, the verifier, and other properties, see the US Core ADI DocumentReference Profile. This profile sets minimum expectations for the Observation resource to record, search, and fetch findings about the presence of a patient's advance directives. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
@@ -3688,6 +3712,46 @@
         "description": "**Status of the prescription**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
         "exampleBoolean": false,
         "name": "USCoreMedicationrequestStatus"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-nutritionorder-datetime"
+        },
+        "description": "**Return nutrition orders requested on this date**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreNutritionorderDatetime"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-nutritionorder-id"
+        },
+        "description": "**Logical id of this artifact**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreNutritionorderId"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-nutritionorder-oraldiet"
+        },
+        "description": "**Type of diet that can be consumed orally (i.e., take via the mouth)**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreNutritionorderOraldiet"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-nutritionorder-patient"
+        },
+        "description": "**The identity of the person who requires the diet, formula or nutritional supplement**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreNutritionorderPatient"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-nutritionorder-status"
+        },
+        "description": "**Status of the nutrition order**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreNutritionorderStatus"
       },
       {
         "reference": {

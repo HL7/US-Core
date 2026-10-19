@@ -1,0 +1,28 @@
+{
+  "resourceType": "NutritionOrder",
+  "id": "nutritionorder-whole-food-diet",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder|10.0.0-ballot"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "patient": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  },
+  "dateTime": "2026-05-19T08:30:00-05:00",
+  "orderer": {
+    "reference": "Practitioner/practitioner-1",
+    "display": "Dr Ronald Bone"
+  },
+  "oralDiet": {
+    "type": [
+      {
+        "text": "Whole food diet"
+      }
+    ],
+    "instruction": "Emphasize minimally processed foods. Include vegetables, fruits, whole grains, legumes, and lean proteins. Avoid added sugars and ultra-processed foods."
+  }
+}

@@ -129,6 +129,8 @@
 [MNA-SF-item-example-39156-5]: Observation-MNA-SF-item-example-39156-5.html
 [MNA-SF-panel-example-107107-5]: Observation-MNA-SF-panel-example-107107-5.html
 [no-ADI-example]: Observation-no-ADI-example.html
+[nutritionorder-cardiac-diet]: NutritionOrder-nutritionorder-cardiac-diet.html
+[nutritionorder-whole-food-diet]: NutritionOrder-nutritionorder-whole-food-diet.html
 [satO2-fiO2]: Observation-satO2-fiO2.html
 [observation-occupation]: Observation-observation-occupation.html
 [observation-occupation-industry-unknown]: Observation-observation-occupation-industry-unknown.html
@@ -316,6 +318,7 @@
 [NarrativeStatus]: ValueSet-us-core-narrative-status.html
 [USCoreNonLaboratoryCodes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
 [USCoreNutritionAssessment]: ValueSet-us-core-nutrition-assessment.html
+[USCoreNutritionOrderProfile]: StructureDefinition-us-core-nutritionorder.html
 [USCoreObservationADIDocumentationProfile]: StructureDefinition-us-core-observation-adi-documentation.html
 [USCoreObservationClinicalResultProfile]: StructureDefinition-us-core-observation-clinical-result.html
 [USCoreObservationOccupationProfile]: StructureDefinition-us-core-observation-occupation.html
@@ -442,6 +445,11 @@
 [USCoreMedicationrequestIntent]: SearchParameter-us-core-medicationrequest-intent.html
 [USCoreMedicationrequestPatient]: SearchParameter-us-core-medicationrequest-patient.html
 [USCoreMedicationrequestStatus]: SearchParameter-us-core-medicationrequest-status.html
+[USCoreNutritionorderDatetime]: SearchParameter-us-core-nutritionorder-datetime.html
+[USCoreNutritionorderId]: SearchParameter-us-core-nutritionorder-id.html
+[USCoreNutritionorderOraldiet]: SearchParameter-us-core-nutritionorder-oraldiet.html
+[USCoreNutritionorderPatient]: SearchParameter-us-core-nutritionorder-patient.html
+[USCoreNutritionorderStatus]: SearchParameter-us-core-nutritionorder-status.html
 [USCoreObservationCategory]: SearchParameter-us-core-observation-category.html
 [USCoreObservationCode]: SearchParameter-us-core-observation-code.html
 [USCoreObservationDate]: SearchParameter-us-core-observation-date.html
