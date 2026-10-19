@@ -101,6 +101,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
   - [Overview of US Core publication Process](#overview-of-us-core-publication-process)
     - [Prepare IG for new version:](#prepare-ig-for-new-version)
     - [IG Updates](#ig-updates)
+      - [Renaming a YAML source file](#renaming-a-yaml-source-file)
       - [Adding New USCDI Data Element](#adding-new-uscdi-data-element)
         - [Existing US Core element](#existing-us-core-element)
         - [New US Core element in existing US Core profile](#new-us-core-element-in-existing-us-core-profile)
@@ -1101,6 +1102,7 @@ For all changes
   - [ ] Update the Profile metadata table
       - [ ] add scopes
       - [ ] year added
+      - [ ] current_fmm,proposed_fmm : default is 2 for new
    - [ ] Add a requirement key for the resource level scope to `input/data/us_core_reqs.csv`, then regenerate the Requirements resources with `publish.sh -R`
    - [ ] Update the CapabilityStatement
 
