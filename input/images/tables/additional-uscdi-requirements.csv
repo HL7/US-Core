@@ -1,47 +1,53 @@
 Is_New,Addl_USCDI,Profile,FHIR_Element,combo
-,Contact Detail,US Core Patient Profile,Patient.telecom,US Core Patient Profile-Patient.telecom
-,A Communication Language,US Core Patient Profile,Patient.communication,US Core Patient Profile-Patient.communication
-,An Interpreter Needed Flag,US Core Patient Profile,Patient.extension:interpreterRequired,US Core Patient Profile-Patient.extension:interpreterRequired
-,An Interpreter Needed Flag,US Core Encounter Profile,Encounter.extension:interpreterRequired,US Core Encounter Profile-Encounter.extension:interpreterRequired
-,A Race,US Core Patient Profile,Patient.extension:race,US Core Patient Profile-Patient.extension:race
-,An Ethnicity,US Core Patient Profile,Patient.extension:ethnicity,US Core Patient Profile-Patient.extension:ethnicity
-,A Tribal Affiliation,US Core Patient Profile,Patient.extension:tribalAffiliation,US Core Patient Profile-Patient.extension:tribalAffiliation
-,A Sex,US Core Patient Profile,Patient.extension:sex,US Core Patient Profile-Patient.extension:sex
-,Date Of Death,US Core Patient Profile,Patient.deceased[x],US Core Patient Profile-Patient.deceased[x]
-,Address Use,US Core Patient Profile,Patient.address.use,US Core Patient Profile-Patient.address.use
-,Address Period,US Core Patient Profile,Patient.address.period,US Core Patient Profile-Patient.address.period
+,Phone Number,US Core Patient Profile,Patient.telecom,US Core Patient Profile-Patient.telecom-1
+,Email Address,US Core Patient Profile,Patient.telecom,US Core Patient Profile-Patient.telecom-2
+,Preferred Language,US Core Patient Profile,Patient.communication,US Core Patient Profile-Patient.communication
+,Interpreter Needed,US Core Patient Profile,Patient.extension:interpreterRequired,US Core Patient Profile-Patient.extension:interpreterRequired
+,Interpreter Needed,US Core Encounter Profile,Encounter.extension:interpreterRequired,US Core Encounter Profile-Encounter.extension:interpreterRequired
+TRUE,Appointment,US Core Encounter Profile,Encounter.appointment,US Core Encounter Profile-Encounter.appointment
+,Race,US Core Patient Profile,Patient.extension:race,US Core Patient Profile-Patient.extension:race
+,Ethnicity,US Core Patient Profile,Patient.extension:ethnicity,US Core Patient Profile-Patient.extension:ethnicity
+,Tribal Affiliation,US Core Patient Profile,Patient.extension:tribalAffiliation,US Core Patient Profile-Patient.extension:tribalAffiliation
+,Sex,US Core Patient Profile,Patient.extension:sex,US Core Patient Profile-Patient.extension:sex
+,Date of Death,US Core Patient Profile,Patient.deceased[x],US Core Patient Profile-Patient.deceased[x]
+,Previous Address,US Core Patient Profile,Patient.address.use,US Core Patient Profile-Patient.address.use
+,Previous Address,US Core Patient Profile,Patient.address.period,US Core Patient Profile-Patient.address.period
 ,Previous Name,US Core Patient Profile,Patient.name.use,US Core Patient Profile-Patient.name.use
-,Name Period,US Core Patient Profile,Patient.name.period,US Core Patient Profile-Patient.name.period
-,Suffix,US Core Patient Profile,Patient.name.suffix,US Core Patient Profile-Patient.name.suffix
-,A Reason Or Indication For Referral Or Consultation,US Core ServiceRequest Profile,ServiceRequest.reasonCode,US Core ServiceRequest Profile-ServiceRequest.reasonCode
-,A Reason Or Indication For Referral Or Consultation,US Core ServiceRequest Profile,ServiceRequest.reasonReference,US Core ServiceRequest Profile-ServiceRequest.reasonReference
-,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.performer,US Core Procedure Profile-Procedure.performer
-,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.performer.actor,US Core Procedure Profile-Procedure.performer.actor
-,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.reasonCode,US Core Procedure Profile-Procedure.reasonCode
-,A Reason Or Indication For Referral Or Consultation,US Core Procedure Profile,Procedure.reasonReference,US Core Procedure Profile-Procedure.reasonReference
-,The Reason Or Indication For The Prescription,US Core MedicationRequest Profile,MedicationRequest.reasonCode,US Core MedicationRequest Profile-MedicationRequest.reasonCode
-,The Reason Or Indication For The Prescription,US Core MedicationRequest Profile,MedicationRequest.reasonReference,US Core MedicationRequest Profile-MedicationRequest.reasonReference
+,Previous Name,US Core Patient Profile,Patient.name.period,US Core Patient Profile-Patient.name.period
+,Name Suffix,US Core Patient Profile,Patient.name.suffix,US Core Patient Profile-Patient.name.suffix
+,Indication,US Core ServiceRequest Profile,ServiceRequest.reasonCode,US Core ServiceRequest Profile-ServiceRequest.reasonCode
+,Indication,US Core ServiceRequest Profile,ServiceRequest.reasonReference,US Core ServiceRequest Profile-ServiceRequest.reasonReference
+,Author,US Core Procedure Profile,Procedure.performer,US Core Procedure Profile-Procedure.performer
+,Author,US Core Procedure Profile,Procedure.performer.actor,US Core Procedure Profile-Procedure.performer.actor
+,Indication,US Core Procedure Profile,Procedure.reasonCode,US Core Procedure Profile-Procedure.reasonCode
+,Indication,US Core Procedure Profile,Procedure.reasonReference,US Core Procedure Profile-Procedure.reasonReference
+,Indication,US Core MedicationRequest Profile,MedicationRequest.reasonCode,US Core MedicationRequest Profile-MedicationRequest.reasonCode
+,Indication,US Core MedicationRequest Profile,MedicationRequest.reasonReference,US Core MedicationRequest Profile-MedicationRequest.reasonReference
 ,Medication Adherence,US Core MedicationRequest Profile,MedicationRequest.extension:medicationAdherence,US Core MedicationRequest Profile-MedicationRequest.extension:medicationAdherence
-,A Reference To The Request For The Procedure,US Core Procedure Profile,Procedure.basedOn,US Core Procedure Profile-Procedure.basedOn
-,US Core Document Category,US Core DocumentReference Profile,DocumentReference.category:uscore,US Core DocumentReference Profile-DocumentReference.category:uscore
-,"References To An Associated Survey, Assessment, Or Screening Tool",US Core Simple Observation Profile,Observation.derivedFrom,US Core Simple Observation Profile-Observation.derivedFrom
+,Reason for Referral,US Core Procedure Profile,Procedure.basedOn,US Core Procedure Profile-Procedure.basedOn
+TRUE,Reason Not Performed,US Core Procedure Profile,Procedure.extension:recorded,US Core Procedure Profile-Procedure.extension:recorded
+,Clinical Notes,US Core DocumentReference Profile,DocumentReference.category:uscore,US Core DocumentReference Profile-DocumentReference.category:uscore
+,Health Status Assessments,US Core Simple Observation Profile,Observation.derivedFrom,US Core Simple Observation Profile-Observation.derivedFrom
 ,Specimen Source Site,US Core Specimen Profile,Specimen.collection,US Core Specimen Profile-Specimen.collection
 ,Specimen Source Site,US Core Specimen Profile,Specimen.collection.bodySite,US Core Specimen Profile-Specimen.collection.bodySite
-,Specimen Condition Acceptability,US Core Specimen Profile,Specimen.condition,US Core Specimen Profile-Specimen.condition
+,Specimen Condition,US Core Specimen Profile,Specimen.condition,US Core Specimen Profile-Specimen.condition
+TRUE,Specimen Collection Date and Time,US Core Specimen Profile,Specimen.collection.collected[x],US Core Specimen Profile-Specimen.collection.collected[x]
+TRUE,Specimen Collection Method,US Core Specimen Profile,Specimen.collection.method,US Core Specimen Profile-Specimen.collection.method
 ,Health Status Assessments,US Core Simple Observation Profile,Observation.category:us-core,US Core Simple Observation Profile-Observation.category:us-core
 ,Health Status Assessments,US Core Observation Screening Assessment Profile,Observation.category:screening-assessment,US Core Observation Screening Assessment Profile-Observation.category:screening-assessment
 ,Health Status Assessments,US Core Condition Problems and Health Concerns Profile,Condition.category:screening-assessment,US Core Condition Problems and Health Concerns Profile-Condition.category:screening-assessment
 ,Pregnancy Status,US Core Observation Pregnancy Intent Profile,Observation.performer,US Core Observation Pregnancy Intent Profile-Observation.performer
 ,Pregnancy Status,US Core Observation Pregnancy Status Profile,Observation.performer,US Core Observation Pregnancy Status Profile-Observation.performer
-,Provenance Author,US Core AllergyIntolerance Profile,AllergyIntolerance.recorder,US Core AllergyIntolerance Profile-AllergyIntolerance.recorder
-,Provenance Author,US Core Care Experience Preference Profile,Observation.performer,US Core Care Experience Preference Profile-Observation.performer
-,Provenance Author,US Core CarePlan Profile,CarePlan.contributor,US Core CarePlan Profile-CarePlan.contributor
-,Provenance Author,US Core Condition Encounter Diagnosis Profile,Condition.recorder,US Core Condition Encounter Diagnosis Profile-Condition.recorder
-,Provenance Author,US Core Condition Problems and Health Concerns Profile,Condition.recorder,US Core Condition Problems and Health Concerns Profile-Condition.recorder
-,Provenance Author,US Core Observation Occupation Profile,Observation.performer,US Core Observation Occupation Profile-Observation.performer
-,Provenance Author,US Core Treatment Intervention Preference Profile,Observation.performer,US Core Treatment Intervention Preference Profile-Observation.performer
+TRUE,Allergy Intolerance Criticality,US Core AllergyIntolerance Profile,AllergyIntolerance.criticality,US Core AllergyIntolerance Profile-AllergyIntolerance.criticality
+,Author,US Core AllergyIntolerance Profile,AllergyIntolerance.recorder,US Core AllergyIntolerance Profile-AllergyIntolerance.recorder
+,Author,US Core Care Experience Preference Profile,Observation.performer,US Core Care Experience Preference Profile-Observation.performer
+,Author,US Core CarePlan Profile,CarePlan.contributor,US Core CarePlan Profile-CarePlan.contributor
+,Author,US Core Condition Encounter Diagnosis Profile,Condition.recorder,US Core Condition Encounter Diagnosis Profile-Condition.recorder
+,Author,US Core Condition Problems and Health Concerns Profile,Condition.recorder,US Core Condition Problems and Health Concerns Profile-Condition.recorder
+,Author,US Core Observation Occupation Profile,Observation.performer,US Core Observation Occupation Profile-Observation.performer
+,Author,US Core Treatment Intervention Preference Profile,Observation.performer,US Core Treatment Intervention Preference Profile-Observation.performer
 ,Orders,US Core ServiceRequest Profile,ServiceRequest.code.text,US Core ServiceRequest Profile-ServiceRequest.code.text
-,Laboratory Tests,US Core Laboratory Result Observation Profile,Observation.code.text,US Core Laboratory Result Observation Profile-Observation.code.text
+,Test,US Core Laboratory Result Observation Profile,Observation.code.text,US Core Laboratory Result Observation Profile-Observation.code.text
 ,Care Plan,US Core CarePlan Profile,CarePlan.addresses,US Core CarePlan Profile-CarePlan.addresses
 ,Family Health History,US Core FamilyMemberHistory Profile,FamilyMemberHistory.extension:recorder,US Core FamilyMemberHistory Profile-FamilyMemberHistory.extension:recorder
 ,Unique Device Identifier,US Core Device Profile,Device.udiCarrier,US Core Device Profile-Device.udiCarrier
@@ -50,3 +56,4 @@ Is_New,Addl_USCDI,Profile,FHIR_Element,combo
 ,Unique Device Identifier,US Core Device Profile,Device.expirationDate,US Core Device Profile-Device.expirationDate
 ,Unique Device Identifier,US Core Device Profile,Device.lotNumber,US Core Device Profile-Device.lotNumber
 ,Unique Device Identifier,US Core Device Profile,Device.serialNumber,US Core Device Profile-Device.serialNumber
+TRUE,Nutrition Order,US Core NutritionOrder Profile,NutritionOrder.oralDiet.instruction,US Core NutritionOrder Profile-NutritionOrder.oralDiet.instruction
