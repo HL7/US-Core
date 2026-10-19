@@ -115,6 +115,7 @@ The following US Core Profiles were omitted because they are typically not assoc
 - US Core Coverage Profile
 - US Core Encounter Profile
 - US Core Device Profile
+- <span class="bg-success" markdown="1">US Core ImagingStudy Profile</span><!-- new-content -->
 - US Core Location Profile
 - US Core Medication Profile
 - US Core Organization Profile

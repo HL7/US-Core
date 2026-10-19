@@ -242,6 +242,22 @@ The following US Core resources are compatible to the IPS profiles, but the IPS 
    - `DiagnosticReport.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
    - `DiagnosticReport.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
+1. <span class="bg-success" markdown="1">[US Core ImagingStudy Profile]</span><!-- new-content -->
+
+    Additional requirements in [IPS ImagingStudy](http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips):
+
+   - `ImagingStudy.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+   - `ImagingStudy.status` Element differ in valueset: 'http://hl7.org/fhir/uv/ips/ValueSet/imaging-study-status-uv-ips (required)' vs 'http://hl7.org/fhir/ValueSet/imagingstudy-status (required)'
+   - `ImagingStudy.started` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.procedureCode` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.reasonCode` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.series` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.series.uid` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.series.modality` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.series.instance` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.series.instance.uid` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+   - `ImagingStudy.series.instance.sopClass` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+
 1. [US Core Immunization Profile]
 
     Additional requirements in [IPS Immunization](http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips):

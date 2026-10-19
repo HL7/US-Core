@@ -38,6 +38,9 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/Struct
 # 08. === The following content is inherited from the base standard and cannot be changed ===
 
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
+A definition could not be found for Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1'
+The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function|4.0.1' which is experimental, but this structure is not labeled as experimental
 
 # 09. === The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.) ===
 
@@ -127,6 +130,8 @@ WARNING: Observation/pack-years-example: Observation.value.ofType(Quantity): UCU
 # 29. === US Core thoroughly documents its Must Support expectations for the must supports on the Must Support page, including how they apply to the choice of target references in the Must Support - Resource References section. (Also,  see this chat https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Must.20Support.20Target.20Error.20for.20Reference.20type.20Element ===
 
 The element Procedure.performer.actor has types/profiles/targets that are marked as must support, but the element itself is not marked as must-support
+The element DiagnosticReport.basedOn has types/profiles/targets that are marked as must support, but the element itself is not marked as must-support
+The element DiagnosticReport.imagingStudy has types/profiles/targets that are marked as must support, but the element itself is not marked as must-support
 
 # 30. === Two Bundle examples use this profile and one non-validated inline example that conforms to it as well - when the publisher understands versioned examples, we will create a published example to replace it.  ===
 
@@ -154,10 +159,12 @@ The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-suppor
 The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 The slice 'us-core' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 The slice 'NCSBNID' on path 'Practitioner.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'studyInstanceUID' on path 'ImagingStudy.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 
 # 35. === These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider updating and/or adopting the recommended replacement in a future release. ===
 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.3.0 is deprecated with the note: 'Replaced by [[[http://hl7.org/fhir/StructureDefinition/itemWeight]]]'
 The concept 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is deprecated and its use should be reviewed
 The concept 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is deprecated and its use should be reviewed

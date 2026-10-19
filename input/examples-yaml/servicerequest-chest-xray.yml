@@ -6,9 +6,24 @@ meta:
     valueString: ServiceRequest Chest XRay Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is an example requesting a Imaging Order (Portable XR Chest Views) for a patient
-      using the *US Core ServiceRequest Profile*.
+      using the *US Core ServiceRequest Profile*. The accession number in
+      `ServiceRequest.identifier` is an Additional USCDI Requirement for the
+      USCDI Diagnostic Imaging Reference data element and is the same identifier
+      carried on the DiagnosticReport Chest Xray Report and ImagingStudy Chest
+      Xray examples.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+
+# =========== New for USCDI 7 =============
+identifier:
+- type:
+    coding:
+    - system: http://terminology.hl7.org/CodeSystem/v2-0203
+      code: ACSN
+      display: Accession ID
+  system: http://example.org/radiology/accession
+  value: A20190203001
+# ==========================================
 status: active
 intent: order
 

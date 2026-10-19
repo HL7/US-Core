@@ -6,6 +6,27 @@
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|10.0.0-ballot"
     ]
   },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "ACSN",
+            "display": "Accession ID"
+          }
+        ]
+      },
+      "system": "http://example.org/radiology/accession",
+      "value": "A20190203001"
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/chest-xray",
+      "display": "Portable XR Chest Views order"
+    }
+  ],
   "status": "final",
   "category": [
     {
@@ -54,6 +75,12 @@
     {
       "reference": "Observation/xray-chest-impression",
       "display": "Impression"
+    }
+  ],
+  "imagingStudy": [
+    {
+      "reference": "ImagingStudy/imagingstudy-chest-xray",
+      "display": "Portable XR Chest Views study"
     }
   ],
   "media": [

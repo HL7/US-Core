@@ -17,6 +17,20 @@ differential:
     - id: ServiceRequest
       path: ServiceRequest
       mustSupport: false
+    #===================  new for USCDI 7====================================
+    - id: ServiceRequest.identifier
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: ServiceRequest.identifier
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Identifiers assigned to this order instance"
+      comment: >-
+        A business identifier such as an accession number originates with the
+        order and can be used to locate the corresponding report and imaging
+        study.
+      min: 0
+      max: '*'
+    #===================  new for USCDI 7====================================
     - id: ServiceRequest.status
       path: ServiceRequest.status
       mustSupport: true

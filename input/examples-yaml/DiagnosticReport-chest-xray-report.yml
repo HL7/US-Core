@@ -8,7 +8,27 @@ meta:
     valueString: DiagnosticReport Chest Xray Report Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a DiagnosticReport chest xray report example for the *US
-      Core DiagnosticReport Note Profile*.
+      Core DiagnosticReport Note Profile*. It shows the Additional USCDI
+      Requirements for the USCDI Diagnostic Imaging Reference data element - the
+      accession number in `DiagnosticReport.identifier`, the order in
+      `DiagnosticReport.basedOn`, the study in `DiagnosticReport.imagingStudy`,
+      and the patient-friendly image link in `DiagnosticReport.media.link`. The
+      same accession number appears on the ServiceRequest Chest XRay example and
+      the ImagingStudy Chest Xray example.
+
+# =========== New for USCDI 7 =============
+identifier:
+- type:
+    coding:
+    - system: http://terminology.hl7.org/CodeSystem/v2-0203
+      code: ACSN
+      display: Accession ID
+  system: http://example.org/radiology/accession
+  value: A20190203001
+basedOn:
+- reference: ServiceRequest/chest-xray
+  display: Portable XR Chest Views order
+# ==========================================
 status: final
 category:
 - coding:
@@ -40,6 +60,11 @@ result:
   display: Findings
 - reference: Observation/xray-chest-impression
   display: Impression
+# =========== New for USCDI 7 =============
+imagingStudy:
+- reference: ImagingStudy/imagingstudy-chest-xray
+  display: Portable XR Chest Views study
+# ==========================================
 media:
 - link:
     reference: Media/chest-xray

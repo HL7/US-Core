@@ -50,6 +50,7 @@
 [devicerequest-walker]: DeviceRequest-devicerequest-walker.html
 [cardiology-report]: DiagnosticReport-cardiology-report.html
 [chest-xray-report]: DiagnosticReport-chest-xray-report.html
+[wado-rs]: Endpoint-wado-rs.html
 [docref-example-1]: Bundle-docref-example-1.html
 [docref-example-2]: Bundle-docref-example-2.html
 [adi-dnr]: DocumentReference-adi-dnr.html
@@ -101,6 +102,8 @@
 [HVS-item-example-88123-5]: Observation-HVS-item-example-88123-5.html
 [HVS-item-example-88124-3]: Observation-HVS-item-example-88124-3.html
 [HVS-panel-example-88121-9]: Observation-HVS-panel-example-88121-9.html
+[imagingstudy-chest-xray]: ImagingStudy-imagingstudy-chest-xray.html
+[imagingstudy-multiseries-ct]: ImagingStudy-imagingstudy-multiseries-ct.html
 [imm-1]: Immunization-imm-1.html
 [immunization-not-done]: Immunization-immunization-not-done.html
 [jugular-vein-distension]: Observation-jugular-vein-distension.html
@@ -301,6 +304,7 @@
 [USCoreGoalProfile]: StructureDefinition-us-core-goal.html
 [USCoreHeadCircumferenceProfile]: StructureDefinition-us-core-head-circumference.html
 [USCoreHeartRateProfile]: StructureDefinition-us-core-heart-rate.html
+[USCoreImagingStudyProfile]: StructureDefinition-us-core-imagingstudy.html
 [USCoreImmunizationProfile]: StructureDefinition-us-core-immunization.html
 [USCoreIndividualSexExtension]: StructureDefinition-us-core-individual-sex.html
 [USCoreInterpreterNeededExtension]: StructureDefinition-us-core-interpreter-needed.html
@@ -398,6 +402,7 @@
 [USCoreDiagnosticreportCategory]: SearchParameter-us-core-diagnosticreport-category.html
 [USCoreDiagnosticreportCode]: SearchParameter-us-core-diagnosticreport-code.html
 [USCoreDiagnosticreportDate]: SearchParameter-us-core-diagnosticreport-date.html
+[USCoreDiagnosticreportIdentifier]: SearchParameter-us-core-diagnosticreport-identifier.html
 [USCoreDiagnosticreportLastUpdated]: SearchParameter-us-core-diagnosticreport-lastupdated.html
 [USCoreDiagnosticreportPatient]: SearchParameter-us-core-diagnosticreport-patient.html
 [USCoreDiagnosticreportStatus]: SearchParameter-us-core-diagnosticreport-status.html
@@ -425,6 +430,9 @@
 [USCoreGoalLifecycleStatus]: SearchParameter-us-core-goal-lifecycle-status.html
 [USCoreGoalPatient]: SearchParameter-us-core-goal-patient.html
 [USCoreGoalTargetDate]: SearchParameter-us-core-goal-target-date.html
+[USCoreImagingstudyId]: SearchParameter-us-core-imagingstudy-id.html
+[USCoreImagingstudyIdentifier]: SearchParameter-us-core-imagingstudy-identifier.html
+[USCoreImagingstudyPatient]: SearchParameter-us-core-imagingstudy-patient.html
 [USCoreImmunizationDate]: SearchParameter-us-core-immunization-date.html
 [USCoreImmunizationPatient]: SearchParameter-us-core-immunization-patient.html
 [USCoreImmunizationStatus]: SearchParameter-us-core-immunization-status.html
@@ -487,6 +495,7 @@
 [USCoreServicerequestCategory]: SearchParameter-us-core-servicerequest-category.html
 [USCoreServicerequestCode]: SearchParameter-us-core-servicerequest-code.html
 [USCoreServicerequestId]: SearchParameter-us-core-servicerequest-id.html
+[USCoreServicerequestIdentifier]: SearchParameter-us-core-servicerequest-identifier.html
 [USCoreServicerequestPatient]: SearchParameter-us-core-servicerequest-patient.html
 [USCoreServicerequestStatus]: SearchParameter-us-core-servicerequest-status.html
 [USCoreSpecimenId]: SearchParameter-us-core-specimen-id.html

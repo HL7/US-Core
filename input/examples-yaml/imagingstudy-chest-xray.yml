@@ -1,0 +1,31 @@
+resourceType: ImagingStudy
+id: imagingstudy-chest-xray
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-imagingstudy
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: ImagingStudy Chest Xray Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is an example portable chest radiograph study for the *US
+      Core ImagingStudy Profile*. It contains only the mandatory and Must Support
+      elements. It is identified by its accession number and is reachable through a
+      DICOMweb WADO-RS endpoint. It carries no DICOM Study Instance UID, so a
+      consumer queries for the study rather than retrieving the images directly.
+      The *US Core DiagnosticReport Profile for Report and Note Exchange* chest
+      xray report example references this study through `DiagnosticReport.imagingStudy`.
+identifier:
+- type:
+    coding:
+    - system: http://terminology.hl7.org/CodeSystem/v2-0203
+      code: ACSN
+      display: Accession ID
+  system: http://example.org/radiology/accession
+  value: A20190203001
+status: available
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+endpoint:
+- reference: Endpoint/wado-rs
+  display: Acme Radiology DICOMweb WADO-RS

@@ -549,9 +549,17 @@
         "reference": {
           "reference": "DiagnosticReport/chest-xray-report"
         },
-        "description": "This is a DiagnosticReport chest xray report example for the *US Core DiagnosticReport Note Profile*.",
+        "description": "This is a DiagnosticReport chest xray report example for the *US Core DiagnosticReport Note Profile*. It shows the Additional USCDI Requirements for the USCDI Diagnostic Imaging Reference data element - the accession number in `DiagnosticReport.identifier`, the order in `DiagnosticReport.basedOn`, the study in `DiagnosticReport.imagingStudy`, and the patient-friendly image link in `DiagnosticReport.media.link`. The same accession number appears on the ServiceRequest Chest XRay example and the ImagingStudy Chest Xray example.",
         "name": "DiagnosticReport Chest Xray Report Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Endpoint/wado-rs"
+        },
+        "description": "This is an example DICOMweb WADO-RS service endpoint that is referenced by the *US Core ImagingStudy Profile*. It provides retrieval access to the imaging objects of a study.",
+        "name": "DICOMweb WADO-RS Endpoint Example",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -960,6 +968,22 @@
         "description": "This is a HVSPanel Example 88121-9 (Hunger Vital Sign [HVS]) for the *US Core Observation Screening Assessment Profile*",
         "name": "HVSPanel Example 88121-9",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "ImagingStudy/imagingstudy-chest-xray"
+        },
+        "description": "This is an example portable chest radiograph study for the *US Core ImagingStudy Profile*. It contains only the mandatory and Must Support elements. It is identified by its accession number and is reachable through a DICOMweb WADO-RS endpoint. It carries no DICOM Study Instance UID, so a consumer queries for the study rather than retrieving the images directly. The *US Core DiagnosticReport Profile for Report and Note Exchange* chest xray report example references this study through `DiagnosticReport.imagingStudy`.",
+        "name": "ImagingStudy Chest Xray Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-imagingstudy|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "ImagingStudy/imagingstudy-multiseries-ct"
+        },
+        "description": "This is an example computed tomography study of the abdomen and pelvis for the *US Core ImagingStudy Profile*. It carries both `ImagingStudy.identifier` slices, a DICOM Study Instance UID and an accession number, so the images can be retrieved directly through the DICOMweb WADO-RS endpoint. `ImagingStudy.modality` and the series skeleton are not constrained by this profile and are shown here because a system that holds them can send them.",
+        "name": "ImagingStudy Multi-series CT Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-imagingstudy|10.0.0-ballot"
       },
       {
         "reference": {
@@ -1981,7 +2005,7 @@
         "reference": {
           "reference": "ServiceRequest/chest-xray"
         },
-        "description": "This is an example requesting a Imaging Order (Portable XR Chest Views) for a patient using the *US Core ServiceRequest Profile*.",
+        "description": "This is an example requesting a Imaging Order (Portable XR Chest Views) for a patient using the *US Core ServiceRequest Profile*. The accession number in `ServiceRequest.identifier` is an Additional USCDI Requirement for the USCDI Diagnostic Imaging Reference data element and is the same identifier carried on the DiagnosticReport Chest Xray Report and ImagingStudy Chest Xray examples.",
         "name": "ServiceRequest Chest XRay Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest|10.0.0-ballot"
       },
@@ -2560,6 +2584,14 @@
         "description": "The US Core Heart Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
         "exampleBoolean": false,
         "name": "US Core Heart Rate Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-imagingstudy"
+        },
+        "description": "The US Core ImagingStudy Profile inherits from the FHIR [ImagingStudy](https://hl7.org/fhir/R4/imagingstudy.html) resource; refer to it for scope and usage definitions. Along with the US Core DiagnosticReport Profile for Report and Note Exchange and US Core ServiceRequest Profile, this profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Diagnostic Imaging Reference Data Element of the Diagnostic Imaging Data Class*. It sets minimum expectations for the ImagingStudy resource to record, search, and fetch the identifiers and endpoints needed to locate or access a diagnostic imaging study. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+        "exampleBoolean": false,
+        "name": "US Core ImagingStudy Profile"
       },
       {
         "reference": {
@@ -3339,6 +3371,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-diagnosticreport-identifier"
+        },
+        "description": "**An identifier for the report**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreDiagnosticreportIdentifier"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-diagnosticreport-lastupdated"
         },
         "description": "**When the resource version last changed**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
@@ -3552,6 +3592,30 @@
         "description": "**Reach goal on or before**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
         "exampleBoolean": false,
         "name": "USCoreGoalTargetDate"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-imagingstudy-id"
+        },
+        "description": "**Logical id of this artifact**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreImagingstudyId"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-imagingstudy-identifier"
+        },
+        "description": "**Identifiers for the Study, such as DICOM Study Instance UID and Accession number**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreImagingstudyIdentifier"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-imagingstudy-patient"
+        },
+        "description": "**Who or what is the subject of the study**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreImagingstudyPatient"
       },
       {
         "reference": {
@@ -4048,6 +4112,14 @@
         "description": "**Logical id of this artifact**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
         "exampleBoolean": false,
         "name": "USCoreServicerequestId"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-servicerequest-identifier"
+        },
+        "description": "**Identifiers assigned to this order**  \nNOTE: This SearchParameter is defined only to document Server and Client expectations. Its definition is derived from the standard FHIR SearchParameter and it uses the [Conformance expectation extension](http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation) to define additional expectations for the following SearchParameter elements:\n- `multipleAnd`\n- `multipleOr`\n- `comparator`\n- `modifier`\n- `chain`\n\nIt **SHALL NOT** be used as a search parameter for search. Servers and Clients **SHOULD** use the standard FHIR SearchParameter.\n",
+        "exampleBoolean": false,
+        "name": "USCoreServicerequestIdentifier"
       },
       {
         "reference": {

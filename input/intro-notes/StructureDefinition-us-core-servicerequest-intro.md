@@ -25,12 +25,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 4. when the request was made
 5. the requester<sup>3</sup>
 
-{% include additional-requirements-intro.md type="ServiceRequest" %}
+{% include additional-requirements-intro.md type="ServiceRequest" plural="true" %}
 
 1. the name of the test, procedure, or service to be performed
 1. a reason or indication for referral or consultation<sup>4</sup>
+1. <span class="bg-success" markdown="1">a business identifier assigned to the order<sup>5</sup></span><!-- new-content -->
 
-<sup>1,2,3,4</sup> see guidance below
+<span class="bg-success" markdown="1"><sup>1,2,3,4,5</sup> see guidance below</span><!-- new-content -->
 
 ### Profile Specific Implementation Guidance
 
@@ -45,6 +46,11 @@ This section provides detailed implementation guidance for the US Core Profile t
        - Servers **SHALL** support *at least one* target resource in `ServiceRequest.reasonReference`.<sup>[§][CONF-0520]</sup> Clients **SHALL** support all target resources.<sup>[§][CONF-0521]</sup>
        - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].<sup>[§][CONF-0522]</sup>
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
+<div class="bg-success" markdown="1">
+
+- <sup>5</sup>Accession numbers originate with the order as `ServiceRequest.identifier`, and, typically, the same identifier appears on the report as `DiagnosticReport.identifier` and the study results, in other words, as `Observation.identifier` or `ImagingStudy.identifier`. Recording it on the order allows a client to start from a known business identifier and reach the corresponding report and results.
+
+</div><!-- new-content -->
 
 
 

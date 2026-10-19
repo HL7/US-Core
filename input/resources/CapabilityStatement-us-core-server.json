@@ -2113,6 +2113,23 @@
                 }
               ],
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                },
+                {
+                  "url": "required",
+                  "valueString": "patient"
+                },
+                {
+                  "url": "required",
+                  "valueString": "identifier"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
             }
           ],
           "type": "DiagnosticReport",
@@ -2299,6 +2316,18 @@
               "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-lastupdated|10.0.0-ballot",
               "type": "date",
               "documentation": "A server **SHALL** document the types of changes that can be detected using this parameter.\n\n\nA client **SHALL** provide a value precise to the *second + time offset*.\n\n\nA server **SHALL** support a value precise to the *second + time offset*."
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-identifier|10.0.0-ballot",
+              "type": "token",
+              "documentation": "The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\n\nThe server **SHALL** support both."
             },
             {
               "extension": [
@@ -3616,6 +3645,186 @@
                 }
               ],
               "code": "history-type"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                },
+                {
+                  "url": "required",
+                  "valueString": "patient"
+                },
+                {
+                  "url": "required",
+                  "valueString": "identifier"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+            }
+          ],
+          "type": "ImagingStudy",
+          "supportedProfile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-imagingstudy|10.0.0-ballot"
+          ],
+          "_supportedProfile": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+                  "valueUrl": "StructureDefinition-us-core-imagingstudy.html"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/display",
+                  "valueString": "US Core ImagingStudy Profile"
+                }
+              ]
+            }
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "code": "create"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "vread"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "code": "update"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "code": "patch"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "code": "delete"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "history-instance"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "code": "history-type"
+            }
+          ],
+          "searchRevInclude": [
+            "Provenance:target"
+          ],
+          "_searchRevInclude": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "_id",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-imagingstudy-id|10.0.0-ballot",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-imagingstudy-identifier|10.0.0-ballot",
+              "type": "token",
+              "documentation": "The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\n\nThe server **SHALL** support both."
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-imagingstudy-patient|10.0.0-ballot",
+              "type": "reference",
+              "documentation": "The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.\n\n\nThe server **SHALL** support both."
             }
           ]
         },
@@ -7482,6 +7691,23 @@
                 }
               ],
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                },
+                {
+                  "url": "required",
+                  "valueString": "patient"
+                },
+                {
+                  "url": "required",
+                  "valueString": "identifier"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
             }
           ],
           "type": "ServiceRequest",
@@ -7647,6 +7873,18 @@
               ],
               "name": "code",
               "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-code|10.0.0-ballot",
+              "type": "token",
+              "documentation": "The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\n\nThe server **SHALL** support both."
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-identifier|10.0.0-ballot",
               "type": "token",
               "documentation": "The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.\n\n\nThe server **SHALL** support both."
             },

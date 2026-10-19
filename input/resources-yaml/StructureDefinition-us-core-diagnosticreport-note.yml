@@ -26,6 +26,55 @@ differential:
           human: effective[x] SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'
           expression: (status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()
       mustSupport: false
+    #===================  new for USCDI 7====================================
+    - id: DiagnosticReport.identifier
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: DiagnosticReport.identifier
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Business identifier for report"
+      comment: >-
+        A business identifier such as an accession number can be used to locate
+        the report and the source images in external systems.
+      min: 0
+      max: '*'
+    - id: DiagnosticReport.basedOn
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: DiagnosticReport.basedOn
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: What was requested"
+      comment: >-
+        Imaging identifiers such as the accession number originate with the
+        order. The reference to the order connects the order, the report, and
+        the imaging study.
+      min: 0
+      max: '*'
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
+            - http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-nutritionorder
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+    #===================  new for USCDI 7====================================
     - id: DiagnosticReport.status
       path: DiagnosticReport.status
       condition:
@@ -197,14 +246,52 @@ differential:
                 - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: false
       mustSupport: true
-  # ==========removed in v8 =============
-  # - id: DiagnosticReport.media
-  #   path: DiagnosticReport.media
-  #   mustSupport: true
-  # - id: DiagnosticReport.media.link
-  #   path: DiagnosticReport.media.link
-  #   mustSupport: true
-  # ===================================
+    #===================  new for USCDI 7====================================
+    # Must Support was removed in v8. Both elements return in v10 as Additional
+    # USCDI Requirements for the Diagnostic Imaging Reference data element.
+    - id: DiagnosticReport.imagingStudy
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: DiagnosticReport.imagingStudy
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Reference to full details of imaging associated with the diagnostic report"
+      comment: >-
+        The reference to the imaging study is the principal way this profile
+        meets the USCDI Diagnostic Imaging Reference data element. The reference
+        is profiled only to the Reference level; the identifier sub-element is
+        not profiled.
+      min: 0
+      max: '*'
+      type:
+        - code: Reference
+          targetProfile:
+            - http://hl7.org/fhir/us/core/StructureDefinition/us-core-imagingstudy
+          _targetProfile:
+            - extension:
+                - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+    - id: DiagnosticReport.media
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: DiagnosticReport.media
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Key images associated with this report"
+      min: 0
+      max: '*'
+    - id: DiagnosticReport.media.link
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: DiagnosticReport.media.link
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Reference to the image source"
+      comment: >-
+        Supporting the link to patient-friendly content such as a jpg image is
+        not a substitute for meeting the USCDI Diagnostic Imaging Reference data
+        element. The US Core ImagingStudy Profile, with its endpoint
+        information, is the principal mechanism.
+      min: 1
+      max: '1'
+    #===================  new for USCDI 7====================================
     - id: DiagnosticReport.presentedForm
       path: DiagnosticReport.presentedForm
       mustSupport: true

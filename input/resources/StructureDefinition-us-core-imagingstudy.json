@@ -1,0 +1,140 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-imagingstudy",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-imagingstudy",
+  "name": "USCoreImagingStudyProfile",
+  "title": "US Core ImagingStudy Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-10-19",
+  "description": "The US Core ImagingStudy Profile inherits from the FHIR [ImagingStudy](https://hl7.org/fhir/R4/imagingstudy.html) resource; refer to it for scope and usage definitions. Along with the US Core DiagnosticReport Profile for Report and Note Exchange and US Core ServiceRequest Profile, this profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Diagnostic Imaging Reference Data Element of the Diagnostic Imaging Data Class*. It sets minimum expectations for the ImagingStudy resource to record, search, and fetch the identifiers and endpoints needed to locate or access a diagnostic imaging study. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ImagingStudy",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ImagingStudy",
+        "path": "ImagingStudy"
+      },
+      {
+        "id": "ImagingStudy.identifier",
+        "path": "ImagingStudy.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice to identify the DICOM Study Instance UID, which is patterned on the identifier system, and the accession number, which is patterned on the identifier type."
+        },
+        "short": "Identifiers for the whole study",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "ImagingStudy.identifier:studyInstanceUID",
+        "path": "ImagingStudy.identifier",
+        "sliceName": "studyInstanceUID",
+        "short": "DICOM Study Instance UID",
+        "comment": "The DICOM Study Instance UID, represented as an Identifier with the system `urn:dicom:uid` and a value of the form `urn:oid:1.2.250.1...`. This slice is neither mandatory nor Must Support in this version of US Core. It is defined so that systems that hold the Study Instance UID have a consistent way to communicate it.",
+        "min": 0,
+        "max": "1",
+        "patternIdentifier": {
+          "system": "urn:dicom:uid"
+        }
+      },
+      {
+        "id": "ImagingStudy.identifier:accessionNumber",
+        "path": "ImagingStudy.identifier",
+        "sliceName": "accessionNumber",
+        "short": "Accession Number",
+        "comment": "The accession number assigned by the order filler. It identifies the order the study fulfills and is used to query for the study; it is not used to retrieve the images. Retrieval is addressed by `ImagingStudy.endpoint`.",
+        "min": 0,
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "ACSN"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "ImagingStudy.status",
+        "path": "ImagingStudy.status",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/imagingstudy-status"
+        }
+      },
+      {
+        "id": "ImagingStudy.subject",
+        "path": "ImagingStudy.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/StructureDefinition/Group"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ImagingStudy.endpoint",
+        "path": "ImagingStudy.endpoint",
+        "short": "The network service providing access to the study",
+        "comment": "The network service providing access (for example, query, view, or retrieval) for the study. A study can list more than one endpoint when different use cases are served by different services. The presence of an endpoint does not guarantee access to the images. See the profile introduction for endpoint guidance.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      }
+    ]
+  }
+}
