@@ -1078,6 +1078,7 @@ For all changes
       - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed.
       - [ ] New or Updated Example(s)
   - [ ] Update Additional USCDI table if the design team decides element is Additional USCDI
+  - [ ] Review and update the additional requirements in IPA/IPS on the Relationship With Other IGs page if needed for Profiles marked as "Additional Requirements"
   - [ ] New ValueSet if the design team decides it is needed for codeable elements ( typically in VSAC )
   - [ ] New Search if the design team decides it is needed
        - [ ] Update the Search API table
@@ -1103,8 +1104,11 @@ For all changes
       - [ ] add scopes
       - [ ] year added
       - [ ] current_fmm,proposed_fmm : default is 2 for new
-   - [ ] Add a requirement key for the resource level scope to `input/data/us_core_reqs.csv`, then regenerate the Requirements resources with `publish.sh -R`
-   - [ ] Update the CapabilityStatement
+  - [ ] Update the Relationship With Other IGs page content
+    - [ ] Comparison With International IGs table
+    - [ ] Additional requirements in IPA/IPS if needed for Profiles marked as "Additional Requirements"
+  - [ ] Add a requirement key for the resource level scope to `input/data/us_core_reqs.csv`, then regenerate the Requirements resources with `publish.sh -R`
+  - [ ] Update the CapabilityStatement
 
 
 ##### Updated Guidance (e.g. Surveys and Assessments)
