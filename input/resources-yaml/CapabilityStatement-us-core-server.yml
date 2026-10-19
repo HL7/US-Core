@@ -3839,6 +3839,7 @@ rest:
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient-accommodation
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate
     - http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature
     - http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height
@@ -3930,6 +3931,14 @@ rest:
         valueUrl: StructureDefinition-us-core-care-experience-preference.html
       - url: http://hl7.org/fhir/StructureDefinition/display
         valueString: US Core Care Experience Preference Profile
+    - extension:
+      - url:
+          http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
+        valueCode: SHALL
+      - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+        valueUrl: StructureDefinition-us-core-patient-accommodation.html
+      - url: http://hl7.org/fhir/StructureDefinition/display
+        valueString: US Core Patient Accommodation Profile
     - extension:
       - url:
           http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation

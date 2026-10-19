@@ -100,7 +100,7 @@ The script filters out the active profiles and displays their compliance levels
 <tr>
 <th>US Core {{site.data.fhir.igVer}}</th>
 <th>International Patient Access 1.1.0</th>
-<th>International Patient Summary 2.0.0</th>
+<th>International Patient Summary 2.0.1</th>
 </tr>
 </thead>
 <tbody>
@@ -147,7 +147,7 @@ The following US Core resources are compatible to the IPA profiles, but the IPA 
    - `Observation.value[x]` Element maximum cardinalities differ: '1' vs '0'
    - `Observation.dataAbsentReason` Elements differ in definition for mustSupport: 'true' vs 'false'
 
-1. [US Core Care Experience Preference Profile], [US Core Simple Observation Profile], [US Core Tobacco And Nicotine Use Observation Profile], [US Core Treatment Intervention Preference Profile]
+1. [US Core Care Experience Preference Profile], <span class="bg-success" markdown="1">[US Core Patient Accommodation Profile]</span><!-- new-content -->, [US Core Simple Observation Profile], [US Core Tobacco And Nicotine Use Observation Profile], [US Core Treatment Intervention Preference Profile]
 
    Additional requirements in [IPA Observation](http://hl7.org/fhir/uv/IPA/StructureDefinition/IPA-observation) (IPA vs US Core):
 
@@ -185,6 +185,12 @@ This version of US Core has no equivalent profile for the following IPA profiles
 ##### Additional requirements in IPS
 
 The following US Core resources are compatible to the IPS profiles, but the IPS profile(s) contain additional requirements which are listed below. Changes may be needed to meet all the IPS profile requirements. Implementers are advised to note that some code changes may be required to support these profiles.
+
+<div class="bg-success" markdown="1">
+
+The [US Core Patient Accommodation Profile] is the one profile marked incompatible with IPS. IPS represents this information with [Flag - Alert (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-Flag-alert-uv-ips.html) rather than with an Observation, so a single resource cannot conform to both. US Core has no Flag profile, and IPS Flag - Alert is listed under *Additional profiles in IPS* below.
+
+</div><!-- new-content -->
 
 1. [US Core AllergyIntolerance Profile]
 
@@ -429,7 +435,6 @@ This version of US Core has no equivalent profile for the following IPS profiles
 - [Composition (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html)
 - [DeviceUseStatement (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-DeviceUseStatement-uv-ips.html)
 - [Flag - Alert (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-Flag-alert-uv-ips.html)
-- [ImagingStudy (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-ImagingStudy-uv-ips.html)
 - [MedicationStatement (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-MedicationStatement-uv-ips.html)
 - [Observation Pregnancy - Expected Delivery Date (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-Observation-pregnancy-edd-uv-ips.html)
 - [Observation Pregnancy - Outcome (IPS)](https://hl7.org/fhir/uv/ips/StructureDefinition-Observation-pregnancy-outcome-uv-ips.html)

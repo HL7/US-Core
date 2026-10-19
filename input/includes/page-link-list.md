@@ -530,6 +530,11 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Organization Profile - Mappings]: StructureDefinition-us-core-organization-mappings.html
 [US Core Organization Profile - Testing]: StructureDefinition-us-core-organization-testing.html
 [US Core Organization Profile - Examples]: StructureDefinition-us-core-organization-examples.html
+[US Core Patient Accommodation Profile]: StructureDefinition-us-core-patient-accommodation.html
+[US Core Patient Accommodation Profile - Definitions]: StructureDefinition-us-core-patient-accommodation-definitions.html
+[US Core Patient Accommodation Profile - Mappings]: StructureDefinition-us-core-patient-accommodation-mappings.html
+[US Core Patient Accommodation Profile - Testing]: StructureDefinition-us-core-patient-accommodation-testing.html
+[US Core Patient Accommodation Profile - Examples]: StructureDefinition-us-core-patient-accommodation-examples.html
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
 [US Core Patient Profile - Definitions]: StructureDefinition-us-core-patient-definitions.html
 [US Core Patient Profile - Mappings]: StructureDefinition-us-core-patient-mappings.html
@@ -749,6 +754,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [AllergyIntolerance Provenance Example 2]: Bundle-allergyintolerance-provenance-example2.html
 [Appointment From Referral Example]: Appointment-from-referral.html
 [Appointment Resulting In An Encounter Example]: Appointment-resulted-encounter.html
+[ASL Interpreter Accommodation Example]: Observation-accommodation-asl.html
 [At Home In Vitro Test Example]: Observation-at-home-in-vitro-test.html
 [Audit-C Item Example 68517-2]: Observation-AUDIT-C-item-example-68517-2.html
 [Audit-C Item Example 68519-8]: Observation-AUDIT-C-item-example-68519-8.html
@@ -998,6 +1004,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Uscore Med1 Example]: Medication-uscore-med1.html
 [Uscore Med2 Example]: Medication-uscore-med2.html
 [Weight Example]: Observation-weight.html
+[Wheelchair Assistance Accommodation Example]: Observation-accommodation-wheelchair.html
 [Whole Blood Specimen Example]: Specimen-specimen-example-whole-blood.html
 [Xray Chest Findings Example]: Observation-xray-chest-findings.html
 [Xray Chest Impression Example]: Observation-xray-chest-impression.html

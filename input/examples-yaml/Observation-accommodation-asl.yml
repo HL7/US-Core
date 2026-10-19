@@ -1,0 +1,36 @@
+resourceType: Observation
+id: accommodation-asl
+meta:
+  profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient-accommodation
+  extension:
+    - url: http://hl7.org/fhir/StructureDefinition/instance-name
+      valueString: ASL Interpreter Accommodation Example
+    - url: http://hl7.org/fhir/StructureDefinition/instance-description
+      valueMarkdown: This example of a *US Core Patient Accommodation Profile* records that the patient requires an American Sign Language (ASL) interpreter at the point of care. It demonstrates representing the accommodation as a code in `Observation.valueCodeableConcept`, with `text` carrying the detail the code does not express - that the interpreter is for American Sign Language specifically.
+status: final
+category:
+  - coding:
+      - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+        code: accommodation
+    text: Reasonable accommodation
+code:
+  coding:
+    - system: http://loinc.org
+      code: 55555-5
+      display: Accommodation Need (placeholder, not a real LOINC code)
+  text: 'Accommodation Need (placeholder code 55555-5; the prerelease LOINC code is pending)'
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+effectiveDateTime: '2026-10-19'
+performer:
+  - reference: Practitioner/practitioner-1
+    display: Dr Ronald Bone
+valueCodeableConcept:
+  coding:
+    - system: http://snomed.info/sct
+      version: http://snomed.info/sct/731000124108
+      code: '1366476005'
+      display: Requires sign language interpretation service
+  text: American sign language interpreter required

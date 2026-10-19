@@ -5405,6 +5405,7 @@
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|10.0.0-ballot",
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference|10.0.0-ballot",
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|10.0.0-ballot",
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient-accommodation|10.0.0-ballot",
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate|10.0.0-ballot",
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature|10.0.0-ballot",
             "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height|10.0.0-ballot",
@@ -5565,6 +5566,22 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/display",
                   "valueString": "US Core Care Experience Preference Profile"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+                  "valueUrl": "StructureDefinition-us-core-patient-accommodation.html"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/display",
+                  "valueString": "US Core Patient Accommodation Profile"
                 }
               ]
             },

@@ -1,0 +1,30 @@
+resourceType: Observation
+id: accommodation-wheelchair
+meta:
+  profile:
+    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient-accommodation
+  extension:
+    - url: http://hl7.org/fhir/StructureDefinition/instance-name
+      valueString: Wheelchair Assistance Accommodation Example
+    - url: http://hl7.org/fhir/StructureDefinition/instance-description
+      valueMarkdown: This example of a *US Core Patient Accommodation Profile* records that the patient needs staff assistance with pushing a wheelchair during clinical encounters. It demonstrates representing the accommodation as free text in `Observation.valueString`, which is expected to be common until the terminology matures.
+status: final
+category:
+  - coding:
+      - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+        code: accommodation
+    text: Reasonable accommodation
+code:
+  coding:
+    - system: http://loinc.org
+      code: 55555-5
+      display: Accommodation Need (placeholder, not a real LOINC code)
+  text: 'Accommodation Need (placeholder code 55555-5; the prerelease LOINC code is pending)'
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+effectiveDateTime: '2026-10-19'
+performer:
+  - reference: Practitioner/practitioner-1
+    display: Dr Ronald Bone
+valueString: Need staff available to assist with pushing wheelchair

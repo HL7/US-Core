@@ -17,6 +17,7 @@
 [allergyintolerance-provenance-example2]: Bundle-allergyintolerance-provenance-example2.html
 [from-referral]: Appointment-from-referral.html
 [resulted-encounter]: Appointment-resulted-encounter.html
+[accommodation-asl]: Observation-accommodation-asl.html
 [at-home-in-vitro-test]: Observation-at-home-in-vitro-test.html
 [AUDIT-C-item-example-68517-2]: Observation-AUDIT-C-item-example-68517-2.html
 [AUDIT-C-item-example-68519-8]: Observation-AUDIT-C-item-example-68519-8.html
@@ -331,6 +332,7 @@
 [USCoreObservationScreeningAssessmentProfile]: StructureDefinition-us-core-observation-screening-assessment.html
 [USCoreObservationSexualOrientationProfile]: StructureDefinition-us-core-observation-sexual-orientation.html
 [USCoreOrganizationProfile]: StructureDefinition-us-core-organization.html
+[USCorePatientAccommodationProfile]: StructureDefinition-us-core-patient-accommodation.html
 [USCorePatientProfile]: StructureDefinition-us-core-patient.html
 [USCorePediatricBMIforAgeObservationProfile]: StructureDefinition-pediatric-bmi-for-age.html
 [USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
@@ -501,6 +503,7 @@
 [USCoreSpecimenId]: SearchParameter-us-core-specimen-id.html
 [USCoreSpecimenPatient]: SearchParameter-us-core-specimen-patient.html
 [weight]: Observation-weight.html
+[accommodation-wheelchair]: Observation-accommodation-wheelchair.html
 [specimen-example-whole-blood]: Specimen-specimen-example-whole-blood.html
 [xray-chest-findings]: Observation-xray-chest-findings.html
 [xray-chest-impression]: Observation-xray-chest-impression.html

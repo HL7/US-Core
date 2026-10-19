@@ -174,6 +174,11 @@ definition:
       name: Appointment Resulting In An Encounter Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-appointment
     - reference:
+        reference: Observation/accommodation-asl
+      description: This example of a *US Core Patient Accommodation Profile* records that the patient requires an American Sign Language (ASL) interpreter at the point of care. It demonstrates representing the accommodation as a code in `Observation.valueCodeableConcept`, with `text` carrying the detail the code does not express - that the interpreter is for American Sign Language specifically.
+      name: ASL Interpreter Accommodation Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient-accommodation
+    - reference:
         reference: Observation/at-home-in-vitro-test
       description: This is an At home in vitro test example for the *US Core Observation Lab Profile*, with a coded result value.
       name: At Home In Vitro Test Example
@@ -1772,6 +1777,11 @@ definition:
       exampleBoolean: false
       name: US Core Organization Profile
     - reference:
+        reference: StructureDefinition/us-core-patient-accommodation
+      description: The US Core Patient Accommodation Profile inherits from the FHIR [Observation](https://hl7.org/fhir/R4/observation.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Accommodation Data Element of the Patient Demographics/Information Data Class*. It sets minimum expectations for the Observation resource to record, search, and fetch the supports and services necessary for a patient to access care, including modifications, tools, and technologies. Examples include, but are not limited to, sign language interpreters, wheelchair accessibility requirements, and sensory accommodation. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
+      exampleBoolean: false
+      name: US Core Patient Accommodation Profile
+    - reference:
         reference: StructureDefinition/us-core-patient
       description: The US Core Patient Profile inherits from the FHIR [Patient](https://hl7.org/fhir/R4/patient.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Patient Demographics/Information* Data Class. It sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
@@ -2636,6 +2646,11 @@ definition:
       description: This is a weight example for the *Vitalsigns Profile*.
       name: Weight Example
       exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight
+    - reference:
+        reference: Observation/accommodation-wheelchair
+      description: This example of a *US Core Patient Accommodation Profile* records that the patient needs staff assistance with pushing a wheelchair during clinical encounters. It demonstrates representing the accommodation as free text in `Observation.valueString`, which is expected to be common until the terminology matures.
+      name: Wheelchair Assistance Accommodation Example
+      exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient-accommodation
     - reference:
         reference: Specimen/specimen-example-whole-blood
       description: This is a whole blood specimen example for the *US Core Specimen Profile*.
