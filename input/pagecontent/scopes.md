@@ -289,9 +289,9 @@ Content-Type: application/json
 {% endfor -%}
 {% assign scope_array = all_granular_scopes | split: "," | uniq | sort -%}
 {% for granular_scope in scope_array -%}
-    {{ granular_scope | split: '<sup>' | first | prepend: '    "patient/'}}",
-{{ granular_scope | split: '<sup>' | first | prepend: '    "user/'}}",
-{{ granular_scope | split: '<sup>' | first | prepend: '    "system/'}}"{% unless forloop.last %},{% endunless %}
+    {{ granular_scope | split: '<sup>' | first | strip | prepend: '    "patient/'}}",
+{{ granular_scope | split: '<sup>' | first | strip | prepend: '    "user/'}}",
+{{ granular_scope | split: '<sup>' | first | strip | prepend: '    "system/'}}"{% unless forloop.last %},{% endunless %}
 {% endfor -%}
   ],
   "response_types_supported": ["code"],
