@@ -35,8 +35,8 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 * An accommodation is a support or service a patient needs in order to access care, such as a sign language interpreter, a wheelchair-accessible room, or a sensory accommodation. It is a statement of what the patient needs, not a statement of the patient's disability or functional status. Disability and functional status are recorded as assessments; see the [Screening and Assessments] page.
 * <sup>1</sup>The Observation resource can represent the accommodation as a code using `Observation.valueCodeableConcept` or as free text using `Observation.valueString`.
-   * Although both are marked as *Must Support*, the Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0115]</sup>
-   * The Client application **SHALL** support both elements.<sup>[§][CONF-0116]</sup>
+   * Although both are marked as *Must Support*, the Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0926]</sup>
+   * The Client application **SHALL** support both elements.<sup>[§][CONF-0927]</sup>
    * Free text is expected to be common in the near term, since no code system covers accommodations completely. As the terminology matures, US Core will consider removing the free-text option and requiring the coded form.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 

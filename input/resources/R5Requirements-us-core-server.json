@@ -9419,6 +9419,48 @@
           ]
         }
       ]
+    },
+    {
+      "key": "CONF-0926",
+      "reference": [
+        "StructureDefinition-us-core-patient-accommodation.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "Although both Observation.valueCodeableConcept and Observation.valueString are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-patient-accommodation.html#CONF-0926"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0928",
+      "reference": [
+        "StructureDefinition-us-core-devicerequest.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "Although both DeviceRequest.codeCodeableConcept and DeviceRequest.codeReference are marked as Must Support, the Server system is not required to support both, but **SHALL** support at least one of these elements.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-devicerequest.html#CONF-0928"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

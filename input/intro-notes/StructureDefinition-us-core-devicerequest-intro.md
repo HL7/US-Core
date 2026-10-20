@@ -32,8 +32,8 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 * A medical device order is not always represented with a DeviceRequest. Depending on the context, the same order can be communicated with the [US Core ServiceRequest Profile] when the request is procedure focused, or with the [US Core MedicationRequest Profile] when the request is medication related, such as for billing. Clients can expect to find a medical device order in any of these three profiles.
 * <sup>1</sup>The DeviceRequest resource can represent the device requested as a code using `DeviceRequest.codeCodeableConcept` or as a reference using `DeviceRequest.codeReference`.
-   * Although both are marked as *Must Support*, the Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0115]</sup>
-   * The Client application **SHALL** support both elements.<sup>[§][CONF-0116]</sup>
+   * Although both are marked as *Must Support*, the Server system is not required to support both, but **SHALL** support at least one of these elements.<sup>[§][CONF-0928]</sup>
+   * The Client application **SHALL** support both elements.<sup>[§][CONF-0929]</sup>
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
 {% include link-list.md %}
