@@ -22,9 +22,9 @@ Two consequences follow for implementers:
 
 ### Where Adverse Event Information Is Recorded
 
-The following US Core Profiles shown in the figure below record the information the two Data Elements describe. The profiles overlap: the same incident may be recorded in more than one, and which one a system uses depends on how the clinician documented it.
+The US Core Profiles shown in the figure and table below record the information the two Data Elements describe. The profiles overlap: the same incident may be recorded in more than one, and which one a system uses depends on how the clinician documented it.
 
-{% include img.html img="ae-venn.png" caption="Figure 1: Resource Types that Capture Adverse Event Conditions and Outcomes" %}
+{% include img-med.html img="ae-venn.svg" caption="Figure 1: Resource Types that Capture Adverse Event Conditions and Outcomes" %}
 
 | US Core profile | Adverse Event Condition | Adverse Event Outcome | Why |
 |---|:---:|:---:|---|
@@ -36,6 +36,7 @@ The following US Core Profiles shown in the figure below record the information 
 | Simple Observation | ✓ | ✓ | clinical finding/status not covered by a more specific profile |
 | Encounter | | ✓ | hospitalization; discharge disposition |
 | CarePlan | **?** | **?** | primarily follow-up/treatment; not necessarily the AE outcome
+{:.grid}
 
 ### Overlap with Other USCDI Data Classes
 
