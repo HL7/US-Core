@@ -64,7 +64,7 @@ profile-metadata.csv columns:
 - title: profile or extension's human readable name
 - rel_url: profile or extension's relative path to the narrative content page in the IG.
 - current_fmm: FMM level in the current published version
-- proposed_fmm: Proposed FMM level for next version
+- us_core_maturity: US Core Maturity Level of the profile or extension
 - added: Published version when the profile or extension was added to the guide.
 - deprecated: Published version when the profile or extension was deprecated.
 - retired: Published version when the profile or extension was retired.

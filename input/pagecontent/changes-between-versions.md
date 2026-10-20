@@ -19,9 +19,13 @@ All US Core conformance and terminology artifacts are assigned a US Core Maturit
 The US Core Maturity Levels are assigned to US Core profiles, extensions, and operations based on the following criteria:
 
 - **US Core Maturity Level 5**: Level 5 is assigned to US Core profiles and extensions that have been present before the publication of US Core 3.1.1 in 2020, and have been thoroughly reviewed through the HL7 ballot and other processes, and widely implemented in production systems. Many of these artifacts are also identified in regulation and subject to ONC certification testing. These artifacts are sufficiently stable, and forward compatibility is enforced.
+  {% include us-core-maturity-level-list.md level="5" %}
 - **US Core Maturity Level 4**: Level 4 is assigned to US Core artifacts meeting all the US Core Maturity Level 5 Criteria, but were published after or significantly changed since US Core 3.1.1. These artifacts are sufficiently stable, and forward compatibility is enforced.
+  {% include us-core-maturity-level-list.md level="4" %}
 - **US Core Maturity Level 3**: Level 3 is assigned to US Core artifacts meeting all the US Core Maturity Level 4 or US Core Maturity Level 5 Criteria, but not yet widely used in production systems. Forward compatibility is not enforced.
+  {% include us-core-maturity-level-list.md level="3" %}
 - **US Core Maturity Level 2**: Level 2 is assigned to US Core artifacts that have not been identified in regulation or subject to ONC certification, and not widely implemented in production systems. Forward compatibility is not enforced
+  {% include us-core-maturity-level-list.md level="2" %}
 - **US Core Maturity Level 1**: There are no Level 1 artifacts in US Core
 
 #### SearchParameters
@@ -50,7 +54,7 @@ profile-metadata.csv columns:
 - title: profile or extension's human readable name
 - rel_url: profile or extension's relative path to the narrative content page in the IG.
 - current_fmm: FMM level in the current published version
-- proposed_fmm: Proposed FMM level for next version
+- us_core_maturity: US Core Maturity Level of the profile or extension
 - added: Published version when the profile or extension was added to the guide.
 - deprecated: Published version when the profile or extension was deprecated.
 - retired: Published version when the profile or extension was retired.

@@ -1,4 +1,6 @@
 
+{% include us-core-maturity.md id="us-core-medication" %}
+
 **Example Usage Scenarios:**
 
 Queries on Medication resources are expected to be within the context of a MedicationRequest resource query. The following are

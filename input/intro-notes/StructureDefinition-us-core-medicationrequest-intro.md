@@ -1,4 +1,6 @@
 
+{% include us-core-maturity.md id="us-core-medicationrequest" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-MedicationRequest

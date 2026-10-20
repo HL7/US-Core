@@ -1,3 +1,5 @@
+{% include us-core-maturity.md id="us-core-servicerequest" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:

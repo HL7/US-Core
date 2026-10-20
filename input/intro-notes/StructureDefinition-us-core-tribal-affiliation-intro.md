@@ -1,3 +1,5 @@
+{% include us-core-maturity.md id="us-core-tribal-affiliation" %}
+
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.

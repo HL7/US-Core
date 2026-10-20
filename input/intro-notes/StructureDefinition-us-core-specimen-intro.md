@@ -1,3 +1,5 @@
+{% include us-core-maturity.md id="us-core-specimen" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core Specimen profile:

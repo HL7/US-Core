@@ -1,5 +1,7 @@
 
 
+{% include us-core-maturity.md id="us-core-condition-problems-health-concerns" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:

@@ -277,3 +277,4 @@
 [Requirements Table]: requirements.html
 [US Core Clinical Notes]: clinical-notes.html
 [US Core Value Set Packages]: https://confluence.hl7.org/spaces/CGP/pages/453907194/Value+Set+Packages
+[US Core Maturity]: changes-between-versions.html#us-core-maturity-levels

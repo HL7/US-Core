@@ -1,3 +1,4 @@
+{% include us-core-maturity.md id="us-core-vital-signs" %}
 
 ### Mandatory and Must Support Data Elements
 

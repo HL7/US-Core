@@ -1091,6 +1091,7 @@ For all changes
   - [ ] Create US Core Profile
       - [ ] Create Profile Introduction
       - [ ] Add `{% include new_page.md %}` as its first line, so the page carries the "new artifact" banner
+      - [ ] Add `{% include us-core-maturity.md id="us-core-<name>" %}` above the "Example Usage Scenarios" line, so the page shows its US Core Maturity Level
       - [ ] Add Implementation-Specific Guidance if the design team decides guidance is needed.
       - [ ] New Example(s)
       - [ ] Update Additional USCDI table if the design team decides elements are Additional USCDI
@@ -1103,7 +1104,8 @@ For all changes
   - [ ] Update the Profile metadata table
       - [ ] add scopes
       - [ ] year added
-      - [ ] current_fmm,proposed_fmm : default is 2 for new
+      - [ ] us_core_maturity : default is 2 for new
+  - [ ] Set the artifact's FHIR Maturity Level (FMM) in its YAML source with the `structuredefinition-fmm` extension, derived from the US Core Maturity Level (see "Assigning Maturity Levels" below)
   - [ ] Update the Relationship With Other IGs page content
     - [ ] Comparison With International IGs table
     - [ ] Additional requirements in IPA/IPS if needed for Profiles marked as "Additional Requirements"
@@ -1115,6 +1117,65 @@ For all changes
  - [ ] Update USCDI Mapping Table
  - [ ] Add to the "What's new" file
  - [ ] Update Implementation Specific Guidance if the design team decides guidance is needed (see Hackmd notes)
+
+
+#### Assigning Maturity Levels
+
+US Core artifacts carry two separate ratings, and both have to be set:
+
+- The **FHIR Maturity Level (FMM)** is the HL7-wide rating required by the FHIR
+  Management Group (FMG). It is declared on the artifact itself with the
+  `structuredefinition-fmm` extension in the YAML source, and the publisher
+  renders it in the artifact header.
+- The **US Core Maturity Level** is the US Core rating, defined on the
+  [Changes Between Versions](input/pagecontent/changes-between-versions.md) page.
+  It is held in the `us_core_maturity` column of `input/data/profile_metadata.csv`
+  and rendered on each artifact page by `input/includes/us-core-maturity.md`.
+
+The FMM is derived from the US Core Maturity Level. The mnemonic: Levels 5 and 4
+both map to FMM 5; for Levels 3 and 2, add one.
+
+| Artifact type | US Core Maturity Level | FMM |
+|---|---|---|
+| Profiles, Extensions, Operations | 5 or 4 | 5 |
+| Profiles, Extensions, Operations | 3 | 4 |
+| Profiles, Extensions, Operations | 2 | 3 |
+| SearchParameters | 5 (fixed) | 5 |
+| ValueSets, CodeSystems, CapabilityStatements, Requirements | 3 (fixed) | 3 |
+
+A new profile or extension defaults to US Core Maturity Level 2, and therefore
+FMM 3. The US Core Maturity Levels for the other artifact types are fixed, so
+those artifacts take the same FMM every version.
+
+##### Promoting an artifact to a new level
+
+The two ratings live in different files and nothing in the QA report compares
+them, so a level change that updates only one of them leaves the artifact page
+contradicting its own FMM header while QA stays clean. Use the `pa maturity`
+check rather than relying on QA to catch it:
+
+1. Edit the `us_core_maturity` column in `input/data/profile_metadata.csv` for
+   each artifact being promoted. The file is CRLF, so edit it in place rather
+   than rewriting it in text mode.
+2. `pa maturity` reports which YAML sources now disagree with the data file.
+3. `pa maturity --fix` rewrites those FMM values from the mapping above. It
+   splices on bytes, so CRLF sources are not reformatted.
+4. `./publish.sh -sy` to regenerate the JSON, then `./publish.sh -ien` to build.
+5. `pa maturity` again to confirm zero drift, and `pa qa diff` for the QA delta.
+
+The per-artifact maturity line and the per-level artifact lists on the Changes
+Between Versions page are both generated from the data file, so neither needs a
+manual edit.
+
+Two things the check treats specially. `docref` is reported as a note rather than
+a defect: it is an OperationDefinition, and the data file tracks profiles and
+extensions only. SearchParameters are checked against their fixed FMM 5, but
+`--fix` never rewrites them -- they are hand-authored JSON in `input/resources/`
+with no YAML source, so correct one by editing its JSON directly.
+
+See [FHIR-58958](https://jira.hl7.org/browse/FHIR-58958) for the FMG disposition
+this mapping comes from, and the authoritative FMM definitions at
+<https://confluence.hl7.org/spaces/FHIR/pages/35718679/FHIR+Maturity+Model>.
 
 
 ### Prepublication checklists

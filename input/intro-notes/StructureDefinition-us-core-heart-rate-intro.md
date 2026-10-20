@@ -1,4 +1,6 @@
 
+{% include us-core-maturity.md id="us-core-heart-rate" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:

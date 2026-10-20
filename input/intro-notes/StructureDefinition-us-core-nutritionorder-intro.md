@@ -1,5 +1,7 @@
 {% include new_page.md %}
 
+{% include us-core-maturity.md id="us-core-nutritionorder" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core NutritionOrder Profile:

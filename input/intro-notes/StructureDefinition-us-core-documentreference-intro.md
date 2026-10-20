@@ -1,5 +1,7 @@
 {% include docref-stu-note.md %}
 
+{% include us-core-maturity.md id="us-core-documentreference" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core DocumentReference profile. See the [Clinical Notes] section for additional details on using this profile for Clinical Notes:

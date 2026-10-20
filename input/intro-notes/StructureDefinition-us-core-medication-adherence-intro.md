@@ -1,3 +1,4 @@
+{% include us-core-maturity.md id="us-core-medication-adherence" %}
 
 
 ### Profile Specific Implementation Guidance

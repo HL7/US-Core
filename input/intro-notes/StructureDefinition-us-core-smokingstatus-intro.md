@@ -1,4 +1,6 @@
 
+{% include us-core-maturity.md id="us-core-smokingstatus" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core Tobacco And Nicotine Use

@@ -1,4 +1,6 @@
 
+{% include us-core-maturity.md id="pediatric-bmi-for-age" %}
+
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
