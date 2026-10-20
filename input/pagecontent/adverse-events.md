@@ -13,36 +13,29 @@ The distinction this page draws is between two different activities that the sam
 1. **The clinical record.** A clinician documents what happened to the patient, using the same resources used for any other clinical finding, note, or procedure. This is the information the USCDI Adverse Events Data Class describes, and it is what US Core supports.
 2. **Patient safety reporting.** A separate process classifies an incident, investigates its cause, and reports it for safety or regulatory purposes. This typically happens outside the clinical record, in risk management systems.
 
-USCDI v7 scopes the Adverse Events Data Class to the first of these. It explicitly excludes the exchange of patient safety analyses, internal risk management documentation, and patient safety work products as defined under the Patient Safety and Quality Improvement Act of 2005 and its implementing regulations, and it excludes Patient Safety Organization investigations, safety reviews, and facility-level reporting activities. US Core follows that boundary: nothing on this page concerns patient safety work product, and no US Core Profile is intended to carry it.
+The USCDI v7 scope is consistent with this distinction. It explicitly excludes the exchange of patient safety analyses, internal risk management documentation, and patient safety work products as defined under the Patient Safety and Quality Improvement Act of 2005 and its implementing regulations, and it excludes Patient Safety Organization investigations, safety reviews, and facility-level reporting activities. US Core follows that boundary: nothing on this page concerns patient safety work product, and no US Core Profile is intended to carry it.
 
 Two consequences follow for implementers:
 
-* **Adverse events are recorded as ordinary clinical events, and are not tagged as adverse events.** A rash following an immunization is recorded as a reaction, a condition, an observation, or a note, in the same way any other rash would be. Systems should not expect a flag, a category code, or a dedicated resource that marks a clinical record entry as an adverse event. Determining that an event was adverse, and that a clinical intervention caused it, is a judgment made elsewhere.
+* **Adverse events are recorded as ordinary clinical events, and are not tagged as adverse events.** A rash following an immunization is recorded as a reaction, a condition, an observation, or a note, in the same way any other rash would be. US Core does not require a flag, category code, or dedicated resource that identifies these clinical records as adverse events. Nor does it require these clinical records to state that the intervention caused the condition or classify the occurrence as an adverse event.
 * **A query for adverse events is a query across several profiles.** Because the information is recorded wherever the clinician documented it, there is no single place to look. The profiles below are the candidates.
 
 ### Where Adverse Event Information Is Recorded
 
-The following US Core Profiles shown in the figure below record the information the two Data Elements describe. The profiles overlap: the same incident may be recorded in more than one of them, and which one a system uses depends on how the clinician documented it.
+The following US Core Profiles shown in the figure below record the information the two Data Elements describe. The profiles overlap: the same incident may be recorded in more than one, and which one a system uses depends on how the clinician documented it.
 
 {% include img.html img="ae-venn.png" caption="Figure 1: Resource Types that Capture Adverse Event Conditions and Outcomes" %}
 
-**Adverse Event Condition** can be recorded by the profiles listed below, and by:
-
-* [US Core Immunization Profile] - in `Immunization.reaction`, for a reaction following an immunization
-* [US Core Procedure Profile] - when a procedure is the intervention the change is associated with
-
-
-**Adverse Event Condition and Adverse Event Outcome** can be recorded by:
-
-* [US Core AllergyIntolerance Profile] - in `AllergyIntolerance.reaction.manifestation`, for a reaction to a substance the patient is sensitive to
-* [US Core Condition Problems and Health Concerns Profile] and [US Core Condition Encounter Diagnosis Profile] - when the change to the patient's condition is recorded as a problem or an encounter diagnosis
-* [US Core DocumentReference Profile] - when it is documented in a clinical note (see the [Clinical Notes] page)
-* [US Core Simple Observation Profile] - when it is recorded as an observation that no more specific profile covers
-
-**Adverse Event Outcome** can be recorded by the profiles above, and by:
-
-* [US Core Encounter Profile] - in `Encounter.hospitalization.dischargeDisposition`, where an outcome such as hospitalization or death is recorded as part of the encounter
-* [US Core CarePlan Profile] - where the response to the outcome is recorded as part of the plan of treatment
+| US Core profile | Adverse Event Condition | Adverse Event Outcome | Why |
+|---|:---:|:---:|---|
+| Immunization | ✓ | | `reaction` / referenced Observation ?|
+| Procedure | ✓ | | `complication` ?|
+| AllergyIntolerance | ✓ | **?**| `reaction.manifestation` ? |
+| Condition | ✓ | ✓ | condition/diagnosis can represent the change or resulting status/sequela |
+| DocumentReference | ✓ | ✓ | narrative clinical documentation |
+| Simple Observation | ✓ | ✓ | clinical finding/status not covered by a more specific profile |
+| Encounter | | ✓ | hospitalization; discharge disposition |
+| CarePlan | **?** | **?** | primarily follow-up/treatment; not necessarily the AE outcome
 
 ### Overlap with Other USCDI Data Classes
 
