@@ -1,4 +1,7 @@
-data_class_number,data_class,uscore_profile,data_element,resource_type,extension,fhir_extension_url,fhir_path,comment,comment_link,,,,,,,,
+data_class_number,data_class,uscore_profile,data_element,resource_type,extension,fhir_extension_url,fhir_path,comment,comment_link,guidance_link,guidance_text,,,,,,
+24,Adverse Events,,,,,,,See Adverse Events Guidance,adverse-events.html,,,,,,,,
+,Adverse Events,,Adverse Event Condition,AllergyIntolerance | Immunization | Condition | DocumentReference | Observation | Procedure,,,,,,adverse-events.html,See Adverse Events Guidance,,,,,,
+,Adverse Events,,Adverse Event Outcome,AllergyIntolerance | Immunization | Condition | DocumentReference | Observation | Procedure | Encounter | CarePlan,,,,,,adverse-events.html,See Adverse Events Guidance,,,,,,
 1,Allergies and Intolerances,US Core AllergyIntolerance Profile,,,,,AllergyIntolerance,,,,,,,,,,
 ,Allergies and Intolerances,US Core AllergyIntolerance Profile,Medication Allergy Intolerance,AllergyIntolerance,,,AllergyIntolerance.code,,,,,,,,,,
 ,Allergies and Intolerances,US Core AllergyIntolerance Profile,Drug Class Allergy Intolerance,AllergyIntolerance,,,AllergyIntolerance.code,,,,,,,,,,

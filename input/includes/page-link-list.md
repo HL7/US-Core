@@ -19,6 +19,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Guidance]: guidance.html
 [USCDI]: uscdi.html
 [General Guidance]: general-guidance.html
+[Adverse Events: Clinical Records and Patient Safety Reporting]: adverse-events.html
 [Clinical Notes]: clinical-notes.html
 [Medication List]: medication-list.html
 [Basic Provenance]: basic-provenance.html

@@ -33,6 +33,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification
+* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition recorded as an observation that no more specific profile covers can be that both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 - The codes can be from LOINC or SNOMED CT.
 - The value for these types of observations may be:

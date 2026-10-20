@@ -40,6 +40,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
+* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition documented in a clinical note can be that both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 - See [Clinical Notes]
 - The `DocumentReference.type` binding Must Support, at a minimum, the <span class="bg-success">[11 Common Clinical Notes]</span><!-- new-content --> and may extend to the whole [US Core DocumentReference Type Value Set]<sup>[§][CONF-0366]</sup>

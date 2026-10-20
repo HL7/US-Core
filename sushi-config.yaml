@@ -121,6 +121,11 @@ pages:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
+    adverse-events.md:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+      title: 'Adverse Events: Clinical Records and Patient Safety Reporting'
     clinical-notes.md:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -383,6 +388,7 @@ menu:
   Guidance: #guidance.html
       USCDI: uscdi.html
       General Guidance: general-guidance.html
+      "Adverse Events: Clinical Records and Patient Safety Reporting": adverse-events.html
       Clinical Notes: clinical-notes.html
       Medication List: medication-list.html
       Basic Provenance: basic-provenance.html

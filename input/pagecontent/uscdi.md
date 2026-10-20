@@ -204,8 +204,12 @@ and adds relative links.
             <br />
             {% endunless %}
             {% endfor %}
+            {% else %} <!-- no profile: the element maps to a guidance page -->
+            {% if item.guidance_link %}
+            <a href="{{ item.guidance_link }}">{{ item.guidance_text }}</a>
             {% else %}
             <a href="basic-provenance.html#individual-level-provenance">Individual Provenance</a>
+            {% endif %}
             {% endif %}
           </td>
 

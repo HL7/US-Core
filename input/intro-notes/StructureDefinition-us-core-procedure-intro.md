@@ -32,6 +32,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
+* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a procedure can be the intervention a change in a patient condition is associated with, recording that the USCDI *Adverse Event Condition* describes. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 - <span class="bg-success" markdown="1">A status code of "not-done" is used when a procedure was *not* performed.</span><!-- new-content -->
    - <span class="bg-success" markdown="1"><sup>5</sup>`Procedure.statusReason` communicates why the procedure was not performed, such as patient refusal. **Note that this binding is provisional, pending the review of the terminology aligned with the HL7 FHIR US Quality Core Implementation Guide.**</span><!-- new-content -->

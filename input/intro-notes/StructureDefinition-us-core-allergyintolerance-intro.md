@@ -32,6 +32,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
+* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, `AllergyIntolerance.reaction.manifestation` records a reaction to a substance the patient is sensitive to, which can be the change in condition that both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 * <sup>1</sup> The `AllergyIntolerance.clinicalStatus` element has the following constraints: **SHALL** be present if verification status is not "entered-in-error"<sup>[§][CONF-0302]</sup> and **SHALL NOT** be present if verification Status is "entered-in-error".<sup>[§][CONF-0303]</sup>
 * *No Known Allergies* **MAY** be represented using the US Core-AllergyIntolerance profile<sup>[§][CONF-0305]</sup> with the appropriate negation code in `AllergyIntolerance.code`<sup>[§][CONF-0306]</sup> and the appropriate verification status in `AllergyIntolerance.verificationStatus`.<sup>[§][CONF-0307]</sup>
