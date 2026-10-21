@@ -30,8 +30,6 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 2. **Applied:** Compatible, substantive (Clarification) Resolve the conflict between the Must Support rules and the Missing Data guidance. [FHIR-56828](https://jira.hl7.org/browse/FHIR-56828) See Changes [Here](must-support.html#must-support-elements)
 3. **Applied:** Compatible, substantive (Enhancement) Add the US Core MedicationAdministration Profile for the USCDI v7 Medication Administration data element [FHIR-44146](https://jira.hl7.org/browse/FHIR-44146) See Changes [Here](StructureDefinition-us-core-medicationadministration.html)
 
-##### Substantive
-
 ##### Non-substantive
 1. **Applied:** Non-substantive (Correction) Remove duplicated words from the Observation.hasMember short description and the Observation.derivedFrom definition [FHIR-58155](https://jira.hl7.org/browse/FHIR-58155) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
 2. **Applied:** Non-substantive (Correction) Remove the relocated Changes Between Versions link and rename the Social Determinants of Health link to Screening and Assessments on the Guidance landing page [FHIR-57912](https://jira.hl7.org/browse/FHIR-57912) See Changes [Here](guidance.html)
@@ -47,10 +45,12 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 12. **Applied:** Non-substantive (Clarification) Revert to the standard FHIR Maturity Model (FMM) level link on all artifacts in the header. Display the US Core Maturity Level separately and list  each artifact for each level. [FHIR-58958](https://jira.hl7.org/browse/FHIR-58958) See Changes [Here](changes-between-versions.html#us-core-maturity-levels)
 13. **Applied:** Non-substantive (Enhancement) Move the Argonaut Data Query IG Comparison to an Argonaut Project hosted site. [FHIR-56427](https://jira.hl7.org/browse/FHIR-56427) See Changes [Here](changes-between-versions.html#cross-version-comparisons)
 14. **Applied:** Non-substantive (Clarification) Rewrite the correction and replacement sentence on the Writing Clinical Notes page. [FHIR-56348](https://jira.hl7.org/browse/FHIR-56348) See Changes [Here](writing-clinical-notes.html#correction-and-replacement)
+15. **Resolved - change required:** Non-substantive (Correction) Update the terminology packages [FHIR-59598](https://jira.hl7.org/browse/FHIR-59598) See Changes [Here](terminology.html)
 
 
 ##### Pending
 The application of the following trackers is pending and will not be completed before publication.
+1. **Resolved - change required:** Non-compatible (Enhancement) Deprecate every version before 3.1.1 [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) Awaiting HL7 policy on retiring published IG versions.
 
 ##### Publishing
 The following trackers have been identified as publishing issues, and we are working with HL7 publishing to resolve them.
@@ -114,11 +114,10 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 15. **Applied:** Compatible, substantive (Clarification) Requirements QA: Change "use" to "systems **SHALL**" [FHIR-56239](https://jira.hl7.org/browse/FHIR-56239) See Changes [Here](https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-observation-occupation.html#profile-specific-implementation-guidance)
 16. **Applied:** Compatible, substantive (Clarification) Requirements QA:  Change "is represented by" to "Systems **SHALL** represent": [FHIR-56245](https://jira.hl7.org/browse/FHIR-56245) See Changes [Here](https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-patient.html#profile-specific-implementation-guidance)
 17. **Applied:** Compatible, substantive (Enhancement) Change the preferred binding for RelatedPerson.relationship to VSAC's Personal And Legal Relationship Role Type value set [FHIR-53376](https://jira.hl7.org/browse/FHIR-53376) See Changes [Here](https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-relatedperson-definitions.html#RelatedPerson.relationship)
+18. **Applied:** Compatible, substantive (Enhancement) Include category concepts in Detailed Ethnicity value set [FHIR-54410](https://jira.hl7.org/browse/FHIR-54410) See Changes [Here](https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-ethnicity.html)
+19. **Applied:** Compatible, substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](https://hl7.org/fhir/us/core/STU9/security.html#patient-privacy-and-security)
+20. **Applied:** Compatible, substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56241) See Changes [Here](https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-condition-problems-health-concerns.html)
 
-##### Substantive
-1. **Applied:** Substantive (Enhancement) Include category concepts in Detailed Ethnicity value set [FHIR-54410](https://jira.hl7.org/browse/FHIR-54410) See Changes [Here](https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-ethnicity.html)
-2. **Applied:**  Substantive (Enhancement) Update Smart version security requirements [FHIR-56134](https://jira.hl7.org/browse/FHIR-56134) See Changes [Here](https://hl7.org/fhir/us/core/STU9/security.html#patient-privacy-and-security)
-3. **Applied:**  Substantive (Correction) Fix misapplied additional minimum binding in US Core Condition Problems and Health Concerns Profile [FHIR-56241](https://jira.hl7.org/browse/FHIR-56241) See Changes [Here](https://hl7.org/fhir/us/core/STU9/StructureDefinition-us-core-condition-problems-health-concerns.html)
 
 ##### Non-substantive
 1. **Applied:** Non-substantive (Clarification) Clarify DocumentReference scope [FHIR-53490](https://jira.hl7.org/browse/FHIR-53490),[FHIR-55691](https://jira.hl7.org/browse/FHIR-55691) See Changes Here:
