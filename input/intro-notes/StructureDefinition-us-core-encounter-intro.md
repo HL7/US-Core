@@ -40,7 +40,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
-* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, `Encounter.hospitalization.dischargeDisposition` records an outcome such as hospitalization or death, which can be that the USCDI *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 * To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
 * The Encounter resource can represent a reason using a code with `Encounter.reasonCode` or a reference with `Encounter.reasonReference` to  Condition or other resources.
@@ -60,5 +59,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 - <sup>1</sup>See the US Core General Guidance page for [Searching Using lastUpdated]. Updates to `.meta.lastUpdated` **SHOULD** reflect:
   - New encounters/visits<sup>[§][CONF-0385]</sup>
   - Changes in the status of encounters, including events that trigger the same status (e.g., in-progress → in-progress).<sup>[§][CONF-0386]</sup> These status changes correspond to events that can initiate [HL7 V2] ADT messages.
+- <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, `Encounter.hospitalization.dischargeDisposition` records an outcome such as hospitalization or death, which can be what the USCDI *Adverse Event Outcome* describes. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 {% include link-list.md %}

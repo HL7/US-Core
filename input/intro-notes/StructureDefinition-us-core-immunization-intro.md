@@ -34,7 +34,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
-* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, `Immunization.reaction` records a reaction following an immunization, which can be the change in condition that the USCDI *Adverse Event Condition* describes. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 - <sup>1</sup>Servers **SHALL** use the status code: `not-done` to represent that an immunization was *not* given.<sup>[§][CONF-0390]</sup>
    - <span class="bg-success" markdown="1">`Immunization.statusReason` communicates the reason the vaccine was not administered at the point of care, such as patient refusal.  **Note that this binding is provisional, pending the review of the terminology aligned with the HL7 FHIR US Quality Core Implementation Guide.**</span><!-- new-content -->
@@ -46,5 +45,6 @@ This section provides detailed implementation guidance for the US Core Profile t
     - The CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers (note that both the Unit of Use and Unit of Sale NDC are mapped to CVX codes). The [Immunization Example 1](Immunization-imm-1.html) uses both CVX and the 11-digit NDC Unit of Use code based on this table.
  - <sup>3</sup> There is no guarantee that vaccine lot numbers are globally unique, and they are not recommended for matching or de-duplication across systems unless used with other data elements such as a vaccine product code, manufacturer code, or date of administration.  Implementers **MAY** communicate the `Immunization.manufacturer` to ensure global uniqueness to lot numbers.<sup>[§][CONF-0841]</sup>
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>4</sup>' %}
+- <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, `Immunization.reaction` records a reaction following an immunization, which can be the change in condition that the USCDI *Adverse Event Condition* describes. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 {% include link-list.md %}

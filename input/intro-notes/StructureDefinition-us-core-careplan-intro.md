@@ -33,7 +33,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
-* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a plan of treatment responding to a change in a patient condition can record that the USCDI *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 * <sup>1</sup>The original US Core CarePlan Profile was designed to support the "Assessment and Plan" in a narrative Progress Note. Its future direction is to move from text-based content to discrete references to conditions/needs (`CarePlan.addresses`), goals (`CarePlan.goal`), and strategies (`CarePlan.activities`).
 
@@ -43,5 +42,6 @@ This section provides detailed implementation guidance for the US Core Profile t
     - Assessment and Plan **MAY** be included as narrative in `CarePlan.text`<sup>[§][CONF-0312]</sup>
 * As an alternative to the US Core CarePlan, Assessment and Plan of Treatment may be included in various types of [Clinical Notes], such as Progress Notes, History & Physical (H&P), Discharge Summaries, etc.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
+- <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a plan of treatment responding to a change in a patient condition can record the outcome that the USCDI *Adverse Event Outcome* describes. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 {% include link-list.md %}

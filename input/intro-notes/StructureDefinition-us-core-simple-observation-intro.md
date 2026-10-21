@@ -35,7 +35,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification
-* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition recorded as an observation that no more specific profile covers can be that both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 - The codes can be from LOINC or SNOMED CT.
 - The value for these types of observations may be:
@@ -55,5 +54,6 @@ This section provides detailed implementation guidance for the US Core Profile t
   -  Although 'Observation.performer' target profiles [US Core Practitioner Profile] and [US Core Patient Profile] are labeled *Must Support*. Servers are not required to support both, but **SHALL** support at least one.<sup>[§][CONF-0868]</sup> Clients **SHALL** support both.<sup>[§][CONF-0869]</sup>
 -  <sup>3</sup>Although none of the `Observation.derivedFrom` [referenced target profiles are flagged as *Must Support*](must-support.html#must-support---resource-references), Certifying System **SHALL** support at least one of them.<sup>[§][CONF-0444]</sup> Client Applications **SHALL** support all.<sup>[§][CONF-0849]</sup>
    - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.<sup>[§][CONF-0443]</sup>
+- <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition recorded as an observation that no more specific profile covers can be what both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 {% include link-list.md %}

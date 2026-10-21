@@ -42,7 +42,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
-* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition documented in a clinical note can be that both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 - See [Clinical Notes]
 - The `DocumentReference.type` binding Must Support, at a minimum, the <span class="bg-success">[11 Common Clinical Notes]</span><!-- new-content --> and may extend to the whole [US Core DocumentReference Type Value Set]<sup>[§][CONF-0366]</sup>
@@ -63,5 +62,6 @@ This section provides detailed implementation guidance for the US Core Profile t
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.<sup>[§][CONF-0374]</sup>
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 {% include provenance-author-bullet-generator.md footnote-symbol="<sup>1</sup>" %}
+- <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition documented in a clinical note can be what both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 {% include link-list.md %}

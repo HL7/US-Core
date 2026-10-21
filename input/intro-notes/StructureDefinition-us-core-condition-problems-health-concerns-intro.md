@@ -39,7 +39,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
-* <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition recorded as a problem or health concern can be that both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 * For Encounter Diagnosis, use the [US Core Condition Encounter Diagnosis Profile].<sup>[§][CONF-0330]</sup>
 * <sup>1</sup>Unless exchanging legacy or text-only data, condition codes **SHOULD** be taken from SNOMED CT and ICD-10-CM, USCDI's applicable vocabulary standards for the Problem Data Element.<sup>[§][CONF-0900]</sup>
@@ -54,5 +53,6 @@ This section provides detailed implementation guidance for the US Core Profile t
   - New problems and health concerns.<sup>[§][CONF-0332]</sup>
   - Changes in the clinical status or verifications status of problems or health concerns.<sup>[§][CONF-0333]</sup>
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>4</sup>' %}
+- <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a change in a patient condition recorded as a problem or health concern can be what both USCDI *Adverse Event Condition* and *Adverse Event Outcome* describe. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 {% include link-list.md %}
