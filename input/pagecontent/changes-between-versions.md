@@ -118,25 +118,37 @@ The script sorts and selects the table data and allows for highlighting new and 
 
 Detailed comparisons between the US Core artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
 
+- [Comparison with version 9.0.0](comparison-v9.0.0/index.html)
 - [Comparison with version 8.0.1](comparison-v8.0.1/index.html)
 - [Comparison with version 7.0.0](comparison-v7.0.0/index.html)
 - [Comparison with version 6.1.0](comparison-v6.1.0/index.html)
 - [Comparison with version 5.0.1](comparison-v5.0.1/index.html)
 - [Comparison with version 4.0.0](comparison-v4.0.0/index.html)
 - [Comparison with version 3.1.1](comparison-v3.1.1/index.html)
-- [(Partial) Comparison with Argonaut Data Query IG](comparison-argo/index.html)
 
-<!--  === Instructions for creating the Comparison with Argonaut Data Query IG folder ===
+The comparison with the Argonaut Data Query IG is published separately by the Argonaut Project:
 
- 1. Use the FHIR validator to compare and the script /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/Validator_Tools/IG-Profile_Comparer.ipynb with the source file input/images-source/ArgoDQ-USCore-ProfileMap.csv.
-1. See the script file for instructions
-2. Note that only the comparison files are used the union and intersection files are discarded.
-3. Need to clean up the generated html files to remove the QA errors
-   1. look for "null" and remove  ( e.g. in /Users/ehaas/Documents/Python/Jupyter/MyNotebooks/utils/out/profile_compare/temp_out/sd-argo-goal-us-core-goal.html)
-      1. find ` null"` and replace with `"`
-   2. fix bad links for publisher using regex
-      1. find '<a href="\?\?.*?>(.*?)</a>'
-      2. replace '$1'
+- [(Partial) Comparison with Argonaut Data Query IG](https://argonautproject.github.io/Data-Query-US-Core-Comparison/{{site.data.fhir.igVer | split: "-" | first}})
+
+<!--  === Updating the Comparison with Argonaut Data Query IG link ===
+
+The comparison pages are no longer generated into this guide. [FHIR-56427] The
+Argonaut Project hosts them on a GitHub Pages site, which removes 102 generated
+files and their 46 html-exempt entries from this repo:
+
+  repo: https://github.com/argonautproject/Data-Query-US-Core-Comparison
+  site: https://argonautproject.github.io/Data-Query-US-Core-Comparison/
+
+The link above resolves the version folder from the IG's own version, dropping
+any pre-release suffix, so 10.0.0-ballot and 10.0.0 both point at the 10.0.0
+folder. Nothing here needs editing at a version bump. What is needed is that the
+Argonaut site publishes a folder matching the new version before publication --
+there is no folder for 9.0.0 or earlier, so a missing folder is a 404 rather
+than a stale page, and the publisher's link check does not catch it.
+
+Regenerating the comparison is documented in that repo, which now also holds the
+profile map and the post-processing that used to be done here to clear the QA
+errors. Nothing about it is maintained in this repo any more.
  =============================== end of Instructions  =================================== -->
 
 ### Endpoint Discoverability

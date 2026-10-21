@@ -44,6 +44,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 10. **Pre-Applied:** Non-substantive (Correction) Removed "Pilot testing of UDI elements" and "Timezones and Time Offsets" from the Future Candidate Under Consideration [FHIR-59671](https://jira.hl7.org/browse/FHIR-59671) See Changes [Here](us-core-roadmap.html#future-candidate-requirements-under-consideration)
 11. **Resolved - change required:** Non-substantive (Correction) Update the Relationship With Other IGs page for US Core 10: label the comparison direction on the additional requirements headers, correct the US Core Device Profile IPS compatibility rating, and point the IPS comparison link at the generated v2.0.1 directory [FHIR-59676](https://jira.hl7.org/browse/FHIR-59676) See Changes [Here](relationship-with-other-igs.html)
 12. **Applied:** Non-substantive (Clarification) Revert to the standard FHIR Maturity Model (FMM) level link on all artifacts in the header. Display the US Core Maturity Level separately and list  each artifact for each level. [FHIR-58958](https://jira.hl7.org/browse/FHIR-58958) See Changes [Here](changes-between-versions.html#us-core-maturity-levels)
+13. **Applied:** Non-substantive (Enhancement) Move the Argonaut Data Query IG Comparison to an Argonaut Project hosted site. [FHIR-56427](https://jira.hl7.org/browse/FHIR-56427) See Changes [Here](changes-between-versions.html#cross-version-comparisons)
 
 
 ##### Pending
