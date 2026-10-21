@@ -171,7 +171,7 @@ and adds relative links.
             {% for profile in profiles %}
             {% capture title %}{{profile | strip}}{% endcapture %}
             {% capture url %}{% include sd_link.html title = title %}{% endcapture %}
-            {% if url == '' %} <!-- a collective label such as "all US Core Observations": no single artifact to link -->
+            {% if url == '' %} <!-- a collective label such as "All US Core Observations": no single artifact to link -->
             {{ title }}
             {% else %}
             <a href="{{ url }}">{{ title }}</a>
@@ -202,7 +202,7 @@ and adds relative links.
             {% capture url %}{% include sd_link.html title = title %}{% endcapture %}
             {% if url == '' and item.fhir_extension_url and item.fhir_extension_url != '' %} <!-- not a US Core defined SD - assume is standard extension and use URL provided in the csv  -->
             <a href="{{site.data.fhir.ver.hl7_fhir_uv_extensions_r4}}/{{ item.fhir_extension_url }}">{{ title }}</a>
-            {% elsif url == '' %} <!-- a collective label such as "all US Core Observations": no single artifact to link -->
+            {% elsif url == '' %} <!-- a collective label such as "All US Core Observations": no single artifact to link -->
             {{ title }}
             {% else %}
             <a href="{{ url }}">{{ title }}</a>
