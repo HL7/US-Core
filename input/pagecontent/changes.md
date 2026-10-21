@@ -27,7 +27,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 
 ##### Compatible, substantive
 1. **Triaged:** Compatible, substantive (Enhancement) Add USCDI v7 Data Elements to US Core [FHIR-59596](https://jira.hl7.org/browse/FHIR-59596) See Changes Listed in the 10.0.0-Ballot Introduction above.
-2. **Applied:** Compatible, substantive (Clarification) Resolve the conflict between the Must Support rules and the Missing Data guidance. The rule against including absent data elements now applies only to elements with a minimum cardinality of 0, and mandatory elements are populated following the Missing Data methodology [FHIR-56828](https://jira.hl7.org/browse/FHIR-56828) See Changes [Here](must-support.html#must-support-elements)
+2. **Applied:** Compatible, substantive (Clarification) Resolve the conflict between the Must Support rules and the Missing Data guidance. [FHIR-56828](https://jira.hl7.org/browse/FHIR-56828) See Changes [Here](must-support.html#must-support-elements)
 
 ##### Substantive
 
