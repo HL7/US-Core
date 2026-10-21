@@ -46,7 +46,7 @@ input/data/uscdi-table.csv columns:
 - resource_type: US Core Profile Resource Type for each USCDI Data Element.  Is empty at the start of each Data Class group
 - extension: US Core Extension that map the USCDI Data Elements.
 - fhir_extension_url: not used
-- fhir_path: FHIRPath expression to the USCDI Data Element (not verified)
+- fhir_path: FHIRPath expression to the USCDI Data Element. Not rendered on this page. Where the data element maps obviously to profile element(s), this is the path to those element(s); otherwise it names the profile. Validated against the FHIR R4 definitions [FHIR-57864]
 - comment: Additional US Core guidance for implementing USCDI
 - comment_link: Relative link to US Core's additional guidance
 
@@ -170,7 +170,12 @@ and adds relative links.
             {% if profiles != empty %} <!-- no profiles defined in table for USCDI  ( e.g., Provenance )-->
             {% for profile in profiles %}
             {% capture title %}{{profile | strip}}{% endcapture %}
-            <a href="{% include sd_link.html title = title  %}">{{ title }}</a>
+            {% capture url %}{% include sd_link.html title = title %}{% endcapture %}
+            {% if url == '' %} <!-- a collective label such as "all US Core Observations": no single artifact to link -->
+            {{ title }}
+            {% else %}
+            <a href="{{ url }}">{{ title }}</a>
+            {% endif %}
             {% unless forloop.last %}
             <br />
             {% endunless %}
@@ -195,8 +200,10 @@ and adds relative links.
             {% for profile in profiles %}
             {% capture title %}{{profile | strip}}{% endcapture %}
             {% capture url %}{% include sd_link.html title = title %}{% endcapture %}
-            {% if url == '' %} <!-- not a US Core defined SD - assume is standard extension and use URL provided in the csv  -->
+            {% if url == '' and item.fhir_extension_url and item.fhir_extension_url != '' %} <!-- not a US Core defined SD - assume is standard extension and use URL provided in the csv  -->
             <a href="{{site.data.fhir.ver.hl7_fhir_uv_extensions_r4}}/{{ item.fhir_extension_url }}">{{ title }}</a>
+            {% elsif url == '' %} <!-- a collective label such as "all US Core Observations": no single artifact to link -->
+            {{ title }}
             {% else %}
             <a href="{{ url }}">{{ title }}</a>
             {% endif %}
