@@ -1198,7 +1198,7 @@
         "must-support.html#must-support-elements"
       ],
       "conditionality": true,
-      "requirement": " **SHALL NOT** include the data elements in the resource instance returned as part of the query results.",
+      "requirement": " **SHALL NOT** include elements with a minimum cardinality of 0 (including elements labeled *Must Support*) in the resource instance returned as part of the query results.",
       "_reference": [
         {
           "extension": [
@@ -1219,13 +1219,13 @@
     {
       "key": "CONF-0080",
       "reference": [
-        "must-support.html#must-support-el+D647ements"
+        "must-support.html#must-support-elements"
       ],
       "conformance": [
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:\n\nIn cases where information on a specific data element is missing, and the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.",
+      "requirement": "For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:\n\nWhen information on a specific data element is missing, and the precise reason for the absence of data is known, US Core Responders **SHOULD** send the reason for the missing information.",
       "_reference": [
         {
           "extension": [
@@ -1246,7 +1246,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "[When sending reason for missing information, follow] the same methdology outlined in the [Missing Data](https://hl7.org/fhir/us/core/STU8/general-requirements.html#missing-data) section but using the appropriate reason code instead of unknown [reason code].",
+      "requirement": "[When sending reason for missing information, follow] the methodology outlined in the [Missing Data](https://hl7.org/fhir/us/core/general-requirements.html#missing-data) section but using the appropriate reason code instead of unknown [reason code].",
       "_reference": [
         {
           "extension": [
@@ -9457,6 +9457,27 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-devicerequest.html#CONF-0928"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0930",
+      "reference": [
+        "must-support.html#must-support-elements"
+      ],
+      "conformance": [
+        "SHALL"
+      ],
+      "conditionality": true,
+      "requirement": "**SHALL** populate *mandatory* elements (minimum cardinality > 0) according to the methodology in the [Missing Data](https://hl7.org/fhir/us/core/general-requirements.html#missing-data) section.",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "must-support.html#CONF-0930"
             }
           ]
         }
