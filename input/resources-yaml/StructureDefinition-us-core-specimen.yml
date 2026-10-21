@@ -80,7 +80,7 @@ differential:
       short: '𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Specimen Collection Method'
       binding:
         strength: preferred
-        valueSet: http://hl7.org/fhir/ValueSet/specimen-collection-method
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.44
     - id: Specimen.collection.bodySite
       extension:
         - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
