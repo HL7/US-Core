@@ -137,7 +137,7 @@ This write profile builds directly on the **US Core DocumentReference** profile.
 
 #### Correction and Replacement
 
-* Clients have two distinct mechanisms for corrections: entered-in-error for full retractions (see 4.12) and replacement for supersessions (below). These provide technical signals of "this was a mistake" or "this document replaces that one," respectively. Downstream handling (e.g., archiving, notifications, visibility to readers) is out of scope and a server policy decision.
+* <span class="bg-success" markdown="1">Clients can correct records in two ways: by retracting entries using the "entered-in-error" status (see [Status correction](#status-correction)) or by replacing them with updated content (see below).</span><!-- new-content --> These provide technical signals of "this was a mistake" or "this document replaces that one," respectively. Downstream handling (e.g., archiving, notifications, visibility to readers) is out of scope and a server policy decision.
 * When a client needs to supersede an existing document (e.g., due to revisions without full retraction), they **SHOULD** create a new `DocumentReference` via `POST` and populate `relatesTo` with `code` = "replaces" and `targetReference` to the original resource's ID. The new document **SHALL** include the updated content.
 * Servers **SHALL** accept incoming `relatesTo` elements on create (and round-trip them) but **MAY** ignore the relationship for local policy decisions.
 
