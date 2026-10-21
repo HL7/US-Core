@@ -278,3 +278,5 @@
 [US Core Clinical Notes]: clinical-notes.html
 [US Core Value Set Packages]: https://confluence.hl7.org/spaces/CGP/pages/453907194/Value+Set+Packages
 [US Core Maturity]: changes-between-versions.html#us-core-maturity-levels
+[United States Patient Care Summary (US-PCS)]: https://hl7.org/fhir/us/pcs/
+[US Core Profile Variances to IPS Profiles]: https://hl7.org/fhir/us/pcs/en/variance.html#us-core-profile-variances-to-ips-profiles

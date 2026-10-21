@@ -40,6 +40,7 @@ Implementation Guide |Relationship
 ---|---
 [International Patient Access (IPA)]|This IG describes how an application acting on behalf of a patient can access information about the patient from a clinical records system using a FHIR based API. The REST API and profiles in this IG were reviewed and considered during development of US Core. US Core is compatible with IPA, e.g. US Core conformant data can be accessed by an IPA conformant client.
 [International Patient Summary (IPS)]|The goal of this Implementation Guide is to specify how to represent in HL7 FHIR the International Patient Summary (IPS). An IPS document is an electronic health record extract containing essential healthcare information about a subject of care. US Core is compatible with IPS, e.g. US Core conformant data can be used to generate a patient summary that is conformant to IPS.
+[United States Patient Care Summary (US-PCS)]|This Implementation Guide defines a FHIR patient summary document for care transitions in the US Realm. US Core supplies the resource-level requirements for the content of a US-PCS document, and US-PCS supplies the document structure around that content. US-PCS publishes its own comparison of the US Core profiles it uses against the equivalent IPS profiles in its [US Core Profile Variances to IPS Profiles] tables.
 {:.grid}
 
 #### Comparison With International IGs
@@ -50,7 +51,6 @@ As part of profile comparison, the requirements, constraints, and standards spec
 
 - [IPA Comparison V1.1.0](ipa-comparison-v1.1.0/index.html)
 - [IPS Comparison V2.0.1](ips-comparison-v2.0.1/index.html)
-
 
 **Legend:**
 
@@ -326,101 +326,101 @@ The [US Core Patient Accommodation Profile] is the one profile marked incompatib
 
     Additional requirements in [IPS Observation Results - Laboratory/Pathology](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips) (IPS vs US Core):
 
-   - `Observation.status` Element differ in valueset: 'http://hl7.org/fhir/uv/ips/ValueSet/results-status-uv-ips (required)' vs 'http://hl7.org/fhir/ValueSet/observation-status (required)'
-   - `Observation.category.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.category.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.category.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.category.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.performer` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.valueCodeableConcept.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.valueCodeableConcept.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.valueCodeableConcept.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.valueCodeableConcept.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.component` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.status` Element differ in valueset: 'http://hl7.org/fhir/uv/ips/ValueSet/results-status-uv-ips (required)' vs 'http://hl7.org/fhir/ValueSet/observation-status (required)'
+       - `Observation.category.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.category.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.category.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.category.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.performer` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.valueCodeableConcept.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.valueCodeableConcept.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.valueCodeableConcept.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.valueCodeableConcept.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.component` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
 11. [US Core Observation Clinical Result Profile]
 
     Additional requirements in [IPS Observation Results - Radiology](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips) (IPS vs US Core):
 
-   - `Observation.category:radiology` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.category:radiology` Element maximum cardinalities differ: '1' vs '*'
-   - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.performer` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.component` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.category:radiology` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.category:radiology` Element maximum cardinalities differ: '1' vs '*'
+       - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.performer` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.component` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
 12. [US Core Simple Observation Profile]
 
     Additional requirements in [IPS Observation Alcohol Use](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips) (IPS vs US Core):
 
-   - `Observation.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
+       - `Observation.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.effective[x]` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
 
 13. [US Core Tobacco And Nicotine Use Observation Profile]
 
     Additional requirements in [IPS Observation Tobacco Use](http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips) (IPS vs US Core):
 
-   - `Observation.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
-   - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
+       - `Observation.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Observation.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+       - `Observation.component` Element maximum cardinalities differ: '0' vs '*'
 
 14. [US Core Patient Profile]
 
     Additional requirements in [IPS Patient](http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips) (IPS vs US Core):
 
-   - `Patient.name.use` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Patient.name.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Patient.telecom` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Patient.gender` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Patient.birthDate` Element minimum cardinalities differ: '1' vs '0'
-   - `Patient.generalPractitioner` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Patient.name.use` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Patient.name.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Patient.telecom` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Patient.gender` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Patient.birthDate` Element minimum cardinalities differ: '1' vs '0'
+       - `Patient.generalPractitioner` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
 15. [US Core Practitioner Profile]
 
     Additional requirements in [IPS Practitioner](http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips) (IPS vs US Core):
 
-   - `Practitioner.name.given` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Practitioner.name.given` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
 
 16. [US Core Procedure Profile]
 
     Additional requirements in [IPS Procedure](http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips) (IPS vs US Core):
 
-   - `Procedure.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Procedure.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Procedure.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Procedure.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Procedure.subject.reference` Element minimum cardinalities differ: '1' vs '0'
-   - `Procedure.performed[x]` Element minimum cardinalities differ: '1' vs '0'
+       - `Procedure.code.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Procedure.code.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Procedure.code.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Procedure.code.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Procedure.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+       - `Procedure.performed[x]` Element minimum cardinalities differ: '1' vs '0'
 
 17. [US Core Specimen Profile]
 
     Additional requirements in [IPS Specimen](http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips) (IPS vs US Core):
 
-   - `Specimen.type.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Specimen.type.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Specimen.type.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Specimen.type.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
-   - `Specimen.subject.reference` Element minimum cardinalities differ: '1' vs '0'
+       - `Specimen.type.coding` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Specimen.type.coding.system` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Specimen.type.coding.code` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Specimen.type.text` Element differ in definition for mustSupport/Obligations: 'true' vs 'false'
+       - `Specimen.subject.reference` Element minimum cardinalities differ: '1' vs '0'
 
 ###### Missing Data
 US Core compliant resources are compliant with IPS requirements for Missing Data.
