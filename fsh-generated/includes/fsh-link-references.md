@@ -301,7 +301,6 @@
 [USCoreFamilyMemberHistoryRecorderExtension]: StructureDefinition-us-core-familymemberhistory-recorder.html
 [USCoreFetchDocumentReference]: OperationDefinition-docref.html
 [USCoreGenderIdentityExtension]: StructureDefinition-us-core-genderIdentity.html
-[USCoreGoalCodes]: ValueSet-us-core-goal-description.html
 [USCoreGoalProfile]: StructureDefinition-us-core-goal.html
 [USCoreHeadCircumferenceProfile]: StructureDefinition-us-core-head-circumference.html
 [USCoreHeartRateProfile]: StructureDefinition-us-core-heart-rate.html

@@ -31,7 +31,7 @@ differential:
       binding:
         strength: preferred #extensible
         description: Value set to describe the Goal
-        valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.46
     - id: Goal.subject
       path: Goal.subject
       type:

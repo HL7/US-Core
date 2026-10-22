@@ -695,8 +695,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core DocumentReference Category - Testing]: ValueSet-us-core-documentreference-category-testing.html
 [US Core DocumentReference Type]: ValueSet-us-core-documentreference-type.html
 [US Core DocumentReference Type - Testing]: ValueSet-us-core-documentreference-type-testing.html
-[US Core Goal Codes]: ValueSet-us-core-goal-description.html
-[US Core Goal Codes - Testing]: ValueSet-us-core-goal-description-testing.html
 [US Core Laboratory Test Codes]: ValueSet-us-core-laboratory-test-codes.html
 [US Core Laboratory Test Codes - Testing]: ValueSet-us-core-laboratory-test-codes-testing.html
 [US Core Location Type Codes]: ValueSet-us-core-location-type.html

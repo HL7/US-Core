@@ -2563,14 +2563,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-goal-description"
-        },
-        "description": "Concepts from SNOMED CT and LOINC code systems that can be used to indicate the goal.",
-        "exampleBoolean": false,
-        "name": "US Core Goal Codes"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-goal"
         },
         "description": "The US Core Goal Profile inherits from the FHIR [Goal](https://hl7.org/fhir/R4/goal.html) resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Goal resource to record,  search, and fetch Goal information associated with a patient.   It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
