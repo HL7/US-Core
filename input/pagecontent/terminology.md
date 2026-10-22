@@ -157,7 +157,7 @@ Code System Sources:
 - Code systems published by other standards organizations
 
 {% assign rows = site.data.codesystem-ref-all-list | sort: "Title" %}
-{% assign bad-THO-list = "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category, http://terminology.hl7.org/CodeSystem/medicationdispense-status, http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason" | split: ", " %}
+{% assign bad-THO-list = "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category, http://terminology.hl7.org/CodeSystem/medicationdispense-status, http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason, http://terminology.hl7.org/CodeSystem/medication-admin-category, http://terminology.hl7.org/CodeSystem/medication-admin-status" | split: ", " %}
 
 <table class="grid">
 <thead>
