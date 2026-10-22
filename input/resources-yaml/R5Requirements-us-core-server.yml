@@ -5064,3 +5064,14 @@ statement:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
             valueUrl: must-support.html#CONF-0930
+  - key: CONF-0931
+    reference:
+      - StructureDefinition-us-core-specimen.html#profile-specific-implementation-guidance
+    conformance:
+      - SHOULD
+    conditionality: true
+    requirement: For the USCDI *Specimen Collection Method* Data Element, when both `Specimen.collection.method` and `Specimen.type` are populated, the method code **SHOULD** be consistent with or more specific than the type code.
+    _reference:
+      - extension:
+          - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
+            valueUrl: StructureDefinition-us-core-specimen.html#CONF-0931
