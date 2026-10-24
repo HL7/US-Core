@@ -25,10 +25,24 @@
           "display": "Survey"
         }
       ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
     }
   ],
   "code": {
     "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "29463-7",
+        "display": "Body Weight"
+      },
       {
         "system": "http://loinc.org",
         "code": "75292-3",
