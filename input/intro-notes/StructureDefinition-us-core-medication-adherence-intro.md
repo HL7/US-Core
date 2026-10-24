@@ -12,7 +12,7 @@ This Complex Extension is made up of three sub-extensions:
     Example Scenario|Medication Adherence Code (SCT ID)\|Preferred Term
     ---|---
     The medication is being taken as directed.|1156699004\|Complies with drug therapy (finding)
-    The medication is being taken, but not as directed. For example, the patient occasionally forgets or takes two pills instead of three.|702565001\|Non-compliance of drug therapy (finding)
+    The medication is being taken, but not as directed. For example, the patient occasionally forgets or takes two pills instead of three.|<span class="bg-success" markdown="1">129834002\|Noncompliance with medication regimen (finding)</span><!-- new-content -->
     The medication is not being taken. For example, the patient did not pick up a prescription.|715036001\|Does not take medication (finding)
     {:.grid}
 

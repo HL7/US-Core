@@ -30,6 +30,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 2. **Applied:** Compatible, substantive (Clarification) Resolve the conflict between the Must Support rules and the Missing Data guidance. [FHIR-56828](https://jira.hl7.org/browse/FHIR-56828) See Changes [Here](must-support.html#must-support-elements)
 3. **Applied:** Compatible, substantive (Enhancement) Add the US Core MedicationAdministration Profile for the USCDI v7 Medication Administration data element [FHIR-44146](https://jira.hl7.org/browse/FHIR-44146) See Changes [Here](StructureDefinition-us-core-medicationadministration.html)
 4. **Applied:** Compatible, substantive (Correction) Validate and correct the FHIRPath expressions in the USCDI mapping table [FHIR-57864](https://jira.hl7.org/browse/FHIR-57864) See Changes [Here](uscdi.html)
+5. **Applied:** Compatible, substantive (Correction) Replace inactive SNOMED CT in the US Core Medication Adherence Extension scenario table value set.[FHIR-57449](https://jira.hl7.org/browse/FHIR-57449) See Changes [Here](StructureDefinition-us-core-medication-adherence.html)
 
 ##### Non-substantive
 1. **Applied:** Non-substantive (Correction) Remove duplicated words from the Observation.hasMember short description and the Observation.derivedFrom definition [FHIR-58155](https://jira.hl7.org/browse/FHIR-58155) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
