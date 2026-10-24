@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MNA-SF-item-example-39156-5",
+  "id": "nutrition-assessment-panel-example-75282-4",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
@@ -25,26 +25,17 @@
           "display": "Survey"
         }
       ]
-    },
-    {
-      "coding": [
-        {
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "code": "vital-signs",
-          "display": "Vital Signs"
-        }
-      ]
     }
   ],
   "code": {
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "39156-5",
-        "display": "Body mass index (BMI) [Ratio]"
+        "code": "75282-4",
+        "display": "Nutrition assessment panel"
       }
     ],
-    "text": "Body Mass Index (BMI) (weight in kg) / (height in m) squared"
+    "text": "Nutrition assessment panel"
   },
   "subject": {
     "reference": "Patient/example"
@@ -55,10 +46,21 @@
       "reference": "Practitioner/practitioner-1"
     }
   ],
-  "valueQuantity": {
-    "value": 20.4,
-    "unit": "kg/m2",
-    "system": "http://unitsofmeasure.org",
-    "code": "kg/m2"
-  }
+  "hasMember": [
+    {
+      "reference": "Observation/nutrition-assessment-item-example-75298-0"
+    },
+    {
+      "reference": "Observation/nutrition-assessment-item-example-9058-9"
+    },
+    {
+      "reference": "Observation/nutrition-assessment-item-example-75292-3"
+    },
+    {
+      "reference": "Observation/nutrition-assessment-item-example-80467-4"
+    },
+    {
+      "reference": "Observation/nutrition-assessment-item-example-75303-8"
+    }
+  ]
 }

@@ -16,12 +16,10 @@ description: >-
   Questionnaire/US Core QuestionnaireResponse Profile to record the questions
   and responses of a structured nutrition assessment.
 copyright: This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc
-# TODO: PLACEHOLDER. The terminology for the USCDI Nutrition Assessment data
-# element is still pending a decision. The LOINC Nutrition assessment panel
-# (75282-4) panel items below stand in until that decision is made; the other
-# candidates under review are Nutrition assessment Narrative (75303-8),
-# Physical findings of nutrition assessment (75293-1), and the Mini nutritional
-# assessment - short form (MNA-SF) panel (107107-5).
+# TODO: Move this value set to VSAC. The codes below are the LOINC Nutrition
+# assessment panel (75282-4) and its panel items, the terminology recommended by
+# the Academy of Nutrition and Dietetics (AND) Nutrition Care Process
+# terminology (NCPT).
 compose:
   include:
     - system: http://loinc.org

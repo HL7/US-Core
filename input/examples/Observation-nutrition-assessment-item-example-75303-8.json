@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MNA-SF-item-example-107114-1",
+  "id": "nutrition-assessment-item-example-75303-8",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
@@ -31,11 +31,11 @@
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "107114-1",
-        "display": "Total score Reported.MNA-SF"
+        "code": "75303-8",
+        "display": "Nutrition assessment Narrative"
       }
     ],
-    "text": "Total score"
+    "text": "Nutrition assessment narrative"
   },
   "subject": {
     "reference": "Patient/example"
@@ -46,5 +46,5 @@
       "reference": "Practitioner/practitioner-1"
     }
   ],
-  "valueInteger": 8
+  "valueString": "Estimated intake of 3200 kcal in 24 hours exceeds the estimated need of 2200 kcal in 24 hours, with 4 empty calorie servings per day. The patient reports gaining weight above a usual body weight of 165 lb. Assessment is excessive energy intake relative to need."
 }

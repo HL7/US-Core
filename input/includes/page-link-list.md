@@ -778,6 +778,7 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Colonoscopy Example]: CarePlan-colonoscopy.html
 [Condition Duodenal Resolved Ulcer Example]: Condition-condition-duodenal-ulcer-res.html
 [Condition Duodenal Ulcer Example]: Condition-condition-duodenal-ulcer.html
+[Condition Nutrition Diagnosis Example]: Condition-condition-nutrition-diagnosis.html
 [Coverage Example]: Coverage-coverage-example.html
 [Deceased Patient Example]: Patient-deceased-example.html
 [Defibrillator Device Example]: Device-udi-2.html
@@ -860,15 +861,13 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [MedicationRequest Referenced Oral Axid Example]: MedicationRequest-medicationrequest-referenced-oral-axid.html
 [MedicationRequest Self Tylenol Example]: MedicationRequest-self-tylenol.html
 [Missing Coded Data Example]: CareTeam-missing-coded-data-example.html
-[MNA-SF Item Example 107108-3]: Observation-MNA-SF-item-example-107108-3.html
-[MNA-SF Item Example 107109-1]: Observation-MNA-SF-item-example-107109-1.html
-[MNA-SF Item Example 107110-9]: Observation-MNA-SF-item-example-107110-9.html
-[MNA-SF Item Example 107111-7]: Observation-MNA-SF-item-example-107111-7.html
-[MNA-SF Item Example 107113-3]: Observation-MNA-SF-item-example-107113-3.html
-[MNA-SF Item Example 107114-1]: Observation-MNA-SF-item-example-107114-1.html
-[MNA-SF Item Example 39156-5]: Observation-MNA-SF-item-example-39156-5.html
-[MNA-SF Panel Example 107107-5]: Observation-MNA-SF-panel-example-107107-5.html
 [No ADI Observation Example]: Observation-no-ADI-example.html
+[Nutrition Assessment Item Example 75292-3]: Observation-nutrition-assessment-item-example-75292-3.html
+[Nutrition Assessment Item Example 75298-0]: Observation-nutrition-assessment-item-example-75298-0.html
+[Nutrition Assessment Item Example 75303-8]: Observation-nutrition-assessment-item-example-75303-8.html
+[Nutrition Assessment Item Example 80467-4]: Observation-nutrition-assessment-item-example-80467-4.html
+[Nutrition Assessment Item Example 9058-9]: Observation-nutrition-assessment-item-example-9058-9.html
+[Nutrition Assessment Panel Example 75282-4]: Observation-nutrition-assessment-panel-example-75282-4.html
 [NutritionOrder Cardiac Diet Example]: NutritionOrder-nutritionorder-cardiac-diet.html
 [NutritionOrder Whole Food Diet Example]: NutritionOrder-nutritionorder-whole-food-diet.html
 [Observation SatO2 FiO2 Example]: Observation-satO2-fiO2.html
@@ -980,7 +979,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Simple Observation Disability Status Example]: Observation-simple-observation-disability-status.html
 [Simple Observation Functional Status Example]: Observation-simple-observation-functional-status.html
 [Simple Observation Nutrition Status Example]: Observation-simple-observation-nutrition-status.html
-[Simple Observation Nutrition Status MNA-SF Example]: Observation-simple-observation-nutrition-status-mna-sf.html
 [Simple Observation SDOH Example]: Observation-simple-observation-sdoh.html
 [Some Day Smoker Example]: Observation-some-day-smoker.html
 [Substance Use Status Example]: Observation-substance-use-status.html

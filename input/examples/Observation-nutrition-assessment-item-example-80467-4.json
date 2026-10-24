@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MNA-SF-item-example-107108-3",
+  "id": "nutrition-assessment-item-example-80467-4",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
@@ -31,11 +31,11 @@
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "107108-3",
-        "display": "Has food intake declined due to loss of appetite, digestive problems, chewing or swallowing difficulties 3 months"
+        "code": "80467-4",
+        "display": "Empty calorie servings 24 hour Estimated"
       }
     ],
-    "text": "Has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing or swallowing difficulties?"
+    "text": "Estimated empty calorie servings in 24 hours"
   },
   "subject": {
     "reference": "Patient/example"
@@ -46,14 +46,10 @@
       "reference": "Practitioner/practitioner-1"
     }
   ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "LA34821-1",
-        "display": "Moderate decrease in food intake"
-      }
-    ],
-    "text": "Moderate decrease in food intake"
+  "valueQuantity": {
+    "value": 4,
+    "unit": "servings per day",
+    "system": "http://unitsofmeasure.org",
+    "code": "/d"
   }
 }

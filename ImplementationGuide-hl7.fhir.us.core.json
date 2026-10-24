@@ -491,6 +491,14 @@
       },
       {
         "reference": {
+          "reference": "Condition/condition-nutrition-diagnosis"
+        },
+        "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture a nutrition diagnosis for the USCDI Nutrition Assessment data element. The `Condition.code` is the Nutrition Diagnosis Grouping code Excessive intake of energy (SNOMED CT 878790004), and `Condition.evidence.detail` references the [Nutrition Assessment Panel Example 75282-4](Observation-nutrition-assessment-panel-example-75282-4.html), the energy balance assessment the diagnosis is based on. The diagnosis is recorded as a separate Condition rather than as a member of the assessment panel.",
+        "name": "Condition Nutrition Diagnosis Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|10.0.0-ballot"
+      },
+      {
+        "reference": {
           "reference": "Coverage/coverage-example"
         },
         "description": "This is a coverage example for the *US Core Coverage Profile*.",
@@ -1147,75 +1155,59 @@
       },
       {
         "reference": {
-          "reference": "Observation/MNA-SF-item-example-107108-3"
-        },
-        "description": "This is an MNA-SF Item Example 107108-3 (Has food intake declined over the past 3 months due to loss of appetite, digestive problems, chewing or swallowing difficulties?) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
-        "name": "MNA-SF Item Example 107108-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MNA-SF-item-example-107109-1"
-        },
-        "description": "This is an MNA-SF Item Example 107109-1 (Weight loss during the last 3 months) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
-        "name": "MNA-SF Item Example 107109-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MNA-SF-item-example-107110-9"
-        },
-        "description": "This is an MNA-SF Item Example 107110-9 (Mobility) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
-        "name": "MNA-SF Item Example 107110-9",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MNA-SF-item-example-107111-7"
-        },
-        "description": "This is an MNA-SF Item Example 107111-7 (Has suffered psychological stress or acute disease in the past 3 months?) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
-        "name": "MNA-SF Item Example 107111-7",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MNA-SF-item-example-107113-3"
-        },
-        "description": "This is an MNA-SF Item Example 107113-3 (Neuropsychological problems) for the *US Core Observation Screening Assessment Profile*. It is one of the questions of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element.",
-        "name": "MNA-SF Item Example 107113-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MNA-SF-item-example-107114-1"
-        },
-        "description": "This is an MNA-SF Item Example 107114-1 (Total score) for the *US Core Observation Screening Assessment Profile*. It is the screening score of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element. A score of 12-14 points indicates normal nutritional status, 8-11 points at risk of malnutrition, and 0-7 points malnourished.",
-        "name": "MNA-SF Item Example 107114-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MNA-SF-item-example-39156-5"
-        },
-        "description": "This is an MNA-SF Item Example 39156-5 (Body mass index (BMI)) for the *US Core Observation Screening Assessment Profile*. It is the body mass index question of the Mini Nutritional Assessment - Short Form (MNA-SF) for the USCDI Nutrition Assessment data element. Because the observation is also a body mass index, it carries the \"vital-signs\" category alongside the \"survey\" and \"nutrition-assessment\" categories so that it conforms to the FHIR body mass index profile as well.",
-        "name": "MNA-SF Item Example 39156-5",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/MNA-SF-panel-example-107107-5"
-        },
-        "description": "This is an MNA-SF Panel Example 107107-5 (Mini Nutritional Assessment - Short Form) for the *US Core Observation Screening Assessment Profile*. The MNA-SF is a six-question validated screening tool that identifies patients who are malnourished or at risk of malnutrition, and is an example of a structured screening and assessment for the USCDI Nutrition Assessment data element. The individual questions and responses are the member Observations.",
-        "name": "MNA-SF Panel Example 107107-5",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
-      },
-      {
-        "reference": {
           "reference": "Observation/no-ADI-example"
         },
         "description": "This is an Observation example for the USCDI5 ADI Observation Data Element, indicating whether a patient has an advance directive using code 45473-6 (Advance healthcare directive completed) and a SNOMED CT value of \"No\".",
         "name": "No ADI Observation Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-adi-documentation|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Observation/nutrition-assessment-item-example-75292-3"
+        },
+        "description": "This is a Nutrition Assessment Item Example 75292-3 (Body weight - Reported --usual) for the *US Core Observation Screening Assessment Profile*. It is the usual body weight the patient reports and is one member of the energy balance assessment for the USCDI Nutrition Assessment data element. It is a nutrition assessment panel item, not a vital sign, so it carries the \"survey\" and \"nutrition-assessment\" categories and does not conform to the FHIR body weight profile.",
+        "name": "Nutrition Assessment Item Example 75292-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Observation/nutrition-assessment-item-example-75298-0"
+        },
+        "description": "This is a Nutrition Assessment Item Example 75298-0 (Calorie intake 24 hour Estimated) for the *US Core Observation Screening Assessment Profile*. It is the estimated energy intake from a 24 hour diet recall and is one member of the energy balance assessment for the USCDI Nutrition Assessment data element. The *Estimated* variant of the code is used because the value comes from a diet recall rather than a measured calorie count.",
+        "name": "Nutrition Assessment Item Example 75298-0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Observation/nutrition-assessment-item-example-75303-8"
+        },
+        "description": "This is a Nutrition Assessment Item Example 75303-8 (Nutrition assessment Narrative) for the *US Core Observation Screening Assessment Profile*. It is the narrative conclusion of the energy balance assessment for the USCDI Nutrition Assessment data element and is one member of the nutrition assessment panel.",
+        "name": "Nutrition Assessment Item Example 75303-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Observation/nutrition-assessment-item-example-80467-4"
+        },
+        "description": "This is a Nutrition Assessment Item Example 80467-4 (Empty calorie servings 24 hour Estimated) for the *US Core Observation Screening Assessment Profile*. It is the estimated number of empty calorie servings from a 24 hour diet recall and is one member of the energy balance assessment for the USCDI Nutrition Assessment data element. It shows where the energy excess comes from and supports the counseling that follows the assessment.",
+        "name": "Nutrition Assessment Item Example 80467-4",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Observation/nutrition-assessment-item-example-9058-9"
+        },
+        "description": "This is a Nutrition Assessment Item Example 9058-9 (Calorie need 24 hour Estimated) for the *US Core Observation Screening Assessment Profile*. It is the estimated energy need and is one member of the energy balance assessment for the USCDI Nutrition Assessment data element. It is the comparative standard the estimated intake is measured against, which is how the Academy of Nutrition and Dietetics defines an assessment, in other words data compared to criteria and norms.",
+        "name": "Nutrition Assessment Item Example 9058-9",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
+      },
+      {
+        "reference": {
+          "reference": "Observation/nutrition-assessment-panel-example-75282-4"
+        },
+        "description": "This is a Nutrition Assessment Panel Example 75282-4 (Nutrition assessment panel) for the *US Core Observation Screening Assessment Profile*. It is an energy balance assessment for the USCDI Nutrition Assessment data element, comparing the patient's estimated energy intake against the estimated energy need and putting both in context with the usual body weight and the number of empty calorie servings. The individual measurements and the assessment narrative are the member Observations. The members are referenced directly from this panel rather than through the intermediate LOINC sub-panels (Food and nutrient intake panel 75284-0, Comparative nutrition assessment standards panel 75285-7, Nutrition related anthropometric measurements panel 75286-5, and so on), which organize the LOINC terms but do not have to be instantiated. The nutrition diagnosis the assessment supports is the separate [Condition Nutrition Diagnosis Example](Condition-condition-nutrition-diagnosis.html), which references this panel in `Condition.evidence.detail`.",
+        "name": "Nutrition Assessment Panel Example 75282-4",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
       },
       {
         "reference": {
@@ -2079,14 +2071,6 @@
         },
         "description": "This *US Core Simple Observation Profile* is a nutrition status determination which is not based on any formal assessment tool or survey.",
         "name": "Simple Observation Nutrition Status Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|10.0.0-ballot"
-      },
-      {
-        "reference": {
-          "reference": "Observation/simple-observation-nutrition-status-mna-sf"
-        },
-        "description": "This *US Core Simple Observation Profile* is a nutrition status clinical judgment based on a formal assessment tool. `Observation.derivedFrom` references the Mini Nutritional Assessment - Short Form (MNA-SF) screening assessment the clinician based the judgment on, whose total score of 8 of a possible 14 points indicates the patient is at risk of malnutrition.",
-        "name": "Simple Observation Nutrition Status MNA-SF Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|10.0.0-ballot"
       },
       {

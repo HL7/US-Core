@@ -1,0 +1,42 @@
+resourceType: Observation
+id: nutrition-assessment-item-example-9058-9
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Nutrition Assessment Item Example 9058-9
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Nutrition Assessment Item Example 9058-9 (Calorie need
+      24 hour Estimated) for the *US Core Observation Screening Assessment Profile*.
+      It is the estimated energy need and is one member of the energy balance
+      assessment for the USCDI Nutrition Assessment data element. It is the
+      comparative standard the estimated intake is measured against, which is how
+      the Academy of Nutrition and Dietetics defines an assessment, in other words
+      data compared to criteria and norms.
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+status: final
+category:
+- coding:
+  - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+    code: nutrition-assessment
+    display: Nutrition Assessment
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 9058-9
+    display: Calorie need 24 hour Estimated
+  text: Estimated calorie need in 24 hours
+subject:
+  reference: Patient/example
+effectiveDateTime: '2026-09-14T15:30:00Z'
+performer:
+- reference: Practitioner/practitioner-1
+valueQuantity:
+  value: 2200
+  unit: kcal/24 hours
+  system: http://unitsofmeasure.org
+  code: kcal/(24.h)

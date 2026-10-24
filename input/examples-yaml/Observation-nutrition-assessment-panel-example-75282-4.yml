@@ -1,0 +1,50 @@
+resourceType: Observation
+id: nutrition-assessment-panel-example-75282-4
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Nutrition Assessment Panel Example 75282-4
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Nutrition Assessment Panel Example 75282-4 (Nutrition
+      assessment panel) for the *US Core Observation Screening Assessment Profile*.
+      It is an energy balance assessment for the USCDI Nutrition Assessment data
+      element, comparing the patient's estimated energy intake against the estimated
+      energy need and putting both in context with the usual body weight and the
+      number of empty calorie servings. The individual measurements and the
+      assessment narrative are the member Observations. The members are referenced
+      directly from this panel rather than through the intermediate LOINC sub-panels
+      (Food and nutrient intake panel 75284-0, Comparative nutrition assessment
+      standards panel 75285-7, Nutrition related anthropometric measurements panel
+      75286-5, and so on), which organize the LOINC terms but do not have to be
+      instantiated. The nutrition diagnosis the assessment supports is the separate
+      [Condition Nutrition Diagnosis Example](Condition-condition-nutrition-diagnosis.html),
+      which references this panel in `Condition.evidence.detail`.
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+status: final
+category:
+- coding:
+  - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+    code: nutrition-assessment
+    display: Nutrition Assessment
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 75282-4
+    display: Nutrition assessment panel
+  text: Nutrition assessment panel
+subject:
+  reference: Patient/example
+effectiveDateTime: '2026-09-14T15:30:00Z'
+performer:
+- reference: Practitioner/practitioner-1
+hasMember:
+- reference: Observation/nutrition-assessment-item-example-75298-0
+- reference: Observation/nutrition-assessment-item-example-9058-9
+- reference: Observation/nutrition-assessment-item-example-75292-3
+- reference: Observation/nutrition-assessment-item-example-80467-4
+- reference: Observation/nutrition-assessment-item-example-75303-8

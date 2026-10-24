@@ -44,4 +44,5 @@ Data Class Number,USCoreStarterCodes,USCDI Data Element,Category Code,ValueSet N
 6,TRUE,Alcohol Use,social-history,Substance Use,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1015/expansion,2.16.840.1.113762.1.4.1222.1015,FALSE,FALSE,TRUE,,
 7,TRUE,Substance Use,social-history,Drug Misuse,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.707/expansion,2.16.840.1.113762.1.4.1222.707,TRUE,FALSE,FALSE,,
 7,TRUE,Substance Use,social-history,Substance Use,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1015/expansion,2.16.840.1.113762.1.4.1222.1015,FALSE,FALSE,TRUE,,
-8,TRUE,Nutrition Assessment,nutrition-assessment,US Core Nutrition Assessment,ValueSet-us-core-nutrition-assessment.html,-,FALSE,TRUE,TRUE,Placeholder set of the LOINC Nutrition assessment panel (75282-4) panel items pending a terminology decision,
+8,TRUE,Nutrition Assessment,nutrition-assessment,Nutrition Diagnosis Grouping,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1095.85/expansion,-,TRUE,FALSE,FALSE,SNOMED CT clinical judgment codes to represent a nutrition diagnosis that identifies and describes a specific nutrition problem,
+8,TRUE,Nutrition Assessment,nutrition-assessment,US Core Nutrition Assessment,ValueSet-us-core-nutrition-assessment.html,-,FALSE,TRUE,TRUE,LOINC Nutrition assessment panel (75282-4) panel items,

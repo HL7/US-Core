@@ -42,6 +42,7 @@
 [colonoscopy]: CarePlan-colonoscopy.html
 [condition-duodenal-ulcer-res]: Condition-condition-duodenal-ulcer-res.html
 [condition-duodenal-ulcer]: Condition-condition-duodenal-ulcer.html
+[condition-nutrition-diagnosis]: Condition-condition-nutrition-diagnosis.html
 [coverage-example]: Coverage-coverage-example.html
 [deceased-example]: Patient-deceased-example.html
 [udi-2]: Device-udi-2.html
@@ -124,15 +125,13 @@
 [medicationrequest-referenced-oral-axid]: MedicationRequest-medicationrequest-referenced-oral-axid.html
 [self-tylenol]: MedicationRequest-self-tylenol.html
 [missing-coded-data-example]: CareTeam-missing-coded-data-example.html
-[MNA-SF-item-example-107108-3]: Observation-MNA-SF-item-example-107108-3.html
-[MNA-SF-item-example-107109-1]: Observation-MNA-SF-item-example-107109-1.html
-[MNA-SF-item-example-107110-9]: Observation-MNA-SF-item-example-107110-9.html
-[MNA-SF-item-example-107111-7]: Observation-MNA-SF-item-example-107111-7.html
-[MNA-SF-item-example-107113-3]: Observation-MNA-SF-item-example-107113-3.html
-[MNA-SF-item-example-107114-1]: Observation-MNA-SF-item-example-107114-1.html
-[MNA-SF-item-example-39156-5]: Observation-MNA-SF-item-example-39156-5.html
-[MNA-SF-panel-example-107107-5]: Observation-MNA-SF-panel-example-107107-5.html
 [no-ADI-example]: Observation-no-ADI-example.html
+[nutrition-assessment-item-example-75292-3]: Observation-nutrition-assessment-item-example-75292-3.html
+[nutrition-assessment-item-example-75298-0]: Observation-nutrition-assessment-item-example-75298-0.html
+[nutrition-assessment-item-example-75303-8]: Observation-nutrition-assessment-item-example-75303-8.html
+[nutrition-assessment-item-example-80467-4]: Observation-nutrition-assessment-item-example-80467-4.html
+[nutrition-assessment-item-example-9058-9]: Observation-nutrition-assessment-item-example-9058-9.html
+[nutrition-assessment-panel-example-75282-4]: Observation-nutrition-assessment-panel-example-75282-4.html
 [nutritionorder-cardiac-diet]: NutritionOrder-nutritionorder-cardiac-diet.html
 [nutritionorder-whole-food-diet]: NutritionOrder-nutritionorder-whole-food-diet.html
 [satO2-fiO2]: Observation-satO2-fiO2.html
@@ -241,7 +240,6 @@
 [simple-observation-disability-status]: Observation-simple-observation-disability-status.html
 [simple-observation-functional-status]: Observation-simple-observation-functional-status.html
 [simple-observation-nutrition-status]: Observation-simple-observation-nutrition-status.html
-[simple-observation-nutrition-status-mna-sf]: Observation-simple-observation-nutrition-status-mna-sf.html
 [simple-observation-sdoh]: Observation-simple-observation-sdoh.html
 [some-day-smoker]: Observation-some-day-smoker.html
 [substance-use-status]: Observation-substance-use-status.html

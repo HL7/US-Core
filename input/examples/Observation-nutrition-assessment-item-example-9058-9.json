@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MNA-SF-item-example-107113-3",
+  "id": "nutrition-assessment-item-example-9058-9",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
@@ -31,11 +31,11 @@
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "107113-3",
-        "display": "Neuropsychological problems"
+        "code": "9058-9",
+        "display": "Calorie need 24 hour Estimated"
       }
     ],
-    "text": "Neuropsychological problems"
+    "text": "Estimated calorie need in 24 hours"
   },
   "subject": {
     "reference": "Patient/example"
@@ -46,14 +46,10 @@
       "reference": "Practitioner/practitioner-1"
     }
   ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "LA34832-8",
-        "display": "3: No psychological problems"
-      }
-    ],
-    "text": "3: No psychological problems"
+  "valueQuantity": {
+    "value": 2200,
+    "unit": "kcal/24 hours",
+    "system": "http://unitsofmeasure.org",
+    "code": "kcal/(24.h)"
   }
 }

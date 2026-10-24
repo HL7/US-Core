@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MNA-SF-panel-example-107107-5",
+  "id": "nutrition-assessment-item-example-75292-3",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
@@ -31,11 +31,11 @@
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "107107-5",
-        "display": "Mini nutritional assessment - short form 3 months Reported.MNA-SF"
+        "code": "75292-3",
+        "display": "Body weight - Reported --usual"
       }
     ],
-    "text": "Mini Nutritional Assessment - Short Form (MNA-SF)"
+    "text": "Usual body weight reported by the patient"
   },
   "subject": {
     "reference": "Patient/example"
@@ -46,27 +46,10 @@
       "reference": "Practitioner/practitioner-1"
     }
   ],
-  "hasMember": [
-    {
-      "reference": "Observation/MNA-SF-item-example-107108-3"
-    },
-    {
-      "reference": "Observation/MNA-SF-item-example-107109-1"
-    },
-    {
-      "reference": "Observation/MNA-SF-item-example-107110-9"
-    },
-    {
-      "reference": "Observation/MNA-SF-item-example-107111-7"
-    },
-    {
-      "reference": "Observation/MNA-SF-item-example-107113-3"
-    },
-    {
-      "reference": "Observation/MNA-SF-item-example-39156-5"
-    },
-    {
-      "reference": "Observation/MNA-SF-item-example-107114-1"
-    }
-  ]
+  "valueQuantity": {
+    "value": 165,
+    "unit": "lb",
+    "system": "http://unitsofmeasure.org",
+    "code": "[lb_av]"
+  }
 }

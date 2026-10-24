@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "MNA-SF-item-example-107109-1",
+  "id": "nutrition-assessment-item-example-75298-0",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|10.0.0-ballot"
@@ -31,11 +31,11 @@
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "107109-1",
-        "display": "Weight loss 3 months"
+        "code": "75298-0",
+        "display": "Calorie intake 24 hour Estimated"
       }
     ],
-    "text": "Weight loss during the last 3 months"
+    "text": "Estimated calorie intake in 24 hours"
   },
   "subject": {
     "reference": "Patient/example"
@@ -46,14 +46,10 @@
       "reference": "Practitioner/practitioner-1"
     }
   ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "LA34826-0",
-        "display": "4: No weight loss"
-      }
-    ],
-    "text": "4: No weight loss"
+  "valueQuantity": {
+    "value": 3200,
+    "unit": "kcal/24 hours",
+    "system": "http://unitsofmeasure.org",
+    "code": "kcal/(24.h)"
   }
 }
