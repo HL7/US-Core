@@ -319,7 +319,6 @@
 [USCore-ModelInfo]: Library-USCore-ModelInfo.html
 [NarrativeStatus]: ValueSet-us-core-narrative-status.html
 [USCoreNonLaboratoryCodes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
-[USCoreNutritionAssessment]: ValueSet-us-core-nutrition-assessment.html
 [USCoreNutritionOrderProfile]: StructureDefinition-us-core-nutritionorder.html
 [USCoreObservationADIDocumentationProfile]: StructureDefinition-us-core-observation-adi-documentation.html
 [USCoreObservationClinicalResultProfile]: StructureDefinition-us-core-observation-clinical-result.html

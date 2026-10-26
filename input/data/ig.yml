@@ -1709,11 +1709,6 @@ definition:
       exampleBoolean: false
       name: US Core Non Laboratory Codes
     - reference:
-        reference: ValueSet/us-core-nutrition-assessment
-      description: 'This value set is a ''starter set'' of LOINC panel and panel item codes for the USCDI Nutrition Assessment data element. It is the set of panel items of the LOINC Nutrition assessment panel (75282-4), which LOINC created for the Nutrition Section of the HL7 Implementation Guide for CDA Release 2: Consolidated CDA Templates for Clinical Notes. The codes are used in the US Core Observation Screening Assessment Profile and the SDC Base Questionnaire/US Core QuestionnaireResponse Profile to record the questions and responses of a structured nutrition assessment.'
-      exampleBoolean: false
-      name: US Core Nutrition Assessment
-    - reference:
         reference: StructureDefinition/us-core-nutritionorder
       description: The US Core NutritionOrder Profile inherits from the FHIR [NutritionOrder](https://hl7.org/fhir/R4/nutritionorder.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) *Nutrition Order Data Element of the Orders Data Class*. It sets minimum expectations for the NutritionOrder resource to record, search, and fetch oral diet orders for a patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false

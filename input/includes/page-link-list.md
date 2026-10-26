@@ -703,8 +703,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [US Core Narrative Status - Testing]: ValueSet-us-core-narrative-status-testing.html
 [US Core Non Laboratory Codes]: ValueSet-us-core-diagnosticreport-report-and-note-codes.html
 [US Core Non Laboratory Codes - Testing]: ValueSet-us-core-diagnosticreport-report-and-note-codes-testing.html
-[US Core Nutrition Assessment]: ValueSet-us-core-nutrition-assessment.html
-[US Core Nutrition Assessment - Testing]: ValueSet-us-core-nutrition-assessment-testing.html
 [US Core Practitioner Role Specialty Codes]: ValueSet-us-core-practitionerrole-specialty.html
 [US Core Practitioner Role Specialty Codes - Testing]: ValueSet-us-core-practitionerrole-specialty-testing.html
 [US Core Problem or Health Concern]: ValueSet-us-core-problem-or-health-concern.html
