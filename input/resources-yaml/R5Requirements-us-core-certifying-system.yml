@@ -24,7 +24,7 @@ statement:
       - general-requirements.html#profile-support--interaction-support
     conformance:
       - SHALL
-    requirement: Certifying Systems **SHALL** implement all components in the ... the US Core CapabilityStatement [[Definition](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html)] .
+    requirement: Certifying Systems **SHALL** implement all components in the ... the US Core CapabilityStatement [[Definition](CapabilityStatement-us-core-Server.html)] .
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -78,7 +78,7 @@ statement:
     conformance:
       - SHALL
     conditionality: true
-    requirement: Although none of the Observation.derivedFrom [references are flagged as Must Support](https://hl7.org/fhir/us/core/STU8/must-support.html#must-support---resource-references), the Certifying System *SHALL** support at least one of them
+    requirement: Although none of the Observation.derivedFrom [references are flagged as Must Support](must-support.html#must-support---resource-references), the Certifying System *SHALL** support at least one of them
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -164,7 +164,7 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: '[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference …The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles)'
+    requirement: '[For organizations participating in the ONC Health IT Certification program,] when using ServiceRequest.reasonReference …The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](general-guidance.html#referencing-us-core-profiles)'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -264,7 +264,7 @@ statement:
       - StructureDefinition-us-core-condition-problems-health-concerns.html#profile-specific-implementation-guidance
     conformance:
       - SHOULD
-    requirement: Certifying Systems ... **SHOULD** support the ... [US Core Simple Observation Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html) codes
+    requirement: Certifying Systems ... **SHOULD** support the ... [US Core Simple Observation Category](ValueSet-us-core-simple-observation-category.html) codes
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -275,7 +275,7 @@ statement:
     conformance:
       - SHALL
     conditionality: true
-    requirement: '[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) codes'
+    requirement: '[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category](ValueSet-us-core-screening-assessment-observation-category.html) codes'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -285,7 +285,7 @@ statement:
       - StructureDefinition-us-core-observation-screening-assessment.html#profile-specific-implementation-guidance
     conformance:
       - SHOULD
-    requirement: '[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHOULD** support, the [US Core Screening Assessment Observation Maximum Category](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-maximum-category.html) codes'
+    requirement: '[For the US Core Observation Screening Assessment Profile,] Certifying Systems **SHOULD** support, the [US Core Screening Assessment Observation Maximum Category](ValueSet-us-core-screening-assessment-observation-maximum-category.html) codes'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -306,7 +306,7 @@ statement:
     conformance:
       - SHALL
     conditionality: true
-    requirement: Although the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] is marked as an Additional USCDI Requirement on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one.
+    requirement: Although the [[US Core Interpreter Needed Extension](StructureDefinition-us-core-interpreter-needed.html)] is marked as an Additional USCDI Requirement on both US Core Patient and US Core Encounter Profiles, the certifying Server system is not required to support the extension on both profiles but **SHALL** support the extension on at least one.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -317,7 +317,7 @@ statement:
     conformance:
       - SHOULD
     conditionality: true
-    requirement: '[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **SHOULD** support the other [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html) [in addition to  the [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html)]'
+    requirement: '[For [US Core Simple Observation Profile](StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **SHOULD** support the other [US Core Simple Observation Category codes](ValueSet-us-core-simple-observation-category.html) [in addition to  the [US Core Screening Assessment Observation Category codes](ValueSet-us-core-screening-assessment-observation-category.html)]'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -328,7 +328,7 @@ statement:
     conformance:
       - SHALL
     conditionality: true
-    requirement: '[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html)'
+    requirement: '[For [US Core Simple Observation Profile](StructureDefinition-us-core-simple-observation.html), ]Certifying Systems **SHALL** support, the [US Core Screening Assessment Observation Category codes](ValueSet-us-core-screening-assessment-observation-category.html)'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -339,7 +339,7 @@ statement:
     conformance:
       - MAY
     conditionality: true
-    requirement: '[For [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **MAY**  support other categories [in addition to  [US Core Screening Assessment Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-screening-assessment-observation-category.html) and  [US Core Simple Observation Category codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-simple-observation-category.html)].'
+    requirement: '[For [US Core Simple Observation Profile](StructureDefinition-us-core-simple-observation.html), ]Certifying Systems ... **MAY**  support other categories [in addition to  [US Core Screening Assessment Observation Category codes](ValueSet-us-core-screening-assessment-observation-category.html) and  [US Core Simple Observation Category codes](ValueSet-us-core-simple-observation-category.html)].'
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -391,7 +391,7 @@ statement:
       - StructureDefinition-us-core-encounter.html#profile-specific-implementation-guidance
     conformance:
       - SHALL
-    requirement: Servers **SHALL** use the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.
+    requirement: Servers **SHALL** use the [US Core Interpreter Needed Extension](StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink

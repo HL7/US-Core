@@ -107,7 +107,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Clinical Notes](https://hl7.org/fhir/us/core/clinical-notes.html)",
+      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Clinical Notes](clinical-notes.html)",
       "_reference": [
         {
           "extension": [
@@ -128,7 +128,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Medication List](https://hl7.org/fhir/us/core/medication-list.html)",
+      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Medication List](medication-list.html)",
       "_reference": [
         {
           "extension": [
@@ -149,7 +149,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Basic Provenance](https://hl7.org/fhir/us/core/basic-provenance.html)",
+      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Basic Provenance](basic-provenance.html)",
       "_reference": [
         {
           "extension": [
@@ -170,7 +170,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Screening and Assessments](https://hl7.org/fhir/us/core/screening-and-assessments.html)",
+      "requirement": "Server **MAY** deploy and support ... the following US Core interaction: [Screening and Assessments](screening-and-assessments.html)",
       "_reference": [
         {
           "extension": [
@@ -252,7 +252,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHOULD** declare conformance with the US [Core Server Capability Statement](https://hl7.org/fhir/us/core/CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`",
+      "requirement": "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHOULD** declare conformance with the US [Core Server Capability Statement](CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`",
       "_reference": [
         {
           "extension": [
@@ -1180,7 +1180,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:\n\nUS Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server Capability Statement](https://hl7.org/fhir/us/core/STU8/CapabilityStatement-us-core-Server.html).",
+      "requirement": "For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:\n\nUS Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server Capability Statement](CapabilityStatement-us-core-Server.html).",
       "_reference": [
         {
           "extension": [
@@ -1246,7 +1246,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "[When sending reason for missing information, follow] the methodology outlined in the [Missing Data](https://hl7.org/fhir/us/core/general-requirements.html#missing-data) section but using the appropriate reason code instead of unknown [reason code].",
+      "requirement": "[When sending reason for missing information, follow] the methodology outlined in the [Missing Data](general-requirements.html#missing-data) section but using the appropriate reason code instead of unknown [reason code].",
       "_reference": [
         {
           "extension": [
@@ -1791,7 +1791,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "For “User-Facing Applications”, a system’s support for patient-level (patient) or user-level (user) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](https://hl7.org/fhir/us/core/STU8/scopes.html#capability-sets) above). For example, if a Server lists permission-patient and permission-user in its capabilities, it **SHALL** support both patient-level and user-level required scopes",
+      "requirement": "For “User-Facing Applications”, a system’s support for patient-level (patient) or user-level (user) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](scopes.html#capability-sets) above). For example, if a Server lists permission-patient and permission-user in its capabilities, it **SHALL** support both patient-level and user-level required scopes",
       "_reference": [
         {
           "extension": [
@@ -1811,7 +1811,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "For “User-Facing Applications”, a system’s support for patient-level (patient) or user-level (user) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](https://hl7.org/fhir/us/core/STU8/scopes.html#capability-sets) above). For example, if a Server lists permission-patient and permission-user in its capabilities, it ... **SHOULD** support both patient-level and user-level recommended best-practice scopes",
+      "requirement": "For “User-Facing Applications”, a system’s support for patient-level (patient) or user-level (user) scopes depends on its published list of SMART on FHIR capabilities (see the [capability sets](scopes.html#capability-sets) above). For example, if a Server lists permission-patient and permission-user in its capabilities, it ... **SHOULD** support both patient-level and user-level recommended best-practice scopes",
       "_reference": [
         {
           "extension": [
@@ -2887,7 +2887,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "[To enable] terminology Servers to be able to validate US Edition-only codes [of [SNOMED CT](http://snomed.info/sct)], implementers **SHOULD** provide the accompanying system URI to describe the edition [see example 2 on [US Core general guidance](https://hl7.org/fhir/us/core/STU8/general-guidance.html#snomed-ct-united-states-edition)]",
+      "requirement": "[To enable] terminology Servers to be able to validate US Edition-only codes [of [SNOMED CT](http://snomed.info/sct)], implementers **SHOULD** provide the accompanying system URI to describe the edition [see example 2 on [US Core general guidance](general-guidance.html#snomed-ct-united-states-edition)]",
       "_reference": [
         {
           "extension": [
@@ -3759,7 +3759,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "Systems  **SHALL** implement the [US Core DocumentReference Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-documentreference.html)",
+      "requirement": "Systems  **SHALL** implement the [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html)",
       "_reference": [
         {
           "extension": [
@@ -3779,7 +3779,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "Systems **SHALL**  implement the [US Core DiagnosticReport Profile for Report and Note exchange](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-diagnosticreport-note.html)",
+      "requirement": "Systems **SHALL**  implement the [US Core DiagnosticReport Profile for Report and Note exchange](StructureDefinition-us-core-diagnosticreport-note.html)",
       "_reference": [
         {
           "extension": [
@@ -4491,7 +4491,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "An agent.type=”assembler”, agent.type=”transmitter”, or other agents from [Provenance Agent Type](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-provenance-participant-type.html) value set **MAY**  also be included.",
+      "requirement": "An agent.type=”assembler”, agent.type=”transmitter”, or other agents from [Provenance Agent Type](https://terminology.hl7.org/ValueSet-provenance-agent-type.html) value set **MAY**  also be included.",
       "_reference": [
         {
           "extension": [
@@ -4531,7 +4531,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "Every Server that supports the USDCI Data Class “Health Status Assessments”:\n\n**SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-condition-problems-health-concerns.html) or [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-simple-observation.html).",
+      "requirement": "Every Server that supports the USDCI Data Class “Health Status Assessments”:\n\n**SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile](StructureDefinition-us-core-condition-problems-health-concerns.html) or [US Core Simple Observation Profile](StructureDefinition-us-core-simple-observation.html).",
       "_reference": [
         {
           "extension": [
@@ -4551,7 +4551,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Every Server that supports the USDCI Data Class “Health Status Assessments”:\n...\nThe US Core Simple Observation Profile's Observation.derivedFrom element **SHOULD** reference the [Structured Screening and Assessment](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#structured-screening-and-assessments) upon which clinical judgment observations are made",
+      "requirement": "Every Server that supports the USDCI Data Class “Health Status Assessments”:\n...\nThe US Core Simple Observation Profile's Observation.derivedFrom element **SHOULD** reference the [Structured Screening and Assessment](screening-and-assessments.html#structured-screening-and-assessments) upon which clinical judgment observations are made",
       "_reference": [
         {
           "extension": [
@@ -4571,7 +4571,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Every Server that supports the USDCI Data Class “Health Status Assessments”:\n...\nthe US Core Condition Profile's Condition.evidence.detail element **SHOULD** reference the [Structured Screening and Assessment](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#structured-screening-and-assessments) which assist in diagnosing problems or health concerns.",
+      "requirement": "Every Server that supports the USDCI Data Class “Health Status Assessments”:\n...\nthe US Core Condition Profile's Condition.evidence.detail element **SHOULD** reference the [Structured Screening and Assessment](screening-and-assessments.html#structured-screening-and-assessments) which assist in diagnosing problems or health concerns.",
       "_reference": [
         {
           "extension": [
@@ -5767,7 +5767,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "The DocumentReference.type binding **MAY** extend to the whole [US Core DocumentReference Type Value Set](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-documentreference-type.html)",
+      "requirement": "The DocumentReference.type binding **MAY** extend to the whole [US Core DocumentReference Type Value Set](ValueSet-us-core-documentreference-type.html)",
       "_reference": [
         {
           "extension": [
@@ -6357,7 +6357,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "[For organizations participating in the ONC Health IT Certification program,] the referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles).",
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] the referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](general-guidance.html#referencing-us-core-profiles).",
       "_reference": [
         {
           "extension": [
@@ -6940,7 +6940,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "A practitioner’s clinical observation or assertion about a patient’s health status, which is not a response to a screening or assessment question, **SHOULD** use the [US Core Simple Observation Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-simple-observation.html) instead [of the US Core Observation Screening Assessment Profile]",
+      "requirement": "A practitioner’s clinical observation or assertion about a patient’s health status, which is not a response to a screening or assessment question, **SHOULD** use the [US Core Simple Observation Profile](StructureDefinition-us-core-simple-observation.html) instead [of the US Core Observation Screening Assessment Profile]",
       "_reference": [
         {
           "extension": [
@@ -6981,7 +6981,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-observation-screening-assessment.html).",
+      "requirement": "Observations formally part of an assessment tool or survey **SHOULD** use the [US Core Observation Screening Assessment Profile](StructureDefinition-us-core-observation-screening-assessment.html).",
       "_reference": [
         {
           "extension": [
@@ -7286,7 +7286,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **MAY**   include additional codes from the detailed ethnicity ... value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
+      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **MAY**   include additional codes from the detailed ethnicity ... value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (StructureDefinition-us-core-race.html)]",
       "_reference": [
         {
           "extension": [
@@ -7307,7 +7307,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
+      "requirement": "The Complex [Extension] for Race ... allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Race Extension] (StructureDefinition-us-core-race.html)]",
       "_reference": [
         {
           "extension": [
@@ -7328,7 +7328,7 @@
         "MAY"
       ],
       "conditionality": true,
-      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **MAY**   include additional codes from the detailed ... race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-race.html)]",
+      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **MAY**   include additional codes from the detailed ... race value sets drawn from the [Race & Ethnicity - CDC (CDCREC)](https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238) code system [when using the [US Core Race Extension] (StructureDefinition-us-core-race.html)]",
       "_reference": [
         {
           "extension": [
@@ -7349,7 +7349,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Ethnicity Extension] (https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-ethnicity.html)]",
+      "requirement": "The Complex [Extension] for ... Ethnicity allow[s] for one or more codes of which **SHALL**  include a text description [of category codes when using the [US Core Ethnicity Extension] (StructureDefinition-us-core-ethnicity.html)]",
       "_reference": [
         {
           "extension": [
@@ -7473,7 +7473,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "Servers that support only the US Core Practitioner Profile and do not support the [US Core PractitionerRole Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitionerrole.html) **SHALL**  provide implementation-specific guidance on how to access a provider’s location and contact information using only the Practitioner resource.",
+      "requirement": "Servers that support only the US Core Practitioner Profile and do not support the [US Core PractitionerRole Profile](StructureDefinition-us-core-practitionerrole.html) **SHALL**  provide implementation-specific guidance on how to access a provider’s location and contact information using only the Practitioner resource.",
       "_reference": [
         {
           "extension": [
@@ -7598,7 +7598,7 @@
         "SHOULD"
       ],
       "conditionality": true,
-      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using Procedure.reasonReference …The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](https://hl7.org/fhir/us/core/STU8/general-guidance.html#referencing-us-core-profiles)",
+      "requirement": "[For organizations participating in the ONC Health IT Certification program,] when using Procedure.reasonReference …The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles](general-guidance.html#referencing-us-core-profiles)",
       "_reference": [
         {
           "extension": [
@@ -7680,7 +7680,7 @@
       "conformance": [
         "MAY"
       ],
-      "requirement": "The Must Support `ServiceRequest.category` is bound, at a minimum, to the [US Core ServiceRequest Category Codes](https://hl7.org/fhir/us/core/STU8/ValueSet-us-core-servicerequest-category.html), and other category codes **MAY**  be used.",
+      "requirement": "The Must Support `ServiceRequest.category` is bound, at a minimum, to the [US Core ServiceRequest Category Codes](ValueSet-us-core-servicerequest-category.html), and other category codes **MAY**  be used.",
       "_reference": [
         {
           "extension": [
@@ -8030,7 +8030,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Systems **SHOULD** provide Provenance statements using the [US Core Provenance Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-provenance.html) resource and associated requirements.",
+      "requirement": "Systems **SHOULD** provide Provenance statements using the [US Core Provenance Profile](StructureDefinition-us-core-provenance.html) resource and associated requirements.",
       "_reference": [
         {
           "extension": [
@@ -8235,7 +8235,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "For the US Core Simple Observation Profile, Servers **SHALL** support all the category codes [listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes).",
+      "requirement": "For the US Core Simple Observation Profile, Servers **SHALL** support all the category codes [listed](screening-and-assessments.html#category-codes).",
       "_reference": [
         {
           "extension": [
@@ -8255,7 +8255,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "For the … US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes [listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes).",
+      "requirement": "For the … US Core Observation Screening Assessment Profiles, Servers **SHALL** support all the category codes [listed](screening-and-assessments.html#category-codes).",
       "_reference": [
         {
           "extension": [
@@ -8295,7 +8295,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "For the US Core Condition Problems and Health Concerns Profile, Servers **SHOULD** support the other category codes [listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes).",
+      "requirement": "For the US Core Condition Problems and Health Concerns Profile, Servers **SHOULD** support the other category codes [listed](screening-and-assessments.html#category-codes).",
       "_reference": [
         {
           "extension": [
@@ -8315,7 +8315,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "For the US Core ServiceRequest Profile, Servers **SHOULD** support all the [[listed](https://hl7.org/fhir/us/core/STU8/screening-and-assessments.html#category-codes)] category codes.",
+      "requirement": "For the US Core ServiceRequest Profile, Servers **SHOULD** support all the [[listed](screening-and-assessments.html#category-codes)] category codes.",
       "_reference": [
         {
           "extension": [
@@ -8467,7 +8467,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "Servers **SHALL** return all active medications following the [Get All Active Medications](https://hl7.org/fhir/us/core/STU8/medication-list.html#get-all-active-medications) guidance.",
+      "requirement": "Servers **SHALL** return all active medications following the [Get All Active Medications](medication-list.html#get-all-active-medications) guidance.",
       "_reference": [
         {
           "extension": [
@@ -8569,7 +8569,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Servers **SHOULD** use the [US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.",
+      "requirement": "Servers **SHOULD** use the [US Core Interpreter Needed Extension](StructureDefinition-us-core-interpreter-needed.html) on [the [US Core Patient Profile](StructureDefinition-us-core-patient.html)] or the [US Core Encounter Profile](StructureDefinition-us-core-encounter.html) to communicate whether a patient needs an interpreter.",
       "_reference": [
         {
           "extension": [
@@ -8646,7 +8646,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "Although 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but **SHALL** support at least one.",
+      "requirement": "Although 'Observation.performer' target profiles [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but **SHALL** support at least one.",
       "_reference": [
         {
           "extension": [
@@ -8727,7 +8727,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": "Although 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but **SHALL** support at least one.",
+      "requirement": "Although 'Observation.performer' target profiles [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](StructureDefinition-us-core-patient.html) are labeled Must Support. Servers are not required to support both, but **SHALL** support at least one.",
       "_reference": [
         {
           "extension": [
@@ -9471,7 +9471,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "**SHALL** populate *mandatory* elements (minimum cardinality > 0) according to the methodology in the [Missing Data](https://hl7.org/fhir/us/core/general-requirements.html#missing-data) section.",
+      "requirement": "**SHALL** populate *mandatory* elements (minimum cardinality > 0) according to the methodology in the [Missing Data](general-requirements.html#missing-data) section.",
       "_reference": [
         {
           "extension": [

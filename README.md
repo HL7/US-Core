@@ -94,7 +94,7 @@ This documentation provides a comprehensive guide to the technical stack and wor
       - [Update IG Publisher, then build](#update-ig-publisher-then-build)
       - [Build IG after changes/updates (Convert YAML to JSON, then run SUSHI, then run IG Publisher removing meta extension and adding versions to canonicicals)](#build-ig-after-changesupdates-convert-yaml-to-json-then-run-sushi-then-run-ig-publisher-removing-meta-extension-and-adding-versions-to-canonicicals)
       - [Delete temp/cache (Run build after deleting artifacts or examples)](#delete-tempcache-run-build-after-deleting-artifacts-or-examples)
-      - [Update the requirements resource (run after updating the us\_core\_reqs.csv file)](#update-the-requirements-resource-run-after-updating-the-us_core_reqscsv-file)
+      - [Update the requirements resource (run after updating the us\_core\_requirements.csv file)](#update-the-requirements-resource-run-after-updating-the-us_core_requirementscsv-file)
       - [Prepublication Steps](#prepublication-steps)
       - [Troubleshooting ( when you screw up )](#troubleshooting--when-you-screw-up-)
   - [Git](#git)
@@ -342,7 +342,7 @@ input/pagecontent/search-parameters-and-operations.md||temp/pages/_data/structur
 input/pagecontent/terminology.md|temp/pages/valueset-ref-all-list.csv
 input/pagecontent/terminology.md|temp/pages/codesystem-ref-all-list.csv.
 input/pagecontent/uscdi.md|input/data/uscdi-table.csv
-input/pagecontent/requirements.md|input/data/us_core_reqs.csv
+input/pagecontent/requirements.md|input/data/us_core_requirements.csv
 
 \* The publish.sh script adds `input/data/ig.yml` to the input/data directory after running sushi  (for details see the Publish.sh section below).
 
@@ -816,7 +816,7 @@ For example:
 | `-z` | Delete template/temp directories before publishing. Use `-z` when: You've renamed files and stale references might exist in cached build artifacts. You've changed template files and need a fresh copy pulled. The build behaves unexpectedly because of cached state. You're switching between different IG template versions.
 | `-C` | Delete input-cache before publishing. -C does the same thing as `-z` but for the input-cache/ directory, which stores downloaded dependencies (packages, terminology, etc.).|
 | `-V` | Update the VSAC name-to-FHIR-URI mapping CSV. This is executed prior to publication of a new version; it downloads the latest VSAC (Value Set Authority Center) metadata from the NLM (National Library of Medicine) and creates a CSV mapping file that links VSAC code system names to their FHIR URIs, and outputs a sorted CSV to `input/data/vsacname-fhiruri-map.csv` ||✅|
-| `-R` | Create Requirements Resources from the us_core_reqs.csv file. This runs after updates to the CSV file. The CSV file is manually updated using the Excel file input/images-source/~$hl7.fhir.us.core_8.0.0_reqs.xlsx, which is derived from the US Core Server v8.0.0 Specification Requirements, created by Inferno and its open-source testing framework to support the ONC Health IT Certification Program. The goal is to share this data with the Inferno team in future releases.
+| `-R` | Create Requirements Resources from the us_core_requirements.csv file. This runs after updates to the CSV file. The CSV file is manually updated using the Excel file input/images-source/~$hl7.fhir.us.core_8.0.0_reqs.xlsx, which is derived from the US Core Server v8.0.0 Specification Requirements, created by Inferno and its open-source testing framework to support the ONC Health IT Certification Program. The goal is to share this data with the Inferno team in future releases.
 | `-L` | Render the FHIR Liquid narrative templates in `input/liquid` against every matching resource with the IG Publisher's own LiquidEngine (`check_liquid.sh`), and report any that error. Takes a couple of seconds. It also runs automatically as a preflight at the start of `-i`, where it is advisory and does not stop the build. See "A broken Liquid narrative template is silent" under QA tricks and tips.
 
 
@@ -855,7 +855,7 @@ Flags can be combined in any order:
 ./publish.sh -ien
 ```
 
-#### Update the requirements resource (run after updating the us_core_reqs.csv file)
+#### Update the requirements resource (run after updating the us_core_requirements.csv file)
 
 ```bash
 ./publish.sh -R
@@ -1060,7 +1060,7 @@ For all changes
      - [ ] Is_New columns in the tables
          -  profile_metadata.csv
          -  search_requirements.csv
-         -  us_core_reqs.csv
+         -  us_core_requirements.csv
          -  provenance-elements.csv
       - Profile introduction
       - Profile notes
@@ -1111,7 +1111,7 @@ For all changes
   - [ ] Update the Relationship With Other IGs page content
     - [ ] Comparison With International IGs table
     - [ ] Additional requirements in IPA/IPS if needed for Profiles marked as "Additional Requirements"
-  - [ ] Add a requirement key for the resource level scope to `input/data/us_core_reqs.csv`, then regenerate the Requirements resources with `publish.sh -R`
+  - [ ] Add a requirement key for the resource level scope to `input/data/us_core_requirements.csv`, then regenerate the Requirements resources with `publish.sh -R`
   - [ ] Update the CapabilityStatement
 
 
@@ -1240,7 +1240,7 @@ New and updated content is highlighted green while a version is in development a
      - Wrap new or updated narrative in `<span class="bg-success" markdown="1">...</span>` (or a `<div>` for block content) and close it with a `<!-- new-content -->` marker. The marker is what `publish.sh -x` keys on when stripping highlighting.
      - VS Code snippets are available for the span and div forms.
    - CSV files
-     - Set `Is_New = TRUE` on the affected row as each artifact is applied, in `input/data/additional-uscdi-requirements.csv`, `profile_metadata.csv`, `search_requirements.csv`, `us_core_reqs.csv`, and `provenance-elements.csv`.
+     - Set `Is_New = TRUE` on the affected row as each artifact is applied, in `input/data/additional-uscdi-requirements.csv`, `profile_metadata.csv`, `search_requirements.csv`, `us_core_requirements.csv`, and `provenance-elements.csv`.
      - The value is compared in Liquid with `{% if item.Is_New == "TRUE" %}`, which is case-sensitive. It must be `TRUE`. `True`, `Y`, or any other value fails silently and highlights nothing. The column comment in `must-support.md` is the authoritative description: default `FALSE`, set to `TRUE` for new or updated content, and set back to `FALSE` before publishing a new version.
      - `!` in an `Is_New` cell is a separate convention meaning *ignore this row*, not a highlight value. The Liquid loops do not filter on it, so a row marked `!` still renders unhighlighted; the marker is read by the Python notebook that regenerates the table.
      - In `provenance-elements.csv` the `Target_Resource_<N>_is_new` columns carry an explicit `TRUE` or `FALSE` on every row rather than being left blank. Set the relevant column to `TRUE` and leave the others `FALSE`.

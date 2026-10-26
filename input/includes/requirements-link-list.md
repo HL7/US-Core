@@ -16,7 +16,7 @@ with the following columns:
 ================================================================== -->
 
 
-{% assign rows = site.data.us_core_reqs
+{% assign rows = site.data.us_core_requirements
   | where_exp: "item", "item.key.size > 0"
   | where_exp: "item", "item.conformance != 'DEPRECATED'" -%}
 {% for item in rows -%}

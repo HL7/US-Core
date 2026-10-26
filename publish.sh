@@ -229,7 +229,7 @@ if [[ $GEN_REQ ]]; then
         del(.actor) |
         del(.context)
       ]
-    " "$data"/us_core_reqs.csv > /tmp/statements.yaml
+    " "$data"/us_core_requirements.csv > /tmp/statements.yaml
 
     yq -i '.statement = load("/tmp/statements.yaml")' "${inpath}/resources-yaml/R5Requirements-us-core-${role}.yml"
     echo "updated input/resources-yaml/R5Requirements-us-core-${role}.yml"...

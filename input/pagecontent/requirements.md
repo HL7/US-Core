@@ -1,5 +1,5 @@
 
-The Server and Client Requirements tables below list the requirements defined in the US Core Implementation Guide’s narrative sections. They represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_reqs.csv) and [Excel](tables/us_core_reqs.xlsx) file, as well as in [US Core Requirements Resources][Capability Statements and Requirements Resources] .
+The Server and Client Requirements tables below list the requirements defined in the US Core Implementation Guide’s narrative sections. They represent the regulatory, business, functional, and technical specifications that design artifacts must meet to ensure interoperability. They are documented here to provide a clear, consolidated reference for implementers working with this guide. This table is based on the [US Core Server v8.0.0 Specification Requirements], created by [Inferno] and its open-source testing framework to support the ONC Health IT Certification Program. The table data is also available as a [CSV](tables/us_core_requirements.csv) and [Excel](tables/us_core_requirements.xlsx) file, as well as in [US Core Requirements Resources][Capability Statements and Requirements Resources] .
 
 **Legend:**
 
@@ -11,7 +11,7 @@ The Server and Client Requirements tables below list the requirements defined in
 
 
 <!-- ==================================================================
-This liquid script creates a US Core requirements table using input data from input/data/us_core_reqs.csv which derived from the US Core Server v8.0.0 Specification Requirements which can be downloaded here: https://github.com/inferno-framework/us-core-test-kit/blob/main/lib/us_core_test_kit/requirements/hl7.fhir.us.core_8.0.0_reqs.xlsx
+This liquid script creates a US Core requirements table using input data from input/data/us_core_requirements.csv which derived from the US Core Server v8.0.0 Specification Requirements which can be downloaded here: https://github.com/inferno-framework/us-core-test-kit/blob/main/lib/us_core_test_kit/requirements/hl7.fhir.us.core_8.0.0_reqs.xlsx
 
 This csv is manually updated when new narrative requirements are added to the guide.  Note that this table is used to create the Requirements Resources as well.
 
@@ -58,7 +58,7 @@ added = added for US Core publication:
 The script sorts and selects the table data and allows for highlighting new and updated content.
 ================================================================== -->
 
-{% assign rows = site.data.us_core_reqs -%}
+{% assign rows = site.data.us_core_requirements -%}
 {% assign actors = "Server,Client" | split: "," %}
 {% for actor in actors %}
 

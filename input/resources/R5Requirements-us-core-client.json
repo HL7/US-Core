@@ -66,7 +66,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "Clients **SHALL** be  able to process [elements that are] [Mandatory](https://hl7.org/fhir/us/core/must-support.html) or [Must Support elements](https://hl7.org/fhir/us/core/must-support.html)",
+      "requirement": "Clients **SHALL** be  able to process [elements that are] [Mandatory](must-support.html) or [Must Support elements](must-support.html)",
       "_reference": [
         {
           "extension": [
@@ -1698,7 +1698,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "Systems **SHOULD** provide Provenance statements using the [US Core Provenance Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-provenance.html) resource and associated requirements.",
+      "requirement": "Systems **SHOULD** provide Provenance statements using the [US Core Provenance Profile](StructureDefinition-us-core-provenance.html) resource and associated requirements.",
       "_reference": [
         {
           "extension": [
@@ -1842,7 +1842,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "The certifying Client application **SHALL** support the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] on [the [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html)] .",
+      "requirement": "The certifying Client application **SHALL** support the [[US Core Interpreter Needed Extension](StructureDefinition-us-core-interpreter-needed.html)] on [the [US Core Patient Profile](StructureDefinition-us-core-patient.html)] .",
       "_reference": [
         {
           "extension": [
@@ -1863,7 +1863,7 @@
         "SHALL"
       ],
       "conditionality": true,
-      "requirement": "The certifying Client application **SHALL** support the [[US Core Interpreter Needed Extension](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-interpreter-needed.html)] on [the [US Core Encounter Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-encounter.html)]. ",
+      "requirement": "The certifying Client application **SHALL** support the [[US Core Interpreter Needed Extension](StructureDefinition-us-core-interpreter-needed.html)] on [the [US Core Encounter Profile](StructureDefinition-us-core-encounter.html)]. ",
       "_reference": [
         {
           "extension": [
@@ -1883,7 +1883,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": " 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support.... Clients **SHALL** support both.",
+      "requirement": " 'Observation.performer' target profiles [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](StructureDefinition-us-core-patient.html) are labeled Must Support.... Clients **SHALL** support both.",
       "_reference": [
         {
           "extension": [
@@ -1943,7 +1943,7 @@
       "conformance": [
         "SHALL"
       ],
-      "requirement": " 'Observation.performer' target profiles [US Core Practitioner Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](https://hl7.org/fhir/us/core/STU8/StructureDefinition-us-core-patient.html) are labeled Must Support.... Clients **SHALL** support both.",
+      "requirement": " 'Observation.performer' target profiles [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html) and [US Core Patient Profile](StructureDefinition-us-core-patient.html) are labeled Must Support.... Clients **SHALL** support both.",
       "_reference": [
         {
           "extension": [
@@ -2012,6 +2012,46 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
               "valueUrl": "StructureDefinition-us-core-devicerequest.html#CONF-0929"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0932",
+      "reference": [
+        "StructureDefinition-us-core-devicerequest.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "To retrieve a patient's complete set of device orders, the Client application **SHOULD** query the [US Core DeviceRequest Profile](StructureDefinition-us-core-devicerequest.html), [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html), and [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html).",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-devicerequest.html#CONF-0932"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CONF-0933",
+      "reference": [
+        "StructureDefinition-us-core-nutritionorder.html#profile-specific-implementation-guidance"
+      ],
+      "conformance": [
+        "SHOULD"
+      ],
+      "requirement": "To retrieve a patient's complete set of nutrition orders, the Client application **SHOULD** query the [US Core NutritionOrder Profile](StructureDefinition-us-core-nutritionorder.html), [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html), and [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html).",
+      "_reference": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/narrativeLink",
+              "valueUrl": "StructureDefinition-us-core-nutritionorder.html#CONF-0933"
             }
           ]
         }
