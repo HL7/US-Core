@@ -3,29 +3,53 @@
 # check_liquid.sh -- render the FHIR Liquid narrative templates and fail loudly
 #
 # A broken template in input/liquid does not fail the IG Publisher build and
-# produces no QA message. The publisher catches the exception and replaces the
-# resource's whole narrative with a single line on the rendered page:
+# produces no QA message. LiquidRenderer.buildNarrative catches the exception and
+# replaces the resource's whole narrative with a single line on the rendered page:
 #
-#   Exception generating Narrative: Error @1, 109: Unexpected syntax parsing
-#   liquid statement
+#   Exception generating Narrative: ...          the template threw while rendering
+#   Exception parsing generated Narrative: ...   it rendered invalid XHTML
 #
-# Both CapabilityStatement pages shipped that way from 54b11fa9b (2026-01-04)
-# until 2026-10-16 because two FHIRPath expressions had a stray ")".
+# Both CapabilityStatement pages shipped the first way from 54b11fa9b (2026-01-04)
+# until 2026-10-16, because two FHIRPath expressions had a stray ")". Both shipped
+# the second way on publisher 3.0.1 until 2026-10-26, because {{r.type}} started
+# rendering as a hyperlink and put an <a> element inside an href attribute.
 #
 # This renders each input/liquid/<ResourceType>.liquid against every matching
-# resource using the IG Publisher's own LiquidEngine, then parses the result as
-# an XHTML fragment the way the publisher does. Parsing the template alone is not
-# enough: an expression is compiled when its code path is first reached, so a
-# bad expression inside an {% if %} branch parses clean and fails at render. And
-# a template can render without erroring yet still produce a narrative the
-# publisher throws away -- a filter written with a single "|" is a FHIRPath
-# union, silently ignored, so markdown reaches the page unrendered and text like
-# <patient|user|system> parses as a bogus tag.
+# resource through the publisher's own LiquidRenderer, then reports the error
+# paragraph if one was left behind.
+#
+# It has to go through LiquidRenderer, not just a LiquidEngine. What "{{ expr }}"
+# emits depends on the rendering support attached to the engine: up to publisher
+# 2.3.4 the engine emitted the raw primitive value, while from 3.0.1 it pipes
+# every DataType through renderDataType and returns rendered HTML, so a code can
+# arrive as a link. An engine built without setRenderingSupport renders
+# everything plain and passes -- this check did that, and reported OK on the
+# 3.0.1 failure above. It also tracks the publisher's model: 3.0.1 moved off
+# org.hl7.fhir.r5.* onto org.hl7.fhir.services.* / org.hl7.fhir.model.core.*,
+# and a check still driving the retired classes is not checking the build.
+#
+# Rendering is not enough on its own either. An expression is compiled when its
+# code path is first reached, so a bad expression inside an {% if %} branch parses
+# clean and fails at render; and a template can render and parse yet still be
+# wrong -- a filter written with a single "|" is a FHIRPath union, silently
+# ignored, so markdown reaches the page unrendered and is reported as a WARN.
 #
 # Takes a few seconds. Run it before a build, or let publish.sh -i run it.
 #
-# Requires java 11+ (single-file source mode) and the IG Publisher jar, which is
+# To iterate on one template, print the narrative the publisher would produce:
+#
+#   java -classpath "$IG_PUBLISHER_JAR" liquid-check/LiquidRenderCheck.java \
+#        --render input/liquid <template.liquid> <resource.json>
+#
+# The liquid dir is given as well as the template, because that is where
+# {% include %} resolves from; the template itself may live anywhere, so a
+# candidate can be tried without touching input/liquid. The narrative goes to
+# stdout and the findings to stderr, so it can be redirected or diffed on its own.
+#
+# Requires java 17+ (single-file source mode) and the IG Publisher jar, which is
 # already a build prerequisite. Override the jar location with IG_PUBLISHER_JAR.
+# The first run also needs hl7.fhir.r5.core#5.0.0 in the FHIR package cache; a
+# build puts it there.
 # =============================================================================
 
 jar="${IG_PUBLISHER_JAR:-$HOME/Downloads/org.hl7.fhir.igpublisher.jar}"
@@ -77,11 +101,11 @@ echo "====================================================================="
 if [ $status -eq 0 ]; then
   echo "✅ Every Liquid template rendered without erroring."
 else
-  echo "❌ A Liquid template failed. The build will NOT report this: the affected"
-  echo "   pages will show \"Exception generating Narrative\" (the template errored)"
-  echo "   or \"Exception parsing generated Narrative\" (it rendered invalid XHTML,"
-  echo "   usually markdown that reached the page unrendered) in place of their"
-  echo "   content, and QA will stay clean."
+  echo "❌ A Liquid template failed, or the renderer could not be built so nothing"
+  echo "   was checked. Either way the build will NOT report it: the affected pages"
+  echo "   will show \"Exception generating Narrative\" (the template errored) or"
+  echo "   \"Exception parsing generated Narrative\" (it rendered invalid XHTML) in"
+  echo "   place of their content, and QA will stay clean."
 fi
 echo "====================================================================="
 exit $status

@@ -627,9 +627,11 @@ if [[ $IG_PUBLISH ]]; then
 
   # Preflight: a broken Liquid narrative template does not fail the build and
   # emits no QA message -- the publisher silently replaces the resource's whole
-  # narrative with one "Exception generating Narrative" line. Catch it here, in
-  # a couple of seconds, rather than after a twelve minute build. Advisory only:
-  # it must not stop a build over a missing jar or a java version.
+  # narrative with one line, either "Exception generating Narrative" (the
+  # template errored) or "Exception parsing generated Narrative" (it rendered
+  # invalid XHTML). Catch it here, in a couple of seconds, rather than after a
+  # twelve minute build. Advisory only: it must not stop a build over a missing
+  # jar or a java version.
   ./check_liquid.sh || echo "⚠️  continuing the build with a broken Liquid template"
   echo ""
 

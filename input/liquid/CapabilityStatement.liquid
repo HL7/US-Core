@@ -56,8 +56,8 @@
 
   <!--  REST Capabilities -->
   {% for Arest in rest %}
-    <a name="{{Arest.mode}}"> </a>
-    <h3 id="behavior">FHIR {{Arest.mode || capitalize }} RESTful Capabilities</h3>
+    <a name="{{Arest.mode.toString()}}"> </a>
+    <h3 id="behavior">FHIR {{Arest.mode.toString() || capitalize }} RESTful Capabilities</h3>
     {% if Arest.documentation.exists() %}
       <div>{{Arest.documentation || markdownify}}</div>
     {% endif %}
@@ -80,7 +80,7 @@
 
     <!-- REST System wide Capabilities -->
     {% if Arest.interaction.exists() or imports.exists() or implementationGuide.exists() %}
-      <h3>System-wide {{Arest.mode}} Capabilities</h3>
+      <h3>System-wide {{Arest.mode.toString()}} Capabilities</h3>
 
       <!-- REST System wide interactions -->
       {% if Arest.interaction.exists() %}
@@ -179,7 +179,7 @@
           {% for r in Arest.resource %}
           <tr>
             <td>
-              <a href="#{{Arest.mode}}_{{r.type}}"><span style="white-space: nowrap;">{{r.type}}</span></a>
+              <a href="#{{Arest.mode.toString()}}_{{r.type.toString()}}"><span style="white-space: nowrap;">{{r.type.toString()}}</span></a>
             </td>
 
             <!-- The Supported Interactions column is not shown in this table; the
@@ -247,20 +247,20 @@
       </table>
       <br/>
 
-      <h3 class="no_toc" id="resource-details">RESTful {{Arest.mode || capitalize }} Capabilities by Resource/Profile:</h3>
+      <h3 class="no_toc" id="resource-details">RESTful {{Arest.mode.toString() || capitalize }} Capabilities by Resource/Profile:</h3>
 
 
       <!-- Resource Detail -->
 
       {% for resource in Arest.resource %}
-        <h4 class="no_toc" id="{{Arest.mode}}_{{resource.type}}">{{resource.type}}</h4>
+        <h4 class="no_toc" id="{{Arest.mode.toString()}}_{{resource.type.toString()}}">{{resource.type.toString()}}</h4>
 
           <p>Conformance Expectation:	<strong>{{resource.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}</strong></p>
           <!-- Documenation -->
           {% if resource.documentation.exists() %}<p>Resource Specific Documentation:</p>
             <blockquote>{{ resource.documentation || markdownify }}</blockquote>{% endif %}
 
-          {% if resource.profile.exists()  %}<p>Base Profile: <a href="{{resource.profile}}">{{resource.profile}}</p>{% endif %}
+          {% if resource.profile.exists()  %}<p>Base Profile: <a href="{{resource.profile.toString()}}">{{resource.profile.toString()}}</a></p>{% endif %}
 
           <!-- supported profiles -->
           {% if resource.supportedProfile.exists() %}<p>Supported Profiles:</p>
@@ -320,12 +320,12 @@
             {%for i in resource.interaction %}
               {% if i.code = 'create' %}
                 <li>
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}creating{% else %}posting{% endif %} a {{resource.type}} resource using:
-                  <code class="highlighter-rouge">POST [base]/{{resource.type}} {?_format=[mime-type]}</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}creating{% else %}posting{% endif %} a {{resource.type.toString()}} resource using:
+                  <code class="highlighter-rouge">POST [base]/{{resource.type.toString()}} {?_format=[mime-type]}</code>
                   {% if resource.conditionalCreate.exists() %}
                     <ul>
                       <li>
-                        A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.conditionalCreate.extension %}</strong> be capable of the conditional create of a {{resource.type}} resource using header:
+                        A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.conditionalCreate.extension %}</strong> be capable of the conditional create of a {{resource.type.toString()}} resource using header:
                         <code class="highlighter-rouge">If-None-Exist: [search parameters]</code>
                       </li>
                     </ul>
@@ -336,13 +336,13 @@
               {% if i.code = 'update' %}
                 <li>
                   <!-- TODO change note if server allows putting of a new one (with a specified ID) -->
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}updating{% else %}putting{% endif %} a existing {{resource.type}} resource using:
-                  <code class="highlighter-rouge">PUT [base]/{{resource.type}}/[id] {?_format=[mime-type]}</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}updating{% else %}putting{% endif %} a existing {{resource.type.toString()}} resource using:
+                  <code class="highlighter-rouge">PUT [base]/{{resource.type.toString()}}/[id] {?_format=[mime-type]}</code>
                   {% if resource.conditionalCreate.exists() %}
                     <ul>
                       <li>
-                        A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalUpdate.extension %}</strong> be capable of the conditional update of a {{resource.type}} resource using:
-                        <code class="highlighter-rouge">PUT [base]/[{{resource.type}}]?[search parameters]</code>
+                        A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalUpdate.extension %}</strong> be capable of the conditional update of a {{resource.type.toString()}} resource using:
+                        <code class="highlighter-rouge">PUT [base]/[{{resource.type.toString()}}]?[search parameters]</code>
                       </li>
                     </ul>
                   {% endif %}
@@ -351,15 +351,15 @@
 
               {% if i.code = 'delete' %}
                 <li>
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}deleting{% else %}deleting{% endif %} a {{resource.type}} resource using:
-                  <code class="highlighter-rouge">DELETE [base]/{{resource.type}}/[id]</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}deleting{% else %}deleting{% endif %} a {{resource.type.toString()}} resource using:
+                  <code class="highlighter-rouge">DELETE [base]/{{resource.type.toString()}}/[id]</code>
                   {% if resource.conditionalDelete.exists() %}
                     <ul>
                       <li>
                         {% if resource.conditionalDelete = 'not-supported' %}
-                          A {{ Arest.mode }} <strong>{% if resource.conditionalDelete.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}{% include expectation_handler.html action='verb' extension=resource.conditionalDelete.extension %} NOT{% else %}DOES NOT{% endif %}</strong> support conditional delete of {{resource.type}} resources.
+                          A {{ Arest.mode.toString() }} <strong>{% if resource.conditionalDelete.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}{% include expectation_handler.html action='verb' extension=resource.conditionalDelete.extension %} NOT{% else %}DOES NOT{% endif %}</strong> support conditional delete of {{resource.type.toString()}} resources.
                         {% else %}
-                          A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalDelete.extension %}</strong> be capable of the conditional create of a {{resource.type}} resource using header:
+                          A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalDelete.extension %}</strong> be capable of the conditional create of a {{resource.type.toString()}} resource using header:
                           <code class="highlighter-rouge">If-None-Exist: [search parameters]</code>
                         {% endif %}
                       </li>
@@ -369,8 +369,8 @@
               {% endif %}
               {% if i.code = 'patch' %}
                 <li>
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}patching{% else %}patching{% endif %} an existing {{resource.type}} resource using:
-                  <code class="highlighter-rouge">PATCH [base]/{{resource.type}}/[id] {?_format=[mime-type]}</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of {% if Arest.mode = 'server' %}patching{% else %}patching{% endif %} an existing {{resource.type.toString()}} resource using:
+                  <code class="highlighter-rouge">PATCH [base]/{{resource.type.toString()}}/[id] {?_format=[mime-type]}</code>
                 </li>
               {% endif %}
             {%endfor %}
@@ -385,19 +385,19 @@
             {%for i in resource.interaction %}
               {% if i.code = 'read' %}
                 <li>
-                  A {{ Arest.mode}} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>read</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} a {{resource.type}} resource using:
-                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]</code>
+                  A {{ Arest.mode.toString()}} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>read</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} a {{resource.type.toString()}} resource using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}/[id]</code>
                   {% if resource.conditionalRead.exists() %}
                     <ul>
                       <li>
                         {% if resource.conditionalRead = 'not-supported' %}
-                          A {{ Arest.mode }} <strong>{% if resource.conditionalRead.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %} NOT{% else %}DOES NOT{% endif %}</strong> support conditional read of {{resource.type}} resources.
+                          A {{ Arest.mode.toString() }} <strong>{% if resource.conditionalRead.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %} NOT{% else %}DOES NOT{% endif %}</strong> support conditional read of {{resource.type.toString()}} resources.
                         {% elsif resource.conditionalRead = 'modified-since' %}
-                          A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type}} resources only with the If-Modified-Since HTTP Header.
+                          A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type.toString()}} resources only with the If-Modified-Since HTTP Header.
                         {% elsif resource.conditionalRead = 'not-match' %}
-                          A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type}} resources only with the If-None-Match HTTP Header.
+                          A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type.toString()}} resources only with the If-None-Match HTTP Header.
                         {% elsif resource.conditionalRead = 'full-support' %}
-                          A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type}} resources with both If-Modified-Since and If-None-Match HTTP Headers.
+                          A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=resource.conditionalRead.extension %}</strong> support conditional read of {{resource.type.toString()}} resources with both If-Modified-Since and If-None-Match HTTP Headers.
                         {% endif %}
                       </li>
                     </ul>
@@ -406,81 +406,81 @@
               {% endif %}
               {% if i.code = 'vread' %}
                 <li>
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>vread</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} a {{resource.type}} resource using:
-                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]/_history/vid</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>vread</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} a {{resource.type.toString()}} resource using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}/[id]/_history/vid</code>
                 </li>
               {% endif %}
               {% if i.code = 'search-type' %}
                 <li>
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>search-type</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} {{resource.type}} resources matching a search query using:
-                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]{?[parameters]{&amp;_format=[mime-type]}}</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>search-type</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} {{resource.type.toString()}} resources matching a search query using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}/[id]{?[parameters]{&amp;_format=[mime-type]}}</code>
                 </li>
               {% endif %}
               {% if i.code = 'history-instance' %}
                 <li>
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>history-instance</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} a history of a {{resource.type}} using:
-                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/[id]/_history{?[parameters]&amp;_format=[mime-type]}</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>history-instance</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} a history of a {{resource.type.toString()}} using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}/[id]/_history{?[parameters]&amp;_format=[mime-type]}</code>
                 </li>
               {% endif %}
               {% if i.code = 'history-type' %}
                 <li>
-                  A {{ Arest.mode }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>history-type</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} the history of {{resource.type}} resources using:
-                  <code class="highlighter-rouge">GET [base]/{{resource.type}}/_history{?[parameters]&amp;_format=[mime-type]}</code>
+                  A {{ Arest.mode.toString() }} <strong>{% include expectation_handler.html action='verb' extension=i.extension %}</strong> be capable of a <code>history-type</code> interaction {% if Arest.mode = 'server' %}returning{% else %}fetching{% endif %} the history of {{resource.type.toString()}} resources using:
+                  <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}/_history{?[parameters]&amp;_format=[mime-type]}</code>
                 </li>
               {% endif %}
             {% endfor %}
 
             {% if resource.searchInclude.exists() %}
               {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
-                <li>A {{ Arest.mode }} <strong>SHALL</strong> be capable of supporting the following _includes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHALL</strong> be capable of supporting the following _includes:
                   <ul>
                     {% for sinclude in resource.searchInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
-                <li>A {{ Arest.mode }} <strong>SHALL NOT</strong> be capable of supporting the following _includes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHALL NOT</strong> be capable of supporting the following _includes:
                   <ul>
                     {% for sinclude in resource.searchInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
-                <li>A {{ Arest.mode }} <strong>SHOULD</strong> be capable of supporting the following _includes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHOULD</strong> be capable of supporting the following _includes:
                   <ul>
                     {% for sinclude in resource.searchInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
-                <li>A {{ Arest.mode }} <strong>MAY</strong> be capable of supporting the following _includes:
+                <li>A {{ Arest.mode.toString() }} <strong>MAY</strong> be capable of supporting the following _includes:
                   <ul>
                     {% for sinclude in resource.searchInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
-                <li>A {{ Arest.mode }} <strong>SHALL</strong> be capable of supporting the following _includes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHALL</strong> be capable of supporting the following _includes:
                   <ul>
                     {% for sinclude in resource.searchInclude %}
                       {% if resource.searchInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_include={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
@@ -490,55 +490,55 @@
 
             {% if resource.searchRevInclude.exists() %}
               {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
-                <li>A {{ Arest.mode }} <strong>SHALL</strong> be capable of supporting the following _revincludes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHALL</strong> be capable of supporting the following _revincludes:
                   <ul>
                     {% for sinclude in resource.searchRevInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
-                <li>A {{ Arest.mode }} <strong>SHALL NOT</strong> be capable of supporting the following _revincludes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHALL NOT</strong> be capable of supporting the following _revincludes:
                   <ul>
                     {% for sinclude in resource.searchRevInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHALL-NOT').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
-                <li>A {{ Arest.mode }} <strong>SHOULD</strong> be capable of supporting the following _revincludes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHOULD</strong> be capable of supporting the following _revincludes:
                   <ul>
                     {% for sinclude in resource.searchRevInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'SHOULD').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchRevInclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
-                <li>A {{ Arest.mode }} <strong>MAY</strong> be capable of supporting the following _revincludes:
+                <li>A {{ Arest.mode.toString() }} <strong>MAY</strong> be capable of supporting the following _revincludes:
                   <ul>
                     {% for sinclude in resource.searchRevInclude %}
                       {% if sinclude.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').where(value = 'MAY').exists() %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
               {% endif %}
               {% if resource.searchRevInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
-                <li>A {{ Arest.mode }} <strong>SHALL</strong> be capable of supporting the following _revincludes:
+                <li>A {{ Arest.mode.toString() }} <strong>SHALL</strong> be capable of supporting the following _revincludes:
                   <ul>
                     {% for sinclude in resource.searchRevInclude %}
                       {% if resource.searchRevInclude.where(extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() = false) %}
-                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
+                        <li>{{sinclude}} - <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?[parameter=value]&amp;_revinclude={{sinclude}}</code></li>
                       {% endif %}
                     {% endfor %}
                   </ul>
@@ -582,10 +582,10 @@
                   <a href="{{ 'SearchParameter-' + s.definition.value.split('|').first().split('/').last() + '.html' }}">{{s.name}}</a>
                 </td>
                 <td>
-                  {{s.type}}
+                  {{s.type.toString()}}
                 </td>
                 <td>
-                  <code class="highlighter-rouge">GET [base]/{{resource.type}}?{{s.name}}{% if s.name = '_id' %}=[id]
+                  <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?{{s.name}}{% if s.name = '_id' %}=[id]
                     {% elsif s.name = '_lastUpdated' %}=[dateTime]
                     {% elsif s.name = '_tag' %}=[system]|[code]
                     {% elsif s.name = '_profile' %}=[type]
@@ -632,10 +632,10 @@
                     {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}<a href="{{'SearchParameter-' + single_param.definition.value.split('|').first().split('/').last() + '.html'}}">{{item.value}}</a>{% if item.value != last %}+{% endif %}{% endif %}{% endfor %}{% endfor %}
                   </td>
                   <td>
-                    {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{{single_param.type}}{% if item.value != last %}+{% endif %}{% endif %}{% endfor %}{% endfor %}
+                    {% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{{single_param.type.toString()}}{% if item.value != last %}+{% endif %}{% endif %}{% endfor %}{% endfor %}
                   </td>
                   <td>
-                    <code class="highlighter-rouge">GET [base]/{{resource.type}}?{% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{{item.value}}{% if item.value = '_id' %}=[id]{% elsif item.value = '_lastUpdated' %}=[dateTime]{% elsif item.value = '_tag' %}=[system]|[code]{% elsif item.value = '_profile' %}=[type]{% elsif item.value = '_security' %}=[system]|[code]{% elsif item.value = '_text' %}=[string]{% elsif item.value = '_content' %}=[string]{% elsif item.value = '_list' %}=[id]{% elsif item.value = '_has' %}=[string]{% elsif item.value = '_type' %}=[uri]{% elsif item.value = '_sort' %}=[string]{% elsif item.value = '_count' %}=[number]{% elsif item.value = '_include' %}=[string]{% elsif item.value = '_revinclude' %}=[string]{% elsif item.value = '_summary' %}=[code]{% elsif item.value = '_total' %}=[code]{% elsif item.value = '_elements' %}=[names]{% elsif item.value = '_contained' %}=[code]{% elsif item.value = '_containedType' %}=[code]{% elsif item.value = '_filter' %}=[filter]{% elsif item.value = '_query' %}=[name]{% if item.value != last %}&amp;{% endif %}[parameters]{% elsif item.value = '_format' %}=[mime-type]{% elsif item.value = '_pretty' %}=[true|false]{% elsif single_param.type = 'reference' %}=[type]/[id]{% elsif single_param.type = 'status' %}=[status]{% elsif single_param.type = 'composite' %}=[code]{% if item.value != last %}&amp;{% endif %}[value]{% elsif single_param.type = 'uri' %}=[uri]{% elsif single_param.type = 'string' %}=[{{item.value}}]{% elsif single_param.type = 'token' %}=[system]|[code]{% elsif single_param.type = 'date' %}=[dateTime]{% else %}=[{{item.value}}]{% endif %}{% if item.value != last %}&amp;{% endif %}{% endif %}{% endfor %}{% endfor %}</code>
+                    <code class="highlighter-rouge">GET [base]/{{resource.type.toString()}}?{% for item in s.extension.where(url='required' or url='optional') %}{% for single_param in resource.searchParam %}{% if single_param.name = item.value %}{{item.value}}{% if item.value = '_id' %}=[id]{% elsif item.value = '_lastUpdated' %}=[dateTime]{% elsif item.value = '_tag' %}=[system]|[code]{% elsif item.value = '_profile' %}=[type]{% elsif item.value = '_security' %}=[system]|[code]{% elsif item.value = '_text' %}=[string]{% elsif item.value = '_content' %}=[string]{% elsif item.value = '_list' %}=[id]{% elsif item.value = '_has' %}=[string]{% elsif item.value = '_type' %}=[uri]{% elsif item.value = '_sort' %}=[string]{% elsif item.value = '_count' %}=[number]{% elsif item.value = '_include' %}=[string]{% elsif item.value = '_revinclude' %}=[string]{% elsif item.value = '_summary' %}=[code]{% elsif item.value = '_total' %}=[code]{% elsif item.value = '_elements' %}=[names]{% elsif item.value = '_contained' %}=[code]{% elsif item.value = '_containedType' %}=[code]{% elsif item.value = '_filter' %}=[filter]{% elsif item.value = '_query' %}=[name]{% if item.value != last %}&amp;{% endif %}[parameters]{% elsif item.value = '_format' %}=[mime-type]{% elsif item.value = '_pretty' %}=[true|false]{% elsif single_param.type = 'reference' %}=[type]/[id]{% elsif single_param.type = 'status' %}=[status]{% elsif single_param.type = 'composite' %}=[code]{% if item.value != last %}&amp;{% endif %}[value]{% elsif single_param.type = 'uri' %}=[uri]{% elsif single_param.type = 'string' %}=[{{item.value}}]{% elsif single_param.type = 'token' %}=[system]|[code]{% elsif single_param.type = 'date' %}=[dateTime]{% else %}=[{{item.value}}]{% endif %}{% if item.value != last %}&amp;{% endif %}{% endif %}{% endfor %}{% endfor %}</code>
                   </td>
                 </tr>
               {% endfor %}
@@ -648,7 +648,7 @@
           <div>
             <ul>
               {% for s in resource.searchParam.where(documentation.exists()) %}
-                <li><a href="{{ 'SearchParameter-' + s.definition.value.split('|').first().split('/').last() + '.html' }}">{{s.name}}</a> ({{s.type}}):{{s.documentation || markdownify}}</li>
+                <li><a href="{{ 'SearchParameter-' + s.definition.value.split('|').first().split('/').last() + '.html' }}">{{s.name}}</a> ({{s.type.toString()}}):{{s.documentation || markdownify}}</li>
               {% endfor %}
             </ul>
           </div>
