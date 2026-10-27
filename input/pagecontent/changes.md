@@ -50,6 +50,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 15. **Resolved - change required:** Non-substantive (Correction) Update the terminology packages [FHIR-59598](https://jira.hl7.org/browse/FHIR-59598) See Changes [Here](terminology.html)
 16. **Applied:** Non-substantive (Correction) Map the USCDI Performance Date and Time data element to every US Core profile that records when the act was performed, and add the matching FHIRPath expressions [FHIR-57865](https://jira.hl7.org/browse/FHIR-57865) See Changes [Here](uscdi.html)
 17. **Pre-Applied:** Non-substantive (Enhancement) Update US Core Goal Codes with a  more specific Value Set Authority Center (VSAC) valueset. [FHIR-54407](https://jira.hl7.org/browse/FHIR-54407) See Changes [Here](StructureDefinition-us-core-goal.html)
+18. **Pre-Applied:** Non-substantive (Correction) Remove the misapplied us-core-23 invariant from the US Core Race Extension. [FHIR-59695](https://jira.hl7.org/browse/FHIR-59695) See Changes [Here](StructureDefinition-us-core-race.html)
 
 
 ##### Pending
