@@ -99,7 +99,9 @@ status=$?
 
 echo "====================================================================="
 if [ $status -eq 0 ]; then
-  echo "✅ Every Liquid template rendered without erroring."
+  echo "✅ Every Liquid template that could be checked rendered without erroring."
+  echo "   Any UNCHECKED line above is a template this harness could not cover at"
+  echo "   all -- not a pass. Only a build verifies those."
 else
   echo "❌ A Liquid template failed, or the renderer could not be built so nothing"
   echo "   was checked. Either way the build will NOT report it: the affected pages"

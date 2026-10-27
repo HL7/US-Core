@@ -1,6 +1,16 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
 
-<p>These requirements apply to the actor: <i><strong>{{ Requirements.actor.extension('http://hl7.org/fhir/StructureDefinition/display').value }}</strong></i></p>
+<!-- Link built from the resource id, by the US Core convention that an
+     ActorDefinition id is its Requirements id plus "-actor". Requirements.actor
+     itself is unusable here: publisher 3.0.1 models it as a BackboneElement, so for
+     an R5-authored canonical both .extension('.../display').value and a.toString()
+     come back empty, and indexing the split canonical aborted the build. -->
+{% if Requirements.actor.exists() %}
+{% assign actor_page = 'ActorDefinition-' + Requirements.id + '-actor.html' %}
+<p>These requirements apply to the actor:
+  <strong><a href="{{ actor_page }}">{{ Requirements.id }}-actor</a></strong>
+</p>
+{% endif %}
 
 <p><strong>Legend:</strong></p>
 <ul>

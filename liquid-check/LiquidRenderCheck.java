@@ -188,6 +188,58 @@ public class LiquidRenderCheck {
     }
   }
 
+  /**
+   * Last resort: read the file straight into the publisher's own model. Catches content
+   * shaped for the FHIR version the publisher currently tracks, which the R4 and R5
+   * readers above both reject -- useful for trying a candidate fixture.
+   */
+  static Resource loadAsCore(IModelContext model, String file) {
+    try {
+      return new org.hl7.fhir.model.core.formats.JsonParser(model).parse(new FileInputStream(file));
+    } catch (Exception e) {
+      return null;
+    }
+  }
+
+  /**
+   * The resourceType straight out of the JSON text, without the model. Needed because a
+   * file this harness cannot load still has to be matched against the templates: silently
+   * skipping it is how a template stops being checked while the run still says OK.
+   */
+  static String peekResourceType(String file) {
+    try (java.io.Reader r = new java.io.InputStreamReader(
+             new FileInputStream(file), StandardCharsets.UTF_8)) {
+      com.google.gson.JsonElement e = com.google.gson.JsonParser.parseReader(r);
+      if (e != null && e.isJsonObject()) {
+        com.google.gson.JsonElement rt = e.getAsJsonObject().get("resourceType");
+        if (rt != null && rt.isJsonPrimitive()) return rt.getAsString();
+      }
+    } catch (Throwable t) { /* not JSON at all */ }
+    return null;
+  }
+
+  /**
+   * Reads the file the way the publisher does: the schema-driven element model rather
+   * than a generated POJO. This is what makes a preadopted resource work. The POJO
+   * model tracks the FHIR version the publisher currently targets, so a valid R5
+   * resource can be rejected outright -- Requirements.actor is a canonical in R5 but a
+   * backbone element later, and the POJO reader refuses the primitive while the POJO
+   * renderer turns the coerced object into a Java identity string. The element model
+   * carries whatever the StructureDefinitions in the context describe, and
+   * ResourceWrapper/LiquidRenderer accept an Element directly.
+   */
+  static org.hl7.fhir.services.elementmodel.Element loadAsElement(IWorkerContext ctx, String file) {
+    try {
+      org.hl7.fhir.services.elementmodel.JsonParser jp =
+          new org.hl7.fhir.services.elementmodel.JsonParser(ctx);
+      for (org.hl7.fhir.services.elementmodel.ValidatedFragment f
+               : jp.parse(new FileInputStream(file))) {
+        if (f.getElement() != null) return f.getElement();
+      }
+    } catch (Throwable t) { /* not readable against the loaded definitions */ }
+    return null;
+  }
+
   /** What one template did to one resource. */
   record Outcome(String narrative, String failure) {
     boolean ok() { return failure == null; }
@@ -202,8 +254,17 @@ public class LiquidRenderCheck {
    * broken template does not fail the build.
    */
   static Outcome renderOne(RenderingContext rc, String template, Resource resource) {
+    return renderWrapped(rc, template, ResourceWrapper.forResource(rc, resource));
+  }
+
+  /** Same, for a resource read through the element model. */
+  static Outcome renderOne(RenderingContext rc, String template,
+                           org.hl7.fhir.services.elementmodel.Element element) {
+    return renderWrapped(rc, template, ResourceWrapper.forResource(rc, element));
+  }
+
+  static Outcome renderWrapped(RenderingContext rc, String template, ResourceWrapper rw) {
     try {
-      ResourceWrapper rw = ResourceWrapper.forResource(rc, resource);
       XhtmlNode x = new XhtmlNode(NodeType.Element, "div");
       new LiquidRenderer(rc, template).buildNarrative(new Renderer.RenderingStatus(), x, rw);
       String narrative = new XhtmlComposer(true).compose(x);
@@ -233,23 +294,31 @@ public class LiquidRenderCheck {
     }
     IModelContext model = ModelContext.fullCoreContext();
     Resource resource = load(model, resourceArg);
-    if (resource == null) {
-      System.err.println("not a parseable R4 or R5 resource: " + resourceArg);
-      return 2;
-    }
+    if (resource == null) resource = loadAsCore(model, resourceArg);
     RenderingContext rc;
+    IWorkerContext ctx;
     String template;
     try {
-      rc = renderingContext(realContext(model), liquidDir);
+      ctx = realContext(model);
+      rc = renderingContext(ctx, liquidDir);
       template = new String(Files.readAllBytes(tpl), StandardCharsets.UTF_8);
     } catch (Throwable t) {
       System.err.println("could not build the publisher's renderer: " + t);
       return 1;
     }
-    Outcome out = renderOne(rc, template, resource);
+    org.hl7.fhir.services.elementmodel.Element element = null;
+    if (resource == null) element = loadAsElement(ctx, resourceArg);
+    if (resource == null && element == null) {
+      System.err.println("could not read " + resourceArg
+          + " as R4, R5, the publisher's model, or the element model");
+      return 2;
+    }
+    String label = resource != null ? resource.fhirType() + "/" + resource.getId()
+                                    : element.fhirType() + "/" + element.getIdBase();
+    Outcome out = resource != null ? renderOne(rc, template, resource)
+                                   : renderOne(rc, template, element);
     if (out.narrative() != null) System.out.print(out.narrative());
-    System.err.println("---- " + tpl.getFileName() + " on " + resource.fhirType()
-        + "/" + (resource.getId() == null ? "(no id)" : resource.getId()) + " ----");
+    System.err.println("---- " + tpl.getFileName() + " on " + label + " ----");
     if (!out.ok()) {
       System.err.println("  FAIL -- " + out.failure());
       System.err.println("  the publisher would show this in place of the content,"
@@ -282,8 +351,10 @@ public class LiquidRenderCheck {
     // A check that cannot check must not report OK. The old version fell back to a stub
     // context here and passed on templates the publisher could not render.
     RenderingContext rc;
+    IWorkerContext ctx;
     try {
-      rc = renderingContext(realContext(model), liquidDir);
+      ctx = realContext(model);
+      rc = renderingContext(ctx, liquidDir);
     } catch (Throwable t) {
       System.out.println("   FAIL could not build the publisher's renderer -- nothing was"
           + " checked: " + t);
@@ -298,16 +369,36 @@ public class LiquidRenderCheck {
     Map<String, String> failures = new LinkedHashMap<>();
     Map<String, Integer> failed = new LinkedHashMap<>();
     Map<String, String> warnings = new LinkedHashMap<>();
+    // Templates this harness could not cover at all. Distinct from a failure: nothing is
+    // broken, but nothing was verified either, so it must never read as coverage.
+    Map<String, String> unchecked = new LinkedHashMap<>();
+    Map<String, Integer> uncheckedCount = new LinkedHashMap<>();
     int skipped = 0;
 
     for (int i = 1; i < args.length; i++) {
       String file = args[i];
       Resource resource = load(model, file);
-      if (resource == null) {
-        skipped++;
+      if (resource == null) resource = loadAsCore(model, file);
+      org.hl7.fhir.services.elementmodel.Element element = null;
+      if (resource == null) element = loadAsElement(ctx, file);
+      if (resource == null && element == null) {
+        // Does a template claim this type? If so the template just went unchecked.
+        String rt = peekResourceType(file);
+        if (rt != null && Files.exists(liquidDir.resolve(rt + ".liquid"))) {
+          uncheckedCount.merge(rt, 1, Integer::sum);
+          unchecked.putIfAbsent(rt + ".liquid",
+              "this harness could not load the resource, so the template was not verified."
+              + " It bridges through the publisher's POJO model, which tracks a later FHIR"
+              + " version than a preadopted resource may use -- e.g. Requirements.actor is"
+              + " a canonical in R5 but a backbone element later. The publisher itself"
+              + " renders through the element model and is unaffected."
+              + "\n      first seen on " + file);
+        } else {
+          skipped++;
+        }
         continue;
       }
-      String type = resource.fhirType();
+      String type = resource != null ? resource.fhirType() : element.fhirType();
       Path tpl = liquidDir.resolve(type + ".liquid");
       if (!Files.exists(tpl)) continue;
 
@@ -324,7 +415,9 @@ public class LiquidRenderCheck {
       // The template source is re-handed to a fresh LiquidRenderer per resource, because
       // a LiquidStatement caches its compiled FHIRPath on the node: a document reused
       // after a failure can report the next resource as OK on a half-compiled statement.
-      Outcome out = renderOne(rc, templates.get(type), resource);
+      Outcome out = resource != null
+          ? renderOne(rc, templates.get(type), resource)
+          : renderOne(rc, templates.get(type), element);
       if (!out.ok()) {
         failed.merge(type, 1, Integer::sum);
         failures.putIfAbsent(type + ".liquid",
@@ -348,6 +441,11 @@ public class LiquidRenderCheck {
           + " left markdown source in the narrative. Either a markdown-valued field is"
           + " missing \"|| markdownify\", or the source markdown is malformed and cannot"
           + " render: " + e.getValue());
+    }
+    for (Map.Entry<String, String> e : unchecked.entrySet()) {
+      String type = e.getKey().substring(0, e.getKey().length() - ".liquid".length());
+      System.out.println("   UNCHECKED " + e.getKey() + " -- " + uncheckedCount.get(type)
+          + " resource(s) not covered: " + e.getValue());
     }
     for (Map.Entry<String, String> e : failures.entrySet()) {
       String type = e.getKey().substring(0, e.getKey().length() - ".liquid".length());
