@@ -1,0 +1,13 @@
+resourceType: ActorDefinition
+id: us-core-server-actor
+url: http://hl7.org/fhir/us/core/ActorDefinition/us-core-server-actor
+name: USCoreServerActor
+title: US Core Responder (Server)
+status: active
+experimental: false
+type: system
+description: A US Core Responder is a system that responds to the data access request providing patient data. The US Core Responder is the Server in a Client-Server interaction. The terms "US Core Responder", "Server", and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. For example, Health Information Exchanges (HIEs), care coordination platforms, and population health systems can use the same technology. These terms are a short-hand notation for "interoperable healthcare platform".
+documentation: The requirements this actor is expected to meet are listed in the [US Core Server Requirements](Requirements-us-core-server.html). The [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html) declares the RESTful interactions, profiles, and search parameters a US Core Responder supports.
+capabilities: http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server
+reference:
+  - https://hl7.org/fhir/us/core/index.html#us-core-responder

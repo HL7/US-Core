@@ -1,0 +1,13 @@
+resourceType: ActorDefinition
+id: us-core-client-actor
+url: http://hl7.org/fhir/us/core/ActorDefinition/us-core-client-actor
+name: USCoreClientActor
+title: US Core Requestor (Client)
+status: active
+experimental: false
+type: system
+description: A US Core Requestor is an application that initiates a data access request to retrieve patient data. The US Core Requestor is the Client in a Client-Server interaction. The terms "US Core Requestor" and "Client" are used interchangeably throughout this guide and are not meant to limit this actor to only patient and provider applications. For example, payers and other users can use the same technology. These terms are a short-hand notation for "user application".
+documentation: The requirements this actor is expected to meet are listed in the [US Core Client Requirements](Requirements-us-core-client.html). The [US Core Client CapabilityStatement](CapabilityStatement-us-core-client.html) declares the RESTful interactions, profiles, and search parameters a US Core Requestor supports.
+capabilities: http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client
+reference:
+  - https://hl7.org/fhir/us/core/index.html#us-core-requestor

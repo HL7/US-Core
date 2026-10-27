@@ -1,3 +1,13 @@
+
+### Actors
+
+The following Actors have been defined for the US Core Implementation Guide. For more information on the FHIR [ActorDefinition] resource, see the FHIR R5 specification.
+
+<ul>
+{% include list-actordefinitions.xhtml %}
+</ul>
+<br />
+
 ### Capability Statement
 
 The following Capability Statements have been defined for the US Core Implementation Guide. For more information on the FHIR [CapabilityStatement] resource, see the FHIR specification.
@@ -18,3 +28,4 @@ The following Requirements Resources have been defined for the US Core Implement
 
 
 {% include link-list.md %}
+

@@ -44,8 +44,8 @@ dependsOn:
     uri: https://phinvads.cdc.gov/vads/fhir/ImplementationGuide/us.cdc.phinvads
     version: 0.12.0
   - packageId: hl7.fhir.uv.extensions.r4
+    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
     version: 5.3.0
-    uri: http://hl7.org/fhir/extensions
     id: hl7_fhir_uv_extensions_r4
   - packageId: hl7.fhir.uv.xver-r5.r4
     version: 0.1.0
@@ -59,8 +59,6 @@ definition:
       valueCode: hl7.fhir.us.core#8.0.1
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
       valueCode: hl7.fhir.us.core#7.0.0
-    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-      valueCode: hl7.fhir.us.core#7.0.0-ballot
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
       valueCode: hl7.fhir.us.core#6.1.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
@@ -1449,6 +1447,11 @@ definition:
       exampleBoolean: false
       name: US Core Category
     - reference:
+        reference: ActorDefinition/us-core-certifying-system-actor
+      description: A US Core Certifying System is a US Core Responder (Server) seeking Office of the National Coordinator for Health Information Technology (ONC) Health IT Certification (g)(10) certification. It meets every US Core Responder requirement and, in addition, interprets the *Additional USCDI Requirements* as *Must Support* elements, which non-certifying Responders can treat as optional.
+      exampleBoolean: false
+      name: US Core Certifying System
+    - reference:
         reference: Requirements/us-core-certifying-system
       description: This [Requirements](https://hl7.org/fhir/R5/requirements.html) resource lists the *additional requirements* for systems certifying for Office of the National Coordinator for Health Information Technology (ONC) Health IT Certification (g(10) certification. These requirements represent the regulatory and technical specifications that design artifacts must meet to ensure interoperability.  See the [US Core Server Requirements](Requirements-us-core-server.html) for the US Core Responder (Server) requirements defined in the US Core Implementation Guide narrative sections.
       exampleBoolean: false
@@ -1844,10 +1847,20 @@ definition:
       exampleBoolean: false
       name: US Core RelatedPerson Profile
     - reference:
+        reference: ActorDefinition/us-core-client-actor
+      description: A US Core Requestor is an application that initiates a data access request to retrieve patient data. The US Core Requestor is the Client in a Client-Server interaction. The terms "US Core Requestor" and "Client" are used interchangeably throughout this guide and are not meant to limit this actor to only patient and provider applications. For example, payers and other users can use the same technology. These terms are a short-hand notation for "user application".
+      exampleBoolean: false
+      name: US Core Requestor (Client)
+    - reference:
         reference: StructureDefinition/us-core-respiratory-rate
       description: The US Core Respiratory Rate Profile inherits from the US Core Vital Signs Profile. This profile sets minimum expectations for the Observation resource to record, search,  and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It specifies which *additional*  core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.
       exampleBoolean: false
       name: US Core Respiratory Rate Profile
+    - reference:
+        reference: ActorDefinition/us-core-server-actor
+      description: A US Core Responder is a system that responds to the data access request providing patient data. The US Core Responder is the Server in a Client-Server interaction. The terms "US Core Responder", "Server", and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems. For example, Health Information Exchanges (HIEs), care coordination platforms, and population health systems can use the same technology. These terms are a short-hand notation for "interoperable healthcare platform".
+      exampleBoolean: false
+      name: US Core Responder (Server)
     - reference:
         reference: ValueSet/us-core-screening-assessment-condition-category
       description: This value set consists of the single code "sdoh". It is the minimum value set of category codes used in the US Core Condition Problems and Health Concerns Profile that any conformant system **SHALL** support to help identify the type of USCDI Health Status/Assessment data class being reported.

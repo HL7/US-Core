@@ -272,6 +272,7 @@
 [USCoreCarePlanProfile]: StructureDefinition-us-core-careplan.html
 [USCoreCareTeam]: StructureDefinition-us-core-careteam.html
 [USCoreCategory]: CodeSystem-us-core-category.html
+[USCoreCertifyingSystemActor]: ActorDefinition-us-core-certifying-system-actor.html
 [USCoreCertifyingSystemRequirements]: Requirements-us-core-certifying-system.html
 [UsCoreClientCapabilityStatement]: CapabilityStatement-us-core-client.html
 [USCoreClientRequirements]: Requirements-us-core-client.html
@@ -344,7 +345,9 @@
 [USCoreQuestionnaireResponseProfile]: StructureDefinition-us-core-questionnaireresponse.html
 [USCoreRaceExtension]: StructureDefinition-us-core-race.html
 [USCoreRelatedPersonProfile]: StructureDefinition-us-core-relatedperson.html
+[USCoreClientActor]: ActorDefinition-us-core-client-actor.html
 [USCoreRespiratoryRateProfile]: StructureDefinition-us-core-respiratory-rate.html
+[USCoreServerActor]: ActorDefinition-us-core-server-actor.html
 [USCoreScreeningAssessmentConditionCategory]: ValueSet-us-core-screening-assessment-condition-category.html
 [USCoreScreeningAssessmentObservationCategory]: ValueSet-us-core-screening-assessment-observation-category.html
 [USCoreScreeningAssessmentObservationMaximumCategory]: ValueSet-us-core-screening-assessment-observation-maximum-category.html

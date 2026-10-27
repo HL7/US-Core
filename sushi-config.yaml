@@ -24,8 +24,8 @@ definition:
     #   valueCode: hl7.fhir.us.core#8.0.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
       valueCode: hl7.fhir.us.core#7.0.0
-    - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
-      valueCode: hl7.fhir.us.core#7.0.0-ballot
+    # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    #   valueCode: hl7.fhir.us.core#7.0.0-ballot
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
       valueCode: hl7.fhir.us.core#6.1.0
     - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
@@ -59,19 +59,22 @@ dependencies:  # maintain array order - is referenced in spec using liquid varia
   hl7.fhir.uv.smart-app-launch:
     version: 2.2.0
     uri: http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch
-    id: smart  #old hl7_fhir_uv_smart_app_launch
+    id: smart
 
   hl7.fhir.uv.sdc:
     version: 4.0.0  #4.0.0 is coming  ... but not found by loader
     uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
-    id: sdc  #old hl7_fhir_uv_sdc
+    id: sdc
 
   us.cdc.phinvads:
     id: uscdcphinvads
-    # uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
     uri: 'https://phinvads.cdc.gov/vads/fhir/ImplementationGuide/us.cdc.phinvads'
     version: 0.12.0
-  hl7.fhir.uv.extensions.r4: 5.3.0
+
+  hl7.fhir.uv.extensions.r4:
+    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+    version: 5.3.0
+
   hl7.fhir.uv.xver-r5.r4: 0.1.0 # try this for cross version extension per Gino on Zulip
 
 pages:
@@ -354,6 +357,7 @@ menu:
       Search Parameters: search-parameters-and-operations.html#search-parameters
       Operations: search-parameters-and-operations.html#operations
       Terminology: terminology.html
+      Actors: capability-statements.html#actors
       Capability Statements: capability-statements.html#capability-statement
       Requirements: capability-statements.html#requirements-resource
       Examples: examples.html

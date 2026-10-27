@@ -1,0 +1,18 @@
+{
+  "resourceType": "ActorDefinition",
+  "id": "us-core-certifying-system-actor",
+  "url": "http://hl7.org/fhir/us/core/ActorDefinition/us-core-certifying-system-actor",
+  "name": "USCoreCertifyingSystemActor",
+  "title": "US Core Certifying System",
+  "status": "active",
+  "experimental": false,
+  "type": "system",
+  "description": "A US Core Certifying System is a US Core Responder (Server) seeking Office of the National Coordinator for Health Information Technology (ONC) Health IT Certification (g)(10) certification. It meets every US Core Responder requirement and, in addition, interprets the *Additional USCDI Requirements* as *Must Support* elements, which non-certifying Responders can treat as optional.",
+  "documentation": "This actor derives from the [US Core Responder (Server)](ActorDefinition-us-core-server-actor.html) actor and meets all of its requirements. The additional requirements it is expected to meet are listed in the [US Core Certifying System Requirements](Requirements-us-core-certifying-system.html). See [Additional USCDI Requirements](must-support.html#additional-uscdi-requirements) for how those elements are designated and applied.",
+  "derivedFrom": [
+    "http://hl7.org/fhir/us/core/ActorDefinition/us-core-server-actor"
+  ],
+  "reference": [
+    "https://hl7.org/fhir/us/core/must-support.html#additional-uscdi-requirements"
+  ]
+}
