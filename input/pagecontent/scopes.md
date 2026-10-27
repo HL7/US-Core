@@ -115,7 +115,7 @@ The script creates sorted arrays of required and optional resource and granular 
 
 <!--  ======================== end liquid ================================ -->
 
-The following scopes that correspond directly to FHIR resource types **SHALL** be supported:<sup>[§][CONF-0132]</sup>
+The following scopes that correspond directly to FHIR resource types **SHALL** be supported:
 
 <table class="grid">
 <thead>
@@ -135,7 +135,7 @@ The following scopes that correspond directly to FHIR resource types **SHALL** b
 </tbody>
 </table>
 
-The following scopes that correspond directly to FHIR resource types **MAY** be supported:<sup>[§][CONF-0156]</sup>
+The following scopes that correspond directly to FHIR resource types **MAY** be supported:
 
 <table class="grid">
 <thead>
@@ -158,7 +158,7 @@ The following scopes that correspond directly to FHIR resource types **MAY** be 
 
 ##### Granular Scopes For Requesting FHIR Resources
 
-The following *granular* scopes **SHALL** be supported:<sup>[§][CONF-0158]</sup>
+The following *granular* scopes **SHALL** be supported:
 
 <table class="grid">
 <thead>
@@ -179,7 +179,7 @@ The following *granular* scopes **SHALL** be supported:<sup>[§][CONF-0158]</sup
 
 </table>
 
-The following *granular* scopes **SHOULD** be supported:<sup>[§][CONF-0166]</sup>
+The following *granular* scopes **SHOULD** be supported:
 
 <table class="grid">
 <thead>

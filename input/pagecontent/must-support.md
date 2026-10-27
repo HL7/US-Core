@@ -257,10 +257,10 @@ Systems **MAY** support populating and processing other choice elements (such as
 
 For the [US Core Observation Clinical Result Profile] value element, multiple elements are labeled *Must Support*. When claiming conformance to this profile:
 
-* US Core Responders **SHALL** be capable of populating `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.<sup>[§][CONF-0111]</sup>
-* US Core Requestors **SHALL** be capable of processing `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.<sup>[§][CONF-0112]</sup>
+* US Core Responders **SHALL** be capable of populating `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.
+* US Core Requestors **SHALL** be capable of processing `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.
 
-Systems can support the other elements, but this is not a requirement of US Core.<sup>[§][CONF-0113],[§][CONF-0114]</sup>
+Systems **MAY** support populating and processing other choice elements (such as Observation.valueBoolean), but this is not a requirement of US Core.
 
 {% include img.html img="Must_Support_Observation.value.png" caption="Figure 12: US Core `Observation.value[x]`" %}
 
