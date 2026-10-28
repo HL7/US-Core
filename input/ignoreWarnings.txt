@@ -83,7 +83,7 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Constraint fail
 
 # 18. ===  The following code systems and value set are in FHIR Core/THO and not under the direct control of US Core editors ===
 
-Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1
+Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1%
 Reference to draft CodeSystem http://hl7.org/fhir/%
 Reference to draft CodeSystem http://terminology.hl7.org/%
 
@@ -99,7 +99,7 @@ A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/PHOccupationa
 
 A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated
 
-# 22. ===FHIR R4 http://hl7.org/fhir/ValueSet/formatcodes is in error which has been corrected in the FHIR R5. The guide is referencing the "HL7 ValueSet of Format Codes for use with Document Sharing" that is used in R5 (updated text from 7.0.0) ===
+# 22. ===FHIR R4 http://hl7.org/fhir/ValueSet/formatcodes is in error which has been corrected in the FHIR R5. The guide is referencing THO's "HL7 ValueSet of Format Codes for use with Document Sharing" that is used in FHIR R5+ (updated text in 10.0.0 - ballot) ===
 
 INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The Coding provided (http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes#urn:hl7-org:sdwg:ccda-structuredBody:2.1) was not found in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code 'http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes#urn:hl7-org:sdwg:ccda-structuredBody:2.1: 'ccda-structuredBody:2.1'' was not found in the value set 'http://hl7.org/fhir/ValueSet/formatcodes|4.0.1')
 
@@ -209,7 +209,7 @@ The html source contains the word 'SHOULD NOT' but it is not in a text phrase ma
 
 # 47. === This NDC codes has been checked and is a valid Unit of Use NDC codes as described on the CDC's IIS website: https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_tableaccess.asp. There are issues with the NDC directory used for validation, because it is incomplete.  For details and the variance approval from the product director, see this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Immunization.20NDC.20Code.20error/with/562172015 ===
 
-ERROR: Immunization/imm-1: Immunization.vaccineCode.coding[1].code: Unknown code '49281012188' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version '2021-11-01'
+Unknown code '49281012188' in the CodeSystem 'http://hl7.org/fhir/sid/ndc' version '2021-11-01'
 
 # 49. === This guide uses a custom liquid script to generat the the CapabilityStatement narrative. To facilate rendering of displays and relative links to human readable content, the Capability statemnent uses the Display Name and Narrative Link extensions on the canonicals types - 'supportedProfiles', 'operation.definition', and 'implementationGuide' elements.  As a result, the relative links in the Narrative Link extensions will generate "No definition could be found" warnings wherever they are used. For example: "No definition could be found for URL value 'StructureDefinition-us-core-allergyintolerance.html'" The warning have been checked and are valid links internal to to guide or to other guides.
 
