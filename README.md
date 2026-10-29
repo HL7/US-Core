@@ -633,6 +633,28 @@ input/includes/ms-target-table-generator.md|input/data/addl_uscdi_refs.csv|https
 input/includes/ms-target-table-generator.md|input/data/addl_uscdi_choice_refs.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 input/pagecontent/must-support.md|input/data/additional-uscdi-requirements.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/addl-uscdi-tabler.ipynb
 
+#### Regenerating the CQL ModelInfo Library
+
+`input/examples-yaml/library-uscore-modelinfo.yml` holds the CQL (Clinical Quality Language) model information for US Core, packaged as a `Library` resource with the ModelInfo XML base64-encoded in `Library.content.data`. It is generated rather than hand-edited, and it is not version-aware: a version bump leaves it describing the prior version in `description`, `topic.text`, and the embedded `<modelInfo version="...">`, and leaves out any profile added since. Neither the build nor the QA report flags this, so it has to be regenerated deliberately on each version bump.
+
+Script: https://github.com/Healthedata1/MyNotebooks/blob/master/bash_scripts/create_cql_libraries.ipynb
+
+The notebook documents each step; in summary:
+
+1. Download the CQF (Clinical Quality Framework) `tooling-cli` JAR from https://central.sonatype.com/artifact/org.opencds.cqf/tooling-cli and set the notebook's `jarVersion` variable to the version downloaded.
+2. Download `https://hl7.org/fhir/us/core/STU<N>/definitions.json.zip` for the version being generated and unzip it into the notebook's `FHIR-Spec/US-Core/<version>` folder (e.g., `FHIR-Spec/US-Core/10.0.0`). The ModelInfo is generated from the published definitions, not from the working copy, so the version has to be published first.
+3. Set the `VERSIONS` array in the first cell and the `versions` list in the second cell to the version being generated, then run both cells. The first cell runs `tooling-cli -GenerateMIs` and writes `output/uscore-modelinfo-<version>.xml`; the second wraps that XML in the `Library` resource and writes the YAML straight into `input/examples-yaml/`.
+4. Run `./publish.sh -y` to regenerate `input/examples/library-uscore-modelinfo.json` from the new YAML.
+
+Two constraints on the resource are deliberate and should not be changed:
+
+- The `id`, `name`, and `url` are fixed so the model information can be loaded from the published package. The implementation looks for a library whose canonical URL ends in `USCore-ModelInfo`, which is [Conformance Requirement 6](https://hl7.org/fhir/uv/cql/using-modelinfo.html#conformance-requirement-6-) of the Using CQL With FHIR IG.
+- The notebook omits `meta.profile` for `http://hl7.org/fhir/uv/cql/StructureDefinition/cql-modelinfo` because it causes an IG Publisher error.
+
+Only the current version is generated. The notebook retains a commented-out list of all prior versions for regenerating them, which US Core stopped publishing in 9.0.0 (see [FHIR-54705](https://jira.hl7.org/browse/FHIR-54705)).
+
+**Likely IG Publisher update:** the IG Publisher is expected to generate the ModelInfo `Library` as a build step in a future release. Until then, the notebook is run by hand on each version bump. When publisher support arrives, this section and the matching checkbox in *Prepare IG for new version* can be removed.
+
 #### Python Installation
 
 For Python installation, see:
@@ -1000,6 +1022,7 @@ Updated table and file contents
      -  Use the **next publication version**, without the `-ballot` suffix, even when scaffolding a ballot. For example, the v10 ballot cycle meets USCDI v7, so the row is `| [v7] | 10.0.0 |`, not `10.0.0-ballot`. The row is the USCDI-to-US Core mapping, and the ballot and its publication map the same USCDI version.
   - [ ] Add the matching `[vN]:` reference-style link definition at the bottom of the file, pointing to the ONC Standards Bulletin that announces that USCDI version. Look the URL up rather than extrapolating it: recent entries use `https://www.healthit.gov/topic/standardsbulletin_<yy>-<n>`, but earlier ones are direct PDF links on other paths.
   - [ ] Revisit the row at publication. Rows are corrected after the fact (the USCDI v5 row moved from `8.0.0` to `8.0.1` for the technical correction, and `[v3]` was later refined to `[v3.1]`).
+- [ ] Regenerate the CQL ModelInfo Library (`input/examples-yaml/library-uscore-modelinfo.yml`). This generated file is not version-aware, so the bump alone leaves it describing the prior version. It is generated from the published `definitions.json.zip`, so run it once that version is published. See [Regenerating the CQL ModelInfo Library](#regenerating-the-cql-modelinfo-library) above.
 -  [ ]  Remove change highlighting if prior build is Ballot
    -  [ ]  using the publish.sh `-x` option to remove the new-content highlighting from all markdown files
    -  [ ]  Manually clear all the "Is_New" column data from:
