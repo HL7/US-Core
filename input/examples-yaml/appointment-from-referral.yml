@@ -11,10 +11,9 @@ meta:
 status: booked
 serviceType:
   - coding:
-      - system: http://snomed.info/sct
-        version: http://snomed.info/sct/731000124108
-        code: '467771000124109'
-        display: Assistance with application for food pantry program
+      - system: http://terminology.hl7.org/CodeSystem/service-type
+        code: '548'
+        display: Food Relief/Food/Meals
     text: Food Pantry Application Assistance
 start: '2026-08-04T15:00:00Z'
 end: '2026-08-04T16:00:00Z'

@@ -17,10 +17,9 @@ cancelationReason:
   text: Patient cancelled
 serviceType:
   - coding:
-      - system: http://snomed.info/sct
-        version: http://snomed.info/sct/731000124108
-        code: '185349003'
-        display: Encounter for check up
+      - system: http://terminology.hl7.org/CodeSystem/service-type
+        code: '124'
+        display: General Practice
     text: Annual Physical Exam
 start: '2026-07-08T14:00:00Z'
 end: '2026-07-08T14:30:00Z'

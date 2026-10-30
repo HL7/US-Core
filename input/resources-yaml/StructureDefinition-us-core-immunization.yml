@@ -37,11 +37,13 @@ differential:
       path: Immunization.statusReason
       mustSupport: true
       # ====== USCDI 7 Reason Not Performed: strength raised from example in V10 ======
+      # The value set is THO's ActNoImmunizationReason, which is active and expands
+      # to the eight v3-ActReason concepts under _ActNoImmunizationReason.
       # TODO: provisional binding. The terminology review may replace this with a
       # US Core value set aligned with HL7 FHIR US Quality Core.
       binding:
         strength: extensible
-        valueSet: http://hl7.org/fhir/ValueSet/immunization-status-reason
+        valueSet: http://terminology.hl7.org/ValueSet/v3-ActNoImmunizationReason
     - id: Immunization.vaccineCode
       path: Immunization.vaccineCode
       short: Vaccine Product Type (bind to CVX)

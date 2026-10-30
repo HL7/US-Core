@@ -28,14 +28,14 @@ The US Core Profiles shown in the figure and table below record the information 
 
 | US Core profile | Adverse Event Condition | Adverse Event Outcome | Why |
 |---|:---:|:---:|---|
-| Immunization | ✓ | | `reaction` / referenced Observation ?|
-| Procedure | ✓ | | `complication` ?|
-| AllergyIntolerance | ✓ | **?**| `reaction.manifestation` ? |
-| Condition | ✓ | ✓ | condition/diagnosis can represent the change or resulting status/sequela |
+| Immunization | ✓ | | reaction details that follow an immunization |
+| Procedure | ✓ | | complication details that occurred during or immediately following the procedure|
+| AllergyIntolerance | ✓ | ✓ | reaction details linked to the identified substance |
+| Condition | ✓ | ✓ | condition/diagnosis of the change or resulting status/sequela |
 | DocumentReference | ✓ | ✓ | narrative clinical documentation |
 | Simple Observation | ✓ | ✓ | clinical finding/status not covered by a more specific profile |
 | Encounter | | ✓ | hospitalization; discharge disposition |
-| CarePlan | **?** | **?** | primarily follow-up/treatment; not necessarily the AE outcome
+| CarePlan | | ✓ | follow-up treatment or plan |
 {:.grid}
 
 ### Overlap with Other USCDI Data Classes
@@ -45,8 +45,5 @@ Note the overlap with the USCDI *Allergies and Intolerances* Data Class. `Allerg
 ### Terminology
 
 USCDI names SNOMED CT as an applicable vocabulary standard for *Adverse Event Condition*. It names no vocabulary standard for *Adverse Event Outcome*. US Core places no additional binding on any element for this Data Class beyond what the profiles above already require, so the terminology for each element is the terminology that profile already specifies.
-
-This guidance page is a draft for this ballot. Further editing and examples are still pending.
-{:.note-to-balloters}
 
 {% include link-list.md %}
