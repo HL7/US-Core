@@ -73,8 +73,6 @@ differential:
         valueSet: http://hl7.org/fhir/ValueSet/event-status
 
 # ====== New for USCDI 7 Reason Not Performed ======
-# TODO: provisional binding. The terminology review may replace this with a
-# US Core value set aligned with HL7 FHIR US Quality Core.
 
     - id: Procedure.statusReason
       path: Procedure.statusReason
@@ -82,7 +80,12 @@ differential:
       mustSupport: true
       binding:
         strength: extensible
-        valueSet: http://hl7.org/fhir/ValueSet/procedure-not-performed-reason
+# TODO SHAM OID - this value set does not exist yet and WILL FAIL VALIDATION.
+# Replace with the real VSAC OID once the US Core Procedure Not Performed Reason value
+# set is authored in VSAC. It holds the twelve SNOMED CT procedure-declined concepts
+# agreed on the Oct 29 CGP call, and replaces the interim binding to the base FHIR
+# Procedure Not Performed Reason value set.
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.9998
 
 # =================================================
 

@@ -38,7 +38,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 
 * The MedicationAdministration resource represents the USCDI Medication Administration data element. The [Medication List] guidance remains based on MedicationRequest; a MedicationAdministration query is not a substitute for it.
 * A status code of "not-done" is used when a medication was *not* administered.
-   * <sup>3</sup>`MedicationAdministration.statusReason` communicates why the medication was not administered, such as patient refusal. **Note that this binding is provisional, pending the review of the terminology aligned with the HL7 FHIR US Quality Core Implementation Guide.**
+   * <sup>3</sup>`MedicationAdministration.statusReason` communicates why the medication was not administered, such as patient refusal.
 * <sup>4</sup>`MedicationAdministration.effective[x]` is mandatory and records when the administration took place, or when it was to have taken place when `MedicationAdministration.status` is "not-done". Use `effectiveDateTime` for an essentially instantaneous administration, such as swallowing a tablet or giving an injection, and `effectivePeriod` for an administration with a duration, such as an infusion. An `effectivePeriod` with no end time records an administration that is still under way.
 {% include representing-meds.md %}
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}

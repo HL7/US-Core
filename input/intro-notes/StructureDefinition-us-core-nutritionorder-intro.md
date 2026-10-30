@@ -43,7 +43,7 @@ This section provides detailed implementation guidance for the US Core Profile t
 * <sup>1</sup>In some settings, particularly outpatient care, an oral diet may be ordered only using free-text instructions. This profile includes `NutritionOrder.oralDiet.instruction` to support these orders.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
-`NutritionOrder.oralDiet.type` uses the base FHIR R4 value set, which displays a 2019 expansion of the Dietary Regime SNOMED CT hierarchy. This value set is slated to move to HL7 Terminology (THO) and display the current expansion of values. if it is available before this guide is published, we will adopt it.
+`NutritionOrder.oralDiet.type` uses the base FHIR R4 value set, which displays a 2019 expansion of the Dietary Regime SNOMED CT hierarchy. This value set is slated to move to HL7 Terminology (THO) and display the current expansion of values. If it is available before this guide is published, we will adopt it.
 {:.note-to-balloters}
 
 {% include link-list.md %}

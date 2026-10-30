@@ -38,8 +38,8 @@ This section provides detailed implementation guidance for the US Core Profile t
     - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
-<div class="note-to-balloters" markdown="1">
+<div class="stu-note" markdown="1">
 The [US Core FamilyMemberHistory Recorder Extension] is used to record the individual provenance. It will be replaced by the FHIR R6 [Cross Version Extension] when FHIR R6 is published.
-</div><!-- note-to-balloters -->
+</div><!-- stu-note -->
 
 {% include link-list.md %}

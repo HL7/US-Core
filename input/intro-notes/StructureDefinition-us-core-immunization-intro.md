@@ -36,7 +36,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - <sup>1</sup>Servers **SHALL** use the status code: `not-done` to represent that an immunization was *not* given.<sup>[§][CONF-0390]</sup>
-   - <span class="bg-success" markdown="1">`Immunization.statusReason` communicates the reason the vaccine was not administered at the point of care, such as patient refusal.  **Note that this binding is provisional, pending the review of the terminology aligned with the HL7 FHIR US Quality Core Implementation Guide.**</span><!-- new-content -->
+   - <span class="bg-success" markdown="1">`Immunization.statusReason` communicates the reason the vaccine was not administered at the point of care, such as patient refusal.</span><!-- new-content -->
 - <sup>2</sup>Based upon the ONC U.S. Core Data for Interoperability (USCDI) requirements, [CVX vaccine codes] are required, and the [NDC vaccine codes] **SHOULD** be supported as an additional code.<sup>[§][CONF-0392]</sup>
     - NDC codes are defined by the manufacturer, and CVX codes, which are much less granular, are often limited to a single product made by a single manufacturer.
     - In most cases, there are separate NDCs for the Unit of Use (primary) and Unit of Sale (secondary) packaging of a vaccine, but only the Unit of Use NDC codes should be used since they represent the product that is administered.

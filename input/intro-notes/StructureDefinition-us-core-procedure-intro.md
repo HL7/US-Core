@@ -36,7 +36,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.
 
 - <span class="bg-success" markdown="1">A status code of "not-done" is used when a procedure was *not* performed.</span><!-- new-content -->
-   - <span class="bg-success" markdown="1"><sup>5</sup>`Procedure.statusReason` communicates why the procedure was not performed, such as patient refusal. **Note that this binding is provisional, pending the review of the terminology aligned with the HL7 FHIR US Quality Core Implementation Guide.**</span><!-- new-content -->
+   - <span class="bg-success" markdown="1"><sup>5</sup>`Procedure.statusReason` communicates why the procedure was not performed, such as patient refusal.</span><!-- new-content -->
    - <span class="bg-success" markdown="1"><sup>6</sup>Use the cross-version *Procedure Recorded R5 Extension* to record when the not-done procedure was captured in the patient's record, since `Procedure.performed[x]` is ambiguous when no procedure took place.</span><!-- new-content -->
 - <sup>2</sup>The `Procedure.performed` is mandatory if `Procedure.status` is "completed" or "in-progress".
 - <sup>1</sup>Unless exchanging legacy or text-only data, procedure codes **SHOULD** be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT, or LOINC.<sup>[§][CONF-0895]</sup>
