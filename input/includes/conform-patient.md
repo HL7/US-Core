@@ -4,7 +4,7 @@
   "resourceType": "CapabilityStatement",
   ...
   "instantiates": [
-    "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server"
+    "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
   ],
   ...
   "rest": [

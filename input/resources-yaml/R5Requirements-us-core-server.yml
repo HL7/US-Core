@@ -134,7 +134,7 @@ statement:
       - general-requirements.html#claiming-conformance-to-a-us-core-profile
     conformance:
       - SHOULD
-    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHOULD** declare conformance with the US [Core Server Capability Statement](CapabilityStatement-us-core-Server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`"
+    requirement: "[To claim conformance to a US Core Profile] a conformant Server: \n\n**SHOULD** declare conformance with the US [Core Server Capability Statement](CapabilityStatement-us-core-server.html) by including its official URL in the Server’s `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`"
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -629,7 +629,7 @@ statement:
     requirement: |-
       For querying and reading US Core Profiles, Must Support on any profile data element **SHALL** be interpreted as follows…:
 
-      US Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server Capability Statement](CapabilityStatement-us-core-Server.html).
+      US Core Responders **SHALL** be capable of populating all data elements as part of the query results specified by the [US Core Server Capability Statement](CapabilityStatement-us-core-server.html).
     _reference:
       - extension:
           - url: http://hl7.org/fhir/StructureDefinition/narrativeLink
@@ -930,7 +930,7 @@ statement:
             valueUrl: scopes.html#CONF-0121
   - key: CONF-0123
     reference:
-      - scopes.html#us-core-Servers-shall-support-token-introspection
+      - scopes.html#us-core-servers-shall-support-token-introspection
     conformance:
       - SHALL
     requirement: US Core Server[s] **SHALL** support token introspection defined by the SMART App Launch Guide. For more details and additional consideration, see SMART App Launch’s [Token Introspection](https://hl7.org/fhir/smart-app-launch/STU2/token-introspection.html#token-introspection).

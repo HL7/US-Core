@@ -78,7 +78,7 @@ Certifying Systems **SHALL** implement all components in the USCDI and the US Co
 
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.<sup>[§][CONF-0013]</sup>
-- **SHOULD** declare conformance with the [US Core Server CapabilityStatement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-Server`<sup>[§][CONF-0014]</sup>
+- **SHOULD** declare conformance with the [US Core Server CapabilityStatement] by including its official URL in the Server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`<sup>[§][CONF-0014]</sup>
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.<sup>[§][CONF-0015]</sup>
     - Declare support for the US Core Profile by including its official URL in the Server's `CapabilityStatement.rest.resource.supportedProfile` element.<sup>[§][CONF-0016]</sup>
