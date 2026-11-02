@@ -144,6 +144,10 @@ The element Observation.value[x] has a binding, and has multiple types subject t
 
 The element Observation.component.value[x] has a binding, and has multiple types subject to bindings ([dateTime, boolean, string, SampledData, Quantity, Period, Ratio, integer, time, Range, CodeableConcept]). The binding will apply to all the types
 
+The Binding on the type slicer Observation.value[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for boolean, integer, Ratio, SampledData, time, dateTime, Period
+
+The Binding on the type slicer Observation.component.value[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for boolean, integer, Ratio, SampledData, time, dateTime, Period
+
 # 32. === A US Direct Address for secure messaging in healthcare typically follows a format similar to an email address. for example `john.doe@direct.myhealthcareprovider.org`. Although this URL will not resolve, it represents a legitimate example of the direct address in the `endpoint.address` field. ===
 
 # 33. === To comply with Executive Order 14168, the following changes were made: 1)Removed USCDI mapping, guidance, and examples for the US Core Observation Sexual Orientation Profile  2) Removed the US Core Birth Sex Extension, guidance, and examples from the US Core Patient Profile 3) Deprecated the US Core Gender Identity and US Core Sex Extensions and removed them from the US Core Profile, USCDI mapping, guidance, and examples. Although the profiles and extensions will remain in this version of US Core to allow for backward compatibility - no examples will be supplied. ===
