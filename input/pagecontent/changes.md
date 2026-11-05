@@ -32,6 +32,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 4. **Applied:** Compatible, substantive (Correction) Validate and correct the FHIRPath expressions in the USCDI mapping table [FHIR-57864](https://jira.hl7.org/browse/FHIR-57864) See Changes [Here](uscdi.html)
 5. **Pre-Applied:** Compatible, substantive (Correction) Replace the inactive SNOMED CT code in the US Core Medication Adherence Extension's scenario table value set. [FHIR-57449](https://jira.hl7.org/browse/FHIR-57449) See Changes [Here](StructureDefinition-us-core-medication-adherence.html)
 6. **Pre-Applied:** Compatible, substantive (Enhancement) Add US Core R5 ActorDefinitions [FHIR-59731](https://jira.hl7.org/browse/FHIR-59731) See Changes Listed in the 10.0.0-Ballot Introduction above.
+7. **Applied:** Compatible, substantive (Clarification) Downgrade the DocumentReference write capability from SHALL to SHOULD in the US Core Server CapabilityStatement and to MAY in the US Core Client CapabilityStatement [FHIR-58166](https://jira.hl7.org/browse/FHIR-58166) See Changes [Here](StructureDefinition-us-core-documentreference.html#write-capability)
 
 ##### Non-substantive
 1. **Applied:** Non-substantive (Correction) Remove duplicated words from the Observation.hasMember short description and the Observation.derivedFrom definition [FHIR-58155](https://jira.hl7.org/browse/FHIR-58155) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)

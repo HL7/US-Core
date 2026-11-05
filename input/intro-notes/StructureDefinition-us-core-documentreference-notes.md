@@ -10,9 +10,9 @@
 {% include quickstart-search.md type=type title=title category="http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note" code1="http://loinc.org\|18842-5" %}
 
 
-#### Mandatory Write Capability:
+#### Write Capability:
 
-1. **SHALL** support writing a new note to a Patient's Chart:
+1. <span class="bg-success" markdown="1">**SHOULD** support writing a new note to a Patient's Chart:</span><!-- new-content -->
 
    `POST [base]/DocumentReference`
 
