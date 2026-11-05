@@ -16,9 +16,7 @@ meta:
       (Food and nutrient intake panel 75284-0, Comparative nutrition assessment
       standards panel 75285-7, Nutrition related anthropometric measurements panel
       75286-5, and so on), which organize the LOINC terms but do not have to be
-      instantiated. The nutrition diagnosis the assessment supports is the separate
-      [Condition Nutrition Diagnosis Example](Condition-condition-nutrition-diagnosis.html),
-      which references this panel in `Condition.evidence.detail`.
+      instantiated.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
 status: final

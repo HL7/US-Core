@@ -268,7 +268,7 @@ to represent conclusions or diagnoses about drug misuse or abuse. In many cases,
 
 - <span class="bg-success" markdown="1">The Nutrition Assessment value set uses the panel and panel item codes in the [Nutrition assessment panel (LOINC Panel 75282-4)] which is based on the [Academy of Nutrition and Dietetics (AND) Nutrition Care Process terminology (NCPT)]. </span><!-- new-content -->
 
-- <span class="bg-success" markdown="1">The [Nutrition Diagnosis Grouping](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1095.85/expansion) value set contains SNOMED CT clinical judgment codes to represent a nutrition diagnosis that identifies and describes a specific nutrition problem. It is based on NCPT and consists of SNOMED CT values that represent a `Condition.code` or the `Observation.value` for an `Observation.code` of Nutrition status (LOINC 75305-3).</span><!-- new-content -->
+- <span class="bg-success" markdown="1">The [Nutrition Diagnosis Grouping](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1095.85/expansion) value set contains SNOMED CT clinical judgment codes to represent a nutrition diagnosis that identifies and describes a specific nutrition problem. It is based on NCPT and consists of SNOMED CT values that represent the `Observation.value` for an `Observation.code` of Nutrition status (LOINC 75305-3).</span><!-- new-content -->
 
 **Health Status Assessments Value Sets Table:**
 {: #health-status-assessments-value-sets-table}

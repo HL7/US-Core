@@ -44,6 +44,12 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Patient Data Feed Additional Resources]: patient-data-feed-additional-resources.html
 [US Core ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.core.html
 [Artifacts Summary]: artifacts.html
+[US Core Certifying System]: ActorDefinition-us-core-certifying-system-actor.html
+[US Core Certifying System - Testing]: ActorDefinition-us-core-certifying-system-actor-testing.html
+[US Core Requestor (Client)]: ActorDefinition-us-core-client-actor.html
+[US Core Requestor (Client) - Testing]: ActorDefinition-us-core-client-actor-testing.html
+[US Core Responder (Server)]: ActorDefinition-us-core-server-actor.html
+[US Core Responder (Server) - Testing]: ActorDefinition-us-core-server-actor-testing.html
 [US Core Certifying System Requirements]: Requirements-us-core-certifying-system.html
 [US Core Certifying System Requirements - Testing]: Requirements-us-core-certifying-system-testing.html
 [US Core Client Requirements]: Requirements-us-core-client.html
@@ -776,7 +782,6 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Colonoscopy Example]: CarePlan-colonoscopy.html
 [Condition Duodenal Resolved Ulcer Example]: Condition-condition-duodenal-ulcer-res.html
 [Condition Duodenal Ulcer Example]: Condition-condition-duodenal-ulcer.html
-[Condition Nutrition Diagnosis Example]: Condition-condition-nutrition-diagnosis.html
 [Coverage Example]: Coverage-coverage-example.html
 [Deceased Patient Example]: Patient-deceased-example.html
 [Defibrillator Device Example]: Device-udi-2.html
