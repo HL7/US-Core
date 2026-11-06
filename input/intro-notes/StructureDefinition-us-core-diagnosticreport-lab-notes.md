@@ -1,4 +1,3 @@
-<!--input/intro-notes/StructureDefinition-us-core-condition-encounter-diagnosis-notes.md -->
 <!-- establish the page context and get type,title,optionally fixed-categories and code lists (NOTE: escape "|" with "\|" and when only want a single example ) -->
 {% assign id = include.id %}
 {% assign sd = site.data.structuredefinitions[id] %}

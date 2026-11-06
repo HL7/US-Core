@@ -1,4 +1,3 @@
-<!--input/intro-notes/StructureDefinition-us-core-procedure-notes.md -->
 <!-- establish the page context and get type -->
 {% assign id = include.id %}
 {% assign sd = site.data.structuredefinitions[id] %}
