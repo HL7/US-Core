@@ -1508,12 +1508,8 @@ rest:
     - extension:
       - url:
           http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
-        valueCode: SHALL
+        valueCode: MAY
       code: create
-      documentation: This conformance expectation applies **only**  to the *US
-        Core DiagnosticReport Profile for Report and Note exchange* profile.
-        The conformance expectation for the *US Core DiagnosticReport Profile
-        for Laboratory Results Reporting* is  **MAY**.
     - extension:
       - url:
           http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
