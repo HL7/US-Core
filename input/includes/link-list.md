@@ -282,3 +282,4 @@
 [US Core Profile Variances to IPS Profiles]: https://hl7.org/fhir/us/pcs/en/variance.html#us-core-profile-variances-to-ips-profiles
 [Nutrition assessment panel (LOINC Panel 75282-4)]: https://loinc.org/75282-4
 [Academy of Nutrition and Dietetics (AND) Nutrition Care Process terminology (NCPT)]: https://www.eatrightpro.org/practice/nutrition-care-process
+[FHIR RESTful Search API Requirements]: general-requirements.html#fhir-restful-search-api-requirements

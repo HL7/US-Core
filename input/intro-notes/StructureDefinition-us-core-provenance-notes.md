@@ -1,4 +1,4 @@
-{% include quickstart-intro.md %}
+{% include quickstart-intro.md type="Provenance" %}
 
 #### Mandatory Search Parameters:
 

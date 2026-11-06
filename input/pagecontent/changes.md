@@ -60,6 +60,9 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 17. **Applied:** Non-substantive (Enhancement) Update US Core Goal Codes with a  more specific Value Set Authority Center (VSAC) valueset. [FHIR-54407](https://jira.hl7.org/browse/FHIR-54407) See Changes [Here](StructureDefinition-us-core-goal.html)
 18. **Pre-Applied:** Non-substantive (Correction) Remove the misapplied us-core-23 invariant from the US Core Race Extension. [FHIR-59695](https://jira.hl7.org/browse/FHIR-59695) See Changes [Here](StructureDefinition-us-core-race.html)
 19. **Applied:** Non-substantive (Enhancement) Add the US Core DocumentReference Profile to the USCDI Diagnostic Imaging Result/Report and Clinical Test Result/Report data elements, and to their Diagnostic Imaging and Clinical Tests data class rows [FHIR-59733](https://jira.hl7.org/browse/FHIR-59733) See Changes [Here](uscdi.html)
+20. **Pre-Applied:** Non-substantive (Clarification) Clarify that search requirements apply to the resource type rather than to an individual profile, and that a required search parameter can index an element a profile does not Must Support [FHIR-56256](https://jira.hl7.org/browse/FHIR-56256) See Changes Here:
+   - [FHIR RESTful Search API Requirements](general-requirements.html#fhir-restful-search-api-requirements)
+   - [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html#quick-start)
 
 
 ##### Pending

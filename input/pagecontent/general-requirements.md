@@ -297,6 +297,14 @@ There are situations when information on a particular data element is missing, a
         If any of these codes is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource.<sup>[§][CONF-0048]</sup> If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.<sup>[§][CONF-0049],[§][CONF-0050]</sup>
 
 ### FHIR RESTful Search API Requirements
+<div class="bg-success" markdown="1">
+FHIR RESTful Search API requirements apply to the *resource type*, not to an individual profile. Several US Core profiles share a resource type (for example, Observation and Condition), and they do not all mandate or Must Support the same elements. Therefore, a required search parameter might index an element that a particular profile sharing a resource type does not require the server to support. In this case:
+
+ - There is no expectation that the server populates the element in instances of that profile.
+ - There is no expectation that the search returns instances of that profile. Following standard FHIR search behavior, a response Bundle with no matching entries is a conformant response.
+
+For example, servers supporting US Core Observation profiles support searching by patient + category + date. The date parameter indexes Observation.effective[x]. For a profile in which effective[x] is neither mandatory nor Must Support, this search does not return instances without effective[x].
+</div><!-- new-content -->
 
 The [FHIR RESTful Search API] requires that Servers that support search **SHALL** support the HTTP `POST`-based search.<sup>[§][CONF-0051]</sup> For all the supported search interactions in this guide, Servers **SHALL** also support the `GET`-based search.<sup>[§][CONF-0052]</sup>
 

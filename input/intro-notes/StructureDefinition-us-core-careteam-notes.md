@@ -4,7 +4,7 @@
 {% assign type = sd.type %}
 {% assign url = sd.url %}
 
-{% include quickstart-intro.md %}
+{% include quickstart-intro.md type=type %}
 
 {% include quickstart-search.md type=type title=title  %}
 

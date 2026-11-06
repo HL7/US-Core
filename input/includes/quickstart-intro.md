@@ -3,6 +3,8 @@ The source data is at input/data/profile_metadata.csv where manual edits to the 
 when new profiles are added, deprecated, etc.
  -->
 {% assign smart_scope = false %}
+{% comment %} Resource types with more than one US Core profile, per input/data/profile_metadata.csv. {% endcomment %}
+{% assign multi_profile_types = "Condition,DiagnosticReport,DocumentReference,Observation" | split: "," %}
 {% for scope in site.data.profile_metadata %}
   {% if scope.rel_url == page.name %}
     {% capture smart_scope %}
@@ -35,7 +37,7 @@ Servers providing access to {{ scope.data_element }} data **{{conf}}** support t
 
 ---
 
-Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile's information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the [US Core Server CapabilityStatement] for a complete list of supported RESTful interactions for this IG.
+Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile's information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions. {% if multi_profile_types contains include.type %}<span class="bg-success" markdown="1">As described in [FHIR RESTful Search API Requirements], search requirements apply at the resource level and may involve elements that are not Must Support in this profile.</span><!-- new-content -->{% endif %} See the [US Core Server CapabilityStatement] for a complete list of supported RESTful interactions for this IG.
 
 {% if smart_scope -%}- See the [Scopes Format](scopes.html#scopes-format) section for a description of the SMART scopes syntax.{% endif %}
 - See the [Search Syntax](general-guidance.html#search-syntax) section for a description of the US Core search syntax.

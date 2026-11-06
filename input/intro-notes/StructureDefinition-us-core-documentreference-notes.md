@@ -4,7 +4,7 @@
 {% assign type = sd.type %}
 {% assign title = sd.title %}
 
-{% include quickstart-intro.md %}
+{% include quickstart-intro.md type=type %}
 
 {% include quickstart-search.md type=type title=title category="http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note" code1="http://loinc.org\|18842-5" %}
 

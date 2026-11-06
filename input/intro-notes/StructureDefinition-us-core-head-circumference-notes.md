@@ -4,7 +4,7 @@
 {% assign type = sd.type %}
 {% assign title = sd.title %}
 
-{% include quickstart-intro.md %}
+{% include quickstart-intro.md type=type %}
 
 {% include quickstart-search.md type=type title=title  category="http://terminology.hl7.org/CodeSystem/observation-category\|vital-signs" code3="http://loinc.org\|29463-7" code2="http://loinc.org\|8289-1" code1="http://loinc.org\|9843-4" single_example=false %}
 
