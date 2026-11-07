@@ -111,6 +111,7 @@ Whether the server returns a `201 Created` or a `202 Accepted` depends on the Su
 | Provider Write  (always solicited) | `201 Created` | Immediately |
 | Patient  Solicited | `201 Created` | Immediately |
 | Patient  Unsolicited | `201 Created` or `202 Accepted` | Server policy |
+{:.grid}
 
 See the Submission Modes Section below for further guidance and examples.
 
@@ -188,6 +189,8 @@ The recommended categories below addresses what the document is for which drives
 |3|`medical-history`|`http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category`|Medical History|Purpose - Medical History|
 |4|`insurance-document`|`http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category`|Insurance or Coverage related documentation|Purpose - Insurance or Coverage related documentation|
 |5|`identity-document`|`http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category`|Identity documentation|Purpose - Identity documentation|
+{:.grid}
+
 <!-- |6|`structured-document`|`http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category`|Structured Document|Structure - Structured Document|
 |7|`unstructured-document`|`http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category`|Unstructured Document|Structure - Unstructured Document| -->
 
@@ -215,6 +218,7 @@ The recommended types below are grouped by category.
     | `insurance-document` / `identity-document` | `64290-0` | Health insurance card |
     | `medical-history` | `73985-4` | Exercise activity |
     | `medical-history` | `55424-6` | Calories burned in unspecified time by Pedometer |
+    {:.grid}
 
 ###### When No Standard Type Code Exists
 
@@ -228,6 +232,7 @@ Alternatively, to satisfy the required binding, a locally-defined coding can be 
 | --- | --- | --- |
 | `medical-history` | 11503-0 | Medical records |
 | `medical-history` | 47045-0 | Study report |
+{:.grid}
 
 ###### Type Granularity and Mapping
 
@@ -607,6 +612,7 @@ Every document needs to answer a few basic questions: who wrote it, when it was 
 | What was this submitted in response to? | `context.related` |
 | What does this supersede? | `relatesTo` |
 | Who is the patient according to the originating system? | `context.sourcePatientInfo` |
+{:.grid}
 
 
 **Server Requirements**
@@ -676,6 +682,7 @@ Apps need write permission for `DocumentReference`. SMART scopes allow access pe
 | ID | Actor | Conformance | Requirement | Section |
 | --- | --- | --- | --- | --- |
 | TBD | Server | **SHALL** | TBD | [Processing Expectation](#processing-expectation) |
+{:.grid}
 
 
 ---

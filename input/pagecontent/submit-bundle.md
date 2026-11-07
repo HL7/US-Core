@@ -26,6 +26,7 @@ The `$submit-bundle` transport mechanism uses the FHIR `operation` interaction, 
 | --- | --- | --- | --- | --- |
 | `resource` | 1..1 | `Bundle` | in | A `Bundle` with `Bundle.type` of `collection` containing the focal `DocumentReference` and any supporting resources. |
 | `return` | 0..1 | `DocumentReference` | out | The persisted `DocumentReference` as accepted by the server. |
+{:.grid}
 
 When an operation has a single input parameter that is a resource, the client can post the resource directly or as a `Parameters` resource containing the `resource` parameter.
 
