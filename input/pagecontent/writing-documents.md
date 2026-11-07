@@ -684,20 +684,22 @@ Apps need write permission for `DocumentReference`. SMART scopes allow access pe
 
 The following items are unresolved.
 
-#### 1. How to meet US Core's DocumentReference's "responsible-organization requirement"?
+1. How to meet US Core's DocumentReference's "responsible-organization requirement"?
 
-The US Core DocumentReference guidance requires that every `DocumentReference` have a responsible `Organization`, present either in `DocumentReference.custodian` or in a `Provenance` resource targeting the document. For patient-generated and patient-mediated writes there is no responsible organization at the time of submission.
+   The US Core DocumentReference guidance requires that every `DocumentReference` have a responsible `Organization`, present either in `DocumentReference.custodian` or in a `Provenance` resource targeting the document. For patient-generated and patient-mediated writes there is no responsible organization at the time of submission.
 
-#### 2. When is discovery needed ?
+2. When is discovery needed ?
 
-If pre-coordination is required, runtime discovery adds machinery without removing the coordination step
+   If pre-coordination is required, runtime discovery adds machinery without removing the coordination step
 
-#### 3. What about Per-organization discovery versus network-level requirements?
+3. What about Per-organization discovery versus network-level requirements?
 
-#### 4. What are the DocumentReference categories candidates?
+4. What are the DocumentReference categories candidates?
 
-#### 5. Is there need for a separate DocumentReference write profile?
+5. Is there need for a separate DocumentReference write profile?
 
-#### 6. Are structured Documents (e.g., CDA and FHIR) in scope?
+6. Are structured Documents (e.g., CDA and FHIR) in scope?
+
+---
 
 {% include link-list.md %}
