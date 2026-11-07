@@ -196,7 +196,7 @@ The recommended categories below addresses what the document is for which drives
 
 ###### Recommended Types
 
-The US Core DocumentReference Profile `document.type` has a required binding to the [US Core Clinical Note Type] value set, which is composed of [LOINC Documents types](https://loinc.org/kb/users-guide/document-ontology) plus the concept "unknown". (The US Core DocumentReference ADI Profile  [Advance Healthcare Directive Categories] value set is a subset )
+The US Core DocumentReference Profile `document.type` has a required binding to the [US Core Clinical Note Type] value set, which is composed of [LOINC Documents types](https://loinc.org/kb/users-guide/document-ontology) plus the concept "unknown". (the US Core DocumentReference ADI Profile [Advance Healthcare Directive Categories] value set is a subset).
 
 The recommended types below are grouped by category.
 
@@ -688,9 +688,9 @@ The following items are unresolved.
 
    The US Core DocumentReference guidance requires that every `DocumentReference` have a responsible `Organization`, present either in `DocumentReference.custodian` or in a `Provenance` resource targeting the document. For patient-generated and patient-mediated writes there is no responsible organization at the time of submission.
 
-2. When is discovery needed ?
+2. When is discovery needed?
 
-   If pre-coordination is required, runtime discovery adds machinery without removing the coordination step
+   If pre-coordination is required, runtime discovery adds machinery without removing the coordination step.
 
 3. What about Per-organization discovery versus network-level requirements?
 
