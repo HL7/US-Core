@@ -72,6 +72,7 @@ Unsolicited Submissions
 This documentation establishes client and server rules and guidance for writing documents to a FHIR server. The FHIR RESTful `create` transport mechanism refers to the ability of a client to instantiate a new resource via HTTP `POST`. It builds directly on the [US Core DocumentReference profile] and [US Core Clinical Notes] guidance. This mechanism allows for simple exchange in scenarios where no additional resources are necessary.
 
 #### `$submit-bundle` Operation
+
 Servers have the option of supporting the [`$submit-bundle` Operation]. It allows additional FHIR resources to be submitted by the client but permits partial acceptance by server.  Servers process the DocumentReference under the same rules as one submitted with RESTful create, including the processing expectation, submission modes, solicitation, and documented support.
 
 ---
