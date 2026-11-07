@@ -420,7 +420,7 @@ sequenceDiagram
 
 <!-- [Provider Write Example](https://hackmd.io/du8wR0xiSCKQwaHg3M88Sw) -->
 
-{% include provider-write-example.md %}
+{% include examplebutton.html example="provider-write-example" b_title = "Click Here To See the Provider Write Example" %}
 
 ##### Solicited Patient Write
 
@@ -472,7 +472,7 @@ sequenceDiagram
 
 <!-- [Solicited Patient Write Example](https://hackmd.io/OCxcppCoTYKqfkbn5UBPMQ) -->
 
-{% include solicited-patient-write-example.md %}
+{% include examplebutton.html example="solicited-patient-write-example" b_title = "Click Here To See the Solicited Patient Write Example" %}
 
 ##### Unsolicited Patient Write
 
@@ -522,7 +522,7 @@ sequenceDiagram
 
 <!-- [Unsolicited Patient Write Example 1](https://hackmd.io/84hr95EWQlKmP_fcdzEy9Q) -->
 
-{% include unsolicited-patient-write-example1.md %}
+{% include examplebutton.html example="unsolicited-patient-write-example1" b_title = "Click Here To See the Unsolicited Patient Write Example 1" %}
 
 Example 2: *Before a checkup, a patient uses his provider's portal app to send a photo of his new insurance card.*
 
@@ -539,7 +539,7 @@ sequenceDiagram
 
 <!-- [Unsolicited Patient Write Example 2](https://hackmd.io/jaSQ7-r0Q2eQvvnQIgqqqQ) -->
 
-{% include unsolicited-patient-write-example2.md %}
+{% include examplebutton.html example="unsolicited-patient-write-example2" b_title = "Click Here To See the Unsolicited Patient Write Example 2" %}
 
 
 Example 3 (Patient Mediated Write): *A patient forwards a discharge summary from another hospital. The hospital is the author, and the document was written a month before it was sent.*
@@ -557,7 +557,7 @@ sequenceDiagram
 
 <!-- [Unsolicited Patient Write Example 3](https://hackmd.io/uEf7XBncRkm_CYHLVrxlAg) -->
 
-{% include unsolicited-patient-write-example3.md %}
+{% include examplebutton.html example="unsolicited-patient-write-example3" b_title = "Click Here To See the Unsolicited Patient Write Example 3 (Patient Mediated Write)" %}
 
 ---
 

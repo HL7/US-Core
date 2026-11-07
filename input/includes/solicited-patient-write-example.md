@@ -1,5 +1,3 @@
-<details markdown="1">
-  <summary>Solicited Patient Write Example</summary>
 
 ```yaml
 # =======TODO: complete this example scenario ==========
@@ -49,5 +47,3 @@ context:
         -
             reference: ServiceRequest/activity-report-weekly
 ```
-
-</details>

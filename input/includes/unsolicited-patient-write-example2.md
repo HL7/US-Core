@@ -1,8 +1,4 @@
 
-<details markdown="1">
-  <summary>Unsolicited Patient Write Example 2</summary>
-
-
 ```yaml
 # =======TODO: complete this example scenario ==========
 resourceType: DocumentReference
@@ -41,5 +37,3 @@ content:
             title: Health Insurance Card - Mike Jones
 
 ```
-
-</details>

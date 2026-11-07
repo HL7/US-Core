@@ -1,8 +1,4 @@
 
-<details markdown="1">
-  <summary>Unsolicited Patient Write Example 3 (Patient Mediated Write)</summary>
-
-
 ```yaml
 # =======TODO: complete this example scenario ==========
 resourceType: DocumentReference
@@ -66,5 +62,3 @@ context:
         reference: '#source-patient'
 
 ```
-
-</details>

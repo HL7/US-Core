@@ -1,8 +1,4 @@
 
-<details markdown="1">
-  <summary>Unsolicited Patient Write Example 1</summary>
-
-
 ```yaml
 # =======TODO: complete this example scenario ==========
 resourceType: DocumentReference
@@ -45,5 +41,3 @@ content:
             title: Advance Healthcare Directive - Suzie Smith
             creation: '2026-07-14'
 ```
-
-</details>

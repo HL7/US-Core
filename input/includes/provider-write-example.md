@@ -1,7 +1,4 @@
 
-<details markdown="1">
-  <summary>Provider Write Example</summary>
-
 ```yaml
 # =======TODO: complete this example scenario ==========
 resourceType: DocumentReference
@@ -45,5 +42,3 @@ context:
         end: '2026-07-21'
 
 ```
-
-</details>
