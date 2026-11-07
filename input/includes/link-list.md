@@ -283,3 +283,5 @@
 [Nutrition assessment panel (LOINC Panel 75282-4)]: https://loinc.org/75282-4
 [Academy of Nutrition and Dietetics (AND) Nutrition Care Process terminology (NCPT)]: https://www.eatrightpro.org/practice/nutrition-care-process
 [FHIR RESTful Search API Requirements]: general-requirements.html#fhir-restful-search-api-requirements
+[Continuous Glucose Monitoring Implementation Guide]: https://hl7.org/fhir/uv/cgm/
+[Advance Healthcare Directive Categories]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion

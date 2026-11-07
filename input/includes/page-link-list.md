@@ -39,7 +39,9 @@ To update links, modify the source data in the pages and sushi-config.yaml file 
 [Looking Ahead]: looking-ahead.html
 [US Core Roadmap]: us-core-roadmap.html
 [Writing Vital Signs]: writing-vital-signs.html
-[Writing Clinical Notes]: writing-clinical-notes.html
+[Writing Documents]: writing-documents.html
+[Application Feature Framework]: application-feature.html
+[`$submit-bundle` Operation]: submit-bundle.html
 [Patient Data Feed]: patient-data-feed.html
 [Patient Data Feed Additional Resources]: patient-data-feed-additional-resources.html
 [US Core ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.core.html

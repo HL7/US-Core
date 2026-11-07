@@ -67,7 +67,7 @@ Systems may use operations that create and update resources for any of the profi
 
 The Argonaut project has defined:
   - [Writing Vital Signs] for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types.
-  - [Writing Clinical Notes] for creating and updating clinical notes using the FHIR R4 `DocumentReference` resource. This approach includes direct writing from providers and a patient-mediated submission of clinical notes from providers.
+  - <span class="bg-success" markdown="1">[Writing Documents] for creating and updating documents, such as clinical notes, insurance cards, and advance directives, using the FHIR R4 `DocumentReference` resource. This approach includes direct writing from providers and solicited and unsolicited submissions from patients.</span><!-- new-content -->
 
     After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
 

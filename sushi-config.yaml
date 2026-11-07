@@ -222,10 +222,20 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
 
-    writing-clinical-notes.md:
+    writing-documents.md:
       extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+      application-feature.md:
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative
+        title: Application Feature Framework
+      submit-bundle.md:
+        extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: informative
+        title: "`$submit-bundle` Operation"
 
     patient-data-feed.md:
       extension:
@@ -372,6 +382,6 @@ menu:
   Looking Ahead: #looking-ahead.html
       US Core Roadmap: us-core-roadmap.html
       Writing Vital Signs: writing-vital-signs.html
-      Writing Clinical Notes: writing-clinical-notes.html
+      Writing Documents: writing-documents.html
       Patient Data Feed: patient-data-feed.html
 
