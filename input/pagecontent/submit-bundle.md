@@ -6,8 +6,7 @@
 
 ### Introduction
 
-`$submit-bundle` is an optional operation for writing documents, based on the *Submit CGM Bundle Operation* in the FHIR [Continuous Glucose Monitoring](https://build.fhir.org/ig/HL7/cgm/index.html) guide. It combines two behaviors that neither a standard `batch` nor a standard `transaction` provides together: references between entries resolve within the `Bundle`, and the server can accept part of the submission.
-{:.bg-info}
+`$submit-bundle` is an **optional* operation defined for writing documents. It is based on the *Submit CGM Bundle Operation* in the FHIR [Continuous Glucose Monitoring](https://build.fhir.org/ig/HL7/cgm/index.html) guide. It combines two behaviors that neither a standard `batch` nor a standard `transaction` provides together: references between entries resolve within the `Bundle`, and the server can accept all or only part of the submission.
 
 The `$submit-bundle` transport mechanism uses the FHIR `operation` interaction, through HTTP `POST`, to invoke the `$submit-bundle` operation on the `DocumentReference` resource type, as defined in this guide. It lets a client include additional FHIR resources in a submission, such as discrete `Observation` resources.
 
