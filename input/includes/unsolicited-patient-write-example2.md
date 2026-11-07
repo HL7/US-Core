@@ -1,5 +1,5 @@
 
-<details>
+<details markdown="1">
   <summary>Unsolicited Patient Write Example 2</summary>
 
 

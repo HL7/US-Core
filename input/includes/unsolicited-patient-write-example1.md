@@ -1,11 +1,11 @@
 
-<details>
+<details markdown="1">
   <summary>Unsolicited Patient Write Example 1</summary>
 
 
 ```yaml
 # =======TODO: complete this example scenario ==========
-resourceType: DocumentReferenc
+resourceType: DocumentReference
 meta:
     security:
         -

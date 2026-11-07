@@ -1,5 +1,5 @@
 
-<details>
+<details markdown="1">
   <summary>Provider Write Example</summary>
 
 ```yaml

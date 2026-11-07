@@ -1,4 +1,4 @@
-<details>
+<details markdown="1">
   <summary>Solicited Patient Write Example</summary>
 
 ```yaml
