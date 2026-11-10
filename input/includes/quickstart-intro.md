@@ -37,12 +37,13 @@ Servers providing access to {{ scope.data_element }} data **{{conf}}** support t
 
 ---
 
-Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile's information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions. {% if multi_profile_types contains include.type %}<span class="bg-success" markdown="1">As described in [FHIR RESTful Search API Requirements], search requirements apply at the resource level and might involve elements that are not Must Support in this profile.</span><!-- new-content -->{% endif %} See the [US Core Server CapabilityStatement] for a complete list of supported RESTful interactions for this IG.
+Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile's information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions. {% if multi_profile_types contains include.type %}<span class="bg-success" markdown="1">As described in [FHIR RESTful Search API Requirements], search requirements apply at the resource level and might involve elements that are not Must Support in this profile.</span><!-- new-content -->{% endif %}
 
 {% if smart_scope -%}- See the [Scopes Format](scopes.html#scopes-format) section for a description of the SMART scopes syntax.{% endif %}
 - See the [Search Syntax](general-guidance.html#search-syntax) section for a description of the US Core search syntax.
 - See the [General Requirements] section for additional rules and expectations when a Server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
+- See the [US Core Server CapabilityStatement] for a complete list of supported RESTful interactions for this IG.
 
 {% if smart_scope -%}
 #### US Core Scopes
