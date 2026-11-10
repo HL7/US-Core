@@ -85,7 +85,6 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Constraint fail
 
 Reference to draft ValueSet http://hl7.org/fhir/ValueSet/servicerequest-category|4.0.1%
 Reference to draft CodeSystem http://hl7.org/fhir/%
-Reference to draft CodeSystem http://terminology.hl7.org/%
 
 
 # 19. === The following code systems are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked, and the identifiers are correct (updated text from 7.0.0) ===
@@ -141,11 +140,8 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/Struct
 # 31. === The binding applies to the Quantity data type for US Core Vitals Signs Profile. It inherits the structure from Core, and a change request to correct this has been applied to the base FHIR ver 4.3.0 ("Release 4B"). Will need to slice value[x] in future (updated text from 7.0.0)  ===
 
 The element Observation.value[x] has a binding, and has multiple types subject to bindings ([dateTime, boolean, string, SampledData, Quantity, Period, Ratio, integer, time, Range, CodeableConcept]). The binding will apply to all the types
-
 The element Observation.component.value[x] has a binding, and has multiple types subject to bindings ([dateTime, boolean, string, SampledData, Quantity, Period, Ratio, integer, time, Range, CodeableConcept]). The binding will apply to all the types
-
 The Binding on the type slicer Observation.value[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for boolean, integer, Ratio, SampledData, time, dateTime, Period
-
 The Binding on the type slicer Observation.component.value[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for boolean, integer, Ratio, SampledData, time, dateTime, Period
 
 # 32. === A US Direct Address for secure messaging in healthcare typically follows a format similar to an email address. for example `john.doe@direct.myhealthcareprovider.org`. Although this URL will not resolve, it represents a legitimate example of the direct address in the `endpoint.address` field. ===
@@ -157,14 +153,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 
 # 34. === US Core provides IG-specific guidance on interpreting Must Support for slices at `~/must-support.html#must-support---slices`. Where we state: "...the slicer's Must Support property only defines the element level Must Support/Additional USCDI property. In other words, the slicer's Must Support/Additional USCDI is not inherited by the slices, and each slice must be explicitly tagged with the Must Support/Additional USCDI property to define that slice's conformance strength. If no Must Support/Additional USCDI property is defined for the slice, this lengthy chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Slices.20not.20inheriting.20preferred.20bindings.20from.20root/with/514257770 and the resulting tracker FHIR-50391. ===
 
-The slice 'screening-assessment' on path 'Condition.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'uscore' on path 'DocumentReference.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'screening-assessment' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'us-core' on path 'Observation.category' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'NCSBNID' on path 'Practitioner.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-The slice 'studyInstanceUID' on path 'ImagingStudy.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 
 # 35. === These messages have been acknowledged for this release. After reviewing the implications for conformant systems and downstream publications, we will consider updating and/or adopting the recommended replacement in a future release. ===
 
@@ -172,7 +160,6 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-minValue
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.4.0 is deprecated with the note: 'Replaced by [[[http://hl7.org/fhir/StructureDefinition/itemWeight]]]'
 The concept 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is deprecated and its use should be reviewed
-The concept 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is deprecated and its use should be reviewed
 
 # 36. === These Extension StructureDefinitions were examined, and there are no substantive changes between versions and thus no reason to specify a version ===
 
@@ -240,7 +227,6 @@ A definition for CodeSystem 'https://nahdo.org/sopt' could not be found, so the 
 
 # 56. === The following Code Systems are commonly used standard code system that support post-coordination, which means full expansion isn’t possible. We recognize that the the value set definitions where they are used need to be narrowed, but this work has been deferred. ===
 
-WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from https://tx.fhir.org/r4: Error: The code System "http://www.ama-assn.org/go/cpt" has a grammar, and cannot be enumerated directly
 
 # 57. ===  This extension is used to define the expectation for he following SearchParameter elements: multipleAnd, multipleOr, comparator, modifier, and chain.  It also used to render the SearchParameter narrative using custom templates. Since its context is not scoped outside of CapabilityStatement the validator is generating these errors. The tracker, FHIR-56196 to extend its context to these SearchParameter elements was approved and applied. We anticipate the next release of the HL7 Extensions IG will resolve these errors.===
 
@@ -267,20 +253,15 @@ None of the codings provided are in the value set 'LOINC Codes' (http://hl7.org/
 
 # 63. === The display name has been verified, however the validator truncated it to 50 characters. ===
 
-Wrong Display Name 'Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada' for http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS#187. Valid display is 'Paiute-Shoshone Tribe of the Fallon Reservation an' (for the language(s) 'en-US')
 
 # 64. === The coding has been verified as a member of the TribalEntityUS Version 4.0.0 value set at TribalEntityUS at http://terminology.hl7.org/ValueSet/v3-TribalEntityUS. There is no version "2018-08-12" listed in the definition.
 
-None of the codings provided are in the value set 'v3 Code System TribalEntityUS' (http://terminology.hl7.org/ValueSet/v3-TribalEntityUS|2018-08-12), and a coding is recommended to come from this value set (codes = http://terminology.hl7.org/CodeSystem/v3-TribalEntityUS#187)
 
 # 65. === The code 'transmitter' has been verified as a member of the Provenance participant type value set pinned to version 1.0.1 and composed of all codes defined in http://terminology.hl7.org/CodeSystem/provenance-participant-type version 2.0.0.  Version '4.0.1' of the code system refers to an older version published in FHIR R4. ===
 
-ERROR: StructureDefinition/us-core-provenance: StructureDefinition.snapshot.element[42].pattern.ofType(CodeableConcept).coding[0].code: Unknown code 'transmitter' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/provenance-participant-type' version '4.0.1'
-ERROR: StructureDefinition/us-core-provenance: StructureDefinition.differential.element[11].pattern.ofType(CodeableConcept).coding[0].code: Unknown code 'transmitter' in the CodeSystem 'http://terminology.hl7.org/CodeSystem/provenance-participant-type' version '4.0.1'
 
 # 66. === Although the implementation guide editors are unable to correct the Parameters Manifest resource because it is generated by the build, the pinned version of the NullFlavor (http://terminology.hl7.org/CodeSystem/v3-NullFlavor) code system, "2018-08-12", is an older version published in FHIR R4. but the manifest links it to the current version 4.0.0 in THO. ===
 
-ERROR: Parameters/manifest: Parameters.parameter[3].value.ofType(canonical): A definition could not be found for Canonical URL 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor|2018-08-12'
 
 # 67. === The US Core Procedure Code value set composes the ADA CDT (Current Dental Terminology) code system. tx.fhir.org is not licensed to host or expand CDT, so the value set cannot be fully expanded. The CDT system identifier has been verified as correct. ===
 
