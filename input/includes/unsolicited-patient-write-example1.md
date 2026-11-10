@@ -1,6 +1,7 @@
 
 ```yaml
 # =======TODO: complete this example scenario ==========
+# === Note: The example `DocumentReference.attachment.data` values are truncated placeholders. ===
 resourceType: DocumentReference
 meta:
     security:

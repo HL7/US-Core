@@ -1,6 +1,7 @@
 
 ```yaml
 # =======TODO: complete this example scenario ==========
+w
 resourceType: DocumentReference
 meta:
     security:

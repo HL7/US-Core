@@ -285,3 +285,5 @@
 [FHIR RESTful Search API Requirements]: general-requirements.html#fhir-restful-search-api-requirements
 [Continuous Glucose Monitoring Implementation Guide]: https://hl7.org/fhir/uv/cgm/
 [Advance Healthcare Directive Categories]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.69.4/expansion
+[Advance Healthcare Directive Document Types Grouper]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.41/expansion
+[DocumentReference Attestor R5 Extension]: https://hl7.org/fhir/uv/xver-r5.r4/0.1.0/StructureDefinition-ext-R5-DocumentReference.attester.html
