@@ -293,19 +293,83 @@ fi
 
 if [[ $COPY_CSV ]]; then
 echo "================================================================="
-echo cp input/data/*.csv input/images/tables
+echo "==== copy the linked data CSVs to input/images/tables ============"
 echo "================================================================="
-cp input/data/*.csv input/images/tables
+
+# The download tables published under input/images/tables.
+#
+# Only the collections a narrative page actually links are copied. Everything
+# under input/images is published verbatim into output/, and from there into
+# output/full-ig.zip, so copying all of input/data ships files that nothing
+# points at.
+#
+# TO ADD A NEW DOWNLOAD TABLE: add its input/data stem to this list. The drift
+# check below compares the list against the tables/ links in the pages and
+# names any stem that is linked but missing here, so a forgotten entry is
+# reported instead of silently omitting the download.
+linked_tables=(
+  assessments-valuesets
+  codesystem-ref-all-list
+  provenance-elements
+  us_core_requirements
+  uscdi-table
+  valueset-ref-all-list
+  vsacname-fhiruri-map
+)
+
+tables_dir=input/images/tables
+tmp_listed=$(mktemp)
+tmp_linked=$(mktemp)
+printf '%s\n' "${linked_tables[@]}" | sort -u > "$tmp_listed"
+grep -rhoE 'tables/[A-Za-z0-9_.-]+\.(csv|xlsx)' \
+    input/pagecontent input/includes input/intro-notes 2>/dev/null \
+  | sed -E 's#^tables/##; s#\.(csv|xlsx)$##' | sort -u > "$tmp_linked"
+
+drift=0
+while read -r stem; do
+  if [[ -n $stem ]]; then
+    echo "⚠️  a page links tables/$stem but linked_tables does not list it"
+    echo "    -> add \"  $stem\" to linked_tables in publish.sh, or the download 404s"
+    drift=1
+  fi
+done < <(comm -23 "$tmp_linked" "$tmp_listed")
+
+while read -r stem; do
+  if [[ -n $stem ]]; then
+    echo "⚠️  linked_tables lists '$stem' but no page links tables/$stem"
+    echo "    -> drop it from linked_tables and delete $tables_dir/$stem.csv and .xlsx"
+    drift=1
+  fi
+done < <(comm -13 "$tmp_linked" "$tmp_listed")
+
+rm -f "$tmp_listed" "$tmp_linked"
+if [[ $drift -eq 0 ]]; then
+  echo "linked_tables is in sync with the tables/ download links in the pages."
+fi
 echo "================================================================="
-echo convert input/data/*.csv to excel and move to input/images/tables
-echo "================================================================="
-for csv_file in $(find input/data/*.csv -type f)
-do
-echo convert $csv_file to ...
-excel_file=input/images/tables/$(basename $csv_file)
-excel_file=${excel_file%.*}.xlsx
-pyexcel transcode $csv_file $excel_file
-echo $excel_file
+
+for stem in "${linked_tables[@]}"; do
+  csv_file=input/data/$stem.csv
+  if [[ ! -f $csv_file ]]; then
+    echo "⚠️  $csv_file does not exist -- linked_tables entry '$stem' is wrong"
+    continue
+  fi
+  cp "$csv_file" "$tables_dir/$stem.csv"
+  echo "copied  $tables_dir/$stem.csv"
+  pyexcel transcode "$csv_file" "$tables_dir/$stem.xlsx"
+  echo "created $tables_dir/$stem.xlsx"
+done
+
+# Anything left under tables/ that linked_tables no longer covers is published
+# but unreachable. Report it rather than deleting someone else's file.
+for f in "$tables_dir"/*.csv "$tables_dir"/*.xlsx; do
+  if [[ -e $f ]]; then
+    stem=$(basename "$f")
+    stem=${stem%.*}
+    if ! printf '%s\n' "${linked_tables[@]}" | grep -qx "$stem"; then
+      echo "⚠️  stale: $f is not covered by linked_tables -- delete it"
+    fi
+  fi
 done
 fi
 
