@@ -6,6 +6,6 @@
 
 {% include quickstart-intro.md type=type %}
 
-{% include quickstart-search.md type=type title=title  category="http://terminology.hl7.org/CodeSystem/observation-category\|vital-signs" code3="http://loinc.org\|29463-7" code1="http://loinc.org\|8302-2" code1="http://loinc.org\|77606-2" single_example=false %}
+{% include quickstart-search.md type=type title=title  category="http://terminology.hl7.org/CodeSystem/observation-category\|vital-signs" code3="http://loinc.org\|29463-7" code2="http://loinc.org\|8302-2" code1="http://loinc.org\|77606-2" single_example=false %}
 
 {% include link-list.md %}
