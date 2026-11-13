@@ -25,10 +25,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. who answered the questions (in other words, a performer)<sup>2</sup>
 4. a value
 
-{% include additional-requirements-intro.md type="Observation" %}
+{% include additional-requirements-intro.md type="Observation" plural=true %}
 
 1. a screening and assessments category code*
 1. references to an associated survey, assessment, or screening tool<sup>3</sup>
+1. <span class="bg-success" markdown="1">a date the observation was made available<sup>2</sup></span><!-- new-content -->
 
 <sup>1,2,3</sup> see guidance below
 

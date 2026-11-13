@@ -23,9 +23,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. 	a condition that the related person had<sup>1</sup>
 
-{% include additional-requirements-intro.md type="FamilyMemberHistory" plural=false %}
+{% include additional-requirements-intro.md type="FamilyMemberHistory" plural=true %}
 
 1. a recorder<sup>2</sup>
+2. <span class="bg-success" markdown="1">a date the family member history was recorded<sup>2</sup></span><!-- new-content -->
 
 <sup>1,2</sup> see guidance below
 

@@ -28,6 +28,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. <span class="bg-success" markdown="1">a criticality of the allergy or intolerance (e.g., low or high)</span><!-- new-content -->
 2. a recorder<sup>2</sup>
+3. <span class="bg-success" markdown="1">a date the allergy or intolerance was recorded<sup>2</sup></span><!-- new-content -->
 
 <sup>1,2</sup> see guidance below
 

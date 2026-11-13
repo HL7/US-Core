@@ -101,9 +101,9 @@ Transformation of data from one format to another **MAY** change the authorship 
 
 
 
-The functionality of the Provenance resource discussed above. The table below lists the US Core elements that communicate the author and author roles corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author and Author Role Data Elements requirements for individuals*. They are also documented on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. Many of these elements are labeled [Must Support] or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.<sup>[§][CONF-0885]</sup>
+The functionality of the Provenance resource discussed above. The table below lists the US Core elements that communicate the author, author role, and <span class="bg-success" markdown="1">author time stamp corresponding to the *[U.S. Core Data for Interoperability (USCDI)] Provenance Author, Author Role, and Author Time Stamp Data Elements requirements for individuals*</span><!-- new-content -->. They are also documented on each US Core Profile page's "Profile Specific Implementation Guidance" section. The author is communicated by the elements and the author's role by the referenced target resource (for example, Patient, Practitioner/PractitionerRole, RelatedPerson, Device). Details about the author's role are contained in the target resource's contents. <span class="bg-success" markdown="1">The author time stamp is communicated by the element that records when the information was first captured in the record, which the [FHIR Five Ws Pattern]({{site.data.fhir.path}}fivews.html) maps to `FiveWs.recorded`.</span><!-- new-content --> Many of these elements are labeled [Must Support] or [Additional USCDI Requirements]. However, all of these elements and target resources **SHOULD** be supported in the profiles if the system captures the data.<sup>[§][CONF-0885]</sup>
 
-#### Author and Author Role Data Elements
+#### Author, Author Role, and Author Time Stamp Data Elements
 
 The elements and target resources listed in bold asterisked text indicate that they are *Must Support* or *Additional USCDI Requirements*.
 The following US Core Profiles were omitted because they are typically not associated with individual authorship:
@@ -149,6 +149,10 @@ with the following columns:
 - FiveWs_actor: provenance source element choice based on FiveWs mapping (one per row)
 - is_MS: boolean flag if provenance source element is US Core Must Support
 - vendor_support_element: boolean flag if vendors surveyed on their use of the provenance source element
+- FiveWs_recorded: author time stamp element based on the FiveWs recorded mapping. It is a property of the profile rather than of the author element, so it repeats on every row for a profile. Empty where FHIR R4 has no recorded element for the resource type.
+- recorded_is_MS: boolean flag if the author time stamp element is US Core Must Support or Additional USCDI
+- recorded_is_new: boolean flag if the author time stamp element is newly added for the current version, for highlighting. Default = FALSE
+- recorded_note: footnote number rendered after the author time stamp element, keyed to the numbered notes below the table. Empty for no footnote.
 - Target_Resource_1: provenance source element target resource (can be up to 7)
 - Target_Resource_1_is_MS: boolean flag if provenance source element target resource is US Core Must Support
 - Target_Resource_1_is_new: boolean flag if provenance source element target resource is newly added to the table for highlighting, default = False
@@ -167,6 +171,7 @@ The script sorts and selects the table data and allows for highlighting new and 
 <!-- <th>Survey 2 Results</th> -->
 <th>Data Element Corresponding to Author Provenance</th>
 <th>Target Resource Types Corresponding to Author Role Provenance</th>
+<th><span class="bg-success" markdown="1">Data Element Corresponding to Author Time Stamp Provenance</span><!-- new-content --></th>
 </tr>
 </thead>
 <tbody>
@@ -189,6 +194,7 @@ The script sorts and selects the table data and allows for highlighting new and 
   <td><a href="{{item.Path}}">{{item.US_Core_Profile}}</a></td>
   <td><code>{% if item.is_MS == "TRUE" %}<strong>{% endif %}{{item.FiveWs_author | append: item.FiveWs_source | append: item.FiveWs_actor}}{% if item.is_MS == "TRUE" %}*</strong>{% endif %}</code></td>
   <td>{{ targets | split: "," | join: ", " }}</td>
+  <td{% if item.recorded_is_new == "TRUE" %} class="bg-success"{% endif %}>{% if item.FiveWs_recorded %}<code>{% if item.recorded_is_MS == "TRUE" %}<strong>{% endif %}{{item.FiveWs_recorded}}{% if item.recorded_is_MS == "TRUE" %}*</strong>{% endif %}</code>{% else %}<em>none</em>{% endif %}{% if item.recorded_note %}<sup>{{item.recorded_note}}</sup>{% endif %}</td>
   </tr>
   {% endif %}
 {% endfor %}
@@ -201,6 +207,12 @@ The script sorts and selects the table data and allows for highlighting new and 
 \* US Core *Must Support* or *Additional USCDI* element
 
 \** US Core *Must Support* Target Resource Type
+
+<div class="bg-success" markdown="1">
+1. MedicationAdministration, MedicationDispense, and Procedure have no `FiveWs.recorded` element in FHIR R4. The element was added in R5. The [US Core Procedure Profile] preadopts it as a cross-version extension; the [US Core MedicationAdministration Profile] and the [US Core MedicationDispense Profile] do not.
+
+2. Goal's mapping to Five Ws recorded is incorrect. FHIR currently has no recorded date element for Goal. See [FHIR-59787](https://jira.hl7.org/browse/FHIR-59787).
+</div><!-- new-content -->
 
 
 {% include link-list.md %}

@@ -18,6 +18,7 @@ input/data/provenance-elements.csv columns:
 - FiveWs_actor: provenance source element choice based on FiveWs mapping (one per row)
 - is_MS: boolean flag if provenance source element is US Core Must Support
 - vendor_support_element: boolean flag if vendors surveyed on their use of the provenance source element
+- FiveWs_recorded: author time stamp element based on the FiveWs recorded mapping. Empty where FHIR R4 has no recorded element for the resource type, in which case no author time stamp sentence is generated
 - Target_Resource_1: provenance source element target resource (can be up to 7)
 - Target_Resource_1_is_MS: boolean flag if provenance source element target resource is US Core Must Support
 - vendor_support_Target_Resource_1: boolean flag if vendors surveyed on their use of the provenance source element target resource
@@ -53,7 +54,7 @@ input/data/provenance-elements.csv columns:
 {% for item in site.data.provenance-elements -%}
   {% if item.Is_Source == "TRUE" -%}
   {% if item.Path == page.name -%}
-- {% if item.Is_New == "TRUE" %}<span data-note="highlight text" class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}{{ footnote-symbol }}The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}{{ footnote-symbol }}The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New == "TRUE" %}</span><!-- new-content highlight text -->{% endif %}
+- {% if item.Is_New == "TRUE" %}<span data-note="highlight text" class="bg-success" markdown="1">{% endif %}{% if author_count == 1 %}{{ footnote-symbol }}The profile element `{{ author_list | join: " and " }}` communicates the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% else %}{{ footnote-symbol }}The profile elements `{{ author_list | join: " and " }}` communicate the [individual level provenance] author data corresponding to the U.S. Core Data for Interoperability (USCDI) Provenance Author Data Elements.{% endif %}{% if item.Is_New == "TRUE" %}</span><!-- new-content highlight text -->{% endif %}{% if item.FiveWs_recorded %} <span class="bg-success" markdown="1">The profile element `{{ item.FiveWs_recorded }}` communicates the [individual level provenance] author time stamp corresponding to the USCDI Provenance Author Time Stamp Data Element.</span><!-- new-content -->{% endif %}
        {% break -%}
     {% endif -%}
     {% endif -%}

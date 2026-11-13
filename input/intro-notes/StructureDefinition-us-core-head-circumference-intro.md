@@ -21,6 +21,12 @@ The following are example usage scenarios for this profile:
 
 1. a result value<sup>1</sup>
 
+<div class="bg-success" markdown="1">
+{% include additional-requirements-intro.md type="Observation" plural=false %}
+
+1. a date the observation was made available
+</div><!-- new-content -->
+
 <sup>1</sup> see guidance below
 
 ### Profile Specific Implementation Guidance

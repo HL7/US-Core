@@ -26,9 +26,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 <!-- 3. who reported the preference -->
 4. care experience preference value
 
-{% include additional-requirements-intro.md type="Observation" plural=false %}
+{% include additional-requirements-intro.md type="Observation" plural=true %}
 
 1. a performer<sup>1</sup>
+2. <span class="bg-success" markdown="1">a date the observation was made available<sup>1</sup></span><!-- new-content -->
 
 <sup>1</sup> see guidance below
 

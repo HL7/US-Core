@@ -107,6 +107,14 @@ differential:
                 - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: false
       mustSupport: true
+    #=========== new for the USCDI Provenance Author Time Stamp data element ===========
+    - id: CarePlan.created
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: CarePlan.created
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date record was first recorded"
+      mustSupport: false
   #===================  new for USCDI 5====================================
     - id: CarePlan.contributor
       extension:

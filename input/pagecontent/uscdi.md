@@ -49,6 +49,8 @@ input/data/uscdi-table.csv columns:
 - fhir_path: FHIRPath expression to the USCDI Data Element. Not rendered on this page. Where the data element maps obviously to profile element(s), this is the path to those element(s); otherwise it names the profile. Validated against the FHIR R4 definitions [FHIR-57864]
 - comment: Additional US Core guidance for implementing USCDI
 - comment_link: Relative link to US Core's additional guidance
+- guidance_link: Relative link to the guidance page a data element maps to. When uscore_profile is empty, it replaces the profile link; when uscore_profile is also set, it renders below the profile link so the element maps to both. When both are empty, the no-profile branch falls back to the Individual Provenance link
+- guidance_text: Link text for guidance_link
 
 Deliberate differences from the published USCDI element names. These are not
 drift, and a reconciliation against a USCDI element list will flag them. Leave
@@ -211,6 +213,10 @@ and adds relative links.
             <br />
             {% endunless %}
             {% endfor %}
+            {% if item.guidance_link %} <!-- a profile is listed and the element also maps to a guidance page: render both -->
+            <br />
+            <a href="{{ item.guidance_link }}">{{ item.guidance_text }}</a>
+            {% endif %}
             {% else %} <!-- no profile: the element maps to a guidance page -->
             {% if item.guidance_link %}
             <a href="{{ item.guidance_link }}">{{ item.guidance_text }}</a>

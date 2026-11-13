@@ -29,6 +29,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 5. vaccine lot number<sup>3</sup>
 6. a performer<sup>4</sup>
 
+<div class="bg-success" markdown="1">
+{% include additional-requirements-intro.md type="Immunization" plural=false %}
+
+1. a date the immunization was recorded<sup>4</sup>
+</div><!-- new-content -->
+
 <sup>1,2,3,4</sup> see guidance below
 
 ### Profile Specific Implementation Guidance

@@ -71,6 +71,18 @@
         "mustSupport": true
       },
       {
+        "id": "FamilyMemberHistory.date",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "FamilyMemberHistory.date",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: When history was recorded or last updated",
+        "mustSupport": false
+      },
+      {
         "id": "FamilyMemberHistory.relationship",
         "path": "FamilyMemberHistory.relationship",
         "binding": {

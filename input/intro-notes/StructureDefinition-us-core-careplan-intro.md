@@ -27,6 +27,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a contributor<sup>2</sup>
 2. references to health issues this plan addresses<sup>1</sup>
+3. <span class="bg-success" markdown="1">a date the care plan was created<sup>2</sup></span><!-- new-content -->
 
 <sup>1,2</sup> see guidance below
 

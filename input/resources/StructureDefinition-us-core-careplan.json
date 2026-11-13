@@ -112,6 +112,18 @@
         "mustSupport": true
       },
       {
+        "id": "CarePlan.created",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "CarePlan.created",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date record was first recorded",
+        "mustSupport": false
+      },
+      {
         "id": "CarePlan.contributor",
         "extension": [
           {

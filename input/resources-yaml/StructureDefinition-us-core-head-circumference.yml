@@ -29,6 +29,17 @@ differential:
           - system: http://loinc.org
             code: 9843-4
       mustSupport: true
+    #=========== new for the USCDI Provenance Author Time Stamp data element ===========
+    # Restated from the US Core Vital Signs Profile. The Key Elements Table
+    # displays inherited Must Support elements but not inherited Additional USCDI elements,
+    # so the element is declared here as well to keep it visible on this profile.
+    - id: Observation.issued
+      extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      path: Observation.issued
+      short: "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date/Time this version was made available"
+      mustSupport: false
     - id: Observation.valueQuantity
       path: Observation.valueQuantity
       short: Vital Signs Value

@@ -27,9 +27,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. related questionnaire responses or observations that this observation is made from
 1. reference to observations that make up this observation<sup>3</sup>
 
-{% include additional-requirements-intro.md type="Observation" %}
+{% include additional-requirements-intro.md type="Observation" plural=true %}
 
 1. additional categories that further specify the assessment or screening<sup>4</sup>
+2. <span class="bg-success" markdown="1">a date the observation was made available<sup>2</sup></span><!-- new-content -->
 
 
 <sup>1,2,3,4</sup> see guidance below

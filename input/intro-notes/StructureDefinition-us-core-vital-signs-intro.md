@@ -20,6 +20,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. a reason if the value is absent<sup>1</sup>
 4. component results
 
+<div class="bg-success" markdown="1">
+{% include additional-requirements-intro.md type="Observation" plural=false %}
+
+1. a date the observation was made available<sup>2</sup>
+</div><!-- new-content -->
+
 <sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance

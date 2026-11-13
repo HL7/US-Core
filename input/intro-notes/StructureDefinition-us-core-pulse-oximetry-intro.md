@@ -23,6 +23,12 @@ In addition to the Mandatory and Must Support data elements in the [US Core Vita
 2. a code for inspired oxygen concentration<sup>2</sup>
 3. a value for inspired oxygen concentration
 
+<div class="bg-success" markdown="1">
+{% include additional-requirements-intro.md type="Observation" plural=false %}
+
+1. a date the observation was made available
+</div><!-- new-content -->
+
 <sup>1,2</sup> see guidance below
 
 ### Profile Specific Implementation Guidance

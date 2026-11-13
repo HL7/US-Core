@@ -74,6 +74,18 @@
         "mustSupport": true
       },
       {
+        "id": "AllergyIntolerance.recordedDate",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+            "valueBoolean": true
+          }
+        ],
+        "path": "AllergyIntolerance.recordedDate",
+        "short": "𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜: Date first version of the resource instance was recorded",
+        "mustSupport": false
+      },
+      {
         "id": "AllergyIntolerance.recorder",
         "extension": [
           {
