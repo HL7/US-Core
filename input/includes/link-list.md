@@ -19,9 +19,9 @@
 [387713003 Surgical procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=387713003&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [410606002 Social service procedure (procedure)]: https://browser.ihtsdotools.org/?perspective=full&conceptId1=410606002&edition=MAIN/2024-10-01&release=&languages=en&latestRedirect=false
 [11 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
-[81335-2 Patient Healthcare agent]: https://loinc.org/81335-2.html
 [Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
 [ADI Healthcare Agent Participant]: https://build.fhir.org/ig/HL7/fhir-pacio-adi/StructureDefinition-ADI-HealthcareAgentParticipant.html
+[AGNT]: https://terminology.hl7.org/CodeSystem-v3-RoleClass.html#v3-RoleClass-AGNT
 [American Heart Association]: http://heart.org/
 [Apgar score]: https://en.wikipedia.org/wiki/Apgar_score
 [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]: https://www.healthit.gov/sites/default/files/page/2021-10/2021-09-09_USCDI_TF_2021_HITAC_Phase%203_%20Recommendations%20Report_Signed_508.pdf

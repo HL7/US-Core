@@ -9307,7 +9307,7 @@
       "conformance": [
         "SHOULD"
       ],
-      "requirement": "For the USCDI *Healthcare Agent* Data Element, systems **SHOULD** use the LOINC code 81335-2 (Patient Healthcare agent), the durable power of attorney code DPOWATT, or the healthcare power of attorney code HPOWATT in `CareTeam.participant.role`",
+      "requirement": "For the USCDI *Healthcare Agent* Data Element, systems **SHOULD** use the agent code AGNT, the durable power of attorney code DPOWATT, or the healthcare power of attorney code HPOWATT in `CareTeam.participant.role`",
       "_reference": [
         {
           "extension": [

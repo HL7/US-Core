@@ -18,10 +18,10 @@ subject:
 participant:
 - role:
   - coding:
-    - system: http://loinc.org
-      code: 81335-2
-      display: Patient Healthcare agent
-    text: 81335-2 (LOINC) Patient Healthcare agent
+    - system: http://terminology.hl7.org/CodeSystem/v3-RoleClass
+      code: AGNT
+      display: agent
+    text: AGNT (V3-RoleClass) agent
   member:
     reference: RelatedPerson/shaw-niece-hpowatt
     display: Sarah van Putten
