@@ -12,20 +12,13 @@ This page defines a US Core approach to writing any document type, such as clini
     * Optional `$submit-bundle` transaction
 * Server documentation and discovery
 * DocumentReference required and Must-Support elements
-    *Document Categories And Type
-    * Other Elements
-    * MIME Types
-    * Size Limits
 * Submission Modes
-  * Provider Write
-  * Patient Write
-    * Solicited Submissions
-    * Unsolicited Submissions
 * Corrections and Replacements
 * Provenance
 * SMART scopes
 
 #### Out of Scope
+
 * Stateful or draft workflows (for example, ambient scribing or continuous audio capture)
 * FHIR batch and transaction interactions (see the `$submit-bundle` operation)
 * Downstream workflows after a server accepts a document
@@ -38,29 +31,16 @@ This page defines a US Core approach to writing any document type, such as clini
 
 ### Definitions
 
-Server
-: a FHIR Server that creates, updates, and exposes clinical data via FHIR's RESTful APIs
+Below is a glossary of terms used on page.
 
-App
-: Also referred to as a client or applicationm, an app is a software application developed by a vendor that operates with a health data platform or Electronic Health Record (EHR) system to access clinical data.
-
-Provider Write
-: A provider-facing app adds a document to a patient's record at a practitioner's direction. The document is available through read and search as soon as the server accepts it.
-
-Patient Write
-: A patient-facing app, used by the patient or an authorized representative, sends a document to the patient's provider. Patient Write covers both Patient Mediated Write and Patient Generated Write. These documents carry the `PATAST` security label.
-
-Patient Mediated Write
-: A Patient Write where the patient forwards a document that someone else authored, such as a discharge summary from a previous provider. The patient delivers the document but did not create it.
-
-Patient Generated Write
-: A Patient Write where the patient authored all or part of the content, such as an insurance card photo, an advance directive, or an activity report.
-
-Solicited Submissions
-: A Patient Write that responds to a provider's request for a specific document, recorded as a `ServiceRequest`. The submitted document references that request in `context.related`. Provider Writes are always treated as solicited.
-
-Unsolicited Submissions
-: A Patient Write sent without a specific provider request. The server may hold the document for review before it becomes available through read and search.
+* **Server**: a FHIR Server that creates, updates, and exposes clinical data via FHIR's RESTful APIs
+* **App**: Also referred to as a client or application, an app is a software application developed by a vendor that operates with a health data platform or Electronic Health Record (EHR) system to access clinical data.
+* **Provider Write**: A provider-facing app adds a document to a patient's record at a practitioner's direction. The document is available through read and search as soon as the server accepts it.
+* **Patient Write**: A patient-facing app, used by the patient or an authorized representative, sends a document to the patient's provider. Patient Write covers both Patient Mediated Write and Patient Generated Write. These documents carry the `PATAST` security label.
+* **Patient Mediated Write**: A Patient Write where the patient forwards a document that someone else authored, such as a discharge summary from a previous provider. The patient delivers the document but did not create it.
+* **Patient Generated Write**: A Patient Write where the patient authored all or part of the content, such as an insurance card photo, an advance directive, or an activity report.
+* **Solicited Submissions**: A Patient Write that responds to a provider's request for a specific document, recorded as a `ServiceRequest`. The submitted document references that request in `context.related`. Provider Writes are always treated as solicited.
+* **Unsolicited Submissions**: A Patient Write sent without a specific provider request. The server may hold the document for review before it becomes available through read and search.
 
 ---
 
@@ -99,7 +79,7 @@ Servers accept only the documents that the organization will actually process or
 
 **Guidance**
 
-"Process or review" includes filing an insurance card that sits unexamined for months, routing a document to a later review queue, and rejecting content the deployment cannot handle. A person does not need to inspect every submission. See the [Document Type and Category](#document-type-and-category) below for specific guidance on categories and types. To comply with the US Core [Clinical Notes](clinical-notes.html#fhir-resources-to-exchange-clinical-notes) requirements, servers are required to also create `DiagnosticReport` instances for certain scanned report types.
+"Process or review" includes filing an insurance card, routing a document to a later review queue, and rejecting content the deployment cannot handle. A person does not need to inspect every submission. See the [Document Type and Category](#document-type-and-category) below for specific guidance on categories and types. To comply with the US Core [Clinical Notes](clinical-notes.html#fhir-resources-to-exchange-clinical-notes) requirements, servers are required to also create `DiagnosticReport` instances for certain scanned report types.
 
 
 Whether the server returns a `201 Created` or a `202 Accepted` depends on the Submission mode:
@@ -246,8 +226,8 @@ The submitting system usually knows the correct granular answer. By populating t
 **Client Requirements**
 
 * Clients **SHALL** be capable of populating `author` and `context.encounter` when they are known.
-* Clients **SHALL** populate `author.reference` and `context.encounter.reference` with either a relative reference to a resource on the server or a reference to a contained resource.
-* Clients **SHOULD** populate `author.display` and `context.encounter.display`.
+* When a Client populates `.author` or `.context.encounter`, `.reference` **SHALL** be either a relative reference to a resource on the Server or a reference to a contained resource.
+* When a Client populates `.author` or `.context.encounter`, `.display` **SHOULD** be populated.
 
 **Server Requirements**
 
