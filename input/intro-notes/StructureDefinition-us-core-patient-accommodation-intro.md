@@ -43,7 +43,7 @@ This section provides detailed implementation guidance for the US Core Profile t
    * Free text is expected to be common in the near term, since no code system covers accommodations completely. As the terminology matures, US Core will consider removing the free-text option and requiring the coded form.
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>2</sup>' %}
 
-`Observation.code` is fixed to the placeholder LOINC code 55555-5, which is **not a real LOINC code**. The design team settled on a new prerelease LOINC code for "Accommodation Need", which has not been issued yet. The placeholder will be replaced before publication, and until then validation reports that the code is unknown. The value set for `Observation.value[x]` is also outstanding: PACIO and Gravity are developing a strawman value set in VSAC, so this profile places no binding on `Observation.value[x]`.
+`Observation.code` is fixed to the prerelease LOINC code 116322-6, "Disability Accommodation Needs". The code is not in a published LOINC release yet, so validation reports it as unknown until the next LOINC release. The value set for `Observation.value[x]` is also outstanding: PACIO and Gravity are developing a strawman value set in VSAC, so this profile places no binding on `Observation.value[x]`.
 {:.note-to-balloters}
 
 {% include link-list.md %}

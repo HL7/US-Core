@@ -7,10 +7,10 @@
 #     US Core Category code system. The binding is to US Core Simple Observation Category, which
 #     includes the whole code system, so no value set change is needed. This mirrors the US Core
 #     Care Experience Preference and Treatment Intervention Preference Profiles.
-#   * Observation.code carries a PLACEHOLDER. The design call settled on a new prerelease LOINC
-#     code for "Accommodation Need", which has not been issued yet, so 55555-5 stands in and is
-#     labelled as a sham code. It must be replaced before publication, and it is the reason the
-#     build reports an unknown-LOINC-code error.
+#   * Observation.code is fixed to the prerelease LOINC code 116322-6 "Disability Accommodation
+#     Needs". The code is not in a published LOINC release yet, so the build reports an
+#     unknown-LOINC-code error. The error is expected and is not suppressible; the
+#     input/ignoreWarnings.txt entry carries the editorial comment that explains it.
 #   * Observation.value[x] is a Must Support choice of CodeableConcept and string. PACIO and
 #     Gravity are developing a strawman value set in VSAC, so there is no binding yet, and the
 #     profile introduction records that the free-text option may be withdrawn as the code set
@@ -90,17 +90,13 @@ differential:
         valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
 
     # ---- code ---------------------------------------------------------------
-    #=== PLACEHOLDER: replace 55555-5 with the prerelease LOINC code for
-    #=== "Accommodation Need" before publication. See the profile introduction.
     - id: Observation.code
       path: Observation.code
-      short: Patient accommodation code (SHAM CODE)
       patternCodeableConcept:
         coding:
           - system: http://loinc.org
-            code: 55555-5
+            code: 116322-6
       mustSupport: true
-    #======================================================================
 
     - id: Observation.subject
       path: Observation.subject
