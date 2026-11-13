@@ -11,7 +11,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 - url: <https://hl7.org/fhir/us/core/2027Jan/>
 - Based on FHIR version: 4.0.1
 
-{PROCESS_STATEMENT}
+<!-- {PROCESS_STATEMENT} -->
 
 #### What's new in the US Core January 2027 Ballot
 
