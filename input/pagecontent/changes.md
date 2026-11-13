@@ -19,14 +19,14 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 
 #### Changes:
 
-{CHANGE_COUNT_STATEMENT}
+- Implementers submitted over 30 trackers since the publication of US Core ver 9.0.0. We have addressed them and applied 29 changes grouped by change impact and listed below:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
 ##### Non-compatible
 
 ##### Compatible, substantive
-1. **Triaged:** Compatible, substantive (Enhancement) Add USCDI v7 Data Elements to US Core [FHIR-59596](https://jira.hl7.org/browse/FHIR-59596) See Changes Listed in the 10.0.0-Ballot Introduction above.
+1. **Applied:** Compatible, substantive (Enhancement) Add USCDI v7 Data Elements to US Core [FHIR-59596](https://jira.hl7.org/browse/FHIR-59596) See Changes Listed in the 10.0.0-Ballot Introduction above.
 2. **Applied:** Compatible, substantive (Clarification) Resolve the conflict between the Must Support rules and the Missing Data guidance. [FHIR-56828](https://jira.hl7.org/browse/FHIR-56828) See Changes [Here](must-support.html#must-support-elements)
 3. **Applied:** Compatible, substantive (Enhancement) Add the US Core MedicationAdministration Profile for the USCDI v7 Medication Administration data element [FHIR-44146](https://jira.hl7.org/browse/FHIR-44146) See Changes [Here](StructureDefinition-us-core-medicationadministration.html)
 4. **Applied:** Compatible, substantive (Correction) Validate and correct the FHIRPath expressions in the USCDI mapping table [FHIR-57864](https://jira.hl7.org/browse/FHIR-57864) See Changes [Here](uscdi.html)
@@ -36,10 +36,10 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
    - [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference.html#write-capability)
    - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html#server_DocumentReference)
    - [US Core Client CapabilityStatement](CapabilityStatement-us-core-client.html#client_DocumentReference)
-8. **Pre-Applied:** Compatible, substantive (Correction) Downgrade the DiagnosticReport write capability from SHALL to MAY in the US Core Server and US Core Client CapabilityStatements [FHIR-59785](https://jira.hl7.org/browse/FHIR-59785) See Changes Here:
+8. **Applied:** Compatible, substantive (Correction) Downgrade the DiagnosticReport write capability from SHALL to MAY in the US Core Server and US Core Client CapabilityStatements [FHIR-59785](https://jira.hl7.org/browse/FHIR-59785) See Changes Here:
    - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html#server_DiagnosticReport)
    - [US Core Client CapabilityStatement](CapabilityStatement-us-core-client.html#client_DiagnosticReport)
-9. **Pre-Applied:** Compatible, substantive (Enhancement) Map the USCDI Provenance Author Time Stamp data element to individual level provenance: add an Author Time Stamp column to the individual provenance table, and add the recorded date element to the US Core AllergyIntolerance, CarePlan, FamilyMemberHistory, Immunization, and Observation profiles as an *Additional USCDI* element [FHIR-59669](https://jira.hl7.org/browse/FHIR-59669) See Changes [Here](basic-provenance.html#author-author-role-and-author-time-stamp-data-elements)
+9. **Pre-Applied:** Compatible, substantive (Enhancement) Map the USCDI Provenance Author Time Stamp data element to individual level provenance: add an Author Time Stamp column to the individual provenance table, and add the recorded date element to the US Core AllergyIntolerance, CarePlan, FamilyMemberHistory, Immunization, and Observation profiles as an *Additional USCDI* element [FHIR-59669](https://jira.hl7.org/browse/FHIR-59669) See Changes Listed in the 10.0.0-Ballot Introduction above.
 
 ##### Non-substantive
 1. **Applied:** Non-substantive (Correction) Remove duplicated words from the Observation.hasMember short description and the Observation.derivedFrom definition [FHIR-58155](https://jira.hl7.org/browse/FHIR-58155) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
