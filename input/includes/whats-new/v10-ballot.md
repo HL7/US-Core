@@ -65,13 +65,13 @@
 
 * **Individual Level Provenance**: The USCDI Provenance Author Time Stamp data element now maps to individual level provenance as well as to the [US Core Provenance Profile](StructureDefinition-us-core-provenance.html). The individual provenance table on the [Basic Provenance](basic-provenance.html#author-author-role-and-author-time-stamp-data-elements) page adds an Author Time Stamp column naming, for each profile, the element that records when the information was first captured, and each profile page's "Profile Specific Implementation Guidance" section names that element alongside the author elements. We added the following *Additional USCDI* elements:
 
-  | # | US Core Profile | Author Time Stamp Element |
-  |---|---|---|
-  | 1 | [US Core AllergyIntolerance Profile](StructureDefinition-us-core-allergyintolerance.html) | `AllergyIntolerance.recordedDate` |
-  | 2 | [US Core CarePlan Profile](StructureDefinition-us-core-careplan.html) | `CarePlan.created` |
-  | 3 | [US Core FamilyMemberHistory Profile](StructureDefinition-us-core-familymemberhistory.html) | `FamilyMemberHistory.date` |
-  | 4 | [US Core Immunization Profile](StructureDefinition-us-core-immunization.html) | `Immunization.recorded` |
-  | 5 | 25 US Core Observation Profiles (for example, [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html)) | `Observation.issued` |
+  | US Core Profile | Author Time Stamp Element |
+  |---|---|
+  | [US Core AllergyIntolerance Profile](StructureDefinition-us-core-allergyintolerance.html) | `AllergyIntolerance.recordedDate` |
+  | [US Core CarePlan Profile](StructureDefinition-us-core-careplan.html) | `CarePlan.created` |
+  | [US Core FamilyMemberHistory Profile](StructureDefinition-us-core-familymemberhistory.html) | `FamilyMemberHistory.date` |
+  | [US Core Immunization Profile](StructureDefinition-us-core-immunization.html) | `Immunization.recorded` |
+  | 25 US Core Observation Profiles (for example, [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html)) | `Observation.issued` |
   {:.grid}
 
 * **Actor Definitions**: To complement the US Core Capability Statements and Requirements resources, we added US Core [Actor Definitions](https://hl7.org/fhir/R5/actordefinition.html) for:
