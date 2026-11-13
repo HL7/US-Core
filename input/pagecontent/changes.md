@@ -65,16 +65,11 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
    - [FHIR RESTful Search API Requirements](general-requirements.html#fhir-restful-search-api-requirements)
    - [US Core Observation ADI Documentation Profile](StructureDefinition-us-core-observation-adi-documentation.html#quick-start)
 21. **Applied:** Non-substantive (Enhancement) Replace the Writing Clinical Notes page in the Looking Ahead section with writing documents guidance based on the Argonaut 2026 Document Write project. [FHIR-59597](https://jira.hl7.org/browse/FHIR-59597) See Changes [Here](writing-documents.html)
+22. **Applied:** Non-substantive (Correction) Resolve package load failure (publishing issue) [FHIR-56274](https://jira.hl7.org/browse/FHIR-56274), [FHIR-56273](https://jira.hl7.org/browse/FHIR-56273)
 
 ##### Pending
 The application of the following trackers is pending and will not be completed before publication.
 1. **Resolved - change required:** Non-compatible (Enhancement) Deprecate every version before 3.1.1 [FHIR-46065](https://jira.hl7.org/browse/FHIR-46065) Awaiting HL7 policy on retiring published IG versions.
-
-##### Publishing
-The following trackers have been identified as publishing issues, and we are working with HL7 publishing to resolve them.
-1. **Publishing:** Non-substantive (Correction) Resolve the version 8.0.1 package load failure caused by its R5 hl7.fhir.uv.extensions dependency [FHIR-56274](https://jira.hl7.org/browse/FHIR-56274)
-2. **Publishing:** Non-substantive (Correction) Resolve the version 7.0.0 package load failure caused by its R5 hl7.fhir.uv.extensions dependency [FHIR-56273](https://jira.hl7.org/browse/FHIR-56273)
-
 
 ### Version = 9.0.0  (Meets USCDI v6 Requirements)
 - url: <https://hl7.org/fhir/us/core/STU9/>
