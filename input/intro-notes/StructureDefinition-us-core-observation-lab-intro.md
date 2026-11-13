@@ -28,7 +28,7 @@ The following are example usage scenarios for this profile:
 4. result reference range
 5. a specimen type (e.g., blood, serum, urine)<sup>3</sup>
 
-{% include additional-requirements-intro.md type="ServiceRequest" %}
+{% include additional-requirements-intro.md type="Observation" %}
 
 1. the name of the test that was performed
 
