@@ -687,83 +687,93 @@ Apps need write permission for `DocumentReference`. SMART scopes allow access pe
 * **Conditional** - <span style="color:green; font-size:1.5em">&#10004;</span> marks a statement with a precondition in its text, for example "when it is held for review". A "-" means the statement applies whenever its mode applies.
 * &dagger; - the statement sits in an unresolved block on this page and is not settled.
 
-| ID | Actor | Mode | Conformance | Conditional | Requirement | Section |
-| --- | --- | --- | --- | --- | --- | --- |
-| WD-C-09 | Client | ALL | **SHALL** | - | Clients SHALL populate at least one `category` and a `type` on submission. | [Document Type and Category](#document-type-and-category) |
-| WD-C-15 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHALL be capable of populating `author` and `context.encounter` when they are known. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-C-16 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | When a Client populates `.author` or `.context.encounter`, `.reference` SHALL be either a relative reference to a resource on the Server or a reference to a contained resource. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-C-17 | Client | ALL | **SHOULD** | <span style="color:green; font-size:1.5em">&#10004;</span> | When a Client populates `.author` or `.context.encounter`, `.display` SHOULD be populated. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-C-23 | Client | ALL | **SHALL** | - | Clients SHALL use `context.period` to convey the clinically relevant time period. | [Date Handling](#date-handling) |
-| WD-C-24 | Client | ALL | **SHOULD** | - | Clients SHOULD populate `identifier` with a value that is unique to the document and stays the same if the document is resubmitted. | [Identifier](#identifier) |
-| WD-C-27 &dagger; | Client | ALL | **SHOULD** | - | Clients SHOULD populate `content.format` for additional detail. | [Content.format](#contentformat) |
-| WD-C-29 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHALL populate `context.related` with a relative reference to the `ServiceRequest` when the document responds to a solicited request. | [Context.related](#contextrelated) |
-| WD-C-30 | Client | PAT | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHALL include `meta.security` with the code `PATAST` from `http://terminology.hl7.org/CodeSystem/v3-ObservationValue` when the content is patient-supplied. | [Patient-asserted Signaling](#patient-asserted-signaling) |
-| WD-C-48 | Client | SPAT | **SHALL** | - | Clients SHALL include `meta.security` = "PATAST" (Patient asserted). | [Solicited Patient Write](#solicited-patient-write) |
-| WD-C-49 | Client | SPAT | **SHALL** | - | Clients SHALL populate `context.related` or the FHIR R5 `basedOn` extension with the active `ServiceRequest` that requests it. | [Solicited Patient Write](#solicited-patient-write) |
-| WD-C-54 | Client | UPAT | **SHALL** | - | Clients SHALL include `meta.security` = "PATAST" (Patient asserted). | [Unsolicited Patient Write](#unsolicited-patient-write) |
-| WD-C-55 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | To mark a document as entered in error, clients SHALL use either a `patch` that changes only `status` to `entered-in-error`, or an `update` that sends the complete resource with only `status` changed. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-C-56 | Client | ALL | **SHOULD** | <span style="color:green; font-size:1.5em">&#10004;</span> | To supersede a document, clients SHOULD create a new `DocumentReference` with `relatesTo.code` = `replaces` and `relatesTo.target` referencing the original. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-C-57 | Client | ALL | **SHALL** | - | A replacing document SHALL contain the complete revised content, not only the changes. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-C-58 | Client | ALL | **SHOULD** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHOULD also populate `relatesTo.target.identifier` with the original document's `identifier` when it has one. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-S-01 | Server | ALL | **SHALL** | - | Servers SHALL support `create` for `DocumentReference`. | [Processing Expectation](#processing-expectation) |
-| WD-S-02 | Server | ALL | **SHALL** | - | Servers SHALL only accept documents that the organization can and intends to process or review. | [Processing Expectation](#processing-expectation) |
-| WD-S-03 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT document support for a `DocumentReference` category or type that the organization cannot or does not intend to process or review. | [Processing Expectation](#processing-expectation) |
-| WD-S-04 | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL respond `201 Created` with a `Location` header when the document is available on return. | [Processing Expectation](#processing-expectation) |
-| WD-S-05 | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL respond `202 Accepted` when it is held for review. | [Processing Expectation](#processing-expectation) |
-| WD-S-06 | Server | ALL | **SHOULD** | - | Servers SHOULD return an `OperationOutcome` on failed writes. | [Processing Expectation](#processing-expectation) |
-| WD-S-07 | Server | ALL | **SHALL** | - | Servers SHALL publish API documentation covering supported categories and types, MIME types, size limits, `$submit-bundle` support, and review policy. | [Discovery](#discovery) |
-| WD-S-08 | Server | ALL | **SHOULD** | - | Servers SHOULD support `ValueSet/$expand` with `contextDirection=incoming`. | [Discovery](#discovery) |
-| WD-S-10 | Server | ALL | **SHALL** | - | Servers SHALL publish API documentation covering supported categories and types. | [Document Type and Category](#document-type-and-category) |
-| WD-S-11 | Server | ALL | **SHALL** | - | Servers SHALL support at least one category. | [Document Type and Category](#document-type-and-category) |
-| WD-S-12 | Server | ALL | **SHALL NOT** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL NOT reject a submission with unsupported category codes if it contains at least one category code (as a repeating element) they support. | [Document Type and Category](#document-type-and-category) |
-| WD-S-13 | Server | ALL | **SHALL NOT** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL NOT reject a submission with unsupported type codes if it contains at least one code translation they support. | [Document Type and Category](#document-type-and-category) |
-| WD-S-14 | Server | ALL | **SHOULD** | - | Servers SHOULD preserve the submitted coding(s) as received. | [Document Type and Category](#document-type-and-category) |
-| WD-S-18 | Server | ALL | **SHALL** | - | Servers SHALL accept both relative references to resources on the server and references to contained resources for `author` and `context.encounter`. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-S-19 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT reject a submission solely because an `author` or `context.encounter` reference cannot be resolved. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-S-20 | Server | ALL | **SHOULD** | - | Servers SHOULD attempt to match `author` and `context.encounter` references to existing resources. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-S-21 | Server | ALL | **MAY** | - | Servers MAY persist the content of a contained `author` or `Encounter` resource. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-S-22 | Server | ALL | **MAY** | - | Servers MAY require `context.encounter` by business rule. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
-| WD-S-25 | Server | ALL | **SHALL** | - | Servers SHALL support conditional create (`If-None-Exist`). | [Identifier](#identifier) |
-| WD-S-26 | Server | ALL | **MAY** | - | Servers MAY detect duplicates using identifiers, hashes, or other methods. | [Identifier](#identifier) |
-| WD-S-28 &dagger; | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL persist and round-trip `content.format` when provided. | [Content.format](#contentformat) |
-| WD-S-31 | Server | PAT | **SHALL NOT** | - | Servers SHALL NOT remove the `PATAST` code. | [Patient-asserted Signaling](#patient-asserted-signaling) |
-| WD-S-32 | Server | PAT | **MAY** | - | Servers MAY add the `PATAST` code by policy. | [Patient-asserted Signaling](#patient-asserted-signaling) |
-| WD-S-33 | Server | ALL | **SHALL** | - | Servers SHALL accept at least one of `text/plain; charset=utf-8`, `application/pdf`, `image/jpeg`, or `image/png` for each supported document type. | [MIME Support](#mime-support) |
-| WD-S-34 | Server | ALL | **SHALL** | - | Servers SHALL document the MIME types they accept for each supported document type. | [MIME Support](#mime-support) |
-| WD-S-35 | Server | ALL | **SHALL** | - | Servers SHALL accept inline `content.attachment.data` whose decoded content is at least 5 MiB (5,242,880 bytes). | [Size Limits](#size-limits) |
-| WD-S-36 | Server | ALL | **SHALL** | - | Servers SHALL document their attachment size limits. | [Size Limits](#size-limits) |
-| WD-S-37 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT expose a client-supplied `content.attachment.url` to later readers. | [Size Limits](#size-limits) |
-| WD-S-38 | Server | ALL | **MAY** | - | Servers MAY accept content by `content.attachment.url`, including content larger than their inline limit. | [Size Limits](#size-limits) |
-| WD-S-39 | Server | PROV | **SHALL** | - | Scopes: servers SHALL support FHIR RESTful create using `<user\|system>/DocumentReference.c`, or category-specific version(s) such as `<user\|system>/DocumentReference.c?category=clinical-note`. | [Provider Write](#provider-write) |
-| WD-S-40 | Server | PROV | **SHALL** | - | Servers SHALL make the document available through read and search without further action. The response is always `201`. | [Provider Write](#provider-write) |
-| WD-S-41 | Server | SPAT | **SHALL** | - | Scopes: servers SHALL support `patient/DocumentReference.c`, or category-specific version(s) such as `patient/DocumentReference.c?category=clinical-note`. | [Solicited Patient Write](#solicited-patient-write) |
-| WD-S-42 | Server | SPAT | **SHALL** | - | Scopes: servers SHALL support `patient/ServiceRequest.rs`. | [Solicited Patient Write](#solicited-patient-write) |
-| WD-S-43 | Server | SPAT | **SHALL** | - | Servers SHALL make the `ServiceRequest` resources with the patient as `performer` available through read and search. | [Solicited Patient Write](#solicited-patient-write) |
-| WD-S-44 | Server | SPAT | **SHALL** | - | Servers SHALL make the document available through read and search without further action. The response is `201`. | [Solicited Patient Write](#solicited-patient-write) |
-| WD-S-45 | Server | SPAT | **SHALL NOT** | - | Servers SHALL NOT remove `meta.security` = "PATAST". | [Solicited Patient Write](#solicited-patient-write) |
-| WD-S-46 | Server | SPAT | **MAY** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers MAY add `meta.security` = "PATAST" by policy (for example, based on authorization context), even if it is omitted by the client. | [Solicited Patient Write](#solicited-patient-write) |
-| WD-S-47 | Server | SPAT | **SHALL** | - | Servers SHALL document whether to populate the active `ServiceRequest` in `context.related`, or the FHIR R5 `basedOn` extension. | [Solicited Patient Write](#solicited-patient-write) |
-| WD-S-50 | Server | UPAT | **SHALL** | - | Servers SHALL document their review policy for patient submissions. | [Unsolicited Patient Write](#unsolicited-patient-write) |
-| WD-S-51 | Server | UPAT | **SHALL** | - | Scopes: servers SHALL support `patient/DocumentReference.c`, or category-specific version(s) such as `patient/us-core-documentreference-category\|clinical-note`. | [Unsolicited Patient Write](#unsolicited-patient-write) |
-| WD-S-52 | Server | UPAT | **SHALL NOT** | - | Servers SHALL NOT remove `meta.security` = "PATAST". | [Unsolicited Patient Write](#unsolicited-patient-write) |
-| WD-S-53 | Server | UPAT | **MAY** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers MAY add `meta.security` = "PATAST" by policy (for example, based on authorization context), even if it is omitted by the client. | [Unsolicited Patient Write](#unsolicited-patient-write) |
-| WD-S-59 | Server | ALL | **SHOULD** | - | Servers SHOULD allow the submitting client to change `status` to `entered-in-error` through `patch`. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-S-60 | Server | ALL | **MAY** | - | Servers MAY allow the submitting client to change `status` to `entered-in-error` through `update`. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-S-61 | Server | ALL | **SHALL** | - | Servers SHALL continue to return an `entered-in-error` document through read for authorized requests. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-S-62 | Server | ALL | **MAY** | - | Servers MAY exclude `entered-in-error` documents from search results. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-S-63 | Server | ALL | **SHALL** | - | Servers SHALL accept `relatesTo` on create and return it unchanged on read and search. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-S-64 | Server | ALL | **MAY** | - | Servers MAY ignore the replacement relationship in their own processing. | [Corrections and Replacements](#corrections-and-replacements) |
-| WD-S-65 | Server | ALL | **SHALL** | - | Servers SHALL persist the submitted Provenance-bearing elements, and return them unchanged on read and search, including elements they don't otherwise process. | [Provenance-bearing Elements](#provenance-bearing-elements) |
-| WD-S-66 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT reject a submission solely because a provenance element is absent or cannot be resolved. | [Provenance-bearing Elements](#provenance-bearing-elements) |
-| WD-S-67 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT replace a client-supplied `author` with the authenticated client or user. | [Provenance-bearing Elements](#provenance-bearing-elements) |
-| WD-S-68 | Server | ALL | **MAY** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers MAY populate `custodian` with the receiving organization when they accept a document. | [Provenance-bearing Elements](#provenance-bearing-elements) |
-| WD-S-69 | Server | ALL | **MAY** | - | Servers MAY create a [US Core Provenance Profile] resource targeting the created `DocumentReference`. | [Provenance-bearing Elements](#provenance-bearing-elements) |
-| WD-S-70 | Server | ALL | **SHALL** | - | Servers SHALL support the `patient/DocumentReference.c` or category-specific scopes for Patient Write. | [SMART Scopes](#smart-scopes) |
-| WD-S-71 | Server | ALL | **SHALL** | - | Servers SHALL support the `user/DocumentReference.c` or category-specific scopes for Provider Write. | [SMART Scopes](#smart-scopes) |
-| WD-S-72 | Server | ALL | **SHALL** | - | Servers SHALL support the `system/DocumentReference.c` or category-specific scopes for backend services that write documents. | [SMART Scopes](#smart-scopes) |
-| WD-S-73 | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers that allow status correction or replacement SHALL support the matching `.u` scopes. | [SMART Scopes](#smart-scopes) |
-| WD-S-74 | Server | ALL | **SHALL** | - | Servers SHALL list their supported scopes in `scopes_supported` in `/.well-known/smart-configuration`. | [SMART Scopes](#smart-scopes) |
-{:.grid}
+<!-- ========================================================
+The liquid syntax below generates the conformance requirements table.
+The source is a csv file at input/data/writing_documents_requirements.csv, which is
+generated from the requirement bullets on this page by the python script
+at https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/
+gen_conformance_table.py (locally ~/Documents/Python/Jupyter/MyNotebooks/
+CapStatement/gen_conformance_table.py), run from the repo root. The
+bullets are the thing to edit, then rerun the script. See the README
+section "US Core Python Scripts".
+Two columns are meant to be hand-edited and are preserved: mode_code and
+conditionality (see below).
+
+writing_documents_requirements.csv columns:
+- id: stable requirement id, "WD-<C|S>-<nn>". Assigned once from this
+  append-only csv and never renumbered, so a tracker or test plan can cite
+  it. A reworded statement keeps its id through a close-match lookup; a
+  deleted one keeps its row with status = retired.
+- actor: Client or Server. From the "**Client Requirements**" or
+  "**Server Requirements**" block the bullet sits under, or from the
+  subject of the sentence in the per-mode sections, which do not use those
+  block headers.
+- mode_code: the submission mode the statement applies to. ALL, PROV
+  (Provider Write), SPAT (Solicited Patient Write), UPAT (Unsolicited
+  Patient Write), or PAT (both patient modes). Derived from the enclosing
+  per-mode section, so a statement in a general section derives ALL.
+  EDITABLE: a hand-set value wins permanently. PAT is only ever hand-set,
+  since no single section spans the two patient modes.
+- conformance: the RFC 2119 verb as written in the statement: SHALL,
+  SHALL NOT, SHOULD, MAY.
+- conditionality: "Yes" when the statement carries a precondition in its
+  text, for example "when it is held for review". Detected from a
+  when/if/unless/where clause, a purpose clause, or a qualified subject
+  ("Servers that allow ..."), ignoring code spans. EDITABLE: a hand-set
+  value wins permanently, which is how a wrong guess is corrected.
+- requirement: a direct quote of the statement from this page. Markdown.
+  Reference-style links are expanded to inline links, because the cell is
+  rendered on its own by markdownify and link-list.md is not in scope.
+- section: the title of the section the statement came from.
+- section_anchor: that section's generated id, used for the link back.
+- unresolved: "yes" when the statement sits in an unresolved block on
+  this page. Rendered as a dagger beside the id.
+- mode: the full name of the per-mode section, empty in a general section.
+- mode_code_auto, conditionality_auto: what the script derived when the row
+  was written. Equal to the editable column means nobody overrode it and
+  the script re-derives it; different means a hand edit, which the script
+  keeps and reports on every run.
+- status: active or retired. Retired rows are kept for their ids only and
+  are not published in the table.
+- key: normalized statement text plus section. Used to match a row to its
+  bullet across rewording. Internal to the script.
+
+The script retrieves, sorts, and selects the table data.
+==============================================================-->
+
+{% assign rows = site.data.writing_documents_requirements -%}
+{% assign actors = "Client,Server" | split: "," %}
+<table class="grid">
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>Actor</th>
+    <th>Mode</th>
+    <th>Conformance</th>
+    <th>Conditional</th>
+    <th>Requirement</th>
+    <th>Section</th>
+  </tr>
+</thead>
+<tbody>
+{% for actor in actors -%}
+{% assign actor_rows = rows | where: "actor", actor | where: "status", "active" | sort: "id" -%}
+{% for item in actor_rows -%}
+  <tr id="{{ item.id }}">
+    <td>{{ item.id }}{% if item.unresolved == "yes" %} &dagger;{% endif %}</td>
+    <td>{{ item.actor }}</td>
+    <td>{{ item.mode_code }}</td>
+    <td><strong>{{ item.conformance }}</strong></td>
+    <td style="text-align: center;">{% if item.conditionality == "Yes" %}<span style="color:green; font-size:1.5em">&#10004;</span>{% else %}-{% endif %}</td>
+    <td>{{ item.requirement | markdownify }}</td>
+    <td><a href="#{{ item.section_anchor }}">{{ item.section }}</a></td>
+  </tr>
+{% endfor -%}
+{% endfor -%}
+</tbody>
+</table>
+
+<!-- =============================== end liquid =================================== -->
 
 <!-- END generated conformance table -->
 

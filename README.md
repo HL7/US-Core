@@ -632,6 +632,59 @@ input/includes/ms-target-table-generator.md|input/data/ms_choice_refs.csv|https:
 input/includes/ms-target-table-generator.md|input/data/addl_uscdi_refs.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 input/includes/ms-target-table-generator.md|input/data/addl_uscdi_choice_refs.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 input/pagecontent/must-support.md|input/data/additional-uscdi-requirements.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/addl-uscdi-tabler.ipynb
+input/pagecontent/writing-documents.md|input/data/writing_documents_requirements.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/gen_conformance_table.py
+
+#### Regenerating the Writing Documents Conformance Table
+
+`input/pagecontent/writing-documents.md` carries two tables. The Quick-reference
+Matrix is written by hand and lists only the rules that differ by submission
+mode. The Conformance Requirements table is generated: it lists every normative
+statement on the page, by actor, and is rendered by Liquid from
+`input/data/writing_documents_requirements.csv`.
+
+Script: https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/gen_conformance_table.py
+
+Run it from the repo root after editing any requirement bullet on the page:
+
+~~~
+cd ~/Documents/FHIR/US-Core
+python3 ~/Documents/Python/Jupyter/MyNotebooks/CapStatement/gen_conformance_table.py
+~~~
+
+It rewrites the block between the `BEGIN generated conformance table` and
+`END generated conformance table` markers on the page, which holds the legend,
+the inline documentation of the CSV columns, and the Liquid that renders the
+table. It also rewrites the CSV. Nothing else on the page is touched. Add
+`--check` to test whether the page block is stale without writing anything; it
+exits 1 when the table needs regenerating, which suits a pre-commit hook. Add
+`--page` for another page, or `--repo` for another IG repo.
+
+Statement IDs ("WD-S-04") come from the CSV, which is append-only. An ID is
+never renumbered, so a Jira tracker or a test plan can cite one: a reworded
+statement keeps its ID through a close-match lookup, and a deleted statement
+keeps its row with `status` = `retired` rather than freeing its number.
+
+Two CSV columns are meant to be edited by hand and are preserved permanently:
+
+- `mode_code` scopes a statement to a submission mode (`ALL`, `PROV`, `SPAT`,
+  `UPAT`, or `PAT` for both patient modes). Only the per-mode sections derive a
+  code, so a statement in a general section that is really patient-only has to
+  be set by hand.
+- `conditionality` flags a statement that carries a precondition in its text.
+  Detection reads a when/if/unless/where clause, a purpose clause, or a
+  qualified subject, which catches most but not all cases.
+
+Each has a companion `_auto` column holding what the script derived. Equal
+values mean nobody has overridden the column and the script re-derives it;
+different values mean a hand edit, which the script keeps and reports on every
+run. There is no flag to set.
+
+The script also audits the hand-written matrix, since no markup states which
+mode a rule belongs to and that call stays with the author. It reports a
+mode-scoped statement the matrix does not cite, an ID the matrix cites that no
+longer exists, a statement repeated verbatim in more than one section, an
+unresolvable actor, an invalid mode code, and a section anchor missing from the
+rendered page.
 
 #### Regenerating the CQL ModelInfo Library
 
