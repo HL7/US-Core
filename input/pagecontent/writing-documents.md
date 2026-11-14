@@ -20,7 +20,7 @@ This page defines a US Core approach to writing any document type, such as clini
 #### Out of Scope
 
 * Stateful or draft workflows (for example, ambient scribing or continuous audio capture)
-* FHIR batch and transaction interactions (see the `$submit-bundle` operation)
+* FHIR batch and transaction interactions
 * Downstream workflows after a server accepts a document
 
 #### Experimental Topics
@@ -56,10 +56,32 @@ Servers have the option of supporting the [`$submit-bundle` Operation]. It allow
 
 #### Quick-reference Matrix
 
-The following table summarizes the conformance rules for writing DocumentReference with one row per rule and one column per mode
+Every rule on this page applies to all three [Submission Modes](#submission-modes) unless it appears below. This table lists only the rules and guidance that differ by mode; the [Conformance Requirements](#conformance-requirements) table at the end of the page lists every statement in full, by actor, with the ID cited here.
 
+| ID | Rule | Actor | Provider Write | Solicited Patient Write | Unsolicited Patient Write |
+| --- | --- | --- | --- | --- | --- |
+| WD-S-04, WD-S-05 | Response on a successful write | Server | `201 Created` | `201 Created` | `201 Created` or `202 Accepted` by documented policy |
+| WD-S-40, WD-S-44 | Make the document available through read and search without further action | Server | **SHALL** | **SHALL** | Server policy |
+| WD-S-50 | Document the review policy for patient submissions | Server | n/a | n/a | **SHALL** |
+| WD-S-39 | Support the create scope `user/DocumentReference.c` or `system/DocumentReference.c` | Server | **SHALL** | n/a | n/a |
+| WD-S-41, WD-S-51, WD-S-70 | Support the create scope `patient/DocumentReference.c` | Server | n/a | **SHALL** | **SHALL** |
+| WD-S-42 | Support the scope `patient/ServiceRequest.rs` | Server | n/a | **SHALL** | n/a |
+| WD-S-43 | Make `ServiceRequest` resources with the patient as `performer` available through read and search | Server | n/a | **SHALL** | n/a |
+| WD-C-29, WD-C-49 | Populate `context.related`, or the FHIR R5 `basedOn` extension, with the active `ServiceRequest` | Client | n/a | **SHALL** | n/a |
+| WD-S-47 | Document whether to populate `context.related` or the FHIR R5 `basedOn` extension | Server | n/a | **SHALL** | n/a |
+| WD-C-30, WD-C-48, WD-C-54 | Include `meta.security` = `PATAST` | Client | n/a | **SHALL** | **SHALL** |
+| WD-S-31, WD-S-45, WD-S-52 | Do not remove the `PATAST` code | Server | n/a | **SHALL NOT** | **SHALL NOT** |
+| WD-S-32, WD-S-46, WD-S-53 | Add the `PATAST` code by policy | Server | n/a | **MAY** | **MAY** |
+| - | `author` is the patient, with `launch/patient` as a candidate value | Client | n/a | Guidance | Guidance |
+| - | `launch/encounter` is a candidate value for `context.encounter` | Client | Guidance | n/a | n/a |
+| - | Support the [DocumentReference Attestor R5 Extension] for document types such as living wills | Server | n/a | n/a | Guidance |
+{:.grid}
 
-    *TODO generate from the markdown text.*
+**Reading this table**
+
+* "Server policy" means the page sets no conformance verb and leaves the behavior to documented server policy. "Guidance" means the page offers guidance for that mode but states no conformance verb. "n/a" means the page states no rule for that mode.
+* A category-specific scope can be supported in place of any create scope listed. See [SMART Scopes](#smart-scopes).
+* A rule's own preconditions stay in its statement text in the [Conformance Requirements](#conformance-requirements) table - for example, the `.u` scopes are required only of a server that allows status correction or replacement.
 
 ---
 
@@ -364,7 +386,6 @@ This section illustrates the following write submission modes and documents thei
 
 Each use case shows the interaction and an example.
 
-
 ##### Provider Write
 
 A provider-facing app adds a document to a patient's record at a practitioner's direction. The document is available through the FHIR Server that created it exposing data via its FHIR's RESTful read and search API.
@@ -385,15 +406,18 @@ Example: *A cardiologist uses an analytics app launched from the EHR to save a P
 
 <div class="mermaid">
 sequenceDiagram
-    actor Clinician
-    participant EHR as EHR (FHIR Server)
-    participant App as Provider App
-    Clinician->>EHR: Launch app from patient chart
-    EHR->>App: SMART launch (patient, encounter)
-    App->>EHR: POST DocumentReference (application/pdf)
-    EHR-->>App: 201 Created, Location
-    Clinician->>EHR: Search patient documents
-    EHR-->>Clinician: Report returned
+  actor Clinician
+  participant EHR as EHR (FHIR Server)
+  participant App as Provider App
+  Note over Clinician,EHR: Clinician opens the app<br/>from the patient's chart
+  EHR->>App: SMART EHR launch (iss, launch)
+  App->>EHR: Authorize (user/DocumentReference.c)
+  EHR-->>App: Access token with patient and encounter context
+  App->>EHR: POST DocumentReference (application/pdf)
+  EHR-->>App: 201 Created, Location
+  App->>EHR: GET DocumentReference?patient=[id]
+  EHR-->>App: Bundle including the new report
+  Note over EHR: The report is also available in the patient's chart
 </div>
 
 <!-- [Provider Write Example](https://hackmd.io/du8wR0xiSCKQwaHg3M88Sw) -->
@@ -439,7 +463,7 @@ sequenceDiagram
     actor Patient
     participant Server as Provider FHIR Server
     participant App as Patient App
-    Clinician->>Server: Create ServiceRequest (weekly activity report)
+    Note over Clinician,Server: Clinician orders weekly<br/>activity reports in the EHR
     Patient->>App: Open app
     App->>Server: GET ServiceRequest?patient=[id]&code=[code]
     Server-->>App: Active ServiceRequest
@@ -611,25 +635,24 @@ Every document needs to answer a few basic questions: who wrote it, when it was 
 
 #### Authorization (SMART on FHIR Scopes)
 
-Apps need write permission for `DocumentReference`. SMART scopes allow access permissions to be delegated to a client application. Servers can grant SMART v2 scopes for DocumentReference create/update, limit that permission to specific categories, and advertise them in `/.well-known/smart-configuration`.
+Apps need write permission for `DocumentReference`. SMART scopes allow access permissions to be delegated to a client application. Servers can grant SMART v2 create/update scopes for DocumentReference or category-specific scopes, and advertise them in `/.well-known/smart-configuration`.
 
 ##### SMART Scopes
 
 **Server Requirements**
 
-* Servers **SHALL** support the `patient/DocumentReference.c` scope for Patient Write.
-* Servers **SHALL** support the `user/DocumentReference.c` scope for Provider Write.
-* Servers **SHALL** support the `system/DocumentReference.c` scope for backend services that write documents.
+* Servers **SHALL** support the `patient/DocumentReference.c` or category-specific scopes for Patient Write.
+* Servers **SHALL** support the `user/DocumentReference.c` or category-specific scopes for Provider Write.
+* Servers **SHALL** support the `system/DocumentReference.c` or category-specific scopes for backend services that write documents.
 * Servers that allow status correction or replacement **SHALL** support the matching `.u` scopes.
 * Servers **SHALL** list their supported scopes in `scopes_supported` in `/.well-known/smart-configuration`.
-* Servers **MAY** support category-specific versions of these scopes in place of the scopes above.
 
 **Guidance**
 
 * The `.u` scope covers both the `patch` and `update` interactions used for status correction. See [Corrections and Replacements](#corrections-and-replacements).
 * A category-specific scope limits write permission to one category.
 
-    Recommended granular scopes
+    Recommended category-specific scopes
 
     * Clinical Note
       * `<patient|user|system>/DocumentReference.c?category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note`
@@ -655,13 +678,94 @@ Apps need write permission for `DocumentReference`. SMART scopes allow access pe
 
 *This table will list every conformance statement on this page, by actor.*
 
-> **Stub.** The table will be generated from the conformance statements on this page once the text is stable.
+<!-- BEGIN generated conformance table -- gen_conformance_table.py: edit the requirement bullets above, not this table -->
 
-| ID | Actor | Conformance | Requirement | Section |
-| --- | --- | --- | --- | --- |
-| TBD | Server | **SHALL** | TBD | [Processing Expectation](#processing-expectation) |
+**Legend**
+
+* **Mode** - `ALL` applies to every submission mode. `PROV` [Provider Write](#provider-write), `SPAT` [Solicited Patient Write](#solicited-patient-write), `UPAT` [Unsolicited Patient Write](#unsolicited-patient-write), `PAT` both patient modes. A statement in a general section is `ALL` unless it is scoped tighter.
+* **Conformance** - the RFC 2119 verb as written in the statement.
+* **Conditional** - <span style="color:green; font-size:1.5em">&#10004;</span> marks a statement with a precondition in its text, for example "when it is held for review". A "-" means the statement applies whenever its mode applies.
+* &dagger; - the statement sits in an unresolved block on this page and is not settled.
+
+| ID | Actor | Mode | Conformance | Conditional | Requirement | Section |
+| --- | --- | --- | --- | --- | --- | --- |
+| WD-C-09 | Client | ALL | **SHALL** | - | Clients SHALL populate at least one `category` and a `type` on submission. | [Document Type and Category](#document-type-and-category) |
+| WD-C-15 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHALL be capable of populating `author` and `context.encounter` when they are known. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-C-16 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | When a Client populates `.author` or `.context.encounter`, `.reference` SHALL be either a relative reference to a resource on the Server or a reference to a contained resource. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-C-17 | Client | ALL | **SHOULD** | <span style="color:green; font-size:1.5em">&#10004;</span> | When a Client populates `.author` or `.context.encounter`, `.display` SHOULD be populated. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-C-23 | Client | ALL | **SHALL** | - | Clients SHALL use `context.period` to convey the clinically relevant time period. | [Date Handling](#date-handling) |
+| WD-C-24 | Client | ALL | **SHOULD** | - | Clients SHOULD populate `identifier` with a value that is unique to the document and stays the same if the document is resubmitted. | [Identifier](#identifier) |
+| WD-C-27 &dagger; | Client | ALL | **SHOULD** | - | Clients SHOULD populate `content.format` for additional detail. | [Content.format](#contentformat) |
+| WD-C-29 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHALL populate `context.related` with a relative reference to the `ServiceRequest` when the document responds to a solicited request. | [Context.related](#contextrelated) |
+| WD-C-30 | Client | PAT | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHALL include `meta.security` with the code `PATAST` from `http://terminology.hl7.org/CodeSystem/v3-ObservationValue` when the content is patient-supplied. | [Patient-asserted Signaling](#patient-asserted-signaling) |
+| WD-C-48 | Client | SPAT | **SHALL** | - | Clients SHALL include `meta.security` = "PATAST" (Patient asserted). | [Solicited Patient Write](#solicited-patient-write) |
+| WD-C-49 | Client | SPAT | **SHALL** | - | Clients SHALL populate `context.related` or the FHIR R5 `basedOn` extension with the active `ServiceRequest` that requests it. | [Solicited Patient Write](#solicited-patient-write) |
+| WD-C-54 | Client | UPAT | **SHALL** | - | Clients SHALL include `meta.security` = "PATAST" (Patient asserted). | [Unsolicited Patient Write](#unsolicited-patient-write) |
+| WD-C-55 | Client | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | To mark a document as entered in error, clients SHALL use either a `patch` that changes only `status` to `entered-in-error`, or an `update` that sends the complete resource with only `status` changed. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-C-56 | Client | ALL | **SHOULD** | <span style="color:green; font-size:1.5em">&#10004;</span> | To supersede a document, clients SHOULD create a new `DocumentReference` with `relatesTo.code` = `replaces` and `relatesTo.target` referencing the original. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-C-57 | Client | ALL | **SHALL** | - | A replacing document SHALL contain the complete revised content, not only the changes. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-C-58 | Client | ALL | **SHOULD** | <span style="color:green; font-size:1.5em">&#10004;</span> | Clients SHOULD also populate `relatesTo.target.identifier` with the original document's `identifier` when it has one. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-S-01 | Server | ALL | **SHALL** | - | Servers SHALL support `create` for `DocumentReference`. | [Processing Expectation](#processing-expectation) |
+| WD-S-02 | Server | ALL | **SHALL** | - | Servers SHALL only accept documents that the organization can and intends to process or review. | [Processing Expectation](#processing-expectation) |
+| WD-S-03 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT document support for a `DocumentReference` category or type that the organization cannot or does not intend to process or review. | [Processing Expectation](#processing-expectation) |
+| WD-S-04 | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL respond `201 Created` with a `Location` header when the document is available on return. | [Processing Expectation](#processing-expectation) |
+| WD-S-05 | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL respond `202 Accepted` when it is held for review. | [Processing Expectation](#processing-expectation) |
+| WD-S-06 | Server | ALL | **SHOULD** | - | Servers SHOULD return an `OperationOutcome` on failed writes. | [Processing Expectation](#processing-expectation) |
+| WD-S-07 | Server | ALL | **SHALL** | - | Servers SHALL publish API documentation covering supported categories and types, MIME types, size limits, `$submit-bundle` support, and review policy. | [Discovery](#discovery) |
+| WD-S-08 | Server | ALL | **SHOULD** | - | Servers SHOULD support `ValueSet/$expand` with `contextDirection=incoming`. | [Discovery](#discovery) |
+| WD-S-10 | Server | ALL | **SHALL** | - | Servers SHALL publish API documentation covering supported categories and types. | [Document Type and Category](#document-type-and-category) |
+| WD-S-11 | Server | ALL | **SHALL** | - | Servers SHALL support at least one category. | [Document Type and Category](#document-type-and-category) |
+| WD-S-12 | Server | ALL | **SHALL NOT** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL NOT reject a submission with unsupported category codes if it contains at least one category code (as a repeating element) they support. | [Document Type and Category](#document-type-and-category) |
+| WD-S-13 | Server | ALL | **SHALL NOT** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL NOT reject a submission with unsupported type codes if it contains at least one code translation they support. | [Document Type and Category](#document-type-and-category) |
+| WD-S-14 | Server | ALL | **SHOULD** | - | Servers SHOULD preserve the submitted coding(s) as received. | [Document Type and Category](#document-type-and-category) |
+| WD-S-18 | Server | ALL | **SHALL** | - | Servers SHALL accept both relative references to resources on the server and references to contained resources for `author` and `context.encounter`. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-S-19 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT reject a submission solely because an `author` or `context.encounter` reference cannot be resolved. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-S-20 | Server | ALL | **SHOULD** | - | Servers SHOULD attempt to match `author` and `context.encounter` references to existing resources. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-S-21 | Server | ALL | **MAY** | - | Servers MAY persist the content of a contained `author` or `Encounter` resource. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-S-22 | Server | ALL | **MAY** | - | Servers MAY require `context.encounter` by business rule. | [References: Author and Context.encounter](#references-author-and-contextencounter) |
+| WD-S-25 | Server | ALL | **SHALL** | - | Servers SHALL support conditional create (`If-None-Exist`). | [Identifier](#identifier) |
+| WD-S-26 | Server | ALL | **MAY** | - | Servers MAY detect duplicates using identifiers, hashes, or other methods. | [Identifier](#identifier) |
+| WD-S-28 &dagger; | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers SHALL persist and round-trip `content.format` when provided. | [Content.format](#contentformat) |
+| WD-S-31 | Server | PAT | **SHALL NOT** | - | Servers SHALL NOT remove the `PATAST` code. | [Patient-asserted Signaling](#patient-asserted-signaling) |
+| WD-S-32 | Server | PAT | **MAY** | - | Servers MAY add the `PATAST` code by policy. | [Patient-asserted Signaling](#patient-asserted-signaling) |
+| WD-S-33 | Server | ALL | **SHALL** | - | Servers SHALL accept at least one of `text/plain; charset=utf-8`, `application/pdf`, `image/jpeg`, or `image/png` for each supported document type. | [MIME Support](#mime-support) |
+| WD-S-34 | Server | ALL | **SHALL** | - | Servers SHALL document the MIME types they accept for each supported document type. | [MIME Support](#mime-support) |
+| WD-S-35 | Server | ALL | **SHALL** | - | Servers SHALL accept inline `content.attachment.data` whose decoded content is at least 5 MiB (5,242,880 bytes). | [Size Limits](#size-limits) |
+| WD-S-36 | Server | ALL | **SHALL** | - | Servers SHALL document their attachment size limits. | [Size Limits](#size-limits) |
+| WD-S-37 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT expose a client-supplied `content.attachment.url` to later readers. | [Size Limits](#size-limits) |
+| WD-S-38 | Server | ALL | **MAY** | - | Servers MAY accept content by `content.attachment.url`, including content larger than their inline limit. | [Size Limits](#size-limits) |
+| WD-S-39 | Server | PROV | **SHALL** | - | Scopes: servers SHALL support FHIR RESTful create using `<user\|system>/DocumentReference.c`, or category-specific version(s) such as `<user\|system>/DocumentReference.c?category=clinical-note`. | [Provider Write](#provider-write) |
+| WD-S-40 | Server | PROV | **SHALL** | - | Servers SHALL make the document available through read and search without further action. The response is always `201`. | [Provider Write](#provider-write) |
+| WD-S-41 | Server | SPAT | **SHALL** | - | Scopes: servers SHALL support `patient/DocumentReference.c`, or category-specific version(s) such as `patient/DocumentReference.c?category=clinical-note`. | [Solicited Patient Write](#solicited-patient-write) |
+| WD-S-42 | Server | SPAT | **SHALL** | - | Scopes: servers SHALL support `patient/ServiceRequest.rs`. | [Solicited Patient Write](#solicited-patient-write) |
+| WD-S-43 | Server | SPAT | **SHALL** | - | Servers SHALL make the `ServiceRequest` resources with the patient as `performer` available through read and search. | [Solicited Patient Write](#solicited-patient-write) |
+| WD-S-44 | Server | SPAT | **SHALL** | - | Servers SHALL make the document available through read and search without further action. The response is `201`. | [Solicited Patient Write](#solicited-patient-write) |
+| WD-S-45 | Server | SPAT | **SHALL NOT** | - | Servers SHALL NOT remove `meta.security` = "PATAST". | [Solicited Patient Write](#solicited-patient-write) |
+| WD-S-46 | Server | SPAT | **MAY** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers MAY add `meta.security` = "PATAST" by policy (for example, based on authorization context), even if it is omitted by the client. | [Solicited Patient Write](#solicited-patient-write) |
+| WD-S-47 | Server | SPAT | **SHALL** | - | Servers SHALL document whether to populate the active `ServiceRequest` in `context.related`, or the FHIR R5 `basedOn` extension. | [Solicited Patient Write](#solicited-patient-write) |
+| WD-S-50 | Server | UPAT | **SHALL** | - | Servers SHALL document their review policy for patient submissions. | [Unsolicited Patient Write](#unsolicited-patient-write) |
+| WD-S-51 | Server | UPAT | **SHALL** | - | Scopes: servers SHALL support `patient/DocumentReference.c`, or category-specific version(s) such as `patient/us-core-documentreference-category\|clinical-note`. | [Unsolicited Patient Write](#unsolicited-patient-write) |
+| WD-S-52 | Server | UPAT | **SHALL NOT** | - | Servers SHALL NOT remove `meta.security` = "PATAST". | [Unsolicited Patient Write](#unsolicited-patient-write) |
+| WD-S-53 | Server | UPAT | **MAY** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers MAY add `meta.security` = "PATAST" by policy (for example, based on authorization context), even if it is omitted by the client. | [Unsolicited Patient Write](#unsolicited-patient-write) |
+| WD-S-59 | Server | ALL | **SHOULD** | - | Servers SHOULD allow the submitting client to change `status` to `entered-in-error` through `patch`. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-S-60 | Server | ALL | **MAY** | - | Servers MAY allow the submitting client to change `status` to `entered-in-error` through `update`. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-S-61 | Server | ALL | **SHALL** | - | Servers SHALL continue to return an `entered-in-error` document through read for authorized requests. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-S-62 | Server | ALL | **MAY** | - | Servers MAY exclude `entered-in-error` documents from search results. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-S-63 | Server | ALL | **SHALL** | - | Servers SHALL accept `relatesTo` on create and return it unchanged on read and search. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-S-64 | Server | ALL | **MAY** | - | Servers MAY ignore the replacement relationship in their own processing. | [Corrections and Replacements](#corrections-and-replacements) |
+| WD-S-65 | Server | ALL | **SHALL** | - | Servers SHALL persist the submitted Provenance-bearing elements, and return them unchanged on read and search, including elements they don't otherwise process. | [Provenance-bearing Elements](#provenance-bearing-elements) |
+| WD-S-66 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT reject a submission solely because a provenance element is absent or cannot be resolved. | [Provenance-bearing Elements](#provenance-bearing-elements) |
+| WD-S-67 | Server | ALL | **SHALL NOT** | - | Servers SHALL NOT replace a client-supplied `author` with the authenticated client or user. | [Provenance-bearing Elements](#provenance-bearing-elements) |
+| WD-S-68 | Server | ALL | **MAY** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers MAY populate `custodian` with the receiving organization when they accept a document. | [Provenance-bearing Elements](#provenance-bearing-elements) |
+| WD-S-69 | Server | ALL | **MAY** | - | Servers MAY create a [US Core Provenance Profile] resource targeting the created `DocumentReference`. | [Provenance-bearing Elements](#provenance-bearing-elements) |
+| WD-S-70 | Server | ALL | **SHALL** | - | Servers SHALL support the `patient/DocumentReference.c` or category-specific scopes for Patient Write. | [SMART Scopes](#smart-scopes) |
+| WD-S-71 | Server | ALL | **SHALL** | - | Servers SHALL support the `user/DocumentReference.c` or category-specific scopes for Provider Write. | [SMART Scopes](#smart-scopes) |
+| WD-S-72 | Server | ALL | **SHALL** | - | Servers SHALL support the `system/DocumentReference.c` or category-specific scopes for backend services that write documents. | [SMART Scopes](#smart-scopes) |
+| WD-S-73 | Server | ALL | **SHALL** | <span style="color:green; font-size:1.5em">&#10004;</span> | Servers that allow status correction or replacement SHALL support the matching `.u` scopes. | [SMART Scopes](#smart-scopes) |
+| WD-S-74 | Server | ALL | **SHALL** | - | Servers SHALL list their supported scopes in `scopes_supported` in `/.well-known/smart-configuration`. | [SMART Scopes](#smart-scopes) |
 {:.grid}
 
+<!-- END generated conformance table -->
 
 ---
 
