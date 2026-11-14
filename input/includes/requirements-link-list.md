@@ -1,18 +1,36 @@
-
 <!-- ==================================================================
-This liquid script creates a US Core requirements reference list using input data from input/data/requirements.csv
-which is manually updated when new narrative requirements are added to the guide.  Note that this table is used to create the Requirements Resources as well.
-with the following columns:
+This liquid script creates the US Core requirements reference list - the
+reference-style link definitions that resolve a requirement key cited in the
+narrative, for example:
 
-- Is_New: Flag for new or updated content for the current version. Default is "FALSE"  or empty and set to "TRUE" for new or updated content for the current version. It is used for QA review and published ballot versions of the guide. It set to empty before publishing new versions of the guide.
-- key: A requirement key that identifies the requirement and links it to the statement in the guide. The format is "CONF-NNN" where NNN is a sequentially increasing zero padded integer.
-- context: The page or section topic that pertains to the requirement, For example, US Core Medication Request Profile, or Clinical Notes.  Usually derived from the source location.
-- actor: The roles to which this requirement applies. The actors are: "Server|Client|Both"
-- certifiers_only: Flag to indicate whether the requirement is an additional USCDI certification requirement.  Default is empty or "FALSE" and set to "TRUE" for additional USCDI certification requirements. This is
-- conformance: Conformance Verb(s) as defined in RFC 2119 that are used in the requirement.  Note that there may be several conformance verbs in a single statement. The format is "<CONF>|<CONF>|etc" where "<CONF>" is on of "SHALL|SHALL-NOT|SHOULD|SHOULD-NOT|MAY"
-- requirement: The actual requirements statement. The format is Markdown and is either a sentence, one of more bullets, or even a paragraph to express a single requirement.
-- source: Url of the page from where the requirements statement came from, this is use to create a link back to the page.
--
+  Servers **SHOULD** return an `OperationOutcome` on failed writes.<sup>[§][CONF-WD-06]</sup>
+
+It reads two collections, both of which are manually updated when new narrative
+requirements are added to the guide:
+
+- input/data/us_core_requirements.csv - the main specification's requirements,
+  keyed "CONF-NNNN". Each key also gets a `{: #key}` line below its definition.
+  That is a kramdown attribute list for the link reference, not a block
+  anchor: it puts id="CONF-NNNN" on every <a> the reference generates, so the
+  footnote anchor in the narrative becomes the target that the context link in
+  the requirements.html table points back to.
+- input/data/writing_documents_requirements.csv - the Writing Documents page's
+  requirements, keyed "CONF-WD-NN". No `{: #key}` line is emitted for these.
+  Their table is on writing-documents.html, the same page the statements are
+  written on, and the table row already carries the key as its id. Emitting
+  the attribute list would put that id on the footnote anchor too, ahead of
+  the row in document order, so the footnote would link to itself instead of
+  to the table row.
+
+input/includes/link-list.md includes this file, and every page includes
+link-list.md at the bottom, so a key can be cited from any page.
+
+The columns of each collection are documented where its table is rendered:
+input/pagecontent/requirements.md and input/pagecontent/writing-documents.md.
+Both use "key" for the requirement key and drop a row from the published table
+once it is withdrawn - us_core_requirements.csv by setting conformance to
+DEPRECATED, writing_documents_requirements.csv by setting status to retired.
+A withdrawn key gets no link definition here either.
 ================================================================== -->
 
 
@@ -22,6 +40,13 @@ with the following columns:
 {% for item in rows -%}
 [{{item.key}}]: requirements.html#{{item.key}} "{{item.key}}"
 {: #{{item.key}}}
+{% endfor %}
+
+{% assign wd_rows = site.data.writing_documents_requirements
+  | where_exp: "item", "item.key.size > 0"
+  | where: "status", "active" -%}
+{% for item in wd_rows -%}
+[{{item.key}}]: writing-documents.html#{{item.key}} "{{item.key}}"
 {% endfor %}
 
 <!-- =============================== end liquid =================================== -->

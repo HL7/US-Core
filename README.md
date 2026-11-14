@@ -327,6 +327,7 @@ input/pagecontent/vsacname-fhiruri-map.md|input/data/vsacname-fhiruri-map.csv
 input/includes/provenance-author-bullet-generator.md|input/data/provenance-elements.csv
 input/includes/quickstart-intro.md|input/data/profile_metadata.csv
 input/includes/quickstart-search.md|input/data/search_requirements.csv
+input/includes/requirements-link-list.md|input/data/us_core_requirements.csv,<br />input/data/writing_documents_requirements.csv
 input/includes/res-list-generator.md|input/data/new_stuff|temp/pages/_data/resources.json
 input/includes/sd_link.html||temp/pages/_data/structuredefinitions.json
 input/includes/sd-list-generator.md|input/data/profile-metadata.csv|temp/pages/_data/structuredefinitions.json
@@ -343,8 +344,79 @@ input/pagecontent/terminology.md|temp/pages/valueset-ref-all-list.csv
 input/pagecontent/terminology.md|temp/pages/codesystem-ref-all-list.csv.
 input/pagecontent/uscdi.md|input/data/uscdi-table.csv
 input/pagecontent/requirements.md|input/data/us_core_requirements.csv
+input/pagecontent/writing-documents.md|input/data/writing_documents_requirements.csv
 
 \* The publish.sh script adds `input/data/ig.yml` to the input/data directory after running sushi  (for details see the Publish.sh section below).
+
+#### Maintaining the Writing Documents Conformance Table
+
+`input/pagecontent/writing-documents.md` carries two tables. The Quick-reference
+Matrix is written by hand and lists only the rules that differ by submission
+mode. The Conformance Requirements table lists every normative statement on the
+page, by actor, and is rendered by Liquid from
+`input/data/writing_documents_requirements.csv`.
+
+That collection is maintained by hand, the same way
+`input/data/us_core_requirements.csv` is maintained for the main
+specification's requirements table in `input/pagecontent/requirements.md`.
+There is no script. The columns are documented inline on the page, in the
+comment block above the Liquid that renders the table.
+
+Statement keys ("CONF-WD-04") come from the collection, which is append-only. A
+key is never renumbered, so a Jira tracker or a test plan can cite one. A
+statement keeps its key when it is reworded, when it moves to another section,
+or both; only a full rewrite draws a new key. A withdrawn statement keeps its
+row with `status` = `retired` rather than freeing its number, and a retired row
+is published neither in the table nor as a link definition.
+
+To add a statement:
+
+1. Write the bullet on the page, under the `**Client Requirements**` or
+   `**Server Requirements**` block for its section, or in the per-mode section.
+2. Append the next key as a footnote marker, immediately after the statement's
+   closing period and with no space before it:
+
+   ~~~
+   Servers **SHALL** support `create` for `DocumentReference`.<sup>[§][CONF-WD-01]</sup>
+   ~~~
+
+3. Add the row to the collection with that key, setting `actor`, `mode_code`,
+   `conformance`, `conditionality`, `requirement`, `section`,
+   `section_anchor`, `unresolved`, `mode`, and `status` = `active`. The
+   `requirement` column is a direct quote of the statement without the footnote
+   marker, with any reference-style link expanded to an inline link, because
+   the cell is rendered on its own by `markdownify` and `link-list.md` is not
+   in scope.
+4. When the statement differs by submission mode, cite its key in the
+   Quick-reference Matrix as well.
+
+The reference-style link definition that resolves `[CONF-WD-01]` is generated
+for every active key by `input/includes/requirements-link-list.md`, which
+`input/includes/link-list.md` includes at the bottom of every page, so no link
+definition is written by hand. It points at
+`writing-documents.html#CONF-WD-01`, which is the id on the table row. Unlike
+the main specification's keys, these keys get no `{: #key}` attribute list in
+that include, because the id they would put on the footnote anchor would
+shadow the table row the footnote points at.
+
+A statement that repeats verbatim elsewhere on the page is footnoted at its
+first occurrence only. The later occurrences keep their own rows and keys in
+the table but carry no marker, so a reader is not sent to a second row holding
+the same text. `CONF-WD-52`, `CONF-WD-53`, and `CONF-WD-54` are the repeats, of
+`CONF-WD-45`, `CONF-WD-46`, and `CONF-WD-48` in the Solicited Patient Write
+section.
+
+Two columns record a judgment that no markup on the page states:
+
+- `mode_code` scopes a statement to a submission mode (`ALL`, `PROV`, `SPAT`,
+  `UPAT`, or `PAT` for both patient modes). A statement in a general section is
+  `ALL`. `PAT` has to be set deliberately, since no single section spans the
+  two patient modes.
+- `conditionality` flags a statement that carries a precondition in its text,
+  for example "when it is held for review".
+
+`mode_code_auto`, `conditionality_auto`, and `match_key` are historical columns
+left by a retired generator script. The table does not read them.
 
 #### Accessing Collection Data:
 
@@ -632,63 +704,6 @@ input/includes/ms-target-table-generator.md|input/data/ms_choice_refs.csv|https:
 input/includes/ms-target-table-generator.md|input/data/addl_uscdi_refs.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 input/includes/ms-target-table-generator.md|input/data/addl_uscdi_choice_refs.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/target_profile-tabler.ipynb
 input/pagecontent/must-support.md|input/data/additional-uscdi-requirements.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/addl-uscdi-tabler.ipynb
-input/pagecontent/writing-documents.md|input/data/writing_documents_requirements.csv|https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/gen_conformance_table.py
-
-#### Regenerating the Writing Documents Conformance Table
-
-`input/pagecontent/writing-documents.md` carries two tables. The Quick-reference
-Matrix is written by hand and lists only the rules that differ by submission
-mode. The Conformance Requirements table is generated: it lists every normative
-statement on the page, by actor, and is rendered by Liquid from
-`input/data/writing_documents_requirements.csv`.
-
-Script: https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/gen_conformance_table.py
-
-Run it from the repo root after editing any requirement bullet on the page:
-
-~~~
-cd ~/Documents/FHIR/US-Core
-python3 ~/Documents/Python/Jupyter/MyNotebooks/CapStatement/gen_conformance_table.py
-~~~
-
-It rewrites the block between the `BEGIN generated conformance table` and
-`END generated conformance table` markers on the page, which holds the legend,
-the inline documentation of the CSV columns, and the Liquid that renders the
-table. It also rewrites the CSV. Nothing else on the page is touched. Add
-`--check` to test whether the page block is stale without writing anything; it
-exits 1 when the table needs regenerating, which suits a pre-commit hook. Add
-`--page` for another page, or `--repo` for another IG repo.
-
-Statement IDs ("WD-S-04") come from the CSV, which is append-only. An ID is
-never renumbered, so a Jira tracker or a test plan can cite one. A statement
-keeps its ID when it is reworded, when it moves to another section, or both:
-the script matches on the statement text first, exactly and then at 75%
-similarity, and only a full rewrite draws a new ID. A deleted statement keeps
-its row with `status` = `retired` rather than freeing its number. Every match
-that was not exact is reported as `moved:` or `reworded:` so it can be checked,
-and a new ID is reported as `new:`.
-
-Two CSV columns are meant to be edited by hand and are preserved permanently:
-
-- `mode_code` scopes a statement to a submission mode (`ALL`, `PROV`, `SPAT`,
-  `UPAT`, or `PAT` for both patient modes). Only the per-mode sections derive a
-  code, so a statement in a general section that is really patient-only has to
-  be set by hand.
-- `conditionality` flags a statement that carries a precondition in its text.
-  Detection reads a when/if/unless/where clause, a purpose clause, or a
-  qualified subject, which catches most but not all cases.
-
-Each has a companion `_auto` column holding what the script derived. Equal
-values mean nobody has overridden the column and the script re-derives it;
-different values mean a hand edit, which the script keeps and reports on every
-run. There is no flag to set.
-
-The script also audits the hand-written matrix, since no markup states which
-mode a rule belongs to and that call stays with the author. It reports a
-mode-scoped statement the matrix does not cite, an ID the matrix cites that no
-longer exists, a statement repeated verbatim in more than one section, an
-unresolvable actor, an invalid mode code, and a section anchor missing from the
-rendered page.
 
 #### Regenerating the CQL ModelInfo Library
 
