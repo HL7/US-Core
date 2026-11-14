@@ -660,9 +660,13 @@ exits 1 when the table needs regenerating, which suits a pre-commit hook. Add
 `--page` for another page, or `--repo` for another IG repo.
 
 Statement IDs ("WD-S-04") come from the CSV, which is append-only. An ID is
-never renumbered, so a Jira tracker or a test plan can cite one: a reworded
-statement keeps its ID through a close-match lookup, and a deleted statement
-keeps its row with `status` = `retired` rather than freeing its number.
+never renumbered, so a Jira tracker or a test plan can cite one. A statement
+keeps its ID when it is reworded, when it moves to another section, or both:
+the script matches on the statement text first, exactly and then at 75%
+similarity, and only a full rewrite draws a new ID. A deleted statement keeps
+its row with `status` = `retired` rather than freeing its number. Every match
+that was not exact is reported as `moved:` or `reworded:` so it can be checked,
+and a new ID is reported as `new:`.
 
 Two CSV columns are meant to be edited by hand and are preserved permanently:
 

@@ -702,8 +702,10 @@ conditionality (see below).
 writing_documents_requirements.csv columns:
 - id: stable requirement id, "WD-<C|S>-<nn>". Assigned once from this
   append-only csv and never renumbered, so a tracker or test plan can cite
-  it. A reworded statement keeps its id through a close-match lookup; a
-  deleted one keeps its row with status = retired.
+  it. A statement keeps its id when it is reworded or moved to another
+  section: the match is on the statement text first, exactly and then at
+  75% similarity. Only a full rewrite draws a new id. A deleted statement
+  keeps its row with status = retired rather than freeing its number.
 - actor: Client or Server. From the "**Client Requirements**" or
   "**Server Requirements**" block the bullet sits under, or from the
   subject of the sentence in the per-mode sections, which do not use those
@@ -735,8 +737,10 @@ writing_documents_requirements.csv columns:
   keeps and reports on every run.
 - status: active or retired. Retired rows are kept for their ids only and
   are not published in the table.
-- key: normalized statement text plus section. Used to match a row to its
-  bullet across rewording. Internal to the script.
+- key: normalized statement text plus section, used to match a row to its
+  bullet. The section half only distinguishes two rows holding the same
+  statement text, as the PATAST statements do; every later pass matches on
+  the text half alone. Internal to the script.
 
 The script retrieves, sorts, and selects the table data.
 ==============================================================-->
