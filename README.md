@@ -348,13 +348,15 @@ input/pagecontent/writing-documents.md|input/data/writing_documents_requirements
 
 \* The publish.sh script adds `input/data/ig.yml` to the input/data directory after running sushi  (for details see the Publish.sh section below).
 
-#### Maintaining the Writing Documents Conformance Table
+#### Maintaining the Writing Documents Conformance Tables
 
 `input/pagecontent/writing-documents.md` carries two tables. The Quick-reference
 Matrix is written by hand and lists only the rules that differ by submission
-mode. The Conformance Requirements table lists every normative statement on the
-page, by actor, and is rendered by Liquid from
-`input/data/writing_documents_requirements.csv`.
+mode. It is the first subsection of Submission Modes. The Conformance
+Requirements section carries two tables, one per actor, listing every normative
+statement on the page; both are rendered by Liquid from
+`input/data/writing_documents_requirements.csv`, and the `actor` column selects
+which table a row is published in.
 
 That collection is maintained by hand, the same way
 `input/data/us_core_requirements.csv` is maintained for the main
@@ -383,6 +385,7 @@ To add a statement:
 3. Add the row to the collection with that key, setting `actor`, `mode_code`,
    `conformance`, `conditionality`, `requirement`, `section`,
    `section_anchor`, `unresolved`, `mode`, and `status` = `active`. The
+   `actor` value decides which of the two tables the row lands in. The
    `requirement` column is a direct quote of the statement without the footnote
    marker, with any reference-style link expanded to an inline link, because
    the cell is rendered on its own by `markdownify` and `link-list.md` is not

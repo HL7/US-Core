@@ -54,37 +54,6 @@ Servers have the option of supporting the [`$submit-bundle` Operation]. It allow
 
 ---
 
-#### Quick-reference Matrix
-
-Every rule on this page applies to all three [Submission Modes](#submission-modes) unless it appears below. This table lists only the rules and guidance that differ by mode; the [Conformance Requirements](#conformance-requirements) table at the end of the page lists every statement in full, by actor, with the key cited here.
-
-| Key | Rule | Actor | Provider Write | Solicited Patient Write | Unsolicited Patient Write |
-| --- | --- | --- | --- | --- | --- |
-| [CONF-WD-04], [CONF-WD-05] | Response on a successful write | Server | `201 Created` | `201 Created` | `201 Created` or `202 Accepted` by documented policy |
-| [CONF-WD-40], [CONF-WD-44] | Make the document available through read and search without further action | Server | **SHALL** | **SHALL** | Server policy |
-| [CONF-WD-50] | Document the review policy for patient submissions | Server | n/a | n/a | **SHALL** |
-| [CONF-WD-39] | Support the create scope `user/DocumentReference.c` or `system/DocumentReference.c` | Server | **SHALL** | n/a | n/a |
-| [CONF-WD-41], [CONF-WD-51], [CONF-WD-70] | Support the create scope `patient/DocumentReference.c` | Server | n/a | **SHALL** | **SHALL** |
-| [CONF-WD-42] | Support the scope `patient/ServiceRequest.rs` | Server | n/a | **SHALL** | n/a |
-| [CONF-WD-43] | Make `ServiceRequest` resources with the patient as `performer` available through read and search | Server | n/a | **SHALL** | n/a |
-| [CONF-WD-29], [CONF-WD-49] | Populate `context.related`, or the FHIR R5 `basedOn` extension, with the active `ServiceRequest` | Client | n/a | **SHALL** | n/a |
-| [CONF-WD-47] | Document whether to populate `context.related` or the FHIR R5 `basedOn` extension | Server | n/a | **SHALL** | n/a |
-| [CONF-WD-30], [CONF-WD-48], [CONF-WD-54] | Include `meta.security` = `PATAST` | Client | n/a | **SHALL** | **SHALL** |
-| [CONF-WD-31], [CONF-WD-45], [CONF-WD-52] | Do not remove the `PATAST` code | Server | n/a | **SHALL NOT** | **SHALL NOT** |
-| [CONF-WD-32], [CONF-WD-46], [CONF-WD-53] | Add the `PATAST` code by policy | Server | n/a | **MAY** | **MAY** |
-| - | `author` is the patient, with `launch/patient` as a candidate value | Client | n/a | Guidance | Guidance |
-| - | `launch/encounter` is a candidate value for `context.encounter` | Client | Guidance | n/a | n/a |
-| - | Support the [DocumentReference Attestor R5 Extension] for document types such as living wills | Server | n/a | n/a | Guidance |
-{:.grid}
-
-**Reading this table**
-
-* "Server policy" means the page sets no conformance verb and leaves the behavior to documented server policy. "Guidance" means the page offers guidance for that mode but states no conformance verb. "n/a" means the page states no rule for that mode.
-* A category-specific scope can be supported in place of any create scope listed. See [SMART Scopes](#smart-scopes).
-* A rule's own preconditions stay in its statement text in the [Conformance Requirements](#conformance-requirements) table - for example, the `.u` scopes are required only of a server that allows status correction or replacement.
-
----
-
 #### Processing Expectation
 
 Servers accept only the documents that the organization will actually process or review. Patients usually assume that a submitted document reaches their care team. Accepting content that no one will process or review creates a false expectation.
@@ -243,7 +212,7 @@ The submitting system usually knows the correct granular answer. By populating t
 
 ---
 
-#### References: Author and Context.encounter
+##### References: Author and Context.encounter
 
 **Client Requirements**
 
@@ -385,6 +354,35 @@ This section illustrates the following write submission modes and documents thei
 - Unsolicited Patient Write (Including Patient Mediated Write)
 
 Each use case shows the interaction and an example.
+
+##### Quick-reference Matrix
+
+Every rule on this page applies to all three submission modes unless it appears in this table. This table lists only the rules and guidance that differ by mode; the [Conformance Requirements](#conformance-requirements) tables at the end of the page list every statement in full, one table per actor, with the key cited here.
+
+| Key | Rule | Actor | Provider Write | Solicited Patient Write | Unsolicited Patient Write |
+| --- | --- | --- | --- | --- | --- |
+| [CONF-WD-04], [CONF-WD-05] | Response on a successful write | Server | `201 Created` | `201 Created` | `201 Created` or `202 Accepted` by documented policy |
+| [CONF-WD-40], [CONF-WD-44] | Make the document available through read and search without further action | Server | **SHALL** | **SHALL** | Server policy |
+| [CONF-WD-50] | Document the review policy for patient submissions | Server | n/a | n/a | **SHALL** |
+| [CONF-WD-39] | Support the create scope `user/DocumentReference.c` or `system/DocumentReference.c` | Server | **SHALL** | n/a | n/a |
+| [CONF-WD-41], [CONF-WD-51], [CONF-WD-70] | Support the create scope `patient/DocumentReference.c` | Server | n/a | **SHALL** | **SHALL** |
+| [CONF-WD-42] | Support the scope `patient/ServiceRequest.rs` | Server | n/a | **SHALL** | n/a |
+| [CONF-WD-43] | Make `ServiceRequest` resources with the patient as `performer` available through read and search | Server | n/a | **SHALL** | n/a |
+| [CONF-WD-29], [CONF-WD-49] | Populate `context.related`, or the FHIR R5 `basedOn` extension, with the active `ServiceRequest` | Client | n/a | **SHALL** | n/a |
+| [CONF-WD-47] | Document whether to populate `context.related` or the FHIR R5 `basedOn` extension | Server | n/a | **SHALL** | n/a |
+| [CONF-WD-30], [CONF-WD-48], [CONF-WD-54] | Include `meta.security` = `PATAST` | Client | n/a | **SHALL** | **SHALL** |
+| [CONF-WD-31], [CONF-WD-45], [CONF-WD-52] | Do not remove the `PATAST` code | Server | n/a | **SHALL NOT** | **SHALL NOT** |
+| [CONF-WD-32], [CONF-WD-46], [CONF-WD-53] | Add the `PATAST` code by policy | Server | n/a | **MAY** | **MAY** |
+| - | `author` is the patient, with `launch/patient` as a candidate value | Client | n/a | Guidance | Guidance |
+| - | `launch/encounter` is a candidate value for `context.encounter` | Client | Guidance | n/a | n/a |
+| - | Support the [DocumentReference Attestor R5 Extension] for document types such as living wills | Server | n/a | n/a | Guidance |
+{:.grid}
+
+**Reading this table**
+
+* "Server policy" means the page sets no conformance verb and leaves the behavior to documented server policy. "Guidance" means the page offers guidance for that mode but states no conformance verb. "n/a" means the page states no rule for that mode.
+* A category-specific scope can be supported in place of any create scope listed. See [SMART Scopes](#smart-scopes).
+* A rule's own preconditions stay in its statement text in the [Conformance Requirements](#conformance-requirements) tables - for example, the `.u` scopes are required only of a server that allows status correction or replacement.
 
 ##### Provider Write
 
@@ -676,9 +674,9 @@ Apps need write permission for `DocumentReference`. SMART scopes allow access pe
 
 #### Conformance Requirements
 
-*This table lists every conformance statement on this page, by actor. Each statement is footnoted where it is written on the page with a <sup>&sect;</sup> marker linking to its row here.*
+*The two tables below list every conformance statement on this page, one table per actor. Each statement is footnoted where it is written on the page with a <sup>&sect;</sup> marker linking to its row here.*
 
-<!-- BEGIN conformance requirements table -- rendered by Liquid from input/data/writing_documents_requirements.csv -->
+<!-- BEGIN conformance requirements tables -- rendered by Liquid from input/data/writing_documents_requirements.csv -->
 
 **Legend**
 
@@ -689,12 +687,14 @@ Apps need write permission for `DocumentReference`. SMART scopes allow access pe
 * &dagger; - the statement sits in an unresolved block on this page and is not settled.
 
 <!-- ========================================================
-The liquid syntax below renders the conformance requirements table.
+The liquid syntax below renders the conformance requirements tables, one per
+actor, the same split the main specification uses on requirements.html. The
+actor is the table a statement sits in rather than a column of its own.
 The source is a csv file at input/data/writing_documents_requirements.csv,
 which is maintained by hand, the same way input/data/us_core_requirements.csv
 is maintained for the main specification's requirements table. There is no
 script. See the README section "Maintaining the Writing Documents Conformance
-Table" for the editing checklist.
+Tables" for the editing checklist.
 
 Each statement on this page carries a footnote marker immediately after it:
 
@@ -724,6 +724,7 @@ writing_documents_requirements.csv columns:
 - actor: Client or Server. The "**Client Requirements**" or
   "**Server Requirements**" block the bullet sits under, or the subject of the
   sentence in the per-mode sections, which do not use those block headers.
+  It selects which of the two tables the row is published in.
 - mode_code: the submission mode the statement applies to. ALL, PROV
   (Provider Write), SPAT (Solicited Patient Write), UPAT (Unsolicited
   Patient Write), or PAT (both patient modes). A statement in a general
@@ -752,15 +753,20 @@ writing_documents_requirements.csv columns:
   Not read by the table.
 
 The liquid below retrieves, sorts, and selects the table data.
+The "Server Requirements" and "Client Requirements" headings come from the
+actors list, not from markdown, so they carry generated ids of their own.
 ==============================================================-->
 
 {% assign rows = site.data.writing_documents_requirements -%}
-{% assign actors = "Client,Server" | split: "," %}
+{% assign actors = "Client,Server" | split: "," -%}
+{% for actor in actors %}
+
+##### {{ actor }} Requirements
+
 <table class="grid">
 <thead>
   <tr>
     <th>Key</th>
-    <th>Actor</th>
     <th>Mode</th>
     <th>Conformance</th>
     <th>Conditional</th>
@@ -769,12 +775,10 @@ The liquid below retrieves, sorts, and selects the table data.
   </tr>
 </thead>
 <tbody>
-{% for actor in actors -%}
 {% assign actor_rows = rows | where: "actor", actor | where: "status", "active" | sort: "key" -%}
 {% for item in actor_rows -%}
   <tr id="{{ item.key }}">
     <td>{{ item.key }}{% if item.unresolved == "yes" %} &dagger;{% endif %}</td>
-    <td>{{ item.actor }}</td>
     <td>{{ item.mode_code }}</td>
     <td><strong>{{ item.conformance }}</strong></td>
     <td style="text-align: center;">{% if item.conditionality == "Yes" %}<span style="color:green; font-size:1.5em">&#10004;</span>{% else %}-{% endif %}</td>
@@ -782,13 +786,14 @@ The liquid below retrieves, sorts, and selects the table data.
     <td><a href="#{{ item.section_anchor }}">{{ item.section }}</a></td>
   </tr>
 {% endfor -%}
-{% endfor -%}
 </tbody>
 </table>
 
+{% endfor %}
+
 <!-- =============================== end liquid =================================== -->
 
-<!-- END conformance requirements table -->
+<!-- END conformance requirements tables -->
 
 ---
 
