@@ -264,7 +264,7 @@ For more information, refer to the [FHIR Terminology Service for VSAC Resources]
 
 #### Example
 
-For example, the [US Core Tobacco And Nicotine Use Observation Profile] `valueCodeableConcept` element has a preferred binding to the Smoking Status value set. To access it in VSAC, click on the link to `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`:
+For example, the [US Core Tobacco And Nicotine Use Observation Profile] `valueCodeableConcept` element has an extensible binding to the Tobacco And Nicotine Use value set. To access it in VSAC, click on the link to `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion`:
 
  {% include img.html img="vsac-1.png" caption="Figure 1: VSAC link" %}
 
@@ -272,7 +272,7 @@ The reader is redirected to the VSAC login page to enter an API Key (only one lo
 
  {% include img.html img="vsac-2.png" caption="Figure 2: VSAC API-Key Login" %}
 
-After successfully entering the API Key, the value set can be inspected, downloaded, etc., using the VSAC User interface, as shown in the figure below. This FHIR ValueSet resource can also be fetched using the URL `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.38`, and the FHIR ValueSet expansion using the URL `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.38/$expand`.
+After successfully entering the API Key, the value set can be inspected, downloaded, etc., using the VSAC User interface, as shown in the figure below. This FHIR ValueSet resource can also be fetched using the URL `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.3`, and the FHIR ValueSet expansion using the URL `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.3/$expand`.
 
  {% include img.html img="vsac-3.png" caption="Figure 3: VSAC Smoking Status ValueSet" %}
 
