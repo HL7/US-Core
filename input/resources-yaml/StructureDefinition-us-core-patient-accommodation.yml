@@ -11,10 +11,10 @@
 #     Needs". The code is not in a published LOINC release yet, so the build reports an
 #     unknown-LOINC-code error. The error is expected and is not suppressible; the
 #     input/ignoreWarnings.txt entry carries the editorial comment that explains it.
-#   * Observation.value[x] is a Must Support choice of CodeableConcept and string. PACIO and
-#     Gravity are developing a strawman value set in VSAC, so there is no binding yet, and the
-#     profile introduction records that the free-text option may be withdrawn as the code set
-#     matures.
+#   * Observation.value[x] is a Must Support choice of CodeableConcept and string, with a
+#     preferred binding to the PACIO/Gravity VSAC value set "Social Determinants of Health
+#     Disability Accommodation Needs" (2.16.840.1.113762.1.4.1247.377). The profile
+#     introduction records that the free-text option may be withdrawn as the code set matures.
 #   * Observation.performer is an Additional USCDI Requirement, not Must Support, and carries the
 #     same six targets as the sibling preference profiles.
 
@@ -149,7 +149,10 @@ differential:
 
     # ---- value[x] -----------------------------------------------------------
     # Must Support choice of CodeableConcept and string, per the October 15 call.
-    # No binding yet: the PACIO/Gravity strawman value set is pending in VSAC.
+    # Preferred binding to the PACIO/Gravity VSAC value set "Social Determinants of
+    # Health Disability Accommodation Needs" (2.16.840.1.113762.1.4.1247.377). The
+    # binding sits on value[x] rather than on a valueCodeableConcept slice, so the
+    # Must Support types stay expressed by the type-level extensions above.
     - id: Observation.value[x]
       path: Observation.value[x]
       type:
@@ -170,4 +173,8 @@ differential:
         - code: time
         - code: dateTime
         - code: Period
+      binding:
+        strength: preferred
+        description: Social Determinants of Health Disability Accommodation Needs
+        valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.377
       mustSupport: true
