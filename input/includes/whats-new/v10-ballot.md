@@ -26,21 +26,22 @@
 
     * For the new USCDI *Medication Administration* Data Element, we added the [US Core MedicationAdministration Profile](StructureDefinition-us-core-medicationadministration.html). `MedicationAdministration.statusReason` also supports the new USCDI *Reason Not Performed* Data Element. The [Medication List](medication-list.html) guidance is unchanged and remains based on MedicationRequest.
 
-    * For the new USCDI *Medical Device Order* Data Element, we added the [US Core DeviceRequest Profile](StructureDefinition-us-core-devicerequest.html). We also added guidance that a medical device order may instead be represented with the [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html) or the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html), depending on whether the request is procedure-focused or medication-related.
+    * For the new USCDI *Medical Device Order* Data Element, we added the [US Core DeviceRequest Profile](StructureDefinition-us-core-devicerequest.html) with profile-specific guidance that a medical device order may instead be represented using other request resources too.
 
-    * For the new USCDI *Nutrition Order* Data Element, we added the [US Core NutritionOrder Profile](StructureDefinition-us-core-nutritionorder.html) for oral diet orders. We also added guidance that a nutrition order may instead be represented with the [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html) or the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html), depending on context.
+    * For the new USCDI *Nutrition Order* Data Element, we added the [US Core NutritionOrder Profile](StructureDefinition-us-core-nutritionorder.html) for oral diet orders with profile-specific guidance that a nutrition order may instead be represented using other request resources too.
 
-    * For the new USCDI *Diagnostic Imaging Reference* Data Element, we added the [US Core ImagingStudy Profile](StructureDefinition-us-core-imagingstudy.html) for the information needed to locate or access a diagnostic imaging study, and guidance on using `ImagingStudy.endpoint`. To link the imaging order, report, and study, we also:
-        * added `DiagnosticReport.identifier`, `DiagnosticReport.basedOn`, `DiagnosticReport.imagingStudy`, and `DiagnosticReport.media.link` to the [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html) as *Additional USCDI* elements.
-        * added `ServiceRequest.identifier` to the [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html) as an *Additional USCDI* element.
-        * added the `patient` + `identifier` combination search as a **SHALL** for the [US Core ImagingStudy Profile](StructureDefinition-us-core-imagingstudy.html) and a **SHOULD** for the [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html) and the [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html).
+    * For the new USCDI *Diagnostic Imaging Reference* Data Element, we added the [US Core ImagingStudy Profile](StructureDefinition-us-core-imagingstudy.html). We also updated:
+        * `DiagnosticReport.identifier`, `DiagnosticReport.basedOn`, `DiagnosticReport.imagingStudy`, and `DiagnosticReport.media.link` to the [US Core DiagnosticReport Profile for Report and Note Exchange](StructureDefinition-us-core-diagnosticreport-note.html) as *Additional USCDI* elements.
+        * `ServiceRequest.identifier` to the [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html) as an *Additional USCDI* element.
+        * added the `patient` + `identifier` combination search API requirements.
 
-    * For the new USCDI *Accommodation* Data Element, we added the [US Core Patient Accommodation Profile](StructureDefinition-us-core-patient-accommodation.html) to record the supports and services a patient needs to access care. We also added the "accommodation" category code to the [US Core Category](CodeSystem-us-core-category.html) code system.
+    * For the new USCDI *Accommodation* Data Element, we added the [US Core Patient Accommodation Profile](StructureDefinition-us-core-patient-accommodation.html).
+
   * **New Elements and Terminology**:
 
     * For the new USCDI *Allergy Intolerance Criticality* Data Element, we added `AllergyIntolerance.criticality` to the [US Core AllergyIntolerance Profile](StructureDefinition-us-core-allergyintolerance.html) as an *Additional USCDI* element.
 
-    * For the new USCDI *Healthcare Agent* Data Element, we bound `CareTeam.participant.role` in the [US Core CareTeam Profile](StructureDefinition-us-core-careteam.html) to a new US Core Care Team Member Function value set that adds the durable power of attorney, healthcare power of attorney, and patient healthcare agent codes, raised the `RelatedPerson.relationship` binding in the [US Core RelatedPerson Profile](StructureDefinition-us-core-relatedperson.html) from *preferred* to *extensible*, and added guidance to both profiles on recording the person legally authorized to make healthcare decisions for a patient.
+    * For the new USCDI *Healthcare Agent* Data Element, we added healthcare agent codes to the US Core CareTeam Profile's [Care Team Member Function](https://tx.fhir.org/r4/ValueSet/vsac-2.16.840.1.113762.1.4.1099.30-20240605) value set, and changed [US Core RelatedPerson Profile's](StructureDefinition-us-core-relatedperson.html) `RelatedPerson.relationship` binding from *preferred* to *extensible*.  For both profiles, we added guidance on recording the person legally authorized to make healthcare decisions for a patient.
 
     * Many USCDI Clinical Notes are already supported in US Core. For the new USCDI *Referral Note* Data Element, we added Referral Note (LOINC 57133-1) to the ["Common Clinical Notes" list](clinical-notes.html#clinical-notes) and to the [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html) value set.
 
@@ -48,22 +49,20 @@
 
     * For the new USCDI *Nutrition Assessment* Data Element, we added the "nutrition-assessment" category code to the [US Core Category](CodeSystem-us-core-category.html) code system and to the [US Core Screening Assessment Observation Category](ValueSet-us-core-screening-assessment-observation-category.html) value set. We also added guidance on recording nutrition assessments to the [Screening and Assessments](screening-and-assessments.html#nutrition-assessment) page.
 
-    * For the new USCDI *Reason Not Performed* Data Element, we:
+    * For the new USCDI *Reason Not Performed* Data Element, in addition to the new MedicationAdministration Profile described above, we:
         * added `Procedure.statusReason` to the [US Core Procedure Profile](StructureDefinition-us-core-procedure.html) as a *Must Support* element, and preadopted the FHIR R5 `Procedure.recorded` element as a cross-version extension and an *Additional USCDI* element.
         * Updated the [US Core Immunization Profile](StructureDefinition-us-core-immunization.html) `Immunization.statusReason` terminology to an *extensible* binding to the HL7 Terminology (THO) [ActNoImmunizationReason](https://terminology.hl7.org/ValueSet-v3-ActNoImmunizationReason.html) value set.
-        * changed the `patient` + `status` combination search to a **SHALL**
-        * added `MedicationAdministration.statusReason` as a *Must Support* element in the new [US Core MedicationAdministration Profile](StructureDefinition-us-core-medicationadministration.html).
+        * changed the `patient` + `status` combination search API requirements to **SHALL**
 
-    * For the new USCDI *Specimen Collection Date and Time* and *Specimen Collection Method* Data Elements, we added `Specimen.collection.collected[x]` and `Specimen.collection.method` to the [US Core Specimen Profile](StructureDefinition-us-core-specimen.html) as *Additional USCDI* elements. `Specimen.collection.method` has a *preferred* binding to the [Specimen Collection Method](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.44/expansion) value set, and we added guidance on its use with `Specimen.type`. `Observation.effective[x]` in the [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html) already supports *Specimen Collection Date and Time*.
+    * For the new USCDI *Specimen Collection Date and Time* and *Specimen Collection Method* Data Elements, we added `Specimen.collection.collected[x]` and `Specimen.collection.method` to the [US Core Specimen Profile](StructureDefinition-us-core-specimen.html) as *Additional USCDI* elements.
 
     * For the new USCDI *Referral Order* Data Element, we added Patient referral (procedure) (SNOMED CT 3457005) to the [US Core ServiceRequest Category Codes](ValueSet-us-core-servicerequest-category.html) value set, and added guidance to the [US Core ServiceRequest Profile](StructureDefinition-us-core-servicerequest.html) recommending it as the `ServiceRequest.category` for referral orders.
 
   * **New Guidance**:
 
-    * For the new USCDI *Adverse Events* Data Class and its *Adverse Event Condition* and *Adverse Event Outcome* Data Elements, we added the [Adverse Events: Clinical Records and Patient Safety Reporting](adverse-events.html) guidance page. It documents how existing US Core Profiles record adverse events as clinical events. US Core does not define an AdverseEvent profile. We also added a link to the new page from each of these profile pages:
+    * For the new USCDI *Adverse Events* Data Class and its *Adverse Event Condition* and *Adverse Event Outcome* Data Elements, we added the [Adverse Events: Clinical Records and Patient Safety Reporting](adverse-events.html) guidance page. It documents how existing US Core Profiles record adverse events as clinical events.
 
-
-* **Individual Level Provenance**: The USCDI Provenance Author Time Stamp data element now maps to individual level provenance as well as to the [US Core Provenance Profile](StructureDefinition-us-core-provenance.html). The individual provenance table on the [Basic Provenance](basic-provenance.html#author-author-role-and-author-time-stamp-data-elements) page adds an Author Time Stamp column naming, for each profile, the element that records when the information was first captured, and each profile page's "Profile Specific Implementation Guidance" section names that element alongside the author elements. We added the following *Additional USCDI* elements:
+* **Individual Level Provenance**: We updated the individual provenance table on the [Basic Provenance](basic-provenance.html#author-author-role-and-author-time-stamp-data-elements) page adding an Author Time Stamp column naming, for each profile, the element that records when the information was first captured.  We added the following previously omitted Author Time Stamp elements as *Additional USCDI*.
 
   | US Core Profile | Author Time Stamp Element |
   |---|---|
