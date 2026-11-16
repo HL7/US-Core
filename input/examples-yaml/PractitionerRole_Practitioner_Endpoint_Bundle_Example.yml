@@ -25,11 +25,13 @@ entry:
         code: PCP
         display: primary care physician
       - system: http://nucc.org/provider-taxonomy
+        version: '26.1'
         code: 261QP2300X
         display: Primary Care Clinic/Center
     specialty:
     - coding:
       - system: http://nucc.org/provider-taxonomy
+        version: '26.1'
         code: 208D00000X
         display: General Practice Physician
     location:
