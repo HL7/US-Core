@@ -8,7 +8,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 1. **Compare Across Versions**: For a deeper analysis, refer to the [Changes Between Versions] page for detailed FHIR artifact comparisons.
 
 ### Version = 10.0.0-ballot (Meets USCDI v7 Requirements)
-- url: <https://hl7.org/fhir/us/core/2027Jan/>
+- url: <http://hl7.org/fhir/us/core/10.0.0-202701-ballot/>
 - Based on FHIR version: 4.0.1
 
 <!-- {PROCESS_STATEMENT} -->

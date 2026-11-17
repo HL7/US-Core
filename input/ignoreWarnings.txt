@@ -191,7 +191,10 @@ The html source contains the word 'MAY' but it is not in a text phrase marked as
 
 # 43. === The error is due to an issue with the terminology server, not the implementation guide. For details, see the Zulip chat at: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/whither.20ICD9cm.20in.20THO.207.2E0.2E0.3F/with/559122224 ===
 
-# 44. === Although it may not be published before this ballot version is published, this link will resolve when US Core 8.0.1 is published. ===
+# 44. === This forward looking self-link should resolve when this version is published. ===
+
+ERROR: changes.html#/html/body/div/div/div/div/div/ul/li/a at Line 321, column 13: The link 'http://hl7.org/fhir/us/core/10.0.0-202701-ballot/' for "http://hl7.org/fhir/us/core/10.0.0-202701-ballot/" cannot be resolved
+
 
 # 45. === This error will be present until the publication team can address it.  See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 ===
 
@@ -278,25 +281,25 @@ Unknown code '116322-6' in the CodeSystem 'http://loinc.org' version%
 ERROR: Goal/goal-sdoh-2: Goal.description: Error from https://tx.fhir.org/r4: Error: The SNOMED CT Concept 941511000000103 is not known
 INFORMATION: Goal/goal-sdoh-2: Goal.description: Could not confirm that the codings provided are in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.46 and a coding is recommended to come from this value set (class = SERVER_ERROR)
 
-# 70. ===  The total score in the panel’s value[x] is legitimate. Base FHIR lets an Observation carry both value[x] and hasMember. When the instrument has no dedicated total-score code, the panel is the natural place for the total. ===
+# 71. ===  The total score in the panel’s value[x] is legitimate. Base FHIR lets an Observation carry both value[x] and hasMember. When the instrument has no dedicated total-score code, the panel is the natural place for the total. ===
 
 WARNING: Observation/HVS-panel-example-88121-9: Observation.value.ofType(Quantity): The LOINC code 88121-9 ('Children's HealthWatch Hunger Vital Sign [HVS]') is a panel (Panel): its results go in hasMember or component, not in a value
 
-#71. === Because the LOINC code defines the time period, the effective time can be a single time and not a period. ===
+# 72. === Because the LOINC code defines the time period, the effective time can be a single time and not a period. ===
 
 INFORMATION: Observation/nutrition-assessment-item-example-75298-0: Observation.effective.ofType(dateTime): The LOINC code 75298-0 ('Calorie intake 24 hour Estimated') is for a collection over a period of time (24H), but the observation's effective[x] is a single time, not a period
 INFORMATION: Observation/nutrition-assessment-item-example-80467-4: Observation.effective.ofType(dateTime): The LOINC code 80467-4 ('Empty calorie servings 24 hour Estimated') is for a collection over a period of time (24H), but the observation's effective[x] is a single time, not a period
 INFORMATION: Observation/nutrition-assessment-item-example-9058-9: Observation.effective.ofType(dateTime): The LOINC code 9058-9 ('Calorie need 24 hour Estimated') is for a collection over a period of time (24H), but the observation's effective[x] is a single time, not a period
 
-#72. === This example illustrates an Encounter Diagnosis and might not include laterality ====
+# 73. === This example illustrates an Encounter Diagnosis and might not include laterality ====
 
 INFORMATION: Condition/encounter-diagnosis-example1: Condition: 117590005 ('Ear structure') can be on either side, but no side is given - in the code, the body site, or a laterality
 
-#73. === LOINC defines coded answer sets for the values. As well, these examples illustrate the US Core's Survey and Assessments Profile which constrains the *Must Support* value types to CodeableConcept, string, and Quantity. Implementers and certified systems might choose to support other value types but they do not have to. ===
+# 74. === LOINC defines coded answer sets for the values. As well, these examples illustrate the US Core's Survey and Assessments Profile which constrains the *Must Support* value types to CodeableConcept, string, and Quantity. Implementers and certified systems might choose to support other value types but they do not have to. ===
 
 %is for a quantitative result (scale Qn), so the value should be a Quantity (or a Range, Ratio or SampledData), not a CodeableConcept
 %is for a quantitative result (scale Qn), so the value should be a Quantity (or a Range, Ratio or SampledData), not a string
 
-#74. === This use case is described in bullet 3 of http://hl7.org/fhir/R4/observation.html#code-interop: "The Observation.code is also expressed in a way that does not specify the observation action but indicates a statement about findings reduced to a single name (or term), as in the above item. In this example, the Observation.value is present and "qualifies" the finding typically confirming or refuting it."
+# 75. === This use case is described in bullet 3 of http://hl7.org/fhir/R4/observation.html#code-interop: "The Observation.code is also expressed in a way that does not specify the observation action but indicates a statement about findings reduced to a single name (or term), as in the above item. In this example, the Observation.value is present and "qualifies" the finding typically confirming or refuting it."
 
 %is a finding: the code of an observation says what was observed (an observable entity, or an evaluation procedure), and a finding goes in the value, or in a Condition
