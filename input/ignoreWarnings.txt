@@ -278,9 +278,6 @@ Unknown code '116322-6' in the CodeSystem 'http://loinc.org' version%
 
 # 70. === This error is because the version of SNOMED the tx.fhir server uses predates the addition of this code to the international and US editions. It will be resolved soon.  See the variance request and approval here: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Term.20Server.20still.20thinks.20this.20code.20is.20UK.20code/with/639542175 ===
 
-ERROR: Goal/goal-sdoh-2: Goal.description: Error from https://tx.fhir.org/r4: Error: The SNOMED CT Concept 941511000000103 is not known
-INFORMATION: Goal/goal-sdoh-2: Goal.description: Could not confirm that the codings provided are in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.46 and a coding is recommended to come from this value set (class = SERVER_ERROR)
-
 # 71. ===  The total score in the panel’s value[x] is legitimate. Base FHIR lets an Observation carry both value[x] and hasMember. When the instrument has no dedicated total-score code, the panel is the natural place for the total. ===
 
 WARNING: Observation/HVS-panel-example-88121-9: Observation.value.ofType(Quantity): The LOINC code 88121-9 ('Children's HealthWatch Hunger Vital Sign [HVS]') is a panel (Panel): its results go in hasMember or component, not in a value
