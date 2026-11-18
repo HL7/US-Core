@@ -19,6 +19,7 @@ This page defines a US Core approach to writing any document type, such as clini
 
 #### Out of Scope
 
+* Specific directions on how to exchange CDA or FHIR documents
 * Stateful or draft workflows (for example, ambient scribing or continuous audio capture)
 * FHIR batch and transaction interactions
 * Downstream workflows after a server accepts a document
@@ -70,8 +71,7 @@ Servers accept only the documents that the organization will actually process or
 
 **Guidance**
 
-"Process or review" includes filing an insurance card, routing a document to a later review queue, and rejecting content the deployment cannot handle. A person does not need to inspect every submission. See the [Document Type and Category](#document-type-and-category) below for specific guidance on categories and types. To comply with the US Core [Clinical Notes](clinical-notes.html#fhir-resources-to-exchange-clinical-notes) requirements, servers are required to also create `DiagnosticReport` instances for certain scanned report types.
-
+"Process or review" includes filing an insurance card, routing a document to a later review queue, and rejecting content the deployment cannot handle. A person does not need to inspect every submission. See the [Document Type and Category](#document-type-and-category) below for specific guidance on categories and types.
 
 Whether the server returns a `201 Created` or a `202 Accepted` depends on the Submission mode:
 
@@ -217,12 +217,13 @@ The submitting system usually knows the correct granular answer. By populating t
 **Client Requirements**
 
 * Clients **SHALL** be capable of populating `author` and `context.encounter` when they are known.<sup>[§][CONF-WD-15]</sup>
-* When a Client populates `.author` or `.context.encounter`, `.reference` **SHALL** be either a relative reference to a resource on the Server or a reference to a contained resource.<sup>[§][CONF-WD-16]</sup>
+* When a Client populates `.author` or `.context.encounter`, `.reference` **SHALL** be a relative reference to a resource on the Server, or a reference to a contained resource, or a logical reference.<sup>[§][CONF-WD-16]</sup>
 * When a Client populates `.author` or `.context.encounter`, `.display` **SHOULD** be populated.<sup>[§][CONF-WD-17]</sup>
 
 **Server Requirements**
 
 * Servers **SHALL** accept both relative references to resources on the server and references to contained resources for `author` and `context.encounter`.<sup>[§][CONF-WD-18]</sup>
+* Servers **SHOULD** accept logical references for `author` and `context.encounter`.<sup>[§][CONF-WD-75]</sup>
 * Servers **SHALL NOT** reject a submission solely because an `author` or `context.encounter` reference cannot be resolved.<sup>[§][CONF-WD-19]</sup>
 * Servers **SHOULD** attempt to match `author` and `context.encounter` references to existing resources.<sup>[§][CONF-WD-20]</sup>
 * Servers **MAY** persist the content of a contained `author` or `Encounter` resource.<sup>[§][CONF-WD-21]</sup>
@@ -251,27 +252,23 @@ The submitting system usually knows the correct granular answer. By populating t
 
 ##### Identifier
 
-*TODO align with outcome of [FHIR-58142](https://jira.hl7.org/browse/FHIR-58142).*
-
 **Client Requirements**
 
 * Clients **SHOULD** populate `identifier` with a value that is unique to the document and stays the same if the document is resubmitted.<sup>[§][CONF-WD-24]</sup>
 
 **Server Requirements**
 
-* Servers **SHALL** support conditional create (`If-None-Exist`).<sup>[§][CONF-WD-25]</sup>
+* Servers **SHOULD** support conditional create (`If-None-Exist`).<sup>[§][CONF-WD-25]</sup>
 * Servers **MAY** detect duplicates using identifiers, hashes, or other methods.<sup>[§][CONF-WD-26]</sup>
 
 **Guidance**
 
-Conditional create prevents duplicates only when the client populates `identifier`. For example: `If-None-Exist: identifier=http://example.org/docs|DS-2026-06-30-117`.
- Duplicate detection protects against network retries and resubmissions of the same document. It doesn't replace the `relatesTo` replacement mechanism for revised documents.
+* Some servers require pre-coordination with the submitting organization before an identifier of a specific type is stored.
+* Conditional create prevents duplicates only when the client populates `identifier`. For example: `If-None-Exist: identifier=http://example.org/docs|DS-2026-06-30-117`.
+* Duplicate detection protects against network retries and resubmissions of the same document. It does not replace the `relatesTo` replacement mechanism for revised documents.
 
 
-
-<div class="bg-warning" markdown="1">
-
-##### Content.format
+<!-- ##### Content.format
 
 * Clients **SHOULD** populate `content.format` for additional detail.<sup>[§][CONF-WD-27]</sup>
 * Servers **SHALL** persist and round-trip `content.format` when provided.<sup>[§][CONF-WD-28]</sup>
@@ -279,9 +276,7 @@ Conditional create prevents duplicates only when the client populates `identifie
 Structured formats such as CDA are identified by `content.format`.
 
 Where does CDA go? Writing Clinical Notes still carries the CDA SHOULD. If this page replaces Writing Clinical Notes, that statement disappears. The proposed structured-document category also implies structured content is in scope. Either add "Servers SHOULD accept application/xml with a CDA content.format code for the clinical-note category," or state explicitly that structured documents are out of scope.
-
-
-</div><!-- bg-warning -->
+ -->
 
 
 ##### Context.related
@@ -814,8 +809,6 @@ The following items are unresolved.
 4. What are the DocumentReference categories candidates?
 
 5. Is there a need for a separate DocumentReference write profile?
-
-6. Are structured documents like CDA and FHIR in scope?
 
 ---
 
