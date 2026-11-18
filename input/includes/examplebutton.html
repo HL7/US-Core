@@ -6,7 +6,7 @@
   </button>
 </p>
 <div class="collapse" id="{{target}}" >
-  <div class="card card-body" markdown="1">
+  <div class="card card-body" style="border:1px solid;border-color:#cccccc;padding:10px" markdown="1">
     {% if file_type =="xhtml" or file_type =="html" or file_type =="md"%}
       {% include {{include.example}} %}
     {% else %}
