@@ -22,17 +22,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Support:**
 
 1. encounter associated with Observation
-2. a time indicating when the measurement was taken
+2. a time indicating when the measurement was taken<sup>2</sup>
 3. a performer<sup>2</sup>
 4. a result value
    - if the result value is a numeric quantity, a standard [UCUM] unit
 5. a reason why the data is absent<sup>1</sup>
-
-<div class="bg-success" markdown="1">
-{% include additional-requirements-intro.md type="Observation" plural=false %}
-
-1. a date the observation was made available<sup>2</sup>
-</div><!-- new-content -->
 
 <sup>1,2</sup> see guidance below
 

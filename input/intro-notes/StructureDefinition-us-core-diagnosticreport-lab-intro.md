@@ -19,7 +19,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a code (preferably a LOINC code) which tells you what is being measured
 1. a patient
 1. the diagnostically relevant time (known as the "effective time" and typically the time of specimen collection)<sup>1</sup>
-1. when the report was released<sup>1</sup>
+1. when the report was released<sup>1,3</sup>
 
 **Each DiagnosticReport Must Support:**
 

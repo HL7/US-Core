@@ -22,14 +22,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Support:**
 
 1. a category code of "care-experience-preference"
-2. a time indicating when the preference was made
+2. a time indicating when the preference was made<sup>1</sup>
 <!-- 3. who reported the preference -->
 4. care experience preference value
 
-{% include additional-requirements-intro.md type="Observation" plural=true %}
+{% include additional-requirements-intro.md type="Observation" plural=false %}
 
 1. a performer<sup>1</sup>
-2. <span class="bg-success" markdown="1">a date the observation was made available<sup>1</sup></span><!-- new-content -->
 
 <sup>1</sup> see guidance below
 

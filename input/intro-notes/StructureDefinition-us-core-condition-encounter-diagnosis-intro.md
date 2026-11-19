@@ -21,7 +21,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Condition Must Support:**
 
 1. an encounter
-2. date record was first recorded
+2. date record was first recorded<sup>2</sup>
 
 {% include additional-requirements-intro.md type="Condition" plural=false %}
 

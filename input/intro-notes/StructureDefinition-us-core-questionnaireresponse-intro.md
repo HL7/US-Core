@@ -17,7 +17,7 @@ The following are example usage scenarios for this profile:
 1. a reference back to the assessment upon which it is based
 1. a status
 1. a patient
-1. the date the answers were gathered
+1. the date the answers were gathered<sup>1</sup>
 
 **Each QuestionnaireResponse Must Support:**
 

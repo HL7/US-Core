@@ -28,7 +28,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. who was involved in the procedure<sup>3</sup>
 2. a reason or indication for referral or consultation<sup>4</sup>
-3. <span class="bg-success" markdown="1">when the procedure was first captured in the patient's record<sup>6</sup></span><!-- new-content -->
+3. <span class="bg-success" markdown="1">when the procedure was first captured in the patient's record<sup>3,6</sup></span><!-- new-content -->
 
 <sup>1,2,3,4<span class="bg-success">,5,6</span></sup><!-- new-content --> see guidance below
 ### Profile Specific Implementation Guidance

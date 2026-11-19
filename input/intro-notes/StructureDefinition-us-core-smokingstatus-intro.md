@@ -19,15 +19,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a category code of "social-history"
 1. a code for the <span class="bg-success">tobacco or nicotine use</span><!-- new-content --> observation<sup>1</sup>
 1. a patient
-1. when the observation occurred
+1. when the observation occurred<sup>2</sup>
 3. a performer<sup>2</sup>
 3. a result value<sup>1</sup>
-
-<div class="bg-success" markdown="1">
-{% include additional-requirements-intro.md type="Observation" plural=false %}
-
-1. a date the observation was made available<sup>2</sup>
-</div><!-- new-content -->
 
 <sup>1,2</sup> see guidance below
 

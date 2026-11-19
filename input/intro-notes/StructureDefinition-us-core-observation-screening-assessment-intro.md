@@ -20,17 +20,16 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Observation Must Support:**
 
-1. a time indicating when the survey was taken
+1. a time indicating when the survey was taken<sup>2</sup>
 1. the answer or a reason why the data is absent<sup>1</sup>
    - if the result value is a numeric quantity and coded quantity units are used, [UCUM] is required.
 1. who answered the questions (in other words, a performer)<sup>2</sup>
 1. related questionnaire responses or observations that this observation is made from
 1. reference to observations that make up this observation<sup>3</sup>
 
-{% include additional-requirements-intro.md type="Observation" plural=true %}
+{% include additional-requirements-intro.md type="Observation" %}
 
 1. additional categories that further specify the assessment or screening<sup>4</sup>
-2. <span class="bg-success" markdown="1">a date the observation was made available<sup>2</sup></span><!-- new-content -->
 
 
 <sup>1,2,3,4</sup> see guidance below

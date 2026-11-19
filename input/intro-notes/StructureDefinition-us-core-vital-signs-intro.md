@@ -10,7 +10,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a category code of "vital-signs"
 1. a [LOINC] code, if available, which tells you what is being measured
 1. a patient
-1. a clinically relevant time
+1. a clinically relevant time<sup>2</sup>
 
 **Each Observation Must Support:**
 
@@ -19,12 +19,6 @@ The following data elements must always be present ([Mandatory] definition) or m
     - if the result value is a numeric quantity, a standard [UCUM] unit
 3. a reason if the value is absent<sup>1</sup>
 4. component results
-
-<div class="bg-success" markdown="1">
-{% include additional-requirements-intro.md type="Observation" plural=false %}
-
-1. a date the observation was made available<sup>2</sup>
-</div><!-- new-content -->
 
 <sup>1,2</sup> see guidance below
 

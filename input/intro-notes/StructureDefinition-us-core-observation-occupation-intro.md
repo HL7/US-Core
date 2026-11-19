@@ -23,14 +23,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Observation Must Support:**
 
 1. a category code of "social-history"
-2. when the job occurred
+2. when the job occurred<sup>1</sup>
 3. a code for the job history industry
 4. the industry code or text
 
-{% include additional-requirements-intro.md type="Observation" plural=true %}
+{% include additional-requirements-intro.md type="Observation" plural=false %}
 
 1. a performer<sup>1</sup>
-2. <span class="bg-success" markdown="1">a date the observation was made available<sup>1</sup></span><!-- new-content -->
 
 <sup>1</sup> see guidance below
 

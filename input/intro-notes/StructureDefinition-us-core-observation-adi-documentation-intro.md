@@ -23,7 +23,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. references to ADI documents if they exist<sup>1</sup>
 2. a category code of "observation-adi-documentation"
-3. when this verified observation was made available
+3. when this verified observation was made available<sup>2</sup>
 4. one or more performers of the observation<sup>2</sup>
 5. a value<sup>3</sup>
 

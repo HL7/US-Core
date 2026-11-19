@@ -23,7 +23,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each DeviceRequest Must Support:**
 
-1. when the request was made
+1. when the request was made<sup>2</sup>
 1. the requester<sup>2</sup>
 
 <sup>1,2</sup> see guidance below

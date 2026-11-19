@@ -21,7 +21,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 4. a fixed *component* code for average systolic blood pressure
 5. a fixed *component* code for average diastolic blood pressure
 6. a patient
-7. clinically relevant time-period for the average of blood pressure readings
+7. clinically relevant time-period for the average of blood pressure readings<sup>1</sup>
 
 **Each Observation Must Support:**
 
@@ -29,12 +29,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. a result value for the average systolic blood pressure
 4. a result value for the average diastolic blood pressure
 5. a reason if the value is absent<sup>2</sup>
-
-<div class="bg-success" markdown="1">
-{% include additional-requirements-intro.md type="Observation" plural=false %}
-
-1. a date the observation was made available<sup>1</sup>
-</div><!-- new-content -->
 
 <sup>1,2</sup> see guidance below
 

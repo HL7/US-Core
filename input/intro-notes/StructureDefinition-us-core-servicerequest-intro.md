@@ -24,7 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a category<sup>2</sup>
 2. the encounter in which the request was created
 3. when requested service should happen
-4. when the request was made
+4. when the request was made<sup>3</sup>
 5. the requester<sup>3</sup>
 
 {% include additional-requirements-intro.md type="ServiceRequest" plural="true" %}

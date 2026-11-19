@@ -27,7 +27,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 4. a date of diagnosis<sup>2</sup>
 5. a date of onset<sup>2</sup>
 6. an abatement date<sup>2</sup>
-7. a date when recorded<sup>2</sup>
+7. a date when recorded<sup>2,4</sup>
 
 {% include additional-requirements-intro.md type="Condition" plural="true" %}
 

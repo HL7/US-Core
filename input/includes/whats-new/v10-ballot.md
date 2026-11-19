@@ -70,7 +70,6 @@
   | [US Core CarePlan Profile](StructureDefinition-us-core-careplan.html) | `CarePlan.created` |
   | [US Core FamilyMemberHistory Profile](StructureDefinition-us-core-familymemberhistory.html) | `FamilyMemberHistory.date` |
   | [US Core Immunization Profile](StructureDefinition-us-core-immunization.html) | `Immunization.recorded` |
-  | 25 US Core Observation Profiles (for example, [US Core Laboratory Result Observation Profile](StructureDefinition-us-core-observation-lab.html)) | `Observation.issued` |
   {:.grid}
 
 * **Actor Definitions**: To complement the US Core Capability Statements and Requirements resources, we added US Core [Actor Definitions](https://hl7.org/fhir/R5/actordefinition.html) for:

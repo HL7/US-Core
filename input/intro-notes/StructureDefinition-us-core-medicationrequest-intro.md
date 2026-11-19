@@ -28,7 +28,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. the `reported` flag  or reference signaling that information is from a secondary source such as a patient<sup>2</sup>
 3. the encounters
 4. a prescriber<sup>3</sup>
-5. a date for when written
+5. a date for when written<sup>3</sup>
 6. free text dosage instructions (the *SIG*)
 7. when medication should be administered
 8. the route of administration

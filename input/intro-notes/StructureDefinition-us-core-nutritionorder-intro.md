@@ -19,7 +19,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a status
 1. an intent code indicating whether the request is a proposal, plan, or order
 1. a patient
-1. the date and time the order was requested
+1. the date and time the order was requested<sup>2</sup>
 
 **Each NutritionOrder Must Support:**
 

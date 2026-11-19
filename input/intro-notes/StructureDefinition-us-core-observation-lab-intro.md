@@ -28,10 +28,9 @@ The following are example usage scenarios for this profile:
 4. result reference range
 5. a specimen type (e.g., blood, serum, urine)<sup>3</sup>
 
-{% include additional-requirements-intro.md type="Observation" plural=true %}
+{% include additional-requirements-intro.md type="Observation" %}
 
 1. the name of the test that was performed
-2. <span class="bg-success" markdown="1">a date the observation was made available</span><!-- new-content -->
 
 <sup>1,2,3</sup> see guidance below
 
