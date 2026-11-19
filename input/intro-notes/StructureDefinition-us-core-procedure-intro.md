@@ -30,7 +30,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a reason or indication for referral or consultation<sup>4</sup>
 3. <span class="bg-success" markdown="1">when the procedure was first captured in the patient's record<sup>3,6</sup></span><!-- new-content -->
 
-<sup>1,2,3,4<span class="bg-success">,5,6</span></sup><!-- new-content --> see guidance below
+<sup>1,2,3,4,5,6</sup> see guidance below
 ### Profile Specific Implementation Guidance
 
 This section provides detailed implementation guidance for the US Core Profile to support implementation and certification.

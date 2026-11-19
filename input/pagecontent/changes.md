@@ -39,7 +39,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 8. **Applied:** Compatible, substantive (Correction) Downgrade the DiagnosticReport write capability from SHALL to MAY in the US Core Server and US Core Client CapabilityStatements [FHIR-59785](https://jira.hl7.org/browse/FHIR-59785) See Changes Here:
    - [US Core Server CapabilityStatement](CapabilityStatement-us-core-server.html#server_DiagnosticReport)
    - [US Core Client CapabilityStatement](CapabilityStatement-us-core-client.html#client_DiagnosticReport)
-9. **Applied:** Compatible, substantive (Enhancement) Map the USCDI Provenance Author Time Stamp data elements to individual level provenance table and add the recorded date element to the US Core AllergyIntolerance, CarePlan, FamilyMemberHistory, Immunization as *Additional USCDI* elements [FHIR-59669](https://jira.hl7.org/browse/FHIR-59669) See Changes Listed in the 10.0.0-Ballot Introduction above.
+9. **Applied:** Compatible, substantive (Enhancement) Map the USCDI Provenance Author Time Stamp data element to the individual level provenance table and add the recorded date element to the US Core AllergyIntolerance, CarePlan, FamilyMemberHistory, Immunization as *Additional USCDI* elements [FHIR-59669](https://jira.hl7.org/browse/FHIR-59669) See Changes Listed in the 10.0.0-Ballot Introduction above.
 
 ##### Non-substantive
 1. **Applied:** Non-substantive (Correction) Remove duplicated words from the Observation.hasMember short description and the Observation.derivedFrom definition [FHIR-58155](https://jira.hl7.org/browse/FHIR-58155) See Changes [Here](StructureDefinition-us-core-observation-screening-assessment.html)
