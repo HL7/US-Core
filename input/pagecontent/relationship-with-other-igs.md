@@ -108,9 +108,9 @@ The script filters out the active profiles and displays their compliance levels
 {% for item in rows %}
 {% unless item["resource_type"] == "Extension" or item["deprecated"] or item["retired"] %}
 <tr{% if item["Is_New"] == "TRUE" %} class="bg-success"{% endif %}>
-<td markdown="span">[{{item["title" | trim ]}}]</td>
-<td style="text-align: center;">{{item["ipa_compatibility"] | trim | replace: 'OK', OK | replace: 'MAYBE', MAYBE | replace: 'NA', NA | replace: 'NO', NO }}</td>
-<td style="text-align: center;">{{item["ips_compatibility"] | trim | replace: 'OK', OK | replace: 'MAYBE', MAYBE | replace: 'NA', NA | replace: 'NO', NO }}</td>
+<td markdown="span">[{{item["title"] | strip}}]</td>
+<td style="text-align: center;">{{item["ipa_compatibility"] | strip | replace: 'OK', OK | replace: 'MAYBE', MAYBE | replace: 'NA', NA | replace: 'NO', NO }}</td>
+<td style="text-align: center;">{{item["ips_compatibility"] | strip | replace: 'OK', OK | replace: 'MAYBE', MAYBE | replace: 'NA', NA | replace: 'NO', NO }}</td>
 </tr>
 {% endunless %}
 {% endfor %}
