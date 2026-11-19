@@ -89,12 +89,12 @@ The script sorts and selects the table data and allows for highlighting new and 
 {% for item in rows %}
 {% unless item["resource_type"] == "Extension"%}
 <tr{% if item["Is_New"] == "TRUE" %} class="bg-success"{% endif %}>
-<td>{{item["title" | trim ]}}</td>
-<td>{{item["dstu2_profile_title" | trim ]}}</td>
-<td style="text-align: center;">{{item["added"] | trim }}</td>
-<td style="text-align: center;">{{item["deprecated"] | trim }}</td>
-<td style="text-align: center;">{{item["retired"] | trim }}</td>
-<td>{{item["version_notes"] | trim }}</td>
+<td>{{item["title"] | strip}}</td>
+<td>{{item["dstu2_profile_title"] | strip}}</td>
+<td style="text-align: center;">{{item["added"] | strip }}</td>
+<td style="text-align: center;">{{item["deprecated"] | strip }}</td>
+<td style="text-align: center;">{{item["retired"] | strip }}</td>
+<td>{{item["version_notes"] | strip }}</td>
 </tr>
 {% endunless %}
 {% endfor %}
@@ -102,12 +102,12 @@ The script sorts and selects the table data and allows for highlighting new and 
 {% for item in rows %}
 {% if item["resource_type"] == "Extension"%}
 <tr{% if item["Is_New"] == "TRUE" %} class="bg-success"{% endif %}>
-<td>{{item["title" | trim ]}}</td>
-<td>{{item["dstu2_profile_title" | trim ]}}</td>
-<td style="text-align: center;">{{item["added"] | trim }}</td>
-<td style="text-align: center;">{{item["deprecated"] | trim }}</td>
-<td style="text-align: center;">{{item["retired"] | trim }}</td>
-<td>{{item["version_notes"] | trim }}</td>
+<td>{{item["title"] | strip}}</td>
+<td>{{item["dstu2_profile_title"] | strip}}</td>
+<td style="text-align: center;">{{item["added"] | strip }}</td>
+<td style="text-align: center;">{{item["deprecated"] | strip }}</td>
+<td style="text-align: center;">{{item["retired"] | strip }}</td>
+<td>{{item["version_notes"] | strip }}</td>
 </tr>
 {% endif %}
 {% endfor %}
