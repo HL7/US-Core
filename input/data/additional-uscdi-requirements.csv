@@ -25,7 +25,6 @@ TRUE,Appointment,US Core Encounter Profile,Encounter.appointment,US Core Encount
 ,Indication,US Core MedicationRequest Profile,MedicationRequest.reasonReference,US Core MedicationRequest Profile-MedicationRequest.reasonReference
 ,Medication Adherence,US Core MedicationRequest Profile,MedicationRequest.extension:medicationAdherence,US Core MedicationRequest Profile-MedicationRequest.extension:medicationAdherence
 ,Reason for Referral,US Core Procedure Profile,Procedure.basedOn,US Core Procedure Profile-Procedure.basedOn
-TRUE,Reason Not Performed,US Core Procedure Profile,Procedure.extension:recorded,US Core Procedure Profile-Procedure.extension:recorded
 ,Clinical Notes,US Core DocumentReference Profile,DocumentReference.category:uscore,US Core DocumentReference Profile-DocumentReference.category:uscore
 ,Health Status Assessments,US Core Simple Observation Profile,Observation.derivedFrom,US Core Simple Observation Profile-Observation.derivedFrom
 ,Specimen Source Site,US Core Specimen Profile,Specimen.collection,US Core Specimen Profile-Specimen.collection
@@ -50,6 +49,7 @@ TRUE,Author Time Stamp,US Core AllergyIntolerance Profile,AllergyIntolerance.rec
 TRUE,Author Time Stamp,US Core CarePlan Profile,CarePlan.created,US Core CarePlan Profile-CarePlan.created
 TRUE,Author Time Stamp,US Core FamilyMemberHistory Profile,FamilyMemberHistory.date,US Core FamilyMemberHistory Profile-FamilyMemberHistory.date
 TRUE,Author Time Stamp,US Core Immunization Profile,Immunization.recorded,US Core Immunization Profile-Immunization.recorded
+TRUE,Author Time Stamp,US Core Procedure Profile,Procedure.extension:recorded,US Core Procedure Profile-Procedure.extension:recorded
 ,Orders,US Core ServiceRequest Profile,ServiceRequest.code.text,US Core ServiceRequest Profile-ServiceRequest.code.text
 ,Test,US Core Laboratory Result Observation Profile,Observation.code.text,US Core Laboratory Result Observation Profile-Observation.code.text
 ,Care Plan,US Core CarePlan Profile,CarePlan.addresses,US Core CarePlan Profile-CarePlan.addresses
