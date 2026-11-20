@@ -19,7 +19,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 
 #### Changes:
 
-- Implementers submitted over 30 trackers since the publication of US Core ver 9.0.0. We have addressed them and applied 29 changes grouped by change impact and listed below:
+- Implementers submitted 36 trackers since the publication of US Core ver 9.0.0. We have addressed them and applied 32 changes covering 34 of those trackers (two entries each list two trackers). The changes are grouped by change impact and listed below:
 
 **Tracker Status**: **Change Impact** **(Change Category)** **Change Summary** **Jira Issue [Link](#)** **Updated Content [Link](#)**
 
