@@ -359,8 +359,8 @@ Every rule on this page applies to all three submission modes unless it appears 
 | [CONF-WD-04], [CONF-WD-05] | Response on a successful write | Server | `201 Created` | `201 Created` | `201 Created` or `202 Accepted` by documented policy |
 | [CONF-WD-40], [CONF-WD-44] | Make the document available through read and search without further action | Server | **SHALL** | **SHALL** | Server policy |
 | [CONF-WD-50] | Document the review policy for patient submissions | Server | n/a | n/a | **SHALL** |
-| [CONF-WD-39] | Support the create scope `user/DocumentReference.c` or `system/DocumentReference.c` | Server | **SHALL** | n/a | n/a |
-| [CONF-WD-41], [CONF-WD-51], [CONF-WD-70] | Support the create scope `patient/DocumentReference.c` | Server | n/a | **SHALL** | **SHALL** |
+| [CONF-WD-39] | Support `user/DocumentReference.c` or `system/DocumentReference.c`, or category-specific version(s) such as `user/DocumentReference.c?category=clinical-note` | Server | **SHALL** | n/a | n/a |
+| [CONF-WD-41], [CONF-WD-51], [CONF-WD-70] | Support `patient/DocumentReference.c`, or category-specific version(s) such as `patient/DocumentReference.c?category=clinical-note` | Server | n/a | **SHALL** | **SHALL** |
 | [CONF-WD-42] | Support the scope `patient/ServiceRequest.rs` | Server | n/a | **SHALL** | n/a |
 | [CONF-WD-43] | Make `ServiceRequest` resources with the patient as `performer` available through read and search | Server | n/a | **SHALL** | n/a |
 | [CONF-WD-29], [CONF-WD-49] | Populate `context.related`, or the FHIR R5 `basedOn` extension, with the active `ServiceRequest` | Client | n/a | **SHALL** | n/a |

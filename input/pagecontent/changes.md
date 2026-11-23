@@ -68,6 +68,7 @@ The **US Core Implementation Guide Change Log** captures updates, enhancements, 
 21. **Applied:** Non-substantive (Enhancement) Replace the Writing Clinical Notes page in the Looking Ahead section with writing documents guidance based on the Argonaut 2026 Document Write project. [FHIR-59597](https://jira.hl7.org/browse/FHIR-59597) See Changes [Here](writing-documents.html)
 22. **Applied:** Non-substantive (Correction) Resolve package load failure (publishing issue) [FHIR-56274](https://jira.hl7.org/browse/FHIR-56274), [FHIR-56273](https://jira.hl7.org/browse/FHIR-56273)
 23. **Applied:** Non-substantive (Correction) Copy-edit and technical QA corrections. [FHIR-59893](https://jira.hl7.org/browse/FHIR-59893), [FHIR-59894](https://jira.hl7.org/browse/FHIR-59894)
+24. **Applied:** Non-substantive (Correction) Add the category-specific scope alternative to both create scope rows of the Writing Documents quick-reference matrix [FHIR-59937](https://jira.hl7.org/browse/FHIR-59937) See Changes [Here](writing-documents.html#quick-reference-matrix)
 
 ##### Pending
 The application of the following trackers is pending and will not be completed before publication.
