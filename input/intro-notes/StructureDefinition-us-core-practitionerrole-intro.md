@@ -11,10 +11,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. A role<sup>2</sup>
 1. A specialty<sup>3</sup>
 1. An associated location<sup>1</sup>
-1. Contact information<sup>4</sup>
+1. Contact information<sup>4,5</sup>
 1. A communication endpoint<sup>4</sup>
 
-<sup>1,2,3,4</sup> see guidance below
+<sup>1,2,3,4,5</sup> see guidance below
 
 ### Profile Specific Implementation Guidance
 
@@ -27,12 +27,13 @@ This section provides detailed implementation guidance for the US Core Profile t
     - `PractitionerRole.location`
 
 - Due to implementer feedback, some US Core Profiles reference the [PractitionerRole] resource instead of the US Core PractitionerRole Profile. However, the US Core PractitionerRole Profile **SHOULD** be used as the default profile if referenced by another US Core profile.<sup>[§][CONF-0890]</sup> See this guidance on [Referencing US Core Profiles].
-- <sup>4</sup>A [Direct address] can be represented in the `telecom` element using the [US Core Direct email Extension] or in a referenced [Endpoint] as a "direct-project" endpoint connection type.
 - <sup>2</sup>When selecting role codes
   - implementers **SHOULD** choose the code that reflects the specific duties performed within that role rather than the specialty unless the individual's professional specialization characterizes the role.<sup>[§][CONF-0891]</sup>
   - Systems that primarily rely on NUCC codes instead of SNOMED CT to represent role codes can use the Da Vinci HRex [NUCC to SNOMED CT Mappings] to aid in translations.
 - <sup>3</sup>Unless exchanging legacy or text-only data, medical specialty codes **SHOULD** be taken from NUCC or SNOMED CT.<sup>[§][CONF-0894]</sup>
 - Clients can request Servers return the Practitioner and Endpoint resources using `_include`. See the [Quick Start] section below for further guidance.
+- <sup>4</sup>A [Direct address] can be represented in the `telecom` element using the [US Core Direct email Extension] or in a referenced [Endpoint] as a "direct-project" endpoint connection type.
+- <sup>5</sup>{% include itu-note.md %}
 
 
 {% include link-list.md %}

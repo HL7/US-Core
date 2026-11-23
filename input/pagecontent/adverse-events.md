@@ -29,7 +29,7 @@ The US Core Profiles shown in the figure and table below record the information 
 | US Core profile | Adverse Event Condition | Adverse Event Outcome | Why |
 |---|:---:|:---:|---|
 | Immunization | ✓ | | reaction details that follow an immunization |
-| Procedure | ✓ | | complication details that occurred during or immediately following the procedure|
+| Procedure | ✓ | ✓ | events associated with a procedure or interventions associated with a patient's condition|
 | AllergyIntolerance | ✓ | ✓ | reaction details linked to the identified substance |
 | Condition | ✓ | ✓ | condition/diagnosis of the change or resulting status/sequela |
 | DocumentReference | ✓ | ✓ | narrative clinical documentation |

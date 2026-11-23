@@ -49,6 +49,6 @@ This section provides detailed implementation guidance for the US Core Profile t
        - Servers **SHALL** support *at least one* target resource in `Procedure.reasonReference`.<sup>[§][CONF-0486]</sup> Clients **SHALL** support all target resources in `Procedure.reasonReference`.<sup>[§][CONF-0487]</sup>
        - The referenced resources **SHOULD** be a US Core Profile as documented in [Referencing US Core Profiles].<sup>[§][CONF-0488]</sup>
 {% include provenance-author-bullet-generator.md footnote-symbol='<sup>3</sup>' %}
-- <span class="bg-success" markdown="1">For the USCDI *Adverse Events* Data Class, a procedure can be the intervention a change in a patient condition is associated with, recording the change that the USCDI *Adverse Event Condition* describes. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
+- <span class="bg-success" markdown="1">For the USCDI Adverse Events Data Class, Procedure can record events associated with a procedure or interventions associated with a patient's condition. Adverse events are recorded as ordinary clinical events and are not tagged as adverse events; see the [Adverse Events: Clinical Records and Patient Safety Reporting] page.</span><!-- new-content -->
 
 {% include link-list.md %}

@@ -6,6 +6,6 @@
 
 {% include quickstart-intro.md type=type %}
 
-{% include quickstart-search.md type=type title=title category="LG41762-2 (SDOH)" %}
+{% include quickstart-search.md type=type title=title category="http://hl7.org/fhir/us/core/CodeSystem/us-core-category\|sdoh" %}
 
 {% include link-list.md %}
