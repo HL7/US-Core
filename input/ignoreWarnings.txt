@@ -301,6 +301,10 @@ INFORMATION: Condition/encounter-diagnosis-example1: Condition: 117590005 ('Ear 
 
 %is a finding: the code of an observation says what was observed (an observable entity, or an evaluation procedure), and a finding goes in the value, or in a Condition
 
-# 76.  The value set, "Social Determinants of Health Disability Accommodation Needs" (2.16.840.1.113762.1.4.1247.377), is an incomplete starter value set created for the ballot release.  We expect that its stewards will expand the value set to include this code.
+# 76. === The value set, "Social Determinants of Health Disability Accommodation Needs" (2.16.840.1.113762.1.4.1247.377), is an incomplete starter value set created for the ballot release.  We expect that its stewards will expand the value set to include this code. ===
 
 INFORMATION: Observation/accommodation-wheelchair: Observation.value.ofType(string): The value provided ('Need staff available to assist with pushing wheelchair') was not found in the value set 'Social Determinants of Health Disability Accommodation Needs' (http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.377|20261118), and a code is recommended to come from this value set (error message = The System URI could not be determined for the code 'Need staff available to assist with pushing wheelchair' in the ValueSet 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.377|20261118'; The provided code '#Need staff available to assist with pushing wheelchair' was not found in the value set 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.377|20261118')
+
+# 77. Both MDC codes, "150324" (MDC_SAT_O2_ART)  and "150456" (MDC_PULS_OXIM_SAT_O2), are valid codings. The latter code is used because it is a more granular method specific coding.
+
+INFORMATION: Observation/satO2-fiO2: Observation.code: This CodeableConcept has the codes http://loinc.org#2708-6 and urn:iso:std:iso:11073:10101#150456, but the ConceptMap http://loinc.org/cm/mdc maps http://loinc.org#2708-6 to 150324. Check that these codes belong together
