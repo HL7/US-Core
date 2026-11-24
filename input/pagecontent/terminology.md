@@ -274,7 +274,7 @@ The reader is redirected to the VSAC login page to enter an API Key (only one lo
 
 After successfully entering the API Key, the value set can be inspected, downloaded, etc., using the VSAC User interface, as shown in the figure below. This FHIR ValueSet resource can also be fetched using the URL `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.3`, and the FHIR ValueSet expansion using the URL `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1267.3/$expand`.
 
- {% include img.html img="vsac-3.png" caption="Figure 3: VSAC Smoking Status ValueSet" %}
+ {% include img.html img="vsac-3.png" caption="Figure 3: VSAC Tobacco And Nicotine Use ValueSet" %}
 
 
 {% include link-list.md %}
