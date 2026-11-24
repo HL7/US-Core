@@ -100,7 +100,7 @@
 [LOINC]: http://loinc.org
 [Laboratory Report Narrative (11502-2)]: https://loinc.org/11502-2
 [Mandatory]: must-support.html
-[Medication Adherence ValueSet]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.8/expansionStructureDefinition-us-core-medication-adherence.html
+[Medication Adherence ValueSet]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.8/expansion
 [Medication Clinical Drug (RxNorm)]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search
 [MedicationRequest examples]: StructureDefinition-us-core-medicationrequest-examples.html
