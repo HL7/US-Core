@@ -4,7 +4,7 @@
 
 ### Purpose and Scope
 
-This page defines a US Core approach to writing any document type, such as clinical notes, insurance cards, and advance directives, to a FHIR server as `DocumentReference` resources. It does not change how servers return documents in searches. It replaces US Core's Version 9 [Clinical Notes](https://hl7.org/fhir/us/core/STU9/writing-clinical-notes.html) guidance page and adopts conventions used in [Writing Vital Signs] and the [Continuous Glucose Monitoring Implementation Guide].
+This page defines a US Core approach to writing any document type, such as clinical notes, insurance cards, and advance directives, to a FHIR server as `DocumentReference` resources. It does not change how servers return documents in searches. It replaces US Core's Version 9 [Clinical Notes](https://hl7.org/fhir/us/core/STU9/writing-clinical-notes.html) guidance page and adopts conventions used in [Writing Vital Signs] and the [Continuous Glucose Monitoring Implementation Guide]. This page was developed with the sponsorship and support of the Argonaut community.
 
 #### In Scope
 
