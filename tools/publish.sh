@@ -4,6 +4,14 @@ set -e
 trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
 trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
 
+# This script lives in tools/ but every path below is relative to the IG root,
+# so run from there whatever directory it was invoked from. The scripts were
+# moved out of the root folder because IG Publisher 3.0.6 errors on scripts
+# committed there; a future version will stop the build and the ci-build will
+# refuse the IG outright. See "Scripts live in tools/" in README.md.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR/.." || exit 1
+
 while getopts bcdefghijklmnopqrstuvwxyzCVRL option;
 do
  case "${option}"
@@ -683,7 +691,7 @@ if [[ $APP_VERSION ]]; then
 fi
 
 if [[ $CHECK_LIQUID ]]; then
-  ./check_liquid.sh
+  "$SCRIPT_DIR"/check_liquid.sh
   echo ""
 fi
 
@@ -696,7 +704,7 @@ if [[ $IG_PUBLISH ]]; then
   # invalid XHTML). Catch it here, in a couple of seconds, rather than after a
   # twelve minute build. Advisory only: it must not stop a build over a missing
   # jar or a java version.
-  ./check_liquid.sh || echo "⚠️  continuing the build with a broken Liquid template"
+  "$SCRIPT_DIR"/check_liquid.sh || echo "⚠️  continuing the build with a broken Liquid template"
   echo ""
 
   files=()                                        # 1. Start with an empty array

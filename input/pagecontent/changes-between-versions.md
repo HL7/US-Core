@@ -118,13 +118,13 @@ The script sorts and selects the table data and allows for highlighting new and 
 
 Detailed comparisons between the US Core artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
 
-- [Comparison with version 9.0.0](comparison-v9.0.0/index.html)
-- [Comparison with version 8.0.1](comparison-v8.0.1/index.html)
-- [Comparison with version 7.0.0](comparison-v7.0.0/index.html)
-- [Comparison with version 6.1.0](comparison-v6.1.0/index.html)
-- [Comparison with version 5.0.1](comparison-v5.0.1/index.html)
-- [Comparison with version 4.0.0](comparison-v4.0.0/index.html)
-- [Comparison with version 3.1.1](comparison-v3.1.1/index.html)
+- [Comparison with version 9.0.0](../comparison-v9.0.0/index.html)
+- [Comparison with version 8.0.1](../comparison-v8.0.1/index.html)
+- [Comparison with version 7.0.0](../comparison-v7.0.0/index.html)
+- [Comparison with version 6.1.0](../comparison-v6.1.0/index.html)
+- [Comparison with version 5.0.1](../comparison-v5.0.1/index.html)
+- [Comparison with version 4.0.0](../comparison-v4.0.0/index.html)
+- [Comparison with version 3.1.1](../comparison-v3.1.1/index.html)
 
 The comparison with the Argonaut Data Query IG is published separately by the Argonaut Project:
 

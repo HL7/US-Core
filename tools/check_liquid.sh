@@ -52,6 +52,10 @@
 # build puts it there.
 # =============================================================================
 
+# This script lives in tools/ but the paths below are relative to the IG root,
+# so run from there whatever directory it was invoked from.
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)" || exit 1
+
 jar="${IG_PUBLISHER_JAR:-$HOME/Downloads/org.hl7.fhir.igpublisher.jar}"
 liquid_dir="input/liquid"
 src="liquid-check/LiquidRenderCheck.java"

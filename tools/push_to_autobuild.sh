@@ -1,6 +1,11 @@
 #!/bin/bash
 # exit when any command fails
 set -e
+
+# This script lives in tools/ but the paths below are relative to the IG root,
+# so run from there whatever directory it was invoked from.
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)" || exit 1
+
 tmp=$(mktemp -d -d ./input/_examples) && echo "\$tmp = $tmp"
 function finish {
   # Your cleanup code here

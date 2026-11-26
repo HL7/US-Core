@@ -1,8 +1,11 @@
-# create an HL7 FHIR Urine Specimen example for US Core using input/examples-yaml/specimen-example-serum.yml as a template with the 
-# following changes 
+# create an HL7 FHIR Urine Specimen example for US Core using input/examples-yaml/specimen-example-serum.yml as a template with the
+# following changes
 # Snomed Code "258580003" (Whole blood specimen (specimen))
-# hl7VS-specimenType  code "WB" (Blood, Whole)
 # container lavender Top Tube
+# The hl7VS-specimenType coding "WB" (Blood, Whole) was removed: IG Publisher
+# 3.0.6 warns that ConceptMap http://hl7.org/fhir/ConceptMap/102 says v2-0487#WB
+# has no mapping to SNOMED CT, so pairing it with 258580003 in one
+# CodeableConcept asserts an equivalence the ConceptMap denies.
 resourceType: Specimen
 id: specimen-example-whole-blood
 meta:
@@ -22,9 +25,6 @@ type:
     code: '258580003'
     display: Whole blood specimen
     version: http://snomed.info/sct/731000124108
-  - system: http://terminology.hl7.org/CodeSystem/v2-0487
-    code: WB
-    display: Blood, Whole
 subject:
   reference: Patient/example
 collection:

@@ -2,6 +2,10 @@
 # exit when any command fails
 set -e
 
+# This script lives in tools/ but the paths below are relative to the IG root,
+# so run from there whatever directory it was invoked from.
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)" || exit 1
+
 echo ""
 echo "=========================================================================="
 echo "=== check which files changes and the status code in remote master before pulling ============"
