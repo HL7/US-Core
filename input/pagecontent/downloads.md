@@ -8,7 +8,7 @@ The following package file includes an NPM package file used by many of the FHIR
 
 A downloadable version of this IG is available so it can be hosted locally:
 
-- [Downloadable Copy(compressed folder)](full-ig.zip)
+- [Downloadable Copy(compressed folder)](../full-ig.zip)
 
 ### LLM-Ready View
 

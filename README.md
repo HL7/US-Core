@@ -798,11 +798,17 @@ Among its many functions, it:
 
 > The IG's repository has 5 scripts or programs in its root folder: ... Scripts and programs don't belong in an IG's repository: they arrive with every pull, and people run them out of habit, so anyone who can change the repository can run code on the computer of everyone who builds the IG. ... **in a future version of the IG Publisher, the build will stop here, and the ci-build will refuse to build the IG.** If you accept these as they are, you can say so now by running the IG Publisher with `-allow-committed-scripts` ... and local builds will go on then **(but not the ci-build)**.
 
-Three things follow from that wording:
+There are two checks, at different severities, and `tools/` only downgrades one to the other:
 
-- The check is **root-folder only**, which is why `tools/` satisfies it. Verified 2026-11-25: with the scripts moved, the error no longer appears and the build runs to completion.
-- **`-allow-committed-scripts` is not an alternative.** It is recorded per-IG in `~/.fhir/fhir-settings.json` and unblocks local builds only; the ci-build refuses regardless. Moving the scripts is the only fix that keeps the autobuild working.
-- A future publisher version may widen the check beyond the root folder. If that happens, the scripts have to leave the repository altogether.
+| Location | Severity | Reported by |
+|---|---|---|
+| repository root | **error** | local build and ci-build |
+| any sub-folder, `tools/` included | **warning** | **ci-build only** |
+
+- Moving to `tools/` cleared the error. It did **not** clear the subject: the ci-build still warns `The IG's repository has 5 scripts or programs in sub-folders: tools/check_liquid.sh, ...`, adding "Scripts and programs don't belong in an IG's repository."
+- **A local build cannot catch the sub-folder warning.** Verified 2026-11-25: it appears in neither the console nor `output/qa.txt` locally on the same 3.0.6 jar, and only showed up on the HL7 autobuild. Do not read a clean local QA as proof this is settled.
+- **`-allow-committed-scripts` has no future on either check.** It records a per-IG acceptance in `~/.fhir/fhir-settings.json` and unblocks local builds, but the jar states plainly: "in a future version of the IG Publisher, the ci-build will refuse to build an IG that has these, **whatever you accept here**." Suppressing the warning in `input/ignoreWarnings.txt` works today (it is a warning, so it can be suppressed, unlike the root-folder error) and is equally temporary.
+- **The only durable fix is moving the scripts out of this repository**, to their own repo that contributors clone separately. `tools/` buys time; it is not the destination.
 
 Run them from the repository root as `./tools/publish.sh -ien`. Each shell script resolves the IG root from its own location and `cd`s there, so it also works when invoked from inside `tools/`:
 
@@ -1426,6 +1432,7 @@ New and updated content is highlighted green while a version is in development a
      - **Verify every new entry by its use count.** The Suppressed Messages section of `output/qa.html` prints `(N uses)` after each entry. `(0 uses)` means it never matched, which is almost always a prefix copied from the wrong report.
      - Group related suppressions under a numbered `# NN. === explanation ===` comment that documents why the message is safe to ignore.
      - Version-pinned messages (those ending in `...|N.0.0`) must be updated to the current version each publication cycle.
+     - **Never delete an entry because a local build stopped reporting it.** A local build answers terminology queries from `input-cache/txcache/`, while the ci-build has no cache and asks the server fresh on every run, so the two can legitimately disagree. Seen 2026-11-25: entry 67 (`Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://www.ada.org/cdt' could not be found, so the value set cannot be expanded`) was removed after a local build with a freshly rebuilt cache stopped reporting it, and the autobuild immediately reported it again -- tx.fhir.org is not licensed to expand CDT. A `(0 uses)` count proves the entry did not match **this** build, not that the message is gone for good. Confirm against an autobuild QA report before deleting, and prefer leaving a stale-looking entry in place.
      - **A page path in an entry now needs an `en/` prefix.** IG Publisher 3.0.6 renders pages under a default-language folder (the build logs `Using en as the default narrative language. (Implementation Guide param i18n-default-lang)`), and the page path in a QA message moved with it: an entry copied before the upgrade reads `ERROR: changes.html#/html/body/...` while the publisher now emits `ERROR: en/changes.html#/html/body/...`, so it silently stops matching. Entries that pin a line number (`at Line 321, column 13`) are doubly fragile, because any content edit above that point moves it. Prefer a leading `%` over either.
    - Scripts and symlinks are checked before the build starts
      - IG Publisher 3.0.6 added two repository checks that run at startup, before the template loads. Both are described in "Scripts live in `tools/`, not the repository root" above; the symlink one is the reason a local build can fail where nothing about the IG's content changed.
